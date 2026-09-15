@@ -1,0 +1,9 @@
+node_modules/
+_build/
+tmp/
+work/
+# Built by scripts/build-exports.sh, and in CI by the Exports workflow, whose
+# artifacts the deploy workflow downloads. Never committed.
+/exports/
+__pycache__/
+*.py[cod]

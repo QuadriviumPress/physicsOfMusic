@@ -1,0 +1,39 @@
+{
+  "name": "physics-of-music",
+  "private": true,
+  "packageManager": "npm@10.9.8",
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10 <11"
+  },
+  "description": "MyST Markdown textbook on the Physics of Music",
+  "scripts": {
+    "check:toolchain": "node scripts/check-toolchain.mjs",
+    "prestart": "npm run check:toolchain",
+    "start": "myst start",
+    "prebuild": "npm run check:toolchain",
+    "build": "myst build --html && node scripts/setup-pwa.mjs",
+    "precheck": "npm run check:toolchain",
+    "verify": "npm run check:project && npm test",
+    "check": "npm run verify && myst build --html --strict --check-links",
+    "check:project": "node scripts/validate-project.mjs",
+    "check:figures": "scripts/check-figures.sh",
+    "notation:render": "node scripts/render-notation.mjs && python3 scripts/notation_text_to_path.py",
+    "notation:check": "scripts/check-notation.sh",
+    "audio:render": "scripts/render-audio.sh",
+    "audio:check": "scripts/check-audio.sh",
+    "test": "node --test tests/*.test.mjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:exports": "python3 scripts/smoke-exports.py",
+    "build:exports": "scripts/build-exports.sh all",
+    "build:pdf": "scripts/build-exports.sh pdf",
+    "build:chapters": "scripts/build-exports.sh chapters",
+    "build:docx": "scripts/build-exports.sh docx"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "mystmd": "1.10.1",
+    "sharp": "0.35.4",
+    "vexflow": "5.0.0",
+    "yaml": "2.9.0"
+  }
+}

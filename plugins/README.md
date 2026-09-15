@@ -1,0 +1,294 @@
+# MyST plugins
+
+Three plugins, and the first two are about the same problem: the website can do
+things paper cannot, and the book has to survive being printed anyway.
+
+- [`simulation.mjs`](simulation.mjs) — embeds a running browser simulation on
+  the website and falls back to a screenshot, a caption, and a link everywhere
+  else. Provides `{simulation}`, `{openlyceum}`, `{phet}`, `{phet-legacy}`.
+- [`audio.mjs`](audio.mjs) — builds an audio-example figure: the waveform and
+  spectrum of a clip, a transcript, and a link to hear it. Provides `{audio}`
+  (alias `{sound}`). There is no inline player, for reasons worth reading
+  before trying to add one.
+- [`export.mjs`](export.mjs) — rewrites the node types no export renderer
+  handles into ones every renderer handles. Inert unless `MYST_PRINT` is set.
+
+The two `.mjs` media plugins are registered in [`../myst.yml`](../myst.yml)
+alongside `export.mjs`:
+
+```yaml
+project:
+  plugins:
+    - plugins/simulation.mjs
+    - plugins/audio.mjs
+    - plugins/export.mjs
+site:
+  options:
+    style: css/custom.css
+```
+
+The stylesheet the simulation plugin depends on lives in
+[`../css/custom.css`](../css/custom.css), not beside the plugins: MyST's
+`site.options.style` takes exactly one file, and the book needs rules for both.
+Section 1 of that file is load-bearing — without it every simulation has its own
+screenshot sitting underneath it. That is graceful degradation rather than a
+break, but it is why the stylesheet is registered.
+
+Edits to a `.mjs` plugin do **not** hot-reload. Restart `myst start` after
+changing one.
+
+# The simulation plugin
+
+Vendored unmodified from
+[`modernPhysics`](https://github.com/QuadriviumPress/modernPhysics), where it is
+byte-identical to the copies in `opticsTextbook` and `quantumMechanics`. Keep it
+that way: fix bugs upstream and re-copy, rather than editing here.
+
+## Usage
+
+````markdown
+```{openlyceum} StandingWaves
+:label: fig:ch03-standing-waves-sim
+
+Drive one end of the string and sweep the frequency; the string ignores you
+until you hit a harmonic, and then it ignores everything else.
+```
+````
+
+The figure is numbered and cross-referenced like any other:
+`@fig:ch03-standing-waves-sim`.
+
+Four directives, one implementation:
+
+| Directive | Argument | Resolves to |
+|---|---|---|
+| `{openlyceum}` | repository name | `https://openlyceum.github.io/<Repo>/` |
+| `{phet}` | simulation name | `https://phet.colorado.edu/sims/html/<sim>/latest/<sim>_<locale>.html` |
+| `{phet-legacy}` | simulation name, or `project/sim` | `https://phet.colorado.edu/sims/cheerpj/<project>/latest/<project>.html?simulation=<sim>` |
+| `{simulation}` (alias `{sim}`) | a URL, or `provider:name` | whatever you give it |
+
+Anything that runs in an iframe works — the plugin is not tied to SceneryStack.
+A bare URL just needs a `:placeholder:` to look right in a PDF.
+
+## Options
+
+| Option | Default | Notes |
+|---|---|---|
+| `width` | `100%` | **Percentages only.** The theme mangles `px` values. |
+| `aspect` | `1024:618` (OpenLyceum), `768:504` (PhET), `4:3` (PhET legacy) | Other ratios need a matching rule in `../css/custom.css`. |
+| `placeholder` | provider screenshot | Relative to the `.md` file, `/`-prefixed for the project root, or a URL. Use **PNG or JPEG**. |
+| `no-placeholder` | — | Drop the static fallback entirely. |
+| `alt` | derived | Alternative text for the fallback image. |
+| `title` | derived | Accessible title for the iframe. |
+| `align` | `center` | `left`, `center`, `right`. |
+| `label` | — | Makes the figure cross-referenceable. |
+| `class` | — | Extra classes on the simulation frame. |
+| `enumerated` | — | Whether the figure is numbered. |
+| `params` | — | Raw query string, e.g. `snapToGrid=true`. |
+| `screens` / `screen` | — | `?screens=` / `?initialScreen=`. |
+| `locale` | `en` | SceneryStack reads `?locale=`; PhET puts it in the filename. |
+| `sim-name` | the id made readable | Display name — caption link, iframe title, alt text. |
+| `link-text` | the simulation name | Text of the caption link. |
+| `no-link` | — | Suppress the caption link. |
+
+## How the fallback works
+
+A simulation is a JavaScript application, so it can only ever *run* on the
+website. MyST reflects that: the `iframe` node is rendered by the site theme and
+by nothing else. MyST plugins cannot supply renderers for export formats, and
+transforms run before any format-specific rendering, so nothing in the tree can
+tell a plugin which format is being built. The fallback therefore has to be
+structural. Each directive emits **both** an `iframe` node and a plain `image`
+node as siblings inside one `figure` container, and each renderer keeps
+whichever of the two it understands:
+
+| Output | `iframe` | fallback `image` | Result |
+|---|---|---|---|
+| HTML site | live simulation | hidden by `custom.css` | the simulation |
+| Browser print | hidden by `@media print` | shown by `@media print` | the screenshot |
+| `--pdf` / `--tex` | dropped by `export.mjs` | `\includegraphics` | screenshot + caption |
+| `--docx` | unsupported, skipped | embedded image | screenshot + caption |
+| `--md` | folded away | becomes the `{figure}` argument | figure + link |
+
+The caption always ends with a link to the live simulation. That link is the one
+piece of the fallback that survives in every format.
+
+Two deliberate non-choices, both of which look like obvious simplifications and
+are not: the iframe gets no `placeholder` child (that is what stops Typst from
+printing the screenshot twice), and the fallback image is not marked
+`placeholder: true` (MyST's placeholder promotion runs only for tex/typst/docx,
+only if the URL extension is valid for that format, and leaves `myst-to-md`'s
+figure handler dereferencing an undefined `node.source`).
+
+## Screenshots
+
+`{openlyceum}` uses `Baton/screenshots/<Repo>.png` — captures of the running
+simulation, refreshed by Baton's own workflow — not the generic
+`screenshots/wide.png` PWA splash each simulation publishes. `{phet}` uses
+`<sim>-600.png`, the largest size PhET publishes.
+
+Both are remote URLs. MyST downloads and caches them into `_build/`, so exports
+work offline after the first build, but the *first* build of a new simulation
+needs network access. **A simulation slug that does not exist produces no error**
+— the screenshot 404s and the generic placeholder card appears instead — so
+verify a new slug against the provider before citing it.
+
+## Adding a provider
+
+`PROVIDERS` at the top of `simulation.mjs` is a plain object. An entry needs a
+`resolve( id, options )` returning the simulation URL and a screenshot URL, plus
+the frame's aspect ratio. If the aspect ratio is not already in
+`../css/custom.css`, add a rule for it there.
+
+# The audio plugin
+
+A book about music has to be able to show its examples and let a reader hear
+them. Nothing else in the Quadrivium fleet does this — the two music-theory
+books link raw `.mp3` and `.wav` files with bare Markdown — so this plugin is
+new.
+
+## Usage
+
+````markdown
+```{audio} ch05-sawtooth
+:label: fig:ch05-sawtooth
+:transcript: A buzzy, nasal tone at 220 Hz, brighter than a sine at the same pitch.
+
+Every harmonic of 220 Hz is present, with amplitude falling as 1/n.
+```
+````
+
+A bare id resolves to `/audio/<id>.mp3`, and the figure defaults to
+`/images/<id>.svg` — the two files each generator in
+[`../scripts/audio/`](../scripts/audio/) writes as a pair, so the common case
+needs neither option. A path or URL is passed through untouched.
+
+Several clips in one figure — the usual case for a comparison — are named
+comma-separated, and then the shared figure must be given explicitly:
+
+````markdown
+```{audio} ch05-sine, ch05-sawtooth, ch05-square
+:names: Sine, Sawtooth, Square
+:figure: ../images/ch05-three-waveforms.svg
+:label: fig:ch05-three-waveforms
+:transcript: Three tones at the same pitch and level; the sine is hollow, the
+  sawtooth buzzy, the square reedy and missing every even harmonic.
+
+The same fundamental, three spectra.
+```
+````
+
+## Options
+
+| Option | Default | Notes |
+|---|---|---|
+| `figure` | `/images/<id>.svg` | Required when the directive names several clips. |
+| `no-figure` | — | Drop the figure; leaves caption and links only. |
+| `names` | each id made readable | Comma-separated labels, one per clip. |
+| `transcript` | — | One sentence on what the clip sounds like. **Strongly recommended** — see below. |
+| `alt` | derived | Alternative text for the figure. |
+| `width` | `100%` | Width of the figure. |
+| `align` | `center` | `left`, `center`, `right`. |
+| `label` | — | Makes the figure cross-referenceable. |
+| `class` | — | Extra classes. |
+| `enumerated` | — | Whether the figure is numbered. |
+| `link-text` | the clip name | Text of the caption link. |
+| `no-link` | — | Suppress the caption link. |
+
+## Why there is no inline player
+
+The obvious implementation is an `<audio controls>` element, and it does not
+survive. This was established by probing the actual build, not assumed:
+
+- **Raw `<audio>` is stripped.** MyST parses raw HTML at the document stage and
+  converts what it can to mdast. `<div>` survives as a `div` node and
+  `<iframe>` as an `iframe` node, but `<audio>` has no mdast equivalent and is
+  removed outright, leaving nothing on the page. A plugin emitting an `html`
+  node fares no better — it never reaches the renderer.
+- **mystmd 1.10.1 has no `{audio}` or `{video}` directive** of its own.
+  `{video}` parses as an unrecognized `mystDirective` and renders nothing.
+- **An `iframe` player cannot find its clip.** MyST content-hashes and copies a
+  locally linked media file and rewrites the URL — `/audio/ch05-sine.mp3`
+  becomes `/build/ch05-sine-<hash>.mp3` — so the path the clip actually lands
+  on is not knowable when the directive runs, and an `iframe` `src` is never
+  processed that way. There is also no static-passthrough directory (`public/`
+  and `_static/` are both ignored) to sidestep the hashing with.
+
+So the figure is built from nodes MyST renders natively, and the reader listens
+by following a link. That asset handling is the one thing to be glad of here: a
+`link` to `/audio/<id>.mp3` is exactly what makes MyST copy the clip into the
+site at all.
+
+What the plugin adds over a bare link is the part that carries the physics: the
+waveform-and-spectrum figure showing what is actually in the clip, a transcript,
+and one numbered, cross-referenceable figure that is identical in every output
+format.
+
+| Output | figure | links |
+|---|---|---|
+| HTML site | shown | clickable, hashed URLs |
+| PDF / DOCX / print | `\includegraphics` | printed as URLs |
+
+**Write the transcript.** It is the only thing a reader has who is holding the
+PDF, is deaf or hard of hearing, or is reading somewhere they cannot play sound
+— which is most readers, most of the time.
+
+## Where the clips come from
+
+They are **synthesized, not sampled**: `../scripts/audio/chNN_audio.py` writes
+each clip and its matching figure, so every example is reproducible, and the
+book carries no third-party recording and no licence question. Generated `.mp3`
+and `.svg` are committed, because the Pages build runs `myst build --html` with
+no Python. Regenerate with `npm run audio:render`.
+
+Two clips of the same musical idea must be equal in **level**, not in peak
+amplitude, or the comparison is about loudness rather than timbre — a square
+wave and a sine of equal peak differ by about 3 dB in RMS, and a listener will
+report the square as louder and call it brighter. `audiolib.match_level`
+normalizes to constant RMS; do not bypass it. RMS is a proxy for loudness rather
+than loudness itself, and `audiolib` says where that approximation is thin.
+
+# The export plugin
+
+`myst-to-tex` renders a fixed set of node types and reports anything else as
+`Unhandled LaTeX conversion for node of "<type>"` — then drops it. Five of the
+types this book leans on are not in that set:
+
+| Node | Written as | Without the plugin |
+|---|---|---|
+| `exercise` | `:::{exercise}` | every chapter's Problems section vanishes |
+| `solution` | `:::{solution}` | every worked solution vanishes |
+| `aside` | `:::{margin}` | every margin note vanishes |
+| `details` | `:::{dropdown}` | every optional derivation vanishes |
+| `iframe` | the simulation directives | intended — the sibling screenshot carries it |
+
+Since a plugin cannot supply a renderer, `export.mjs` rewrites those nodes into
+ones the renderer already understands, and only while an export is being built.
+
+Three things make that work, and each is easy to get wrong:
+
+- **`stage: 'project'`.** Project-stage transforms run *after*
+  `resolveReferencesTransform`, so every `enumerator` is already assigned
+  ("4.1") and every cross-reference's link text is already resolved. The same
+  transform at `document` stage would lose both.
+- **Nothing may be boxed.** Worked solutions contain figures, and LaTeX cannot
+  open a float inside `framed`, `minipage`, or any other box: it fails with
+  *Not in outer par mode* and loses the figure, its caption, and every
+  `{numref}` pointing at it. The template brackets exercises with plain spacing
+  commands for exactly this reason.
+- **No custom environment.** The same `.tex` feeds pandoc for the Word edition,
+  and pandoc discards the entire body of an environment it does not know. Bare
+  commands it cannot read are skipped harmlessly instead.
+
+## Editions
+
+Two environment variables steer it. Neither is set for `myst start` or
+`myst build --html`, where the plugin returns immediately.
+
+| Variable | Values | Effect |
+|---|---|---|
+| `MYST_PRINT` | `full`, `student` | Which edition. `student` drops all solutions. Unset means the website — the plugin does nothing. |
+| `MYST_SITE_URL` | a base URL | Only for chapter offprints. An offprint holds one chapter, so its "see Chapter 7" references leave the file and point at the website. Leave unset for the whole book, where the jump should stay inside the PDF. |
+
+[`../scripts/build-exports.sh`](../scripts/build-exports.sh) sets both correctly
+for each artifact; prefer it to calling `myst build` by hand.

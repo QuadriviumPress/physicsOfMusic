@@ -1,0 +1,73 @@
+name: Generated assets
+
+# Three generators write files that are committed to the repository, because the
+# Pages build runs `myst build --html` and has nothing else available. Each job
+# regenerates its own set and fails if the committed output has drifted.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/figures/**'
+      - 'scripts/audio/**'
+      - 'scripts/notation_text_to_path.py'
+      - 'scripts/render-notation.mjs'
+      - 'notation/**'
+      - 'requirements-figures.txt'
+      - 'images/**'
+      - 'audio/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: assets-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  figures:
+    name: Chapter figures
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-figures.txt
+      - run: scripts/check-figures.sh
+
+  audio:
+    name: Audio examples
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-figures.txt
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
+      - run: scripts/check-audio.sh
+
+  notation:
+    name: Staff notation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-figures.txt
+      - run: npm ci
+      - run: scripts/check-notation.sh

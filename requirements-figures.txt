@@ -1,0 +1,17 @@
+# Pin the renderer because Matplotlib versions change SVG geometry and metadata.
+matplotlib==3.11.1
+numpy==2.5.2
+scipy==1.18.1
+pillow==12.3.0
+# fontTools reads the Bravura WOFF2 that scripts/notation_text_to_path.py
+# converts to paths; WOFF2 is brotli-compressed, and fontTools will not open
+# one without this.
+brotli==1.2.0
+contourpy==1.3.3
+cycler==0.12.1
+fonttools==4.64.0
+kiwisolver==1.5.1
+packaging==26.3
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+six==1.17.0

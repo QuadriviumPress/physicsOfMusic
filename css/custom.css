@@ -1,0 +1,85 @@
+/*
+ * The book's stylesheet, registered as `site.options.style` in myst.yml.
+ *
+ * `style` takes one file, so the rules for both media plugins live here rather
+ * than beside each plugin. Three groups, in order:
+ *
+ *   1. {simulation} / {openlyceum} / {phet}   plugins/simulation.mjs
+ *   2. {audio}                                plugins/audio.mjs
+ *   3. book styles
+ *
+ * Group 1 is load-bearing. Those directives emit a website-only iframe *and* a
+ * static screenshot as siblings of one figure, because no single node type
+ * survives every MyST output format; on the website both would be visible, so
+ * this file hides the screenshot and flips the pair back around for print.
+ */
+
+/* ---------------------------------------------------------------- 1. Simulations */
+
+/* The static fallback exists for PDF, DOCX, Markdown, and print. */
+.simulation-placeholder {
+  display: none;
+}
+
+/*
+ * The MyST theme wraps every iframe in a div carrying an inline
+ * `padding-bottom: 60%`, which is the aspect ratio. 60% matches the
+ * SceneryStack 1024x618 frame almost exactly, so only other ratios need a rule
+ * here -- and each one has to win against an inline style.
+ */
+.simulation-aspect-768x504 > div {  /* PhET */
+  padding-bottom: 65.63% !important;
+}
+
+.simulation-aspect-16x9 > div {
+  padding-bottom: 56.25% !important;
+}
+
+.simulation-aspect-4x3 > div {
+  padding-bottom: 75% !important;
+}
+
+.simulation-aspect-1x1 > div {
+  padding-bottom: 100% !important;
+}
+
+/* The caption line that links to the live simulation. */
+.simulation-link {
+  font-size: 0.9em;
+}
+
+/* ---------------------------------------------------------------- 2. Audio */
+
+/*
+ * An {audio} figure is a waveform-and-spectrum picture plus a link to the clip.
+ * Unlike a simulation it has no website-only half to hide -- MyST strips a raw
+ * <audio> element, so there is no inline player to suppress (see
+ * plugins/audio.mjs). These rules only keep the two caption lines subordinate
+ * to the caption proper.
+ */
+.audio-transcript,
+.audio-link {
+  font-size: 0.9em;
+}
+
+.audio-link a {
+  font-weight: 600;
+}
+
+/*
+ * Printing from the browser is the fourth static path, alongside PDF, DOCX,
+ * and Markdown. An audio element prints as a blank strip of controls at best,
+ * so swap in the figure the exports already use.
+ */
+@media print {
+  .simulation-frame {
+    display: none;
+  }
+
+  .simulation-placeholder {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}

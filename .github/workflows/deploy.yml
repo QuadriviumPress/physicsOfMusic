@@ -1,0 +1,21 @@
+# Deploy the MyST HTML site to GitHub Pages via Bindery.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+jobs:
+  deploy:
+    uses: QuadriviumPress/bindery/.github/workflows/deploy.yml@main
+    with:
+      pre-build-command: bash scripts/fetch-exports.sh && node scripts/export-metadata.mjs prepare && npm run verify
+      build-command: myst build --html --check-links && node scripts/setup-pwa.mjs
+      output-dir: _build/html

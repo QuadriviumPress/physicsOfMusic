@@ -1,0 +1,223 @@
+version: 1
+project:
+  id: physics-of-music
+  title: Physics of Music
+  subtitle: Vibration, Hearing, Instruments, and the Sound of a Room
+  short_title: Physics of Music
+  description: >-
+    An open textbook on the physics of musical sound: vibration and wave motion,
+    standing waves and resonance, spectrum and timbre, the ear and the
+    perception of loudness and pitch, tuning systems, the string, wind,
+    percussion and vocal instruments, room acoustics, and recorded sound.
+    Written for a one-semester course for students of any major.
+  keywords:
+    - physics of music
+    - musical acoustics
+    - sound
+    - waves
+    - psychoacoustics
+    - musical instruments
+    - tuning and temperament
+    - room acoustics
+    - open textbook
+  subject: Physics
+  authors:
+    - name: Martin Veillette
+      corresponding: true
+      email: martin.veillette@gmail.com
+  date: 2026-01-01
+  license: CC-BY-NC-SA-4.0
+  copyright: "2026 Martin Veillette"
+  open_access: true
+  github: QuadriviumPress/physicsOfMusics
+  # 1200x630 social-preview card; see scripts/figures/brand_assets.py.
+  # No `banner:` -- book-theme validates the key but has no render path for it
+  # (only article-theme draws one), so the asset would never appear.
+  thumbnail: images/social-card.png
+  # Formal citations for the acoustics literature the book leans on. Terms that
+  # need a definition rather than an expansion live in back/glossary.md.
+  bibliography:
+    - back/references.bib
+  # Expanded on first use in the text; these render as hover tooltips.
+  abbreviations:
+    SHM: simple harmonic motion
+    SPL: sound pressure level
+    FFT: fast Fourier transform
+    DFT: discrete Fourier transform
+    STFT: short-time Fourier transform
+    JND: just-noticeable difference
+    ERB: equivalent rectangular bandwidth
+    HRTF: head-related transfer function
+    ADSR: attack, decay, sustain, release
+    MIDI: Musical Instrument Digital Interface
+    DAW: digital audio workstation
+    ADC: analog-to-digital converter
+    DAC: digital-to-analog converter
+    PCM: pulse-code modulation
+    SNR: signal-to-noise ratio
+    ISO: International Organization for Standardization
+    NIHL: noise-induced hearing loss
+  plugins:
+    - plugins/simulation.mjs
+    # Audio examples: the waveform and spectrum of a clip, a transcript, and a
+    # link to hear it. MyST strips a raw <audio> element, so there is no inline
+    # player; plugins/README.md records what was tried.
+    - plugins/audio.mjs
+    # Rewrites exercises, solutions, margin notes and dropdowns into nodes the
+    # LaTeX/DOCX renderers understand. Inert unless MYST_PRINT is set, so the
+    # website build is untouched; see plugins/export.mjs.
+    - plugins/export.mjs
+  # The simulation directives emit an iframe for the website beside a screenshot
+  # for print. plugins/export.mjs strips the iframe before the tex renderer sees
+  # it, but a stray one must not fail the build.
+  error_rules:
+    - id: tex-renders
+      severity: warn
+    - id: docx-renders
+      severity: warn
+    # The downloads below are build artifacts. They exist in CI, which builds the
+    # exports before the site, but not in a fresh clone or during `myst start`.
+    - id: static-action-file-copied
+      severity: warn
+  # The download menu on every page of the site. These are the artifacts
+  # scripts/build-exports.sh writes; the deploy workflow downloads them from the
+  # last successful Exports run before it builds the HTML, so they are on disk
+  # by the time MyST looks for them. The per-chapter PDFs need no entry here --
+  # MyST surfaces a page's own `exports:` on that page by itself.
+  # `static: true` is not cosmetic: without it a missing file is an unsuppressible
+  # error, and these are build artifacts that a fresh clone has not made yet.
+  downloads:
+    - file: exports/physics-of-music.pdf
+      title: Download the book (PDF, with worked solutions)
+      static: true
+    - file: exports/physics-of-music-student.pdf
+      title: Download the book (PDF, exercises only)
+      static: true
+    - file: exports/physics-of-music.docx
+      title: Download the book (Word)
+      static: true
+  # The printable book. Built by scripts/build-exports.sh, which runs this twice
+  # -- once with MYST_PRINT=full, once with MYST_PRINT=student -- and renames the
+  # output. `level: 0` makes each chapter a \chapter rather than a \section, so
+  # LaTeX's own numbering lands on the same 4, 4.1, 4.2 the website shows; the
+  # titled `level: -1` entries are the part dividers for the printed book only
+  # (the website `toc:` below is a flat list). index.md is the website's landing
+  # page and is not one of them -- the printed book opens with the title and
+  # copyright pages in templates/book/template.tex, then the preface while still
+  # in LaTeX \frontmatter. front/preface.md ends with a raw \mainmatter so
+  # Chapter 1 is the first numbered chapter.
+  exports:
+    - id: book
+      # `pdf+tex` keeps the intermediate .tex, which scripts/tex-to-docx.py
+      # feeds to pandoc -- MyST's own --docx writes raw LaTeX strings into Word
+      # equation fields, which is unreadable at this many equations.
+      format: pdf+tex
+      template: ./templates/book
+      output: exports/physics-of-music.pdf
+      articles:
+        - file: front/preface.md
+          level: 0
+        - title: Sound and Vibration
+          level: -1
+        - file: chapters/ch-01-sound-music-and-simple-harmonic-motion.md
+          level: 0
+        - file: chapters/ch-02-wave-motion-and-the-speed-of-sound.md
+          level: 0
+        - file: chapters/ch-03-superposition-interference-and-standing-waves.md
+          level: 0
+        - file: chapters/ch-04-resonance-and-normal-modes.md
+          level: 0
+        - title: Spectrum and Timbre
+          level: -1
+        - file: chapters/ch-05-fourier-analysis-harmonics-and-timbre.md
+          level: 0
+        - title: Hearing and Perception
+          level: -1
+        - file: chapters/ch-06-the-ear-and-the-physiology-of-hearing.md
+          level: 0
+        - file: chapters/ch-07-loudness-decibels-and-equal-loudness-contours.md
+          level: 0
+        - file: chapters/ch-08-pitch-beats-consonance-and-dissonance.md
+          level: 0
+        - title: Scales and Tuning
+          level: -1
+        - file: chapters/ch-09-musical-scales-and-tuning-systems.md
+          level: 0
+        - title: Musical Instruments
+          level: -1
+        - file: chapters/ch-10-string-instruments.md
+          level: 0
+        - file: chapters/ch-11-wind-instruments-and-air-column-resonance.md
+          level: 0
+        - file: chapters/ch-12-percussion-membranes-bars-and-plates.md
+          level: 0
+        - file: chapters/ch-13-the-singing-voice.md
+          level: 0
+        - title: Sound in Space and in Circuits
+          level: -1
+        - file: chapters/ch-14-room-acoustics-and-concert-hall-design.md
+          level: 0
+        - file: chapters/ch-15-electronic-and-recorded-sound.md
+          level: 0
+        - title: Appendices
+          level: -1
+        - file: back/appendix-teaching-guide.md
+          level: 0
+        - file: back/appendix-laboratory.md
+          level: 0
+        - file: back/appendix-final-project.md
+          level: 0
+        - file: back/glossary.md
+          level: 0
+  # Website sidebar: a flat list (no Part I / Part II groupings). The right-hand
+  # page outline supplies each chapter's numbered reading sections. Keeping
+  # section anchors out of this list avoids duplicating every heading and lets
+  # MyST apply BASE_URL correctly on Pages, forks, and custom domains.
+  toc:
+    - file: index.md
+    - file: front/preface.md
+    - file: chapters/ch-01-sound-music-and-simple-harmonic-motion.md
+    - file: chapters/ch-02-wave-motion-and-the-speed-of-sound.md
+    - file: chapters/ch-03-superposition-interference-and-standing-waves.md
+    - file: chapters/ch-04-resonance-and-normal-modes.md
+    - file: chapters/ch-05-fourier-analysis-harmonics-and-timbre.md
+    - file: chapters/ch-06-the-ear-and-the-physiology-of-hearing.md
+    - file: chapters/ch-07-loudness-decibels-and-equal-loudness-contours.md
+    - file: chapters/ch-08-pitch-beats-consonance-and-dissonance.md
+    - file: chapters/ch-09-musical-scales-and-tuning-systems.md
+    - file: chapters/ch-10-string-instruments.md
+    - file: chapters/ch-11-wind-instruments-and-air-column-resonance.md
+    - file: chapters/ch-12-percussion-membranes-bars-and-plates.md
+    - file: chapters/ch-13-the-singing-voice.md
+    - file: chapters/ch-14-room-acoustics-and-concert-hall-design.md
+    - file: chapters/ch-15-electronic-and-recorded-sound.md
+    - file: back/appendix-teaching-guide.md
+    - file: back/appendix-laboratory.md
+    - file: back/appendix-final-project.md
+    - file: back/glossary.md
+site:
+  template: book-theme
+  title: Physics of Music
+  nav:
+    - title: Sources & Attribution
+      url: https://github.com/QuadriviumPress/physicsOfMusics/blob/main/SOURCES.md
+  actions:
+    - title: GitHub
+      url: https://github.com/QuadriviumPress/physicsOfMusics
+  options:
+    # Generated by scripts/figures/brand_assets.py. MyST copies the favicon to
+    # /favicon.ico byte-for-byte, so it is a real multi-size ICO, not a PNG.
+    favicon: images/favicon.ico
+    logo: images/logo.svg
+    logo_dark: images/logo-dark.svg
+    logo_alt: Physics of Music standing-wave mark
+    logo_text: Physics of Music
+    logo_url: /
+    # Single-author book: the per-page byline is noise.
+    hide_authors: true
+    # Chapters number ## reading sections (N.1, N.2, ...); depth 2 keeps the
+    # right-hand outline to those assignable units (plus Summary / Problems).
+    outline_maxdepth: 2
+    # Hides the static simulation screenshots and audio fallbacks on screen and
+    # swaps them back in for print; see plugins/simulation.mjs, plugins/audio.mjs.
+    style: css/custom.css
