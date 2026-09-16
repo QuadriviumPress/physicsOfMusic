@@ -32,11 +32,11 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
-```{figure} ../images/open/ch01-tuning-fork.jpg
+```{figure} ../images/open/ch02-tuning-fork-history.jpg
 :label: fig:ch02-open-tuning-fork
-:alt: A tuning fork resting on sheet music.
+:alt: A historical illustration of a tuning fork producing visible sound vibrations.
 
-The same small source can launch a wave into the surrounding medium. Image: Lukasz Kobus / European Commission, CC BY 4.0.
+An early illustration of a tuning fork producing a visible sound vibration. Public-domain illustration from *Popular Science Monthly* (1878).
 ```
 
 [Chapter 1](#ch-sound-and-shm) left a vibrating object pushing on the air next to it. This chapter follows what happens next.

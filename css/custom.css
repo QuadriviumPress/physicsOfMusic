@@ -73,6 +73,16 @@
   font-weight: 600;
 }
 
+/* Open-license photographs are supporting illustrations, not full-page plates. */
+figure img[src*="/images/open/"] {
+  max-width: 72%;
+  max-height: 22rem;
+  width: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*
  * Printing from the browser is the fourth static path, alongside PDF, DOCX,
  * and Markdown. An audio element prints as a blank strip of controls at best,

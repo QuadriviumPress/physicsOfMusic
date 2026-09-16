@@ -33,10 +33,10 @@ By the end of this chapter, you should be able to:
 ### Introduction
 
 ```{figure} ../images/open/ch08-violin.jpg
-:label: fig:ch04-open-violin
-:alt: A violin shown from above, with its body and f-holes visible.
+:label: fig:ch04-open-guitar
+:alt: A guitar shown from above, with its body and sound hole visible.
 
-A violin is a compact collection of resonators: strings, plates, an enclosed air cavity, and the room beyond them. Thiru R. P. Babu, CC0.
+A guitar is a compact collection of resonators: strings, plates, an enclosed air cavity, and the room beyond them. Thiru R. P. Babu, CC0.
 ```
 
 [Chapter 3](#ch-superposition) established that a string fixed at both ends can only vibrate at certain frequencies. That is a statement about what the string will do if left alone. This chapter is about what happens when it is *not* left alone, when something drives it.
