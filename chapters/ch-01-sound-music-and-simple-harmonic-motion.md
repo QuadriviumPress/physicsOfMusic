@@ -38,6 +38,13 @@ Those four observations contain most of what this chapter is about. Something ha
 
 This book is about the physics that connects those facts, and it begins at the beginning: with what sound is, and with the particular kind of motion that musical sources almost always turn out to be doing. That motion is **simple harmonic motion**. Everything later, from the string and air column to the drumhead, vocal folds, microphone diaphragm, and basilar membrane inside your ear, either does it or is built from things that do.
 
+```{figure} ../images/open/ch01-tuning-fork.jpg
+:label: fig:ch01-open-tuning-fork
+:alt: A tuning fork resting on a page of sheet music.
+
+A tuning fork makes the central idea visible: a small vibrating source can have a definite musical frequency. Image: Lukasz Kobus / European Commission, CC BY 4.0.
+```
+
 :::{margin}
 A vacuum chamber demonstration is easy to find on video, and worth two minutes: a ringing alarm clock or a small buzzer fades to silence as the pump runs, and comes back as air is let in.
 :::
@@ -92,6 +99,13 @@ A loudspeaker driving air, with the compressions and rarefactions drawn directly
 ```
 
 ## From Sound to Music: Four Attributes
+
+```{figure} ../images/open/ch01-django-reinhardt.jpg
+:label: fig:ch01-open-guitarist
+:alt: Django Reinhardt playing a guitar.
+
+Music begins with a physical performer and instrument, then becomes a signal at the ear. William P. Gottlieb, public domain.
+```
 
 ### Pitch, Loudness, Timbre, Duration
 

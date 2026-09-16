@@ -33,6 +33,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch14-hall.jpg
+:label: fig:ch14-open-hall
+:alt: Walt Disney Concert Hall viewed from outside.
+
+The geometry of a hall is part of the instrument. This public-domain USGS photograph gives the abstract room models an architectural scale.
+```
+
 Everything so far has treated the instrument as the source of the sound a listener hears. It is not. Between the instrument and the ear is a room, and in almost every case **most of what reaches the listener has bounced off something.**
 
 In a concert hall, a listener in the middle of the stalls receives perhaps a tenth of their sound energy directly from the stage. The rest arrives later, from every direction, having reflected once, twice, or a hundred times. The room is not a transparent medium through which music passes; it is part of the instrument.

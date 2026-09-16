@@ -34,6 +34,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch15-microphone.jpg
+:label: fig:ch15-open-microphone
+:alt: A close-up photograph of a microphone.
+
+Recording begins with a membrane converting pressure into motion and then voltage. Engelbert Niehaus, CC BY 4.0.
+```
+
 Almost all the music anybody hears has been through a microphone, a wire, and a loudspeaker. Live acoustic performance is now the exception rather than the rule, and this chapter is about the chain that has replaced it.
 
 It is a satisfying place to end, because very little in it is new. The chain turns out to be an application of everything already established:

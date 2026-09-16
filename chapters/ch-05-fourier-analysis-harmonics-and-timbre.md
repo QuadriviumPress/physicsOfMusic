@@ -33,6 +33,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch01-django-reinhardt.jpg
+:label: fig:ch05-open-guitar
+:alt: Django Reinhardt playing a guitar.
+
+The same pitch can arrive in many timbral forms; the instrument and the player's gesture determine the spectrum and envelope. William P. Gottlieb, public domain.
+```
+
 A clarinet and a violin play the same note, at the same loudness, for the same length of time. Nobody has any difficulty telling them apart.
 
 That is a problem for everything the book has said so far. [Chapter 1](#ch-sound-and-shm) established that what reaches your ear is a single wiggling number, pressure at a point, as a function of time. If the pitch is the same and the loudness is the same, what is left for the difference to live in?

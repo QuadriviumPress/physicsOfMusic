@@ -33,6 +33,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch10-violin-met.jpg
+:label: fig:ch10-open-violin
+:alt: A violin photographed against a neutral background.
+
+The string is only the beginning: the bridge and body are the machinery that turns a small string motion into radiated sound. The Metropolitan Museum of Art, CC0.
+```
+
 Part V takes the machinery of the first nine chapters and applies it to instruments, one family at a time. Each chapter asks the same three questions:
 
 1. **What vibrates?**
@@ -259,6 +266,13 @@ It is also why the argument is hard to settle. [Chapter 4](#ch-resonance)'s trad
 
 ## The Violin Family
 
+```{figure} ../images/open/ch10-violin-smithsonian.jpg
+:label: fig:ch10-open-violin-smithsonian
+:alt: A violin and bow displayed in a museum collection.
+
+The instrument's visible parts are a map of its acoustic compromises: flexible strings, a light bridge, thin plates, and a resonant cavity. Smithsonian Institution, CC0.
+```
+
 ### Bowing in Practice
 
 A violinist controls three things continuously: bow **speed**, bow **force**, and the bow's **distance from the bridge**. Together they determine where the note sits in Schelleng's diagram, and therefore both its loudness and its timbre.
@@ -284,6 +298,13 @@ The **bridge hill** near $3$ kHz is the bridge's own resonance, and it is the vi
 The **wolf note** is a defect rather than a feature. If a strongly radiating body resonance lies at the same frequency as a note the player wants, the body absorbs energy from the string so efficiently that the string cannot maintain steady Helmholtz motion. The two alternately grab the energy, and the result is a stuttering, howling note, usually around E or F on a cello. The standard remedy is a **wolf eliminator**, a small mass clamped to the string beyond the bridge, which splits the offending resonance into two weaker ones on either side.
 
 ## The Piano
+
+```{figure} ../images/open/ch10-violin-met2.jpg
+:label: fig:ch10-open-violin-met2
+:alt: A second historical violin photographed in a museum collection.
+
+Instrument design is a sequence of compromises between stiffness, mass, damping, and radiation. The Metropolitan Museum of Art, CC0.
+```
 
 ### A String Under Great Tension
 

@@ -33,6 +33,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch11-clarinet.jpg
+:label: fig:ch11-open-clarinet
+:alt: A clarinet with its component parts labeled.
+
+The bore, keys, mouthpiece, and bell are a coupled acoustic system. Gisbert K, CC0.
+```
+
 Wind instruments are organized differently from string instruments, and the difference comes first, before any details.
 
 In a string instrument, the string decides the pitch. The body responds to whatever the string offers, and could be removed, leaving a quiet instrument, but one playing the same notes.
@@ -155,6 +162,13 @@ This is not a refinement to be mentioned and forgotten. An organ builder cutting
 
 ## The Air Jet
 
+```{figure} ../images/open/ch11-flutes.jpg
+:label: fig:ch11-open-flutes
+:alt: A group of flutes arranged side by side.
+
+Different lengths and constructions expose the geometric choices behind the simple air-column model. Copperstream, public domain.
+```
+
 ### Edge Tones
 
 The flute family has no reed. Instead, a thin **jet** of air is directed across a sharp edge.
@@ -216,6 +230,13 @@ The conical bore also explains a structural point. A cone must come to a point t
 
 ## Brass Instruments
 
+```{figure} ../images/open/ch11-trumpet.png
+:label: fig:ch11-open-trumpet-range
+:alt: A historical diagram comparing the ranges of trumpet and slide trumpet.
+
+Changing the effective tube length changes the available resonance series. Victor Charles Mahillon and Kathleen Schlesinger, public domain.
+```
+
 ### The Lip Reed
 
 A brass player's lips are a reed made of flesh, and the feedback mechanism is the same as §11.4's. The lips buzz; the bore reflects; the reflection controls the buzz.
@@ -266,6 +287,13 @@ Resonances 2 through 8 of a fixed tube, the complete vocabulary of a valveless b
 ```
 
 ## Changing the Length
+
+```{figure} ../images/open/ch11-flute-met.jpg
+:label: fig:ch11-open-flute-met
+:alt: A historical transverse flute photographed in a museum collection.
+
+An air column is shaped by its physical length and by the openings that interrupt it. The Metropolitan Museum of Art, CC0.
+```
 
 ### Tone Holes and the Register Hole
 

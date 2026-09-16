@@ -32,6 +32,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch03-chladni-historical.png
+:label: fig:ch03-open-chladni
+:alt: Historical drawing of a metal plate bowed at its edge to produce Chladni patterns.
+
+An early experiment in making modes visible: a bowed plate gathers sand along its nodal lines. Public-domain illustration from 1879.
+```
+
 So far the book has followed one wave at a time. Music never does. A room is full of waves, the direct sound from the instrument, the reflection off the back wall, the note the second violin is playing, the reflection of *that* off the ceiling, all arriving at your ear at once and all adding up.
 
 What they add up to is the subject of this chapter, and it is governed by one very simple rule with one very surprising consequence.
@@ -220,6 +227,13 @@ Two names for the parts of a standing wave:
 You can find the nodes of a guitar string by touching it very lightly at various points while it sounds. Touch an antinode and the note dies; touch a node and it carries on, because you are holding a point that was not moving anyway. This is not a party trick, it is exactly how a string player produces harmonics, and §3.4 uses it.
 
 ## Standing Waves on a String
+
+```{figure} ../images/open/ch03-chladni-figures.jpg
+:label: fig:ch03-open-chladni-pattern
+:alt: Sand gathered into a branching Chladni pattern on a vibrating surface.
+
+Nodal lines are not merely a drawing convention: powder makes them visible on a vibrating surface. Émile Desbeaux, public domain.
+```
 
 ### Fitting Half-Wavelengths Between Two Ends
 

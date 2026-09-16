@@ -32,6 +32,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch08-violin.jpg
+:label: fig:ch04-open-violin
+:alt: A violin shown from above, with its body and f-holes visible.
+
+A violin is a compact collection of resonators: strings, plates, an enclosed air cavity, and the room beyond them. Thiru R. P. Babu, CC0.
+```
+
 [Chapter 3](#ch-superposition) established that a string fixed at both ends can only vibrate at certain frequencies. That is a statement about what the string will do if left alone. This chapter is about what happens when it is *not* left alone, when something drives it.
 
 The answer is the single most useful idea in instrument design. Drive a system at one of its natural frequencies and it responds enormously; drive it anywhere else and it barely responds at all. That selectivity is **resonance**, and every instrument in this book depends on it twice over: once to choose which frequency will sound, and again to get that frequency out into the room loudly enough to hear.

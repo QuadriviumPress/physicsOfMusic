@@ -34,6 +34,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch09-horn-violin.jpg
+:label: fig:ch09-open-horn-violin
+:alt: A historical horn-violin with a horn-shaped resonator.
+
+Instrument makers have repeatedly reshaped resonators to change how partials reach the listener. Historical image, public domain.
+```
+
 [Chapter 8](#ch-pitch-and-consonance) ended with a result worth restating: intervals whose frequency ratios are simple whole numbers sound smooth, because the partials of the two tones coincide instead of clashing. The octave is $2{:}1$, the perfect fifth is $3{:}2$, the major third is $5{:}4$.
 
 So building a musical scale ought to be easy. Take the good ratios and stack them up.

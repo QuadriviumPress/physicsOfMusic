@@ -33,6 +33,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch08-violin.jpg
+:label: fig:ch08-open-violin
+:alt: A violin photographed from above.
+
+Pitch is heard through an instrument's whole vibration, not just through its fundamental. Thiru R. P. Babu, CC0.
+```
+
 This chapter asks two questions that look simple and are not.
 
 **What determines the pitch of a sound?** The obvious answer, its frequency, is wrong often enough to be interesting. A sound can have a clear pitch at a frequency that is entirely absent from it. Two sounds of the same frequency can have different pitches, depending on how loud they are. And above about $5$ kHz, pitch perception degrades badly even though hearing continues for another two octaves.

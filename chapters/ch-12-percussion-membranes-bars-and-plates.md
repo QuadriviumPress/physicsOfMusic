@@ -33,6 +33,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch12-timpani.jpg
+:label: fig:ch12-open-timpani
+:alt: A timpani with its bowl, membrane, and tuning mechanism visible.
+
+Percussion instruments make mode shapes physical: a stretched membrane, a bowl, and an adjustable boundary all contribute to the sound. Fabrizio Bastianini, public domain.
+```
+
 Every instrument so far has had a harmonic spectrum. Strings and air columns are one-dimensional, and their boundary conditions force their modes into exact whole-number ratios; so they have clear pitches, their tones blend, and [Chapter 9](#ch-scales-and-tuning)'s tuning systems are built out of small integers.
 
 Percussion is different, and the difference is not a matter of degree.

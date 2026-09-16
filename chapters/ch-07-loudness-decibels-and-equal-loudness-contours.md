@@ -33,6 +33,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch14-hall.jpg
+:label: fig:ch07-open-hall
+:alt: The exterior of Walt Disney Concert Hall, with its curved reflective metal surfaces.
+
+Sound level is always measured somewhere. A concert hall makes that “somewhere” consequential: source, distance, reflections, and listener all enter the result. U.S. Geological Survey, public domain.
+```
+
 Turn the volume knob halfway down. Is the music half as loud?
 
 Nobody thinks so, and the reason is the subject of this chapter. Between the sound pressure at your eardrum and the loudness you experience lie two transformations, and neither is a simple proportion.

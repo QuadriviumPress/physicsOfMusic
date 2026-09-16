@@ -32,6 +32,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch01-tuning-fork.jpg
+:label: fig:ch02-open-tuning-fork
+:alt: A tuning fork resting on sheet music.
+
+The same small source can launch a wave into the surrounding medium. Image: Lukasz Kobus / European Commission, CC BY 4.0.
+```
+
 [Chapter 1](#ch-sound-and-shm) left a vibrating object pushing on the air next to it. This chapter follows what happens next.
 
 The answer is not obvious. The sound arrives at your ear far faster than any air could get there, and the air that arrives is not the air that left. A trumpet player thirty meters away blows a note, and a fifteenth of a second later you hear it, but the breath that made it is still in the trumpet. Something crossed the room, and it was not a substance.

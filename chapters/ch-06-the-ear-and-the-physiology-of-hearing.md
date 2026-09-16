@@ -32,6 +32,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch06-ear-historical.jpg
+:label: fig:ch06-open-ear
+:alt: A historical anatomical illustration showing the outer, middle, and inner ear.
+
+The ear is both anatomy and an acoustic pathway. This historical plate gives the reader a physical object to keep in mind while the chapter develops its transduction model. Wellcome Collection, CC BY 4.0.
+```
+
 The book now turns around. Chapters 1 to 5 followed sound from a vibrating object out into the room. The next three follow it from the room into a listener, and the story changes character completely.
 
 Up to this point everything has been measurable with instruments. A microphone and an oscilloscope can tell you the frequency, the amplitude, and the spectrum of a sound, and two competent experimenters will agree on all three. From here on, the quantities are **judgments**: how loud something seems, how high it seems, whether two notes seem to go together. No instrument measures those. They are produced by a listener, and to understand them you have to understand the machinery that produces them.
