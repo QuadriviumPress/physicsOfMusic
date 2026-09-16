@@ -173,9 +173,10 @@ def helmholtz():
                                  edgecolor="#333333", lw=1.6))
     left.add_patch(plt.Rectangle((-0.13, 0.36), 0.26, 0.16, facecolor=RED,
                                  edgecolor=RED, alpha=0.8))
-    left.annotate("", xy=(0.0, 0.78), xytext=(0.0, 0.58),
-                  arrowprops=dict(arrowstyle="<->", color=RED, lw=1.8))
-    left.text(0.22, 0.44, "the plug of air\nin the neck\n(the mass)",
+    left.annotate("", xy=(0.34, 0.58), xytext=(0.34, 0.24),
+                  arrowprops=dict(arrowstyle="<->", color=RED, lw=1.8,
+                                  mutation_scale=13))
+    left.text(0.46, 0.44, "the plug of air\nin the neck\n(the mass)",
               fontsize=10, color=RED, va="center")
     left.text(0.75, -0.55, "the air in the cavity\n(the spring)", fontsize=10,
               color=BLUE, va="center")
@@ -187,22 +188,28 @@ def helmholtz():
     left.axis("off")
     left.set_title("A bottle, and why it has one note", fontsize=12, fontweight="bold")
 
-    # Frequency against cavity volume, with real examples marked.
-    volumes = np.linspace(0.2, 6.0, 300)      # litres
-    v_sound, area, length = 343.0, 4.5e-4, 0.05
-    freq = (v_sound / (2 * np.pi)) * np.sqrt(area / ((volumes * 1e-3) * length))
-    right.plot(volumes, freq, color=BLUE, lw=2.4)
-    for volume, label, colour in ((0.33, "a beer bottle", ORANGE),
-                                  (0.75, "a wine bottle", GREEN),
-                                  (4.0, "a guitar body", PURPLE)):
-        f = (v_sound / (2 * np.pi)) * np.sqrt(area / ((volume * 1e-3) * length))
+    # Frequency against cavity volume, for one fixed neck. A guitar's soundhole
+    # is nothing like a bottle's neck -- far wider and far shorter -- so putting
+    # a guitar on this curve would be meaningless; the text makes the comparison
+    # instead.
+    def helmholtz_frequency(volume_litres, area, length):
+        return (343.0 / (2 * np.pi)) * np.sqrt(area / ((volume_litres * 1e-3) * length))
+
+    neck_area, neck_length = 4.5e-4, 0.075
+    volumes = np.linspace(0.15, 3.0, 300)
+    right.plot(volumes, helmholtz_frequency(volumes, neck_area, neck_length),
+               color=BLUE, lw=2.4)
+    for volume, label, colour, dy in ((0.33, "a beer bottle", ORANGE, 30),
+                                      (0.75, "a wine bottle", GREEN, 34)):
+        f = helmholtz_frequency(volume, neck_area, neck_length)
         right.plot([volume], [f], "o", color=colour, ms=8)
-        right.annotate(f"{label}\n{f:.0f} Hz", xy=(volume, f), xytext=(volume + 0.3, f + 12),
-                       fontsize=10, color=colour)
+        right.annotate(f"{label}\n{f:.0f} Hz", xy=(volume, f),
+                       xytext=(volume + 0.22, f + dy), fontsize=10, color=colour)
+    right.set_xlim(0, 3)
     right.set_xlabel("cavity volume (litres)")
     right.set_ylabel("resonant frequency (Hz)")
-    right.set_title("$f_0 \\propto 1/\\sqrt{V}$", fontsize=12, fontweight="bold")
-    right.set_xlim(0, 6)
+    right.set_title("One neck, varying cavity: $f_0 \\propto 1/\\sqrt{V}$",
+                    fontsize=12, fontweight="bold")
 
     fig.tight_layout()
     save(fig, "ch04-helmholtz")
