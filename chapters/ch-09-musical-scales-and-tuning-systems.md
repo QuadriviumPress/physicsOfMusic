@@ -109,6 +109,13 @@ The essential values, worth memorizing:
 | Pure minor third | $6{:}5$ | $315.641$ |
 | Equal semitone | $2^{1/12}$ | $100.0$ |
 
+```{figure} ../images/ch09-piano-keyboard.svg
+:label: fig:ch09-piano-keyboard
+:alt: One octave of a piano keyboard from C4 to C5, with the white keys of C major highlighted and the black keys labeled with their sharp and flat names.
+
+Reading notes on a keyboard. The white keys trace the C-major scale, while each black key has two names: for example, C-sharp and D-flat are the same equal-tempered key. Moving to the next key, white or black, raises the pitch by one semitone; the octave from C4 to C5 contains twelve such steps.
+```
+
 ::::{tip} Worked example: converting to and from cents
 *(a) How many cents is the ratio $7{:}4$, the interval of the seventh harmonic? (b) What ratio is $350$ cents?*
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="piano-title piano-description" preserveAspectRatio="xMidYMid meet">
+  <title id="piano-title">One octave of a piano keyboard</title>
+  <desc id="piano-description">An octave from C4 to C5. The seven white keys C, D, E, F, G, A, and B are highlighted as the notes of the C-major scale. The five black keys are labeled C-sharp or D-flat, D-sharp or E-flat, F-sharp or G-flat, G-sharp or A-flat, and A-sharp or B-flat.</desc>
+  <style>
+    :root { color-scheme: light dark; --ink: #1f2937; --muted: #59636e; --white-key: #f8fafc; --key-edge: #64748b; --scale: #d8eee5; --black-key: #27313b; --black-edge: #111827; --accent: #b45309; }
+    svg { color: var(--ink); font-family: system-ui, sans-serif; }
+    .white { fill: var(--scale); stroke: var(--key-edge); stroke-width: 2; }
+    .end { fill: var(--scale); }
+    .black { fill: var(--black-key); stroke: var(--black-edge); stroke-width: 2; }
+    text { fill: currentColor; }
+    .black-label { fill: #f8fafc; font-size: 13px; font-weight: 650; text-anchor: middle; }
+    .white-label { font-size: 16px; font-weight: 700; text-anchor: middle; }
+    .small { fill: var(--muted); font-size: 14px; }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #f3f4f6; --muted: #cbd5e1; --white-key: #e5e7eb; --key-edge: #94a3b8; --scale: #23614d; --black-key: #111827; --black-edge: #020617; }
+    }
+  </style>
+
+  <text x="480" y="30" font-size="20" font-weight="700" text-anchor="middle">One octave on the piano</text>
+  <text x="480" y="55" class="small" text-anchor="middle">Each neighboring key is one semitone; twelve semitones make the octave C4–C5.</text>
+
+  <!-- White keys: the seven notes of C major are highlighted. -->
+  <rect class="end" x="80" y="82" width="100" height="156" rx="2"/>
+  <rect class="white" x="180" y="82" width="100" height="156" rx="2"/>
+  <rect class="white" x="280" y="82" width="100" height="156" rx="2"/>
+  <rect class="white" x="380" y="82" width="100" height="156" rx="2"/>
+  <rect class="white" x="480" y="82" width="100" height="156" rx="2"/>
+  <rect class="white" x="580" y="82" width="100" height="156" rx="2"/>
+  <rect class="white" x="680" y="82" width="100" height="156" rx="2"/>
+  <rect class="end" x="780" y="82" width="100" height="156" rx="2"/>
+
+  <!-- Black keys sit between C-D, D-E, F-G, G-A, and A-B. -->
+  <rect class="black" x="150" y="82" width="60" height="100" rx="3"/>
+  <rect class="black" x="250" y="82" width="60" height="100" rx="3"/>
+  <rect class="black" x="450" y="82" width="60" height="100" rx="3"/>
+  <rect class="black" x="550" y="82" width="60" height="100" rx="3"/>
+  <rect class="black" x="650" y="82" width="60" height="100" rx="3"/>
+
+  <text class="black-label" x="180" y="111"><tspan x="180">C♯</tspan><tspan x="180" dy="16">D♭</tspan></text>
+  <text class="black-label" x="280" y="111"><tspan x="280">D♯</tspan><tspan x="280" dy="16">E♭</tspan></text>
+  <text class="black-label" x="480" y="111"><tspan x="480">F♯</tspan><tspan x="480" dy="16">G♭</tspan></text>
+  <text class="black-label" x="580" y="111"><tspan x="580">G♯</tspan><tspan x="580" dy="16">A♭</tspan></text>
+  <text class="black-label" x="680" y="111"><tspan x="680">A♯</tspan><tspan x="680" dy="16">B♭</tspan></text>
+
+  <text class="white-label" x="130" y="221">C<tspan class="small" dy="19" x="130">4</tspan></text>
+  <text class="white-label" x="230" y="221">D<tspan class="small" dy="19" x="230">4</tspan></text>
+  <text class="white-label" x="330" y="221">E<tspan class="small" dy="19" x="330">4</tspan></text>
+  <text class="white-label" x="430" y="221">F<tspan class="small" dy="19" x="430">4</tspan></text>
+  <text class="white-label" x="530" y="221">G<tspan class="small" dy="19" x="530">4</tspan></text>
+  <text class="white-label" x="630" y="221">A<tspan class="small" dy="19" x="630">4</tspan></text>
+  <text class="white-label" x="730" y="221">B<tspan class="small" dy="19" x="730">4</tspan></text>
+  <text class="white-label" x="830" y="221">C<tspan class="small" dy="19" x="830">5</tspan></text>
+
+  <line x1="80" y1="258" x2="380" y2="258" stroke="#2e7d5b" stroke-width="4" stroke-linecap="round"/>
+  <text x="395" y="263" class="small">white keys: C-major scale</text>
+  <line x1="650" y1="258" x2="710" y2="258" stroke="#27313b" stroke-width="8" stroke-linecap="round"/>
+  <text x="725" y="263" class="small">black keys: sharps/flats</text>
+</svg>
