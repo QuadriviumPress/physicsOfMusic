@@ -126,6 +126,13 @@ The two are exact inverses, which is a stronger claim than it may look. It means
 Synthesis, one harmonic at a time. Each step adds the next harmonic of $220$ Hz at the amplitude a sawtooth calls for. Listen for what *does not* happen: the pitch never moves. Adding higher frequencies to a tone makes it brighter, not higher, which is the first and most important thing the ear does with a harmonic series.
 ```
 
+```{openlyceum} WaveComposer
+:label: fig:ch05-wave-decomposer-sim
+:screen: 2
+
+The decomposer screen: hand it an arbitrary periodic wave and watch it resolve into a stack of harmonic amplitudes in real time. This is analysis running the other direction from the sawtooth built by hand above, spectrum from waveform rather than waveform from spectrum, and the two screens of this simulation are the theorem's two directions made concrete.
+```
+
 ## The Harmonic Series and the Spectrum
 
 ### Harmonics, Partials, and Overtones
