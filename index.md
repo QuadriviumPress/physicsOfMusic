@@ -50,5 +50,5 @@ may contain more recent changes.
 License (CC-BY-NC-SA-4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 This book adapts openly licensed content from several sources; see
-[`SOURCES.md`](https://github.com/QuadriviumPress/physicsOfMusics/blob/main/SOURCES.md)
+[`SOURCES.md`](https://github.com/QuadriviumPress/physicsOfMusic/blob/main/SOURCES.md)
 for the per-chapter attribution ledger.

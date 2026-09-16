@@ -12,7 +12,7 @@ inputs:
       chapter, so its "see Chapter 7" references have to leave the file; they
       point here instead.
     required: false
-    default: https://quadriviumpress.github.io/physicsOfMusics
+    default: https://quadriviumpress.github.io/physicsOfMusic
 
 runs:
   using: composite

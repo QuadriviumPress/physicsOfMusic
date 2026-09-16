@@ -28,7 +28,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 TARGET="${1:-all}"
-SITE_URL="${MYST_SITE_URL:-https://quadriviumpress.github.io/physicsOfMusics}"
+SITE_URL="${MYST_SITE_URL:-https://quadriviumpress.github.io/physicsOfMusic}"
 OUT="exports"
 
 # MyST writes the book to the single `output:` named in myst.yml, so the two

@@ -51,7 +51,7 @@ jobs:
       - name: Build representative and changed chapter offprints
         env:
           MYST_PRINT: full
-          MYST_SITE_URL: https://quadriviumpress.github.io/physicsOfMusics
+          MYST_SITE_URL: https://quadriviumpress.github.io/physicsOfMusic
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           set -euo pipefail
