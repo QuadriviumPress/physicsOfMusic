@@ -24,6 +24,7 @@ By the end of this chapter, you should be able to:
 - Describe how dynamic and condenser microphones convert sound pressure into a voltage, and compare their characteristics.
 - Read a microphone polar pattern, and choose an appropriate pattern for a stated recording situation.
 - Explain how a loudspeaker converts a signal back into sound, and why a single driver cannot cover the audible range.
+- Explain how a magnetic pickup converts string motion into a voltage, and why pickup placement changes an electric guitar's timbre.
 - Interpret a frequency-response curve, and distinguish linear distortion from nonlinear distortion.
 - State the sampling theorem, calculate the Nyquist frequency for a given sampling rate, and explain why 44.1 kHz was chosen for the compact disc.
 - Explain aliasing, predict the frequency of an aliased component, and describe the role of the anti-aliasing filter.
@@ -91,6 +92,18 @@ It faces a problem [Chapter 2](#ch-wave-motion) identified. Directivity depends 
 The solution is multiple drivers, a **woofer**, sometimes a midrange, and a **tweeter**, with a **crossover** network dividing the signal between them. The crossover is itself a compromise, since the drivers must blend through the handover region without canceling, and crossover design is much of what distinguishes loudspeakers.
 
 The low-frequency problem is attacked separately. A cone radiates from both faces, in opposite phase, so at long wavelengths the front and rear outputs meet around the edge and cancel. An enclosure prevents that. A **sealed** box is simple and well-behaved; a **bass-reflex** box adds a tuned port, a Helmholtz resonator ([Chapter 4](#ch-resonance)), that reinforces the bottom octave at the cost of a steeper roll-off below it.
+
+### Electromagnetic Pickups: A Different Transducer
+
+A microphone reads pressure in the air; an electric guitar's **pickup** reads the string directly, and it works on a different principle entirely.
+
+A magnetic pickup is a coil of wire wound around a permanent magnet. The magnet's field passes through the string, provided the string is ferrous (steel, or steel-wound), and magnetizes a section of it. As the string vibrates, it disturbs that field, and the changing flux through the coil induces a voltage by Faraday's law. No power supply, no diaphragm: the string *is* the diaphragm.
+
+One consequence is easy to miss. Because the induced voltage depends on the *rate of change* of flux, the pickup's output is proportional to the string's **velocity**, not its displacement. This is the same distinction [Chapter 10](#ch-string-instruments) draws between the bridge force a soundboard responds to and the string's actual shape.
+
+A second consequence is audible on every electric guitar. A pickup samples the string's motion at one fixed point along its length, and [Chapter 10](#ch-string-instruments) showed that the plucking or driving point determines which harmonics are strong: a point that is a node for some harmonic contributes almost nothing at that harmonic to the output. A **neck pickup**, positioned nearer the string's midpoint, favors the fundamental and sounds warm; a **bridge pickup**, positioned near a region where high harmonics have their antinodes, emphasizes them and sounds bright and biting. Switching pickups, or blending them, is comb filtering by another name, chosen by ear rather than calculated.
+
+Not every electric or amplified string instrument uses this principle. A **piezoelectric pickup**, common on acoustic-electric guitars, basses, and violins, is mounted under the bridge saddle and generates a voltage from mechanical stress rather than magnetic flux, so it works on nylon or gut strings that a magnetic pickup cannot see at all, and it responds to the bridge's motion rather than the string's.
 
 ## Signals and Their Imperfections
 
@@ -339,6 +352,7 @@ And so the book's last idea is one of its first. [Chapter 3](#ch-superposition) 
 - **Dynamic microphones** use a coil and magnet; **condensers** use a variable capacitor and a much lighter diaphragm. Both want a well-damped resonance outside the audio band, low $Q$, as in [Chapter 4](#ch-resonance).
 - **Polar patterns** follow from whether the diaphragm senses pressure (omnidirectional) or pressure difference (figure-of-eight); cardioid is their sum. Every pressure-difference microphone shows **proximity effect**.
 - **Loudspeakers need multiple drivers**, because directivity depends on size against wavelength and music spans a factor of a thousand in wavelength. Enclosures prevent front-to-back cancellation; a bass-reflex port is a Helmholtz resonator.
+- **A magnetic pickup** induces a voltage from a ferrous string's motion directly, no diaphragm required; its output tracks string velocity, and its fixed sampling point along the string means placement (neck versus bridge) reshapes the harmonic balance, the same driving-point physics as [Chapter 10](#ch-string-instruments).
 - **Linear distortion** rebalances existing frequencies and is in principle correctable; **nonlinear distortion** creates new ones and is not.
 - **The sampling theorem**: a signal with no energy above $f_{\max}$ is *completely* determined by samples at any rate above $2f_{\max}$. Reconstruction is exact.
 - **Aliasing** folds everything above the Nyquist frequency back below it, producing new frequencies at unrelated pitches. The anti-aliasing filter must act **before** sampling, because afterwards nothing can distinguish an alias from a real component.
@@ -355,15 +369,17 @@ And so the book's last idea is one of its first. [Chapter 3](#ch-superposition) 
 
 3. Explain why a single loudspeaker driver cannot reproduce the whole audible range, referring to source size and wavelength.
 
-4. Distinguish linear from nonlinear distortion, and explain why only one of them can in principle be corrected.
+4. A guitarist blends a neck and a bridge pickup and notices the tone changes even though nothing about the string or the amplifier has changed. Explain why, referring to the driving-point argument of [Chapter 10](#ch-string-instruments).
 
-5. State the sampling theorem, and explain what is surprising about the word "completely" in it.
+5. Distinguish linear from nonlinear distortion, and explain why only one of them can in principle be corrected.
 
-6. Explain why an anti-aliasing filter must be applied before sampling rather than after.
+6. State the sampling theorem, and explain what is surprising about the word "completely" in it.
 
-7. Explain why adding noise before quantizing improves the perceived quality, given that it increases the total error.
+7. Explain why an anti-aliasing filter must be applied before sampling rather than after.
 
-8. Explain why perceptual codecs handle a sustained organ chord better than applause.
+8. Explain why adding noise before quantizing improves the perceived quality, given that it increases the total error.
+
+9. Explain why perceptual codecs handle a sustained organ chord better than applause.
 
 ## Problems
 

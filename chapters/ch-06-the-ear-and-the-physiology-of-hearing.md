@@ -29,6 +29,7 @@ By the end of this chapter, you should be able to:
 - Describe how hair cells transduce mechanical motion into neural signals, and distinguish the roles of inner and outer hair cells.
 - Explain phase locking and the volley principle, and state the frequency range over which timing information is available to the auditory nerve.
 - Explain how excessive sound exposure damages hearing, why the damage is permanent, and what the exposure limits are.
+- Explain why hair-cell damage can produce tinnitus, a phantom sound, rather than simple silence at the affected frequency.
 
 ### Introduction
 
@@ -238,6 +239,8 @@ Three things make this more dangerous for musicians than for most people.
 
 **It is painless and gradual.** Nothing hurts, and the loss appears first at frequencies above the range that carries most musical fundamentals. By the time a player notices, a great deal has usually been lost.
 
+**Damage can announce itself as a sound rather than a silence.** Many musicians who lose hair cells at some frequency band do not experience that band as simply quieter; they experience **tinnitus**, a persistent ringing, hissing, or whining heard in the absence of any external sound. The leading explanation follows directly from the mechanism above: the brain's auditory pathway, deprived of its normal input at the damaged frequencies, turns up its own gain there, and the resulting spontaneous neural activity is heard as a tone. Tinnitus is common, often permanent once established, and, like the hearing loss that usually causes it, is easier to prevent than to treat.
+
 **The exposure limits are stricter than they look.** The right-hand panel above is a $3$ dB exchange rate: $85$ dB for eight hours, $88$ dB for four, $91$ dB for two. An orchestra pit routinely reaches $95$ dB, and a brass section measures over $110$ dB at the player's own ear.
 
 ### Exposure Limits for Musicians
@@ -274,6 +277,7 @@ Everything outside $300$ Hz to $3.4$ kHz removed. Speech through this band stays
 - **Inner hair cells sense; outer hair cells amplify.** The outer cells change length in phase with the motion, sharpening the response by a factor of $100$–$1000$ and producing measurable otoacoustic emissions. They are also the first thing noise destroys.
 - **Phase locking** carries timing information up to about $4$–$5$ kHz, very nearly the top note of a piano, and roughly where reliable pitch perception stops.
 - **Noise-induced hearing loss is mechanical, cumulative, painless, and permanent**, since mammalian hair cells do not regenerate. Every $3$ dB halves the safe exposure time. Musician's earplugs, distance, and breaks all work.
+- **Tinnitus**, a phantom ringing or hissing, often accompanies hair-cell damage: the brain raises its gain at frequencies it no longer receives input from, and the spontaneous activity is heard as sound.
 
 ## Conceptual Questions
 
@@ -292,6 +296,8 @@ Everything outside $300$ Hz to $3.4$ kHz removed. Speech through this band stays
 7. The acoustic reflex takes about $50$ ms to engage and fatigues over time. Explain why this makes it useless against the two kinds of exposure that actually damage hearing.
 
 8. Phase locking fails above about $4$–$5$ kHz, and the highest note on a piano is $4186$ Hz. Discuss whether this is likely to be a coincidence.
+
+9. Tinnitus is usually described as a sound heard in the absence of any external stimulus, yet it typically follows damage at a *specific* frequency band. Explain why the pitch of the phantom sound and the location of the damage are connected, using the tonotopic map.
 
 ## Problems
 

@@ -209,7 +209,7 @@ Now the third question. A string moving in air pushes very little air: it is thi
 The chain. No single step bridges the gap between a steel string and open air; the instrument steps down the impedance in stages, and each stage is a piece of the instrument a maker can adjust.
 ```
 
-A useful check on how bad the mismatch is: an electric guitar has a solid body and therefore an almost perfect mismatch. Unplugged, it is barely audible, and it sustains for a very long time, because the energy has nowhere to go. That is [Chapter 4](#ch-resonance)'s trade-off in its purest form.
+A useful check on how bad the mismatch is: an electric guitar has a solid body and therefore an almost perfect mismatch. Unplugged, it is barely audible, and it sustains for a very long time, because the energy has nowhere to go. That is [Chapter 4](#ch-resonance)'s trade-off in its purest form. It sidesteps the mismatch entirely rather than solving it, reading the string's motion magnetically and rebuilding the sound electrically; how that pickup works is [Chapter 15](#ch-electronic-and-recorded-sound)'s subject.
 
 ### The Bridge
 
