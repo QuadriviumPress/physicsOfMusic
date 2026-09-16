@@ -83,6 +83,15 @@ That is a steel rod a millimetre thick. Two things go wrong with it.
 The solution is a **wound** string: a thin, flexible core carrying the tension, with a heavy wire wrapped loosely around it adding mass. The winding contributes $\mu$ without contributing bending stiffness, because the turns are free to move relative to one another. A wound low E achieves the sixteenfold mass with a core no thicker than about $0.4$ mm.
 ::::
 
+```{phet} wave-on-a-string
+:label: fig:ch10-wave-on-a-string-sim
+
+Pluck a string and watch the pulse reflect. Two things are worth doing
+deliberately: switch the far end between fixed and loose and confirm the
+inversion of [Chapter 3](#ch-superposition), and then set the damping to zero and
+drive the string to see the standing-wave modes appear one at a time.
+```
+
 ### The Mode Shapes
 
 The modes are $\sin(n\pi x/L)$, and [Chapter 4](#ch-resonance) established the rule that matters most for what follows:

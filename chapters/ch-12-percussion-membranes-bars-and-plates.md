@@ -66,6 +66,15 @@ $$
 
 which are the squares of the roots of $\cos x \cosh x = 1$ — again, no whole numbers anywhere.
 
+```{phet} normal-modes
+:label: fig:ch12-normal-modes-sim
+
+Switch to the two-dimensional screen. The modes of a rectangular array are
+indexed by two numbers, and their frequencies are emphatically not whole-number
+multiples of the lowest — which is this chapter's opening claim, in the simplest
+two-dimensional system there is.
+```
+
 ### Inharmonic Modes and Indefinite Pitch
 
 [Chapter 8](#ch-pitch-and-consonance) explained what the ear does with a set of partials: it looks for a fundamental of which all are harmonics. Given $200, 300, 400, 500$ Hz it finds $100$ Hz and reports it, even if nothing is there.

@@ -128,6 +128,15 @@ What is heard as the rate changes is not one phenomenon but a sequence of them:
 A $220$ Hz tone against neighbours $1$, $4$, $12$, and $40$ Hz away. Listen for the transition between the third and fourth: the roughness does not fade gradually, it *stops* once the two tones are far enough apart to fall in different critical bands. That transition is the whole mechanism of §8.4.
 ```
 
+```{openlyceum} WaveComposer
+:label: fig:ch08-wave-composer-sim
+
+Add two sinusoids and vary the gap between them. Watch the envelope of the sum
+while counting the beats, and confirm that the rate is the *difference* of the
+two frequencies and not half of it — the factor of two of [](#ex-pitch-and-consonance-9),
+visible rather than derived.
+```
+
 ### Tuning by Beats
 
 Beats are how instruments are actually tuned, and the method is far more precise than listening for "sameness".

@@ -24,7 +24,11 @@ Note also that LibreTexts pages can carry different licences page by page within
 one bookshelf. Re-check the licence notice on the specific page being adapted,
 even for sources listed below.
 
-## Primary sources
+## Openly licensed works covering the same ground
+
+These are listed for licence completeness and because a reader may want them.
+As stated below, **no prose was adapted from any of them**; had it been, these
+are the terms under which it could have been.
 
 | Source | Licence | URL |
 |---|---|---|
@@ -54,29 +58,34 @@ given above.
 
 ## Per-chapter attribution
 
-| Chapter | Primary source | Notes |
-|---|---|---|
-| 1. Sound, Music, and Simple Harmonic Motion | OpenStax *College Physics 2e* §16.1–16.6; Schmidt-Jones ch. 25 | |
-| 2. Wave Motion and the Speed of Sound | OpenStax *College Physics 2e* §16.9, §17.1–17.2 | |
-| 3. Superposition, Interference, and Standing Waves | OpenStax *College Physics 2e* §16.10, §17.5; Schmidt-Jones ch. 26 | |
-| 4. Resonance and Normal Modes | OpenStax *College Physics 2e* §16.8; Georgi chs. 2–3 | |
-| 5. Fourier Analysis, Harmonics, and Timbre | Georgi chs. 6, 10; Schmidt-Jones chs. 18, 27 | |
-| 6. The Ear and the Physiology of Hearing | OpenStax *College Physics 2e* §17.6 | |
-| 7. Loudness, Decibels, and the Equal-Loudness Contours | OpenStax *College Physics 2e* §17.3 | Contours redrawn from ISO 226:2023 values |
-| 8. Pitch, Beats, Consonance, and Dissonance | OpenStax *College Physics 2e* §17.5; Schmidt-Jones ch. 38 | |
-| 9. Musical Scales and Tuning Systems | Schmidt-Jones chs. 33, 44 | |
-| 10. String Instruments | OpenStax *College Physics 2e* §17.5; Schmidt-Jones ch. 26 | |
-| 11. Wind Instruments and Air-Column Resonance | OpenStax *College Physics 2e* §17.5; Georgi ch. 7 | |
-| 12. Percussion: Membranes, Bars, and Plates | — | |
-| 13. The Singing Voice | — | |
-| 14. Room Acoustics and Concert-Hall Design | — | |
-| 15. Electronic and Recorded Sound | — | |
+**The prose of all fifteen chapters is original to this book.** No text, figure,
+or exercise has been copied or adapted from any source listed above; the
+chapters were written from standard textbook and reference material on musical
+acoustics. The works in the tables above are listed because they cover the same
+ground and because the treatment here is consistent with them — not because
+sentences were taken from them.
 
-Chapters with no primary source listed are written from standard textbook and
-reference material rather than adapted from a specific openly licensed text;
-their citations are in `back/references.bib`. **This table is filled in as each
-chapter is written** — an empty Notes cell means the chapter's prose is original
-to this book, not that its provenance is unrecorded.
+That distinction matters for the licence, and it is why the table below records
+*specific data* rather than *adapted passages*. Where a chapter states a number
+that came from somewhere, it is named here and in the figure caption.
+
+| Chapter | Specific data, and where it comes from |
+|---|---|
+| 1. Sound, Music, and Simple Harmonic Motion | Threshold and pain pressures, audible range, instrument ranges: standard reference values. |
+| 2. Wave Motion and the Speed of Sound | $v = 331.3 + 0.606T$ and the speeds of sound in six media: standard tabulated values. |
+| 3. Superposition, Interference, and Standing Waves | End correction $\approx 0.6r$: standard result. |
+| 4. Resonance and Normal Modes | — (derived throughout) |
+| 5. Fourier Analysis, Harmonics, and Timbre | Piano inharmonicity coefficients: Young (1952), in `back/references.bib`. |
+| 6. The Ear and the Physiology of Hearing | Eardrum and oval-window areas, ossicular lever ratio, cochlear length, Greenwood's place–frequency map, hair-cell counts, exposure limits: standard values, consistent with Moore (2012). |
+| 7. Loudness, Decibels, and the Equal-Loudness Contours | **Equal-loudness contours computed from the ISO 226:2003 parameters** ($a_f$, $L_U$, $T_f$), reproduced in `scripts/figures/ch07_figures.py`. Critical-band widths after Zwicker and Fastl (1999). |
+| 8. Pitch, Beats, Consonance, and Dissonance | **Dissonance curves computed from the Plomp–Levelt (1965) roughness model**; the timbre-and-scale argument follows Sethares (1993). Just-noticeable differences: standard values. |
+| 9. Musical Scales and Tuning Systems | All ratios and comma values computed from first principles in `scripts/figures/ch09_figures.py`. Historical account consistent with Barbour (1951). |
+| 10. String Instruments | Helmholtz motion; bow-force limits after Schelleng (1973). The Railsback curve shown is **representative of published measurements**, not computed — the caption says so. |
+| 11. Wind Instruments and Air-Column Resonance | Bore acoustics and the conical-bore result: standard, consistent with Fletcher and Rossing (1998) and Benade (1990). |
+| 12. Percussion: Membranes, Bars, and Plates | **Membrane mode ratios computed from Bessel function zeros**; bar mode ratios from the roots of $\cos x\cosh x = 1$. Timpani and bell partial ratios: measured values from the literature, consistent with Fletcher and Rossing (1998). |
+| 13. The Singing Voice | Formant frequencies for five vowels, singer's-formant region: standard values, consistent with Sundberg (1987) and Titze (2000). |
+| 14. Room Acoustics and Concert-Hall Design | Sabine equation derived in the text. Absorption coefficients and reverberation-time targets: standard tabulated values. Hall descriptions consistent with Beranek (2004) and Barron (2009). |
+| 15. Electronic and Recorded Sound | Sampling theorem (Shannon 1949); $6.02b + 1.76$ derived in the text. Codec behaviour consistent with Pohlmann (2011). |
 
 ## Figures, audio, and notation
 
