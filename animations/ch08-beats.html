@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Beats</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Two nearby tones, slowed down so the beat is visible</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+// Real musical beats (220 Hz vs 223 Hz) oscillate far too fast to watch live;
+// these frequencies keep the same idea -- two tones a fraction of a hertz
+// apart beating at their difference -- slowed to where the eye can follow it.
+const F1 = 4.0;
+const F2 = 4.75;
+const BEAT_RATE = F2 - F1;
+const WINDOW = 2.4; // seconds of trace shown at once
+const SAMPLES = 600;
+const relTimes = linspace( 0, WINDOW, SAMPLES );
+
+function draw( ctx, t, width, height ) {
+  const rowHeight = height / 3;
+  const times = relTimes.map( r => t - WINDOW + r );
+
+  // Top: first tone.
+  ctx.save();
+  const m1 = makeMapper( { width, height: rowHeight, xMin: 0, xMax: WINDOW, yMin: -1.3, yMax: 1.3, margin: 12 } );
+  drawZeroLine( ctx, m1, 0, WINDOW );
+  plotCurve( ctx, m1, relTimes, times.map( tt => Math.sin( 2 * Math.PI * F1 * tt ) ), { color: COLORS.blue, lineWidth: 1.1 } );
+  ctx.fillStyle = COLORS.blue;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( `${ F1 } Hz`, 6, 14 );
+  ctx.restore();
+
+  // Middle: second tone.
+  ctx.save();
+  ctx.translate( 0, rowHeight );
+  const m2 = makeMapper( { width, height: rowHeight, xMin: 0, xMax: WINDOW, yMin: -1.3, yMax: 1.3, margin: 12 } );
+  drawZeroLine( ctx, m2, 0, WINDOW );
+  plotCurve( ctx, m2, relTimes, times.map( tt => Math.sin( 2 * Math.PI * F2 * tt ) ), { color: COLORS.orange, lineWidth: 1.1 } );
+  ctx.fillStyle = COLORS.orange;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( `${ F2 } Hz`, 6, 14 );
+  ctx.restore();
+
+  // Bottom: the sum, with its beating envelope.
+  ctx.save();
+  ctx.translate( 0, 2 * rowHeight );
+  const m3 = makeMapper( { width, height: rowHeight, xMin: 0, xMax: WINDOW, yMin: -2.6, yMax: 2.6, margin: 12 } );
+  drawZeroLine( ctx, m3, 0, WINDOW );
+  const sum = times.map( tt => Math.sin( 2 * Math.PI * F1 * tt ) + Math.sin( 2 * Math.PI * F2 * tt ) );
+  const envelope = times.map( tt => 2 * Math.abs( Math.cos( Math.PI * BEAT_RATE * tt ) ) );
+  plotCurve( ctx, m3, relTimes, sum, { color: COLORS.gray, lineWidth: 0.9 } );
+  plotCurve( ctx, m3, relTimes, envelope, { color: COLORS.red, lineWidth: 2.2 } );
+  plotCurve( ctx, m3, relTimes, envelope.map( v => -v ), { color: COLORS.red, lineWidth: 2.2 } );
+  ctx.fillStyle = COLORS.red;
+  ctx.font = 'bold 11px sans-serif';
+  ctx.fillText( `${ BEAT_RATE.toFixed( 2 ) } beats/second (slowed for clarity)`, 6, 14 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

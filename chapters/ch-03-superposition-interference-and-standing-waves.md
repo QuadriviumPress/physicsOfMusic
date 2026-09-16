@@ -117,11 +117,11 @@ $$
 
 with $m = 0, 1, 2, \ldots$
 
-```{figure} ../images/ch03-path-difference.svg
+```{animation} ch03-path-difference
 :label: fig:ch03-path-difference
 :alt: Left, two sources with lines drawn to a listener, labeled with path lengths r1 and r2 and their difference. Right, a graph of amplitude at the listener against path difference in wavelengths, peaking at whole numbers and falling to zero at half-integers.
 
-Two sources and one listener. Everything depends on the difference between the two path lengths, measured in wavelengths. The listener hears maximum loudness whenever that difference is a whole number of wavelengths and silence whenever it is a half-integer.
+Two sources and a listener sweeping past them. Everything depends on the difference between the two path lengths, measured in wavelengths, tracked by the moving dot on the right. The listener hears maximum loudness whenever that difference is a whole number of wavelengths and silence whenever it is a half-integer.
 ```
 
 ::::{tip} Worked example: finding a dead spot
@@ -195,11 +195,11 @@ The same distinction applies to air columns, with one twist that catches everyon
 
 Now put the two together. Send a continuous wave down a string toward a fixed end. It reflects and travels back, and from then on the string carries two identical waves traveling in opposite directions at once. Superposition says to add them.
 
-```{figure} ../images/ch03-standing-wave-formation.svg
+```{animation} ch03-standing-wave-formation
 :label: fig:ch03-standing-wave-formation
 :alt: Five stacked panels showing a right-going dashed wave, a left-going dashed wave, and their solid sum, at five successive moments. The sum changes amplitude but its zero crossings stay at the same positions, marked with red dots.
 
-A right-going wave and a left-going wave of the same frequency and amplitude, added at five successive instants. The sum does not travel. It stands still and breathes: the whole pattern grows, shrinks, inverts, and grows again, but the points where it crosses zero never move.
+A right-going wave and a left-going wave of the same frequency and amplitude, added continuously. The sum does not travel. It stands still and breathes: the whole pattern grows, shrinks, inverts, and grows again, but the points where it crosses zero never move.
 ```
 
 That is a **standing wave**, and the striking thing about it is that nothing propagates. Energy sloshes back and forth locally; the pattern itself goes nowhere.
@@ -252,11 +252,11 @@ $$
 \lambda_n = \frac{2L}{n}, \qquad f_n = \frac{v}{\lambda_n} = n\,\frac{v}{2L}.
 $$
 
-```{figure} ../images/ch03-string-modes.svg
+```{animation} ch03-string-modes
 :label: fig:ch03-string-modes
 :alt: Four panels showing the first four standing-wave modes of a string fixed at both ends, each drawn as an envelope with red dots marking nodes, labeled with wavelength 2L over n and frequency n times f1.
 
-The first four modes of a string fixed at both ends. Each is drawn as an envelope: the string sweeps between the two curves. The $n$th mode has $n$ half-wavelengths in the length, $n-1$ nodes between the ends, and a frequency $n$ times the fundamental.
+The first four modes of a string fixed at both ends, each drawn as an envelope the string sweeps between, with the instantaneous shape oscillating inside it. The $n$th mode has $n$ half-wavelengths in the length, $n-1$ nodes between the ends, and a frequency $n$ times the fundamental — watch the higher modes oscillate faster.
 ```
 
 Combining this with the string's wave speed from [Chapter 2](#ch-wave-motion), $v = \sqrt{T/\mu}$:
@@ -329,11 +329,12 @@ $$
 f_n = n\,\frac{v}{4L}, \qquad n = 1, 3, 5, \ldots
 $$
 
-```{figure} ../images/ch03-pipe-modes.svg
+```{animation} ch03-pipe-modes
 :label: fig:ch03-pipe-modes
 :alt: Six panels in two columns. The left column shows the first three modes of a pipe open at both ends, with displacement antinodes at each end, labeled f1, 2f1, 3f1. The right column shows the first three modes of a pipe stopped at the left, with a node at the closed end and an antinode at the open end, labeled f1, 3f1, 5f1.
+:aspect: 4:3
 
-Air-column modes, drawn as the *displacement* of the air. The open pipe has antinodes at both ends and supports every harmonic. The stopped pipe has a node at the closed end and supports only the odd ones. Drawing the same modes as *pressure* would interchange nodes and antinodes everywhere, so a figure like this must say which quantity it shows.
+Air-column modes, drawn as the *displacement* of the air, oscillating inside their envelopes. The open pipe has antinodes at both ends and supports every harmonic. The stopped pipe has a node at the closed end and supports only the odd ones. Drawing the same modes as *pressure* would interchange nodes and antinodes everywhere, so a figure like this must say which quantity it shows.
 ```
 
 ### Odd Harmonics and the Missing Even Ones

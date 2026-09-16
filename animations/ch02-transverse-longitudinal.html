@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Transverse and longitudinal waves</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Transverse (string) above, longitudinal (air) below</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const X_MAX = 6;
+const WAVELENGTH = 2.0;
+const K = 2 * Math.PI / WAVELENGTH;
+const OMEGA = Math.PI; // one full cycle every two seconds
+const MARKER_X = 1.5;
+const PARTICLE_COUNT = 46;
+const PARTICLE_AMPLITUDE = 0.35;
+const particleBase = linspace( 0, X_MAX, PARTICLE_COUNT );
+const xs = linspace( 0, X_MAX, 500 );
+
+function drawArrow( ctx, x0, y0, x1, y1, color ) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  ctx.moveTo( x0, y0 );
+  ctx.lineTo( x1, y1 );
+  ctx.stroke();
+  const angle = Math.atan2( y1 - y0, x1 - x0 );
+  const head = 6;
+  ctx.beginPath();
+  ctx.moveTo( x1, y1 );
+  ctx.lineTo( x1 - head * Math.cos( angle - Math.PI / 6 ), y1 - head * Math.sin( angle - Math.PI / 6 ) );
+  ctx.lineTo( x1 - head * Math.cos( angle + Math.PI / 6 ), y1 - head * Math.sin( angle + Math.PI / 6 ) );
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+
+function draw( ctx, t, width, height ) {
+  const panelHeight = height / 2;
+
+  // Top panel: transverse wave on a string.
+  ctx.save();
+  const topMapper = makeMapper( { width, height: panelHeight, xMin: 0, xMax: X_MAX, yMin: -1.15, yMax: 1.15 } );
+  drawZeroLine( ctx, topMapper, 0, X_MAX );
+  const yString = xs.map( x => 0.5 * Math.sin( K * x - OMEGA * t ) );
+  plotCurve( ctx, topMapper, xs, yString, { color: COLORS.blue, lineWidth: 2.2 } );
+  const markerY = 0.5 * Math.sin( K * MARKER_X - OMEGA * t );
+  plotPoint( ctx, topMapper, MARKER_X, markerY, { color: COLORS.red, radius: 4.5 } );
+  drawArrow( ctx, topMapper.x( MARKER_X ), topMapper.y( -1.0 ), topMapper.x( MARKER_X ), topMapper.y( 1.0 ), COLORS.red );
+  drawArrow( ctx, topMapper.x( 4.6 ), topMapper.y( -0.9 ), topMapper.x( 5.6 ), topMapper.y( -0.9 ), COLORS.green );
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '12px sans-serif';
+  ctx.fillText( 'the string moves across the wave', topMapper.x( 0.1 ), topMapper.y( 1.05 ) );
+  ctx.restore();
+
+  // Bottom panel: longitudinal wave in air, drawn as compressing/rarefying particles.
+  ctx.save();
+  ctx.translate( 0, panelHeight );
+  const bottomMapper = makeMapper( { width, height: panelHeight, xMin: 0, xMax: X_MAX, yMin: 0, yMax: 1, margin: 28 } );
+  particleBase.forEach( ( x0, i ) => {
+    const xDisplay = x0 + PARTICLE_AMPLITUDE * Math.sin( K * x0 - OMEGA * t );
+    const highlighted = i === Math.round( PARTICLE_COUNT * ( MARKER_X / X_MAX ) );
+    plotPoint( ctx, bottomMapper, xDisplay, 0.55, {
+      color: highlighted ? COLORS.red : COLORS.blue,
+      radius: highlighted ? 4.5 : 3
+    } );
+  } );
+  drawArrow( ctx, bottomMapper.x( 4.6 ), bottomMapper.y( 0.9 ), bottomMapper.x( 5.6 ), bottomMapper.y( 0.9 ), COLORS.green );
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '12px sans-serif';
+  ctx.fillText( 'the air moves along the wave', bottomMapper.x( 0.1 ), bottomMapper.y( 0.95 ) );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

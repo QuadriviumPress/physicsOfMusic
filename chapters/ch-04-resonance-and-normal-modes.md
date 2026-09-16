@@ -79,11 +79,11 @@ After any initial transient dies away, the system settles into oscillating **at 
 - Drive it at $f_0$: each push arrives exactly when it helps, cycle after cycle, and the amplitude builds far beyond anything the force could achieve on its own.
 - Drive it far above $f_0$: the mass cannot keep up. It barely moves, and what motion there is lags half a cycle behind.
 
-```{figure} ../images/ch04-response-curves.svg
+```{animation} ch04-response-curves
 :label: fig:ch04-response-curves
 :alt: Top, three amplitude-response curves on logarithmic axes against the ratio of driving to natural frequency, peaking sharply at a ratio of one, with taller narrower peaks for higher Q. Bottom, the corresponding phase lag rising from zero through ninety degrees at resonance to one hundred and eighty degrees.
 
-The response of a driven oscillator. **Top**: the amplitude, relative to what a very slow push would produce, for three amounts of damping. The peak is at the natural frequency in every case; what changes is how tall and how narrow it is. **Bottom**: the phase lag. At resonance the response lags the drive by exactly $90°$, whatever the damping, which is the precise statement of "pushing at the right moment".
+The response of a driven oscillator, with a marker sweeping the drive frequency back and forth through resonance. **Top**: the amplitude, relative to what a very slow push would produce, for three amounts of damping. The peak is at the natural frequency in every case; what changes is how tall and how narrow it is. **Bottom**: the phase lag. At resonance the response lags the drive by exactly $90°$, whatever the damping, which is the precise statement of "pushing at the right moment".
 ```
 
 ### The Response Curve

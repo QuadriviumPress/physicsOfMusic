@@ -61,9 +61,10 @@ The same reasoning applies to air. Air is stiff because compressing it raises it
 
 Two kinds of wave appear throughout this book, and every instrument uses both.
 
-```{figure} ../images/ch02-transverse-longitudinal.svg
+```{animation} ch02-transverse-longitudinal
 :label: fig:ch02-transverse-longitudinal
 :alt: Top, a wavy string with a vertical double arrow showing the string moving across the direction of travel. Bottom, a field of dots bunched and thinned, with a horizontal double arrow showing the air moving along the direction of travel. Both have an arrow showing the wave traveling to the right.
+:aspect: 4:3
 
 The two kinds of wave. In a **transverse** wave the medium moves across the direction of travel; in a **longitudinal** wave it moves along it. A guitar string carries transverse waves, the air around it carries longitudinal ones, and the instrument's job is to get energy from the first into the second.
 ```
@@ -94,7 +95,7 @@ $$
 
 That is the whole derivation, and the equation carries an enormous amount of this book.
 
-```{figure} ../images/ch02-wavelength-frequency.svg
+```{animation} ch02-wavelength-frequency
 :label: fig:ch02-wavelength-frequency
 :alt: Three sine waves of different wavelengths drawn one above another against a common distance axis, labeled 110 Hz with wavelength 3.1 m, 220 Hz with 1.6 m, and 440 Hz with 0.78 m.
 

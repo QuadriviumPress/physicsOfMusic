@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Helmholtz motion</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">The kink circulates once per stick-slip cycle</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const AMPLITUDE = 0.26;
+const SLIP_START = 0.78; // fraction of the period spent sticking
+const PERIOD = 2.2; // seconds per bowing cycle, slowed for legibility
+const envelopeX = linspace( 0, 1, 200 );
+
+function envelopeY( x ) {
+  return 4 * AMPLITUDE * x * ( 1 - x );
+}
+
+function stickSlipVelocity( frac ) {
+  return frac < SLIP_START ? 0.25 : -0.25 * SLIP_START / ( 1 - SLIP_START );
+}
+
+// The kink's position along the string: it creeps from bridge to nut during
+// the slow "stick" phase, then snaps back during the fast "slip" phase --
+// the same timing as the bow-point velocity trace on the right.
+function kinkPhase( frac ) {
+  return frac < SLIP_START
+    ? frac / SLIP_START
+    : 1 - ( frac - SLIP_START ) / ( 1 - SLIP_START );
+}
+
+const velocityTimes = linspace( 0, 2, 400 );
+const velocitySamples = velocityTimes.map( tt => stickSlipVelocity( tt % 1 ) );
+
+function draw( ctx, t, width, height ) {
+  const frac = ( t / PERIOD ) % 1;
+  const phase = kinkPhase( frac );
+  const kinkY = envelopeY( phase );
+  const leftWidth = width * 0.55;
+  const rightWidth = width - leftWidth;
+
+  // Left: the string as two straight segments meeting at the kink.
+  ctx.save();
+  const leftMapper = makeMapper( { width: leftWidth, height, xMin: -0.05, xMax: 1.05, yMin: -0.34, yMax: 0.4 } );
+  plotCurve( ctx, leftMapper, envelopeX, envelopeX.map( envelopeY ), { color: COLORS.gray, dash: [ 5, 4 ], lineWidth: 1.2 } );
+  plotCurve( ctx, leftMapper, envelopeX, envelopeX.map( x => -envelopeY( x ) ), { color: COLORS.gray, dash: [ 5, 4 ], lineWidth: 1.2 } );
+  plotCurve( ctx, leftMapper, [ 0, phase, 1 ], [ 0, kinkY, 0 ], { color: COLORS.blue, lineWidth: 2.4 } );
+  plotPoint( ctx, leftMapper, phase, kinkY, { color: COLORS.red, radius: 5.5 } );
+
+  ctx.strokeStyle = '#333333';
+  ctx.lineWidth = 2.5;
+  [ 0, 1 ].forEach( end => {
+    ctx.beginPath();
+    ctx.moveTo( leftMapper.x( end ), leftMapper.y( -0.3 ) );
+    ctx.lineTo( leftMapper.x( end ), leftMapper.y( 0.3 ) );
+    ctx.stroke();
+  } );
+  ctx.fillStyle = COLORS.red;
+  ctx.font = '10.5px sans-serif';
+  ctx.fillText( 'the kink', leftMapper.x( phase ) + 8, leftMapper.y( kinkY ) - 6 );
+  ctx.restore();
+
+  // Right: string velocity at the bow -- stick, then slip, once per period.
+  ctx.save();
+  ctx.translate( leftWidth, 0 );
+  const rightMapper = makeMapper( { width: rightWidth, height, xMin: 0, xMax: 2, yMin: -1.0, yMax: 0.4 } );
+  plotCurve( ctx, rightMapper, velocityTimes, velocitySamples, { color: COLORS.red, lineWidth: 2.2 } );
+  ctx.save();
+  ctx.setLineDash( [ 5, 4 ] );
+  ctx.strokeStyle = COLORS.green;
+  ctx.beginPath();
+  ctx.moveTo( rightMapper.x( 0 ), rightMapper.y( 0.25 ) );
+  ctx.lineTo( rightMapper.x( 2 ), rightMapper.y( 0.25 ) );
+  ctx.stroke();
+  ctx.restore();
+
+  const markerT = ( t / PERIOD ) % 2;
+  plotPoint( ctx, rightMapper, markerT, stickSlipVelocity( markerT % 1 ), { color: COLORS.blue, radius: 5 } );
+
+  ctx.fillStyle = COLORS.green;
+  ctx.font = '10.5px sans-serif';
+  ctx.fillText( 'bow speed', rightMapper.x( 0.05 ), rightMapper.y( 0.32 ) );
+  ctx.fillStyle = COLORS.gray;
+  ctx.fillText( 'string velocity at the bow', 6, 14 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

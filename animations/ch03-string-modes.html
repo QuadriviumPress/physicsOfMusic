@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>String modes</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">The first four modes of a string fixed at both ends</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, fillBetween, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const xs = linspace( 0, 1, 300 );
+const BASE_OMEGA = Math.PI / 2; // n = 1 completes a cycle every 4 seconds
+const MODES = [
+  { n: 1, color: COLORS.blue, label: 'n = 1' },
+  { n: 2, color: COLORS.green, label: 'n = 2' },
+  { n: 3, color: COLORS.purple, label: 'n = 3' },
+  { n: 4, color: COLORS.orange, label: 'n = 4' }
+];
+
+function drawEnd( ctx, mapper, x ) {
+  ctx.save();
+  ctx.strokeStyle = '#333333';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  ctx.moveTo( mapper.x( x ), mapper.y( -1.35 ) );
+  ctx.lineTo( mapper.x( x ), mapper.y( 1.35 ) );
+  ctx.stroke();
+  ctx.restore();
+}
+
+function draw( ctx, t, width, height ) {
+  const rowHeight = height / MODES.length;
+
+  MODES.forEach( ( mode, row ) => {
+    ctx.save();
+    ctx.translate( 0, row * rowHeight );
+    const mapper = makeMapper( { width, height: rowHeight, xMin: 0, xMax: 1, yMin: -1.5, yMax: 1.5, margin: 14 } );
+
+    const shape = xs.map( x => Math.sin( mode.n * Math.PI * x ) );
+    const envelopeTop = shape;
+    const envelopeBottom = shape.map( v => -v );
+    fillBetween( ctx, mapper, xs, envelopeTop, envelopeBottom, { color: mode.color, alpha: 0.1 } );
+    plotCurve( ctx, mapper, xs, envelopeTop, { color: mode.color, lineWidth: 1.2, alpha: 0.3 } );
+    plotCurve( ctx, mapper, xs, envelopeBottom, { color: mode.color, lineWidth: 1.2, alpha: 0.3 } );
+
+    drawZeroLine( ctx, mapper, 0, 1 );
+    const instant = shape.map( v => v * Math.cos( mode.n * BASE_OMEGA * t ) );
+    plotCurve( ctx, mapper, xs, instant, { color: mode.color, lineWidth: 2.4 } );
+
+    for ( let k = 0; k <= mode.n; k++ ) {
+      plotPoint( ctx, mapper, k / mode.n, 0, { color: COLORS.red, radius: 3.5 } );
+    }
+    drawEnd( ctx, mapper, 0 );
+    drawEnd( ctx, mapper, 1 );
+
+    ctx.fillStyle = mode.color;
+    ctx.font = 'bold 11px sans-serif';
+    ctx.fillText( mode.label, mapper.x( 0 ) + 4, mapper.y( 1.4 ) );
+    ctx.restore();
+  } );
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

@@ -2,16 +2,17 @@
  * The book's stylesheet, registered as `site.options.style` in myst.yml.
  *
  * `style` takes one file, so the rules for both media plugins live here rather
- * than beside each plugin. Three groups, in order:
+ * than beside each plugin. Four groups, in order:
  *
  *   1. {simulation} / {openlyceum} / {phet}   plugins/simulation.mjs
  *   2. {audio}                                plugins/audio.mjs
- *   3. book styles
+ *   3. {animation}                            plugins/animation.mjs
+ *   4. book styles
  *
- * Group 1 is load-bearing. Those directives emit a website-only iframe *and* a
- * static screenshot as siblings of one figure, because no single node type
+ * Groups 1 and 3 are load-bearing. Those directives emit a website-only iframe
+ * *and* a static image as siblings of one figure, because no single node type
  * survives every MyST output format; on the website both would be visible, so
- * this file hides the screenshot and flips the pair back around for print.
+ * this file hides the static image and flips the pair back around for print.
  */
 
 /* ---------------------------------------------------------------- 1. Simulations */
@@ -73,6 +74,26 @@
   font-weight: 600;
 }
 
+/* ---------------------------------------------------------------- 3. Animations */
+
+/* The static fallback exists for PDF, DOCX, Markdown, and print. */
+.animation-placeholder {
+  display: none;
+}
+
+/* The default {animation} aspect ratio: a single wide plot panel. */
+.animation-aspect-2x1 > div {
+  padding-bottom: 50% !important;
+}
+
+.animation-aspect-1x1 > div {
+  padding-bottom: 100% !important;
+}
+
+.animation-aspect-4x3 > div {
+  padding-bottom: 75% !important;
+}
+
 /* Open-license photographs are supporting illustrations, not full-page plates. */
 figure img[src*="/images/open/"] {
   max-width: 72%;
@@ -90,11 +111,13 @@ figure img[src*="/images/open/"] {
  */
 @media print {
   .audio-player,
-  .simulation-frame {
+  .simulation-frame,
+  .animation-frame {
     display: none;
   }
 
-  .simulation-placeholder {
+  .simulation-placeholder,
+  .animation-placeholder {
     display: block;
     max-width: 100%;
     height: auto;

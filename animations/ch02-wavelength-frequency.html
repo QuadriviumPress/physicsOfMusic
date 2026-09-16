@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wavelength and frequency</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Same speed of sound, three frequencies</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const X_MAX = 4;
+const xs = linspace( 0, X_MAX, 500 );
+
+// Matches scripts/figures/ch02_figures.py: wavelength_frequency() -- 343 m/s,
+// the same rounded wavelengths, stacked with the same offsets. Frequencies
+// are scaled down for a legible animation while keeping f*lambda constant
+// across the three rows, so "same speed" still reads correctly on screen.
+const VISUAL_SCALE = 1 / 100;
+const ROWS = [
+  { freq: 110.0, wavelength: 3.1, offset: 4.8, color: COLORS.blue, label: '110 Hz' },
+  { freq: 220.0, wavelength: 1.6, offset: 2.4, color: COLORS.green, label: '220 Hz' },
+  { freq: 440.0, wavelength: 0.78, offset: 0, color: COLORS.red, label: '440 Hz' }
+];
+
+function draw( ctx, t, width, height ) {
+  const mapper = makeMapper( { width, height, xMin: 0, xMax: X_MAX, yMin: -1.5, yMax: 6.6 } );
+
+  ROWS.forEach( row => {
+    drawZeroLine( ctx, { x: mapper.x, y: v => mapper.y( v + row.offset ) }, 0, X_MAX );
+    const k = 2 * Math.PI / row.wavelength;
+    const omega = 2 * Math.PI * row.freq * VISUAL_SCALE;
+    const ys = xs.map( x => row.offset + 0.85 * Math.sin( k * x - omega * t ) );
+    plotCurve( ctx, mapper, xs, ys, { color: row.color, lineWidth: 1.8 } );
+    ctx.fillStyle = row.color;
+    ctx.font = '11px sans-serif';
+    ctx.fillText( `${ row.label } — λ = ${ row.wavelength } m`, mapper.x( X_MAX ) - 128, mapper.y( row.offset ) - 4 );
+  } );
+
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'distance (m)', mapper.x( X_MAX / 2 ) - 30, mapper.y( -1.5 ) + 14 );
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

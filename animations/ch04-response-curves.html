@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Resonance response curves</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Sweeping the drive frequency through resonance (Q = 5)</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, plotPoint, drawZeroLine, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+function response( ratio, q ) {
+  return 1 / Math.sqrt( ( 1 - ratio * ratio ) ** 2 + ( ratio / q ) ** 2 );
+}
+
+function phaseDegrees( ratio, q ) {
+  return ( Math.atan2( ratio / q, 1 - ratio * ratio ) * 180 ) / Math.PI;
+}
+
+const ratios = linspace( 0.05, 2.4, 400 );
+const CURVES = [
+  { q: 15, color: COLORS.blue },
+  { q: 5, color: COLORS.green },
+  { q: 1.5, color: COLORS.red }
+];
+const TRACKED_Q = 5;
+const SWEEP_PERIOD = 10; // seconds for a full sweep and back
+
+function sweepRatio( t ) {
+  return 1.225 - 1.175 * Math.cos( 2 * Math.PI * t / SWEEP_PERIOD );
+}
+
+function draw( ctx, t, width, height ) {
+  const topHeight = height * 0.6;
+  const ratio = sweepRatio( t );
+
+  // Top: amplitude response, log scale, three dampings.
+  ctx.save();
+  const logMin = Math.log10( 0.05 );
+  const logMax = Math.log10( 30 );
+  const topMapper = makeMapper( { width, height: topHeight, xMin: 0, xMax: 2.4, yMin: logMin, yMax: logMax } );
+  drawZeroLine( ctx, { x: topMapper.x, y: v => topMapper.y( Math.log10( 1 ) ) }, 0, 2.4 );
+  CURVES.forEach( curve => {
+    const ys = ratios.map( r => Math.log10( response( r, curve.q ) ) );
+    plotCurve( ctx, topMapper, ratios, ys, { color: curve.color, lineWidth: curve.q === TRACKED_Q ? 2.4 : 1.6, alpha: curve.q === TRACKED_Q ? 1 : 0.55 } );
+    ctx.fillStyle = curve.color;
+    ctx.font = '10.5px sans-serif';
+    ctx.fillText( `Q = ${ curve.q }`, topMapper.x( 2.4 ) - 52, topMapper.y( Math.log10( response( 2.35, curve.q ) ) ) );
+  } );
+  ctx.save();
+  ctx.setLineDash( [ 4, 3 ] );
+  ctx.strokeStyle = COLORS.gray;
+  ctx.beginPath();
+  ctx.moveTo( topMapper.x( 1 ), topMapper.y( logMin ) );
+  ctx.lineTo( topMapper.x( 1 ), topMapper.y( logMax ) );
+  ctx.stroke();
+  ctx.restore();
+  const trackedAmplitude = response( ratio, TRACKED_Q );
+  plotPoint( ctx, topMapper, ratio, Math.log10( trackedAmplitude ), { color: COLORS.green, radius: 5.5 } );
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'amplitude (log scale)', 6, 14 );
+  ctx.restore();
+
+  // Bottom: phase lag.
+  ctx.save();
+  ctx.translate( 0, topHeight );
+  const bottomHeight = height - topHeight;
+  const bottomMapper = makeMapper( { width, height: bottomHeight, xMin: 0, xMax: 2.4, yMin: 0, yMax: 180 } );
+  drawZeroLine( ctx, bottomMapper, 0, 2.4 );
+  CURVES.forEach( curve => {
+    const ys = ratios.map( r => phaseDegrees( r, curve.q ) );
+    plotCurve( ctx, bottomMapper, ratios, ys, { color: curve.color, lineWidth: curve.q === TRACKED_Q ? 2.4 : 1.6, alpha: curve.q === TRACKED_Q ? 1 : 0.55 } );
+  } );
+  const trackedPhase = phaseDegrees( ratio, TRACKED_Q );
+  plotPoint( ctx, bottomMapper, ratio, trackedPhase, { color: COLORS.green, radius: 5.5 } );
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( `phase lag (°)   f/f₀ = ${ ratio.toFixed( 2 ) }`, 6, 14 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

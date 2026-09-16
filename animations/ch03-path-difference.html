@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Path difference and interference</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">The listener walks past two sources</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, plotPoint, drawZeroLine, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const S1 = { x: 0, y: 1.2 };
+const S2 = { x: 0, y: -1.2 };
+const LISTENER_X = 4.4;
+const SWEEP_AMPLITUDE = 1.95;
+const SWEEP_PERIOD = 8; // seconds for a full up-and-down sweep
+const WAVELENGTH = 0.32; // chosen so the sweep crosses about three wavelengths
+const RING_SPACING = 0.85; // decorative ring spacing, independent of WAVELENGTH
+const RING_SPEED = 0.6;
+const RING_COUNT = 5;
+
+const deltas = linspace( 0, 3, 300 );
+const curveAmplitude = deltas.map( d => Math.abs( Math.cos( Math.PI * d ) ) );
+
+function listenerY( t ) {
+  return SWEEP_AMPLITUDE * Math.sin( 2 * Math.PI * t / SWEEP_PERIOD );
+}
+
+function drawRings( ctx, mapper, source, t, color ) {
+  for ( let n = 0; n < RING_COUNT; n++ ) {
+    const radius = ( ( RING_SPEED * t ) % RING_SPACING ) + n * RING_SPACING;
+    const alpha = Math.max( 0, 1 - radius / ( RING_COUNT * RING_SPACING ) );
+    if ( alpha <= 0.02 ) {
+      continue;
+    }
+    ctx.beginPath();
+    ctx.strokeStyle = color;
+    ctx.globalAlpha = alpha * 0.55;
+    ctx.lineWidth = 1.2;
+    const rx = mapper.x( source.x + radius ) - mapper.x( source.x );
+    const ry = mapper.y( source.y ) - mapper.y( source.y + radius );
+    ctx.ellipse( mapper.x( source.x ), mapper.y( source.y ), Math.abs( rx ), Math.abs( ry ), 0, 0, 2 * Math.PI );
+    ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+}
+
+function draw( ctx, t, width, height ) {
+  const leftWidth = width * 0.52;
+  const rightWidth = width - leftWidth;
+
+  // Left panel: two coherent sources, a listener sweeping past them.
+  ctx.save();
+  const leftMapper = makeMapper( { width: leftWidth, height, xMin: -1.2, xMax: 6.2, yMin: -2.0, yMax: 2.0 } );
+  drawRings( ctx, leftMapper, S1, t, COLORS.blue );
+  drawRings( ctx, leftMapper, S2, t, COLORS.purple );
+
+  const y = listenerY( t );
+  const r1 = Math.hypot( LISTENER_X - S1.x, y - S1.y );
+  const r2 = Math.hypot( LISTENER_X - S2.x, y - S2.y );
+  const absDelta = Math.min( 3, Math.abs( r2 - r1 ) / WAVELENGTH );
+
+  ctx.save();
+  ctx.setLineDash( [ 5, 4 ] );
+  ctx.strokeStyle = COLORS.blue;
+  ctx.lineWidth = 1.4;
+  ctx.beginPath();
+  ctx.moveTo( leftMapper.x( S1.x ), leftMapper.y( S1.y ) );
+  ctx.lineTo( leftMapper.x( LISTENER_X ), leftMapper.y( y ) );
+  ctx.stroke();
+  ctx.strokeStyle = COLORS.purple;
+  ctx.beginPath();
+  ctx.moveTo( leftMapper.x( S2.x ), leftMapper.y( S2.y ) );
+  ctx.lineTo( leftMapper.x( LISTENER_X ), leftMapper.y( y ) );
+  ctx.stroke();
+  ctx.restore();
+
+  plotPoint( ctx, leftMapper, S1.x, S1.y, { color: COLORS.red, radius: 5 } );
+  plotPoint( ctx, leftMapper, S2.x, S2.y, { color: COLORS.red, radius: 5 } );
+  plotPoint( ctx, leftMapper, LISTENER_X, y, { color: COLORS.green, radius: 5.5 } );
+
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'S₁', leftMapper.x( S1.x ) - 18, leftMapper.y( S1.y ) + 4 );
+  ctx.fillText( 'S₂', leftMapper.x( S2.x ) - 18, leftMapper.y( S2.y ) + 4 );
+  ctx.fillText( 'listener', leftMapper.x( LISTENER_X ) + 8, leftMapper.y( y ) + 4 );
+  ctx.restore();
+
+  // Right panel: the fixed amplitude-vs-path-difference relationship, with a
+  // marker tracking the listener's current path difference.
+  ctx.save();
+  ctx.translate( leftWidth, 0 );
+  const rightMapper = makeMapper( { width: rightWidth, height, xMin: 0, xMax: 3, yMin: 0, yMax: 1.25 } );
+  drawZeroLine( ctx, rightMapper, 0, 3 );
+  plotCurve( ctx, rightMapper, deltas, curveAmplitude, { color: COLORS.green, lineWidth: 2.2 } );
+
+  const markerAmplitude = Math.abs( Math.cos( Math.PI * absDelta ) );
+  ctx.save();
+  ctx.setLineDash( [ 4, 3 ] );
+  ctx.strokeStyle = COLORS.gray;
+  ctx.globalAlpha = 0.7;
+  ctx.beginPath();
+  ctx.moveTo( rightMapper.x( absDelta ), rightMapper.y( 0 ) );
+  ctx.lineTo( rightMapper.x( absDelta ), rightMapper.y( markerAmplitude ) );
+  ctx.stroke();
+  ctx.restore();
+  plotPoint( ctx, rightMapper, absDelta, markerAmplitude, { color: COLORS.green, radius: 5.5 } );
+
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'path difference (wavelengths)', rightMapper.x( 0.15 ), rightMapper.y( 0 ) + 16 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

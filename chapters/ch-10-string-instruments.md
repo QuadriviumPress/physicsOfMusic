@@ -162,7 +162,7 @@ The intuition that the bow drags the string smoothly along is wrong. What happen
 
 The remarkable part is the *shape* the string takes while this happens.
 
-```{figure} ../images/ch10-helmholtz-motion.svg
+```{animation} ch10-helmholtz-motion
 :label: fig:ch10-helmholtz-motion
 :alt: Left, a string drawn at five instants, in each case as two straight segments meeting at a kink, with the kink at successive positions along a dashed parabolic envelope. Right, the string's velocity at the bow, holding constant at bow speed and then dropping sharply for a brief slip once per period.
 

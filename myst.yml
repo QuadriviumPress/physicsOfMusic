@@ -62,18 +62,24 @@ project:
     # Audio examples: inline website controls plus a waveform, transcript, and
     # durable link for static and accessible outputs.
     - plugins/audio.mjs
+    # Short looping animations for figures showing something time-varying,
+    # falling back to the existing static SVG figure everywhere but the
+    # website; see plugins/animation.mjs.
+    - plugins/animation.mjs
     # Rewrites exercises, solutions, margin notes and dropdowns into nodes the
     # LaTeX/DOCX renderers understand. Inert unless MYST_PRINT is set, so the
     # website build is untouched; see plugins/export.mjs.
     - plugins/export.mjs
-  # Stable, same-origin URLs used by the iframe-based audio player. Linked media
-  # is normally content-hashed; these copies intentionally preserve /audio/… .
+  # Stable, same-origin URLs used by the iframe-based audio player and the
+  # figure animations. Linked media is normally content-hashed; these copies
+  # intentionally preserve /audio/… and /animations/… .
   static_files:
     - audio
     - audio-player.html
-  # The simulation directives emit an iframe for the website beside a screenshot
-  # for print. plugins/export.mjs strips the iframe before the tex renderer sees
-  # it, but a stray one must not fail the build.
+    - animations
+  # The simulation and animation directives emit an iframe for the website
+  # beside a static image for print. plugins/export.mjs strips the iframe
+  # before the tex renderer sees it, but a stray one must not fail the build.
   error_rules:
     - id: tex-renders
       severity: warn

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Standing wave formation</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Right-going + left-going wave = standing wave</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+// Two wavelengths of string, amplitude 1, one cycle of beat per two seconds.
+const L = 2;
+const A = 1;
+const K = 2 * Math.PI;
+const OMEGA = Math.PI;
+const NODE_SPACING = 0.5; // half a wavelength apart, where sin(Kx) = 0
+const xs = linspace( 0, L, 400 );
+
+function draw( ctx, t, width, height ) {
+  const mapper = makeMapper( { width, height, xMin: 0, xMax: L, yMin: -2.3, yMax: 2.3 } );
+  drawZeroLine( ctx, mapper, 0, L );
+
+  const yRight = xs.map( x => A * Math.sin( K * x - OMEGA * t ) );
+  const yLeft = xs.map( x => A * Math.sin( K * x + OMEGA * t ) );
+  const ySum = xs.map( ( _, i ) => yRight[ i ] + yLeft[ i ] );
+
+  plotCurve( ctx, mapper, xs, yRight, { color: COLORS.blue, dash: [ 6, 4 ], lineWidth: 1.4, alpha: 0.75 } );
+  plotCurve( ctx, mapper, xs, yLeft, { color: COLORS.red, dash: [ 6, 4 ], lineWidth: 1.4, alpha: 0.75 } );
+  plotCurve( ctx, mapper, xs, ySum, { color: COLORS.green, lineWidth: 2.6 } );
+
+  for ( let x = 0; x <= L + 1e-9; x += NODE_SPACING ) {
+    plotPoint( ctx, mapper, x, 0, { color: COLORS.red, radius: 3.5 } );
+  }
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

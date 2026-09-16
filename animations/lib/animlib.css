@@ -1,0 +1,66 @@
+/*
+ * Shared chrome for the animation pages themselves (the document rendered
+ * inside the {animation} iframe), not to be confused with ../../css/custom.css,
+ * which styles the book pages that embed them.
+ */
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #333333;
+  background: #ffffff;
+}
+
+.anim-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0.6rem 0.6rem;
+}
+
+.anim-canvas {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  touch-action: none;
+}
+
+.anim-controls {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.anim-toggle {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #999999;
+  background: #f4f6f8;
+  color: #333333;
+  cursor: pointer;
+}
+
+.anim-toggle:hover {
+  background: #e8ecef;
+}
+
+.anim-toggle:focus-visible {
+  outline: 2px solid #1769aa;
+  outline-offset: 2px;
+}
+
+.anim-note {
+  color: #555555;
+}

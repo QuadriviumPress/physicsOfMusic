@@ -86,11 +86,11 @@ Three situations break the simple correspondence, and each is instructive.
 
 Play two tones of nearly equal frequency together. The result is a single tone, at roughly the average frequency, whose loudness rises and falls at a slow, steady rate.
 
-```{figure} ../images/ch08-beats.svg
+```{animation} ch08-beats
 :label: fig:ch08-beats
 :alt: Three stacked panels showing a 220 Hz sine, a 223 Hz sine, and their sum, whose envelope rises and falls three times per second with the envelope drawn in red.
 
-Two tones three hertz apart, and their sum. The two drift in and out of step, reinforcing when they are aligned and canceling when they are opposed. The envelope completes three cycles per second, the difference between the two frequencies.
+Two nearby tones, and their sum, slowed down here so the beat is visible — real musical beats like $220$ and $223$ Hz oscillate too fast to watch directly. The two drift in and out of step, reinforcing when they are aligned and canceling when they are opposed. In the original, the envelope completes three cycles per second, the difference between the two frequencies.
 ```
 
 The reason is superposition ([Chapter 3](#ch-superposition)) in time rather than in space. Two tones at $220$ and $223$ Hz start in step, but the second completes three more cycles per second, so after a sixth of a second it is half a cycle ahead and they cancel; after a third of a second it is a full cycle ahead and they reinforce again.
