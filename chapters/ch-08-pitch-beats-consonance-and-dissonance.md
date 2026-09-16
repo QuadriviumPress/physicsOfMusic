@@ -293,7 +293,7 @@ The curve above is specific to **six harmonic partials falling as $0.88^n$**. Ch
 That last point deserves its own demonstration, because it overturns something most musicians assume.
 
 ```{audio} ch08-fifth-harmonic, ch08-fifth-stretched
-:names: Fifth, harmonic partials, Fifth, stretched partials
+:names: Harmonic fifth, Stretched-partial fifth
 :figure: ../images/ch08-stretched-timbre.svg
 :label: fig:ch08-stretched-timbre
 :transcript: The same interval twice. On the first timbre it is clean and settled; on the second, whose partials have been stretched, the same 3:2 ratio sounds distinctly rough and unresolved.

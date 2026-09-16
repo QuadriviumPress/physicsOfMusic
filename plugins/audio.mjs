@@ -31,7 +31,11 @@
  *
  * @type {string}
  */
-const AUDIO_ROOT = '/audio';
+const rawBaseUrl = process.env.BASE_URL || '/';
+const SITE_ROOT = rawBaseUrl === '/'
+  ? ''
+  : `/${ rawBaseUrl.replace( /^\/+|\/+$/g, '' ) }`;
+const AUDIO_ROOT = `${ SITE_ROOT }/audio`;
 
 /**
  * Directory holding the static figure that stands in for a clip in print.
@@ -52,7 +56,7 @@ const IMAGE_ROOT = '/images';
 const AUDIO_EXTENSION = '.mp3';
 
 /** Website-only player page, copied verbatim by `project.static_files`. */
-const PLAYER_URL = '/audio-player.html';
+const PLAYER_URL = `${ SITE_ROOT }/audio-player.html`;
 
 /**
  * Words left lowercase when title-casing a slug, unless they lead the name.

@@ -94,3 +94,21 @@ test('comma lists tolerate stray whitespace and empty entries', () => {
   assert.deepEqual(splitList(' a ,, b , '), ['a', 'b']);
   assert.deepEqual(splitList(undefined), []);
 });
+
+test('generated URLs honor the deployment base path', async () => {
+  const originalBaseUrl = process.env.BASE_URL;
+  process.env.BASE_URL = '/physicsOfMusic';
+  try {
+    const basedPlugin = await import(`../plugins/audio.mjs?base-path-test=${ Date.now() }`);
+    const clip = basedPlugin.resolveClip('ch05-sine');
+    assert.equal(clip.url, '/physicsOfMusic/audio/ch05-sine.mp3');
+    assert.equal(
+      basedPlugin.playerUrl({ ...clip, name: 'Sine' }),
+      '/physicsOfMusic/audio-player.html#src=%2FphysicsOfMusic%2Faudio%2Fch05-sine.mp3&name=Sine'
+    );
+  }
+  finally {
+    if (originalBaseUrl === undefined) delete process.env.BASE_URL;
+    else process.env.BASE_URL = originalBaseUrl;
+  }
+});
