@@ -85,7 +85,21 @@ function render(definition) {
     svg.setAttribute('role', 'img');
     svg.setAttribute('aria-labelledby', `${definition.id}-title ${definition.id}-description`);
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-    svg.prepend(element(dom.window.document, 'style', {}, `@font-face{font-family:Bravura;src:url(${bravuraDataUri}) format('woff2');}`));
+    svg.prepend(element(dom.window.document, 'style', {}, `
+      @font-face{font-family:Bravura;src:url(${bravuraDataUri}) format('woff2');}
+      :root{color-scheme:light dark;--notation-ink:#1f2937;--notation-muted:#555555;--notation-alert:#b33a3a;--notation-green:#2e7d5b;--notation-blue:#1769aa;}
+      svg{color:var(--notation-ink);}
+      .vf-stave,.vf-stavebarline,.vf-clef,.vf-stavenote,.vf-notehead,
+      .vf-stave *,.vf-stavebarline *,.vf-clef *,.vf-stavenote *,.vf-notehead *{fill:currentColor;stroke:currentColor;}
+      .notation-overlay text:not([fill]){fill:currentColor;}
+      .notation-overlay text[fill="#555555"]{fill:var(--notation-muted);}
+      .notation-overlay text[fill="#b33a3a"]{fill:var(--notation-alert);}
+      .notation-overlay text[fill="#2e7d5b"]{fill:var(--notation-green);}
+      .notation-overlay text[fill="#1769aa"]{fill:var(--notation-blue);}
+      @media(prefers-color-scheme:dark){
+        :root{--notation-ink:#f3f4f6;--notation-muted:#cbd5e1;--notation-alert:#fca5a5;--notation-green:#86efac;--notation-blue:#93c5fd;}
+      }
+    `));
     svg.prepend(element(dom.window.document, 'desc', { id: `${definition.id}-description` }, definition.alt));
     svg.prepend(element(dom.window.document, 'title', { id: `${definition.id}-title` }, definition.id.replaceAll('-', ' ')));
     definition.render({ VF, context, overlay: createOverlay(dom.window.document, svg) });

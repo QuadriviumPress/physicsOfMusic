@@ -41,7 +41,13 @@ NOTATION = ROOT / "images" / "notation"
 # its glyph sizes in points, so dropping this makes every notehead 25% small.
 PT_TO_USER = 4.0 / 3.0
 
-FONT_FACE = re.compile(r"<style[^>]*>.*?</style>\s*", re.S)
+# Remove only the embedded Bravura rule.  The style element also carries the
+# notation palette (including its dark-mode media query), so deleting the whole
+# element makes the path-converted score black-on-dark in the website build.
+FONT_FACE = re.compile(
+    r"@font-face\{font-family:Bravura;src:url\(data:[^)]*\) format\('woff2'\);\}\s*",
+    re.S,
+)
 TEXT = re.compile(r"<text\b([^>]*)>(.*?)</text>", re.S)
 ATTR = re.compile(r'(\w[\w-]*)\s*=\s*"([^"]*)"')
 
