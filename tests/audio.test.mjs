@@ -1,6 +1,16 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import plugin, { humanize, playerUrl, resolveClip, splitList } from '../plugins/audio.mjs';
+
+// Bindery sets BASE_URL for deploy/CI. The default cases below assert root-
+// relative URLs, so load the plugin once with that env cleared. The dedicated
+// base-path test re-imports with BASE_URL set.
+const savedBaseUrl = process.env.BASE_URL;
+delete process.env.BASE_URL;
+const { default: plugin, humanize, playerUrl, resolveClip, splitList } = await import(
+  `../plugins/audio.mjs?root=${Date.now()}`
+);
+if (savedBaseUrl === undefined) delete process.env.BASE_URL;
+else process.env.BASE_URL = savedBaseUrl;
 
 const directive = plugin.directives.find(item => item.name === 'audio');
 const run = (arg, options = {}, body = []) => directive.run({ arg, options, body }, null);
