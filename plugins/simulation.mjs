@@ -38,7 +38,7 @@
  *
  * @type {string}
  */
-const DEFAULT_PLACEHOLDER = '/images/simulation-placeholder.png';
+const DEFAULT_PLACEHOLDER = '/images/social-card.png';
 
 /**
  * The theme hard-codes `padding-bottom: 60%` on the iframe wrapper, which is
@@ -377,7 +377,9 @@ function runSimulation( data, vfile, fixedProvider ) {
     children.push( {
       type: 'image',
       url: options.placeholder || defaultPlaceholder,
-      alt: options.alt || defaultAlt,
+      alt: options.alt || (defaultPlaceholder === DEFAULT_PLACEHOLDER && !options.placeholder
+        ? 'Physics of Music — follow the caption link to open the simulation'
+        : defaultAlt),
       width,
       align: options.align || 'center',
       class: 'simulation-placeholder'

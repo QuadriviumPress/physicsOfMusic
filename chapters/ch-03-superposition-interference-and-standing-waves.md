@@ -32,13 +32,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
-So far the book has followed one wave at a time. Music never does. A room is full of waves — the direct sound from the instrument, the reflection off the back wall, the note the second violin is playing, the reflection of *that* off the ceiling — all arriving at your ear at once and all adding up.
+So far the book has followed one wave at a time. Music never does. A room is full of waves, the direct sound from the instrument, the reflection off the back wall, the note the second violin is playing, the reflection of *that* off the ceiling, all arriving at your ear at once and all adding up.
 
 What they add up to is the subject of this chapter, and it is governed by one very simple rule with one very surprising consequence.
 
 The rule is **superposition**: where two waves overlap, the displacements simply add. There is no interaction, no collision, no scattering of one wave off the other. Two waves pass through each other and emerge unchanged, as though nothing had happened.
 
-The consequence is that waves can cancel. Two sounds can arrive at a point and produce silence there. And when a wave meets a wall, reflects, and runs back into itself, the adding-and-cancelling settles into a stationary pattern — a **standing wave** — that can only exist at certain frequencies.
+The consequence is that waves can cancel. Two sounds can arrive at a point and produce silence there. And when a wave meets a wall, reflects, and runs back into itself, the adding-and-canceling settles into a stationary pattern, a **standing wave**, that can only exist at certain frequencies.
 
 That last sentence is the reason musical instruments have pitches. Everything in [Part V](#ch-string-instruments) is an elaboration of it.
 
@@ -58,7 +58,7 @@ That is all. The waves do not know about each other.
 :label: fig:ch03-superposition
 :alt: Two rows of three panels. In the top row two pulses of the same sign approach, overlap into a single taller pulse, and separate again unchanged. In the bottom row a positive and a negative pulse approach, cancel momentarily to a flat line, and separate again unchanged.
 
-Two pulses passing through each other. In the top row they have the same sign and momentarily reinforce; in the bottom row they have opposite signs and momentarily cancel. In both cases they emerge on the other side exactly as they went in. The cancellation in the middle of the bottom row is complete — at that instant the medium is flat — but it is not the end of the pulses.
+Two pulses passing through each other. In the top row they have the same sign and momentarily reinforce; in the bottom row they have opposite signs and momentarily cancel. In both cases they emerge on the other side exactly as they went in. The cancellation in the middle of the bottom row is complete, at that instant the medium is flat, but it is not the end of the pulses.
 ```
 
 The bottom row of that figure deserves a moment's thought, because it looks like a violation of energy conservation. At the instant the two pulses exactly cancel, the string is perfectly straight. Where has the energy gone?
@@ -69,8 +69,8 @@ Into motion. The string is straight but it is not still: every point of it is mo
 
 When two waves of the same frequency overlap steadily, what matters is their relative **phase**.
 
-- In step — crest on crest — they reinforce. This is **constructive interference**, and the resulting amplitude is the sum of the two.
-- Exactly out of step — crest on trough — they cancel. This is **destructive interference**, and if the amplitudes are equal the result is nothing at all.
+- In step, crest on crest, they reinforce. This is **constructive interference**, and the resulting amplitude is the sum of the two.
+- Exactly out of step, crest on trough, they cancel. This is **destructive interference**, and if the amplitudes are equal the result is nothing at all.
 - In between, something in between.
 
 Two loudspeakers playing the same steady tone are the standard demonstration. Walk across the room in front of them and the tone rises and falls: loud where the two arrivals are in step, and startlingly near-silent where they are opposed.
@@ -81,15 +81,15 @@ Destructive interference does not destroy energy; it moves it. The energy missin
 
 ### Where Superposition Breaks Down
 
-Superposition holds because the wave equation is **linear** — the restoring force is proportional to the displacement, as in [Chapter 1](#ch-sound-and-shm). Everything in this chapter depends on that.
+Superposition holds because the wave equation is **linear**: the restoring force is proportional to the displacement, as in [Chapter 1](#ch-sound-and-shm). Everything in this chapter depends on that.
 
-It is an approximation, and it fails at large amplitudes. In an extremely loud sound wave the compressions travel slightly faster than the rarefactions, because compressed air is hotter and therefore stiffer; a wave that starts sinusoidal steepens as it travels, and at the limit it becomes a shock. This is not a musical regime — it takes something like a jet engine or an explosion — but it lurks in two places the book will return to: inside a brass instrument played very loudly, where the wave really does steepen on its way down the bore and adds a characteristic brightness to a fortissimo ([Chapter 11](#ch-wind-instruments)), and in a cymbal driven hard, where nonlinearity spills energy into a dense forest of new frequencies ([Chapter 12](#ch-percussion)).
+It is an approximation, and it fails at large amplitudes. In an extremely loud sound wave the compressions travel slightly faster than the rarefactions, because compressed air is hotter and therefore stiffer; a wave that starts sinusoidal steepens as it travels, and at the limit it becomes a shock. This is not a musical regime, it takes something like a jet engine or an explosion, but it lurks in two places the book will return to: inside a brass instrument played very loudly, where the wave really does steepen on its way down the bore and adds a characteristic brightness to a fortissimo ([Chapter 11](#ch-wind-instruments)), and in a cymbal driven hard, where nonlinearity spills energy into a dense forest of new frequencies ([Chapter 12](#ch-percussion)).
 
 ## Interference in Space
 
 ### Path Difference and Phase Difference
 
-The phase relationship between two arrivals at a listener is set by how far each has travelled. If the two sources emit in step, then all that matters is the **path difference**
+The phase relationship between two arrivals at a listener is set by how far each has traveled. If the two sources emit in step, then all that matters is the **path difference**
 
 $$
 \Delta r = r_2 - r_1.
@@ -112,7 +112,7 @@ with $m = 0, 1, 2, \ldots$
 
 ```{figure} ../images/ch03-path-difference.svg
 :label: fig:ch03-path-difference
-:alt: Left, two sources with lines drawn to a listener, labelled with path lengths r1 and r2 and their difference. Right, a graph of amplitude at the listener against path difference in wavelengths, peaking at whole numbers and falling to zero at half-integers.
+:alt: Left, two sources with lines drawn to a listener, labeled with path lengths r1 and r2 and their difference. Right, a graph of amplitude at the listener against path difference in wavelengths, peaking at whole numbers and falling to zero at half-integers.
 
 Two sources and one listener. Everything depends on the difference between the two path lengths, measured in wavelengths. The listener hears maximum loudness whenever that difference is a whole number of wavelengths and silence whenever it is a half-integer.
 ```
@@ -132,9 +132,9 @@ $$
 \Delta r = \tfrac12\lambda = 0.199\ \text{m},
 $$
 
-so the listener must be $4.0 \pm 0.20$ m from the other speaker — that is, $4.20$ m or $3.80$ m.
+so the listener must be $4.0 \pm 0.20$ m from the other speaker: that is, $4.20$ m or $3.80$ m.
 
-Notice how *small* that displacement is. Moving your head twenty centimetres can take you from full loudness to near-silence at this frequency, which is why the effect is so easy to demonstrate and so disconcerting the first time.
+Notice how *small* that displacement is. Moving your head twenty centimeters can take you from full loudness to near-silence at this frequency, which is why the effect is so easy to demonstrate and so disconcerting the first time.
 ::::
 
 ### Two Sources in a Room
@@ -154,38 +154,38 @@ What a listener hears walking through the interference pattern of two loudspeake
 
 Two things about that demonstration are worth drawing out, because both bear on music.
 
-**It is frequency-dependent.** The pattern's spacing scales with the wavelength, so a given pair of sources produces a coarse pattern for bass and an extremely fine one for treble. Play *music* through two speakers rather than a single tone and no listener hears silence, because the nulls for different frequencies are in different places. What they hear instead is a position-dependent colouring of the sound — some frequencies reinforced, others suppressed — which is precisely the "comb filtering" that recording engineers work to avoid.
+**It is frequency-dependent.** The pattern's spacing scales with the wavelength, so a given pair of sources produces a coarse pattern for bass and an extremely fine one for treble. Play *music* through two speakers rather than a single tone and no listener hears silence, because the nulls for different frequencies are in different places. What they hear instead is a position-dependent coloring of the sound, some frequencies reinforced, others suppressed, which is precisely the "comb filtering" that recording engineers work to avoid.
 
 **It requires a stable phase relationship.** Two speakers fed from the same source stay in step indefinitely, so the pattern stands still. Two *different* instruments playing the same written note do not: their frequencies differ slightly and continuously, so the pattern drifts rather than standing still, and the listener hears beats ([Chapter 8](#ch-pitch-and-consonance)) rather than a fixed geography of loud and quiet.
 
 ```{phet} wave-interference
 :label: fig:ch03-wave-interference-sim
 
-Two sources in a ripple tank, with the interference pattern drawn out. Switch to the sound screen and note that the pattern's spacing narrows as the frequency rises — the geometry is fixed, and only the wavelength has changed.
+Two sources in a ripple tank, with the interference pattern drawn out. Switch to the sound screen and note that the pattern's spacing narrows as the frequency rises, the geometry is fixed, and only the wavelength has changed.
 ```
 
 ## Reflection and the Standing Wave
 
 ### Reflection at a Fixed and a Free End
 
-A wave travelling along a string reaches the end. What happens next depends entirely on what is there.
+A wave traveling along a string reaches the end. What happens next depends entirely on what is there.
 
-If the end is **clamped**, it cannot move. But the arriving pulse is trying to move it, so the clamp must push back with an equal and opposite force — and the reflected pulse comes back **inverted**.
+If the end is **clamped**, it cannot move. But the arriving pulse is trying to move it, so the clamp must push back with an equal and opposite force, and the reflected pulse comes back **inverted**.
 
-If the end is **free** — attached to a ring that can slide on a frictionless rod, say — nothing resists the motion. The end overshoots, and the pulse comes back **the same way up**.
+If the end is **free**, attached to a ring that can slide on a frictionless rod, say, nothing resists the motion. The end overshoots, and the pulse comes back **the same way up**.
 
 ```{figure} ../images/ch03-reflection.svg
 :label: fig:ch03-reflection
-:alt: Two rows of three panels showing a pulse travelling toward a boundary. In the top row, against a thick wall, it returns inverted. In the bottom row, against a dotted free end marked with a ring, it returns upright.
+:alt: Two rows of three panels showing a pulse traveling toward a boundary. In the top row, against a thick wall, it returns inverted. In the bottom row, against a dotted free end marked with a ring, it returns upright.
 
 Reflection at the two extreme boundaries. A fixed end forces the displacement to zero there, which can only be arranged if the reflected pulse is inverted; a free end imposes no such condition and the pulse returns upright. Real boundaries lie between these extremes, and the fraction of energy reflected is governed by the impedance mismatch of §2.4.
 ```
 
-The same distinction applies to air columns, with one twist that catches everyone out. The **closed** end of a pipe is a place where the air cannot move — a displacement node — but it is a place where the pressure swings most — a pressure antinode. The **open** end is the reverse. Section 3.5 returns to this, and it is worth deciding now which of the two quantities you are drawing, because the two pictures look like each other's opposites.
+The same distinction applies to air columns, with one twist that catches everyone out. The **closed** end of a pipe is a place where the air cannot move: a displacement node, but it is a place where the pressure swings most: a pressure antinode. The **open** end is the reverse. Section 3.5 returns to this; you need to decide now which of the two quantities you are drawing, because the two pictures look like each other's opposites.
 
 ### Two Waves, Opposite Directions
 
-Now put the two together. Send a continuous wave down a string toward a fixed end. It reflects and travels back, and from then on the string carries two identical waves travelling in opposite directions at once. Superposition says to add them.
+Now put the two together. Send a continuous wave down a string toward a fixed end. It reflects and travels back, and from then on the string carries two identical waves traveling in opposite directions at once. Superposition says to add them.
 
 ```{figure} ../images/ch03-standing-wave-formation.svg
 :label: fig:ch03-standing-wave-formation
@@ -197,7 +197,7 @@ A right-going wave and a left-going wave of the same frequency and amplitude, ad
 That is a **standing wave**, and the striking thing about it is that nothing propagates. Energy sloshes back and forth locally; the pattern itself goes nowhere.
 
 :::{dropdown} The trigonometry, in two lines
-Two identical waves travelling in opposite directions are $y_1 = A\sin(kx - \omega t)$ and $y_2 = A\sin(kx + \omega t)$. Adding them, and using $\sin P + \sin Q = 2\sin\frac{P+Q}{2}\cos\frac{P-Q}{2}$:
+Two identical waves traveling in opposite directions are $y_1 = A\sin(kx - \omega t)$ and $y_2 = A\sin(kx + \omega t)$. Adding them, and using $\sin P + \sin Q = 2\sin\frac{P+Q}{2}\cos\frac{P-Q}{2}$:
 
 $$
 y = y_1 + y_2 = 2A\sin(kx)\cos(\omega t).
@@ -205,7 +205,7 @@ $$
 
 The result has factored: one factor depends only on position, the other only on time. That separation *is* the standing wave. The shape $\sin(kx)$ is fixed in space; the factor $\cos(\omega t)$ scales the whole of it up and down together.
 
-Compare this with the travelling wave it came from, $\sin(kx - \omega t)$, in which $x$ and $t$ appear only in the combination $kx - \omega t$ — which is what makes the pattern move. The difference between a wave that travels and a wave that stands is exactly whether space and time can be separated.
+Compare this with the traveling wave it came from, $\sin(kx - \omega t)$, in which $x$ and $t$ appear only in the combination $kx - \omega t$, which is what makes the pattern move. The difference between a wave that travels and a wave that stands is exactly whether space and time can be separated.
 
 The nodes are where $\sin(kx) = 0$, that is $kx = m\pi$, or $x = m\lambda/2$. They are spaced half a wavelength apart, and they are *permanently* at zero: no value of $t$ makes them move.
 :::
@@ -217,7 +217,7 @@ Two names for the parts of a standing wave:
 - A **node** is a point that never moves. Nodes are half a wavelength apart.
 - An **antinode** is a point that moves most. Antinodes lie halfway between nodes, also half a wavelength apart.
 
-You can find the nodes of a guitar string by touching it very lightly at various points while it sounds. Touch an antinode and the note dies; touch a node and it carries on, because you are holding a point that was not moving anyway. This is not a party trick — it is exactly how a string player produces harmonics, and §3.4 uses it.
+You can find the nodes of a guitar string by touching it very lightly at various points while it sounds. Touch an antinode and the note dies; touch a node and it carries on, because you are holding a point that was not moving anyway. This is not a party trick, it is exactly how a string player produces harmonics, and §3.4 uses it.
 
 ## Standing Waves on a String
 
@@ -239,7 +239,7 @@ $$
 
 ```{figure} ../images/ch03-string-modes.svg
 :label: fig:ch03-string-modes
-:alt: Four panels showing the first four standing-wave modes of a string fixed at both ends, each drawn as an envelope with red dots marking nodes, labelled with wavelength 2L over n and frequency n times f1.
+:alt: Four panels showing the first four standing-wave modes of a string fixed at both ends, each drawn as an envelope with red dots marking nodes, labeled with wavelength 2L over n and frequency n times f1.
 
 The first four modes of a string fixed at both ends. Each is drawn as an envelope: the string sweeps between the two curves. The $n$th mode has $n$ half-wavelengths in the length, $n-1$ nodes between the ends, and a frequency $n$ times the fundamental.
 ```
@@ -258,7 +258,7 @@ This is the single most useful formula in the book's treatment of instruments, a
 | Raise tension $T$ | Higher | Tuning pegs |
 | Raise mass per length $\mu$ | Lower | Wound bass strings |
 
-Note the **square roots**. Doubling the tension does not double the frequency; it raises it by a factor of $\sqrt{2}$, about seven semitones. To raise a string by an octave you must quadruple its tension — which is why instruments are tuned by shortening rather than by tightening, and why the strings of a piano are of enormously varied length and mass rather than of varied tension alone.
+Note the **square roots**. Doubling the tension does not double the frequency; it raises it by a factor of $\sqrt{2}$, about seven semitones. To raise a string by an octave you must quadruple its tension; so instruments are tuned by shortening rather than by tightening, and the strings of a piano are of enormously varied length and mass rather than of varied tension alone.
 
 ### The Harmonic Series of a String
 
@@ -268,14 +268,14 @@ It is also, arguably, the reason Western music sounds the way it does. Chapters 
 
 ```{figure} ../images/notation/harmonic-series-on-c2.svg
 :label: fig:ch03-harmonic-series-staff
-:alt: The first sixteen harmonics of C2 written on a bass stave and a treble stave, each labelled with its harmonic number and its deviation in cents from the nearest equal-tempered note; the seventh and fourteenth are 31 cents flat, the eleventh 49 cents sharp, and the thirteenth 41 cents sharp.
+:alt: The first sixteen harmonics of C2 written on a bass stave and a treble stave, each labeled with its harmonic number and its deviation in cents from the nearest equal-tempered note; the seventh and fourteenth are 31 cents flat, the eleventh 49 cents sharp, and the thirteenth 41 cents sharp.
 
-The harmonic series on C2, written out. The first few partials are the intervals a musician already knows: an octave, a fifth, another octave, a major third. Further up, the series starts to disagree with the piano — the seventh partial is a third of a semitone flat of any key, and the eleventh sits almost exactly between two. That disagreement is the subject of [Chapter 9](#ch-scales-and-tuning), and it is worth noticing this early that the notes in this figure are what a *string* produces, not what a keyboard can play.
+The harmonic series on C2, written out. The first few partials are the intervals a musician already knows: an octave, a fifth, another octave, a major third. Further up, the series starts to disagree with the piano, the seventh partial is a third of a semitone flat of any key, and the eleventh sits almost exactly between two. That disagreement is the subject of [Chapter 9](#ch-scales-and-tuning). Notice early that the notes in this figure are what a *string* produces, not what a keyboard can play.
 ```
 
 ### Playing Harmonics
 
-Touch a sounding string lightly at its midpoint. You have forced a node there. Every mode with a node at the midpoint — the 2nd, 4th, 6th, … — survives untouched; every mode without one — the 1st, 3rd, 5th, … — is killed. What remains sounds at $2f_1$, an octave above.
+Touch a sounding string lightly at its midpoint. You have forced a node there. Every mode with a node at the midpoint: the 2nd, 4th, 6th, …, survives untouched; every mode without one: the 1st, 3rd, 5th, …, is killed. What remains sounds at $2f_1$, an octave above.
 
 Touch at a third of the length and the surviving modes are the 3rd, 6th, 9th, …, sounding at $3f_1$, an octave and a fifth above. Touch at a quarter and you get $4f_1$, two octaves up.
 
@@ -302,7 +302,7 @@ The same argument applies to the air in a tube, with different boundary conditio
 
 At a **closed** end the air cannot move, so there is a displacement node. At an **open** end the air is free to move and the pressure is forced to atmospheric, so there is a displacement antinode.
 
-A pipe **open at both ends** therefore needs antinodes at both ends. That is satisfied by the same family as the string — a whole number of half-wavelengths — and gives
+A pipe **open at both ends** therefore needs antinodes at both ends. That is satisfied by the same family as the string, a whole number of half-wavelengths, and gives
 
 $$
 f_n = n\,\frac{v}{2L}, \qquad n = 1, 2, 3, \ldots
@@ -316,9 +316,9 @@ $$
 
 ```{figure} ../images/ch03-pipe-modes.svg
 :label: fig:ch03-pipe-modes
-:alt: Six panels in two columns. The left column shows the first three modes of a pipe open at both ends, with displacement antinodes at each end, labelled f1, 2f1, 3f1. The right column shows the first three modes of a pipe stopped at the left, with a node at the closed end and an antinode at the open end, labelled f1, 3f1, 5f1.
+:alt: Six panels in two columns. The left column shows the first three modes of a pipe open at both ends, with displacement antinodes at each end, labeled f1, 2f1, 3f1. The right column shows the first three modes of a pipe stopped at the left, with a node at the closed end and an antinode at the open end, labeled f1, 3f1, 5f1.
 
-Air-column modes, drawn as the *displacement* of the air. The open pipe has antinodes at both ends and supports every harmonic. The stopped pipe has a node at the closed end and supports only the odd ones. Drawing the same modes as *pressure* would interchange nodes and antinodes everywhere, which is why a figure like this must say which quantity it shows.
+Air-column modes, drawn as the *displacement* of the air. The open pipe has antinodes at both ends and supports every harmonic. The stopped pipe has a node at the closed end and supports only the odd ones. Drawing the same modes as *pressure* would interchange nodes and antinodes everywhere, so a figure like this must say which quantity it shows.
 ```
 
 ### Odd Harmonics and the Missing Even Ones
@@ -327,7 +327,7 @@ Two consequences follow from that pair of formulas, and both are audible.
 
 **A stopped pipe of a given length sounds an octave lower than an open pipe of the same length.** Compare $v/4L$ with $v/2L$. Organ builders use this constantly: a stopped rank gives a 16-foot pitch from 8 feet of pipe, which is a considerable saving in a church.
 
-**A stopped pipe has only odd harmonics.** This is not a small change of colour. Removing every even partial removes the octave, the second octave, and the octave-plus-fifth from the spectrum, leaving a characteristic hollow, woody sound. It is why the clarinet — effectively a stopped pipe, since the reed end is closed — sounds so unlike the flute, which is an open one, and it is why a clarinet overblows to a twelfth rather than an octave ([Chapter 11](#ch-wind-instruments)).
+**A stopped pipe has only odd harmonics.** This is not a small change of color. Removing every even partial removes the octave, the second octave, and the octave-plus-fifth from the spectrum, leaving a characteristic hollow, woody sound. It is why the clarinet, effectively a stopped pipe, since the reed end is closed, sounds so unlike the flute, which is an open one, and it is why a clarinet overblows to a twelfth rather than an octave ([Chapter 11](#ch-wind-instruments)).
 
 ```{audio} ch03-open-pipe, ch03-stopped-pipe
 :names: Open pipe, Stopped pipe
@@ -335,7 +335,7 @@ Two consequences follow from that pair of formulas, and both are audible.
 :label: fig:ch03-open-vs-stopped
 :transcript: Two tones. The first is bright and full; the second is an octave lower and noticeably hollow, as though something had been taken out of the middle of it.
 
-The same length of tube, played open and then stopped. Two things change at once, and it is worth trying to hear them separately: the pitch drops an octave, and the tone goes hollow because every even harmonic has vanished.
+The same length of tube, played open and then stopped. Two things change at once; try to hear them separately: the pitch drops an octave, and the tone goes hollow because every even harmonic has vanished.
 ```
 
 ### Why the Pipe Length Is Not Quite the Wavelength
@@ -344,7 +344,7 @@ One correction, because it matters for anyone who tries to check these formulas 
 
 The pressure at an open end is not *exactly* atmospheric, because the air just outside the tube is still being pushed around by the air inside it. The antinode therefore falls a little way *beyond* the physical opening, and the pipe behaves as though it were slightly longer than it is. The correction is about $0.6$ times the tube's radius, per open end.
 
-For a narrow pipe this is negligible. For a wide one it is not: a pipe $30$ cm long and $5$ cm across has an effective length of about $31.5$ cm at one open end, or $33$ cm at two — a pitch error of nearly a semitone if you ignore it. [Chapter 11](#ch-wind-instruments) treats the correction properly, and the laboratory exercise in [](#appendix-laboratory) measures it.
+For a narrow pipe this is negligible. For a wide one it is not: a pipe $30$ cm long and $5$ cm across has an effective length of about $31.5$ cm at one open end, or $33$ cm at two: a pitch error of nearly a semitone if you ignore it. [Chapter 11](#ch-wind-instruments) treats the correction properly, and the laboratory exercise in [](#appendix-laboratory) measures it.
 
 :::{tip} Self-check
 A stopped organ pipe sounds middle C, $262$ Hz, at $20$ °C. Without a calculator, say roughly how long it is. (Use $v \approx 343$ m/s, and remember which formula applies.)
@@ -352,12 +352,12 @@ A stopped organ pipe sounds middle C, $262$ Hz, at $20$ °C. Without a calculato
 
 ## Summary
 
-- **Superposition**: where waves overlap, displacements add, and the waves emerge unchanged. This holds because the wave equation is linear, and it fails at extreme amplitudes — audibly so in a loud brass instrument and in a struck cymbal.
+- **Superposition**: where waves overlap, displacements add, and the waves emerge unchanged. This holds because the wave equation is linear, and it fails at extreme amplitudes, audibly so in a loud brass instrument and in a struck cymbal.
 - **Interference** is superposition with a steady phase relationship. Two waves in step reinforce; two exactly opposed cancel. Energy is redistributed, not destroyed: the loud spots are four times the intensity of one source, not twice.
-- **Path difference sets phase difference**: $\phi = (2\pi/\lambda)\Delta r$. Constructive interference requires $\Delta r = m\lambda$, destructive requires $\Delta r = (m+\frac12)\lambda$. The pattern is fine at high frequencies and coarse at low ones, which is why music through two speakers is coloured rather than silenced.
+- **Path difference sets phase difference**: $\phi = (2\pi/\lambda)\Delta r$. Constructive interference requires $\Delta r = m\lambda$, destructive requires $\Delta r = (m+\frac12)\lambda$. The pattern is fine at high frequencies and coarse at low ones, which is why music through two speakers is colored rather than silenced.
 - **Reflection inverts a pulse at a fixed end** and returns it upright at a free end. For air columns, a closed end is a displacement node and a pressure antinode; an open end is the reverse.
-- **A standing wave is two identical waves travelling in opposite directions**, and it factorizes: $2A\sin(kx)\cos(\omega t)$. The shape is fixed in space and only its amplitude varies in time. Nodes never move and are half a wavelength apart.
-- **A string fixed at both ends** admits only $\lambda_n = 2L/n$, giving $f_n = (n/2L)\sqrt{T/\mu}$ — a complete harmonic series. Shorter, tighter, or lighter means higher, but tension enters as a *square root*, so an octave costs four times the tension.
+- **A standing wave is two identical waves traveling in opposite directions**, and it factorizes: $2A\sin(kx)\cos(\omega t)$. The shape is fixed in space and only its amplitude varies in time. Nodes never move and are half a wavelength apart.
+- **A string fixed at both ends** admits only $\lambda_n = 2L/n$, giving $f_n = (n/2L)\sqrt{T/\mu}$: a complete harmonic series. Shorter, tighter, or lighter means higher, but tension enters as a *square root*, so an octave costs four times the tension.
 - **Touching a string at a node** kills every mode that lacks one there, leaving a harmonic. This demonstrates that all the modes are present simultaneously in an ordinary note.
 - **An open pipe gives $f_n = nv/2L$ with all harmonics; a stopped pipe gives $f_n = nv/4L$ with odd harmonics only.** A stopped pipe sounds an octave lower than an open pipe of the same length and sounds hollow, because every even partial is missing.
 - **The effective length of a pipe exceeds its physical length** by about $0.6r$ per open end, which matters for wide tubes.
@@ -427,7 +427,7 @@ $$
 f_2 = 387\ \text{Hz},\qquad f_3 = 581\ \text{Hz},\qquad f_4 = 774\ \text{Hz}.
 $$
 
-Therefore, the first four modes are $194$, $387$, $581$, and $774$ Hz — an exact harmonic series.
+Therefore, the first four modes are $194$, $387$, $581$, and $774$ Hz: an exact harmonic series.
 :::
 
 :::{exercise}
@@ -452,7 +452,7 @@ $$
 L' = L\,\frac{f_1}{f'} = (64.0\ \text{cm})\frac{196}{261.6} = 47.9\ \text{cm},
 $$
 
-measured from the bridge — so the finger goes $64.0 - 47.9 = 16.1$ cm from the nut.
+measured from the bridge; so the finger goes $64.0 - 47.9 = 16.1$ cm from the nut.
 
 (c) In air,
 
@@ -460,7 +460,7 @@ $$
 \lambda_{\text{air}} = \frac{343\ \text{m/s}}{196\ \text{Hz}} = 1.75\ \text{m},
 $$
 
-against $2L = 1.28$ m on the string. They differ because the wave *speeds* differ — $251$ m/s on the string against $343$ m/s in air — while the frequency is necessarily shared, the string being what drives the air.
+against $2L = 1.28$ m on the string. They differ because the wave *speeds* differ, $251$ m/s on the string against $343$ m/s in air, while the frequency is necessarily shared, the string being what drives the air.
 :::
 
 :::{exercise}
@@ -479,7 +479,7 @@ Since $f \propto \sqrt{T}$, the tension ratio is the square of the frequency rat
 
 (b) $(220/110)^2 = 2^2 = 4.00$.
 
-(c) Quadrupling the tension is not practical. String tensions are already set close to the breaking point of the material for good reasons — higher tension gives a louder, brighter note — so a factor of four would break the string, and if it did not, it would very likely pull the instrument apart. This is exactly why instruments span their range by changing length and mass per unit length rather than tension alone.
+(c) Quadrupling the tension is not practical. String tensions are already set close to the breaking point of the material for good reasons, higher tension gives a louder, brighter note, so a factor of four would break the string, and if it did not, it would very likely pull the instrument apart. This is exactly why instruments span their range by changing length and mass per unit length rather than tension alone.
 :::
 
 :::{exercise}
@@ -506,7 +506,7 @@ $$
 f_1 = \frac{343}{4(1.10)} = 77.9\ \text{Hz}.
 $$
 
-Therefore, stopping one end drops the pitch by exactly an octave, and the surviving modes become $77.9$, $234$, $390$ Hz — the odd harmonics only.
+Therefore, stopping one end drops the pitch by exactly an octave, and the surviving modes become $77.9$, $234$, $390$ Hz: the odd harmonics only.
 :::
 
 :::{exercise}
@@ -537,7 +537,7 @@ $$
 0.655 - 0.024 = 0.631\ \text{m}.
 $$
 
-Therefore, cutting the naive $65.5$ cm would give an effective length of $67.9$ cm and a pitch of $126$ Hz — about $67$ cents flat, two-thirds of a semitone, and grossly out of tune.
+Therefore, cutting the naive $65.5$ cm would give an effective length of $67.9$ cm and a pitch of $126$ Hz, about $67$ cents flat, two-thirds of a semitone, and grossly out of tune.
 :::
 
 :::{exercise}
@@ -556,7 +556,7 @@ $$
 f = 3 \times 440\ \text{Hz} = 1320\ \text{Hz}.
 $$
 
-(b) Harmonics 3, 6, 9, 12, … of the original string — that is, 1, 2, 3, 4, … of the new sounding pitch.
+(b) Harmonics 3, 6, 9, 12, … of the original string: that is, 1, 2, 3, 4, … of the new sounding pitch.
 
 (c) Because two-thirds of the original partials have been removed. The surviving set is still a complete harmonic series on $1320$ Hz, but each of its members was a *high* partial of the original string and was therefore weak to begin with. The result is a spectrum with far less energy in it and fewer strong partials, which the ear reports as thin and glassy.
 :::
@@ -573,7 +573,7 @@ Two identical waves, each of amplitude $A$, interfere. (a) What is the resulting
 
 (a) $2A$. (b) Zero.
 
-(c) Intensity goes as the square of amplitude, so the in-step case has $(2A)^2/A^2 = 4$ times the intensity of one wave alone — not twice.
+(c) Intensity goes as the square of amplitude, so the in-step case has $(2A)^2/A^2 = 4$ times the intensity of one wave alone, not twice.
 
 The extra energy comes from the places where the waves cancel. Averaged over all positions, the mean intensity is $2A^2$, exactly twice one wave's, as conservation of energy requires. Interference redistributes energy from the nulls into the maxima; it does not create it.
 :::
@@ -601,7 +601,7 @@ $$
 T' = 408\ \text{N}.
 $$
 
-Therefore, the original tension is about $204$ N — roughly the weight of a 21 kg mass — and the heavier string would need twice that. This is the trade-off behind wound strings: mass lowers the pitch, but keeping the pitch while adding mass costs tension.
+Therefore, the original tension is about $204$ N, roughly the weight of a 21 kg mass, and the heavier string would need twice that. This is the trade-off behind wound strings: mass lowers the pitch, but keeping the pitch while adding mass costs tension.
 :::
 
 :::{exercise}
@@ -631,7 +631,7 @@ $$
 \frac{\Delta r}{\lambda} = \frac{0.366}{0.1994} = 1.84.
 $$
 
-Therefore, the path difference is $1.84$ wavelengths — close to $1.5$ or $2.5$? It is nearer the whole number $2$ than the half-integer $1.5$, so the listener is closer to a loud position than a quiet one, though not exactly at a maximum.
+Therefore, the path difference is $1.84$ wavelengths, close to $1.5$ or $2.5$? It is nearer the whole number $2$ than the half-integer $1.5$, so the listener is closer to a loud position than a quiet one, though not exactly at a maximum.
 :::
 
 :::{exercise}
@@ -660,7 +660,7 @@ $$
 
 These are the odd multiples of $\lambda/4$, which lie exactly halfway between the even multiples that give the nodes.
 
-Therefore, nodes and antinodes alternate at intervals of a quarter wavelength, with each kind spaced half a wavelength from its own neighbours.
+Therefore, nodes and antinodes alternate at intervals of a quarter wavelength, with each kind spaced half a wavelength from its own neighbors.
 :::
 
 :::{exercise}
@@ -679,9 +679,9 @@ $$
 L = \frac{343}{4(147)} = 0.583\ \text{m}.
 $$
 
-(b) For an open pipe of the same length, $f_1 = v/2L = 343/(2\times0.583) = 294$ Hz — exactly an octave higher.
+(b) For an open pipe of the same length, $f_1 = v/2L = 343/(2\times0.583) = 294$ Hz, exactly an octave higher.
 
-(c) Because a stopped pipe sounds at $v/4L$ while an open one sounds at $v/2L$. The stopped pipe gets an octave lower out of the same physical length, since the shortest standing wave it can hold is a quarter wavelength rather than a half. A clarinet is therefore about half the length of a flute sounding the same low note — a real and substantial advantage, paid for by having only odd harmonics.
+(c) Because a stopped pipe sounds at $v/4L$ while an open one sounds at $v/2L$. The stopped pipe gets an octave lower out of the same physical length, since the shortest standing wave it can hold is a quarter wavelength rather than a half. A clarinet is therefore about half the length of a flute sounding the same low note: a real and substantial advantage, paid for by having only odd harmonics.
 :::
 
 :::{exercise}
@@ -700,7 +700,7 @@ A stopped pipe and an open pipe are both tuned to sound $220$ Hz. (a) Find the l
 
 (c) The stopped pipe's second mode is $660$ Hz; the open pipe's is $440$ Hz. The ratio is $660/440 = 3/2$.
 
-Therefore, the listener hears a perfect fifth — and one which is *exactly* 3:2, since both frequencies are exact harmonics of the same fundamental. [Chapter 9](#ch-scales-and-tuning) takes up what happens when a keyboard has to approximate that ratio.
+Therefore, the listener hears a perfect fifth, and one which is *exactly* 3:2, since both frequencies are exact harmonics of the same fundamental. [Chapter 9](#ch-scales-and-tuning) takes up what happens when a keyboard has to approximate that ratio.
 :::
 
 :::{exercise}
@@ -733,5 +733,5 @@ $$
 n = 1200\log_2\!\left(\frac{543}{613}\right) = 1200(-0.1750) = -210\ \text{cents}.
 $$
 
-Therefore, ignoring the correction would put the pipe more than two semitones sharp of where it actually sounds. For a tube this wide relative to its length, the end correction is not a refinement — it dominates any attempt to predict the pitch.
+Therefore, ignoring the correction would put the pipe more than two semitones sharp of where it actually sounds. For a tube this wide relative to its length, the end correction is not a refinement, it dominates any attempt to predict the pitch.
 :::

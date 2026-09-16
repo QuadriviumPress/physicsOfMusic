@@ -34,9 +34,9 @@ By the end of this chapter, you should be able to:
 
 [Chapter 1](#ch-sound-and-shm) left a vibrating object pushing on the air next to it. This chapter follows what happens next.
 
-The answer is not obvious, and it is worth pausing on the thing that makes it interesting: the sound arrives at your ear far faster than any air could get there, and the air that arrives is not the air that left. A trumpet player thirty metres away blows a note, and a fifteenth of a second later you hear it — but the breath that made it is still in the trumpet. Something crossed the room, and it was not a substance.
+The answer is not obvious. The sound arrives at your ear far faster than any air could get there, and the air that arrives is not the air that left. A trumpet player thirty meters away blows a note, and a fifteenth of a second later you hear it, but the breath that made it is still in the trumpet. Something crossed the room, and it was not a substance.
 
-What crossed the room was a **wave**, and this chapter is about how fast it goes, what it looks like on the way, and what happens to it as it spreads. Three results will be used constantly for the rest of the book. The first is the relation $v = f\lambda$, which connects the frequency a musician cares about to the wavelength the physics cares about. The second is that the speed $v$ is a property of the *medium* — not of the source, not of the frequency, not of how loud the sound is — which is why an orchestra stays together and why a cold clarinet plays flat. The third is that sound spreads out, and spreading has a cost, which is the beginning of the story of why instruments need bodies and bells at all.
+What crossed the room was a **wave**, and this chapter is about how fast it goes, what it looks like on the way, and what happens to it as it spreads. Three results will be used constantly for the rest of the book. The first is the relation $v = f\lambda$, which connects the frequency a musician cares about to the wavelength the physics cares about. The second is that the speed $v$ is a property of the *medium*, not of the source, not of the frequency, not of how loud the sound is, so an orchestra stays together and a cold clarinet plays flat. The third is that sound spreads out, and spreading has a cost, which is the beginning of the story of why instruments need bodies and bells at all.
 
 ## From a Vibration to a Wave
 
@@ -44,9 +44,9 @@ What crossed the room was a **wave**, and this chapter is about how fast it goes
 
 Return to the row of people standing shoulder to shoulder. Shove the first one and a shove travels down the line. Two questions are worth asking about it.
 
-*What decides how fast the shove travels?* Two things. If the people are **stiff** — they resist being compressed and push back hard — the shove passes quickly. If they are **heavy** — hard to get moving — it passes slowly. Nothing else matters: not how hard you shoved, not how often you shove, not how far down the line you look.
+*What decides how fast the shove travels?* Two things. If the people are **stiff**, they resist being compressed and push back hard: the shove passes quickly. If they are **heavy**, hard to get moving, it passes slowly. Nothing else matters: not how hard you shoved, not how often you shove, not how far down the line you look.
 
-*What decides how far the shove goes?* In an idealized line, nothing; it goes forever. In reality some energy is lost to friction at each step, and the shove fades. Both effects have acoustic counterparts, and the first — speed set by stiffness and inertia — is the one that runs this chapter.
+*What decides how far the shove goes?* In an idealized line, nothing; it goes forever. In reality some energy is lost to friction at each step, and the shove fades. Both effects have acoustic counterparts, and the first, speed set by stiffness and inertia, is the one that runs this chapter.
 
 The same reasoning applies to air. Air is stiff because compressing it raises its pressure, and it has inertia because it has mass. The ratio of those two properties fixes the speed of sound, and §2.3 makes the statement quantitative.
 
@@ -56,22 +56,22 @@ Two kinds of wave appear throughout this book, and every instrument uses both.
 
 ```{figure} ../images/ch02-transverse-longitudinal.svg
 :label: fig:ch02-transverse-longitudinal
-:alt: Top, a wavy string with a vertical double arrow showing the string moving across the direction of travel. Bottom, a field of dots bunched and thinned, with a horizontal double arrow showing the air moving along the direction of travel. Both have an arrow showing the wave travelling to the right.
+:alt: Top, a wavy string with a vertical double arrow showing the string moving across the direction of travel. Bottom, a field of dots bunched and thinned, with a horizontal double arrow showing the air moving along the direction of travel. Both have an arrow showing the wave traveling to the right.
 
 The two kinds of wave. In a **transverse** wave the medium moves across the direction of travel; in a **longitudinal** wave it moves along it. A guitar string carries transverse waves, the air around it carries longitudinal ones, and the instrument's job is to get energy from the first into the second.
 ```
 
-The distinction is not cosmetic. It determines what a wave can do — only transverse waves can be polarized, which is why light can and sound cannot — and it determines what has to happen at a boundary between the two. That handover, from the transverse motion of a string to the longitudinal motion of air, turns out to be the hardest engineering problem in the design of a string instrument, and §2.4 explains why.
+The distinction is not cosmetic. It determines what a wave can do: only transverse waves can be polarized, so light can and sound cannot. It also determines what has to happen at a boundary between the two. That handover, from the transverse motion of a string to the longitudinal motion of air, turns out to be the hardest engineering problem in the design of a string instrument, and §2.4 explains why.
 
 :::{margin}
-A wave on the surface of water is neither, quite: a floating cork traces a small circle rather than a straight line. Surface waves are a mixture, which is why they are a poor analogy for sound even though everyone reaches for them first.
+A wave on the surface of water is neither, quite: a floating cork traces a small circle rather than a straight line. Surface waves are a mixture, and a poor analogy for sound even though everyone reaches for them first.
 :::
 
 ### The Wave Pulse and the Periodic Wave
 
-Shove the row of people once and a single **pulse** travels down it. Shove them rhythmically and a **periodic wave** travels instead — a repeating pattern, moving at the same speed the single pulse would have moved.
+Shove the row of people once and a single **pulse** travels down it. Shove them rhythmically and a **periodic wave** travels instead: a repeating pattern, moving at the same speed the single pulse would have moved.
 
-A handclap is a pulse. A sung note is a periodic wave. Musically the periodic case is the interesting one, but the pulse is the more fundamental: a periodic wave is what you get by sending pulses one after another, and its speed is the pulse speed. **The speed does not know or care about the frequency.** This is worth stating plainly because it is the single most useful fact in the chapter, and because the exceptions to it — media in which speed *does* depend on frequency, called dispersive media — are rare in air and consequential when they occur. A piano string is mildly dispersive, and [Chapter 10](#ch-string-instruments) shows that this small fact is why pianos are tuned the way they are.
+A handclap is a pulse. A sung note is a periodic wave. Musically the periodic case is the interesting one, but the pulse is the more fundamental: a periodic wave is what you get by sending pulses one after another, and its speed is the pulse speed. **The speed does not know or care about the frequency.** This is worth stating plainly because it is the single most useful fact in the chapter, and because the exceptions to it, media in which speed *does* depend on frequency, called dispersive media, are rare in air and consequential when they occur. A piano string is mildly dispersive, and [Chapter 10](#ch-string-instruments) shows that this small fact is why pianos are tuned the way they are.
 
 ## Wavelength, Frequency, and Wave Speed
 
@@ -89,12 +89,12 @@ That is the whole derivation, and the equation carries an enormous amount of thi
 
 ```{figure} ../images/ch02-wavelength-frequency.svg
 :label: fig:ch02-wavelength-frequency
-:alt: Three sine waves of different wavelengths drawn one above another against a common distance axis, labelled 110 Hz with wavelength 3.1 m, 220 Hz with 1.6 m, and 440 Hz with 0.78 m.
+:alt: Three sine waves of different wavelengths drawn one above another against a common distance axis, labeled 110 Hz with wavelength 3.1 m, 220 Hz with 1.6 m, and 440 Hz with 0.78 m.
 
-Three notes in the same air. The speed is the same for all three — $343$ m/s — so a higher frequency must mean a shorter wavelength, in exactly inverse proportion. Doubling the frequency, which is going up an octave, halves the wavelength.
+Three notes in the same air. The speed is the same for all three, $343$ m/s, so a higher frequency must mean a shorter wavelength, in exactly inverse proportion. Doubling the frequency, which is going up an octave, halves the wavelength.
 ```
 
-Notice the *sizes*. Musical wavelengths in air are comparable to the dimensions of rooms and of people: a low A on a bass is about eight metres long, middle C about $1.3$ m, and the top note of a piccolo about $8$ cm. This is why sound bends around corners and light does not, why bass notes are hard to control in a small room ([Chapter 14](#ch-room-acoustics)), and why a loudspeaker that is small compared with a wavelength radiates in all directions while one that is large does not.
+Notice the *sizes*. Musical wavelengths in air are comparable to the dimensions of rooms and of people: a low A on a bass is about eight meters long, middle C about $1.3$ m, and the top note of a piccolo about $8$ cm. Sound therefore bends around corners and light does not; bass notes are hard to control in a small room ([Chapter 14](#ch-room-acoustics)); and a loudspeaker that is small compared with a wavelength radiates in all directions while one that is large does not.
 
 ::::{tip} Worked example: wavelengths across the piano
 *The speed of sound in air at 20 °C is $343$ m/s. Find the wavelengths of the lowest and highest notes on a piano, $27.5$ Hz and $4186$ Hz.*
@@ -105,7 +105,7 @@ $$
 \lambda_{\text{high}} = \frac{343\ \text{m/s}}{4186\ \text{Hz}} = 8.2\ \text{cm}.
 $$
 
-The lowest note's wavelength is longer than most rooms; the highest note's is the width of a hand. That range — a factor of $152$ — is the reason no single loudspeaker driver can reproduce a piano, and the reason bass is the hardest part of a room to get right.
+The lowest note's wavelength is longer than most rooms; the highest note's is the width of a hand. That range, a factor of $152$, is the reason no single loudspeaker driver can reproduce a piano, and the reason bass is the hardest part of a room to get right.
 ::::
 
 ### A Wave Crossing a Boundary
@@ -121,7 +121,7 @@ When a wave passes from one medium into another, one of its three quantities is 
 Sound entering water from air quadruples its wavelength, because water carries sound over four times as fast. A singer's note does not become a different note when it reaches a listener underwater; it is the same pitch, stretched out in space.
 
 :::{warning}
-It is tempting to think that "the note changes" when sound enters a new medium, because the speed changes and $v = f\lambda$ has $f$ in it. It does not. Fix on what the boundary physically does — it shakes the next medium at the rate it is being shaken — and the conserved quantity is obvious.
+It is tempting to think that "the note changes" when sound enters a new medium, because the speed changes and $v = f\lambda$ has $f$ in it. It does not. Fix on what the boundary physically does: it shakes the next medium at the rate it is being shaken, so the conserved quantity is obvious.
 :::
 
 ### The Wave Equation
@@ -132,7 +132,7 @@ $$
 \frac{\partial^2 y}{\partial t^2} = v^2\,\frac{\partial^2 y}{\partial x^2}.
 $$
 
-This is the **wave equation**. Nothing in the rest of this book requires it, and it will not be used again in the main text; it is stated because it is worth recognizing, and because the derivation is a satisfying answer to the question "why is the speed what it is?"
+This is the **wave equation**. Nothing in the rest of this book requires it, and it will not be used again in the main text; it is stated so the derivation can answer the question "why is the speed what it is?"
 
 :::{dropdown} Where the wave equation comes from, and why $v = \sqrt{T/\mu}$
 Take a stretched string of tension $T$ and mass per unit length $\mu$, displaced by a small amount $y(x,t)$, and apply Newton's second law to a short segment between $x$ and $x + \mathrm{d}x$.
@@ -158,9 +158,9 @@ $$
 v = \sqrt{\frac{T}{\mu}}.
 $$
 
-**Stiffness over inertia, exactly as §2.1 argued.** Tension is what pulls the string back; mass per unit length is what resists being moved. This is the formula [Chapter 3](#ch-superposition) uses to work out the pitch of a string, and it is worth noticing that it contains no reference to amplitude or frequency — the small-slope approximation is what removes them.
+**Stiffness over inertia, exactly as §2.1 argued.** Tension is what pulls the string back; mass per unit length is what resists being moved. This is the formula [Chapter 3](#ch-superposition) uses to work out the pitch of a string, and it contains no reference to amplitude or frequency: the small-slope approximation is what removes them.
 
-To confirm that the equation really describes travelling waves, substitute $y = f(x - vt)$ for any twice-differentiable $f$. The chain rule gives $\partial^2 y/\partial t^2 = v^2 f''$ and $\partial^2 y/\partial x^2 = f''$, so the equation is satisfied for *any* shape $f$. That is the mathematical statement that a pulse travels without changing shape, and that its speed does not depend on what shape it is.
+To confirm that the equation really describes traveling waves, substitute $y = f(x - vt)$ for any twice-differentiable $f$. The chain rule gives $\partial^2 y/\partial t^2 = v^2 f''$ and $\partial^2 y/\partial x^2 = f''$, so the equation is satisfied for *any* shape $f$. That is the mathematical statement that a pulse travels without changing shape, and that its speed does not depend on what shape it is.
 :::
 
 ## What Sets the Speed of Sound
@@ -183,9 +183,9 @@ Two consequences follow immediately, and both are counterintuitive on first meet
 
 ```{figure} ../images/ch02-speed-in-media.svg
 :label: fig:ch02-speed-in-media
-:alt: A horizontal bar chart of the speed of sound in carbon dioxide 259, air 343, helium 965, water 1482, spruce along the grain 3800, and steel 5960 metres per second.
+:alt: A horizontal bar chart of the speed of sound in carbon dioxide 259, air 343, helium 965, water 1482, spruce along the grain 3800, and steel 5960 meters per second.
 
-The speed of sound in six media. The ordering is not by density — steel is the densest thing here and the fastest — but by the ratio of stiffness to density. Spruce is anisotropic: sound runs along the grain about four times faster than across it, which is exactly why soundboards are cut the way they are ([Chapter 10](#ch-string-instruments)).
+The speed of sound in six media. The ordering is not by density. Steel is the densest thing here and the fastest, so the order follows the ratio of stiffness to density. Spruce is anisotropic: sound runs along the grain about four times faster than across it, which is exactly why soundboards are cut the way they are ([Chapter 10](#ch-string-instruments)).
 ```
 
 ### Sound in Air, and the Temperature Dependence
@@ -198,33 +198,33 @@ $$
 
 with $T$ the temperature in degrees Celsius. At $0$ °C sound travels at $331$ m/s; at $20$ °C, at $343$ m/s; at $35$ °C, at $353$ m/s.
 
-The dependence is on temperature and essentially nothing else. Air pressure does not appear, which surprises people: raising the pressure makes air both stiffer and denser, in the same proportion, and the two effects cancel exactly. Humidity has a small effect — moist air is very slightly faster, because water molecules are lighter than the nitrogen they displace — but it is a fraction of a percent and rarely matters.
+The dependence is on temperature and essentially nothing else. Air pressure does not appear, which surprises people: raising the pressure makes air both stiffer and denser, in the same proportion, and the two effects cancel exactly. Humidity has a small effect, moist air is very slightly faster, because water molecules are lighter than the nitrogen they displace, but it is a fraction of a percent and rarely matters.
 
 Temperature matters a great deal, because a wind instrument's sounding length is fixed and its pitch follows the speed of sound directly.
 
 ```{figure} ../images/ch02-speed-vs-temperature.svg
 :label: fig:ch02-speed-vs-temperature
-:alt: Left, a straight-line graph of the speed of sound rising from about 325 to 355 metres per second between minus ten and forty degrees Celsius. Right, the resulting pitch shift in cents for a fixed-length pipe tuned at twenty degrees, running from about minus 95 cents to plus 50 cents, with a shaded band marking plus or minus five cents.
+:alt: Left, a straight-line graph of the speed of sound rising from about 325 to 355 meters per second between minus ten and forty degrees Celsius. Right, the resulting pitch shift in cents for a fixed-length pipe tuned at twenty degrees, running from about minus 95 cents to plus 50 cents, with a shaded band marking plus or minus five cents.
 
-Left: the speed of sound in air against temperature. Right: what that does to a pipe of fixed length, expressed in **cents** — hundredths of a semitone, the units of [Chapter 9](#ch-scales-and-tuning). A pipe tuned at $20$ °C and played at $5$ °C is about $46$ cents flat, very nearly a quarter of a semitone, and unmistakably out of tune.
+Left: the speed of sound in air against temperature. Right: what that does to a pipe of fixed length, expressed in **cents**, hundredths of a semitone, the units of [Chapter 9](#ch-scales-and-tuning). A pipe tuned at $20$ °C and played at $5$ °C is about $46$ cents flat, very nearly a quarter of a semitone, and unmistakably out of tune.
 ```
 
 ```{audio} ch02-pipe-cold, ch02-pipe-warm
 :names: At 5 °C, At 20 °C
 :figure: ../images/ch02-pipe-temperature.svg
 :label: fig:ch02-pipe-temperature
-:transcript: The same instrument twice. The second is noticeably higher than the first — not by a semitone, but clearly enough that the two would clash if played together.
+:transcript: The same instrument twice. The second is noticeably higher than the first, not by a semitone, but clearly enough that the two would clash if played together.
 
-A pipe of fixed length, cold and warm. This is why wind players blow warm air through their instruments before a performance and why an orchestra retunes after the interval: the strings have not moved, but the winds have warmed up and gone sharp.
+A pipe of fixed length, cold and warm. Wind players blow warm air through their instruments before a performance for this reason, and an orchestra retunes after the interval because the strings have not moved while the winds have warmed up and gone sharp.
 ```
 
 :::{note}
-The effect works in the other direction for strings. A guitar left in a cold car goes *sharp*, because the steel strings contract and their tension rises. So a temperature change pushes the winds and the strings in opposite directions, which is why a mixed ensemble in a cold hall is harder to tune than either section alone.
+The effect works in the other direction for strings. A guitar left in a cold car goes *sharp*, because the steel strings contract and their tension rises. A temperature change therefore pushes the winds and the strings in opposite directions, and a mixed ensemble in a cold hall is harder to tune than either section alone.
 :::
 
 ### Sound in Liquids and Solids
 
-Sound travels about $1482$ m/s in water, some $4.3$ times its speed in air. In solids it is faster still, and in a wooden soundboard it depends sharply on direction: along the grain of spruce, about $3800$ m/s; across the grain, about a quarter of that. Instrument makers have exploited this for centuries without needing the number — a soundboard is cut so the grain runs the length of the instrument, because that is the direction along which vibrations must be distributed quickly.
+Sound travels about $1482$ m/s in water, some $4.3$ times its speed in air. In solids it is faster still, and in a wooden soundboard it depends sharply on direction: along the grain of spruce, about $3800$ m/s; across the grain, about a quarter of that. Instrument makers have exploited this for centuries without needing the number: a soundboard is cut so the grain runs the length of the instrument, because that is the direction along which vibrations must be distributed quickly.
 
 ::::{tip} Worked example: locating a hammer blow along a rail
 *A steel rail is struck at one end. A listener $600$ m away, with one ear to the rail, hears two distinct sounds. How far apart are they?*
@@ -241,16 +241,16 @@ $$
 t_{\text{air}} = \frac{600\ \text{m}}{343\ \text{m/s}} = 1.75\ \text{s}.
 $$
 
-The gap is $1.75 - 0.10 = 1.65$ s — easily long enough to hear as two separate events, which is the classic demonstration that the speed of sound belongs to the medium and not to the source.
+The gap is $1.75 - 0.10 = 1.65$ s, easily long enough to hear as two separate events, which is the classic demonstration that the speed of sound belongs to the medium and not to the source.
 ::::
 
 ## Sound Spreading in Three Dimensions
 
 ### Intensity and the Inverse-Square Law
 
-So far the wave has been drawn as though it travelled along a line. In the open air it does not: it spreads out in all directions, and spreading dilutes it.
+So far the wave has been drawn as though it traveled along a line. In the open air it does not: it spreads out in all directions, and spreading dilutes it.
 
-**Intensity** $I$ is the power carried by a wave per unit area, in watts per square metre. A source radiating power $P$ uniformly in all directions spreads that power over a sphere, so at distance $r$
+**Intensity** $I$ is the power carried by a wave per unit area, in watts per square meter. A source radiating power $P$ uniformly in all directions spreads that power over a sphere, so at distance $r$
 
 $$
 I = \frac{P}{4\pi r^2}.
@@ -262,26 +262,26 @@ This is the **inverse-square law**, and it is a statement about geometry rather 
 :label: fig:ch02-inverse-square
 :alt: Level against distance on logarithmic axes. A straight blue line falls six decibels per doubling; a dashed red line follows it at short range then flattens out beyond a marked critical distance.
 
-Level against distance. Outdoors, the level falls $6$ dB for every doubling — a straight line on these axes. Indoors it does not: beyond the **critical distance**, the reflected sound bouncing around the room is stronger than the sound arriving directly, and moving further away stops making much difference. This is why a lecturer at the back of a reverberant hall is audible but unintelligible, and it is the subject of [Chapter 14](#ch-room-acoustics).
+Level against distance. Outdoors, the level falls $6$ dB for every doubling, a straight line on these axes. Indoors it does not: beyond the **critical distance**, the reflected sound bouncing around the room is stronger than the sound arriving directly, and moving further away stops making much difference. A lecturer at the back of a reverberant hall is audible but unintelligible for just this reason; [Chapter 14](#ch-room-acoustics) takes up the indoor case in detail.
 ```
 
-The indoor case is the more common one in music, and the difference is worth stating plainly: **inside a room, the inverse-square law fails beyond a few metres.** Someone at the back of a concert hall is not hearing a sound $40$ dB weaker than the front row; they are hearing a sound perhaps $8$ dB weaker, most of which has bounced off something.
+The indoor case is the more common one in music, and the difference is worth stating plainly: **inside a room, the inverse-square law fails beyond a few meters.** Someone at the back of a concert hall is not hearing a sound $40$ dB weaker than the front row; they are hearing a sound perhaps $8$ dB weaker, most of which has bounced off something.
 
 ### Directivity: Why Instruments Do Not Radiate Evenly
 
 The inverse-square law assumed a source radiating equally in all directions. Real instruments do no such thing.
 
-The controlling quantity is the size of the source compared with the wavelength. A source much *smaller* than a wavelength radiates nearly uniformly — it has no way to favour one direction, because the whole of it is effectively at one point as far as the wave is concerned. A source much *larger* than a wavelength beams: the different parts of it interfere, and the sound goes mostly where they all agree.
+The controlling quantity is the size of the source compared with the wavelength. A source much *smaller* than a wavelength radiates nearly uniformly, it has no way to favor one direction, because the whole of it is effectively at one point as far as the wave is concerned. A source much *larger* than a wavelength beams: the different parts of it interfere, and the sound goes mostly where they all agree.
 
-Since instruments are fixed in size and wavelength shrinks as pitch rises, **every instrument becomes more directional at high frequencies**. A trumpet's low notes spill around the hall; its high notes go where the bell points, which is why a trumpet sounds so different from the side. A cello radiates low notes in all directions and high notes in a complicated pattern of lobes. Recording engineers know this as microphone placement, and it is why moving a microphone $30$ cm can change a recorded timbre more than changing the microphone does.
+Since instruments are fixed in size and wavelength shrinks as pitch rises, **every instrument becomes more directional at high frequencies**. A trumpet's low notes spill around the hall; its high notes go where the bell points, so a trumpet sounds quite different from the side. A cello radiates low notes in all directions and high notes in a complicated pattern of lobes. Recording engineers know this as microphone placement: moving a microphone $30$ cm can change a recorded timbre more than changing the microphone does.
 
 ### Acoustic Impedance and the Coupling Problem
 
 There is one more property of a medium that matters, and it explains a puzzle raised in [Chapter 1](#ch-sound-and-shm): why is a vibrating tuning fork almost silent until you touch it to a table?
 
-**Acoustic impedance** measures how hard a medium is to set moving — the ratio of the pressure applied to the flow that results. A stiff, dense medium like steel has a high impedance: large pressures produce small motions. A light, springy medium like air has a low one: small pressures produce large motions.
+**Acoustic impedance** measures how hard a medium is to set moving: the ratio of the pressure applied to the flow that results. A stiff, dense medium like steel has a high impedance: large pressures produce small motions. A light, springy medium like air has a low one: small pressures produce large motions.
 
-Sound crosses a boundary efficiently only when the impedances on the two sides are **similar**. When they are very different, almost all of the energy reflects and almost none is transmitted. The mismatch between a solid and air is enormous, and the consequence is that a thin vibrating object — a string, a tine, a reed — is a terrible radiator of sound. It shakes the air, the air offers almost no resistance, and hardly any energy is handed over.
+Sound crosses a boundary efficiently only when the impedances on the two sides are **similar**. When they are very different, almost all of the energy reflects and almost none is transmitted. The mismatch between a solid and air is enormous, and the consequence is that a thin vibrating object, a string, a tine, a reed, is a terrible radiator of sound. It shakes the air, the air offers almost no resistance, and hardly any energy is handed over.
 
 Every acoustic instrument is, in large part, a solution to this problem. A soundboard is a large light surface that presents an impedance intermediate between string and air. A brass bell is a gradual flare that converts a narrow high-impedance column into a wide low-impedance one. The middle ear, remarkably, is a mechanical lever-and-piston arrangement solving the same problem in reverse, matching air to the fluid of the inner ear ([Chapter 6](#ch-the-ear)).
 
@@ -297,9 +297,9 @@ If the source of a sound is moving, the wavefronts it leaves behind are not even
 
 ```{figure} ../images/ch02-doppler.svg
 :label: fig:ch02-doppler
-:alt: Concentric circles representing successive wavefronts, whose centres shift progressively to the left, so that the circles are crowded together on the right and widely spaced on the left, with a red dot and arrow marking the moving source.
+:alt: Concentric circles representing successive wavefronts, whose centers shift progressively to the left, so that the circles are crowded together on the right and widely spaced on the left, with a red dot and arrow marking the moving source.
 
-Wavefronts from a moving source. The wave speed is unchanged — every circle expands at the same rate — but the crests pile up ahead of the source and spread out behind it. A listener ahead meets more crests per second and hears a higher pitch. (The source here is drawn moving at $0.7$ of the speed of sound so that the effect is visible; a passing car is nearer $0.09$.)
+Wavefronts from a moving source. The wave speed is unchanged, every circle expands at the same rate, but the crests pile up ahead of the source and spread out behind it. A listener ahead meets more crests per second and hears a higher pitch. (The source here is drawn moving at $0.7$ of the speed of sound so that the effect is visible; a passing car is nearer $0.09$.)
 ```
 
 Since frequency is crests per second, a listener ahead of the source hears a higher frequency and one behind hears a lower one:
@@ -308,7 +308,7 @@ $$
 f' = f\,\frac{v}{v \mp v_s},
 $$
 
-with the minus sign for a source approaching and the plus sign for one receding. If instead the *listener* moves and the source is still, the formula is $f' = f(v \pm v_l)/v$ — a different expression, because the two cases are physically different. A moving source changes the wavelength in the air; a moving listener does not, and merely meets the existing crests at a different rate.
+with the minus sign for a source approaching and the plus sign for one receding. If instead the *listener* moves and the source is still, the formula is $f' = f(v \pm v_l)/v$: a different expression, because the two cases are physically different. A moving source changes the wavelength in the air; a moving listener does not, and merely meets the existing crests at a different rate.
 
 ::::{tip} Worked example: an ambulance
 *A siren sounds at $700$ Hz. The ambulance passes you at $25$ m/s. What frequencies do you hear as it approaches and as it recedes? Take $v = 343$ m/s.*
@@ -325,7 +325,7 @@ $$
 f' = (700\ \text{Hz})\frac{343}{343 + 25} = (700)(0.9321) = 652\ \text{Hz}.
 $$
 
-The drop across the pass is $755 \to 652$ Hz, a ratio of $1.158$ — which is $1200\log_2(1.158) = 254$ cents, or about two and a half semitones. That is a musically large interval, which is why the effect is so obvious.
+The drop across the pass is $755 \to 652$ Hz, a ratio of $1.158$, which is $1200\log_2(1.158) = 254$ cents, or about two and a half semitones. That is a musically large interval, which is why the effect is so obvious.
 ::::
 
 ### The Rotating Loudspeaker
@@ -349,25 +349,25 @@ Move the source and the listener independently and watch the wavefronts. Two thi
 
 ### Why a Passing Siren Falls and a Vibrato Does Not
 
-A final observation that ties the section to music. A string player's **vibrato** rocks the finger back and forth, changing the string's sounding length and therefore its frequency, several times a second. The pitch really does go up and down. A Doppler shift would do something similar — so why does a violinist's vibrato not sound like a passing ambulance?
+A final observation that ties the section to music. A string player's **vibrato** rocks the finger back and forth, changing the string's sounding length and therefore its frequency, several times a second. The pitch really does go up and down. A Doppler shift would do something similar; so why does a violinist's vibrato not sound like a passing ambulance?
 
-Two reasons. The vibrato's excursion is small, a few tens of cents rather than a few hundred, and it is *periodic*: it returns, several times a second, to the note it started from. The ear tracks the average and hears a single pitch with a shimmer on it. The siren's shift is large and monotonic — it goes down and stays down — so the ear has no average to settle on and hears the change itself. [Chapter 8](#ch-pitch-and-consonance) takes up the question of what the auditory system does with a frequency that is moving.
+Two reasons. The vibrato's excursion is small, a few tens of cents rather than a few hundred, and it is *periodic*: it returns, several times a second, to the note it started from. The ear tracks the average and hears a single pitch with a shimmer on it. The siren's shift is large and monotonic, it goes down and stays down, so the ear has no average to settle on and hears the change itself. [Chapter 8](#ch-pitch-and-consonance) takes up the question of what the auditory system does with a frequency that is moving.
 
 ## Summary
 
 - **A wave carries a disturbance, not matter.** Its speed is set by the medium, through $v = \sqrt{\text{stiffness}/\text{density}}$, and not by the source, the frequency, or the amplitude.
 - **Transverse waves move the medium across the direction of travel; longitudinal waves move it along.** Strings carry the first, air the second, and the handover between them is the central design problem of a string instrument.
-- **$v = f\lambda$** follows from the observation that a wave advances one wavelength per period. Musical wavelengths in air run from about $12$ m to about $8$ cm — comparable to rooms and to hands, which is why sound diffracts around everyday obstacles.
+- **$v = f\lambda$** follows from the observation that a wave advances one wavelength per period. Musical wavelengths in air run from about $12$ m to about $8$ cm, comparable to rooms and to hands, so sound diffracts around everyday obstacles.
 - **Crossing a boundary conserves frequency**, not wavelength: the far side is driven by the near side at whatever rate it is shaken. Speed and wavelength both change.
-- **In air, $v = 331.3 + 0.606\,T$ m/s**, depending on temperature and essentially nothing else — not on pressure, and only slightly on humidity. A fixed-length pipe tuned at $20$ °C is about $46$ cents flat at $5$ °C, which is why winds and strings drift apart as a hall warms.
-- **Intensity falls as $1/r^2$ in the open air** — $6$ dB per doubling of distance — because the same power is spread over a growing sphere. Indoors this fails beyond the critical distance, where reflected sound dominates.
+- **In air, $v = 331.3 + 0.606\,T$ m/s**, depending on temperature and essentially nothing else, not on pressure, and only slightly on humidity. A fixed-length pipe tuned at $20$ °C is about $46$ cents flat at $5$ °C, so winds and strings drift apart as a hall warms.
+- **Intensity falls as $1/r^2$ in the open air**, $6$ dB per doubling of distance, because the same power is spread over a growing sphere. Indoors this fails beyond the critical distance, where reflected sound dominates.
 - **Instruments become more directional as pitch rises**, because directivity is governed by source size compared with wavelength, and only the wavelength changes.
 - **Acoustic impedance governs how much sound crosses a boundary.** The mismatch between solids and air is huge, so a bare string radiates almost nothing; soundboards, bells, and the middle ear all exist to bridge that gap.
 - **The Doppler effect** shifts the frequency of a moving source to $f' = f v/(v \mp v_s)$, by bunching or stretching the wavefronts. A moving listener gives a different formula, because the physics is different.
 
 ## Conceptual Questions
 
-1. A trumpeter thirty metres away plays a note. Explain why you hear it a tenth of a second later even though no air travels from the trumpet to your ear.
+1. A trumpeter thirty meters away plays a note. Explain why you hear it a tenth of a second later even though no air travels from the trumpet to your ear.
 
 2. Explain why the speed of sound in air depends on temperature but not on atmospheric pressure, given that both affect how tightly packed the air is.
 
@@ -424,7 +424,7 @@ v(25) = 331.3 + 15.2 = 346.5\ \text{m/s},\qquad
 v(-15) = 331.3 - 9.1 = 322.2\ \text{m/s}.
 $$
 
-Therefore, the speeds are $331$, $347$, and $322$ m/s — a spread of about $7\%$ over a range of temperatures a marching band might actually meet.
+Therefore, the speeds are $331$, $347$, and $322$ m/s: a spread of about $7\%$ over a range of temperatures a marching band might actually meet.
 :::
 
 :::{exercise}
@@ -449,7 +449,7 @@ $$
 d = vt = (342.2\ \text{m/s})(4.2\ \text{s}) = 1.44\times10^{3}\ \text{m}.
 $$
 
-Therefore, the strike was about $1.4$ km away. The familiar rule of thumb — three seconds per kilometre — follows from $1000/342 = 2.9$.
+Therefore, the strike was about $1.4$ km away. The familiar rule of thumb, three seconds per kilometer, follows from $1000/342 = 2.9$.
 :::
 
 :::{exercise}
@@ -503,7 +503,7 @@ $$
 f = \frac{v}{\lambda} = \frac{132\ \text{m/s}}{1.30\ \text{m}} = 102\ \text{Hz}.
 $$
 
-Therefore, waves travel at $132$ m/s along the string and it sounds about $102$ Hz — close to the G$_2$ of a guitar's third string. Note how much *slower* this is than sound in air: the wave on the string and the sound it radiates have quite different speeds and therefore quite different wavelengths, though they share a frequency.
+Therefore, waves travel at $132$ m/s along the string and it sounds about $102$ Hz, close to the G$_2$ of a guitar's third string. Note how much *slower* this is than sound in air: the wave on the string and the sound it radiates have quite different speeds and therefore quite different wavelengths, though they share a frequency.
 :::
 
 :::{exercise}
@@ -584,7 +584,7 @@ $$
 n = 1200\log_2\!\left(\frac{572}{477}\right) = 1200(0.2622) = 315\ \text{cents}.
 $$
 
-Therefore, the horn falls from $572$ Hz to $477$ Hz, a drop of $315$ cents — a little over three semitones, roughly a minor third.
+Therefore, the horn falls from $572$ Hz to $477$ Hz, a drop of $315$ cents: a little over three semitones, roughly a minor third.
 :::
 
 :::{exercise}
@@ -606,7 +606,7 @@ $$
 
 The gap is $0.49$ s.
 
-(b) Half a second is ample separation, so a listener hearing one sound is most likely not in contact with the pipe — the steel-borne pulse has to be coupled into the listener, by touch or by the pipe radiating at the far end, and if the pipe is well isolated at that end the steel-borne arrival may be too faint to notice.
+(b) Half a second is ample separation, so a listener hearing one sound is most likely not in contact with the pipe: the steel-borne pulse has to be coupled into the listener, by touch or by the pipe radiating at the far end, and if the pipe is well isolated at that end the steel-borne arrival may be too faint to notice.
 :::
 
 :::{exercise}
@@ -631,7 +631,7 @@ Therefore, above roughly $1.7$ kHz the driver is larger than a wavelength. Below
 :::{exercise}
 :label: ex-wave-motion-11
 
-A flute is tuned to A440 in a $21$ °C rehearsal room, then carried outdoors to play at $9$ °C. (a) What frequency does it sound outdoors, before the player compensates? (b) A flautist can compensate by rolling the instrument and adjusting the embouchure over a range of about $\pm 25$ cents. Is that enough?
+A flute is tuned to A440 in a $21$ °C rehearsal room, then carried outdoors to play at $9$ °C. (a) What frequency does it sound outdoors, before the player compensates? (b) A flutist can compensate by rolling the instrument and adjusting the embouchure over a range of about $\pm 25$ cents. Is that enough?
 :::
 
 :::{solution} ex-wave-motion-11
@@ -656,7 +656,7 @@ $$
 n = 1200\log_2\!\left(\frac{430.8}{440}\right) = -37\ \text{cents}.
 $$
 
-Therefore, the flute plays $37$ cents flat, which exceeds the $\pm25$ cent range the player can cover. The physical remedy is to shorten the instrument by pushing the head joint in, which is exactly what flautists do when the temperature changes.
+Therefore, the flute plays $37$ cents flat, which exceeds the $\pm25$ cent range the player can cover. The physical remedy is to shorten the instrument by pushing the head joint in, which is exactly what flutists do when the temperature changes.
 :::
 
 :::{exercise}
@@ -700,7 +700,7 @@ $$
 \frac{965}{343} = 2.81.
 $$
 
-(b) **No, the pitch is essentially unchanged.** The pitch is set by the rate at which the vocal folds open and close, which is governed by their mass and tension and by the air pressure driving them — not by the speed of sound in the gas. What shifts is the *filter*, not the *source*.
+(b) **No, the pitch is essentially unchanged.** The pitch is set by the rate at which the vocal folds open and close, which is governed by their mass and tension and by the air pressure driving them, not by the speed of sound in the gas. What shifts is the *filter*, not the *source*.
 
 Therefore, the listener hears the same note with its resonances moved up by nearly a factor of three, which strips the low-frequency emphasis out of the vowel and leaves the characteristic thin, quacking timbre. This is the clearest everyday demonstration of the source–filter model of [Chapter 13](#ch-the-singing-voice), and the popular description of helium as "raising your voice" gets the physics exactly backwards.
 :::
@@ -737,5 +737,5 @@ $$
 
 (c) Once per revolution, so $6.6$ times per second.
 
-Therefore, the pitch swings about $\pm36$ cents at $6.6$ Hz — a wide, fast vibrato, which together with the accompanying loudness modulation is the characteristic Leslie swirl.
+Therefore, the pitch swings about $\pm36$ cents at $6.6$ Hz: a wide, fast vibrato, which together with the accompanying loudness modulation is the characteristic Leslie swirl.
 :::

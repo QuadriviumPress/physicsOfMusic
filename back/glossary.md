@@ -5,7 +5,7 @@ label: glossary
 ---
 
 Terms are defined here as this book uses them. Where a word is used differently
-elsewhere — *overtone* and *partial* are the notorious pair — the entry says so.
+elsewhere, *overtone* and *partial* are the notorious pair, the entry says so.
 
 Abbreviations that are merely expansions (SPL, FFT, ADSR, and the rest) are not
 repeated here; they are expanded on hover throughout the text.
@@ -17,7 +17,7 @@ absorption coefficient
   depends strongly on frequency. See §14.2.
 
 acoustic impedance
-: The ratio of acoustic pressure to volume flow at a point — a measure of how
+: The ratio of acoustic pressure to volume flow at a point: a measure of how
   hard it is to push a medium into motion. Sound crosses a boundary efficiently
   only when the impedances on either side are similar, which is why a bare
   string radiates almost nothing and why the middle ear exists. See §2.4, §6.2.
@@ -32,7 +32,7 @@ antinode
 
 attack
 : The initial rise of a note, from silence to its full amplitude. Along with the
-  rest of the {term}`envelope`, it carries much of an instrument's identity —
+  rest of the {term}`envelope`, it carries much of an instrument's identity,
   more, for many instruments, than the steady-state spectrum. See §5.4.
 
 basilar membrane
@@ -66,7 +66,7 @@ comma
   Every tuning system is a decision about where to put one. See §9.2, §9.3.
 
 critical band
-: The range of frequencies within which two tones interact — masking each other,
+: The range of frequencies within which two tones interact, masking each other,
   and producing {term}`roughness`. Roughly a third of an octave over most of the
   audible range. See §7.5, §8.4.
 
@@ -85,7 +85,7 @@ equal temperament
   mistuned, and every key is mistuned identically. See §9.5.
 
 formant
-: A resonance of a fixed cavity — most importantly the vocal tract — that
+: A resonance of a fixed cavity, most importantly the vocal tract, that
   emphasizes whatever harmonics fall near it. Formants stay put as the
   fundamental moves, which is why a vowel is recognizable across a singer's
   range. See §5.5, §13.3.
@@ -146,7 +146,7 @@ Nyquist frequency
 
 overtone
 : Any partial above the fundamental. The numbering is off by one from the
-  harmonic numbering — the first overtone is the second harmonic — which is
+  harmonic numbering, the first overtone is the second harmonic, which is
   precisely why this book avoids the word except when quoting. See §5.2.
 
 partial
@@ -205,7 +205,7 @@ source–filter model
 
 spectrogram
 : A display of spectrum against time, with intensity shown as brightness or
-  colour. The natural picture of a sound that changes. See §5.4.
+  color. The natural picture of a sound that changes. See §5.4.
 
 spectrum
 : The list of frequency components present in a sound, with their amplitudes.

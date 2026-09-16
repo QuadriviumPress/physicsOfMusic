@@ -18,7 +18,6 @@ Rasterized PDF figure.
 ```
 
 ```{simulation} https://example.test/simulation
-:placeholder: /images/simulation-placeholder.png
 :title: Export test simulation
 
 Simulation fallback caption.

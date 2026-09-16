@@ -15,7 +15,7 @@ after the course ends.
 
 Pick a question about musical sound that you can actually answer with a
 measurement, make the measurement, and present the result in ten minutes to an
-audience of your classmates — treated, for the purposes of the talk, as
+audience of your classmates, treated, for the purposes of the talk, as
 intelligent people who have not taken this course.
 
 That is the whole specification. The constraints hiding inside it are worth
@@ -27,8 +27,8 @@ bowing closer to the bridge really add high harmonics, and how much?" is a
 question. You can be wrong about a question, which is what makes answering one
 worth ten minutes of an audience's attention.
 
-**You must measure something yourself.** Not necessarily something new — almost
-certainly not something new — but something you recorded, timed, counted, or
+**You must measure something yourself.** Not necessarily something new, almost
+certainly not something new, but something you recorded, timed, counted, or
 weighed. A project whose evidence is entirely other people's published figures
 is a literature review, and it does not meet the outcome.
 
@@ -80,9 +80,9 @@ to clarity
 | When | What |
 |---|---|
 | Week 4 | Choose a question. Write it in one sentence. |
-| Week 7 | **Proposal**: one page — the question, how you will measure it, what result you expect, and what would count as the measurement failing. |
+| Week 7 | **Proposal**: one page: the question, how you will measure it, what result you expect, and what would count as the measurement failing. |
 | Week 11 | **Progress check**: show one real measurement, however rough. |
-| Week 14 | Draft slides; practise the talk out loud, timed. |
+| Week 14 | Draft slides; practice the talk out loud, timed. |
 | Week 15 | **Presentation**: ten minutes plus questions. |
 
 The Week 7 proposal exists because the most common way this project goes wrong
@@ -97,10 +97,10 @@ spend it on the right things.
 
 **Spend the first minute on the question, not on background.** The audience does
 not need the history of acoustics. They need to know what you wanted to find out
-and why anyone would care. Play the sound if you have one — thirty seconds of a
+and why anyone would care. Play the sound if you have one, thirty seconds of a
 guitar plucked in two places does more than a slide about harmonics.
 
-**Show your own data, large.** One graph you made, with axes labelled in units a
+**Show your own data, large.** One graph you made, with axes labeled in units a
 non-specialist can read, beats six graphs from papers. If a number is the point
 of the talk, put that number on the slide by itself.
 
@@ -110,7 +110,7 @@ as you say what you think went wrong. Agreement is only interesting if the
 audience believed disagreement was possible.
 
 **Translate every technical term or drop it.** You may use one or two, if you
-define them in plain words the first time. "The spectrum — that is, a list of
+define them in plain words the first time. "The spectrum: that is, a list of
 which pure tones are present and how strong each one is" costs you four seconds
 and keeps the room with you. An undefined "spectral centroid" loses it
 permanently.
@@ -138,7 +138,7 @@ transfers.
 | **The question** | 15% | Specific, answerable, and worth asking. Framed as something that could have come out otherwise. |
 | **The measurement** | 30% | Your own data. Method described well enough to repeat. Uncertainty estimated, not ignored. |
 | **The physics** | 25% | The result is connected to the physics of the course, correctly. A prediction is compared with the measurement and the comparison is honest. |
-| **The explanation** | 25% | A non-specialist can follow it. Terms defined or avoided. Figures legible and labelled. Time respected. |
+| **The explanation** | 25% | A non-specialist can follow it. Terms defined or avoided. Figures legible and labeled. Time respected. |
 | **Response to questions** | 5% | Answers what was asked. Says "I don't know" where that is the true answer. |
 
 Note the weighting: the explanation is worth as much as the physics. That is
@@ -148,6 +148,6 @@ deliberate, and it is the point of the exercise.
 
 Report what you measured, including the run that did not work and the data point
 you cannot explain. If your result disagrees with the textbook, say so and offer
-a reason — a systematic error in your method is a perfectly respectable finding,
+a reason: a systematic error in your method is a perfectly respectable finding,
 and identifying one is real physics. Quietly dropping the inconvenient half of
 your data is the one thing in this project that cannot be recovered from.

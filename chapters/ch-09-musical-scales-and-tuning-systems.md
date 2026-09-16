@@ -38,9 +38,9 @@ By the end of this chapter, you should be able to:
 
 So building a musical scale ought to be easy. Take the good ratios and stack them up.
 
-It cannot be done. Not approximately, not with more effort, not with better arithmetic — **the good ratios do not fit into an octave**, and no amount of cleverness will make them. This is an arithmetical fact, not a historical accident or a limitation of any instrument, and every tuning system ever devised is a different answer to the question of what to do about it.
+It cannot be done. Not approximately, not with more effort, not with better arithmetic, **the good ratios do not fit into an octave**, and no amount of cleverness will make them. This is an arithmetical fact, not a historical accident or a limitation of any instrument, and every tuning system ever devised is a different answer to the question of what to do about it.
 
-The obstruction is easy to state. Stack twelve perfect fifths and you get *almost* seven octaves, missing by about a quarter of a semitone. Stack four perfect fifths and you get *almost* a major third plus two octaves, missing by about a fifth of a semitone. Those two small discrepancies — the **Pythagorean comma** and the **syntonic comma** — are the entire subject of this chapter. Every tuning system is a decision about where to put them.
+The obstruction is easy to state. Stack twelve perfect fifths and you get *almost* seven octaves, missing by about a quarter of a semitone. Stack four perfect fifths and you get *almost* a major third plus two octaves, missing by about a fifth of a semitone. Those two small discrepancies, the **Pythagorean comma** and the **syntonic comma**, are the entire subject of this chapter. Every tuning system is a decision about where to put them.
 
 That decision has consequences musicians can hear, and the history of Western music is bound up with it. The reason Bach could write in all twenty-four keys, and his grandfather's generation could not, is a change in where the comma was hidden.
 
@@ -64,9 +64,9 @@ The intervals that matter most are the first few of the harmonic series:
 
 ```{figure} ../images/notation/harmonic-series-on-c2.svg
 :label: fig:ch09-harmonic-series
-:alt: The first sixteen harmonics of C2 on bass and treble staves, each labelled with its harmonic number and its deviation in cents from the nearest equal-tempered note, with the seventh and fourteenth 31 cents flat, the eleventh 49 cents sharp, and the thirteenth 41 cents sharp.
+:alt: The first sixteen harmonics of C2 on bass and treble staves, each labeled with its harmonic number and its deviation in cents from the nearest equal-tempered note, with the seventh and fourteenth 31 cents flat, the eleventh 49 cents sharp, and the thirteenth 41 cents sharp.
 
-The harmonic series again, now read as a source of intervals. The first six partials give the octave, the fifth, the fourth, and the major third — the consonances of Western music, in order. From the seventh partial upward the series diverges sharply from anything a keyboard can play, which is why those partials play almost no part in common-practice harmony.
+The harmonic series again, now read as a source of intervals. The first six partials give the octave, the fifth, the fourth, and the major third, the consonances of Western music, in order. From the seventh partial upward the series diverges sharply from anything a keyboard can play, which is why those partials play almost no part in common-practice harmony.
 ```
 
 ### Intervals Multiply
@@ -77,7 +77,7 @@ $$
 \text{fifth} \times \text{fourth} = \frac{3}{2}\times\frac{4}{3} = 2 = \text{octave}.
 $$
 
-This is why a fifth plus a fourth is an octave, and it is also the source of a persistent confusion. Musicians count intervals by *adding* — a third plus a third is a fifth — because they are counting note names, which is a logarithmic count. The physics multiplies. The two are consistent, and cents are what reconciles them.
+This is why a fifth plus a fourth is an octave, and it is also the source of a persistent confusion. Musicians count intervals by *adding*, a third plus a third is a fifth, because they are counting note names, which is a logarithmic count. The physics multiplies. The two are consistent, and cents are what reconciles them.
 
 ### The Cent
 
@@ -111,7 +111,7 @@ $$
 n = 1200\log_2(7/4) = 1200\log_2(1.75) = 1200(0.80735) = 968.8\ \text{cents}.
 $$
 
-The nearest equal-tempered interval is the minor seventh at $1000$ cents, so the seventh harmonic is $31$ cents flat of it — as the staff figure above says.
+The nearest equal-tempered interval is the minor seventh at $1000$ cents, so the seventh harmonic is $31$ cents flat of it, as the staff figure above says.
 
 (b)
 
@@ -119,14 +119,14 @@ $$
 r = 2^{350/1200} = 2^{0.29167} = 1.2240.
 $$
 
-That lies between the pure minor third ($1.2$) and the pure major third ($1.25$) — a "neutral third", which appears in Arabic and Turkish music and in no Western keyboard.
+That lies between the pure minor third ($1.2$) and the pure major third ($1.25$): a "neutral third", which appears in Arabic and Turkish music and in no Western keyboard.
 ::::
 
 ## Pythagorean Tuning
 
 ### A Chain of Pure Fifths
 
-The oldest systematic tuning takes the two simplest ratios — the octave $2{:}1$ and the fifth $3{:}2$ — and uses nothing else.
+The oldest systematic tuning takes the two simplest ratios, the octave $2{:}1$ and the fifth $3{:}2$, and uses nothing else.
 
 Start on a note and go up by fifths: C, G, D, A, E, B, F♯, … Each new note is $3/2$ times the last; whenever the pitch leaves the octave, halve it to bring it back. After twelve steps every chromatic note has been generated.
 
@@ -163,7 +163,7 @@ The chain of fifths fails to close. **Left**: each fifth folded back into a sing
 
 ### The Scale It Produces
 
-Pythagorean tuning gives pure fifths and fourths, and — as the price — a major third of
+Pythagorean tuning gives pure fifths and fourths, and, as the price, a major third of
 
 $$
 \left(\frac{3}{2}\right)^4 \div 4 = \frac{81}{64} = 407.8\ \text{cents},
@@ -178,13 +178,13 @@ against a pure $5{:}4$ of $386.3$ cents. That is $21.5$ cents sharp, an error kn
 The same seven notes, tuned three ways. Every system agrees on C, F, and G to within a couple of cents; they disagree about the thirds and sixths, and they disagree in opposite directions. Pythagorean thirds are sharp, just thirds are flat of equal temperament, and the gap between them is the syntonic comma.
 ```
 
-Twenty-one cents is four times the threshold of detection, and on sustained tones it beats audibly. For medieval music this was tolerable, because the third was treated as a *dissonance* requiring resolution — the consonances were the octave, fifth, and fourth, which Pythagorean tuning renders perfectly. When the third became a consonance in the fifteenth century, the tuning had to change.
+Twenty-one cents is four times the threshold of detection, and on sustained tones it beats audibly. For medieval music this was tolerable, because the third was treated as a *dissonance* requiring resolution: the consonances were the octave, fifth, and fourth, which Pythagorean tuning renders perfectly. When the third became a consonance in the fifteenth century, the tuning had to change.
 
 ## Just Intonation
 
 ### Bringing In the Fifth Harmonic
 
-**Just intonation** adds the ratio $5{:}4$ to the toolkit and builds the scale from three pure triads: on the tonic, the subdominant, and the dominant. Each triad is tuned $4{:}5{:}6$ — a pure major third and a pure fifth.
+**Just intonation** adds the ratio $5{:}4$ to the toolkit and builds the scale from three pure triads: on the tonic, the subdominant, and the dominant. Each triad is tuned $4{:}5{:}6$: a pure major third and a pure fifth.
 
 The resulting C major scale:
 
@@ -207,7 +207,7 @@ Played in C, this is gorgeous. The tonic, subdominant, and dominant triads are a
 :label: fig:ch09-triad-comparison
 :transcript: Two C major triads. The first is still and glassy, with no movement in it at all. The second has an audible shimmer, a slow waver that the first does not have.
 
-A C major triad, tuned justly and in equal temperament. The difference is not one of pitch — both are unmistakably C major — but of *stillness*. The just triad has nothing beating in it; the tempered one beats about ten times a second in its third.
+A C major triad, tuned justly and in equal temperament. The difference is not one of pitch, both are unmistakably C major, but of *stillness*. The just triad has nothing beating in it; the tempered one beats about ten times a second in its third.
 ```
 
 ```{audio} ch09-third-just, ch09-third-equal
@@ -229,7 +229,7 @@ $$
 \text{D to E} = \frac{5/4}{9/8} = \frac{10}{9} = 182.4\ \text{cents}.
 $$
 
-There are **two different whole tones**, differing by $21.5$ cents — the syntonic comma again. A keyboard has one key for each, so it must choose.
+There are **two different whole tones**, differing by $21.5$ cents: the syntonic comma again. A keyboard has one key for each, so it must choose.
 
 The consequence is a fifth that is badly out of tune:
 
@@ -268,7 +268,7 @@ The deeper problem is not the single wolf. It is that just intonation is tuned *
 One set of twelve pitches, tuned justly for C, playing the same progression in two keys. The instrument has not been retuned between the two; the *music* has moved, and the tuning has not moved with it. This is the practical argument that ended just intonation as a keyboard tuning.
 ```
 
-Singers, string quartets, and trombonists do not have this problem, because they adjust continuously. They routinely play closer to just intonation than to equal temperament — a good choir will tune a sustained chord pure without being asked. **Just intonation was never abandoned by musicians who can bend their pitch. It was abandoned by keyboards**, and only because a keyboard has to decide in advance.
+Singers, string quartets, and trombonists do not have this problem, because they adjust continuously. They routinely play closer to just intonation than to equal temperament: a good choir will tune a sustained chord pure without being asked. **Just intonation was never abandoned by musicians who can bend their pitch. It was abandoned by keyboards**, and only because a keyboard has to decide in advance.
 
 ## Meantone and the Well Temperaments
 
@@ -280,7 +280,7 @@ A system that does this deliberately is a **temperament**, and the choice of how
 
 ### Quarter-Comma Meantone
 
-The most important historical temperament narrows every fifth by a quarter of a syntonic comma — about $5.4$ cents, which is just at the edge of audibility.
+The most important historical temperament narrows every fifth by a quarter of a syntonic comma, about $5.4$ cents, which is just at the edge of audibility.
 
 Four narrowed fifths then produce a major third that is *exactly* pure:
 
@@ -288,22 +288,22 @@ $$
 4 \times (701.955 - 5.377) = 2786.3\ \text{cents},
 $$
 
-which, less two octaves, is $386.3$ cents — the pure $5{:}4$.
+which, less two octaves, is $386.3$ cents: the pure $5{:}4$.
 
 ```{figure} ../images/ch09-interval-errors.svg
 :label: fig:ch09-interval-errors
 :alt: Two bar charts comparing the error in cents of the perfect fifth and the major third under Pythagorean tuning, quarter-comma meantone, just intonation and equal temperament, with a shaded band marking six cents.
 
-Where each system puts its error. Pythagorean tuning buys pure fifths at the cost of a $22$ cent third. Quarter-comma meantone buys pure thirds at the cost of a $5$ cent fifth — which is barely audible. Equal temperament splits the difference, with a fifth $2$ cents narrow and a third $14$ cents sharp.
+Where each system puts its error. Pythagorean tuning buys pure fifths at the cost of a $22$ cent third. Quarter-comma meantone buys pure thirds at the cost of a $5$ cent fifth, which is barely audible. Equal temperament splits the difference, with a fifth $2$ cents narrow and a third $14$ cents sharp.
 ```
 
-Meantone dominated European keyboard music for two centuries, and for good reason: it makes major thirds beatless, and thirds are what Renaissance and early Baroque harmony is built on. Its price is that the twelve fifths still cannot close, so the accumulated error is dumped into one interval — traditionally G♯–E♭ — which becomes a wolf of about $737$ cents, $35$ cents wide and completely unusable. Composers simply avoided the keys that needed it.
+Meantone dominated European keyboard music for two centuries, and for good reason: it makes major thirds beatless, and thirds are what Renaissance and early Baroque harmony is built on. Its price is that the twelve fifths still cannot close, so the accumulated error is dumped into one interval, traditionally G♯–E♭, which becomes a wolf of about $737$ cents, $35$ cents wide and completely unusable. Composers simply avoided the keys that needed it.
 
-### Well Temperament and Key Colour
+### Well Temperament and Key Color
 
 By the late seventeenth century composers wanted more keys, and **well temperaments** were the answer: distribute the comma unevenly, so that no interval is unusable but the distribution is not uniform either.
 
-The consequence is that **each key sounds different**. Keys with few accidentals are nearly pure; remote keys are progressively more tempered and sound more restless. This is "key colour", and eighteenth-century writers described keys in terms that sound like synaesthesia — D major brilliant, E♭ major solemn, F minor mournful — and were describing something real about their instruments.
+The consequence is that **each key sounds different**. Keys with few accidentals are nearly pure; remote keys are progressively more tempered and sound more restless. This is "key color", and eighteenth-century writers described keys in terms that sound like synesthesia, D major brilliant, E♭ major solemn, F minor mournful, and were describing something real about their instruments.
 
 :::{note}
 Bach's *Das wohltemperirte Clavier* means "the well-tempered keyboard", not "the equal-tempered keyboard", and the distinction matters. The collection demonstrates that all twenty-four keys are *usable*, which is a well-temperament claim. In equal temperament all keys are not merely usable but identical, and the point of writing in all of them would largely vanish.
@@ -323,7 +323,7 @@ $$
 
 which is $100$ cents by definition. Every interval of $n$ semitones is $2^{n/12}$.
 
-The mathematics is forced. Twelve equal multiplicative steps making a factor of two admits exactly one solution, and the twelfth root of two is irrational — so **no** equal-tempered interval except the octave is ever a whole-number ratio.
+The mathematics is forced. Twelve equal multiplicative steps making a factor of two admits exactly one solution, and the twelfth root of two is irrational; so **no** equal-tempered interval except the octave is ever a whole-number ratio.
 
 ::::{tip} Worked example: the whole keyboard from one number
 *Given A$_4$ = $440$ Hz, find the frequency of C$_5$ (three semitones up) and of A$_2$ (two octaves down).*
@@ -345,7 +345,7 @@ Every note on a modern keyboard follows from $f = 440 \times 2^{n/12}$, with $n$
 :label: fig:ch09-system-comparison
 :alt: A grouped bar chart showing, for each of the twelve chromatic notes, the deviation in cents from equal temperament under Pythagorean tuning and just intonation, with equal temperament flat at zero by definition and a shaded band marking six cents.
 
-Three tunings, note by note. Equal temperament is the zero line by construction. Pythagorean and just intonation disagree with it — and with each other — by up to about $20$ cents, mostly on the thirds and sixths.
+Three tunings, note by note. Equal temperament is the zero line by construction. Pythagorean and just intonation disagree with it, and with each other, by up to about $20$ cents, mostly on the thirds and sixths.
 ```
 
 The accounting for equal temperament:
@@ -359,11 +359,11 @@ The accounting for equal temperament:
 | Minor third | $300$ | $315.64$ | $-15.64$ |
 | Major sixth | $900$ | $884.36$ | $+15.64$ |
 
-The fifth is $2$ cents narrow — well below the threshold of detection, and essentially perfect. The thirds and sixths are $14$ to $16$ cents out, which is clearly audible on sustained tones.
+The fifth is $2$ cents narrow, well below the threshold of detection, and essentially perfect. The thirds and sixths are $14$ to $16$ cents out, which is clearly audible on sustained tones.
 
 So equal temperament is a *worse* compromise than meantone for any single key. What it buys is that **the compromise is the same everywhere**. Every key is equally usable, unlimited modulation is possible, and any piece can be transposed without retuning.
 
-The nineteenth century decided that was worth an audibly imperfect third, and the decision has held. It is worth noticing that this was a trade of *quality* for *freedom*, made by a musical culture that had begun to care more about harmonic adventure than about the purity of a sustained chord.
+The nineteenth century decided that was worth an audibly imperfect third, and the decision has held. Notice that this was a trade of *quality* for *freedom*, made by a musical culture that had begun to care more about harmonic adventure than about the purity of a sustained chord.
 
 ### Comparing the Systems in Cents
 
@@ -382,7 +382,7 @@ Read down the last column and the history explains itself.
 
 ### Fixed-Pitch and Flexible-Pitch Instruments
 
-Equal temperament is universal on **fixed-pitch** instruments — piano, organ, harp, fretted strings, mallet percussion — because those instruments must commit in advance.
+Equal temperament is universal on **fixed-pitch** instruments, piano, organ, harp, fretted strings, mallet percussion, because those instruments must commit in advance.
 
 It is much less universal among **flexible-pitch** instruments, which adjust as they play:
 
@@ -394,14 +394,14 @@ It is much less universal among **flexible-pitch** instruments, which adjust as 
 Ensembles mixing the two families negotiate. A string quartet plays closer to just; add a piano and the strings bend toward it, because the piano cannot bend toward them.
 
 :::{warning}
-It is tempting to say flexible-pitch players "play in just intonation". They do not, quite. They play *expressively*, which often means the opposite: a leading note is frequently played **sharp** — sharper even than equal temperament — to intensify its pull toward the tonic. That is a melodic impulse pulling against the harmonic one, and good players trade between them constantly.
+It is tempting to say flexible-pitch players "play in just intonation". They do not, quite. They play *expressively*, which often means the opposite: a leading note is frequently played **sharp**, sharper even than equal temperament, to intensify its pull toward the tonic. That is a melodic impulse pulling against the harmonic one, and good players trade between them constantly.
 :::
 
 ### Stretched Tuning on the Piano
 
 One place where even equal temperament is not quite applied is the piano, for the reason [Chapter 5](#ch-fourier-and-timbre) gave.
 
-Piano strings are stiff, so their partials are **inharmonic** — the $n$th partial is sharp of $n$ times the fundamental. A tuner setting an octave listens to the lower note's second partial against the upper note's fundamental, and since that second partial is sharp, the octave must be stretched to match it.
+Piano strings are stiff, so their partials are **inharmonic**: the $n$th partial is sharp of $n$ times the fundamental. A tuner setting an octave listens to the lower note's second partial against the upper note's fundamental, and since that second partial is sharp, the octave must be stretched to match it.
 
 The result is the **Railsback curve**: a piano's treble is tuned progressively sharp and its bass progressively flat, by as much as $30$ cents at the extremes. A piano tuned to a mathematically exact equal temperament sounds *out of tune*, and every tuner stretches without needing to be told to. [Chapter 10](#ch-string-instruments) works through the mechanism.
 
@@ -411,15 +411,15 @@ Twelve equal divisions is one solution among many, and the alternatives are not 
 
 **Indian classical music** uses *shrutis*, traditionally twenty-two per octave, and raga performance draws on just ratios with ornaments that pass between them. The tradition has no fixed-pitch keyboard to force a compromise, so it never needed one.
 
-**Arabic and Turkish music** use intervals near the quarter tone, including the neutral third of about $350$ cents computed in §9.1 — an interval with no equal-tempered equivalent at all.
+**Arabic and Turkish music** use intervals near the quarter tone, including the neutral third of about $350$ cents computed in §9.1: an interval with no equal-tempered equivalent at all.
 
 **Javanese and Balinese gamelan** use *slendro* (roughly five near-equal steps) and *pelog* (seven unequal steps), and no two gamelan sets are tuned alike. [Chapter 8](#ch-pitch-and-consonance) gave the reason this is coherent rather than arbitrary: gamelan instruments have **inharmonic** partials, so their dissonance curve has its minima somewhere other than the simple ratios, and the scales sit on those minima.
 
-The general principle is the one §8.4 established. A scale and a timbre belong together. Western tuning theory is the theory of scales for instruments with harmonic partials, and it is not more fundamental than the alternatives — it is more *specialized*, and its specialization is to strings and pipes.
+The general principle is the one §8.4 established. A scale and a timbre belong together. Western tuning theory is the theory of scales for instruments with harmonic partials, and it is not more fundamental than the alternatives, it is more *specialized*, and its specialization is to strings and pipes.
 
 ## Summary
 
-- **An interval is a ratio**, and intervals multiply. The **cent** — $1200$ to the octave, $n = 1200\log_2 r$ — makes ratios additive and is well matched to the ear, whose discrimination is $3$–$6$ cents.
+- **An interval is a ratio**, and intervals multiply. The **cent**, $1200$ to the octave, $n = 1200\log_2 r$, makes ratios additive and is well matched to the ear, whose discrimination is $3$–$6$ cents.
 - **The chain of fifths never closes.** Twelve pure fifths exceed seven octaves by the **Pythagorean comma**, $23.5$ cents, because no power of $3$ is a power of $2$. Four pure fifths exceed a pure major third plus two octaves by the **syntonic comma**, $21.5$ cents.
 - **Pythagorean tuning** gives every fifth pure and every major third $22$ cents sharp. Acceptable while the third was a dissonance; untenable once it became a consonance.
 - **Just intonation** gives pure triads on the tonic, subdominant, and dominant, at the cost of two sizes of whole tone, a wolf fifth at D–A, and the impossibility of modulating.
@@ -433,7 +433,7 @@ The general principle is the one §8.4 established. A scale and a timbre belong 
 
 1. Explain why intervals are ratios rather than differences, and connect the answer to the cochlea.
 
-2. Explain, in terms of prime factorization, why a chain of pure fifths can never close into a whole number of octaves — at twelve steps or at any other number.
+2. Explain, in terms of prime factorization, why a chain of pure fifths can never close into a whole number of octaves, at twelve steps or at any other number.
 
 3. Pythagorean tuning was satisfactory for medieval music and unsatisfactory for Renaissance music. Explain what changed.
 
@@ -443,7 +443,7 @@ The general principle is the one §8.4 established. A scale and a timbre belong 
 
 6. Quarter-comma meantone has a fifth $5.4$ cents narrow and equal temperament has one $2.0$ cents narrow, yet meantone's thirds are much better. Explain how meantone can be worse on fifths and better on thirds.
 
-7. Explain what "key colour" meant in a well temperament and why the concept largely evaporates in equal temperament.
+7. Explain what "key color" meant in a well temperament and why the concept largely evaporates in equal temperament.
 
 8. A piano tuned to mathematically exact equal temperament sounds out of tune. Explain why, and say what a tuner does instead.
 
@@ -488,7 +488,7 @@ Using $r = 2^{n/1200}$.
 
 (c) $2^{1} = 2.00000$.
 
-Therefore $1.4983$, $1.2599$, and $2$. Comparing with the pure values $1.5$ and $1.25$: the tempered fifth is $0.11\%$ narrow and the tempered third $0.79\%$ sharp — the third is seven times worse.
+Therefore $1.4983$, $1.2599$, and $2$. Comparing with the pure values $1.5$ and $1.25$: the tempered fifth is $0.11\%$ narrow and the tempered third $0.79\%$ sharp: the third is seven times worse.
 :::
 
 :::{exercise}
@@ -513,7 +513,7 @@ $$
 1200\log_2(1.0136433) = 23.46\ \text{cents}.
 $$
 
-Therefore the comma is $23.5$ cents, very nearly a quarter of a semitone — about four to eight times the threshold of detection, and unmistakable on sustained tones.
+Therefore the comma is $23.5$ cents, very nearly a quarter of a semitone, about four to eight times the threshold of detection, and unmistakable on sustained tones.
 :::
 
 :::{exercise}
@@ -563,7 +563,7 @@ $$
 1200\log_2\!\left(\frac{331.12}{327.04}\right) = 21.5\ \text{cents}.
 $$
 
-Therefore the three Es span $327.0$ to $331.1$ Hz, a spread of $21.5$ cents — the syntonic comma, with equal temperament sitting about two-thirds of the way up.
+Therefore the three Es span $327.0$ to $331.1$ Hz, a spread of $21.5$ cents: the syntonic comma, with equal temperament sitting about two-thirds of the way up.
 :::
 
 :::{exercise}
@@ -619,7 +619,7 @@ $$
 1200\log_2(1.48148) = 680.45\ \text{cents}.
 $$
 
-(b) $701.96 - 680.45 = 21.5$ cents narrow — one syntonic comma.
+(b) $701.96 - 680.45 = 21.5$ cents narrow, one syntonic comma.
 
 (c) If A = $440$ Hz then D $= 440 \times 27/40 = 297.0$ Hz. The relevant harmonics:
 
@@ -632,7 +632,7 @@ $$
 f_{\text{beat}} = 11.0\ \text{Hz}.
 $$
 
-Therefore the wolf beats eleven times a second — far too fast to count and squarely in the range [Chapter 8](#ch-pitch-and-consonance) identified as maximally rough. This is why it howls.
+Therefore the wolf beats eleven times a second, far too fast to count and squarely in the range [Chapter 8](#ch-pitch-and-consonance) identified as maximally rough. This is why it howls.
 :::
 
 :::{exercise}
@@ -661,7 +661,7 @@ the syntonic comma again.
 
 A keyboard has one key per note name, so it must assign a single pitch to D. If D is placed to make C–D a $9{:}8$ tone, then D–E is a $10{:}9$ tone and the fifth D–A is a comma narrow. If D is placed the other way, some other interval breaks instead.
 
-Therefore the instrument is short of keys, not short of cleverness. Some seventeenth-century keyboards addressed this literally, with split black keys giving separate D♯ and E♭ — and they were abandoned as unplayable.
+Therefore the instrument is short of keys, not short of cleverness. Some seventeenth-century keyboards addressed this literally, with split black keys giving separate D♯ and E♭, and they were abandoned as unplayable.
 :::
 
 :::{exercise}
@@ -688,7 +688,7 @@ $$
 f_{\text{beat}} = 8.7\ \text{Hz}.
 $$
 
-(d) The tempered fifth beats less than once a second — slow enough to pass for still. The tempered third beats nearly nine times a second, which is right in the roughest range.
+(d) The tempered fifth beats less than once a second, slow enough to pass for still. The tempered third beats nearly nine times a second, which is right in the roughest range.
 
 Therefore equal temperament's compromise is very uneven in its audible effect: the fifths are essentially free and the thirds are paid for dearly. This is exactly what the meantone temperaments refused to accept.
 :::
@@ -711,7 +711,7 @@ $$
 \frac{701.96}{63.16} = 11.12,
 $$
 
-so eleven steps, giving $11 \times 63.16 = 694.7$ cents — an error of $-7.2$ cents.
+so eleven steps, giving $11 \times 63.16 = 694.7$ cents: an error of $-7.2$ cents.
 
 (c) A pure third is $386.31$ cents:
 
@@ -719,7 +719,7 @@ $$
 \frac{386.31}{63.16} = 6.12,
 $$
 
-so six steps, giving $6 \times 63.16 = 378.9$ cents — an error of $-7.4$ cents.
+so six steps, giving $6 \times 63.16 = 378.9$ cents: an error of $-7.4$ cents.
 
 Therefore 19-tone equal temperament has a fifth $7$ cents narrow (worse than $12$-tone's $2$) but a third $7$ cents flat (much better than $12$-tone's $14$ sharp). It is, in effect, a closed version of meantone, and it was advocated on exactly those grounds in the sixteenth century and again in the twentieth.
 :::
@@ -748,15 +748,15 @@ $$
 2^{k+N} = 3^{N}.
 $$
 
-The left side has only the prime factor $2$; the right has only the prime factor $3$. By unique factorization these can be equal only if both are $1$, requiring $N = 0$ — not a division of the octave at all.
+The left side has only the prime factor $2$; the right has only the prime factor $3$. By unique factorization these can be equal only if both are $1$, requiring $N = 0$, not a division of the octave at all.
 
-Therefore no equal temperament of any size contains a pure fifth, and the same argument rules out a pure major third, since $5$ is likewise not a power of $2$. **Every equal temperament is a compromise**; the only choice is how good an approximation $N$ buys, which is why $12$, $19$, $31$, and $53$ recur in the literature — they are the divisions where the approximations happen to be unusually good.
+Therefore no equal temperament of any size contains a pure fifth, and the same argument rules out a pure major third, since $5$ is likewise not a power of $2$. **Every equal temperament is a compromise**; the only choice is how good an approximation $N$ buys, which is why $12$, $19$, $31$, and $53$ recur in the literature, they are the divisions where the approximations happen to be unusually good.
 :::
 
 :::{exercise}
 :label: ex-scales-and-tuning-12
 
-A well temperament has fifths tempered by different amounts: C–G by $-6$ cents, G–D by $-6$, D–A by $-4$, A–E by $-4$, and the remaining eight fifths by whatever is needed. (a) How much of the comma has been absorbed so far? (b) How much remains to spread over the other eight? (c) Comment on the resulting key colour.
+A well temperament has fifths tempered by different amounts: C–G by $-6$ cents, G–D by $-6$, D–A by $-4$, A–E by $-4$, and the remaining eight fifths by whatever is needed. (a) How much of the comma has been absorbed so far? (b) How much remains to spread over the other eight? (c) Comment on the resulting key color.
 :::
 
 :::{solution} ex-scales-and-tuning-12
@@ -771,9 +771,9 @@ $$
 23.5 - 20 = 3.5\ \text{cents}
 $$
 
-remains, spread over eight fifths — about $0.44$ cents each, which is imperceptible.
+remains, spread over eight fifths, about $0.44$ cents each, which is imperceptible.
 
-(c) The heavily tempered fifths lie among the naturals, so the keys built on them — C, G, D, A — have thirds noticeably closer to pure than equal temperament provides. The remote keys, whose fifths are essentially untempered, inherit almost-Pythagorean thirds, some $20$ cents sharp, and sound correspondingly tense and bright.
+(c) The heavily tempered fifths lie among the naturals, so the keys built on them, C, G, D, A, have thirds noticeably closer to pure than equal temperament provides. The remote keys, whose fifths are essentially untempered, inherit almost-Pythagorean thirds, some $20$ cents sharp, and sound correspondingly tense and bright.
 
 Therefore every key is usable and no two sound alike: the common keys are sweet and the remote ones are edgy. That is precisely what eighteenth-century writers meant by key character, and it is a real acoustic property of the instrument rather than a literary conceit.
 :::
@@ -817,9 +817,9 @@ A composer writes for an ensemble of a string quartet and a piano. (a) Explain t
 
 (a) The quartet can adjust its pitches continuously and will naturally tune a sustained triad toward just intonation, with the third about $14$ cents flat of equal temperament. The piano is fixed in equal temperament and cannot move.
 
-(b) Alone, the quartet's chord is still and beatless. When the piano enters, its C♯ is $14$ cents sharp of the quartet's, and the two thirds beat against each other at roughly $10$ Hz — a clearly audible sourness that was not there a moment before.
+(b) Alone, the quartet's chord is still and beatless. When the piano enters, its C♯ is $14$ cents sharp of the quartet's, and the two thirds beat against each other at roughly $10$ Hz: a clearly audible sourness that was not there a moment before.
 
 (c) The quartet will bend toward the piano, because it is the only party that can. In practice string players in this situation play thirds sharper than they would unaccompanied, sacrificing the purity of their own chord to avoid beating against the fixed instrument.
 
-Therefore the compromise falls entirely on the flexible players, which is the general rule whenever fixed and flexible instruments play together — and one reason string players often describe playing with piano as harmonically constraining.
+Therefore the compromise falls entirely on the flexible players, which is the general rule whenever fixed and flexible instruments play together, and one reason string players often describe playing with piano as harmonically constraining.
 :::

@@ -93,4 +93,8 @@ case "$TARGET" in
 esac
 
 step "Done"
-ls -lh "$OUT"/*.pdf "$OUT"/*.docx 2>/dev/null | awk '{printf "  %-52s %s\n", $9, $5}'
+shopt -s nullglob
+outputs=("$OUT"/*.pdf "$OUT"/*.docx)
+if [ "${#outputs[@]}" -gt 0 ]; then
+  ls -lh "${outputs[@]}" | awk '{printf "  %-52s %s\n", $9, $5}'
+fi

@@ -34,9 +34,9 @@ By the end of this chapter, you should be able to:
 
 Strike a tuning fork and hold it up. Nothing looks as though it is happening. Touch the tines and you feel a buzz, and the sound stops; let go and it starts again. Put the base of the fork against a table and the room fills with the note. Take the fork into a vacuum chamber and pump the air out, and the tines go on vibrating in plain sight while the sound dies away to nothing.
 
-Those four observations contain most of what this chapter is about. Something has to **vibrate**. The vibration has to be passed to the **air**, which is why a fork alone is quiet and a fork on a table is loud. Without air — or water, or wood, or some other material — there is no sound at all, however vigorously the source moves. And the sound has a definite **pitch**, the same one every time that fork is struck, whether it is struck gently or hard.
+Those four observations contain most of what this chapter is about. Something has to **vibrate**. The vibration has to be passed to the **air**: a fork alone is quiet and a fork on a table is loud. Without air, or water, or wood, or some other material, there is no sound at all, however vigorously the source moves. And the sound has a definite **pitch**, the same one every time that fork is struck, whether it is struck gently or hard.
 
-This book is about the physics that connects those facts, and it begins at the beginning: with what sound is, and with the particular kind of motion that musical sources almost always turn out to be doing. That motion is **simple harmonic motion**, and it is worth understanding thoroughly, because everything later — the string, the air column, the drumhead, the vocal folds, the microphone diaphragm, and the basilar membrane inside your ear — is either doing it or is built out of things that are.
+This book is about the physics that connects those facts, and it begins at the beginning: with what sound is, and with the particular kind of motion that musical sources almost always turn out to be doing. That motion is **simple harmonic motion**. Everything later, from the string and air column to the drumhead, vocal folds, microphone diaphragm, and basilar membrane inside your ear, either does it or is built from things that do.
 
 :::{margin}
 A vacuum chamber demonstration is easy to find on video, and worth two minutes: a ringing alarm clock or a small buzzer fades to silence as the pump runs, and comes back as air is let in.
@@ -46,11 +46,11 @@ A vacuum chamber demonstration is easy to find on video, and worth two minutes: 
 
 ### A Disturbance, Not a Substance
 
-Sound is not a substance that travels from a source to your ear. Nothing material makes that trip. What travels is a **disturbance** — a pattern of squeezing and stretching that passes through the air, leaving the air itself essentially where it was.
+Sound is not a substance that travels from a source to your ear. Nothing material makes that trip. What travels is a **disturbance**: a pattern of squeezing and stretching that passes through the air, leaving the air itself essentially where it was.
 
 The standard picture is a line of people standing shoulder to shoulder. Shove the person at one end, and they bump into the next, who bumps into the next, and a shove travels down the line. Everyone ends up roughly where they started; only the shove moves along the row. Sound is the same, with molecules of air instead of people and with collisions instead of bumping.
 
-This matters because it explains the vacuum chamber. A disturbance needs something to disturb. Take away the air and there is nothing to pass the shove along, and no matter how hard the source vibrates, nothing arrives. Light behaves differently, and that difference is worth holding onto: light reaches us across the emptiness between stars, and sound does not cross a metre of vacuum.
+This matters because it explains the vacuum chamber. A disturbance needs something to disturb. Take away the air and there is nothing to pass the shove along, and no matter how hard the source vibrates, nothing arrives. Light behaves differently, and that difference is worth holding onto: light reaches us across the emptiness between stars, and sound does not cross a meter of vacuum.
 
 :::{note}
 The nineteenth century assumed light must also need a medium, and named it the luminiferous ether. The experiments that failed to find it are the subject of relativity rather than acoustics, but the instinct behind the search is exactly the one this section is training: a wave was understood to be a disturbance *of something*.
@@ -60,7 +60,7 @@ The nineteenth century assumed light must also need a medium, and named it the l
 
 The shove down the row of people has a direction, and it is the same direction the disturbance travels. That makes a sound wave **longitudinal**: the air moves back and forth along the direction of travel, not across it.
 
-Waves on a string are the other kind. There, the string moves up and down while the wave moves sideways, and the motion of the medium is perpendicular to the motion of the wave. Those are **transverse** waves. Both kinds matter in this book — a guitar string carries transverse waves and the air around it carries longitudinal ones — and the handover between them, at the bridge and the soundboard, is one of the central problems of instrument design ([Chapter 10](#ch-string-instruments)).
+Waves on a string are the other kind. There, the string moves up and down while the wave moves sideways, and the motion of the medium is perpendicular to the motion of the wave. Those are **transverse** waves. Both kinds matter in this book: a guitar string carries transverse waves, while the air around it carries longitudinal ones. The handover between them at the bridge and soundboard is one of the central problems of instrument design ([Chapter 10](#ch-string-instruments)).
 
 Because the air bunches up in some places and thins out in others, sound can be described either as a **displacement** of the air or as a **pressure** variation. The two descriptions are equivalent but they are not the same picture, and confusing them is the most common early mistake in acoustics.
 
@@ -68,10 +68,10 @@ Because the air bunches up in some places and thins out in others, sound can be 
 :label: fig:ch01-longitudinal-wave
 :alt: Dots representing air molecules, bunched into compressions and spread into rarefactions, above a graph of pressure against distance whose maxima line up with the compressions.
 
-A sound wave drawn twice. Above: air molecules, bunched where the wave has pushed them together and thinned where it has pulled them apart. Below: the pressure that bunching produces. A compression is a pressure maximum and a rarefaction is a pressure minimum. Note that the pressure peaks are a quarter of a wavelength away from where the *displacement* of the air is greatest — where the air has moved furthest, it has not yet piled up.
+A sound wave drawn twice. Above: air molecules, bunched where the wave has pushed them together and thinned where it has pulled them apart. Below: the pressure that bunching produces. A compression is a pressure maximum and a rarefaction is a pressure minimum. Note that the pressure peaks are a quarter of a wavelength away from where the *displacement* of the air is greatest, where the air has moved furthest, it has not yet piled up.
 ```
 
-Where the molecules are packed more tightly than usual, the pressure is above atmospheric: a **compression**. Where they are spread thinner, the pressure is below atmospheric: a **rarefaction**. The pressure changes involved are startlingly small. Atmospheric pressure is about $101{,}000$ Pa; the quietest sound a healthy young ear can detect is a pressure variation of about $2\times10^{-5}$ Pa, some five thousand million times smaller. A very loud sound — a rock concert at the front — is perhaps $20$ Pa, still only two ten-thousandths of the pressure it rides on. Sound is a whisper of a ripple on an ocean of static pressure.
+Where the molecules are packed more tightly than usual, the pressure is above atmospheric: a **compression**. Where they are spread thinner, the pressure is below atmospheric: a **rarefaction**. The pressure changes involved are startlingly small. Atmospheric pressure is about $101{,}000$ Pa; the quietest sound a healthy young ear can detect is a pressure variation of about $2\times10^{-5}$ Pa, some five thousand million times smaller. A very loud sound, a rock concert at the front, is perhaps $20$ Pa, still only two ten-thousandths of the pressure it rides on. Sound is a whisper of a ripple on an ocean of static pressure.
 
 :::{tip} Self-check
 A loudspeaker cone moves out, then back, then out again. At the instant the cone has moved as far *out* as it will go, is the air just in front of it at maximum pressure, minimum pressure, or atmospheric? (Think about whether the cone is still compressing the air at that moment, or has stopped.)
@@ -81,7 +81,7 @@ A loudspeaker cone moves out, then back, then out again. At the instant the cone
 
 Both a microphone and an eardrum are pressure detectors. Each is a thin membrane with air on one side, and each is pushed in when the pressure outside rises and pushed out when it falls. What the membrane does is trace, over time, the pressure at one point in space.
 
-That is worth dwelling on, because it means everything the rest of this book discusses — pitch, loudness, timbre, the difference between a violin and a clarinet, the sound of a concert hall — is somehow encoded in a single wiggling number: the pressure at your eardrum as a function of time. Two eardrums give two such numbers. There is nothing else. Whatever your auditory system knows about the world of sound, it works it out from that.
+That is worth dwelling on, because it means everything the rest of this book discusses is somehow encoded in a single wiggling number: pitch, loudness, timbre, the difference between a violin and a clarinet, and the sound of a concert hall: the pressure at your eardrum as a function of time. Two eardrums give two such numbers. There is nothing else. Whatever your auditory system knows about the world of sound, it works it out from that.
 
 The graph of that pressure against time is the **waveform**, and it is the object an oscilloscope displays and an audio file stores. [Chapter 5](#ch-fourier-and-timbre) will show that a waveform contains more structure than it looks like it does, and [Chapter 6](#ch-the-ear) will show how the ear takes it apart.
 
@@ -101,9 +101,9 @@ The connections are, to a first approximation:
 
 | Perceptual attribute | Physical property mostly responsible |
 |---|---|
-| Pitch | Frequency — how many times per second the pattern repeats |
-| Loudness | Amplitude — how large the pressure variation is |
-| Timbre | Spectrum and envelope — which frequencies are present, and how they change |
+| Pitch | Frequency, how many times per second the pattern repeats |
+| Loudness | Amplitude, how large the pressure variation is |
+| Timbre | Spectrum and envelope, which frequencies are present, and how they change |
 | Duration | Duration |
 
 The phrase "mostly responsible" is doing real work in that table, and the four chapters of [Part III](#ch-the-ear) are largely about the exceptions. Loudness depends on frequency as well as amplitude: a 40 Hz tone and a 1000 Hz tone of identical amplitude are not equally loud, and are not close ([Chapter 7](#ch-loudness)). Pitch depends slightly on loudness. Most strikingly, a sound can have a definite pitch at a frequency that is not present in it at all ([Chapter 8](#ch-pitch-and-consonance)).
@@ -112,11 +112,11 @@ For now the first column is a useful map and the second column is where the phys
 
 ### Physical Cause and Perceptual Effect
 
-It is worth being careful about the difference between the two columns, because the language of music runs them together constantly and the physics does not.
+The difference between the two columns needs care, because the language of music runs them together constantly and the physics does not.
 
-**Frequency is a property of the sound. Pitch is a property of your experience of it.** A frequency can be measured with a counter, by anyone, with no listener present. A pitch cannot: it is a judgement, made by an auditory system, and it can be influenced by things the frequency counter knows nothing about. The same is true of amplitude and loudness, and of spectrum and timbre.
+**Frequency is a property of the sound. Pitch is a property of your experience of it.** A frequency can be measured with a counter, by anyone, with no listener present. A pitch cannot: it is a judgment, made by an auditory system, and it can be influenced by things the frequency counter knows nothing about. The same is true of amplitude and loudness, and of spectrum and timbre.
 
-This is not pedantry. It is the reason [Chapter 9](#ch-scales-and-tuning) has something to explain: if pitch were simply frequency, there would be no such thing as a tuning system, only arithmetic. And it is the reason [Chapter 15](#ch-electronic-and-recorded-sound) can compress an audio file to a tenth of its size — the parts of the physical signal that the perceptual system cannot use can be thrown away.
+This is not pedantry. It is the reason [Chapter 9](#ch-scales-and-tuning) has something to explain: if pitch were simply frequency, there would be no such thing as a tuning system, only arithmetic. And it is the reason [Chapter 15](#ch-electronic-and-recorded-sound) can compress an audio file to a tenth of its size: the parts of the physical signal that the perceptual system cannot use can be thrown away.
 
 :::{warning}
 "Pitch" and "frequency" are used interchangeably in ordinary musical speech, and mostly no harm is done. In this book they are kept apart. When the text says *frequency*, it means a number of cycles per second; when it says *pitch*, it means what a listener hears.
@@ -126,7 +126,7 @@ This is not pedantry. It is the reason [Chapter 9](#ch-scales-and-tuning) has so
 
 One more distinction, and then the physics. Some sounds repeat and some do not.
 
-A sound whose waveform repeats — the same shape, over and over, many times a second — is **periodic**, and periodic sounds have a clear pitch. A sung vowel, a bowed string, a blown pipe: hold any of them steady and the waveform settles into a pattern that repeats. The number of repeats per second is the **frequency**, measured in hertz (Hz), and one cycle takes the **period** $T = 1/f$.
+A sound whose waveform repeats, the same shape, over and over, many times a second, is **periodic**, and periodic sounds have a clear pitch. A sung vowel, a bowed string, a blown pipe: hold any of them steady and the waveform settles into a pattern that repeats. The number of repeats per second is the **frequency**, measured in hertz (Hz), and one cycle takes the **period** $T = 1/f$.
 
 A sound whose waveform does not repeat is **noise**, and noise has no definite pitch. A cymbal crash, a handclap, a consonant, the hiss of air escaping: the waveform wanders and never comes back to where it was.
 
@@ -136,10 +136,10 @@ Music uses both, and the boundary is not sharp. A snare drum is mostly noise, a 
 :label: fig:ch01-frequency-ranges
 :alt: A logarithmic frequency axis from 12 Hz to 60 kHz, with horizontal bars showing the ranges of human hearing, the piano, the singing voice, the violin, the double bass, and speech, and a dotted line marking A440.
 
-Where music sits inside the range of hearing. The frequency axis is logarithmic, because that is how pitch works: each doubling of frequency is one octave, and the octaves are therefore equally spaced along this axis. A piano's lowest note is $27.5$ Hz and its highest is $4186$ Hz — seven octaves, and less than half the span of human hearing, most of which is above the highest note any orchestral instrument plays.
+Where music sits inside the range of hearing. The frequency axis is logarithmic, because that is how pitch works: each doubling of frequency is one octave, and the octaves are therefore equally spaced along this axis. A piano's lowest note is $27.5$ Hz and its highest is $4186$ Hz, seven octaves, and less than half the span of human hearing, most of which is above the highest note any orchestral instrument plays.
 ```
 
-Two things in that figure deserve comment. First, the audible range is about $20$ Hz to $20{,}000$ Hz — a factor of a thousand, or very nearly ten octaves. Second, almost all musical *fundamentals* live in the bottom half of it. The upper octaves are not empty, but what fills them is the harmonics that give instruments their character ([Chapter 5](#ch-fourier-and-timbre)), which is why a recording that discards everything above 5 kHz sounds muffled rather than merely missing a few high notes.
+Two things in that figure deserve comment. First, the audible range is about $20$ Hz to $20{,}000$ Hz: a factor of a thousand, or very nearly ten octaves. Second, almost all musical *fundamentals* live in the bottom half of it. The upper octaves are not empty, but what fills them is the harmonics that give instruments their character ([Chapter 5](#ch-fourier-and-timbre)). A recording that discards everything above 5 kHz therefore sounds muffled rather than merely missing a few high notes.
 
 ## Simple Harmonic Motion
 
@@ -147,7 +147,7 @@ Two things in that figure deserve comment. First, the audible range is about $20
 
 Something has to vibrate. The question is why so many different somethings vibrate in the same way.
 
-Take any object sitting at a stable equilibrium — a mass hanging on a spring, a pendulum at the bottom of its swing, a guitar string pulled taut, a diving board, a wine glass rim. "Stable" means that if you displace it slightly, something pushes it back. Call the displacement $x$ and the restoring force $F$. The force is zero at $x = 0$, by the definition of equilibrium, and it points back toward $x = 0$ on either side.
+Take any object sitting at a stable equilibrium: a mass hanging on a spring, a pendulum at the bottom of its swing, a guitar string pulled taut, a diving board, a wine glass rim. "Stable" means that if you displace it slightly, something pushes it back. Call the displacement $x$ and the restoring force $F$. The force is zero at $x = 0$, by the definition of equilibrium, and it points back toward $x = 0$ on either side.
 
 Now the key step. For *small* displacements, the restoring force of essentially any stable system is proportional to the displacement:
 
@@ -155,7 +155,7 @@ $$
 F = -kx.
 $$
 
-The constant $k$ is the **stiffness**, measured in newtons per metre, and the minus sign says the force opposes the displacement. This is **Hooke's law**, and the reason it applies so widely is not that nature is fond of springs. It is that any smooth restoring force, whatever its true form, looks like a straight line if you zoom in far enough on the point where it crosses zero — and small vibrations never leave that neighbourhood.
+The constant $k$ is the **stiffness**, measured in newtons per meter, and the minus sign says the force opposes the displacement. This is **Hooke's law**, and the reason it applies so widely is not that nature is fond of springs. It is that any smooth restoring force, whatever its true form, looks like a straight line if you zoom in far enough on the point where it crosses zero, and small vibrations never leave that neighborhood.
 
 :::{dropdown} Why any stable system obeys Hooke's law for small displacements
 This is the argument that justifies the whole chapter, and it needs one line of calculus.
@@ -166,15 +166,15 @@ $$
 U(x) = U(0) + U'(0)\,x + \tfrac12 U''(0)\,x^2 + \tfrac16 U'''(0)\,x^3 + \cdots
 $$
 
-$U(0)$ is a constant and can be set to zero; it does not affect the force. $U'(0) = 0$, because the force $F = -\mathrm{d}U/\mathrm{d}x$ vanishes at equilibrium — that is what equilibrium means. So the first surviving term is the quadratic one, and
+$U(0)$ is a constant and can be set to zero; it does not affect the force. $U'(0) = 0$, because the force $F = -\mathrm{d}U/\mathrm{d}x$ vanishes at equilibrium, that is what equilibrium means. So the first surviving term is the quadratic one, and
 
 $$
 F = -\frac{\mathrm{d}U}{\mathrm{d}x} = -U''(0)\,x - \tfrac12 U'''(0)\,x^2 - \cdots
 $$
 
-For small enough $x$, the $x^2$ term and everything after it are negligible beside the $x$ term, and what remains is $F = -kx$ with $k = U''(0)$. Stability requires $U''(0) > 0$ — a minimum, not a maximum — so $k$ is positive.
+For small enough $x$, the $x^2$ term and everything after it are negligible beside the $x$ term, and what remains is $F = -kx$ with $k = U''(0)$. Stability requires $U''(0) > 0$, a minimum, not a maximum, so $k$ is positive.
 
-The generality is the point: nothing was assumed about the system beyond having a smooth potential with a minimum. This is why a mass on a spring and a molecule in a crystal and a drumhead all vibrate sinusoidally at small amplitude, and why "small amplitude" is the caveat on nearly every result in this book. Where it fails — a cymbal driven hard ([Chapter 12](#ch-percussion)), a loudspeaker pushed past its limits ([Chapter 15](#ch-electronic-and-recorded-sound)) — the consequences are audible and specific.
+The generality is the point: nothing was assumed about the system beyond having a smooth potential with a minimum. A mass on a spring, a molecule in a crystal, and a drumhead all vibrate sinusoidally at small amplitude for that reason, and "small amplitude" is the caveat on nearly every result in this book. Where it fails, a cymbal driven hard ([Chapter 12](#ch-percussion)), a loudspeaker pushed past its limits ([Chapter 15](#ch-electronic-and-recorded-sound)), the consequences are audible and specific.
 :::
 
 ### The Sinusoid and Its Four Numbers
@@ -191,12 +191,12 @@ This is **simple harmonic motion**, and the equation has exactly four numbers in
 :label: fig:ch01-sinusoid-anatomy
 :alt: A sine curve with the amplitude marked as the distance from the axis to the peak, the period marked from peak to peak, and a second dashed curve shifted sideways to illustrate phase.
 
-The anatomy of a sinusoid. The amplitude is measured from the equilibrium line to the peak, not from trough to peak. The period is the time for one complete cycle, and the frequency is its reciprocal. The dashed curve has the same amplitude and the same frequency and differs only in phase — it is the same motion, started at a different moment.
+The anatomy of a sinusoid. The amplitude is measured from the equilibrium line to the peak, not from trough to peak. The period is the time for one complete cycle, and the frequency is its reciprocal. The dashed curve has the same amplitude and the same frequency and differs only in phase, it is the same motion, started at a different moment.
 ```
 
 - **Amplitude $A$** is the maximum displacement, measured from equilibrium. It is half the peak-to-trough distance, and confusing the two is worth a factor of two in any calculation that follows.
 - **Frequency $f$** is the number of complete cycles per second, in hertz. Its reciprocal is the **period** $T = 1/f$, the time one cycle takes.
-- **Phase $\phi$** says where in the cycle the motion is at $t = 0$. On its own it means nothing — shifting your clock changes it — but the phase *difference* between two sinusoids is physical and important, and it is the whole subject of [Chapter 3](#ch-superposition).
+- **Phase $\phi$** says where in the cycle the motion is at $t = 0$. On its own it means nothing, shifting your clock changes it, but the phase *difference* between two sinusoids is physical and important, and it is the whole subject of [Chapter 3](#ch-superposition).
 
 You will also meet the **angular frequency** $\omega = 2\pi f$, which is measured in radians per second and exists to keep $2\pi$s out of equations. In terms of it, $x(t) = A\sin(\omega t + \phi)$.
 
@@ -208,7 +208,7 @@ Both conventions are common: $f$ in hertz is what a tuner displays and what a mu
 :label: fig:ch01-a440
 :transcript: A steady, plain, slightly thin tone at concert A. It sounds a little like a hearing test, which is exactly what a pure tone is.
 
-A pure tone at 440 Hz: a single sinusoid, and nothing else. Almost nothing in music sounds like this, and that is the point — every musical instrument in this book produces something more complicated, and [Chapter 5](#ch-fourier-and-timbre) explains what it is made of.
+A pure tone at 440 Hz: a single sinusoid, and nothing else. Almost nothing in music sounds like this, and that is the point, every musical instrument in this book produces something more complicated, and [Chapter 5](#ch-fourier-and-timbre) explains what it is made of.
 ```
 
 ### Mass on a Spring
@@ -228,7 +228,7 @@ One cycle of simple harmonic motion, in three snapshots. The restoring force is 
 
 Two features of that formula are worth more than the formula itself.
 
-**Stiffer means faster; heavier means slower.** Tighten the spring and the frequency rises; hang more mass on it and the frequency falls. Every pitch-changing mechanism in every instrument in this book is a version of one of those two levers. A guitar string is tuned by changing its tension — stiffness — and a bass string is made low by winding metal around it — mass. The vocal folds go up in pitch when their tension rises.
+**Stiffer means faster; heavier means slower.** Tighten the spring and the frequency rises; hang more mass on it and the frequency falls. Every pitch-changing mechanism in every instrument in this book is a version of one of those two levers. A guitar string is tuned by changing its tension, stiffness, and a bass string is made low by winding metal around it, mass. The vocal folds go up in pitch when their tension rises.
 
 **The frequency does not depend on the amplitude.** Pull the mass twice as far and release it, and it takes exactly as long to come back. This is a peculiar property of the *linear* restoring force, and it is not a general fact about vibrating things. But it is the property that makes music possible at all: a piano string struck gently and struck hard sounds the same note. If frequency depended on amplitude, every instrument would go sharp or flat as it got louder, and no fixed-pitch instrument could exist.
 
@@ -247,14 +247,14 @@ $$
 
 Frequency goes as $1/\sqrt{m}$, so halving $f$ requires multiplying $m$ by four: $0.80$ kg.
 
-*(c) A guitar's low E string is tuned to $82.4$ Hz. Its maker wants a string one octave lower — $41.2$ Hz — of the same length and the same tension. By what factor must its mass per unit length increase?*
+*(c) A guitar's low E string is tuned to $82.4$ Hz. Its maker wants a string one octave lower, $41.2$ Hz, of the same length and the same tension. By what factor must its mass per unit length increase?*
 
 The same $1/\sqrt{m}$ scaling applies to a string ([Chapter 3](#ch-superposition) derives it), so halving the frequency requires four times the mass per unit length. Winding wire around a thin core is how this is done in practice; making the core four times as massive by making it thicker would also make it far too stiff to bend over the bridge, which is the subject of §10.1.
 ::::
 
 ### The Pendulum, and the Small-Angle Approximation
 
-A pendulum is the other classic example, and it is instructive precisely because it obeys Hooke's law only approximately. A bob of mass $m$ on a string of length $L$, displaced by an angle $\theta$, feels a restoring force $F = -mg\sin\theta$ along its arc. That is not proportional to $\theta$ — but for small angles, $\sin\theta \approx \theta$, and it becomes so. The frequency is then
+A pendulum is the other classic example, and it is instructive precisely because it obeys Hooke's law only approximately. A bob of mass $m$ on a string of length $L$, displaced by an angle $\theta$, feels a restoring force $F = -mg\sin\theta$ along its arc. That is not proportional to $\theta$, but for small angles, $\sin\theta \approx \theta$, and it becomes so. The frequency is then
 
 $$
 f = \frac{1}{2\pi}\sqrt{\frac{g}{L}},
@@ -262,7 +262,7 @@ $$
 
 which, strikingly, does not contain the mass at all.
 
-The approximation is good to better than $1\%$ out to about $14°$, and it fails slowly rather than suddenly: at $30°$ the real period is about $1.7\%$ longer than the formula predicts, and a pendulum swinging through $90°$ is nearly $18\%$ slow. This is the general behaviour of a real vibrating system driven beyond its linear range, and it is worth remembering when [Chapter 12](#ch-percussion) reaches instruments that are never in it.
+The approximation is good to better than $1\%$ out to about $14°$, and it fails slowly rather than suddenly: at $30°$ the real period is about $1.7\%$ longer than the formula predicts, and a pendulum swinging through $90°$ is nearly $18\%$ slow. This is the general behavior of a real vibrating system driven beyond its linear range; keep it in mind when [Chapter 12](#ch-percussion) reaches instruments that are never in it.
 
 ```{phet} masses-and-springs
 :label: fig:ch01-masses-and-springs-sim
@@ -282,18 +282,18 @@ $$
 
 and the fact to carry forward is the **square**. Doubling the amplitude of a vibration quadruples its energy. A sound wave of twice the pressure amplitude carries four times the energy, and delivers four times the power to your eardrum.
 
-That squaring is why [Chapter 7](#ch-loudness) needs logarithms. The range of sound energies the ear handles is not merely large, it is the *square* of an already large range of pressures — about $10^{12}$ to one, from the quietest audible sound to the threshold of pain. No linear scale is usable across that span, and the decibel exists to tame it.
+That squaring is why [Chapter 7](#ch-loudness) needs logarithms. The range of sound energies the ear handles is not merely large, it is the *square* of an already large range of pressures, about $10^{12}$ to one, from the quietest audible sound to the threshold of pain. No linear scale is usable across that span, and the decibel exists to tame it.
 
 ```{audio} ch01-amplitude-steps
 :label: fig:ch01-amplitude-steps
 :transcript: One tone, five times, each quieter than the last by a clearly audible but not dramatic step. The last is about a sixteenth the amplitude of the first, and still perfectly audible.
 
-The same 440 Hz tone at five amplitudes, each half the one before. Each halving of amplitude is a factor of four in energy, and a drop of $6$ dB. Notice how *un*dramatic four steps sound: a sixteen-fold reduction in amplitude — a $256$-fold reduction in energy — is not remotely "a sixteenth as loud". Making that observation precise is the business of [Chapter 7](#ch-loudness).
+The same 440 Hz tone at five amplitudes, each half the one before. Each halving of amplitude is a factor of four in energy, and a drop of $6$ dB. Notice how *un*dramatic four steps sound: a sixteen-fold reduction in amplitude, a $256$-fold reduction in energy, is not remotely "a sixteenth as loud". Making that observation precise is the business of [Chapter 7](#ch-loudness).
 ```
 
 ### Damped Vibration and the Decay of a Note
 
-An undamped oscillator would ring forever. Real ones do not, because energy leaks away: into friction inside the material, into the mountings, and — usefully, since this is the point of a musical instrument — into the surrounding air as sound.
+An undamped oscillator would ring forever. Real ones do not, because energy leaks away: into friction inside the material, into the mountings, and, usefully, since this is the point of a musical instrument, into the surrounding air as sound.
 
 The result is that the amplitude falls off over time, and for light damping it falls off *exponentially*:
 
@@ -307,7 +307,7 @@ The **decay time** $\tau$ is the time for the amplitude to fall to $1/e$, about 
 :label: fig:ch01-damping
 :alt: Three damped sinusoids drawn with their exponential envelopes, decaying at three different rates, from a long slow decay to a very fast one.
 
-Three decay rates at the same frequency and the same starting amplitude. The frequency is barely affected by damping this light — the zero crossings stay where they were — but the length of the note is completely transformed. This is why an instrument's sustain is a design parameter independent of its pitch.
+Three decay rates at the same frequency and the same starting amplitude. The frequency is barely affected by damping this light, the zero crossings stay where they were, but the length of the note is completely transformed. An instrument's sustain is therefore a design parameter independent of its pitch.
 ```
 
 Every instrument makes a choice here, and the choice is a trade-off that [Chapter 4](#ch-resonance) makes precise. Energy radiated as sound is energy lost from the vibration, so **a loud instrument is a short-lived one**. A guitar string coupled tightly to a good soundboard is loud and dies quickly; the same string on a solid plank is quiet and rings for a long time. A pianist who wants a longer note lifts the dampers; a pianist who wants a shorter one puts them back.
@@ -316,14 +316,14 @@ Every instrument makes a choice here, and the choice is a trade-off that [Chapte
 :names: Struck, Sustained
 :figure: ../images/ch01-decay-compare.svg
 :label: fig:ch01-decay-compare
-:transcript: Two notes of the same pitch and the same tone colour. The first begins abruptly and fades away like a plucked string; the second grows in, holds steady, and stops.
+:transcript: Two notes of the same pitch and the same tone color. The first begins abruptly and fades away like a plucked string; the second grows in, holds steady, and stops.
 
-The same pitch, the same harmonics, the same loudness — and two envelopes. Nothing differs between these but how the amplitude changes with time, and it is enough to make the first sound struck and the second sound bowed or blown. [Chapter 5](#ch-fourier-and-timbre) shows that this is not a minor effect: strip the attack off a recorded note and listeners struggle to name the instrument.
+The same pitch, the same harmonics, the same loudness, and two envelopes. Nothing differs between these but how the amplitude changes with time, and it is enough to make the first sound struck and the second sound bowed or blown. [Chapter 5](#ch-fourier-and-timbre) shows that this is not a minor effect: strip the attack off a recorded note and listeners struggle to name the instrument.
 ```
 
 ### Why Anything Vibrates Sinusoidally At All
 
-It is worth closing the chapter by asking why simple harmonic motion deserves a chapter to itself, given that almost nothing in music is a mass on a spring.
+Why does simple harmonic motion deserve a chapter to itself, given that almost nothing in music is a mass on a spring?
 
 The answer has three parts, and each is developed later in the book.
 
@@ -337,14 +337,14 @@ Simple harmonic motion is not an approximation the book will later outgrow. It i
 
 ## Summary
 
-- **Sound is a longitudinal disturbance in a medium**, not a substance in transit. The medium moves back and forth along the direction of travel and stays where it was; only the disturbance goes anywhere. No medium, no sound — which is why light crosses a vacuum and sound does not.
+- **Sound is a longitudinal disturbance in a medium**, not a substance in transit. The medium moves back and forth along the direction of travel and stays where it was; only the disturbance goes anywhere. No medium, no sound, light crosses a vacuum and sound does not.
 - **A sound wave can be described as displacement or as pressure**, and the two are a quarter of a wavelength out of step. Compressions are pressure maxima and rarefactions are pressure minima. Both microphones and eardrums measure pressure, so the whole of what a listener has to work with is pressure at a point as a function of time.
-- **Musical sounds are described by four perceptual attributes** — pitch, loudness, timbre, duration — which correspond roughly to frequency, amplitude, spectrum-and-envelope, and duration. Only the last correspondence is exact, and the exceptions are the subject of [Part III](#ch-the-ear).
+- **Musical sounds are described by four perceptual attributes**, pitch, loudness, timbre, duration, which correspond roughly to frequency, amplitude, spectrum-and-envelope, and duration. Only the last correspondence is exact, and the exceptions are the subject of [Part III](#ch-the-ear).
 - **Periodic waveforms have pitch; non-periodic ones are noise.** Frequency $f$ and period $T$ are reciprocals, $T = 1/f$. Human hearing spans roughly $20$ Hz to $20$ kHz; musical fundamentals occupy only the lower half of it.
-- **Any stable system obeys $F = -kx$ for small displacements**, because any smooth potential looks quadratic near its minimum. This is why so many unlike objects vibrate in the same way, and why "small amplitude" qualifies nearly every result in this book.
-- **Simple harmonic motion is a sinusoid**, $x(t) = A\sin(2\pi f t + \phi)$, described by amplitude, frequency, and phase. For a mass on a spring $f = (1/2\pi)\sqrt{k/m}$: stiffer is faster, heavier is slower, and **the frequency does not depend on the amplitude** — without which no fixed-pitch instrument could exist.
+- **Any stable system obeys $F = -kx$ for small displacements**, because any smooth potential looks quadratic near its minimum. That is how so many unlike objects come to vibrate in the same way, and why "small amplitude" qualifies nearly every result in this book.
+- **Simple harmonic motion is a sinusoid**, $x(t) = A\sin(2\pi f t + \phi)$, described by amplitude, frequency, and phase. For a mass on a spring $f = (1/2\pi)\sqrt{k/m}$: stiffer is faster, heavier is slower, and **the frequency does not depend on the amplitude**, without which no fixed-pitch instrument could exist.
 - **Energy goes as the square of the amplitude**, $E = \frac12 kA^2$. The enormous dynamic range this produces is why loudness is measured logarithmically ([Chapter 7](#ch-loudness)).
-- **Damping makes amplitude decay exponentially**, $A(t) = A_0e^{-t/\tau}$. Radiating sound is a loss of energy from the vibration, so loudness and sustain trade against each other — a design decision every instrument maker has to make.
+- **Damping makes amplitude decay exponentially**, $A(t) = A_0e^{-t/\tau}$. Radiating sound is a loss of energy from the vibration, so loudness and sustain trade against each other: a design decision every instrument maker has to make.
 
 ## Conceptual Questions
 
@@ -462,7 +462,7 @@ $$
 v_{\max} = 2\pi(250\ \text{Hz})(3.0\times10^{-3}\ \text{m}) = 4.7\ \text{m/s}.
 $$
 
-Therefore, the displacement is $x(t) = (3.0\ \text{mm})\sin[(1571\ \text{s}^{-1})t]$ and the maximum speed is $4.7$ m/s — which is reached as it passes through equilibrium, where the restoring force is zero.
+Therefore, the displacement is $x(t) = (3.0\ \text{mm})\sin[(1571\ \text{s}^{-1})t]$ and the maximum speed is $4.7$ m/s, which is reached as it passes through equilibrium, where the restoring force is zero.
 :::
 
 :::{exercise}
@@ -515,13 +515,13 @@ $$
 
 (c) Energy goes as amplitude squared, so at $10\%$ amplitude the energy is $(0.10)^2 = 1.0\%$ of its initial value.
 
-Therefore, about $19\%$ of the amplitude remains after $3.0$ s, $10\%$ remains after $4.1$ s, and at that point only one part in a hundred of the energy is left — yet the note is still clearly audible, which is another demonstration of the ear's range.
+Therefore, about $19\%$ of the amplitude remains after $3.0$ s, $10\%$ remains after $4.1$ s, and at that point only one part in a hundred of the energy is left, yet the note is still clearly audible, which is another demonstration of the ear's range.
 :::
 
 :::{exercise}
 :label: ex-sound-and-shm-7
 
-Two identical springs, each of stiffness $k$, support the same mass $m$ — first one at a time, then both side by side in parallel. By what factor does the oscillation frequency change when the second spring is added?
+Two identical springs, each of stiffness $k$, support the same mass $m$, first one at a time, then both side by side in parallel. By what factor does the oscillation frequency change when the second spring is added?
 :::
 
 :::{solution} ex-sound-and-shm-7
@@ -536,7 +536,7 @@ $$
 \frac{f_2}{f_1} = \sqrt{\frac{2k}{k}} = \sqrt{2} = 1.41.
 $$
 
-Therefore, the frequency rises by a factor of $\sqrt2$, about $41\%$ — which, as [Chapter 9](#ch-scales-and-tuning) will point out, is almost exactly a musical tritone, the interval of six equal-tempered semitones.
+Therefore, the frequency rises by a factor of $\sqrt2$, about $41\%$, which, as [Chapter 9](#ch-scales-and-tuning) will point out, is almost exactly a musical tritone, the interval of six equal-tempered semitones.
 :::
 
 :::{exercise}
@@ -616,7 +616,7 @@ $$
 n = \frac{\ln 1.0023}{\ln 1.0595} = \frac{0.00227}{0.0578} = 0.039\ \text{semitones}.
 $$
 
-Therefore, the note is A440, sharp by about four hundredths of a semitone — four **cents**, in the units of [Chapter 9](#ch-scales-and-tuning). That is far too small to hear as mistuning, and is well within the precision with which a violinist places a finger.
+Therefore, the note is A440, sharp by about four hundredths of a semitone, four **cents**, in the units of [Chapter 9](#ch-scales-and-tuning). That is far too small to hear as mistuning, and is well within the precision with which a violinist places a finger.
 :::
 
 :::{exercise}
@@ -657,7 +657,7 @@ $$
 \;\Rightarrow\; x = \frac{A}{\sqrt2} = 0.707A.
 $$
 
-Therefore, the energy is evenly split at about $71\%$ of the amplitude — not at half the amplitude, which is the natural but wrong guess.
+Therefore, the energy is evenly split at about $71\%$ of the amplitude, not at half the amplitude, which is the natural but wrong guess.
 :::
 
 :::{exercise}
@@ -678,7 +678,7 @@ $$
 \tau_{\text{glass}} = \frac{4.5\ \text{s}}{0.693} = 6.5\ \text{s}.
 $$
 
-(b) The string. A short decay time means energy is leaving the vibration quickly, and for an instrument designed to be heard, the dominant loss channel is radiation as sound. The glass holds its energy — which is why a wine glass is loud only when it is rubbed continuously, and why the string, losing its energy fast, is loud straight away.
+(b) The string. A short decay time means energy is leaving the vibration quickly, and for an instrument designed to be heard, the dominant loss channel is radiation as sound. The glass holds its energy, which is why a wine glass is loud only when it is rubbed continuously, and why the string, losing its energy fast, is loud straight away.
 
 (c) A factor of $10^3$ takes $t = \tau\ln(10^3) = 6.91\tau$:
 
@@ -707,9 +707,9 @@ $$
 t = \frac{5\ \text{m}}{0.75\ \text{m/s}} = 6.7\ \text{s}.
 $$
 
-(b) The actual travel time is about $15$ ms, some $440$ times shorter. Worse, the cone's motion is *oscillatory* — it moves out and back — so no parcel of air makes net progress at all; each one jiggles about a fixed position with an amplitude of a fraction of a millimetre.
+(b) The actual travel time is about $15$ ms, some $440$ times shorter. Worse, the cone's motion is *oscillatory*, it moves out and back, so no parcel of air makes net progress at all; each one jiggles about a fixed position with an amplitude of a fraction of a millimeter.
 
-Therefore, the student's picture is wrong in both magnitude and kind. What travels from the loudspeaker to the ear is not air but a *disturbance* in the air, and its speed is set by how quickly molecular collisions pass the squeeze along — a property of the medium, not of the source ([Chapter 2](#ch-wave-motion)).
+Therefore, the student's picture is wrong in both magnitude and kind. What travels from the loudspeaker to the ear is not air but a *disturbance* in the air, and its speed is set by how quickly molecular collisions pass the squeeze along: a property of the medium, not of the source ([Chapter 2](#ch-wave-motion)).
 :::
 
 :::{exercise}

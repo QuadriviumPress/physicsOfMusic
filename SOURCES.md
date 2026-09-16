@@ -85,7 +85,7 @@ that came from somewhere, it is named here and in the figure caption.
 | 12. Percussion: Membranes, Bars, and Plates | **Membrane mode ratios computed from Bessel function zeros**; bar mode ratios from the roots of $\cos x\cosh x = 1$. Timpani and bell partial ratios: measured values from the literature, consistent with Fletcher and Rossing (1998). |
 | 13. The Singing Voice | Formant frequencies for five vowels, singer's-formant region: standard values, consistent with Sundberg (1987) and Titze (2000). |
 | 14. Room Acoustics and Concert-Hall Design | Sabine equation derived in the text. Absorption coefficients and reverberation-time targets: standard tabulated values. Hall descriptions consistent with Beranek (2004) and Barron (2009). |
-| 15. Electronic and Recorded Sound | Sampling theorem (Shannon 1949); $6.02b + 1.76$ derived in the text. Codec behaviour consistent with Pohlmann (2011). |
+| 15. Electronic and Recorded Sound | Sampling theorem (Shannon 1949); $6.02b + 1.76$ derived in the text. Codec behavior consistent with Pohlmann (2011). |
 
 ## Figures, audio, and notation
 

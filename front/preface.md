@@ -5,8 +5,8 @@ label: preface
 ---
 
 *Physics of Music* is a one-semester course in how musical sound is produced,
-transmitted, and perceived. It takes a single thread — something vibrates, the
-vibration travels as a wave, the wave is heard — and follows it from a mass on
+transmitted, and perceived. It takes a single thread, something vibrates, the
+vibration travels as a wave, the wave is heard, and follows it from a mass on
 a spring through to a digital recording, stopping wherever music has something
 to ask of physics.
 
@@ -23,9 +23,9 @@ The intended reader is a university student of any major, taking this as a
 science course. The mathematics required is algebra, trigonometry, and
 logarithms: if the phrase "solve for $L$" and the sine function are familiar,
 that is enough. Calculus is not required and is not used in the main argument.
-Where a result is genuinely a calculus result — the wave equation from Newton's
+Where a result is genuinely a calculus result: the wave equation from Newton's
 second law, Fourier coefficients as integrals, the Bessel functions that
-describe a drumhead — the derivation is placed in a clearly marked dropdown,
+describe a drumhead: the derivation is placed in a clearly marked dropdown,
 stated as optional, and never depended on afterward. A reader who has had
 calculus will find those dropdowns are where the book stops taking their word
 for it; a reader who has not can skip every one and lose nothing.
@@ -45,29 +45,29 @@ Guide](../back/appendix-teaching-guide.md).
 
 The book has six parts.
 
-**Part I — Sound and Vibration** establishes the physical vocabulary: simple
+**Part I, Sound and Vibration** establishes the physical vocabulary: simple
 harmonic motion, the wave that carries a vibration through air, superposition
 and interference, and the standing waves and resonances that let an object have
 a pitch at all.
 
-**Part II — Spectrum and Timbre** is the hinge of the book. Fourier's result —
-that any periodic sound is a sum of harmonics — is what connects the shape of
+**Part II, Spectrum and Timbre** is the hinge of the book. Fourier's result,
+that any periodic sound is a sum of harmonics, is what connects the shape of
 an instrument to the character of its sound, and almost every later chapter
 uses it.
 
-**Part III — Hearing and Perception** turns from the sound to the listener: the
+**Part III, Hearing and Perception** turns from the sound to the listener: the
 mechanics of the ear, why loudness is not intensity, why pitch is not
 frequency, and where consonance comes from.
 
-**Part IV — Scales and Tuning** takes up the oldest quantitative problem in
+**Part IV, Scales and Tuning** takes up the oldest quantitative problem in
 music. Small whole-number ratios sound good and do not fit into an octave;
 every tuning system in history is a different answer to that arithmetic.
 
-**Part V — Musical Instruments** works through the families — strings, winds,
-percussion, and the voice — asking of each the same three questions: what
+**Part V, Musical Instruments** works through the families, strings, winds,
+percussion, and the voice, asking of each the same three questions: what
 vibrates, what sets it going, and what couples it to the air.
 
-**Part VI — Sound in Space and in Circuits** follows the sound after it leaves
+**Part VI, Sound in Space and in Circuits** follows the sound after it leaves
 the instrument, into the room that shapes it and the microphone that captures
 it.
 
@@ -91,8 +91,8 @@ first reading.
 **Audio examples** run throughout the book. Each appears as a figure showing the
 waveform and spectrum of the clip, a sentence describing what is heard, and a
 link to hear it. They are synthesized rather than recorded, which is a
-deliberate limitation: a synthesized clip can isolate exactly one variable — the
-same pitch and the same level, differing only in which harmonics are present —
+deliberate limitation: a synthesized clip can isolate exactly one variable, the
+same pitch and the same level, differing only in which harmonics are present,
 in a way no recording of a real instrument can. Because every example carries
 its picture and its description, they work equally in print and for readers who
 cannot hear them. Where the real thing matters, the text says so and sends the
@@ -107,7 +107,7 @@ simulation.
 
 Two appendices exist because two of the course's aims cannot be met by reading.
 [Laboratory Exercises](../back/appendix-laboratory.md) is a set of measurements
-using an oscilloscope, a function generator, and audio-analysis software —
+using an oscilloscope, a function generator, and audio-analysis software,
 enough to take the book's claims about spectra, air columns, and beats and check
 them. [The Final Project](../back/appendix-final-project.md) is guidance for
 measuring something of one's own and explaining it to somebody who does not

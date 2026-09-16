@@ -54,9 +54,9 @@ A microphone is a pressure detector with a diaphragm, and there are two common w
 
 A **dynamic** microphone attaches a coil of wire to the diaphragm and suspends it in a magnetic field. Motion induces a voltage. It is rugged, needs no power, and handles very loud sources, but the coil's mass limits its high-frequency response and its transient accuracy.
 
-A **condenser** microphone makes the diaphragm one plate of a capacitor. Motion changes the capacitance and hence the voltage across it. The diaphragm can be made extremely light, so the response extends further and transients are tracked more faithfully — at the cost of needing a power supply and being more fragile.
+A **condenser** microphone makes the diaphragm one plate of a capacitor. Motion changes the capacitance and hence the voltage across it. The diaphragm can be made extremely light, so the response extends further and transients are tracked more faithfully, at the cost of needing a power supply and being more fragile.
 
-The mechanical requirement is the same in both cases and is worth stating: the diaphragm's resonance should be placed *outside* the band of interest, and it should be heavily damped, so that the microphone responds evenly rather than colouring everything with its own resonance. This is [Chapter 4](#ch-resonance)'s low-$Q$ design philosophy, for the same reason a guitar body needs it.
+The mechanical requirement is the same in both cases and is worth stating: the diaphragm's resonance should be placed *outside* the band of interest, and it should be heavily damped, so that the microphone responds evenly rather than coloring everything with its own resonance. This is [Chapter 4](#ch-resonance)'s low-$Q$ design philosophy, for the same reason a guitar body needs it.
 
 ### Polar Patterns
 
@@ -69,10 +69,10 @@ A microphone's directivity is set by whether its diaphragm is exposed to pressur
 The four standard patterns. **Omnidirectional** responds to pressure alone and hears everything equally. **Figure-of-eight** responds to the pressure *difference* across the diaphragm, so it is deaf at the sides. **Cardioid** is the sum of the two, giving a rear null. **Hypercardioid** is a different mixture, trading a small rear lobe for a narrower front.
 ```
 
-The choice is a practical one. A cardioid rejects the room and the audience, which suits a close-miked instrument in a poor room. An omnidirectional captures the room, which suits a good hall. A figure-of-eight rejects sound from the sides, which is why it is used to isolate two instruments facing each other.
+The choice is a practical one. A cardioid rejects the room and the audience, which suits a close-miked instrument in a poor room. An omnidirectional captures the room, which suits a good hall. A figure-of-eight rejects sound from the sides, and is used to isolate two instruments facing each other.
 
 :::{note}
-Any directional microphone — that is, any that responds to pressure *difference* — exhibits **proximity effect**: the bass response rises sharply as the source comes close, by $10$ dB or more within a few centimetres. Broadcasters exploit it deliberately for an authoritative voice, and singers who work close to the microphone must either compensate or lean back.
+Any directional microphone, that is, any that responds to pressure *difference*, exhibits **proximity effect**: the bass response rises sharply as the source comes close, by $10$ dB or more within a few centimeters. Broadcasters exploit it deliberately for an authoritative voice, and singers who work close to the microphone must either compensate or lean back.
 :::
 
 ### Loudspeakers, Drivers, and Crossovers
@@ -81,9 +81,9 @@ A loudspeaker runs the microphone backwards: current through a coil in a magneti
 
 It faces a problem [Chapter 2](#ch-wave-motion) identified. Directivity depends on the source's size compared with the wavelength, and a single driver has one size while music spans a factor of a thousand in wavelength. A driver large enough to move air at $40$ Hz beams badly at $4$ kHz; one small enough to radiate $10$ kHz evenly cannot shift enough air to produce bass at all.
 
-The solution is multiple drivers — a **woofer**, sometimes a midrange, and a **tweeter** — with a **crossover** network dividing the signal between them. The crossover is itself a compromise, since the drivers must blend through the handover region without cancelling, and crossover design is much of what distinguishes loudspeakers.
+The solution is multiple drivers, a **woofer**, sometimes a midrange, and a **tweeter**, with a **crossover** network dividing the signal between them. The crossover is itself a compromise, since the drivers must blend through the handover region without canceling, and crossover design is much of what distinguishes loudspeakers.
 
-The low-frequency problem is attacked separately. A cone radiates from both faces, in opposite phase, so at long wavelengths the front and rear outputs meet around the edge and cancel. An enclosure prevents that. A **sealed** box is simple and well-behaved; a **bass-reflex** box adds a tuned port — a Helmholtz resonator ([Chapter 4](#ch-resonance)) — that reinforces the bottom octave at the cost of a steeper roll-off below it.
+The low-frequency problem is attacked separately. A cone radiates from both faces, in opposite phase, so at long wavelengths the front and rear outputs meet around the edge and cancel. An enclosure prevents that. A **sealed** box is simple and well-behaved; a **bass-reflex** box adds a tuned port, a Helmholtz resonator ([Chapter 4](#ch-resonance)), that reinforces the bottom octave at the cost of a steeper roll-off below it.
 
 ## Signals and Their Imperfections
 
@@ -91,7 +91,7 @@ The low-frequency problem is attacked separately. A cone radiates from both face
 
 The **frequency response** of any component is its gain against frequency. A perfect one would be flat across the audible range.
 
-Nothing is. Loudspeakers are the worst offenders by a wide margin: even a good one varies by several decibels across its range, while a competent amplifier is flat to a fraction of a decibel. In any audio chain, the transducers — microphone, loudspeaker, and the room — are where essentially all of the frequency-response error lives.
+Nothing is. Loudspeakers are the worst offenders by a wide margin: even a good one varies by several decibels across its range, while a competent amplifier is flat to a fraction of a decibel. In any audio chain, the transducers, microphone, loudspeaker, and the room, are where essentially all of the frequency-response error lives.
 
 ```{openlyceum} Oscilloscope
 :label: fig:ch15-oscilloscope-sim
@@ -99,8 +99,7 @@ Nothing is. Loudspeakers are the worst offenders by a wide margin: even a good o
 An oscilloscope with a signal generator behind it. Set a sine wave and measure
 its period from the screen; then add a second channel and look at what a sum
 looks like. This is the instrument the laboratory exercises in
-[](#appendix-laboratory) assume, and it is worth being fluent with it before
-meeting a real one.
+[](#appendix-laboratory) assume; fluency with it helps before meeting a real one.
 ```
 
 ### Linear and Nonlinear Distortion
@@ -137,34 +136,34 @@ Not approximately. Completely. The samples contain every bit of information in t
 :label: fig:ch15-sampling
 :alt: Left, a waveform with sample points marked as dots on vertical stems. Right, the original waveform and a reconstruction from the samples, lying exactly on top of one another.
 
-Sampling and reconstruction. The right panel is the surprising half: the reconstruction is not a join-the-dots approximation but an exact recovery, obtained by summing a $\mathrm{sinc}$ function centred on each sample. Nothing has been lost.
+Sampling and reconstruction. The right panel is the surprising half: the reconstruction is not a join-the-dots approximation but an exact recovery, obtained by summing a $\mathrm{sinc}$ function centered on each sample. Nothing has been lost.
 ```
 
-The **Nyquist frequency** is half the sampling rate — the highest frequency a given rate can represent.
+The **Nyquist frequency** is half the sampling rate: the highest frequency a given rate can represent.
 
 The compact disc samples at $44.1$ kHz, giving a Nyquist frequency of $22.05$ kHz, comfortably above the $20$ kHz limit of hearing. The awkward number is historical: early digital recorders stored data on video tape, and $44.1$ kHz was what fitted the existing video line rates.
 
 ### Aliasing and the Anti-Aliasing Filter
 
-The theorem's condition — no frequencies above Nyquist — is not optional, and violating it is not a gentle degradation.
+The theorem's condition, no frequencies above Nyquist, is not optional, and violating it is not a gentle degradation.
 
 ```{figure} ../images/ch15-aliasing.svg
 :label: fig:ch15-aliasing
 :alt: Left, a 9 Hz sine and a 1 Hz sine both passing exactly through the same sample points. Right, a folding diagram showing input frequency against the frequency actually heard, rising to Nyquist and then folding back down repeatedly.
 
-**Left**: a $9$ Hz signal sampled at $10$ Hz produces exactly the same samples as a $1$ Hz signal. Nothing in the data can distinguish them. **Right**: the general rule — every frequency above Nyquist is **folded** back below it, reappearing as a different frequency altogether.
+**Left**: a $9$ Hz signal sampled at $10$ Hz produces exactly the same samples as a $1$ Hz signal. Nothing in the data can distinguish them. **Right**: the general rule, every frequency above Nyquist is **folded** back below it, reappearing as a different frequency altogether.
 ```
 
 The consequence is severe. Aliased components are not a distortion of the original; they are *new frequencies at unrelated pitches*, and once the samples are taken there is no way to remove them.
 
 ```{audio} ch15-aliasing-sweep
 :label: fig:ch15-aliasing-sweep
-:transcript: A rising tone that climbs for about half the clip, then turns round and descends, and then turns again — even though the generator is sweeping steadily upward the whole time.
+:transcript: A rising tone that climbs for about half the clip, then turns round and descends, and then turns again, even though the generator is sweeping steadily upward the whole time.
 
 A sweep from $200$ Hz to $7$ kHz, synthesized at $8$ kHz with no anti-aliasing filter. Above $4$ kHz the tone folds back and descends. Nothing in the generator ever descends; what you are hearing is the folding diagram above, made audible.
 ```
 
-The cure is to filter **before** sampling. An **anti-aliasing filter** removes everything above Nyquist while the signal is still continuous, so the theorem's condition is satisfied. It must come first — after sampling, the aliased components are indistinguishable from real ones.
+The cure is to filter **before** sampling. An **anti-aliasing filter** removes everything above Nyquist while the signal is still continuous, so the theorem's condition is satisfied. It must come first, after sampling, the aliased components are indistinguishable from real ones.
 
 This is the technical reason for sampling faster than strictly necessary. A perfect filter is impossible, so a real one needs a transition band, and the gap between $20$ kHz and $22.05$ kHz is where the CD's filter does its work.
 
@@ -178,7 +177,7 @@ $$
 \text{dynamic range} \approx 6.02\,b + 1.76\ \text{dB},
 $$
 
-with $b$ the number of bits — the useful rule being **about $6$ dB per bit**. A 16-bit CD gives $98$ dB, comfortably beyond any listening room. A 24-bit studio format gives $146$ dB, which is far beyond any microphone, and exists to provide headroom during processing rather than for final delivery.
+with $b$ the number of bits: the useful rule being **about $6$ dB per bit**. A 16-bit CD gives $98$ dB, comfortably beyond any listening room. A 24-bit studio format gives $146$ dB, which is far beyond any microphone, and exists to provide headroom during processing rather than for final delivery.
 
 ```{figure} ../images/ch15-quantization.svg
 :label: fig:ch15-quantization
@@ -187,7 +186,7 @@ with $b$ the number of bits — the useful rule being **about $6$ dB per bit**. 
 Quantization at three bit depths. The middle panel shows what **dither** does: adding a small amount of noise *before* quantizing.
 ```
 
-Dither seems perverse — deliberately adding noise to improve quality — and it is one of the more elegant ideas in signal processing. Without it, the quantization error is **correlated** with the signal: it follows the waveform, producing harmonic distortion that is worst on quiet passages, exactly where it is least welcome. Adding a small random noise decorrelates the error, converting it into a steady, signal-independent hiss.
+Dither seems perverse, deliberately adding noise to improve quality, and it is one of the more elegant ideas in signal processing. Without it, the quantization error is **correlated** with the signal: it follows the waveform, producing harmonic distortion that is worst on quiet passages, exactly where it is least welcome. Adding a small random noise decorrelates the error, converting it into a steady, signal-independent hiss.
 
 The total error energy is slightly greater. The audible result is much better, because the ear is far more tolerant of steady noise than of signal-dependent distortion.
 
@@ -197,7 +196,7 @@ The total error energy is slightly greater. The audible result is much better, b
 :label: fig:ch15-bit-depth
 :transcript: The same decaying note three times. The first is clean. The second is clean at first and then breaks up into a gritty, buzzy crackle as it fades. The third has an audible steady hiss but fades away smoothly.
 
-The same note at three quantizations. Listen to the **tails**. The undithered version does not merely get noisy as it decays — it becomes distorted and granular, because the error is following the signal. The dithered version has more noise overall and sounds better, which is the whole argument for dither.
+The same note at three quantizations. Listen to the **tails**. The undithered version does not merely get noisy as it decays, it becomes distorted and granular, because the error is following the signal. The dithered version has more noise overall and sounds better, which is the whole argument for dither.
 ```
 
 ## Perceptual Coding
@@ -206,13 +205,13 @@ The same note at three quantizations. Listen to the **tails**. The undithered ve
 
 A CD carries about $1.4$ megabits per second. An MP3 at $128$ kbit/s carries a tenth of that and most listeners cannot reliably tell them apart. Something is being thrown away, and the question is what.
 
-The answer comes straight from [Chapter 7](#ch-loudness). **If a component is masked, the listener cannot hear it — so it does not need to be stored.**
+The answer comes straight from [Chapter 7](#ch-loudness). **If a component is masked, the listener cannot hear it; so it does not need to be stored.**
 
 ```{figure} ../images/ch15-perceptual-coding.svg
 :label: fig:ch15-perceptual-coding
 :alt: A plot of level against frequency showing the threshold of hearing in quiet as a dashed curve, a raised masked threshold around a loud 900 Hz tone, and a set of tones of which those above the threshold are marked kept and those below are marked discarded.
 
-How a codec decides. It computes the **masked threshold** — the level below which nothing is audible, given what else is present — and discards everything under it. The discarded components are not approximated or attenuated; they are simply not stored.
+How a codec decides. It computes the **masked threshold**, the level below which nothing is audible, given what else is present, and discards everything under it. The discarded components are not approximated or attenuated; they are simply not stored.
 ```
 
 A codec works in short blocks, and for each one it transforms to the frequency domain, computes the masked threshold from a psychoacoustic model, allocates bits so that quantization noise in each band sits just below that threshold, and encodes the result.
@@ -223,7 +222,7 @@ A codec works in short blocks, and for each one it transforms to the frequency d
 :label: fig:ch15-codec
 :transcript: Two tones that sound essentially identical. The second has had three quiet partials removed entirely, and it is very hard to hear any difference at all.
 
-A loud $900$ Hz tone with three quiet partials, and the same with those partials deleted. They are hard to tell apart because the partials were masked — they were present in the signal and absent from your perception of it, so removing them changed nothing you could hear.
+A loud $900$ Hz tone with three quiet partials, and the same with those partials deleted. They are hard to tell apart because the partials were masked, they were present in the signal and absent from your perception of it, so removing them changed nothing you could hear.
 ```
 
 ### What a Lossy Codec Keeps
@@ -232,7 +231,7 @@ The bit allocation follows the ear's own priorities, and the consequences are vi
 
 **Low frequencies get more bits**, because the critical bands are narrower there and masking is less generous.
 
-**Steady tones compress well**; sharp transients compress badly. A transient needs short blocks to be located in time, and short blocks have poor frequency resolution ([Chapter 5](#ch-fourier-and-timbre)'s trade-off, in a new guise). This is why applause, castanets, and harpsichords are the classic hard cases, and why codecs switch block length dynamically.
+**Steady tones compress well**; sharp transients compress badly. A transient needs short blocks to be located in time, and short blocks have poor frequency resolution ([Chapter 5](#ch-fourier-and-timbre)'s trade-off, in a new guise). Applause, castanets, and harpsichords are the classic hard cases, and codecs switch block length dynamically for that reason.
 
 **Stereo is exploited.** Much of the two channels is common, and encoding a sum and a difference is cheaper than encoding both.
 
@@ -240,9 +239,9 @@ The bit allocation follows the ear's own priorities, and the consequences are vi
 
 Two honest caveats.
 
-**Lossy is lossy.** The discarded information is gone. Re-encoding an MP3 — decoding and re-encoding, as happens when a file is edited or converted — applies the model to a signal that has already been altered, and the errors accumulate. Archives should be stored losslessly.
+**Lossy is lossy.** The discarded information is gone. Re-encoding an MP3, decoding and re-encoding, as happens when a file is edited or converted, applies the model to a signal that has already been altered, and the errors accumulate. Archives should be stored losslessly.
 
-**The model can be wrong.** The masking model is built on average listeners and typical signals. Unusual material can defeat it, and the artefacts are characteristic: pre-echo, where a transient's quantization noise is spread backwards in time and becomes audible *before* the event that caused it, and a swirling, watery quality in cymbals where the codec's decisions change from block to block.
+**The model can be wrong.** The masking model is built on average listeners and typical signals. Unusual material can defeat it, and the artifacts are characteristic: pre-echo, where a transient's quantization noise is spread backwards in time and becomes audible *before* the event that caused it, and a swirling, watery quality in cymbals where the codec's decisions change from block to block.
 
 ## Synthesis
 
@@ -257,15 +256,15 @@ Three routes to a spectrum. Additive builds it partial by partial, subtractive c
 
 **Additive synthesis** builds a sound by summing sinusoids with individually chosen amplitudes and envelopes. It is Fourier's theorem run backwards, and it can produce any periodic sound whatever.
 
-Its weakness is not sound quality but **control**. A realistic instrument needs dozens of partials, each with its own time-varying amplitude, which is hundreds of parameters per note. The Hammond organ is additive synthesis with nine drawbars, and it sounds like a Hammond organ rather than like anything else — which says something about how far nine partials get you.
+Its weakness is not sound quality but **control**. A realistic instrument needs dozens of partials, each with its own time-varying amplitude, which is hundreds of parameters per note. The Hammond organ is additive synthesis with nine drawbars, and it sounds like a Hammond organ rather than like anything else, which says something about how far nine partials get you.
 
 ### Subtractive Synthesis and the Source–Filter Model Again
 
-**Subtractive synthesis** starts with a spectrally rich source — a sawtooth, a square, or noise — and removes what is not wanted with a filter.
+**Subtractive synthesis** starts with a spectrally rich source, a sawtooth, a square, or noise, and removes what is not wanted with a filter.
 
 This is exactly the **source–filter model** of [Chapter 13](#ch-the-singing-voice), and the analogy is not loose: the oscillator is the vocal folds and the filter is the vocal tract. A resonant low-pass filter with a swept cutoff is imitating a formant, and a synthesizer player sweeping a filter is doing what a singer does moving their tongue.
 
-It dominated analogue synthesis because it is efficient. Two or three controls — cutoff, resonance, and an envelope on the cutoff — produce an enormous range of usable timbres, where additive synthesis needs hundreds.
+It dominated analogue synthesis because it is efficient. Two or three controls, cutoff, resonance, and an envelope on the cutoff, produce an enormous range of usable timbres, where additive synthesis needs hundreds.
 
 ```{audio} ch15-additive, ch15-subtractive, ch15-fm
 :names: Additive, Subtractive, FM
@@ -273,7 +272,7 @@ It dominated analogue synthesis because it is efficient. Two or three controls �
 :label: fig:ch15-synthesis-audio
 :transcript: Three tones at the same pitch. The first is hollow and organ-like. The second starts bright and darkens as its filter closes. The third is metallic and bell-like, becoming purer as it decays.
 
-The same pitch by three methods. The subtractive example's filter sweep and the FM example's falling modulation index are doing the same job — making the spectrum change over the course of the note, which [Chapter 5](#ch-fourier-and-timbre) identified as the thing static synthesis most obviously lacks.
+The same pitch by three methods. The subtractive example's filter sweep and the FM example's falling modulation index are doing the same job, making the spectrum change over the course of the note, which [Chapter 5](#ch-fourier-and-timbre) identified as the thing static synthesis most obviously lacks.
 ```
 
 ### FM Synthesis and Sampling
@@ -286,13 +285,13 @@ $$
 f_c \pm n f_m, \qquad n = 0, 1, 2, \ldots
 $$
 
-whose amplitudes are Bessel functions of the **modulation index** — the ratio of frequency deviation to modulator frequency. Raising the index spreads energy into more sidebands.
+whose amplitudes are Bessel functions of the **modulation index**: the ratio of frequency deviation to modulator frequency. Raising the index spreads energy into more sidebands.
 
-Two features made it commercially decisive. It is **cheap**: two oscillators produce dozens of partials, which mattered enormously with 1980s hardware. And the **index can be varied over the note**, so a falling index makes a bright attack settle to a pure sustain — precisely the behaviour of a struck bar or a bell ([Chapter 12](#ch-percussion)), which is why FM's metallic and bell-like sounds were so much better than anything else available at the time.
+Two features made it commercially decisive. It is **cheap**: two oscillators produce dozens of partials, which mattered enormously with 1980s hardware. And the **index can be varied over the note**, so a falling index makes a bright attack settle to a pure sustain, precisely the behavior of a struck bar or a bell ([Chapter 12](#ch-percussion)). FM's metallic and bell-like sounds were therefore much better than anything else available at the time.
 
-If $f_c$ and $f_m$ are in a simple ratio, the sidebands land on a harmonic series and the sound is pitched. If not, they do not, and the result is inharmonic — which is the same distinction [Chapter 12](#ch-percussion) drew between a string and a gong, arrived at from the other direction.
+If $f_c$ and $f_m$ are in a simple ratio, the sidebands land on a harmonic series and the sound is pitched. If not, they do not, and the result is inharmonic, which is the same distinction [Chapter 12](#ch-percussion) drew between a string and a gong, arrived at from the other direction.
 
-**Sampling** — playing back recordings of real instruments — sidesteps synthesis entirely and dominates commercial music production. Its difficulty is that a sample is one note, at one dynamic, at one moment; covering an instrument's range requires many, and the couplings [Chapter 10](#ch-string-instruments) described — a piano played louder is also *brighter* — must be reproduced by switching between samples recorded at different dynamics. A sampler that changes only loudness sounds instantly wrong.
+**Sampling**, playing back recordings of real instruments, sidesteps synthesis entirely and dominates commercial music production. Its difficulty is that a sample is one note, at one dynamic, at one moment; covering an instrument's range requires many, and the couplings [Chapter 10](#ch-string-instruments) described: a piano played louder is also *brighter*, must be reproduced by switching between samples recorded at different dynamics. A sampler that changes only loudness sounds instantly wrong.
 
 ## Space in a Recording
 
@@ -300,7 +299,7 @@ If $f_c$ and $f_m$ are in a simple ratio, the sidebands land on a harmonic serie
 
 Two loudspeakers can produce a sound that appears to come from a point between them, where nothing is.
 
-The mechanism is **summing localization**. Identical signals from both give a phantom image at the centre. Making one louder — an **intensity** difference — pulls the image toward it, and about $15$–$18$ dB places it fully at one speaker. Making one earlier — a **time** difference — does the same, with about $1$ ms sufficing.
+The mechanism is **summing localization**. Identical signals from both give a phantom image at the center. Making one louder: an **intensity** difference, pulls the image toward it, and about $15$–$18$ dB places it fully at one speaker. Making one earlier: a **time** difference, does the same, with about $1$ ms sufficing.
 
 Both work because they crudely reproduce what a real source would do at the two ears.
 
@@ -314,29 +313,29 @@ Real localization uses three cues, and a recording can only approximate them.
 
 **Spectral cues from the pinna** resolve front from back and above from below ([Chapter 6](#ch-the-ear)), and they are the only cue that can. The whole direction-dependent filter is called the **head-related transfer function**.
 
-Ordinary stereo reproduces only the first two, and only crudely, which is why a stereo image is a line between the speakers rather than a space. **Binaural** recording, made with microphones in the ears of a dummy head, captures the HRTF as well, and over headphones produces a startling sense of height and behindness. Its limitation is that it encodes *somebody else's* ears, and that it breaks as soon as the listener turns their head — which is why head-tracked systems have become the standard approach.
+Ordinary stereo reproduces only the first two, and only crudely, so a stereo image is a line between the speakers rather than a space. **Binaural** recording, made with microphones in the ears of a dummy head, captures the HRTF as well, and over headphones produces a startling sense of height and behindness. Its limitation is that it encodes *somebody else's* ears, and that it breaks as soon as the listener turns their head, hence the rise of head-tracked systems.
 
 ### Reverberation, Real and Artificial
 
 Every recording must decide how much room to include, and the decision cannot be postponed: reverberation recorded into a track cannot be removed.
 
-Modern practice therefore records **dry** — close-miked, in a treated room — and adds reverberation afterwards. Two methods.
+Modern practice therefore records **dry**, close-miked, in a treated room, and adds reverberation afterwards. Two methods.
 
 **Algorithmic** reverberation builds a decaying field from networks of delays and filters. It is efficient, adjustable in every parameter, and can produce spaces that could not be built.
 
-**Convolution** reverberation uses a measured impulse response of a real hall and convolves the dry signal with it ([Chapter 14](#ch-room-acoustics)). It sounds exactly like that hall, from that seat, because it *is* that hall's response — at the cost of being fixed, since the response encodes one source position, one listening position, and one room.
+**Convolution** reverberation uses a measured impulse response of a real hall and convolves the dry signal with it ([Chapter 14](#ch-room-acoustics)). It sounds exactly like that hall, from that seat, because it *is* that hall's response, at the cost of being fixed, since the response encodes one source position, one listening position, and one room.
 
 And so the book's last idea is one of its first. [Chapter 3](#ch-superposition) established superposition; [Chapter 14](#ch-room-acoustics) established that a room's effect is completely described by its impulse response; and convolution reverb is nothing but those two facts applied at forty-four thousand samples per second. A recording engineer placing a soloist in the Concertgebouw is doing linear superposition, very fast.
 
 ## Summary
 
-- **Dynamic microphones** use a coil and magnet; **condensers** use a variable capacitor and a much lighter diaphragm. Both want a well-damped resonance outside the audio band — low $Q$, as in [Chapter 4](#ch-resonance).
+- **Dynamic microphones** use a coil and magnet; **condensers** use a variable capacitor and a much lighter diaphragm. Both want a well-damped resonance outside the audio band, low $Q$, as in [Chapter 4](#ch-resonance).
 - **Polar patterns** follow from whether the diaphragm senses pressure (omnidirectional) or pressure difference (figure-of-eight); cardioid is their sum. Every pressure-difference microphone shows **proximity effect**.
 - **Loudspeakers need multiple drivers**, because directivity depends on size against wavelength and music spans a factor of a thousand in wavelength. Enclosures prevent front-to-back cancellation; a bass-reflex port is a Helmholtz resonator.
 - **Linear distortion** rebalances existing frequencies and is in principle correctable; **nonlinear distortion** creates new ones and is not.
 - **The sampling theorem**: a signal with no energy above $f_{\max}$ is *completely* determined by samples at any rate above $2f_{\max}$. Reconstruction is exact.
 - **Aliasing** folds everything above the Nyquist frequency back below it, producing new frequencies at unrelated pitches. The anti-aliasing filter must act **before** sampling, because afterwards nothing can distinguish an alias from a real component.
-- **Quantization gives about $6$ dB of dynamic range per bit.** **Dither** adds noise before quantizing, converting signal-correlated distortion into steady hiss — more total error energy, much better sound.
+- **Quantization gives about $6$ dB of dynamic range per bit.** **Dither** adds noise before quantizing, converting signal-correlated distortion into steady hiss, more total error energy, much better sound.
 - **Perceptual coding discards masked components**, which by definition cannot be heard. It struggles with transients, because locating them in time requires short blocks and short blocks resolve frequency poorly.
 - **Additive synthesis** specifies every partial; **subtractive** filters a rich source and is the source–filter model again; **FM** generates Bessel-weighted sidebands from two oscillators, giving inharmonic spectra cheaply.
 - **Stereo works by summing localization**, reproducing interaural time and level differences but not the pinna cues that distinguish front from back. **Convolution reverb** is superposition plus a measured impulse response.
@@ -381,7 +380,7 @@ $$
 f_{\text{alias}} = |48000 - 30000| = 18\ \text{kHz}.
 $$
 
-Therefore a $30$ kHz component — inaudible in itself — appears as an $18$ kHz component, which is audible to many listeners and is not in the original at all.
+Therefore a $30$ kHz component, inaudible in itself, appears as an $18$ kHz component, which is audible to many listeners and is not in the original at all.
 :::
 
 :::{exercise}
@@ -406,7 +405,7 @@ $$
 1.41\times10^{6} \times 4440 = 6.27\times10^{9}\ \text{bits} = 7.83\times10^{8}\ \text{bytes} = 783\ \text{MB}.
 $$
 
-Therefore about $780$ MB, which is the familiar capacity of an audio CD — the format's storage was designed around exactly this calculation.
+Therefore about $780$ MB, which is the familiar capacity of an audio CD: the format's storage was designed around exactly this calculation.
 :::
 
 :::{exercise}
@@ -446,7 +445,7 @@ An MP3 at $128$ kbit/s replaces a CD stream. (a) What is the compression ratio? 
 
 (c) **Masking** ([Chapter 7](#ch-loudness)). At any instant, most of the spectral detail in a musical signal lies below the masked threshold set by the louder components, and a listener cannot hear it. A codec computes that threshold and spends bits only above it.
 
-Therefore the discarded $91\%$ is not "detail the listener might miss"; it is information the auditory system was never going to receive. That is why the compression is so much more effective than a general-purpose lossless compressor, which manages only about $2{:}1$ on audio.
+Therefore the discarded $91\%$ is not "detail the listener might miss"; it is information the auditory system was never going to receive. The compression is therefore much more effective than a general-purpose lossless compressor, which manages only about $2{:}1$ on audio.
 :::
 
 :::{exercise}
@@ -468,11 +467,11 @@ $$
 
 Negative frequencies fold back with inverted phase, so the set is $440$, $880$, $1320$, $1760$, $2200$ Hz.
 
-(b) **Yes** — every component is a multiple of $440$ Hz, so the result is a harmonic series and the sound is clearly pitched.
+(b) **Yes**, every component is a multiple of $440$ Hz, so the result is a harmonic series and the sound is clearly pitched.
 
-(c) With $f_m = 311$ Hz: $440 \pm 311 = 751, 129$; $440 \pm 622 = 1062, -182$; $440 \pm 933 = 1373, -493$. The set is $129$, $182$, $440$, $493$, $751$, $1062$, $1373$ Hz — no common fundamental, so the result is **inharmonic** and bell-like.
+(c) With $f_m = 311$ Hz: $440 \pm 311 = 751, 129$; $440 \pm 622 = 1062, -182$; $440 \pm 933 = 1373, -493$. The set is $129$, $182$, $440$, $493$, $751$, $1062$, $1373$ Hz, no common fundamental, so the result is **inharmonic** and bell-like.
 
-Therefore the ratio $f_c : f_m$ decides whether FM produces a pitched instrument or a percussion instrument, which is exactly the distinction of [Chapter 12](#ch-percussion) reached from the other direction.
+Therefore the ratio $f_c: f_m$ decides whether FM produces a pitched instrument or a percussion instrument, which is exactly the distinction of [Chapter 12](#ch-percussion) reached from the other direction.
 :::
 
 :::{exercise}
@@ -485,13 +484,13 @@ A stereo pair is fed a signal with the left channel $6$ dB louder. (a) Where doe
 :label: sol-electronic-and-recorded-sound-6
 :class: dropdown
 
-(a) Full deflection to one speaker takes about $15$–$18$ dB, so $6$ dB places the image roughly a third of the way from centre to the left speaker.
+(a) Full deflection to one speaker takes about $15$–$18$ dB, so $6$ dB places the image roughly a third of the way from center to the left speaker.
 
 (b) Full deflection takes about $1$ ms, so a comparable shift needs roughly $0.3$ ms of delay on the right channel.
 
 (c) Both crudely reproduce what a real source to the left would produce at the ears: it would arrive sooner and louder at the left ear. The auditory system integrates the two loudspeakers' outputs and infers a direction consistent with the cues it receives.
 
-Therefore intensity and time panning are interchangeable to a first approximation, and are used interchangeably — though they are not identical, and combining them inconsistently produces an unstable image.
+Therefore intensity and time panning are interchangeable to a first approximation, and are used interchangeably, though they are not identical, and combining them inconsistently produces an unstable image.
 :::
 
 :::{exercise}
@@ -514,9 +513,9 @@ $$
 
 (b) Somewhere around $1.5$–$2.5$ kHz.
 
-(c) The crossover should hand over before the woofer starts beaming — that is, at or below about $1.4$ kHz by the calculation above, though in practice a little above is tolerated. It must not be so low that the tweeter is asked to move air at frequencies where its small cone cannot produce enough displacement without distorting.
+(c) The crossover should hand over before the woofer starts beaming: that is, at or below about $1.4$ kHz by the calculation above, though in practice a little above is tolerated. It must not be so low that the tweeter is asked to move air at frequencies where its small cone cannot produce enough displacement without distorting.
 
-Therefore the choice is squeezed from both sides, and $2$ kHz is the usual compromise — which is unfortunate, since it sits in the region where hearing is most sensitive and where the ear most easily detects the discontinuity.
+Therefore the choice is squeezed from both sides, and $2$ kHz is the usual compromise, which is unfortunate, since it sits in the region where hearing is most sensitive and where the ear most easily detects the discontinuity.
 :::
 
 :::{exercise}
@@ -529,7 +528,7 @@ Explain quantitatively why a $44.1$ kHz sampling rate is used rather than exactl
 :label: sol-electronic-and-recorded-sound-8
 :class: dropdown
 
-At exactly $40$ kHz the Nyquist frequency is $20$ kHz, so the anti-aliasing filter would need to pass $20$ kHz unattenuated and stop everything above $20$ kHz completely — an infinitely steep transition, which is impossible.
+At exactly $40$ kHz the Nyquist frequency is $20$ kHz, so the anti-aliasing filter would need to pass $20$ kHz unattenuated and stop everything above $20$ kHz completely: an infinitely steep transition, which is impossible.
 
 At $44.1$ kHz the Nyquist frequency is $22.05$ kHz, leaving a transition band from $20$ to $22.05$ kHz. Expressed as a slope requirement, the filter must fall from passband to stopband over
 
@@ -537,7 +536,7 @@ $$
 1200\log_2\!\left(\frac{22050}{20000}\right) = 169\ \text{cents},
 $$
 
-under a tone and a half — still a demanding filter, but a buildable one.
+under a tone and a half, still a demanding filter, but a buildable one.
 
 Therefore the extra $4.1$ kHz buys the filter room to work. The precise figure is historical rather than acoustic: early digital audio was stored on video recorders, and $44.1$ kHz is what fell out of the available line and field rates.
 :::
@@ -561,11 +560,11 @@ $$
 2(220) - 330 = 110\ \text{Hz},\quad 2(330) - 220 = 440\ \text{Hz}.
 $$
 
-(b) Yes, in this case — all of them. The two inputs are a perfect fifth apart ($3{:}2$), so they are harmonics 2 and 3 of a common fundamental at $110$ Hz, and every intermodulation product is therefore also a harmonic of $110$ Hz.
+(b) Yes, in this case, all of them. The two inputs are a perfect fifth apart ($3{:}2$), so they are harmonics 2 and 3 of a common fundamental at $110$ Hz, and every intermodulation product is therefore also a harmonic of $110$ Hz.
 
-(c) That is precisely why the sound works. For **consonant** intervals the distortion products fall on the existing harmonic series and add weight rather than dissonance — which is why power chords, built on fifths, sound so good through a distorted amplifier.
+(c) That is precisely why the sound works. For **consonant** intervals the distortion products fall on the existing harmonic series and add weight rather than dissonance. Power chords, built on fifths, sound so good through a distorted amplifier for that reason.
 
-For a more complex chord — a major third, say — the products do *not* all fall on a common series, and the result is muddy. Guitarists know this as the rule that distorted chords should be kept to two notes, and the reason is the arithmetic above.
+For a more complex chord, a major third, say, the products do *not* all fall on a common series, and the result is muddy. Guitarists know this as the rule that distorted chords should be kept to two notes, and the reason is the arithmetic above.
 :::
 
 :::{exercise}
@@ -588,7 +587,7 @@ $$
 
 (c) Two trillion multiplications per channel is far too many for real time on modest hardware.
 
-The remedy is the **convolution theorem**: convolution in time is multiplication in frequency, so the operation can be done by transforming both signals, multiplying, and transforming back. Using the fast Fourier transform this reduces the cost by roughly a factor of $N/\log_2 N$, which here is about $10^4$ — bringing two trillion operations down to a few hundred million, which is entirely practical.
+The remedy is the **convolution theorem**: convolution in time is multiplication in frequency, so the operation can be done by transforming both signals, multiplying, and transforming back. Using the fast Fourier transform this reduces the cost by roughly a factor of $N/\log_2 N$, which here is about $10^4$, bringing two trillion operations down to a few hundred million, which is entirely practical.
 
 Therefore convolution reverb is possible because of Fourier's theorem, which is a pleasing place for a book that began with a vibrating string to end.
 :::
@@ -629,7 +628,7 @@ $$
 = 1.76 + 6.02\,b\ \text{dB}.
 $$
 
-Therefore each additional bit doubles the number of levels, halves the step, and buys $20\log_{10}2 = 6.02$ dB — and the $1.76$ dB offset comes from the ratio between a sine's mean square and a uniform error's.
+Therefore each additional bit doubles the number of levels, halves the step, and buys $20\log_{10}2 = 6.02$ dB, and the $1.76$ dB offset comes from the ratio between a sine's mean square and a uniform error's.
 :::
 
 :::{exercise}
@@ -642,13 +641,13 @@ A recording is made with a cardioid microphone $30$ cm from a singer, in a room 
 :label: sol-electronic-and-recorded-sound-12
 :class: dropdown
 
-(a) At $30$ cm the microphone is well inside the critical distance, so the direct sound dominates heavily — this is a dry, close recording.
+(a) At $30$ cm the microphone is well inside the critical distance, so the direct sound dominates heavily, this is a dry, close recording.
 
 (b) At $2.5$ m the microphone is beyond the critical distance, so the reverberant field dominates and the recording captures mostly room.
 
 (c) For most modern production, the **close** position. A dry recording can have reverberation added afterwards by convolution ([Chapter 14](#ch-room-acoustics)), and the amount can be chosen at mixing time. Reverberation recorded into a track cannot be removed.
 
-Two caveats. The close position will show **proximity effect**, boosting the bass substantially, which must be corrected or exploited. And if the room is genuinely good — a fine hall — the distant position captures something an artificial reverberation cannot quite reproduce, which is why classical recording still uses distant main pairs.
+Two caveats. The close position will show **proximity effect**, boosting the bass substantially, which must be corrected or exploited. And if the room is genuinely good, a fine hall, the distant position captures something an artificial reverberation cannot quite reproduce. Classical recording still uses distant main pairs for that reason.
 :::
 
 :::{exercise}
@@ -665,11 +664,11 @@ A codec works on blocks. Within each block it transforms to the frequency domain
 
 The quantization noise it introduces is spread **uniformly over the whole block**, because the quantization happens in the frequency domain and a frequency-domain error has no localization in time.
 
-Now consider a block containing a castanet click: silence for most of its duration, then a loud transient. The masking model computes a threshold from the block's overall spectrum, which the loud transient dominates, so a generous amount of noise is permitted. That noise is then spread across the entire block — including the silent part *before* the click.
+Now consider a block containing a castanet click: silence for most of its duration, then a loud transient. The masking model computes a threshold from the block's overall spectrum, which the loud transient dominates, so a generous amount of noise is permitted. That noise is then spread across the entire block, including the silent part *before* the click.
 
 The result is a burst of noise audible in the silence preceding the transient: **pre-echo**.
 
-[Chapter 5](#ch-fourier-and-timbre)'s trade-off is what makes this unavoidable in principle: locating the transient precisely in time requires a short block, and a short block resolves frequency poorly, which degrades the masking model. Codecs respond by **switching block length dynamically**, using short blocks when a transient is detected and long ones otherwise — which mitigates the problem without eliminating it.
+[Chapter 5](#ch-fourier-and-timbre)'s trade-off is what makes this unavoidable in principle: locating the transient precisely in time requires a short block, and a short block resolves frequency poorly, which degrades the masking model. Codecs respond by **switching block length dynamically**, using short blocks when a transient is detected and long ones otherwise, which mitigates the problem without eliminating it.
 :::
 
 :::{exercise}
@@ -682,13 +681,13 @@ A sampler reproduces a piano by pitch-shifting one recorded note. (a) What goes 
 :label: sol-electronic-and-recorded-sound-14
 :class: dropdown
 
-(a) Pitch-shifting by resampling scales *every* frequency in the recording, including the resonances of the soundboard and body. But those resonances are properties of the instrument and do **not** move when the pitch changes — they are formants, in the sense of [Chapter 13](#ch-the-singing-voice). Shifting an octave moves them an octave too, and the result sounds like a smaller instrument. Shifting down produces the well-known "munchkinization" in reverse.
+(a) Pitch-shifting by resampling scales *every* frequency in the recording, including the resonances of the soundboard and body. But those resonances are properties of the instrument and do **not** move when the pitch changes, they are formants, in the sense of [Chapter 13](#ch-the-singing-voice). Shifting an octave moves them an octave too, and the result sounds like a smaller instrument. Shifting down produces the well-known "munchkinization" in reverse.
 
-The note's *duration* also scales, so the shifted note decays twice as fast — which is wrong, since a real piano's high notes decay faster for reasons of string mass, not by a factor of exactly two.
+The note's *duration* also scales, so the shifted note decays twice as fast, which is wrong, since a real piano's high notes decay faster for reasons of string mass, not by a factor of exactly two.
 
-(b) [Chapter 10](#ch-string-instruments) showed that a piano hammer's felt is nonlinear: struck harder, contact time shortens and more high harmonics survive. **A piano played louder is brighter, not merely louder.** A sampler with one dynamic level can only change the volume, so a *fortissimo* sounds like a *pianissimo* turned up — instantly recognizable as wrong.
+(b) [Chapter 10](#ch-string-instruments) showed that a piano hammer's felt is nonlinear: struck harder, contact time shortens and more high harmonics survive. **A piano played louder is brighter, not merely louder.** A sampler with one dynamic level can only change the volume, so a *fortissimo* sounds like a *pianissimo* turned up, instantly recognizable as wrong.
 
 (c) Both failures come from the same source: an instrument is not a single sound with adjustable pitch and volume. Its spectrum depends on the note and on the dynamic, through mechanisms [Chapter 10](#ch-string-instruments) described.
 
-Therefore good samplers record many notes across the range, at several dynamic levels, and cross-fade between them — which is why a convincing sampled piano runs to many gigabytes.
+Therefore good samplers record many notes across the range, at several dynamic levels, and cross-fade between them. A convincing sampled piano therefore runs to many gigabytes.
 :::

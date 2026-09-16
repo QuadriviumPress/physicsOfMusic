@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import fs from 'node:fs';
 import plugin from '../plugins/simulation.mjs';
 
 function render(name, arg, options = {}) {
@@ -42,7 +43,9 @@ test('parameters, accessible names, and explicit fallback options survive', () =
 });
 
 test('generic simulations have a local fallback and invalid providers report errors', () => {
-  assert.equal(render('simulation', 'https://example.test/sim').children[1].url, '/images/simulation-placeholder.png');
+  const fallback = render('simulation', 'https://example.test/sim').children[1];
+  assert.ok(fs.existsSync(new URL(`..${fallback.url}`, import.meta.url)), 'default fallback must exist in the repository');
+  assert.match(fallback.alt, /caption link/);
   assert.match(JSON.stringify(render('simulation', 'unknown:sim')), /unknown simulation provider/);
   assert.equal(render('simulation', 'https://example.test/sim', { 'no-placeholder': true, 'no-link': true }).children.length, 1);
 });

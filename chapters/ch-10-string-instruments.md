@@ -39,13 +39,13 @@ Part V takes the machinery of the first nine chapters and applies it to instrume
 2. **How is energy put into it?**
 3. **How does the vibration reach the air?**
 
-For string instruments, the first answer is already known. [Chapter 3](#ch-superposition) derived the modes of a string fixed at both ends, and found $f_n = (n/2L)\sqrt{T/\mu}$ — a complete harmonic series, which is why a string has a definite pitch and a good one.
+For string instruments, the first answer is already known. [Chapter 3](#ch-superposition) derived the modes of a string fixed at both ends, and found $f_n = (n/2L)\sqrt{T/\mu}$: a complete harmonic series, so a string has a definite pitch and a good one.
 
 The other two questions are where the instruments differ, and where the interesting physics lies.
 
-The **second** question — how energy gets in — turns out to control the timbre almost entirely. [Chapter 4](#ch-resonance) showed that a pluck decomposes into modes, and that the pluck point determines which. Plucking, bowing, and striking excite quite different spectra from the same string, and within each, exactly where you do it matters as much as how hard.
+The **second** question, how energy gets in, turns out to control the timbre almost entirely. [Chapter 4](#ch-resonance) showed that a pluck decomposes into modes, and that the pluck point determines which. Plucking, bowing, and striking excite quite different spectra from the same string, and within each, exactly where you do it matters as much as how hard.
 
-The **third** question is a problem rather than a mechanism. A vibrating string, on its own, is almost silent. [Chapter 2](#ch-wave-motion) gave the reason: the impedance mismatch between a thin dense string and thin light air is enormous, and almost no energy crosses. Everything else about a string instrument — the bridge, the body, the soundboard, the shape, the wood — exists to solve that problem, and the solutions are what make a guitar sound different from a violin.
+The **third** question is a problem rather than a mechanism. A vibrating string, on its own, is almost silent. [Chapter 2](#ch-wave-motion) gave the reason: the impedance mismatch between a thin dense string and thin light air is enormous, and almost no energy crosses. Everything else about a string instrument, the bridge, the body, the soundboard, the shape, the wood, exists to solve that problem, and the solutions are what make a guitar sound different from a violin.
 
 ## The Vibrating String
 
@@ -59,7 +59,7 @@ $$
 
 Three levers, and each has a characteristic use.
 
-**Length** is the player's lever. A finger on a fingerboard or a fret shortens the string, and pitch goes as $1/L$ — the only one of the three that is a simple inverse, and so the only one suited to rapid, accurate, continuous control.
+**Length** is the player's lever. A finger on a fingerboard or a fret shortens the string, and pitch goes as $1/L$: the only one of the three that is a simple inverse, and so the only one suited to rapid, accurate, continuous control.
 
 **Tension** is the tuner's lever. Pitch goes as $\sqrt{T}$, so an octave costs four times the tension. Strings already run close to their breaking stress, so this lever has very little travel, which is exactly what makes it good for fine tuning.
 
@@ -74,9 +74,9 @@ $$
 d = 4 \times 0.25\ \text{mm} = 1.0\ \text{mm}.
 $$
 
-That is a steel rod a millimetre thick. Two things go wrong with it.
+That is a steel rod a millimeter thick. Two things go wrong with it.
 
-**It is far too stiff to bend.** [Chapter 5](#ch-fourier-and-timbre) showed that stiffness makes the partials inharmonic, and the inharmonicity coefficient rises steeply with diameter — a $1$ mm plain string would be audibly and unpleasantly out of tune with itself.
+**It is far too stiff to bend.** [Chapter 5](#ch-fourier-and-timbre) showed that stiffness makes the partials inharmonic, and the inharmonicity coefficient rises steeply with diameter: a $1$ mm plain string would be audibly and unpleasantly out of tune with itself.
 
 **It will not bend over the bridge or turn round a tuning peg** without taking a permanent set.
 
@@ -122,7 +122,7 @@ $$
 
 with $a$ the distance of the pluck from one end.
 
-Two factors, doing two different jobs. The $1/n^2$ makes high harmonics weak whatever you do — this is why a plucked string is not harsh. The $\sin(n\pi a/L)$ is the interesting one: it vanishes whenever $a = L/n$, so **plucking at $L/n$ removes the $n$th harmonic and all its multiples**, and it also tilts the whole spectrum according to where $a$ is.
+Two factors, doing two different jobs. The $1/n^2$ makes high harmonics weak whatever you do, this is why a plucked string is not harsh. The $\sin(n\pi a/L)$ is the interesting one: it vanishes whenever $a = L/n$, so **plucking at $L/n$ removes the $n$th harmonic and all its multiples**, and it also tilts the whole spectrum according to where $a$ is.
 
 ```{figure} ../images/ch10-pluck-position.svg
 :label: fig:ch10-pluck-position
@@ -137,7 +137,7 @@ Three pluck positions on one string. At the middle, every even harmonic vanishes
 :label: fig:ch10-pluck-audio
 :transcript: The same string plucked three times. The first is soft and hollow; the second full and balanced; the third thin, bright and nasal, like a harpsichord.
 
-The same string, the same pitch, the same loudness — three right-hand positions. This is why a guitarist's right hand moves as much as the left, and it is [Chapter 4](#ch-resonance)'s mode-decomposition made audible.
+The same string, the same pitch, the same loudness, three right-hand positions. A guitarist's right hand moves as much as the left for that reason, and it is [Chapter 4](#ch-resonance)'s mode-decomposition made audible.
 ```
 
 The guitar vocabulary follows directly: *sul tasto* or "over the fingerboard" means plucking near the middle for a mellow sound; *sul ponticello* or "at the bridge" means plucking near the end for a bright one.
@@ -159,14 +159,14 @@ The remarkable part is the *shape* the string takes while this happens.
 :label: fig:ch10-helmholtz-motion
 :alt: Left, a string drawn at five instants, in each case as two straight segments meeting at a kink, with the kink at successive positions along a dashed parabolic envelope. Right, the string's velocity at the bow, holding constant at bow speed and then dropping sharply for a brief slip once per period.
 
-**Helmholtz motion.** At every instant the string is exactly two straight lines meeting at a sharp kink, and the kink travels around a parabolic envelope once per period. The right panel shows the consequence at the bow: the string moves with the bow for most of the cycle and slips back quickly once — one slip per period, which is what sets the pitch.
+**Helmholtz motion.** At every instant the string is exactly two straight lines meeting at a sharp kink, and the kink travels around a parabolic envelope once per period. The right panel shows the consequence at the bow: the string moves with the bow for most of the cycle and slips back quickly once, one slip per period, which is what sets the pitch.
 ```
 
 Two consequences follow, and both matter.
 
 **The pitch is set by the string, not by the bow.** One slip occurs per round trip of the kink, and that round trip takes exactly one period of the fundamental. Bow speed and pressure change the loudness and the timbre; they do not change the pitch.
 
-**The spectrum is a sawtooth.** The force the string applies to the bridge is proportional to the string's slope there, and the kink passing the bridge makes that slope jump abruptly once per cycle. A sawtooth contains every harmonic, falling as $1/n$ — much richer than a pluck's $1/n^2$, which is why a bowed note is brighter and more penetrating than a plucked one.
+**The spectrum is a sawtooth.** The force the string applies to the bridge is proportional to the string's slope there, and the kink passing the bridge makes that slope jump abruptly once per cycle. A sawtooth contains every harmonic, falling as $1/n$, much richer than a pluck's $1/n^2$, so a bowed note is brighter and more penetrating than a plucked one.
 
 ```{audio} ch10-bowed, ch10-plucked
 :names: Bowed, Plucked
@@ -178,16 +178,16 @@ The same string, excited two ways. Note that two things differ, and they are ind
 ```
 
 :::{note}
-Helmholtz motion only establishes itself within a certain range of bow force and bow position, mapped out by John Schelleng in 1973. Too little force and the string never sticks — the result is a whistling, unfocused sound called *surface sound*. Too much and the string sticks too long, producing a raucous crunch. The window narrows sharply as the bow moves toward the bridge, which is precisely why *sul ponticello* is difficult to control and why beginners sound scratchy.
+Helmholtz motion only establishes itself within a certain range of bow force and bow position, mapped out by John Schelleng in 1973. Too little force and the string never sticks: the result is a whistling, unfocused sound called *surface sound*. Too much and the string sticks too long, producing a raucous crunch. The window narrows sharply as the bow moves toward the bridge, which is precisely why *sul ponticello* is difficult to control and why beginners sound scratchy.
 :::
 
 ### Striking: The Hammer and the Contact Time
 
 A piano hammer is the third mechanism. It differs from a pluck in two ways that both matter.
 
-**The contact time is finite.** A hammer stays on the string for a millisecond or two — long enough to span a significant fraction of the period of the high harmonics. Any harmonic whose half-period is shorter than the contact time is suppressed, because the hammer is still there when it tries to come back. The hammer therefore acts as a low-pass filter, and a soft hammer, which stays in contact longer, produces a mellower note than a hard one.
+**The contact time is finite.** A hammer stays on the string for a millisecond or two, long enough to span a significant fraction of the period of the high harmonics. Any harmonic whose half-period is shorter than the contact time is suppressed, because the hammer is still there when it tries to come back. The hammer therefore acts as a low-pass filter, and a soft hammer, which stays in contact longer, produces a mellower note than a hard one.
 
-**The hammer is nonlinear.** Felt compresses stiffer the harder it is squeezed, so a loud blow has a shorter contact time than a quiet one. The consequence is that **a piano played louder is also brighter**, not merely louder — a coupling between dynamics and timbre that is a large part of what the instrument is expressive with.
+**The hammer is nonlinear.** Felt compresses stiffer the harder it is squeezed, so a loud blow has a shorter contact time than a quiet one. The consequence is that **a piano played louder is also brighter**, not merely louder: a coupling between dynamics and timbre that is a large part of what the instrument is expressive with.
 
 ## From String to Air
 
@@ -197,12 +197,12 @@ Now the third question. A string moving in air pushes very little air: it is thi
 
 ```{figure} ../images/ch10-impedance-chain.svg
 :label: fig:ch10-impedance-chain
-:alt: Four circles connected by arrows, labelled string with high impedance, bridge coupling the two, soundboard large and light with low impedance, and air with very low impedance.
+:alt: Four circles connected by arrows, labeled string with high impedance, bridge coupling the two, soundboard large and light with low impedance, and air with very low impedance.
 
 The chain. No single step bridges the gap between a steel string and open air; the instrument steps down the impedance in stages, and each stage is a piece of the instrument a maker can adjust.
 ```
 
-A useful check on how bad the mismatch is: an electric guitar has a solid body and therefore an almost perfect mismatch. Unplugged, it is barely audible, and it sustains for a very long time — because the energy has nowhere to go. That is [Chapter 4](#ch-resonance)'s trade-off in its purest form.
+A useful check on how bad the mismatch is: an electric guitar has a solid body and therefore an almost perfect mismatch. Unplugged, it is barely audible, and it sustains for a very long time, because the energy has nowhere to go. That is [Chapter 4](#ch-resonance)'s trade-off in its purest form.
 
 ### The Bridge
 
@@ -210,7 +210,7 @@ The **bridge** is the coupling element, and it does two jobs.
 
 It **transmits** the string's transverse force to the top plate. The string's tension pulls down over the bridge, and as the string vibrates, that downward force varies, driving the plate.
 
-It **filters**. A bridge has mass and stiffness of its own, so it has resonances, and it passes some frequencies better than others. A violin bridge has a strong resonance around $3$ kHz — the **bridge hill** — which lands squarely in the region of greatest hearing sensitivity ([Chapter 7](#ch-loudness)) and contributes a good deal of the violin's carrying power.
+It **filters**. A bridge has mass and stiffness of its own, so it has resonances, and it passes some frequencies better than others. A violin bridge has a strong resonance around $3$ kHz, the **bridge hill**, which lands squarely in the region of greatest hearing sensitivity ([Chapter 7](#ch-loudness)) and contributes a good deal of the violin's carrying power.
 
 Bridge design is therefore a filter-design problem, and violin makers adjust it by carving: thinning the bridge's waist lowers its resonance, and cutting away the "kidneys" changes its coupling.
 
@@ -218,11 +218,11 @@ Bridge design is therefore a filter-design problem, and violin makers adjust it 
 
 The **soundboard** is the actual radiator. Its job is to present a large, light surface to the air.
 
-- **Large**, because a small source radiates poorly at low frequencies — the wavelengths involved are metres and a small body cannot get a grip on them ([Chapter 2](#ch-wave-motion)).
+- **Large**, because a small source radiates poorly at low frequencies: the wavelengths involved are meters and a small body cannot get a grip on them ([Chapter 2](#ch-wave-motion)).
 - **Light**, because a heavy plate is hard for the string to drive.
 - **Stiff**, because a floppy plate will not move as a unit.
 
-Light and stiff are contradictory in most materials, and this is why instrument soundboards are made of spruce and have been for five hundred years. Spruce has an exceptionally high stiffness-to-density ratio along the grain — and [Chapter 2](#ch-wave-motion) noted that sound travels along the grain some four times faster than across it. Soundboards are cut with the grain running the length of the instrument for exactly that reason.
+Light and stiff are contradictory in most materials, and this is why instrument soundboards are made of spruce and have been for five hundred years. Spruce has an exceptionally high stiffness-to-density ratio along the grain, and [Chapter 2](#ch-wave-motion) noted that sound travels along the grain some four times faster than across it. Soundboards are cut with the grain running the length of the instrument for exactly that reason.
 
 ## The Guitar
 
@@ -232,7 +232,7 @@ A guitar's frets are placed so that stopping at fret $n$ shortens the string by 
 
 The scheme has a systematic error. Pressing a string to a fret **stretches** it slightly, raising its tension and therefore its pitch. The effect is worse higher up the neck, where the string must be pushed further, and worse on thick strings.
 
-The remedy is **compensation**: the bridge saddle is set slightly *further* from the nut than the theoretical scale length, and by a different amount for each string, so that the stretching error cancels. Look at an electric guitar's bridge and the six saddles are visibly staggered — that stagger is this correction.
+The remedy is **compensation**: the bridge saddle is set slightly *further* from the nut than the theoretical scale length, and by a different amount for each string, so that the stretching error cancels. Look at an electric guitar's bridge and the six saddles are visibly staggered, that stagger is this correction.
 
 ### Body Resonances and the Helmholtz Air Mode
 
@@ -240,22 +240,22 @@ A guitar body's response is not flat.
 
 ```{figure} ../images/ch10-body-response.svg
 :label: fig:ch10-body-response
-:alt: A response curve for a guitar body on logarithmic frequency axes, showing three isolated peaks below 300 Hz labelled air, top plate and back plate, and a dense forest of overlapping peaks above 400 Hz.
+:alt: A response curve for a guitar body on logarithmic frequency axes, showing three isolated peaks below 300 Hz labeled air, top plate and back plate, and a dense forest of overlapping peaks above 400 Hz.
 
 A guitar body's frequency response. Below about $300$ Hz there are a few isolated, individually identifiable modes. Above it, the modes become so numerous and closely spaced that they merge into a lumpy continuum. Makers can tune the low modes deliberately; the forest above can only be influenced statistically.
 ```
 
 The lowest peak is the **Helmholtz air resonance** of [Chapter 4](#ch-resonance): the body cavity and soundhole acting as a mass of air bouncing on a spring of air, typically around $100$ Hz on a steel-string guitar. It is deliberately placed near the bottom of the instrument's range, where the top plate alone radiates poorly, and it is why a guitar has a soundhole rather than merely a hollow body.
 
-Above it come the plate modes — the top plate flexing, the back plate flexing, and the two coupled through the air and through the sides.
+Above it come the plate modes: the top plate flexing, the back plate flexing, and the two coupled through the air and through the sides.
 
 ### Why Two Guitars Sound Different
 
 Everything in this chapter so far applies equally to any guitar. What distinguishes one instrument from another is almost entirely the **filter**: the placement, strength, and $Q$ of the body's resonances.
 
-That is why the bracing pattern under the top plate is the central object of guitar design, and why makers argue about it. The braces set the top's stiffness distribution, which sets its mode shapes and frequencies, which sets the filter. Thin a brace by half a millimetre and the filter changes.
+The bracing pattern under the top plate is therefore the central object of guitar design, and makers argue about it. The braces set the top's stiffness distribution, which sets its mode shapes and frequencies, which sets the filter. Thin a brace by half a millimeter and the filter changes.
 
-It is also why the argument is hard to settle. [Chapter 4](#ch-resonance)'s trade-off is unavoidable — bracing for volume costs sustain and evenness — and different makers and players weigh those differently.
+It is also why the argument is hard to settle. [Chapter 4](#ch-resonance)'s trade-off is unavoidable, bracing for volume costs sustain and evenness, and different makers and players weigh those differently.
 
 ## The Violin Family
 
@@ -269,7 +269,7 @@ The rule of thumb is that these three must be traded against one another. Playin
 
 Inside a violin are two pieces of wood that do not touch the strings and are essential.
 
-The **soundpost** is a spruce dowel wedged between the top and back plates under the treble foot of the bridge. It does two things at once. Structurally, it resists the downward force of the strings — some $90$ N pressing on the bridge. Acoustically, it pins one foot of the bridge so that the bridge **rocks** about it rather than moving up and down as a whole, which is what converts the string's motion into an efficient drive of the top plate. Moving a soundpost by half a millimetre audibly changes an instrument, and it is the first thing a luthier adjusts.
+The **soundpost** is a spruce dowel wedged between the top and back plates under the treble foot of the bridge. It does two things at once. Structurally, it resists the downward force of the strings, some $90$ N pressing on the bridge. Acoustically, it pins one foot of the bridge so that the bridge **rocks** about it rather than moving up and down as a whole, which is what converts the string's motion into an efficient drive of the top plate. Moving a soundpost by half a millimeter audibly changes an instrument, and it is the first thing a luthier adjusts.
 
 The **bass bar** is a spruce strip glued under the top on the bass side. It stiffens the plate lengthwise, spreads the bridge's drive along the instrument, and lowers the frequency of the important low modes.
 
@@ -279,23 +279,23 @@ Three named features of the violin's response are worth knowing.
 
 The **air mode** near $280$ Hz is the Helmholtz resonance of the body through the f-holes, and it supports the bottom of the instrument's range, close to the open G string.
 
-The **bridge hill** near $3$ kHz is the bridge's own resonance, and it is the violin's projection. It coincides with the ear's most sensitive region and with the singer's formant of [Chapter 13](#ch-the-singing-voice) — several unrelated traditions have independently converged on putting energy at $3$ kHz, because that is where the ear is listening.
+The **bridge hill** near $3$ kHz is the bridge's own resonance, and it is the violin's projection. It coincides with the ear's most sensitive region and with the singer's formant of [Chapter 13](#ch-the-singing-voice), several unrelated traditions have independently converged on putting energy at $3$ kHz, because that is where the ear is listening.
 
-The **wolf note** is a defect rather than a feature. If a strongly radiating body resonance lies at the same frequency as a note the player wants, the body absorbs energy from the string so efficiently that the string cannot maintain steady Helmholtz motion. The two alternately grab the energy, and the result is a stuttering, howling note — usually around E or F on a cello. The standard remedy is a **wolf eliminator**, a small mass clamped to the string beyond the bridge, which splits the offending resonance into two weaker ones on either side.
+The **wolf note** is a defect rather than a feature. If a strongly radiating body resonance lies at the same frequency as a note the player wants, the body absorbs energy from the string so efficiently that the string cannot maintain steady Helmholtz motion. The two alternately grab the energy, and the result is a stuttering, howling note, usually around E or F on a cello. The standard remedy is a **wolf eliminator**, a small mass clamped to the string beyond the bridge, which splits the offending resonance into two weaker ones on either side.
 
 ## The Piano
 
 ### A String Under Great Tension
 
-A modern piano is an extreme instrument. Its strings carry a total tension of around $200$ kN — some twenty tonnes — which is why it has a cast-iron frame, and which is the reason the modern piano could not exist before the industrial techniques to cast one.
+A modern piano is an extreme instrument. Its strings carry a total tension of around $200$ kN, some twenty tonnes, so it needs a cast-iron frame, and the modern piano could not exist before the industrial techniques to cast one.
 
-The range is seven and a quarter octaves, a factor of $150$ in frequency, and the formula $f = (1/2L)\sqrt{T/\mu}$ cannot cover that with length alone: the lowest string would have to be over ten metres. So all three levers are used at once — the bass strings are longer, heavier (wound), and at somewhat lower tension.
+The range is seven and a quarter octaves, a factor of $150$ in frequency, and the formula $f = (1/2L)\sqrt{T/\mu}$ cannot cover that with length alone: the lowest string would have to be over ten meters. So all three levers are used at once: the bass strings are longer, heavier (wound), and at somewhat lower tension.
 
 ### Hammers, Strike Point, and Unisons
 
-Piano hammers strike at about $1/7$ to $1/8$ of the string's length, and the choice is deliberate. §10.2's rule says this suppresses the 7th (or 8th) harmonic and its multiples — and the 7th harmonic is $31$ cents flat of any equal-tempered note ([Chapter 9](#ch-scales-and-tuning)), so it clashes with every chord the instrument plays. Striking at $L/7$ removes it.
+Piano hammers strike at about $1/7$ to $1/8$ of the string's length, and the choice is deliberate. §10.2's rule says this suppresses the 7th (or 8th) harmonic and its multiples, and the 7th harmonic is $31$ cents flat of any equal-tempered note ([Chapter 9](#ch-scales-and-tuning)), so it clashes with every chord the instrument plays. Striking at $L/7$ removes it.
 
-Most notes have **two or three strings** tuned to the same pitch. The reason is not simply loudness: three strings give $10\log_{10}3 = 4.8$ dB, which is a small return for tripling the hardware. The real reason is **sustain**. A single string coupled to a soundboard efficient enough to be loud dies very quickly. Three strings, very slightly detuned and coupled through the bridge, exchange energy back and forth — and the note decays in two stages, a fast initial fall followed by a long, quiet "aftersound". That two-stage decay is one of the most recognizable features of a piano, and the *una corda* pedal, which shifts the action so the hammer strikes fewer strings, changes it deliberately.
+Most notes have **two or three strings** tuned to the same pitch. The reason is not simply loudness: three strings give $10\log_{10}3 = 4.8$ dB, which is a small return for tripling the hardware. The real reason is **sustain**. A single string coupled to a soundboard efficient enough to be loud dies very quickly. Three strings, very slightly detuned and coupled through the bridge, exchange energy back and forth, and the note decays in two stages, a fast initial fall followed by a long, quiet "aftersound". That two-stage decay is one of the most recognizable features of a piano, and the *una corda* pedal, which shifts the action so the hammer strikes fewer strings, changes it deliberately.
 
 ### Inharmonicity and Stretched Tuning
 
@@ -305,7 +305,7 @@ Finally, the consequence of §10.1's stiffness.
 :label: fig:ch10-railsback
 :alt: Left, the inharmonicity coefficient against piano key number, high at both ends and lowest around key 35. Right, the Railsback curve, showing tuning deviation from equal temperament reaching about plus thirty cents at the top of the keyboard and minus thirty at the bottom.
 
-Left: string stiffness across the keyboard, worst at the extremes — the bass strings because they are thick, the treble because they are short. Right: the **Railsback curve**, the stretched tuning that results. The curve shown is representative of measured tunings rather than computed from the left panel, since how much a tuner stretches depends on which partials they choose to match.
+Left: string stiffness across the keyboard, worst at the extremes, the bass strings because they are thick, the treble because they are short. Right: the **Railsback curve**, the stretched tuning that results. The curve shown is representative of measured tunings rather than computed from the left panel, since how much a tuner stretches depends on which partials they choose to match.
 ```
 
 The mechanism: a tuner setting an octave listens for beats between the lower note's **second partial** and the upper note's fundamental. Because of inharmonicity that second partial is *sharp* of twice the fundamental, so a beatless octave is wider than $2{:}1$. Repeat up and down the keyboard and the errors accumulate.
@@ -319,12 +319,12 @@ The mechanism: a tuner setting an octave listens for beats between the lower not
 The mathematically exact octave is the one that beats. This is the reverse of what a reader expects, and it is the whole justification for the Railsback curve: on an instrument with inharmonic partials, "in tune" means matching the partials that are actually there rather than the ratio that ought to be.
 ```
 
-A well-tuned concert grand is therefore about $30$ cents sharp at the top and $30$ cents flat at the bottom — a spread of more than half a semitone across the instrument. Nobody hears it as out of tune. Played against an exactly equal-tempered synthesizer, the piano is the one that sounds right.
+A well-tuned concert grand is therefore about $30$ cents sharp at the top and $30$ cents flat at the bottom: a spread of more than half a semitone across the instrument. Nobody hears it as out of tune. Played against an exactly equal-tempered synthesizer, the piano is the one that sounds right.
 
 ## Summary
 
 - **A string's modes are harmonic**, $f_n = (n/2L)\sqrt{T/\mu}$. Length is the player's lever ($1/L$), tension the tuner's ($\sqrt{T}$, so an octave costs four times), mass the maker's ($1/\sqrt\mu$).
-- **Bass strings are wound** because a plain string heavy enough would be too stiff — inharmonic and unbendable. Winding adds mass without adding bending stiffness.
+- **Bass strings are wound** because a plain string heavy enough would be too stiff, inharmonic and unbendable. Winding adds mass without adding bending stiffness.
 - **Pluck position sets the spectrum**: $c_n \propto n^{-2}\sin(n\pi a/L)$, so plucking at $L/n$ removes the $n$th harmonic and its multiples, and plucking near the bridge tilts the spectrum toward the high harmonics.
 - **Bowing produces Helmholtz motion**: stick–slip, with the string always two straight lines meeting at a kink that circulates once per period. The pitch is set by the string; the force at the bridge is a sawtooth, giving a $1/n$ spectrum.
 - **A hammer's finite contact time low-passes the spectrum**, and felt's nonlinearity shortens contact at higher force, so a piano played louder is also brighter.
@@ -376,7 +376,7 @@ $$
 T' = 87.4\left(\frac{146.8}{110}\right)^2 = 87.4(1.781) = 156\ \text{N}.
 $$
 
-Therefore about $87$ N and $156$ N. Note that a musical fourth — five semitones — needs nearly double the tension, which is why this is not how instruments are played.
+Therefore about $87$ N and $156$ N. Note that a musical fourth, five semitones, needs nearly double the tension, so this is not how instruments are played.
 :::
 
 :::{exercise}
@@ -420,7 +420,7 @@ $$
 d' = \sqrt{16}\,(0.23\ \text{mm}) = 0.92\ \text{mm}.
 $$
 
-(c) Nearly a millimetre of solid steel. The inharmonicity coefficient goes as $d^4$, so it would rise by a factor of $16^2 = 256$, making the string audibly inharmonic — and it would be far too stiff to bend over the bridge. Hence winding.
+(c) Nearly a millimeter of solid steel. The inharmonicity coefficient goes as $d^4$, so it would rise by a factor of $16^2 = 256$, making the string audibly inharmonic, and it would be far too stiff to bend over the bridge. Hence winding.
 :::
 
 :::{exercise}
@@ -443,7 +443,7 @@ $$
 v = \frac{2L}{T} = 2Lf = 2(0.325)(440) = 286\ \text{m/s}.
 $$
 
-Therefore the kink makes $440$ round trips a second at $286$ m/s — which is, as it must be, the same wave speed the standing-wave formula gives.
+Therefore the kink makes $440$ round trips a second at $286$ m/s, which is, as it must be, the same wave speed the standing-wave formula gives.
 :::
 
 :::{exercise}
@@ -468,7 +468,7 @@ So harmonics from the 2nd upward are affected, increasingly so as $n$ rises.
 
 (b) The hammer is still in contact while those harmonics try to reverse, so it damps them. The effect is a low-pass filter whose cutoff is around $1/(2 \times 1.3\ \text{ms}) = 385$ Hz and which rolls off progressively above it.
 
-(c) A harder hammer compresses less and leaves sooner, raising the cutoff and letting more high harmonics through — a brighter note. This is why voicing a piano is done by pricking the hammer felt with needles to soften it, or by hardening it with lacquer.
+(c) A harder hammer compresses less and leaves sooner, raising the cutoff and letting more high harmonics through: a brighter note. Voicing a piano is therefore done by pricking the hammer felt with needles to soften it, or by hardening it with lacquer.
 :::
 
 :::{exercise}
@@ -512,7 +512,7 @@ A guitar body has a Helmholtz air resonance at $98$ Hz with $Q = 6$, and the gui
 
 (b) No: $82.4$ Hz is about $7$ Hz below the lower half-power point.
 
-(c) The resonance sits just *above* the lowest note rather than on it, which is the usual arrangement. Placing it exactly on the lowest note would make that one note boom and the ones above it comparatively weak. Placing it a little higher lets its skirt support the bottom note while the peak reinforces the notes just above, giving a more even bass across several semitones — the low-$Q$ design philosophy of [Chapter 4](#ch-resonance) applied deliberately.
+(c) The resonance sits just *above* the lowest note rather than on it, which is the usual arrangement. Placing it exactly on the lowest note would make that one note boom and the ones above it comparatively weak. Placing it a little higher lets its skirt support the bottom note while the peak reinforces the notes just above, giving a more even bass across several semitones: the low-$Q$ design philosophy of [Chapter 4](#ch-resonance) applied deliberately.
 :::
 
 :::{exercise}
@@ -527,7 +527,7 @@ A cello has a wolf note at $174.6$ Hz (F$_3$). (a) Explain the mechanism. (b) A 
 
 (a) A strong, well-radiating body resonance coincides with F$_3$. The body absorbs energy from the string so efficiently at that frequency that the string cannot sustain steady Helmholtz motion: the string builds up, dumps energy into the body, loses its stick–slip regime, re-establishes it, and repeats. The result is a stuttering warble at a few hertz.
 
-(b) The eliminator adds a small resonant system coupled to the offending one. Two coupled resonators, as [Chapter 4](#ch-resonance) showed, have two normal modes with frequencies split either side of the original — so the single strong peak at $174.6$ Hz becomes two weaker peaks, neither of which absorbs enough energy to break the Helmholtz regime.
+(b) The eliminator adds a small resonant system coupled to the offending one. Two coupled resonators, as [Chapter 4](#ch-resonance) showed, have two normal modes with frequencies split either side of the original; so the single strong peak at $174.6$ Hz becomes two weaker peaks, neither of which absorbs enough energy to break the Helmholtz regime.
 
 Therefore the fix is not damping the string but splitting the body's resonance, and the mass must be tuned: too light or too heavy and the split is in the wrong place.
 :::
@@ -575,7 +575,7 @@ $$
 
 So every even harmonic vanishes.
 
-The tone is mellowest for two reasons acting together. First, half the partials are gone outright, which removes the octave, the second octave, and so on — the same hollowing that distinguishes a stopped pipe in [Chapter 3](#ch-superposition). Second, the surviving odd harmonics still carry the $1/n^2$ factor, so they are weak: the 3rd is at $1/9$ of the fundamental, the 5th at $1/25$.
+The tone is mellowest for two reasons acting together. First, half the partials are gone outright, which removes the octave, the second octave, and so on: the same hollowing that distinguishes a stopped pipe in [Chapter 3](#ch-superposition). Second, the surviving odd harmonics still carry the $1/n^2$ factor, so they are weak: the 3rd is at $1/9$ of the fundamental, the 5th at $1/25$.
 
 Therefore the midpoint pluck gives the fewest and weakest partials of any pluck position, which is what "mellow" means spectrally.
 :::
@@ -592,9 +592,9 @@ A violin string is bowed at $1/11$ of its length from the bridge. (a) Which harm
 
 (a) The bow sits at a node of the 11th mode, so it cannot drive that mode.
 
-(b) The reconciliation is that bowing is a *sustained, nonlinear* process, not a single impulse. The stick–slip cycle is locked to the round trip of the kink, and that round trip forces the whole motion to be periodic at $f_1$. Fourier's theorem ([Chapter 5](#ch-fourier-and-timbre)) then guarantees that a periodic waveform has a complete harmonic series — the 11th harmonic is present because periodicity requires it, even though the bow is not driving it directly.
+(b) The reconciliation is that bowing is a *sustained, nonlinear* process, not a single impulse. The stick–slip cycle is locked to the round trip of the kink, and that round trip forces the whole motion to be periodic at $f_1$. Fourier's theorem ([Chapter 5](#ch-fourier-and-timbre)) then guarantees that a periodic waveform has a complete harmonic series: the 11th harmonic is present because periodicity requires it, even though the bow is not driving it directly.
 
-Therefore the bow position affects the *balance* of the harmonics, and quite strongly — there is an audible weakening around the 11th — but it cannot delete one, as a pluck can. This is a real difference between impulsive and sustained excitation, and it is why the "pluck at a node" rule does not transfer to bowing unchanged.
+Therefore the bow position affects the *balance* of the harmonics, and quite strongly, there is an audible weakening around the 11th, but it cannot delete one, as a pluck can. This is a real difference between impulsive and sustained excitation, and it is why the "pluck at a node" rule does not transfer to bowing unchanged.
 :::
 
 :::{exercise}
@@ -619,7 +619,7 @@ $$
 A = \frac{F}{\sigma} = \frac{200\times10^{3}\ \text{N}}{50\times10^{6}\ \text{Pa}} = 4.0\times10^{-3}\ \text{m}^2 = 40\ \text{cm}^2.
 $$
 
-Therefore about $40$ cm² of iron in cross-section — a bar roughly $6$ cm square, or the equivalent spread across the frame's several members. This is why a grand piano weighs several hundred kilograms and why the instrument in its modern form had to wait for industrial iron casting.
+Therefore about $40$ cm² of iron in cross-section: a bar roughly $6$ cm square, or the equivalent spread across the frame's several members. A grand piano weighs several hundred kilograms for that reason, and the instrument in its modern form had to wait for industrial iron casting.
 :::
 
 :::{exercise}
@@ -636,9 +636,9 @@ Two guitars are identical except that one has a body $Q$ of $4$ and the other $Q
 
 (b) The first, with $Q = 4$. Its broad, low peak supports a wider range of notes roughly equally; the second boosts a narrow band strongly and leaves the notes either side comparatively weak.
 
-(c) The second. A higher $Q$ means less energy leaving per cycle, which is exactly [Chapter 4](#ch-resonance)'s trade-off — and it means a quieter instrument.
+(c) The second. A higher $Q$ means less energy leaving per cycle, which is exactly [Chapter 4](#ch-resonance)'s trade-off, and it means a quieter instrument.
 
-Therefore the choice is between a loud, even guitar and a quieter, more coloured one with longer sustain. Neither is correct; makers and players genuinely disagree, and this is what they are disagreeing about.
+Therefore the choice is between a loud, even guitar and a quieter, more colored one with longer sustain. Neither is correct; makers and players genuinely disagree, and this is what they are disagreeing about.
 :::
 
 :::{exercise}
@@ -667,5 +667,5 @@ First, $B$ is **not** constant. It rises steeply toward both ends of the keyboar
 
 Second, tuners do not only match 2nd partials. Fifths, fourths, and double octaves are checked too, each involving higher partials which are sharper still, and the stretch a tuner settles on reflects all of them.
 
-Therefore the single-partial calculation gives the right mechanism and the wrong magnitude, which is why the figure plots a measured curve rather than a computed one.
+Therefore the single-partial calculation gives the right mechanism and the wrong magnitude, so the figure plots a measured curve rather than a computed one.
 :::

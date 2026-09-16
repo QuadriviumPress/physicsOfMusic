@@ -35,15 +35,15 @@ By the end of this chapter, you should be able to:
 
 A clarinet and a violin play the same note, at the same loudness, for the same length of time. Nobody has any difficulty telling them apart.
 
-That is a problem for everything the book has said so far. [Chapter 1](#ch-sound-and-shm) established that what reaches your ear is a single wiggling number — pressure at a point, as a function of time. If the pitch is the same and the loudness is the same, what is left for the difference to live in?
+That is a problem for everything the book has said so far. [Chapter 1](#ch-sound-and-shm) established that what reaches your ear is a single wiggling number, pressure at a point, as a function of time. If the pitch is the same and the loudness is the same, what is left for the difference to live in?
 
-The answer is the **shape** of the wiggle, and the tool that makes shape analysable is the subject of this chapter.
+The answer is the **shape** of the wiggle, and the tool that makes shape analyzable is the subject of this chapter.
 
-Jean-Baptiste Joseph Fourier, working on heat conduction in the 1800s, proved something that at first seems too strong to be true: **any periodic waveform, however jagged, is a sum of sine waves at whole-number multiples of one frequency.** Not approximately — exactly, and in only one way.
+Jean-Baptiste Joseph Fourier, working on heat conduction in the 1800s, proved something that at first seems too strong to be true: **any periodic waveform, however jagged, is a sum of sine waves at whole-number multiples of one frequency.** Not approximately, exactly, and in only one way.
 
 Applied to music, this says that a sustained note is completely specified by a list: how much of each harmonic it contains. That list is the **spectrum**, and it is the single most useful object in the rest of this book. Chapters [10](#ch-string-instruments) through [13](#ch-the-singing-voice) are, in the end, four long answers to the question "what spectrum does this instrument produce, and why?"
 
-This chapter also delivers the first serious complication. The spectrum is not the whole story, and the part it leaves out — how the sound *starts* — turns out to matter at least as much.
+This chapter also delivers the first serious complication. The spectrum is not the whole story, and the part it leaves out, how the sound *starts*, turns out to matter at least as much.
 
 ## Fourier's Theorem
 
@@ -59,7 +59,7 @@ where $f_1 = 1/T$. Every component is a **harmonic** of $f_1$: its frequency is 
 
 Two features of this deserve emphasis.
 
-**Only harmonics appear.** Not arbitrary frequencies — multiples of one fundamental. This is forced by the repetition: any component at a non-multiple frequency would not come back to where it started after time $T$, and so the whole would not repeat.
+**Only harmonics appear.** Not arbitrary frequencies, multiples of one fundamental. This is forced by the repetition: any component at a non-multiple frequency would not come back to where it started after time $T$, and so the whole would not repeat.
 
 **The decomposition is unique.** One waveform, one list of amplitudes and phases. There is no ambiguity about what a sound "is made of".
 
@@ -71,7 +71,7 @@ The theorem is easier to believe once you have watched it happen.
 :label: fig:ch05-building-a-sawtooth
 :alt: Six panels showing a dashed sawtooth target with a solid approximation built from 1, 2, 3, 5, 10 and 40 sine waves, converging closely by 40 but with a persistent overshoot at each jump.
 
-A sawtooth wave, assembled from sine waves whose amplitudes fall as $1/n$. One harmonic is a sine; by ten it is recognizably a sawtooth; by forty the approximation is very close. The overshoot at each vertical jump, however, never disappears — it only gets narrower. That is the **Gibbs phenomenon**, and it is a genuine property of the sum rather than an error in the drawing.
+A sawtooth wave, assembled from sine waves whose amplitudes fall as $1/n$. One harmonic is a sine; by ten it is recognizably a sawtooth; by forty the approximation is very close. The overshoot at each vertical jump, however, never disappears, it only gets narrower. That is the **Gibbs phenomenon**, and it is a genuine property of the sum rather than an error in the drawing.
 ```
 
 That figure should be uncomfortable the first time. The building blocks are smooth, endless, curvy sinusoids; the target has sharp corners and instantaneous jumps. Adding smooth things and getting a corner seems like cheating. It is not: the corner is what infinitely many harmonics, in exactly the right proportions, add up to.
@@ -113,7 +113,7 @@ The general rule worth carrying away is that **the sharper the waveform, the mor
 
 The theorem runs in both directions, and both are used constantly.
 
-**Analysis** takes a sound and finds its spectrum. This is what a spectrum analyser does, what the fast Fourier transform computes, and what the laboratory exercises in [](#appendix-laboratory) ask you to do to real instruments.
+**Analysis** takes a sound and finds its spectrum. This is what a spectrum analyzer does, what the fast Fourier transform computes, and what the laboratory exercises in [](#appendix-laboratory) ask you to do to real instruments.
 
 **Synthesis** takes a spectrum and builds the sound. This is additive synthesis ([Chapter 15](#ch-electronic-and-recorded-sound)), and it is how every audio example in this book was made.
 
@@ -123,7 +123,7 @@ The two are exact inverses, which is a stronger claim than it may look. It means
 :label: fig:ch05-harmonic-build-up
 :transcript: A tone that brightens in eight steps, growing from a plain hollow sound to a buzzy one. The pitch does not change at any point.
 
-Synthesis, one harmonic at a time. Each step adds the next harmonic of $220$ Hz at the amplitude a sawtooth calls for. Listen for what *does not* happen: the pitch never moves. Adding higher frequencies to a tone makes it brighter, not higher — which is the first and most important thing the ear does with a harmonic series.
+Synthesis, one harmonic at a time. Each step adds the next harmonic of $220$ Hz at the amplitude a sawtooth calls for. Listen for what *does not* happen: the pitch never moves. Adding higher frequencies to a tone makes it brighter, not higher, which is the first and most important thing the ear does with a harmonic series.
 ```
 
 ## The Harmonic Series and the Spectrum
@@ -138,28 +138,28 @@ Three words, frequently confused, and worth fixing now.
 
 That last off-by-one is a standing trap, and the reason this book avoids the word "overtone" except when quoting someone who used it.
 
-The distinction between *partial* and *harmonic* is not pedantry, because plenty of musical sounds have partials that are not harmonics. A bell, a drum, a cymbal, and — by a small but audible amount — a piano string all produce partials at frequencies that are not whole-number multiples of anything. Section 5.5 and [Chapter 12](#ch-percussion) take those up.
+The distinction between *partial* and *harmonic* is not pedantry, because plenty of musical sounds have partials that are not harmonics. A bell, a drum, a cymbal, and, by a small but audible amount, a piano string all produce partials at frequencies that are not whole-number multiples of anything. Section 5.5 and [Chapter 12](#ch-percussion) take those up.
 
 ### Reading a Line Spectrum
 
-A spectrum is conventionally drawn as a **line spectrum**: a vertical stem at each harmonic, whose height is that harmonic's amplitude. Stems, not a filled curve — because in a periodic sound there is genuinely *nothing* between the harmonics, and a filled curve would suggest otherwise.
+A spectrum is conventionally drawn as a **line spectrum**: a vertical stem at each harmonic, whose height is that harmonic's amplitude. Stems, not a filled curve, because in a periodic sound there is genuinely *nothing* between the harmonics, and a filled curve would suggest otherwise.
 
 ```{figure} ../images/ch05-waveform-spectrum-grid.svg
 :label: fig:ch05-waveform-spectrum-grid
 :alt: A four-column grid. Top row shows sine, sawtooth, square and triangle waveforms; bottom row shows their line spectra, with one partial for the sine, all harmonics falling as one over n for the sawtooth, odd harmonics as one over n for the square, and odd harmonics as one over n squared for the triangle.
 
-Four waveforms and their spectra. The **sawtooth** contains every harmonic, falling as $1/n$. The **square** contains only odd harmonics, also falling as $1/n$ — and sounds hollow, exactly like the stopped pipe of [Chapter 3](#ch-superposition), for exactly the same reason. The **triangle** contains only odd harmonics but they fall as $1/n^2$, which makes it much closer to a sine in character.
+Four waveforms and their spectra. The **sawtooth** contains every harmonic, falling as $1/n$. The **square** contains only odd harmonics, also falling as $1/n$, and sounds hollow, exactly like the stopped pipe of [Chapter 3](#ch-superposition), for exactly the same reason. The **triangle** contains only odd harmonics but they fall as $1/n^2$, which makes it much closer to a sine in character.
 ```
 
-The vertical axis is often drawn in **decibels** rather than linear amplitude, for the reason [Chapter 7](#ch-loudness) will give: the ear's response is logarithmic, and a partial $40$ dB below the fundamental — a hundredth of its amplitude — is still perfectly audible and can matter a great deal to the timbre. On a linear plot it would be invisible.
+The vertical axis is often drawn in **decibels** rather than linear amplitude, for the reason [Chapter 7](#ch-loudness) will give: the ear's response is logarithmic, and a partial $40$ dB below the fundamental, a hundredth of its amplitude, is still perfectly audible and can matter a great deal to the timbre. On a linear plot it would be invisible.
 
 ### Why Periodic Means Harmonic
 
-It is worth pausing on why the partials of a sustained musical tone come out as exact multiples.
+Why do the partials of a sustained musical tone come out as exact multiples?
 
 A vibrating string has modes at $nf_1$ because of its boundary conditions ([Chapter 3](#ch-superposition)). But the deeper reason applies to any sustained tone, whatever produces it: **if the waveform repeats exactly, its partials must be exact harmonics**, because anything else would prevent the repetition.
 
-This works in reverse too, and it is the key to [Chapter 8](#ch-pitch-and-consonance). When the ear encounters a set of partials at $200$, $300$, $400$, $500$ Hz, it can infer that the waveform repeats $100$ times a second — and it reports a pitch of $100$ Hz, whether or not any energy is present at $100$ Hz at all.
+This works in reverse too, and it is the key to [Chapter 8](#ch-pitch-and-consonance). When the ear encounters a set of partials at $200$, $300$, $400$, $500$ Hz, it can infer that the waveform repeats $100$ times a second, and it reports a pitch of $100$ Hz, whether or not any energy is present at $100$ Hz at all.
 
 ## Spectrum and Timbre
 
@@ -186,7 +186,7 @@ Some rough rules connect a spectrum to what it sounds like:
 | Very few harmonics | Pure, thin, flute-like |
 | Many closely spaced inharmonic partials | Clangorous, metallic |
 
-The **spectral centroid** — the amplitude-weighted average frequency of the partials — correlates well with judgements of brightness, and is the single number most often used when a machine has to guess what a sound is like.
+The **spectral centroid**, the amplitude-weighted average frequency of the partials, correlates well with judgments of brightness, and is the single number most often used when a machine has to guess what a sound is like.
 
 ### Spectral Centroid, Brightness, and Roll-off
 
@@ -194,7 +194,7 @@ Two cautions about that correlation, because it is easy to lean on it too hard.
 
 First, the centroid is a *summary*. Two spectra with the same centroid can sound quite different if one has its energy concentrated in a narrow band and the other spreads it widely.
 
-Second, and more interesting: **the ear is much more sensitive to the presence or absence of a harmonic than to its exact level.** Removing every even harmonic from a tone — turning a sawtooth into a square — is instantly audible and transforms the character of the sound. Halving the amplitude of the seventh harmonic alone is barely audible at all. The pattern matters more than the precise numbers.
+Second, and more interesting: **the ear is much more sensitive to the presence or absence of a harmonic than to its exact level.** Removing every even harmonic from a tone, turning a sawtooth into a square, is instantly audible and transforms the character of the sound. Halving the amplitude of the seventh harmonic alone is barely audible at all. The pattern matters more than the precise numbers.
 
 ### The Phase Question
 
@@ -215,19 +215,19 @@ Two signals with identical spectra and randomized relative phases. The waveforms
 :names: Phases aligned, Phases scrambled
 :figure: ../images/ch05-phase-does-not-matter.svg
 :label: fig:ch05-phase-audio
-:transcript: Two buzzy tones. They are very hard to tell apart — at most there is a slight difference in the quality of the buzz, and many listeners hear none at all.
+:transcript: Two buzzy tones. They are very hard to tell apart, at most there is a slight difference in the quality of the buzz, and many listeners hear none at all.
 
-The two signals of the figure above. Try to hear a difference before reading on. This is **Ohm's acoustic law**: the ear analyses a steady sound into its component frequencies and is largely deaf to the phase relationships between them.
+The two signals of the figure above. Try to hear a difference before reading on. This is **Ohm's acoustic law**: the ear analyzes a steady sound into its component frequencies and is largely deaf to the phase relationships between them.
 ```
 
 This is a genuinely strange fact, and it has two important consequences.
 
 It means the ear is doing something like a Fourier analysis and then discarding half of the result. [Chapter 6](#ch-the-ear) shows the mechanism: the cochlea sorts frequencies by *place*, and place is preserved while relative timing between widely separated frequencies is not.
 
-It also means audio engineers can be relaxed about phase in ways they cannot be about amplitude. A loudspeaker that shifts the phases of different frequencies by different amounts — and all of them do — is not thereby ruining the sound.
+It also means audio engineers can be relaxed about phase in ways they cannot be about amplitude. A loudspeaker that shifts the phases of different frequencies by different amounts, and all of them do, is not thereby ruining the sound.
 
 :::{warning}
-The rule has limits, and they are worth knowing. Phase matters when it changes the *envelope*: two partials very close in frequency beat against each other, and their relative phase determines when. Phase matters between the two ears, where it is a primary cue for direction ([Chapter 15](#ch-electronic-and-recorded-sound)). And extreme phase manipulation is audible on transient-rich material. What Ohm's law says is that for a **steady** tone, phase is nearly inaudible — not that phase never matters.
+The rule has limits, and they are worth knowing. Phase matters when it changes the *envelope*: two partials very close in frequency beat against each other, and their relative phase determines when. Phase matters between the two ears, where it is a primary cue for direction ([Chapter 15](#ch-electronic-and-recorded-sound)). And extreme phase manipulation is audible on transient-rich material. What Ohm's law says is that for a **steady** tone, phase is nearly inaudible, not that phase never matters.
 :::
 
 ## Beyond the Steady State
@@ -238,12 +238,12 @@ Everything so far has assumed a sound that goes on forever. Real notes start and
 
 ```{figure} ../images/ch05-adsr.svg
 :label: fig:ch05-adsr
-:alt: Left, an idealized envelope with attack, decay, sustain and release segments labelled A, D, S, R. Right, three real instrument envelope shapes: a plucked string decaying from the start, a bowed string rising and holding, and a struck bell decaying slowly.
+:alt: Left, an idealized envelope with attack, decay, sustain and release segments labeled A, D, S, R. Right, three real instrument envelope shapes: a plucked string decaying from the start, a bowed string rising and holding, and a struck bell decaying slowly.
 
-Left: the idealized four-stage envelope, borrowed from synthesizer design. Right: three real shapes. A plucked string has essentially no sustain — it starts decaying immediately. A bowed string has no decay at all while the bow keeps moving. A struck bell is a plucked string with a much longer decay.
+Left: the idealized four-stage envelope, borrowed from synthesizer design. Right: three real shapes. A plucked string has essentially no sustain, it starts decaying immediately. A bowed string has no decay at all while the bow keeps moving. A struck bell is a plucked string with a much longer decay.
 ```
 
-The envelope alone distinguishes whole families of instrument. Anything struck or plucked must decay, because no energy is being added after the initial event. Anything bowed, blown, or sung can sustain indefinitely, because the player keeps supplying energy. That division — **impulsive** against **sustained** excitation — organizes [Part V](#ch-string-instruments) as much as the choice of vibrator does.
+The envelope alone distinguishes whole families of instrument. Anything struck or plucked must decay, because no energy is being added after the initial event. Anything bowed, blown, or sung can sustain indefinitely, because the player keeps supplying energy. That division, **impulsive** against **sustained** excitation, organizes [Part V](#ch-string-instruments) as much as the choice of vibrator does.
 
 ### Transients Carry the Identity
 
@@ -251,7 +251,7 @@ Here is the result that unsettles the neat picture of §5.3.
 
 Record a note on a real instrument. Cut off the first tenth of a second. Play the remainder to a listener and ask them to name the instrument.
 
-They will struggle. Piano, guitar, and bowed notes with their attacks removed are surprisingly easy to confuse, and a piano with its attack removed does not sound much like a piano at all. The steady-state spectrum — the thing this chapter has spent five sections on — turns out to be a weaker cue than the first fraction of a second.
+They will struggle. Piano, guitar, and bowed notes with their attacks removed are surprisingly easy to confuse, and a piano with its attack removed does not sound much like a piano at all. The steady-state spectrum, the thing this chapter has spent five sections on, turns out to be a weaker cue than the first fraction of a second.
 
 ```{audio} ch05-with-attack, ch05-without-attack
 :names: With its attack, Faded in instead
@@ -262,7 +262,7 @@ They will struggle. Piano, guitar, and bowed notes with their attacks removed ar
 The same steady-state spectrum, with and without a struck attack. Nothing about the harmonic content differs. What differs is the first tenth of a second, and it is enough to move the sound into a different instrumental family.
 ```
 
-What is happening in that first tenth of a second? Several things at once: the partials do not all arrive together, they do not all arrive at their final amplitudes, and there is usually a burst of **noise** — the scrape of a bow catching, the breath of a flute, the thump of a hammer, the click of a key. None of it is periodic, so none of it is in the spectrum, and all of it is informative.
+What is happening in that first tenth of a second? Several things at once: the partials do not all arrive together, they do not all arrive at their final amplitudes, and there is usually a burst of **noise**: the scrape of a bow catching, the breath of a flute, the thump of a hammer, the click of a key. None of it is periodic, so none of it is in the spectrum, and all of it is informative.
 
 ### The Spectrogram
 
@@ -272,7 +272,7 @@ A single spectrum describes a sound that is not changing. Real sounds change con
 :label: fig:ch05-spectrogram
 :alt: Left, the decaying envelope of a plucked note. Right, a spectrogram of the same note showing horizontal bands at harmonic frequencies, with the higher bands fading out sooner than the lower ones.
 
-A plucked note, twice. The waveform on the left shows *when* things happen. The spectrogram on the right shows when **and what**: each horizontal band is a harmonic, and the higher bands fade first. This is the general behaviour of struck and plucked instruments, and it is why a note gets darker as it dies away.
+A plucked note, twice. The waveform on the left shows *when* things happen. The spectrogram on the right shows when **and what**: each horizontal band is a harmonic, and the higher bands fade first. This is the general behavior of struck and plucked instruments, and it is why a note gets darker as it dies away.
 ```
 
 The spectrogram is made by chopping the signal into short overlapping windows and taking the spectrum of each. That construction contains an unavoidable trade-off, which [Chapter 15](#ch-electronic-and-recorded-sound) meets again in a different guise: a **short** window locates events precisely in time but cannot resolve closely spaced frequencies, and a **long** window does the opposite. You cannot have both, and the choice of window length is the first thing to check when reading someone else's spectrogram.
@@ -287,7 +287,7 @@ Build a waveform by dragging the amplitude of each harmonic and watch the shape 
 
 ### Inharmonicity
 
-A real piano string is not an ideal string. It has **stiffness** — it resists being bent, not merely being stretched — and stiffness adds a restoring force that grows with curvature. High modes are more curved than low ones, so they are stiffened more, and their frequencies are pushed up:
+A real piano string is not an ideal string. It has **stiffness**, it resists being bent, not merely being stretched, and stiffness adds a restoring force that grows with curvature. High modes are more curved than low ones, so they are stiffened more, and their frequencies are pushed up:
 
 $$
 f_n = n f_1\sqrt{1 + Bn^2},
@@ -299,10 +299,10 @@ where $B$ is a small **inharmonicity coefficient**, typically around $10^{-4}$ f
 :label: fig:ch05-formants-and-inharmonicity
 :alt: Left, a fixed dashed filter curve with three peaks, over which two sets of harmonic stems at different fundamentals are drawn, showing that the envelope stays put as the pitch changes. Right, a rising curve showing how far each partial of a piano string is sharp of a true harmonic, reaching about 85 cents by the sixteenth partial.
 
-Left: **formants** — resonances fixed by the instrument's body, which shape whichever harmonics happen to fall near them. Right: **inharmonicity** — the partials of a real piano string, stretched progressively sharp of exact multiples. By the sixteenth partial the departure is most of a semitone.
+Left: **formants**, resonances fixed by the instrument's body, which shape whichever harmonics happen to fall near them. Right: **inharmonicity**, the partials of a real piano string, stretched progressively sharp of exact multiples. By the sixteenth partial the departure is most of a semitone.
 ```
 
-The consequence is audible and important: **a piano's octaves must be stretched.** If the upper octave were tuned to exactly twice the lower fundamental, it would beat against the lower note's stretched second partial. Tuners tune the octave to the partial instead, which makes the top of a piano sharp and the bottom flat relative to equal temperament — by as much as $30$ cents at the extremes. [Chapter 10](#ch-string-instruments) works this through.
+The consequence is audible and important: **a piano's octaves must be stretched.** If the upper octave were tuned to exactly twice the lower fundamental, it would beat against the lower note's stretched second partial. Tuners tune the octave to the partial instead, which makes the top of a piano sharp and the bottom flat relative to equal temperament, by as much as $30$ cents at the extremes. [Chapter 10](#ch-string-instruments) works this through.
 
 ### Formants: Fixed Resonances, Moving Fundamental
 
@@ -318,7 +318,7 @@ This is the **source–filter model** of §4.5, now stated spectrally: the sourc
 
 Finally, the sounds Fourier's theorem does not cover.
 
-A periodic sound has a line spectrum. A sound that never repeats has a **continuous** spectrum — energy at all frequencies rather than at a discrete set. That is **noise**, and music is full of it: the breath in a flute tone, the scrape of rosin, the consonants in sung text, the wash of a cymbal, the snares on a snare drum.
+A periodic sound has a line spectrum. A sound that never repeats has a **continuous** spectrum, energy at all frequencies rather than at a discrete set. That is **noise**, and music is full of it: the breath in a flute tone, the scrape of rosin, the consonants in sung text, the wash of a cymbal, the snares on a snare drum.
 
 Noise is not a defect. Synthesized instruments that get the harmonic spectrum exactly right and leave the noise out sound sterile, and the single most effective improvement to an early digital instrument is usually to put the breath back. What a listener recognizes as "a real flute" is partly the harmonic series and partly the hiss that accompanies it.
 
@@ -327,14 +327,14 @@ There is a continuum here rather than a boundary. A cymbal's partials are so num
 ## Summary
 
 - **Fourier's theorem**: any periodic waveform is a sum of sinusoids at whole-number multiples of one fundamental frequency, uniquely. Periodicity forces the partials to be exact harmonics.
-- **The spectrum** — the list of harmonic amplitudes — is drawn as a line spectrum, because a periodic sound genuinely has nothing between its harmonics. A decibel axis is usually more informative than a linear one.
+- **The spectrum**, the list of harmonic amplitudes, is drawn as a line spectrum, because a periodic sound genuinely has nothing between its harmonics. A decibel axis is usually more informative than a linear one.
 - **Sharper waveforms have slower-decaying harmonics.** A discontinuity gives $1/n$, a kink gives $1/n^2$. This is why sharp-cornered waveforms sound bright.
 - **Timbre lives in the spectrum**: same pitch, same loudness, different harmonic content, different sound. Odd harmonics alone sound hollow; strong high harmonics sound bright; few harmonics sound pure.
 - **Phase changes the waveform but barely changes the sound** (Ohm's acoustic law), for a steady tone. The exceptions are beating partials, binaural cues, and transient-rich material.
-- **The envelope** — attack, decay, sustain, release — divides instruments into impulsive and sustained families, and **transients carry an instrument's identity** at least as strongly as its steady-state spectrum does. Removing a note's attack makes it hard to name the instrument.
+- **The envelope**, attack, decay, sustain, release, divides instruments into impulsive and sustained families, and **transients carry an instrument's identity** at least as strongly as its steady-state spectrum does. Removing a note's attack makes it hard to name the instrument.
 - **A spectrogram** shows spectrum against time, at the cost of an unavoidable trade-off: short windows resolve time, long windows resolve frequency, and no window does both.
 - **Inharmonicity**, caused by string stiffness, stretches a piano's partials as $f_n = nf_1\sqrt{1+Bn^2}$, which forces stretched tuning.
-- **Formants** are the fixed resonances of an instrument's body. They stay put as the pitch moves, which is why a vowel stays recognizable across a singer's range. Source-plus-filter is the model the rest of the book uses.
+- **Formants** are the fixed resonances of an instrument's body. They stay put as the pitch moves, so a vowel stays recognizable across a singer's range. Source-plus-filter is the model the rest of the book uses.
 - **Noise** has a continuous spectrum and is a genuine part of musical sound, not a defect.
 
 ## Conceptual Questions
@@ -379,7 +379,7 @@ $$
 220,\; 440,\; 660,\; 880,\; 1100\ \text{Hz}.
 $$
 
-Therefore, the tone is A3 and its first five harmonics run up to $1100$ Hz — spanning, in musical terms, two octaves and a major third above the fundamental.
+Therefore, the tone is A3 and its first five harmonics run up to $1100$ Hz, spanning, in musical terms, two octaves and a major third above the fundamental.
 :::
 
 :::{exercise}
@@ -400,13 +400,13 @@ $$
 20\log_{10}(0.125) = -18.1\ \text{dB}.
 $$
 
-(c) For the triangle, $A_8 = 0$ — the 8th harmonic is even and therefore absent. Taking the 7th instead:
+(c) For the triangle, $A_8 = 0$: the 8th harmonic is even and therefore absent. Taking the 7th instead:
 
 $$
 \frac{A_7}{A_1} = \frac{1}{49} = 0.0204, \qquad 20\log_{10}(0.0204) = -33.8\ \text{dB}.
 $$
 
-Therefore, the sawtooth's 8th harmonic is $18$ dB down and the triangle's 7th is $34$ dB down — which is why the triangle sounds so much closer to a pure tone.
+Therefore, the sawtooth's 8th harmonic is $18$ dB down and the triangle's 7th is $34$ dB down: the triangle therefore sounds much closer to a pure tone.
 :::
 
 :::{exercise}
@@ -423,7 +423,7 @@ A tone contains partials at $300$, $400$, $500$, $600$, and $700$ Hz. (a) What i
 
 (b) They are the 3rd, 4th, 5th, 6th, and 7th harmonics.
 
-(c) No — there is nothing at $100$ Hz, and nothing at $200$ Hz either.
+(c) No, there is nothing at $100$ Hz, and nothing at $200$ Hz either.
 
 Therefore, the waveform repeats $100$ times a second and a listener hears a pitch of $100$ Hz despite the complete absence of energy there. This is the **missing fundamental**, taken up in [Chapter 8](#ch-pitch-and-consonance).
 :::
@@ -464,7 +464,7 @@ $$
 1200\log_2(2104.7/2096) = 7.2\ \text{cents}.
 $$
 
-Therefore, the 2nd partial is sharp by half a cent — inaudible alone — and the 8th by $7$ cents, which is easily enough to produce audible beating against another string's true harmonic. That beating is what forces stretched tuning.
+Therefore, the 2nd partial is sharp by half a cent, inaudible alone, and the 8th by $7$ cents, which is easily enough to produce audible beating against another string's true harmonic. That beating is what forces stretched tuning.
 :::
 
 :::{exercise}
@@ -504,7 +504,7 @@ $$
 \text{centroid} = \frac{998}{2.28} = 438\ \text{Hz}.
 $$
 
-Therefore, the centroid is about $438$ Hz, roughly the 2nd harmonic. Note the pattern visible in the numerator: with amplitudes falling as $1/n$, every harmonic contributes equally to the centroid, which is why $1/n$ spectra sound as bright as they do.
+Therefore, the centroid is about $438$ Hz, roughly the 2nd harmonic. Note the pattern visible in the numerator: with amplitudes falling as $1/n$, every harmonic contributes equally to the centroid, so $1/n$ spectra sound as bright as they do.
 :::
 
 :::{exercise}
@@ -527,7 +527,7 @@ $$
 
 (c) No. The window is $46$ ms long, so two events $10$ ms apart fall inside the same window and are smeared together.
 
-Therefore, this window is good for frequency and poor for time. Resolving the $10$ ms events would need a window under about $10$ ms, which would degrade the frequency resolution to roughly $100$ Hz — no longer able to separate the harmonics of part (b). This is the trade-off of §5.4, in numbers.
+Therefore, this window is good for frequency and poor for time. Resolving the $10$ ms events would need a window under about $10$ ms, which would degrade the frequency resolution to roughly $100$ Hz, no longer able to separate the harmonics of part (b). This is the trade-off of §5.4, in numbers.
 :::
 
 :::{exercise}
@@ -546,7 +546,7 @@ A clarinet's spectrum contains strong odd harmonics and weak even ones in its lo
 
 (c) The clarinet is missing the octave ($294$ Hz), the second octave ($588$ Hz), and every other even partial. The octave above the fundamental is the partial that most reinforces a sense of a full, rounded tone, so removing it leaves the characteristic hollow, woody clarinet sound.
 
-Therefore, the difference is not a matter of degree but of which partials exist at all — the same distinction the stopped and open pipes of [Chapter 3](#ch-superposition) demonstrated.
+Therefore, the difference is not a matter of degree but of which partials exist at all: the same distinction the stopped and open pipes of [Chapter 3](#ch-superposition) demonstrated.
 :::
 
 :::{exercise}
@@ -559,13 +559,13 @@ Two tones have identical harmonic amplitudes and different phases. (a) Do they h
 :label: sol-fourier-and-timbre-8
 :class: dropdown
 
-(a) No. Phase determines how the harmonics line up, and shifting them changes the shape of the sum entirely — often changing the peak amplitude by a factor of two or more.
+(a) No. Phase determines how the harmonics line up, and shifting them changes the shape of the sum entirely, often changing the peak amplitude by a factor of two or more.
 
-(b) Essentially yes, for a steady tone. This is Ohm's acoustic law: the ear analyses into frequency components and is largely insensitive to the relative phases among them.
+(b) Essentially yes, for a steady tone. This is Ohm's acoustic law: the ear analyzes into frequency components and is largely insensitive to the relative phases among them.
 
 (c) Yes. The energy is $\sum A_n^2$, which contains no phases at all.
 
-Therefore, the two differ in waveform, agree in energy, and agree in sound — which is only strange if one assumes the ear works on the waveform. It does not; it works on something much closer to the spectrum.
+Therefore, the two differ in waveform, agree in energy, and agree in sound, which is only strange if one assumes the ear works on the waveform. It does not; it works on something much closer to the spectrum.
 :::
 
 :::{exercise}
@@ -582,7 +582,7 @@ A guitar string is plucked $1/7$ of the way along its length. (a) Which harmonic
 
 (b) Removing the 7th harmonic is, in this case, desirable rather than accidental. The 7th harmonic is $31$ cents flat of any equal-tempered note ([Chapter 9](#ch-scales-and-tuning)) and clashes with the harmonies of common-practice music, so plucking near $L/7$ is a way of suppressing a partial that would otherwise sound out of tune.
 
-Therefore, the pluck point is a spectral design choice rather than an arbitrary one — and the same reasoning explains why piano hammers strike at about $1/7$ of the string length.
+Therefore, the pluck point is a spectral design choice rather than an arbitrary one, and the same reasoning explains why piano hammers strike at about $1/7$ of the string length.
 :::
 
 :::{exercise}
@@ -601,7 +601,7 @@ At $f_1 = 350$ Hz the harmonics are $350$, $700$, $1050$, $1400$, … The 2nd ($
 
 (b) The low pitch. Its harmonics are spaced $140$ Hz apart, so there is nearly always one close to any formant, and the formant peaks are well sampled. At the high pitch the harmonics are $350$ Hz apart, and a formant can fall in a gap between them, leaving the ear with no evidence that it is there.
 
-Therefore, the vowel is clearer at the lower pitch — the reason a soprano's words become hard to make out at the top of her range, and the reason singers modify vowels there ([Chapter 13](#ch-the-singing-voice)).
+Therefore, the vowel is clearer at the lower pitch: the reason a soprano's words become hard to make out at the top of her range, and the reason singers modify vowels there ([Chapter 13](#ch-the-singing-voice)).
 :::
 
 :::{exercise}
@@ -632,12 +632,12 @@ $$
 A_nA_m\,\langle \sin(2\pi n f_1 t + \phi_n)\sin(2\pi m f_1 t + \phi_m)\rangle = 0,
 $$
 
-by the orthogonality of §5.1 — and this vanishes for *any* pair of phases.
+by the orthogonality of §5.1, and this vanishes for *any* pair of phases.
 
 So
 
 $$
-\langle y^2\rangle = \tfrac12\sum_n A_n^2 ,
+\langle y^2\rangle = \tfrac12\sum_n A_n^2,
 $$
 
 which contains no phases at all.
@@ -648,7 +648,7 @@ Therefore, the energy depends only on the amplitudes. This is Parseval's theorem
 :::{exercise}
 :label: ex-fourier-and-timbre-12
 
-A note's partials decay with time constants $\tau_n = \tau_1/n$ — the $n$th partial decaying $n$ times as fast as the fundamental. Take $\tau_1 = 2.0$ s. (a) After $1.0$ s, what fraction of its initial amplitude does the 1st partial retain? The 6th? (b) Describe how the timbre changes over the note.
+A note's partials decay with time constants $\tau_n = \tau_1/n$: the $n$th partial decaying $n$ times as fast as the fundamental. Take $\tau_1 = 2.0$ s. (a) After $1.0$ s, what fraction of its initial amplitude does the 1st partial retain? The 6th? (b) Describe how the timbre changes over the note.
 :::
 
 :::{solution} ex-fourier-and-timbre-12
@@ -666,7 +666,7 @@ $$
 
 (b) The high partials die far faster than the low ones, so the spectral centroid falls steadily and the note becomes progressively darker and more sine-like as it decays.
 
-Therefore, the timbre of a plucked or struck note is not a fixed property but a moving one — bright at the onset and mellow at the end. This is exactly the behaviour visible in the spectrogram of §5.4, and it is one of the things that makes a sustained synthesized tone sound artificial when it is left unchanged throughout.
+Therefore, the timbre of a plucked or struck note is not a fixed property but a moving one, bright at the onset and mellow at the end. This is exactly the behavior visible in the spectrogram of §5.4, and it is one of the things that makes a sustained synthesized tone sound artificial when it is left unchanged throughout.
 :::
 
 :::{exercise}
@@ -681,11 +681,11 @@ A synthesizer produces a tone with harmonics at exactly $1/n$ amplitude and no n
 
 Three, drawing on this chapter:
 
-1. **A transient onset** — partials arriving at slightly different times, with the high ones leading. §5.4 showed that the attack carries more identifying information than the steady spectrum, and a tone that simply switches on has none.
+1. **A transient onset**, partials arriving at slightly different times, with the high ones leading. §5.4 showed that the attack carries more identifying information than the steady spectrum, and a tone that simply switches on has none.
 
-2. **Noise** — breath, bow scrape, key click, at the onset and continuing at low level. Noise has a continuous spectrum and so is entirely absent from a purely harmonic synthesis, yet every real instrument produces it.
+2. **Noise**, breath, bow scrape, key click, at the onset and continuing at low level. Noise has a continuous spectrum and so is entirely absent from a purely harmonic synthesis, yet every real instrument produces it.
 
-3. **Time-varying partial amplitudes** — high harmonics decaying faster than low ones, and small independent fluctuations in each. A real note's spectrum is never constant, and [](#ex-fourier-and-timbre-12) showed how much the timbre moves over a single note.
+3. **Time-varying partial amplitudes**, high harmonics decaying faster than low ones, and small independent fluctuations in each. A real note's spectrum is never constant, and [](#ex-fourier-and-timbre-12) showed how much the timbre moves over a single note.
 
 A fourth worth mentioning is slight inharmonicity or slight pitch instability, which smears each spectral line into a narrow band and removes the unnaturally perfect periodicity.
 
@@ -702,11 +702,11 @@ A square wave at $150$ Hz is passed through a filter that removes everything abo
 :label: sol-fourier-and-timbre-14
 :class: dropdown
 
-(a) A square wave has odd harmonics only: $150$, $450$, $750$, $1050$, $1350$, … Hz. Those below $1000$ Hz are the 1st, 3rd, and 5th — $150$, $450$, and $750$ Hz.
+(a) A square wave has odd harmonics only: $150$, $450$, $750$, $1050$, $1350$, … Hz. Those below $1000$ Hz are the 1st, 3rd, and 5th, $150$, $450$, and $750$ Hz.
 
-(b) With only three partials left, the sharp vertical edges disappear. What remains is a rounded, rippling approximation to a square — recognizably square-ish in outline, but with visible oscillation along the flat tops, since three harmonics is far too few to build a corner.
+(b) With only three partials left, the sharp vertical edges disappear. What remains is a rounded, rippling approximation to a square, recognizably square-ish in outline, but with visible oscillation along the flat tops, since three harmonics is far too few to build a corner.
 
 (c) The tone becomes much duller and less reedy. The pitch is unchanged at $150$ Hz, because the fundamental and the harmonic spacing are untouched.
 
-Therefore, the filter has changed the timbre substantially while leaving the pitch exactly where it was — a clean separation of the two attributes, and the basic operation of subtractive synthesis ([Chapter 15](#ch-electronic-and-recorded-sound)).
+Therefore, the filter has changed the timbre substantially while leaving the pitch exactly where it was: a clean separation of the two attributes, and the basic operation of subtractive synthesis ([Chapter 15](#ch-electronic-and-recorded-sound)).
 :::

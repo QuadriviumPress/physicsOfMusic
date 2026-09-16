@@ -78,7 +78,7 @@ there is a genuine fit:
 - `` ```{seealso} `` — a pointer to related material, via `[](#label)`.
 - `` ```{margin} `` — a short aside that would be a distracting parenthetical.
 - `` ```{dropdown} Title `` — **the calculus goes here.** Any derivation that
-  needs calculus is optional by construction, is labelled as such, and is never
+  needs calculus is optional by construction, is labeled as such, and is never
   relied on later.
 - `` ```{tab-set} `` — genuinely alternative treatments, not decoration.
 

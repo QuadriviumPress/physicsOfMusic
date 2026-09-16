@@ -24,9 +24,9 @@ exercises at reduced precision.
 | Signal source | Function generator | A tone-generator app, or an online tone generator |
 | Waveform display | Oscilloscope | [Audacity](https://www.audacityteam.org/) or [Sonic Visualiser](https://www.sonicvisualiser.org/), recording from the microphone |
 | Spectrum analyzer | Dedicated analyzer, or a scope with FFT | Audacity's *Analyze → Plot Spectrum*; Sonic Visualiser's spectrogram |
-| Sound level meter | Calibrated Type 2 meter | A phone SPL app — **uncalibrated**, so use it for *differences*, never absolute levels |
+| Sound level meter | Calibrated Type 2 meter | A phone SPL app, **uncalibrated**, so use it for *differences*, never absolute levels |
 | Microphone | Measurement microphone | The laptop's built-in microphone |
-| Miscellaneous | Metre rule, thermometer, tuning fork, a length of string, a set of masses, a pulley, a long tube or a graduated cylinder | — |
+| Miscellaneous | Meter rule, thermometer, tuning fork, a length of string, a set of masses, a pulley, a long tube or a graduated cylinder |, |
 
 **One warning about phone apps.** A phone microphone rolls off sharply below
 about 100 Hz and its automatic gain control fights you. Turn off any
@@ -46,12 +46,12 @@ the equipment includes your ears.
 Each exercise ends with an analysis section. A complete write-up has four parts,
 and the third is the one most often skipped:
 
-1. **What you measured** — the raw numbers, with units, in a table.
-2. **What you calculated** — the derived quantity, with the formula used.
-3. **How well it agrees** — the percentage difference from the prediction, *and
+1. **What you measured**: the raw numbers, with units, in a table.
+2. **What you calculated**: the derived quantity, with the formula used.
+3. **How well it agrees**: the percentage difference from the prediction, *and
    an estimate of your own uncertainty*. "Within 3%" means nothing until you say
    whether your measurement was good to 1% or to 10%.
-4. **What the discrepancy means** — either the prediction is confirmed within
+4. **What the discrepancy means**, either the prediction is confirmed within
    uncertainty, or something is unaccounted for. Say which, and if the latter,
    name a candidate.
 
@@ -98,7 +98,7 @@ what you see on a screen to what you hear.
 
 **Supports** Chapter 2. **Time** 60 minutes.
 
-### Method A — Resonance in a tube
+### Method A, Resonance in a tube
 
 1. Hold a vibrating tuning fork of known frequency $f$ over the open end of a
    tube whose length can be varied (a graduated cylinder being filled with water
@@ -112,10 +112,10 @@ Using the *difference* of two resonance lengths rather than the first length
 alone eliminates the end correction, which is exactly what you want here and
 exactly what you will measure in [B.9](#lab-b9).
 
-### Method B — Time of flight
+### Method B, Time of flight
 
-1. Place two microphones a measured distance apart — several metres, as far as
-   your interface allows — both recording to the same file.
+1. Place two microphones a measured distance apart, several meters, as far as
+   your interface allows, both recording to the same file.
 2. Make a sharp impulsive sound (a hand clap, two blocks struck together) beyond
    one microphone, on the line joining them.
 3. Measure the delay between the two arrivals in the recording, and divide the
@@ -197,7 +197,7 @@ This is the central exercise of the course.
 
 ### Procedure
 
-1. Record the **same pitch** — A3 at 220 Hz is convenient — played by at least
+1. Record the **same pitch**, A3 at 220 Hz is convenient, played by at least
    four sources: a sung vowel, a plucked string, a bowed or blown sustained
    tone, and a pure sine from the generator. Record several seconds of steady
    tone from each, at roughly equal loudness.
@@ -236,17 +236,17 @@ conclusion is drawn from *differences* between readings.
 
 1. Outdoors, or in the largest and least reverberant space available, set up a
    loudspeaker playing steady pink noise.
-2. Measure the level at 1, 2, 4, and 8 metres on the axis of the speaker.
+2. Measure the level at 1, 2, 4, and 8 meters on the axis of the speaker.
 3. Return to a fixed distance. Measure the level with one speaker, then with two
    identical speakers side by side playing the *same* noise file, then with two
    playing *different* noise files.
 4. Measure the level of several ordinary sounds: a quiet room, conversation at a
-   metre, a hand clap, traffic.
+   meter, a hand clap, traffic.
 
 ### Analysis
 
 - Plot level against $\log_{10}(\text{distance})$. The slope should be
-  $-20\ \text{dB}$ per decade — that is, $-6$ dB per doubling. What slope did
+  $-20\ \text{dB}$ per decade: that is, $-6$ dB per doubling. What slope did
   you get? If it is shallower, what does that tell you about the room?
 - In step 3, two speakers playing *different* noise should add to about $+3$ dB.
   What did two playing the *same* file give, and why is it different?
@@ -281,7 +281,7 @@ conclusion is drawn from *differences* between readings.
   to two separate tones? Compare the second of these with the critical bandwidth
   at 440 Hz quoted in §7.5.
 - Express your discrimination threshold from steps 3 and 4 as a *percentage* of
-  the centre frequency at each of the three frequencies. Is the percentage
+  the center frequency at each of the three frequencies. Is the percentage
   constant? What does that tell you?
 
 ---
@@ -319,7 +319,7 @@ conclusion is drawn from *differences* between readings.
 ### Procedure
 
 1. Take a tube open at both ends. Measure its length and inside diameter.
-2. Excite it — by blowing across one end, or with a loudspeaker at one end — and
+2. Excite it, by blowing across one end, or with a loudspeaker at one end, and
    measure the frequencies of its first three resonances.
 3. Close one end and repeat.
 4. Repeat the whole procedure for a tube of noticeably different diameter but
@@ -327,8 +327,8 @@ conclusion is drawn from *differences* between readings.
 
 ### Analysis
 
-- For the open tube, are the resonances in the ratio 1 : 2 : 3? For the stopped
-  tube, are they in the ratio 1 : 3 : 5? Report the measured ratios.
+- For the open tube, are the resonances in the ratio 1: 2: 3? For the stopped
+  tube, are they in the ratio 1: 3: 5? Report the measured ratios.
 - Using the speed of sound at your measured temperature, calculate the
   *effective* length of each tube from its fundamental. Subtract the physical
   length to get the end correction.
@@ -346,7 +346,7 @@ conclusion is drawn from *differences* between readings.
 
 ### Procedure
 
-1. Choose two rooms of markedly different character — a stairwell and a carpeted
+1. Choose two rooms of markedly different character: a stairwell and a carpeted
    office, say. Measure the dimensions of each and estimate its volume.
 2. In each, make a loud impulsive sound (a balloon burst is the classic; two
    hardwood blocks work) and record it.
@@ -355,7 +355,7 @@ conclusion is drawn from *differences* between readings.
 
 ### Analysis
 
-- Measure $T_{60}$ — the time for a 60 dB decay — by fitting a straight line to
+- Measure $T_{60}$, the time for a 60 dB decay, by fitting a straight line to
   the decay curve. In most rooms you will not get a clean 60 dB above the noise
   floor; fit over the first 20 or 30 dB and extrapolate, and say that you did.
 - Use the Sabine equation with your measured $T_{60}$ and volume to find each

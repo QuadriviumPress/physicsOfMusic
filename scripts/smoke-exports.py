@@ -21,7 +21,7 @@ def main():
         shutil.copytree(ROOT / "plugins", work / "plugins")
         shutil.copy(ROOT / "tests/fixtures/exports/chapter.md", work / "chapter.md")
         (work / "images").mkdir()
-        shutil.copy(ROOT / "images/simulation-placeholder.png", work / "images")
+        shutil.copy(ROOT / "images/social-card.png", work / "images")
         (work / "plot.tex").write_text(
             r"\documentclass{article}\pagestyle{empty}\begin{document}\rule{4cm}{2pt}\end{document}"
         )

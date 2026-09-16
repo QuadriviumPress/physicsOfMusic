@@ -33,23 +33,23 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
-Wind instruments are organized differently from string instruments, and the difference is worth stating before any details.
+Wind instruments are organized differently from string instruments, and the difference comes first, before any details.
 
-In a string instrument, the string decides the pitch. The body responds to whatever the string offers, and could be removed — leaving a quiet instrument, but one playing the same notes.
+In a string instrument, the string decides the pitch. The body responds to whatever the string offers, and could be removed, leaving a quiet instrument, but one playing the same notes.
 
 In a wind instrument, the **resonator decides the pitch**. The reed, the lips, or the air jet is a valve that will oscillate at almost any frequency if left to itself; what makes it oscillate at a *musical* frequency is feedback from the air column. Remove the bore from a clarinet and the reed produces a thin squawk at whatever frequency the player's lip happens to allow. Attach the bore and the reed plays what the bore tells it to.
 
 This inverts the usual relationship. The air column is not an amplifier for the reed; the reed is a power supply for the air column.
 
-Three questions organize the chapter. **What set of resonances does a given bore have?** — which turns out to depend on bore *shape* far more than on anything else. **How does the excitation lock onto them?** — the mechanisms differ interestingly between flutes, reeds, and lips. **How is the sounding length changed?** — by holes, keys, valves, or a slide, each with its own compromise.
+Three questions organize the chapter. **What set of resonances does a given bore have?**, which turns out to depend on bore *shape* far more than on anything else. **How does the excitation lock onto them?**: the mechanisms differ interestingly between flutes, reeds, and lips. **How is the sounding length changed?**, by holes, keys, valves, or a slide, each with its own compromise.
 
 ## Resonances of an Air Column
 
 ### Pressure and Displacement Nodes
 
-[Chapter 3](#ch-superposition) established the boundary conditions, and it is worth restating them carefully because they are the commonest source of confusion in the subject.
+[Chapter 3](#ch-superposition) established the boundary conditions; they are restated carefully here because they are the commonest source of confusion in the subject.
 
-At a **closed** end the air cannot move. That is a **displacement node**. But it is exactly where the pressure swings hardest, since the air is being alternately compressed against the wall and pulled away from it — so it is a **pressure antinode**.
+At a **closed** end the air cannot move. That is a **displacement node**. But it is exactly where the pressure swings hardest, since the air is being alternately compressed against the wall and pulled away from it; so it is a **pressure antinode**.
 
 At an **open** end the air is free to move, and the pressure is held close to atmospheric by the enormous reservoir outside. That is a **displacement antinode** and a **pressure node**.
 
@@ -75,7 +75,7 @@ $$
 
 Two consequences, both audible. The fundamental is an **octave lower** for the same length. And **every even harmonic is missing**, which makes the tone hollow.
 
-The clarinet is effectively a stopped pipe: the reed end is closed — the reed is a stiff barrier for most of the cycle — and the bell end is open.
+The clarinet is effectively a stopped pipe: the reed end is closed, the reed is a stiff barrier for most of the cycle, and the bell end is open.
 
 ## Bore Shape
 
@@ -89,7 +89,7 @@ $$
 f_n = n\,\frac{v}{2L}, \qquad n = 1, 2, 3, \ldots
 $$
 
-— the same as an open cylinder, despite being closed at one end.
+the same as an open cylinder, despite being closed at one end.
 
 ```{figure} ../images/ch11-bore-shapes.svg
 :label: fig:ch11-bore-shapes
@@ -102,9 +102,9 @@ Three bores and the resonances each supports. The stopped cylinder is the odd on
 
 The physical reason is worth having, because it is not obvious.
 
-In a cylinder the wave is **plane**: the same pressure across the whole cross-section, travelling straight down the tube. In a cone the wave is **spherical**, spreading from the apex, and a spherical wave's amplitude falls as $1/r$ as it expands.
+In a cylinder the wave is **plane**: the same pressure across the whole cross-section, traveling straight down the tube. In a cone the wave is **spherical**, spreading from the apex, and a spherical wave's amplitude falls as $1/r$ as it expands.
 
-Solving the wave equation in a cone gives pressure solutions of the form $\sin(kr)/r$. That function is zero at the apex regardless of $k$ — so the apex's boundary condition costs nothing, and the resonances are set entirely by the open end. The result is the full series.
+Solving the wave equation in a cone gives pressure solutions of the form $\sin(kr)/r$. That function is zero at the apex regardless of $k$; so the apex's boundary condition costs nothing, and the resonances are set entirely by the open end. The result is the full series.
 
 Put crudely: **a cone's closed end is not really a constraint**, because the spherical spreading already forces the pressure to behave correctly there.
 
@@ -124,21 +124,21 @@ The musical consequences are large. A saxophone and a clarinet both have single 
 :label: fig:ch11-bore-timbres
 :transcript: Three sustained tones. The first is bright and flute-like. The second is an octave lower and distinctly hollow. The third is the same pitch as the second but full and reedy rather than hollow.
 
-Three bores of the same physical length. Compare the second and third carefully: they sound the *same pitch* — both being closed at one end — and differ entirely in whether the even harmonics are there.
+Three bores of the same physical length. Compare the second and third carefully: they sound the *same pitch*, both being closed at one end, and differ entirely in whether the even harmonics are there.
 ```
 
 ```{audio} ch11-overblow-twelfth, ch11-overblow-octave
 :names: Cylinder overblowing, Cone overblowing
 :figure: ../images/ch11-bore-shapes.svg
 :label: fig:ch11-overblow
-:transcript: Two pairs of notes. In the first, the second note is a twelfth above the first — an octave and a fifth. In the second, the second note is exactly an octave above.
+:transcript: Two pairs of notes. In the first, the second note is a twelfth above the first, an octave and a fifth. In the second, the second note is exactly an octave above.
 
-Overblowing. A cylindrical stopped pipe has no second harmonic to jump to, so it jumps to the third — a twelfth. This is why a clarinet's register key produces a twelfth and why a clarinettist must learn different fingerings for the two registers, while a saxophonist's fingerings simply repeat at the octave.
+Overblowing. A cylindrical stopped pipe has no second harmonic to jump to, so it jumps to the third, a twelfth. A clarinet's register key therefore produces a twelfth, and a clarinetist must learn different fingerings for the two registers, while a saxophonist's fingerings simply repeat at the octave.
 ```
 
 ### The End Correction
 
-A pipe sounds as though it were slightly longer than it is, because the pressure node does not fall exactly at the opening — the air just outside is still being driven.
+A pipe sounds as though it were slightly longer than it is, because the pressure node does not fall exactly at the opening: the air just outside is still being driven.
 
 $$
 L_{\text{eff}} = L + 0.6\,r \quad \text{per open end.}
@@ -151,7 +151,7 @@ $$
 The end correction. **Left**: the antinode falls outside the tube. **Right**: what ignoring it costs. For a narrow organ pipe it is a few cents; for a wide, short pipe it can exceed a semitone.
 ```
 
-This is not a refinement to be mentioned and forgotten. An organ builder cutting pipes to length must include it, and because it depends on radius rather than on length, it matters more for short wide pipes than for long narrow ones — that is, more in the treble than in the bass, where a naive calculation would put the whole top of the instrument sharp.
+This is not a refinement to be mentioned and forgotten. An organ builder cutting pipes to length must include it, and because it depends on radius rather than on length, it matters more for short wide pipes than for long narrow ones: that is, more in the treble than in the bass, where a naive calculation would put the whole top of the instrument sharp.
 
 ## The Air Jet
 
@@ -167,15 +167,15 @@ Couple that jet to a pipe and the pipe takes control. A standing wave in the bor
 
 Two things follow that a player will recognize.
 
-**Blowing harder raises the pitch a little.** The jet has a natural preference of its own, and forcing it away from that preference pulls the locked frequency slightly. Flautists correct constantly by rolling the instrument in or out, changing the effective mouth-hole geometry.
+**Blowing harder raises the pitch a little.** The jet has a natural preference of its own, and forcing it away from that preference pulls the locked frequency slightly. Flutists correct constantly by rolling the instrument in or out, changing the effective mouth-hole geometry.
 
 **The edge tone is the noise you hear.** A flute's characteristic breathiness is the jet's unlocked, turbulent component, and it is present in every note. Synthesizing a flute without it produces something that sounds like an organ.
 
 ### Flue Organ Pipes
 
-An organ flue pipe is the same mechanism made permanent. The jet speed is set by the wind pressure of the whole organ rather than by a player, and everything a flautist does with embouchure is instead built into the pipe's geometry at the time of voicing — the height of the mouth, the sharpness of the lip, the width of the windway.
+An organ flue pipe is the same mechanism made permanent. The jet speed is set by the wind pressure of the whole organ rather than by a player, and everything a flutist does with embouchure is instead built into the pipe's geometry at the time of voicing: the height of the mouth, the sharpness of the lip, the width of the windway.
 
-An organ pipe therefore has exactly one tone colour and one dynamic. That is why an organ needs so many pipes: every note of every colour needs its own, and a large instrument has five thousand of them.
+An organ pipe therefore has exactly one tone color and one dynamic. An organ needs so many pipes for that reason: every note of every color needs its own, and a large instrument has five thousand of them.
 
 ## Reed Instruments
 
@@ -194,25 +194,25 @@ The feedback loop. The reed lets a puff of air into the bore; the bore reflects 
 
 The evidence that the bore is in charge is immediate: a clarinet reed's own natural frequency is a couple of kilohertz, and the instrument plays notes from $147$ Hz upward. The reed is being driven far below its own resonance, and it goes where it is told.
 
-This is why the same reed plays every note of the instrument, and why changing the fingering changes the pitch without the player touching the reed.
+The same reed therefore plays every note of the instrument, and changing the fingering changes the pitch without the player touching the reed.
 
 :::{note}
-A reed's behaviour depends on whether increasing pressure tends to *close* it or *open* it. A clarinet's reed is **inward-striking**: mouth pressure pushes it toward closed, so it must be driven below its own resonance. A harmonium's or accordion's free reed is **outward-striking** and behaves quite differently, playing at a frequency close to its own. It is the inward-striking geometry that lets one reed serve a whole instrument.
+A reed's behavior depends on whether increasing pressure tends to *close* it or *open* it. A clarinet's reed is **inward-striking**: mouth pressure pushes it toward closed, so it must be driven below its own resonance. A harmonium's or accordion's free reed is **outward-striking** and behaves quite differently, playing at a frequency close to its own. It is the inward-striking geometry that lets one reed serve a whole instrument.
 :::
 
 ### The Clarinet and the Twelfth
 
 The clarinet is a cylindrical stopped pipe, so §11.2 applies in full: odd harmonics, a tone that is hollow in the low register, and an overblow to a twelfth.
 
-That twelfth is the clarinet's central practical problem. A twelfth spans nineteen semitones, so nineteen different fingerings are needed before the register key can be used at all — against eleven for an octave-overblowing instrument. This is the reason the clarinet has so many keys, why its fingering is so much harder to learn than the saxophone's, and why the awkward "throat" notes around the register break are the weakest on the instrument.
+That twelfth is the clarinet's central practical problem. A twelfth spans nineteen semitones, so nineteen different fingerings are needed before the register key can be used at all, against eleven for an octave-overblowing instrument. This is the reason the clarinet has so many keys, why its fingering is so much harder to learn than the saxophone's, and why the awkward "throat" notes around the register break are the weakest on the instrument.
 
-The compensation is that the clarinet gets a low register out of a short tube, and gets it with a distinctive hollow colour that no other woodwind provides.
+The compensation is that the clarinet gets a low register out of a short tube, and gets it with a distinctive hollow color that no other woodwind provides.
 
 ### The Conical Reeds: Oboe, Bassoon, Saxophone
 
 The oboe and bassoon use double reeds and the saxophone a single one, but acoustically the important thing they share is a **conical** bore. All three therefore produce complete harmonic series and overblow at the octave.
 
-The conical bore also explains a structural point. A cone must come to a point to be acoustically complete, and a real instrument's reed sits where the point would be. The reed and its staple are designed so that their internal volume is approximately equal to that of the missing conical tip — an equivalent-volume substitution which, if it is wrong, throws the instrument's octaves out. Oboists trimming a reed are adjusting this, whether or not they describe it that way.
+The conical bore also explains a structural point. A cone must come to a point to be acoustically complete, and a real instrument's reed sits where the point would be. The reed and its staple are designed so that their internal volume is approximately equal to that of the missing conical tip: an equivalent-volume substitution which, if it is wrong, throws the instrument's octaves out. Oboists trimming a reed are adjusting this, whether or not they describe it that way.
 
 ## Brass Instruments
 
@@ -224,7 +224,7 @@ The difference is that lips are **adjustable**. A player changes their tension a
 
 ### Mouthpiece, Bore, and Bell
 
-Now a problem. A cylindrical tube closed at one end gives odd harmonics only — $1, 3, 5, \ldots$ — which would make a brass instrument's playable notes an unmusical set. Yet a bugle plays a recognizable harmonic series.
+Now a problem. A cylindrical tube closed at one end gives odd harmonics only, $1, 3, 5, \ldots$, which would make a brass instrument's playable notes an unmusical set. Yet a bugle plays a recognizable harmonic series.
 
 The resolution is that a brass instrument is not a cylinder. It is a carefully shaped combination of three elements that between them force the resonances into line.
 
@@ -232,7 +232,7 @@ The resolution is that a brass instrument is not a cylinder. It is a carefully s
 :label: fig:ch11-brass-resonances
 :alt: A plot of resonance frequency against resonance number, comparing a real trumpet whose resonances lie on a near-exact harmonic series from the second upward with a plain cylinder of the same length whose resonances are odd multiples of a quarter-wave frequency.
 
-What the mouthpiece and bell are for. A plain cylindrical tube's resonances are an unusable set. A trumpet's are pulled into a harmonic series from the second resonance upward — and the player's lips then select among them.
+What the mouthpiece and bell are for. A plain cylindrical tube's resonances are an unusable set. A trumpet's are pulled into a harmonic series from the second resonance upward, and the player's lips then select among them.
 ```
 
 The **mouthpiece** is a small cavity with a constriction: a Helmholtz resonator ([Chapter 4](#ch-resonance)) with a resonance around $800$ Hz. Its effect is to pull the upper resonances down into alignment, and to boost the output in the region where the ear is most sensitive.
@@ -242,13 +242,13 @@ The **bore** is mostly cylindrical in a trumpet, mostly conical in a horn, and t
 The **bell** does two jobs, and they are opposite.
 
 ```{figure} ../images/ch11-bell-behaviour.svg
-:label: fig:ch11-bell-behaviour
+:label: fig:ch11-bell-behavior
 :alt: Two curves against logarithmic frequency: the fraction of energy reflected back into the bore, falling from one to zero around 800 Hz, and the fraction radiated into the room, rising from zero to one across the same region.
 
 The bell as a frequency-dependent mirror. Below the cut-off it reflects almost everything, which is what keeps the standing wave alive. Above it, it radiates almost everything, which is what makes the instrument loud and directional.
 ```
 
-Below a **cut-off frequency** set by the flare, the bell reflects sound back into the bore — which is essential, because without reflection there is no standing wave and no resonance to lock onto. Above the cut-off, it radiates efficiently into the room, which is why brass instruments are loud and why their high harmonics beam forward.
+Below a **cut-off frequency** set by the flare, the bell reflects sound back into the bore, which is essential, because without reflection there is no standing wave and no resonance to lock onto. Above the cut-off, it radiates efficiently into the room, so brass instruments are loud and their high harmonics beam forward.
 
 This split is audible. It is why a trumpet's low notes fill a hall while its high notes go where the bell points ([Chapter 2](#ch-wave-motion)), and why a player turning aside changes the sound so completely.
 
@@ -256,13 +256,13 @@ This split is audible. It is why a trumpet's low notes fill a hall while its hig
 
 The first resonance stubbornly refuses to join the series. A brass instrument's lowest resonance is typically well below where a true fundamental would sit, and it is essentially unusable.
 
-Players nonetheless produce a note there — the **pedal tone** — and the mechanism is [Chapter 8](#ch-pitch-and-consonance)'s missing fundamental: the lips buzz at the fundamental frequency, the higher resonances (2, 3, 4, …) all support harmonics of it, and the ear supplies the fundamental that the instrument is barely radiating.
+Players nonetheless produce a note there, the **pedal tone**, and the mechanism is [Chapter 8](#ch-pitch-and-consonance)'s missing fundamental: the lips buzz at the fundamental frequency, the higher resonances (2, 3, 4, …) all support harmonics of it, and the ear supplies the fundamental that the instrument is barely radiating.
 
 ```{audio} ch11-bugle
 :label: fig:ch11-bugle
 :transcript: A rising and falling sequence of eleven notes on a single brass tone, unmistakably a bugle call, using only the notes available without valves.
 
-Resonances 2 through 8 of a fixed tube — the complete vocabulary of a valveless brass instrument. Every bugle call in every army is made from these notes, which is why they all sound alike. The 7th resonance is skipped: [Chapter 9](#ch-scales-and-tuning) showed it is $31$ cents flat of any key.
+Resonances 2 through 8 of a fixed tube, the complete vocabulary of a valveless brass instrument. Every bugle call in every army is made from these notes, so they all sound alike. The 7th resonance is skipped: [Chapter 9](#ch-scales-and-tuning) showed it is $31$ cents flat of any key.
 ```
 
 ## Changing the Length
@@ -271,7 +271,7 @@ Resonances 2 through 8 of a fixed tube — the complete vocabulary of a valveles
 
 A woodwind changes its sounding length by opening holes. Opening a hole creates a pressure node near it, effectively ending the tube there.
 
-The approximation is imperfect. A hole is not a complete opening: some of the standing wave leaks past it and continues down the remaining tube, so the effective end is a little beyond the hole and depends on the hole's size. Large holes approximate a true open end better, but large holes are hard to cover with fingers — a tension that runs through the whole history of woodwind design and that keywork exists to resolve.
+The approximation is imperfect. A hole is not a complete opening: some of the standing wave leaks past it and continues down the remaining tube, so the effective end is a little beyond the hole and depends on the hole's size. Large holes approximate a true open end better, but large holes are hard to cover with fingers: a tension that runs through the whole history of woodwind design and that keywork exists to resolve.
 
 A **register hole** is a small hole placed near a pressure node of the desired higher mode. It barely disturbs that mode while spoiling the fundamental, so the instrument jumps up. Its placement is a compromise, because one hole must serve many notes, and this is the origin of the weak, stuffy notes near a clarinet's register break.
 
@@ -285,24 +285,24 @@ The gain is intonation and evenness; the cost is mechanical complexity, and a mo
 
 Brass instruments change length by adding tube.
 
-A **slide**, as on a trombone, adds a continuously variable length. It is acoustically perfect — any length is available, so any pitch is — and it is why a trombonist can play in just intonation with a string section.
+A **slide**, as on a trombone, adds a continuously variable length. It is acoustically perfect, any length is available, so any pitch is, and it is why a trombonist can play in just intonation with a string section.
 
 **Valves** divert the air through fixed extra loops: conventionally the second lowers by a semitone, the first by a tone, and the third by a minor third. Combinations give the rest.
 
-The combinations are systematically sharp, and the reason is arithmetic. Each valve is cut to lower the pitch of the *open* instrument by its interval. But using two valves together means the second is lengthening an already-lengthened tube, and lowering a longer tube by a fixed interval requires a *longer* addition than lowering the original. The fixed loop is now too short, and the note comes out sharp — by around $20$ cents for two valves and $35$ or more for three.
+The combinations are systematically sharp, and the reason is arithmetic. Each valve is cut to lower the pitch of the *open* instrument by its interval. But using two valves together means the second is lengthening an already-lengthened tube, and lowering a longer tube by a fixed interval requires a *longer* addition than lowering the original. The fixed loop is now too short, and the note comes out sharp, by around $20$ cents for two valves and $35$ or more for three.
 
-Players and makers address this in three ways: alternate fingerings, a movable slide on the first or third valve operated while playing, and compensating systems that route the air through extra tubing when certain combinations are used. None is a complete solution, which is why brass intonation is a skill rather than a property of the instrument.
+Players and makers address this in three ways: alternate fingerings, a movable slide on the first or third valve operated while playing, and compensating systems that route the air through extra tubing when certain combinations are used. None is a complete solution, so brass intonation is a skill rather than a property of the instrument.
 
 ## Summary
 
 - **In a wind instrument the resonator sets the pitch**, and the reed, lips, or air jet is a valve that locks to it. This inverts the string instrument's arrangement.
 - A **closed end** is a displacement node and a pressure antinode; an **open end** is the reverse. Any diagram must say which it shows.
-- **Open cylinder**: $f_n = nv/2L$, all harmonics. **Stopped cylinder**: $f_n = nv/4L$, odd harmonics only — an octave lower for the same length, hollow, and overblowing to a twelfth.
+- **Open cylinder**: $f_n = nv/2L$, all harmonics. **Stopped cylinder**: $f_n = nv/4L$, odd harmonics only: an octave lower for the same length, hollow, and overblowing to a twelfth.
 - **A cone closed at the apex has a complete harmonic series**, because the spherical solution $\sin(kr)/r$ vanishes at the apex for every $k$, so the closed end imposes no constraint. This is the whole difference between the clarinet and the saxophone.
 - **The end correction** adds about $0.6r$ per open end, and matters most for short wide pipes.
 - **An air jet at an edge** is unstable and locks to the pipe's resonance; the unlocked component is the breathiness, which is part of the sound rather than a defect.
-- **A reed is a pressure-controlled valve** driven far below its own resonance. The bore's impedance peaks choose the frequency, which is why one reed plays every note.
-- **A brass instrument's mouthpiece and bell force its resonances into a harmonic series** from the second upward. The bell reflects below its cut-off — essential for the standing wave — and radiates above it, which makes the instrument loud and directional.
+- **A reed is a pressure-controlled valve** driven far below its own resonance. The bore's impedance peaks choose the frequency, so one reed plays every note.
+- **A brass instrument's mouthpiece and bell force its resonances into a harmonic series** from the second upward. The bell reflects below its cut-off, essential for the standing wave, and radiates above it, which makes the instrument loud and directional.
 - **The pedal tone** is a missing fundamental: the lips buzz at a frequency the instrument barely radiates, and the ear supplies it from the harmonics.
 - **Valve combinations are systematically sharp**, because a fixed length added to an already-lengthened tube lowers the pitch by less than intended. Slides have no such problem.
 
@@ -316,7 +316,7 @@ Players and makers address this in three ways: alternate fingerings, a movable s
 
 4. Explain, without algebra, why the closed apex of a cone imposes no constraint on the resonant frequencies.
 
-5. A flautist blows harder and the pitch rises slightly. Explain the mechanism, and say what the player does about it.
+5. A flutist blows harder and the pitch rises slightly. Explain the mechanism, and say what the player does about it.
 
 6. Explain why a brass instrument's bell must reflect some sound rather than radiating all of it.
 
@@ -344,7 +344,7 @@ $$
 
 (b) All harmonics: $524$ Hz and $786$ Hz.
 
-Therefore about $65.5$ cm of sounding length, with resonances at $262$, $524$, $786$ Hz — a complete harmonic series, which is why a flute overblows to the octave.
+Therefore about $65.5$ cm of sounding length, with resonances at $262$, $524$, $786$ Hz: a complete harmonic series, so a flute overblows to the octave.
 :::
 
 :::{exercise}
@@ -373,7 +373,7 @@ $$
 
 a twelfth.
 
-Therefore a clarinet gets its low register from $58$ cm of tube where a flute would need $117$ cm — and pays for it with a nineteen-semitone overblow.
+Therefore a clarinet gets its low register from $58$ cm of tube where a flute would need $117$ cm, and pays for it with a nineteen-semitone overblow.
 :::
 
 :::{exercise}
@@ -415,11 +415,11 @@ A saxophone and a clarinet both sound $147$ Hz. (a) Compare their sounding lengt
 :label: sol-wind-instruments-4
 :class: dropdown
 
-(a) The clarinet is a stopped cylinder: $L = v/4f_1 = 0.583$ m. The saxophone is a cone, so $L = v/2f_1 = 1.17$ m — twice as long.
+(a) The clarinet is a stopped cylinder: $L = v/4f_1 = 0.583$ m. The saxophone is a cone, so $L = v/2f_1 = 1.17$ m, twice as long.
 
 (b) Clarinet: $147$, $441$, $735$, $1029$ Hz (odd harmonics). Saxophone: $147$, $294$, $441$, $588$ Hz (all harmonics).
 
-(c) The saxophone, being twice the tube for the same pitch. What it buys is a complete harmonic series — a fuller tone — and an octave overblow, which halves the number of distinct fingerings a player must learn.
+(c) The saxophone, being twice the tube for the same pitch. What it buys is a complete harmonic series, a fuller tone, and an octave overblow, which halves the number of distinct fingerings a player must learn.
 
 Therefore the clarinet trades tone and fingering simplicity for compactness, and the saxophone trades compactness for both.
 :::
@@ -436,11 +436,11 @@ A trumpet's tube is $1.48$ m long. (a) Treating it as an open pipe, find the fir
 
 (a) $f_1 = 343/(2 \times 1.48) = 116$ Hz, so the series is $116$, $232$, $348$, $464$ Hz.
 
-(b) Resonances 2, 3, 4 and upward. The first is not properly supported by a real trumpet, for the reasons of §11.5 — it lies below where the bell and mouthpiece pull the series into line.
+(b) Resonances 2, 3, 4 and upward. The first is not properly supported by a real trumpet, for the reasons of §11.5, it lies below where the bell and mouthpiece pull the series into line.
 
 (c) From $232$ to $348$ Hz is a fifth ($3{:}2$); $348$ to $464$ is a fourth ($4{:}3$); $232$ to $464$ is an octave.
 
-Therefore the playable notes are the harmonic series from the second upward, and the intervals between successive resonances narrow as the player goes higher — which is why high brass playing requires such fine lip control.
+Therefore the playable notes are the harmonic series from the second upward, and the intervals between successive resonances narrow as the player goes higher, high brass playing therefore requires fine lip control.
 :::
 
 :::{exercise}
@@ -508,7 +508,7 @@ Therefore the combination is about $11$ cents sharp. The cause is exactly as §1
 :::{exercise}
 :label: ex-wind-instruments-8
 
-A brass instrument's bell has a cut-off frequency of $1.5$ kHz. (a) What happens to a $400$ Hz component reaching the bell? (b) A $4$ kHz component? (c) Explain why both behaviours are necessary.
+A brass instrument's bell has a cut-off frequency of $1.5$ kHz. (a) What happens to a $400$ Hz component reaching the bell? (b) A $4$ kHz component? (c) Explain why both behaviors are necessary.
 :::
 
 :::{solution} ex-wind-instruments-8
@@ -521,7 +521,7 @@ A brass instrument's bell has a cut-off frequency of $1.5$ kHz. (a) What happens
 
 (c) Reflection is what sustains the standing wave: without a returning pressure wave there is no resonance for the lips to lock onto, and no note. Radiation is what the audience hears. An instrument that reflected everything would resonate beautifully and be inaudible; one that radiated everything would be loud for an instant and then have nothing left to oscillate with.
 
-Therefore the bell must do both, and the cut-off is where it changes its mind — which is also why brass instruments sound so different on and off axis, since the radiated high components are the directional ones.
+Therefore the bell must do both, and the cut-off is where it changes its mind, which is also why brass instruments sound so different on and off axis, since the radiated high components are the directional ones.
 :::
 
 :::{exercise}
@@ -548,7 +548,7 @@ $$
 L = 1.301 - 0.030 = 1.271\ \text{m}.
 $$
 
-Therefore cut $127.1$ cm. Cutting the uncorrected $130.1$ cm would give an effective length of $133.1$ cm and a pitch of $63.9$ Hz — about $40$ cents flat, which on an organ is unusable.
+Therefore cut $127.1$ cm. Cutting the uncorrected $130.1$ cm would give an effective length of $133.1$ cm and a pitch of $63.9$ Hz, about $40$ cents flat, which on an organ is unusable.
 :::
 
 :::{exercise}
@@ -569,9 +569,9 @@ $$
 
 about $19.4$ cm from the reed. (The next is at $3\lambda/4 = 58.3$ cm, the open end.)
 
-(b) Because the sounding length changes with every fingering. As tone holes open, the effective tube shortens and the position of the third mode's pressure node moves with it — but the register hole is drilled once, in one place. It is therefore correctly placed for only one note and progressively wrong for the others.
+(b) Because the sounding length changes with every fingering. As tone holes open, the effective tube shortens and the position of the third mode's pressure node moves with it, but the register hole is drilled once, in one place. It is therefore correctly placed for only one note and progressively wrong for the others.
 
-Therefore the register break is inherently a compromise, and the notes furthest from the hole's ideal position are the stuffy, unreliable ones every clarinettist knows.
+Therefore the register break is inherently a compromise, and the notes furthest from the hole's ideal position are the stuffy, unreliable ones every clarinetist knows.
 :::
 
 :::{exercise}
@@ -604,7 +604,7 @@ $$
 f_n = \frac{nv}{2L}.
 $$
 
-Therefore the cone gives every integer $n$, a complete harmonic series — the same as an open cylinder. Compare the stopped cylinder, where the closed end *does* impose a condition ($\mathrm{d}p/\mathrm{d}x = 0$) and halves the available set.
+Therefore the cone gives every integer $n$, a complete harmonic series: the same as an open cylinder. Compare the stopped cylinder, where the closed end *does* impose a condition ($\mathrm{d}p/\mathrm{d}x = 0$) and halves the available set.
 :::
 
 :::{exercise}
@@ -619,11 +619,11 @@ A trumpeter plays a pedal tone. The instrument's resonances are at $232$, $348$,
 
 (a) The spacing is $116$ Hz and each listed frequency is a multiple of it, so the fundamental is $116$ Hz.
 
-(b) No. These are resonances 2, 3, 4, 5, and the first resonance of a real trumpet lies well away from $116$ Hz — it is the one the bell and mouthpiece fail to pull into line.
+(b) No. These are resonances 2, 3, 4, 5, and the first resonance of a real trumpet lies well away from $116$ Hz, it is the one the bell and mouthpiece fail to pull into line.
 
-(c) The player's lips buzz at $116$ Hz. Each of its harmonics — $232$, $348$, $464$, … — coincides with a strong resonance and is supported, so the instrument radiates a full harmonic series on $116$ Hz while radiating almost nothing at $116$ Hz itself. The ear then does what [Chapter 8](#ch-pitch-and-consonance) describes and reports the fundamental.
+(c) The player's lips buzz at $116$ Hz. Each of its harmonics, $232$, $348$, $464$, …, coincides with a strong resonance and is supported, so the instrument radiates a full harmonic series on $116$ Hz while radiating almost nothing at $116$ Hz itself. The ear then does what [Chapter 8](#ch-pitch-and-consonance) describes and reports the fundamental.
 
-Therefore the pedal tone is a missing fundamental, and a spectrum analyser pointed at the bell would show very little energy at the pitch everyone in the room is hearing.
+Therefore the pedal tone is a missing fundamental, and a spectrum analyzer pointed at the bell would show very little energy at the pitch everyone in the room is hearing.
 :::
 
 :::{exercise}
@@ -650,7 +650,7 @@ $$
 
 a shortening of $1.5$ cm.
 
-Therefore the flute goes $40$ cents flat and needs about $15$ mm of head-joint adjustment — which is a large movement, and more than the joint allows on some instruments. This is why outdoor performance in the cold is genuinely difficult for wind players.
+Therefore the flute goes $40$ cents flat and needs about $15$ mm of head-joint adjustment, which is a large movement, and more than the joint allows on some instruments. Outdoor performance in the cold is genuinely difficult for wind players for that reason.
 :::
 
 :::{exercise}
@@ -663,9 +663,9 @@ Compare a trombone and a valved trumpet as instruments for playing in just inton
 :label: sol-wind-instruments-14
 :class: dropdown
 
-(a) The trombone. Its slide provides a continuously variable tube length, so any pitch whatever is available — the player can place a third $14$ cents flat of equal temperament to match a string section without effort.
+(a) The trombone. Its slide provides a continuously variable tube length, so any pitch whatever is available: the player can place a third $14$ cents flat of equal temperament to match a string section without effort.
 
-(b) The trumpeter has only fixed valve combinations, each of which gives a pitch determined by the tubing. They must bend the note with their lips — "lipping" it up or down — which works over perhaps $\pm30$ cents but costs tone quality and stability, or use an alternate fingering, or operate a movable slide on the first or third valve while playing.
+(b) The trumpeter has only fixed valve combinations, each of which gives a pitch determined by the tubing. They must bend the note with their lips, "lipping" it up or down, which works over perhaps $\pm30$ cents but costs tone quality and stability, or use an alternate fingering, or operate a movable slide on the first or third valve while playing.
 
 (c) [Chapter 9](#ch-scales-and-tuning) divided instruments into fixed-pitch and flexible-pitch, and noted that the compromise always falls on the flexible ones. A trombone is fully flexible and belongs with the strings and voices. A valved trumpet is *partly* fixed, which puts it in an awkward middle position: flexible enough to be expected to adjust, constrained enough that adjusting is work.
 :::
