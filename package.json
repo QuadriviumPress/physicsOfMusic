@@ -30,10 +30,10 @@
     "build:docx": "scripts/build-exports.sh docx"
   },
   "devDependencies": {
-    "jsdom": "26.1.0",
+    "jsdom": "30.0.1",
     "mystmd": "1.10.1",
     "sharp": "0.35.4",
     "vexflow": "5.0.0",
-    "yaml": "2.9.0"
+    "yaml": "2.9.1"
   }
 }
