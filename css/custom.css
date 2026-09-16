@@ -51,12 +51,19 @@
 /* ---------------------------------------------------------------- 2. Audio */
 
 /*
- * An {audio} figure is a waveform-and-spectrum picture plus a link to the clip.
- * Unlike a simulation it has no website-only half to hide -- MyST strips a raw
- * <audio> element, so there is no inline player to suppress (see
- * plugins/audio.mjs). These rules only keep the two caption lines subordinate
- * to the caption proper.
+ * MyST has no audio node, so the live controls are served by a compact iframe.
+ * The theme gives every iframe a 60% aspect ratio; override that here so an
+ * audio player does not reserve a video-sized rectangle.
  */
+.audio-player > div {
+  height: 4.8rem;
+  padding-bottom: 0 !important;
+}
+
+.audio-player iframe {
+  height: 4.8rem;
+}
+
 .audio-transcript,
 .audio-link {
   font-size: 0.9em;
@@ -72,6 +79,7 @@
  * so swap in the figure the exports already use.
  */
 @media print {
+  .audio-player,
   .simulation-frame {
     display: none;
   }

@@ -113,11 +113,11 @@ Every harmonic of 220 Hz is present, with amplitude falling as 1/n.
 ```
 ````
 
-The figure shows the waveform and spectrum; the caption links to the clip. There
-is no inline player — MyST strips a raw `<audio>` element, and
-[`plugins/README.md`](plugins/README.md) records what was tried and why each
-alternative fails. **Always write a `:transcript:`**: it is the only thing a
-reader has who is holding the PDF or cannot hear the clip.
+The website shows an inline player above the waveform and spectrum; the caption
+also links directly to the clip. PDF, DOCX, Markdown, and browser print keep the
+figure, transcript, and link but omit the controls. **Always write a
+`:transcript:`**: it is the only thing a reader has who is holding the PDF or
+cannot hear the clip.
 
 Clips are synthesized by [`scripts/audio/`](scripts/audio/), not recorded, so a
 comparison can hold everything fixed but the one variable it is about.

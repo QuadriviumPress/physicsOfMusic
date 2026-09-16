@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import plugin, { humanize, resolveClip, splitList } from '../plugins/audio.mjs';
+import plugin, { humanize, playerUrl, resolveClip, splitList } from '../plugins/audio.mjs';
 
 const directive = plugin.directives.find(item => item.name === 'audio');
 const run = (arg, options = {}, body = []) => directive.run({ arg, options, body }, null);
@@ -12,8 +12,18 @@ test('a bare id resolves to the generated clip and its companion figure', () => 
   assert.equal(figure.kind, 'figure');
   const image = figure.children.find(child => child.type === 'image');
   assert.equal(image.url, '/images/ch05-sine.svg');
+  const player = figure.children.find(child => child.type === 'iframe');
+  assert.equal(player.src, '/audio-player.html#src=%2Faudio%2Fch05-sine.mp3&name=Sine');
+  assert.equal(player.title, 'Sine — audio player');
   const link = JSON.stringify(figure.children.at(-1));
   assert.match(link, /\/audio\/ch05-sine\.mp3/);
+});
+
+test('each clip in a comparison gets an independent player', () => {
+  const [figure] = run('a, b', { 'no-figure': true, names: 'First, Second' });
+  const players = figure.children.filter(child => child.type === 'iframe');
+  assert.equal(players.length, 2);
+  assert.equal(players[1].src, playerUrl({ url: '/audio/b.mp3', name: 'Second' }));
 });
 
 test('paths and URLs are passed through untouched', () => {

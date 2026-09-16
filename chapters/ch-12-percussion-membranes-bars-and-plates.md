@@ -82,12 +82,21 @@ two-dimensional system there is.
 Given $200, 318, 428, 460, 530$ Hz it finds nothing. There is no fundamental that explains this set, and the pattern-matching mechanism has no answer to return. The listener hears a sound with a *center of gravity*, they can say it is high or low, and can tell one drum from another, but not a note. They cannot sing it back, and it does not participate in harmony.
 
 ```{audio} ch12-membrane-ideal, ch12-timpani
-:names: Ideal membrane, Real timpano
+:names: Ideal membrane, Modeled timpano
 :figure: ../images/ch12-timpani-modes.svg
 :label: fig:ch12-membrane-vs-timpani
 :transcript: Two struck drum sounds. The first is a dull thud with no identifiable note in it. The second is recognizably a timpano and has a clear pitch that could be sung back.
 
-An ideal membrane and a real kettledrum, struck the same way. The difference is entirely in where the partials sit, and §12.3 explains how the kettle moves them.
+An ideal membrane and a modeled kettledrum, struck the same way. The difference is entirely in where the partials sit, and §12.3 explains how the kettle moves them.
+```
+
+```{audio} ch12-real-timpani
+:label: fig:ch12-real-timpani
+:transcript: A real timpani strike begins with a short mallet impact, settles into a clearly pitched low ring, and decays for several seconds.
+
+A recorded timpani. The synthesized comparison above isolates the shifted mode
+ratios; this CC0 recording restores everything the model leaves out: mallet
+noise, room sound, small mistunings, and interacting decays.
 ```
 
 ### Strike Tone and Decay
@@ -215,6 +224,15 @@ A crash cymbal therefore *blooms*: it does not simply start loud and decay, it s
 :transcript: A metallic crash that swells slightly after the initial strike and then decays over several seconds, with no pitch in it at all.
 
 A cymbal-like sound built from hundreds of randomly spaced partials. There are no lines to count in the spectrum, and no fundamental for the ear to find, which is the definition of indefinite pitch.
+```
+
+```{audio} ch12-real-cymbal
+:label: fig:ch12-real-cymbal
+:transcript: A real pair of orchestral clash cymbals produces a sharp metallic impact followed by a dense, shimmering decay with no stable pitch.
+
+The real orchestral instrument. Its continuously filled spectrum makes clear
+why a list of a few ideal modes cannot capture a cymbal crash. CC0 recording
+from VSCO Community Edition.
 ```
 
 ### The Church Bell and Its Five Tuned Partials

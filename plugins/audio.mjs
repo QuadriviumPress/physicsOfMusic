@@ -4,30 +4,19 @@
  * A book about music has to be able to show its examples and let a reader hear
  * them. This directive builds the figure that does both.
  *
- * **Why there is no inline player.** The obvious implementation is an
- * `<audio controls>` element, and it does not survive. MyST parses raw HTML at
- * the document stage, converts what it can to mdast, and drops the rest;
- * `<audio>` has no mdast equivalent and is removed outright, leaving nothing on
- * the page. (`<div>` survives, `<iframe>` survives as an `iframe` node, and
- * mystmd 1.10.1 has no `{video}` or `{audio}` directive of its own.) Routing a
- * player through an `iframe` fails for a different reason: MyST content-hashes
- * and copies a locally linked media file and rewrites the URL, so the hashed
- * path the clip actually lands on is not knowable when the directive runs, and
- * an iframe `src` is never processed that way.
+ * MyST strips a raw `<audio>` element because mdast has no audio node. The
+ * website player therefore lives in `audio-player.html`, embedded as a native
+ * MyST iframe. `project.static_files` copies both that page and `audio/` without
+ * content-hashing, so the iframe can resolve the same stable clip URLs that the
+ * plugin emits. The figure and transcript remain as the print/accessibility
+ * fallback.
  *
- * So the figure is built from nodes MyST renders natively, and the reader
- * listens by following a link, which is also what the two music-theory books in
- * this fleet do. What the plugin adds over a bare link is the part that carries
- * the physics: the waveform-and-spectrum figure that shows what is in the clip,
- * a transcript for readers who cannot hear it, and one consistent, numbered,
- * cross-referenceable figure in every output format.
- *
- *   HTML site   the figure, with a link per clip under it
+ *   HTML site   an inline player, the figure, and a link per clip
  *   PDF, DOCX   the same figure and caption; the link prints as a URL
  *
- * Clips are generated, not sampled: `scripts/audio/*.py` synthesizes each one
- * and writes the matching figure beside it, so every example is reproducible
- * and carries no third-party licence.
+ * `scripts/audio/*.py` writes each clip and matching figure. Most are
+ * synthesized; a few are derived reproducibly from CC0 recordings committed
+ * under `scripts/audio/sources/`.
  *
  * @module plugins/audio
  * @see {@link https://mystmd.org/guide/javascript-plugins}
@@ -61,6 +50,9 @@ const IMAGE_ROOT = '/images';
  * @type {string}
  */
 const AUDIO_EXTENSION = '.mp3';
+
+/** Website-only player page, copied verbatim by `project.static_files`. */
+const PLAYER_URL = '/audio-player.html';
 
 /**
  * Words left lowercase when title-casing a slug, unless they lead the name.
@@ -127,6 +119,19 @@ export function splitList( value ) {
     .split( ',' )
     .map( part => part.trim() )
     .filter( Boolean );
+}
+
+/**
+ * Builds the URL for the small same-origin player page.
+ *
+ * Hash parameters keep the host page free of a query-string navigation and
+ * are read by `audio-player.html` without any network request of their own.
+ *
+ * @param {{url: string, name: string}} clip - Resolved clip metadata.
+ * @returns {string} Player iframe URL.
+ */
+export function playerUrl( clip ) {
+  return `${ PLAYER_URL }#src=${ encodeURIComponent( clip.url ) }&name=${ encodeURIComponent( clip.name ) }`;
 }
 
 /**
@@ -203,6 +208,20 @@ function runAudio( data, vfile ) {
 
   const listed = clips.map( clip => clip.name ).join( ', ' );
   const children = [];
+
+  // The live controls. MyST has no audio node, but it does render iframe nodes
+  // on the website. One compact frame per clip gives comparisons independent
+  // playheads and accessible labels. Export renderers discard these frames.
+  clips.forEach( clip => {
+    children.push( {
+      type: 'iframe',
+      src: playerUrl( clip ),
+      width: '100%',
+      align: options.align || 'center',
+      title: `${ clip.name } — audio player`,
+      class: [ 'audio-player', options.class ].filter( Boolean ).join( ' ' )
+    } );
+  } );
 
   // The figure. Shown in every format, including on the website: a reader who
   // has not pressed play yet should still be able to see what is in the clip,
@@ -281,8 +300,8 @@ function runAudio( data, vfile ) {
 const audioDirective = {
   name: 'audio',
   alias: [ 'sound' ],
-  doc: 'Embed one or more audio examples, with a waveform or spectrum figure for ' +
-       'PDF, DOCX, Markdown, and print.',
+  doc: 'Embed one or more playable audio examples, with a waveform or spectrum ' +
+       'figure for PDF, DOCX, Markdown, and print.',
   arg: {
     type: String,
     required: true,

@@ -6,10 +6,9 @@ things paper cannot, and the book has to survive being printed anyway.
 - [`simulation.mjs`](simulation.mjs) — embeds a running browser simulation on
   the website and falls back to a screenshot, a caption, and a link everywhere
   else. Provides `{simulation}`, `{openlyceum}`, `{phet}`, `{phet-legacy}`.
-- [`audio.mjs`](audio.mjs) — builds an audio-example figure: the waveform and
-  spectrum of a clip, a transcript, and a link to hear it. Provides `{audio}`
-  (alias `{sound}`). There is no inline player, for reasons worth reading
-  before trying to add one.
+- [`audio.mjs`](audio.mjs) — builds an audio-example figure: inline website
+  controls, the waveform and spectrum of a clip, a transcript, and a durable
+  link. Provides `{audio}` (alias `{sound}`).
 - [`export.mjs`](export.mjs) — rewrites the node types no export renderer
   handles into ones every renderer handles. Inert unless `MYST_PRINT` is set.
 
@@ -162,6 +161,12 @@ A bare id resolves to `/audio/<id>.mp3`, and the figure defaults to
 `/images/<id>.svg` — the two files each generator in
 [`../scripts/audio/`](../scripts/audio/) writes as a pair, so the common case
 needs neither option. A path or URL is passed through untouched.
+
+The player itself is [`../audio-player.html`](../audio-player.html) in a MyST
+`iframe` node. The project declares that page and [`../audio/`](../audio/) as
+`static_files`, preserving their URLs instead of applying MyST's normal content
+hashing. Raw `<audio>` HTML still does not survive MyST parsing; keep using the
+directive.
 
 Several clips in one figure — the usual case for a comparison — are named
 comma-separated, and then the shared figure must be given explicitly:

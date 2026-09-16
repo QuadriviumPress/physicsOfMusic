@@ -1,11 +1,9 @@
 """Shared synthesis helpers for the audio examples in *Physics of Music*.
 
-Every clip in the book is **synthesized rather than recorded**. That is a
-deliberate limitation. A synthesized clip can isolate exactly one variable --
-the same pitch, the same level, differing only in which harmonics are present
--- in a way no recording of a real instrument can, and it carries no third-party
-licence. Where the real thing matters, the text says so and sends the reader to
-an instrument.
+Most clips in the book are synthesized so that a comparison can isolate one
+variable -- the same pitch and level, differing only in the quantity under
+study. A small set of CC0 source recordings in ``sources/`` complements those
+controlled examples where hearing a real instrument is itself the point.
 
 Each generator writes a **pair** of files:
 
@@ -49,6 +47,27 @@ FADE_MS = 25.0
 # Mono, and modest: these are tones, not music, and the artefacts of a low
 # bitrate would be a distraction in a book that later explains them.
 BITRATE = "128k"
+
+
+def read_wav(path):
+    """Read a 16- or 24-bit PCM WAV as mono floating-point audio."""
+    with wave.open(str(path), "rb") as handle:
+        channels = handle.getnchannels()
+        width = handle.getsampwidth()
+        rate = handle.getframerate()
+        raw = handle.readframes(handle.getnframes())
+    if width == 2:
+        samples = np.frombuffer(raw, dtype="<i2").astype(np.float64) / 32768.0
+    elif width == 3:
+        packed = np.frombuffer(raw, dtype=np.uint8).reshape(-1, 3)
+        values = (packed[:, 0].astype(np.int32)
+                  | packed[:, 1].astype(np.int32) << 8
+                  | packed[:, 2].astype(np.int32) << 16)
+        values = np.where(values & 0x800000, values - 0x1000000, values)
+        samples = values.astype(np.float64) / 8388608.0
+    else:
+        raise ValueError(f"unsupported {width * 8}-bit WAV: {path}")
+    return rate, samples.reshape(-1, channels).mean(axis=1)
 
 
 def time_axis(seconds=DEFAULT_SECONDS, rate=RATE):

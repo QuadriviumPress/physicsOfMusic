@@ -89,13 +89,19 @@ that came from somewhere, it is named here and in the figure caption.
 
 ## Figures, audio, and notation
 
-Every figure, audio example, and staff-notation figure in this book is
-**generated from source in this repository** — matplotlib for the diagrams and
-plots, numpy for the audio, VexFlow for the notation — rather than copied from
-any source publication. The generators are in `scripts/figures/`,
-`scripts/audio/`, and `notation/definitions/`, and their outputs are committed
-to `images/`, `images/notation/`, and `audio/`. All are covered by the book's
-CC-BY-NC-SA-4.0 licence.
+Every figure, audio example, and staff-notation figure in this book is generated
+from source in this repository — matplotlib for the diagrams and plots, numpy
+for synthesized audio, and VexFlow for notation. Most audio is synthesized to
+hold all but one variable fixed. Five real-instrument examples are derived from
+the **VSCO 2 Community Edition** by Versilian Studios LLC, released under
+[CC0 1.0](https://github.com/sgossner/VSCO-2-CE/blob/master/LICENSE): violin,
+flute, trumpet, timpani, and orchestral cymbals. The unmodified source WAVs and
+exact upstream paths are preserved in `scripts/audio/sources/vsco/`.
+
+The generators are in `scripts/figures/`, `scripts/audio/`, and
+`notation/definitions/`, and their outputs are committed to `images/`,
+`images/notation/`, and `audio/`. Original project material is covered by the
+book's CC-BY-NC-SA-4.0 licence; the VSCO source recordings remain CC0.
 
 Where a generated figure plots published data — the equal-loudness contours of
 Chapter 7 are the main case — the data source is named in the figure caption and

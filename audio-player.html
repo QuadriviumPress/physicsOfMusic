@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audio example</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0; padding: .35rem .5rem; background: transparent; }
+    .name { margin: 0 0 .25rem; overflow: hidden; font-size: .82rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+    audio { display: block; width: 100%; height: 2.5rem; }
+    .error { color: #a32222; }
+  </style>
+</head>
+<body>
+  <p class="name" id="name">Audio example</p>
+  <audio id="player" controls preload="metadata"></audio>
+  <script>
+    const params = new URLSearchParams(location.hash.slice(1));
+    const src = params.get('src');
+    const name = params.get('name') || 'Audio example';
+    document.title = name;
+    document.querySelector('#name').textContent = name;
+    if (src) document.querySelector('#player').src = src;
+    else {
+      document.querySelector('#player').remove();
+      document.querySelector('#name').classList.add('error');
+      document.querySelector('#name').textContent = 'Audio source missing';
+    }
+  </script>
+</body>
+</html>

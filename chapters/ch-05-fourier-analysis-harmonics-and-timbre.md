@@ -176,6 +176,22 @@ Now the chapter's opening question can be answered. A clarinet and a violin play
 The same fundamental, the same loudness, three different sounds. Nothing separates them but which harmonics are present and how strong each one is. This is the whole of the chapter in twelve seconds.
 ```
 
+Ideal waveforms make the rule clean, but instruments make it musical. The next
+example holds the performed pitch fixed while changing the entire mechanism
+that produces and filters it.
+
+```{audio} ch05-real-violin, ch05-real-flute, ch05-real-trumpet
+:names: Violin, Flute, Trumpet
+:figure: ../images/ch05-real-instruments.svg
+:label: fig:ch05-real-instruments
+:transcript: Three musicians sustain the same high note. The violin is textured and continuously wavering, the flute is breathy and comparatively pure, and the trumpet is bright and brassy with strong upper harmonics.
+
+Three real instruments, one nominal fundamental near 880 Hz. Their spectral lines share the
+same spacing, but their envelopes, noise, attacks, and small performance
+fluctuations differ. These CC0 recordings are from the VSCO Community Edition;
+the exact source files are recorded in `SOURCES.md`.
+```
+
 Some rough rules connect a spectrum to what it sounds like:
 
 | Spectral feature | Perceived as |

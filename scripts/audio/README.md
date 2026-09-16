@@ -1,7 +1,8 @@
 # Audio generation
 
-Every audio example in the book is **synthesized, not recorded**, by a script in
-this directory. Each generator writes a pair of files:
+Every audio example is built by a script in this directory. Most are synthesized
+to isolate one physical variable; a small set is derived from documented CC0
+instrument recordings in `sources/`. Each generator writes a pair of files:
 
 ```
 audio/<id>.mp3      the clip
@@ -26,17 +27,17 @@ pinned for the same reason the chapter figures pin it: its SVG output is not
 stable across versions, and an unpinned regeneration shows up as a diff in every
 line of every figure.
 
-## Why synthesized
+## Why mostly synthesized
 
 A recording of a real clarinet and a real trumpet playing the same note differs
 in a dozen ways at once — spectrum, attack, vibrato, room, player, microphone —
 so it cannot settle an argument about any one of them. A synthesized pair can
-hold everything fixed but the variable under discussion. It also means the book
-carries no third-party recording and no licence question.
+hold everything fixed but the variable under discussion.
 
-The limitation is real and the text says so: where the sound of an actual
-instrument is the point, the chapter sends the reader to an instrument or to the
-laboratory exercises rather than pretending a synthesized tone is one.
+The limitation is real too. Where the sound of an actual instrument is the
+point, Chapters 5 and 12 now pair the model with a VSCO Community Edition
+recording. Those source WAVs are CC0, retained locally for reproducibility, and
+listed with their exact upstream paths in `sources/vsco/README.md`.
 
 ## The one rule that matters
 
@@ -61,6 +62,9 @@ the caption says so.
 |---|---|
 | `audiolib.py` | Synthesis helpers, the level matcher, the MP3 writer, and `clip_and_figure`, which writes the standard clip-and-figure pair |
 | `ch05_audio.py` | Chapter 5: sine, sawtooth and square at one pitch; the harmonic series assembled one partial at a time; the three-waveform comparison figure |
+| `ch05_recorded_audio.py` | Chapter 5: level-matched violin, flute, and trumpet recordings at the same pitch |
+| `ch12_recorded_audio.py` | Chapter 12: recorded timpani and orchestral cymbals |
+| `sources/vsco/` | Original CC0 WAVs plus immutable provenance |
 
 ## Conventions
 

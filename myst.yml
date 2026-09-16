@@ -59,14 +59,18 @@ project:
     NIHL: noise-induced hearing loss
   plugins:
     - plugins/simulation.mjs
-    # Audio examples: the waveform and spectrum of a clip, a transcript, and a
-    # link to hear it. MyST strips a raw <audio> element, so there is no inline
-    # player; plugins/README.md records what was tried.
+    # Audio examples: inline website controls plus a waveform, transcript, and
+    # durable link for static and accessible outputs.
     - plugins/audio.mjs
     # Rewrites exercises, solutions, margin notes and dropdowns into nodes the
     # LaTeX/DOCX renderers understand. Inert unless MYST_PRINT is set, so the
     # website build is untouched; see plugins/export.mjs.
     - plugins/export.mjs
+  # Stable, same-origin URLs used by the iframe-based audio player. Linked media
+  # is normally content-hashed; these copies intentionally preserve /audio/… .
+  static_files:
+    - audio
+    - audio-player.html
   # The simulation directives emit an iframe for the website beside a screenshot
   # for print. plugins/export.mjs strips the iframe before the tex renderer sees
   # it, but a stray one must not fail the build.
