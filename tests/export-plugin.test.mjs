@@ -39,6 +39,7 @@ test('print rewrite removes iframes, flattens captions, and converts asides', as
   const { rewrite } = await edition('full');
   assert.deepEqual(rewrite({ type: 'iframe' }), []);
   assert.equal(rewrite({ type: 'aside', children: [] })[0].type, 'blockquote');
+  assert.match(rewrite({ type: 'thematicBreak' })[0].tex, /medskip/);
   const [caption] = rewrite({
     type: 'caption',
     children: [

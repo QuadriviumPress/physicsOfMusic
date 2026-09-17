@@ -302,6 +302,7 @@ The spectrogram is made by chopping the signal into short overlapping windows an
 
 ```{phet} fourier-making-waves
 :label: fig:ch05-fourier-sim
+:placeholder: /images/phet/fourier-making-waves-600.png
 
 Build a waveform by dragging the amplitude of each harmonic and watch the shape respond. Two experiments repay the effort: reproduce the square wave by setting the even harmonics to zero, and then change the *phase* of a single harmonic and watch the waveform transform while the spectrum does not move at all.
 ```

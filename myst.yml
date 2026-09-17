@@ -41,7 +41,10 @@ project:
   # Expanded on first use in the text; these render as hover tooltips.
   abbreviations:
     SHM: simple harmonic motion
-    SPL: sound pressure level
+    # SPL is intentionally omitted: it appears on enough pages (usually as
+    # "dB SPL") that myst-to-tex's preamble merge warns "duplicate abbreviation
+    # definition for 'spl'" on every book export. The expansion is written out
+    # in Chapter 7 and the glossary instead.
     FFT: fast Fourier transform
     DFT: discrete Fourier transform
     STFT: short-time Fourier transform

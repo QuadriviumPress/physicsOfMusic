@@ -94,6 +94,7 @@ The graph of that pressure against time is the **waveform**, and it is the objec
 
 ```{phet} sound-waves
 :label: fig:ch01-sound-waves-sim
+:placeholder: /images/phet/sound-waves-600.png
 
 A loudspeaker driving air, with the compressions and rarefactions drawn directly. Switch between the particle view and the pressure view and check that a compression really does sit where the pressure graph peaks; then change the frequency and watch the spacing of the bands change while their speed does not.
 ```
@@ -280,6 +281,7 @@ The approximation is good to better than $1\%$ out to about $14°$, and it fails
 
 ```{phet} masses-and-springs
 :label: fig:ch01-masses-and-springs-sim
+:placeholder: /images/phet/masses-and-springs-600.png
 
 Hang masses on springs of different stiffness and time the oscillations. Two experiments are worth doing deliberately: change the amplitude while keeping the mass and spring fixed, and confirm that the period does not move; then quadruple the mass and confirm that the period exactly doubles.
 ```

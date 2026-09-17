@@ -75,6 +75,7 @@ which are the squares of the roots of $\cos x \cosh x = 1$, again, no whole numb
 
 ```{phet} normal-modes
 :label: fig:ch12-normal-modes-sim
+:placeholder: /images/phet/normal-modes-600.png
 
 Switch to the two-dimensional screen. The modes of a rectangular array are
 indexed by two numbers, and their frequencies are emphatically not whole-number

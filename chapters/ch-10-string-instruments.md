@@ -92,6 +92,7 @@ The solution is a **wound** string: a thin, flexible core carrying the tension, 
 
 ```{phet} wave-on-a-string
 :label: fig:ch10-wave-on-a-string-sim
+:placeholder: /images/phet/wave-on-a-string-600.png
 
 Pluck a string and watch the pulse reflect. Two things are worth doing
 deliberately: switch the far end between fixed and loose and confirm the
@@ -269,6 +270,7 @@ It is also why the argument is hard to settle. [Chapter 4](#ch-resonance)'s trad
 ```{figure} ../images/open/ch10-violin-smithsonian.jpg
 :label: fig:ch10-open-violin-smithsonian
 :alt: A violin and bow displayed in a museum collection.
+:width: 40%
 
 The instrument's visible parts are a map of its acoustic compromises: flexible strings, a light bridge, thin plates, and a resonant cavity. Smithsonian Institution, CC0.
 ```

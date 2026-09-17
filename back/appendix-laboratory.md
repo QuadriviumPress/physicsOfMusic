@@ -23,8 +23,8 @@ exercises at reduced precision.
 |---|---|---|
 | Signal source | Function generator | A tone-generator app, or an online tone generator |
 | Waveform display | Oscilloscope | [Audacity](https://www.audacityteam.org/) or [Sonic Visualiser](https://www.sonicvisualiser.org/), recording from the microphone |
-| Spectrum analyzer | Dedicated analyzer, or a scope with FFT | Audacity's *Analyze → Plot Spectrum*; Sonic Visualiser's spectrogram |
-| Sound level meter | Calibrated Type 2 meter | A phone SPL app, **uncalibrated**, so use it for *differences*, never absolute levels |
+| Spectrum analyzer | Dedicated analyzer, or a scope with `FFT` | Audacity's *Analyze > Plot Spectrum*; Sonic Visualiser's spectrogram |
+| Sound level meter | Calibrated Type 2 meter | A phone `SPL` app, **uncalibrated**, so use it for *differences*, never absolute levels |
 | Microphone | Measurement microphone | The laptop's built-in microphone |
 | Miscellaneous | Meter rule, thermometer, tuning fork, a length of string, a set of masses, a pulley, a long tube or a graduated cylinder |, |
 
@@ -55,7 +55,7 @@ and the third is the one most often skipped:
    uncertainty, or something is unaccounted for. Say which, and if the latter,
    name a candidate.
 
----
+
 
 ## B.1 The Oscilloscope and the Function Generator
 
@@ -92,7 +92,7 @@ what you see on a screen to what you hear.
 - The trace in step 6 is not a clean sinusoid. List two things visible in it
   that are not visible in the generator's sine.
 
----
+
 
 ## B.2 The Speed of Sound
 
@@ -128,7 +128,7 @@ exactly what you will measure in [B.9](#lab-b9).
 - Method B is sensitive to where you stand. Explain why standing off the line
   joining the microphones makes the measured speed come out too high.
 
----
+
 
 (lab-b3)=
 ## B.3 Standing Waves on a String
@@ -158,7 +158,7 @@ exactly what you will measure in [B.9](#lab-b9).
   the width of the frequency range over which each resonance is visible, and use
   it to put an uncertainty on $f_n$.
 
----
+
 
 ## B.4 Resonance and the Quality Factor
 
@@ -187,7 +187,7 @@ exactly what you will measure in [B.9](#lab-b9).
   $Q$ of order ten. Explain, in terms of the instrument's job, why a guitar
   should not have a high-$Q$ body.
 
----
+
 
 ## B.5 The Spectra of Musical Instruments
 
@@ -223,7 +223,7 @@ This is the central exercise of the course.
   which is which. How well can they identify the instruments? Relate the result
   to §5.4.
 
----
+
 
 ## B.6 Sound Level, Distance, and Addition
 
@@ -254,7 +254,7 @@ conclusion is drawn from *differences* between readings.
   phons of your measured traffic noise, and say what you had to assume about its
   spectrum to do so.
 
----
+
 
 ## B.7 Beats and the Just-Noticeable Difference
 
@@ -284,7 +284,7 @@ conclusion is drawn from *differences* between readings.
   the center frequency at each of the three frequencies. Is the percentage
   constant? What does that tell you?
 
----
+
 
 ## B.8 Measuring a Tuning
 
@@ -338,7 +338,7 @@ conclusion is drawn from *differences* between readings.
 - A stopped tube of the same length sounds roughly an octave lower. Verify this
   from your measurements, and state the discrepancy.
 
----
+
 
 ## B.10 Reverberation Time
 

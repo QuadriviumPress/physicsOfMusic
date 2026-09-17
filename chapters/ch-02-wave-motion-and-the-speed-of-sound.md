@@ -686,7 +686,7 @@ $$
 (b) Solving $336 = 331.3 + 0.606\,T$:
 
 $$
-T = \frac{336 - 331.3}{0.606} = 7.8\ \text{\textdegree C}.
+T = \frac{336 - 331.3}{0.606} = 7.8^{\circ}\,\mathrm{C}.
 $$
 
 (c) Too high. Off the line, the *difference* in path lengths to the two microphones is less than their $4.00$ m separation, so the measured delay is shorter than it should be for that separation. Dividing the full $4.00$ m by that too-short delay overestimates the speed. This is the systematic error the laboratory exercise in [](#appendix-laboratory) warns about.

@@ -107,6 +107,7 @@ Where a generated figure plots published data — the equal-loudness contours of
 Chapter 7 are the main case — the data source is named in the figure caption and
 in the per-chapter table above.
 
-Simulation screenshots in the print editions are fetched from PhET and
-OpenLyceum at build time and are used under their own licences; each caption
-links to the running simulation.
+Simulation screenshots in the print editions are vendored under
+`images/phet/` (PhET, CC-BY 4.0) and fetched from OpenLyceum at build time when
+needed; each caption links to the running simulation. OpenLyceum screenshots
+remain remote unless a build has already cached them.

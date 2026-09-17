@@ -106,10 +106,10 @@ simulation.
 ## The laboratory and the project
 
 Two appendices exist because two of the course's aims cannot be met by reading.
-[Laboratory Exercises](../back/appendix-laboratory.md) is a set of measurements
+[Laboratory Exercises](#appendix-laboratory) is a set of measurements
 using an oscilloscope, a function generator, and audio-analysis software,
 enough to take the book's claims about spectra, air columns, and beats and check
-them. [The Final Project](../back/appendix-final-project.md) is guidance for
+them. [The Final Project](#appendix-final-project) is guidance for
 measuring something of one's own and explaining it to somebody who does not
 know any physics, which is harder than it sounds and is the skill most likely
 to outlast the course.

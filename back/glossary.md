@@ -7,8 +7,9 @@ label: glossary
 Terms are defined here as this book uses them. Where a word is used differently
 elsewhere, *overtone* and *partial* are the notorious pair, the entry says so.
 
-Abbreviations that are merely expansions (SPL, FFT, ADSR, and the rest) are not
-repeated here; they are expanded on hover throughout the text.
+Abbreviations that are merely expansions (sound pressure level, fast Fourier
+transform, ADSR, and the rest) are not repeated here; they are expanded on
+hover throughout the text.
 
 :::{glossary}
 absorption coefficient

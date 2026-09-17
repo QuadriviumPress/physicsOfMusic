@@ -47,8 +47,12 @@
 
 %% U+2113 SCRIPT SMALL L is an orbital quantum number wherever it appears in
 %% this book, and no text font carries it; route it to the math symbol it means.
+%% Sharp and flat (U+266F / U+266D) are the same story in Latin Modern Roman:
+%% map them to the math accidentals so Chapter 9's note names print.
 \usepackage{newunicodechar}
 \newunicodechar{ℓ}{\ensuremath{\ell}}
+\newunicodechar{♯}{\ensuremath{\sharp}}
+\newunicodechar{♭}{\ensuremath{\flat}}
 
 \usepackage{microtype}
 \usepackage{amsmath}
@@ -118,6 +122,10 @@
   linkcolor={mpblue},
   citecolor={mpblue},
   urlcolor={mpblue},
+  %% Avoid xdvipdfmx "Object @page.i already defined" when \frontmatter's
+  %% roman page i collides with another page that also claims that label.
+  plainpages=false,
+  pdfpagelabels=true,
   bookmarksnumbered=true,
   bookmarksopen=true,
   pdftitle={[-doc.title-]},
@@ -213,6 +221,9 @@
 [- CONTENT -]
 [# else #]
 \frontmatter
+%% Title and copyright pages both claim roman page "i"; without this, xdvipdfmx
+%% warns "Object @page.i already defined" and one of the anchors is dropped.
+\hypersetup{pageanchor=false}
 \maketitle
 
 %% The copyright page. index.md carries this on the website, but index.md is a
@@ -238,6 +249,7 @@ by the OpenLyceum project under their own licences; each caption links to the
 running simulation.
 \par\vfill\normalsize
 
+\hypersetup{pageanchor=true}
 \tableofcontents
 
 %% Stay in \frontmatter through the preface (the first article). In book class a

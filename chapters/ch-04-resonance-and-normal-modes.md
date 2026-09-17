@@ -267,6 +267,7 @@ Two things fall out immediately. The $1/n^2$ makes the high modes weak, so a plu
 
 ```{phet} normal-modes
 :label: fig:ch04-normal-modes-sim
+:placeholder: /images/phet/normal-modes-600.png
 
 A chain of masses whose number you can change. Excite one mode at a time and watch it hold its shape; then excite two at once and watch the motion stop looking like anything in particular. Note that $N$ masses always give exactly $N$ modes.
 ```

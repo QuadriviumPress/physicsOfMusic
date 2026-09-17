@@ -168,6 +168,7 @@ Two things about that demonstration are worth drawing out, because both bear on 
 ```{phet} wave-interference
 :label: fig:ch03-wave-interference-sim
 :screen: 2
+:placeholder: /images/phet/wave-interference-600.png
 
 Two sources on the sound screen, with the interference pattern drawn out. Raise the frequency and note that the pattern's spacing narrows, the geometry is fixed, and only the wavelength has changed. The water screen shows the identical geometry with ripples instead of sound, if a visible medium helps first.
 ```
