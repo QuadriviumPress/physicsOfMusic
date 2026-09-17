@@ -180,6 +180,8 @@ project:
           level: 0
         - file: back/appendix-final-project.md
           level: 0
+        - file: back/appendix-further-viewing.md
+          level: 0
         - file: back/glossary.md
           level: 0
   # Website sidebar: a flat list (no Part I / Part II groupings). The right-hand
@@ -207,6 +209,7 @@ project:
     - file: back/appendix-teaching-guide.md
     - file: back/appendix-laboratory.md
     - file: back/appendix-final-project.md
+    - file: back/appendix-further-viewing.md
     - file: back/glossary.md
 site:
   template: book-theme
