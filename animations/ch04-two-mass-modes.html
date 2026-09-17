@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Two-mass normal modes</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Both modes share the same clock; the out-of-phase mode cycles √3 times faster</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, COLORS } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+// Equal masses joined by three equal springs have angular frequencies
+// omega_1 = sqrt(k/m) and omega_2 = sqrt(3k/m).
+const LOW_PERIOD = 3.6; // seconds, slowed so the motion is easy to follow
+const LOW_OMEGA = 2 * Math.PI / LOW_PERIOD;
+const FREQUENCY_RATIO = Math.sqrt( 3 );
+
+function drawWall( ctx, x, y, height, facesRight ) {
+  ctx.save();
+  ctx.strokeStyle = COLORS.gray;
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo( x, y - height / 2 );
+  ctx.lineTo( x, y + height / 2 );
+  ctx.stroke();
+
+  ctx.lineWidth = 1;
+  const direction = facesRight ? -1 : 1;
+  for ( let offset = -height / 2 + 5; offset < height / 2; offset += 9 ) {
+    ctx.beginPath();
+    ctx.moveTo( x, y + offset );
+    ctx.lineTo( x + direction * 7, y + offset + 6 );
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function drawSpring( ctx, x0, x1, y, color, lineWidth = 1.7 ) {
+  const length = x1 - x0;
+  const lead = Math.min( 11, length * 0.09 );
+  const coilStart = x0 + lead;
+  const coilEnd = x1 - lead;
+  const coils = 9;
+  const segments = coils * 2;
+
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = lineWidth;
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.moveTo( x0, y );
+  ctx.lineTo( coilStart, y );
+  for ( let i = 1; i < segments; i++ ) {
+    const x = coilStart + ( coilEnd - coilStart ) * i / segments;
+    const dy = i % 2 === 0 ? -7 : 7;
+    ctx.lineTo( x, y + dy );
+  }
+  ctx.lineTo( coilEnd, y );
+  ctx.lineTo( x1, y );
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawMass( ctx, x, y, width, height ) {
+  ctx.save();
+  ctx.fillStyle = COLORS.light;
+  ctx.strokeStyle = '#333333';
+  ctx.lineWidth = 1.4;
+  ctx.beginPath();
+  ctx.rect( x - width / 2, y - height / 2, width, height );
+  ctx.fill();
+  ctx.stroke();
+  ctx.fillStyle = '#333333';
+  ctx.font = 'bold 12px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText( 'm', x, y );
+  ctx.restore();
+}
+
+function drawEquilibriumMarker( ctx, x, y, massHeight ) {
+  ctx.save();
+  ctx.strokeStyle = COLORS.gray;
+  ctx.globalAlpha = 0.45;
+  ctx.lineWidth = 1;
+  ctx.setLineDash( [ 3, 3 ] );
+  ctx.beginPath();
+  ctx.moveTo( x, y - massHeight * 0.85 );
+  ctx.lineTo( x, y + massHeight * 0.85 );
+  ctx.stroke();
+  ctx.restore();
+}
+
+function deformationColor( deformation, amplitude ) {
+  const amount = Math.min( 1, Math.abs( deformation ) / ( 2 * amplitude ) );
+  // Fade from neutral gray at equilibrium to red at maximum deformation.
+  const gray = [ 85, 85, 85 ];
+  const red = [ 179, 58, 58 ];
+  const channel = index => Math.round( gray[ index ] + amount * ( red[ index ] - gray[ index ] ) );
+  return `rgb(${ channel( 0 ) }, ${ channel( 1 ) }, ${ channel( 2 ) })`;
+}
+
+function drawMode( ctx, t, width, height, mode ) {
+  const compact = width < 520;
+  const top = compact ? 7 : 10;
+  const systemY = height * 0.61;
+  const wallInset = Math.max( 24, width * 0.055 );
+  const leftWall = wallInset;
+  const rightWall = width - wallInset;
+  const equilibrium1 = width * 0.38;
+  const equilibrium2 = width * 0.62;
+  const massWidth = Math.max( 30, Math.min( 46, width * 0.065 ) );
+  const massHeight = Math.max( 28, Math.min( 38, height * 0.23 ) );
+  const equilibriumGap = equilibrium2 - equilibrium1;
+  const amplitude = Math.min( 31, equilibriumGap * 0.19 );
+  const phase = Math.cos( mode.omega * t );
+  const displacement1 = amplitude * phase;
+  const displacement2 = mode.inPhase ? displacement1 : -displacement1;
+  const mass1 = equilibrium1 + displacement1;
+  const mass2 = equilibrium2 + displacement2;
+  const deformation = displacement2 - displacement1;
+
+  ctx.save();
+  ctx.fillStyle = mode.color;
+  ctx.font = `bold ${ compact ? 12 : 13 }px sans-serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillText( mode.title, 8, top );
+
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = `${ compact ? 10 : 11 }px sans-serif`;
+  ctx.textAlign = 'right';
+  ctx.fillText( mode.springLabel( deformation, amplitude ), width - 8, top + 1 );
+
+  drawEquilibriumMarker( ctx, equilibrium1, systemY, massHeight );
+  drawEquilibriumMarker( ctx, equilibrium2, systemY, massHeight );
+  drawWall( ctx, leftWall, systemY, massHeight * 1.6, true );
+  drawWall( ctx, rightWall, systemY, massHeight * 1.6, false );
+
+  drawSpring( ctx, leftWall, mass1 - massWidth / 2, systemY, COLORS.blue );
+  drawSpring(
+    ctx,
+    mass1 + massWidth / 2,
+    mass2 - massWidth / 2,
+    systemY,
+    mode.inPhase ? COLORS.green : deformationColor( deformation, amplitude ),
+    mode.inPhase ? 2.1 : 2.3
+  );
+  drawSpring( ctx, mass2 + massWidth / 2, rightWall, systemY, COLORS.blue );
+
+  drawMass( ctx, mass1, systemY, massWidth, massHeight );
+  drawMass( ctx, mass2, systemY, massWidth, massHeight );
+  ctx.restore();
+}
+
+const MODES = [
+  {
+    title: 'In phase  ·  lower frequency  f₁',
+    color: COLORS.green,
+    omega: LOW_OMEGA,
+    inPhase: true,
+    springLabel: () => 'connecting spring: unchanged'
+  },
+  {
+    title: 'Out of phase  ·  higher frequency  √3 f₁',
+    color: COLORS.red,
+    omega: FREQUENCY_RATIO * LOW_OMEGA,
+    inPhase: false,
+    springLabel: ( deformation, amplitude ) => {
+      if ( Math.abs( deformation ) < amplitude * 0.12 ) {
+        return 'connecting spring: relaxed';
+      }
+      return `connecting spring: ${ deformation > 0 ? 'stretched' : 'compressed' }`;
+    }
+  }
+];
+
+function draw( ctx, t, width, height ) {
+  const rowHeight = height / 2;
+  MODES.forEach( ( mode, index ) => {
+    ctx.save();
+    ctx.translate( 0, index * rowHeight );
+    drawMode( ctx, t, width, rowHeight, mode );
+    ctx.restore();
+  } );
+
+  ctx.save();
+  ctx.strokeStyle = COLORS.light;
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo( 8, rowHeight );
+  ctx.lineTo( width - 8, rowHeight );
+  ctx.stroke();
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

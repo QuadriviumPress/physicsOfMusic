@@ -207,7 +207,7 @@ The requirement for a *resonator* in an instrument is therefore almost the oppos
 
 Move from one mass to two, coupled by a spring between them, and something new appears.
 
-```{figure} ../images/ch04-two-mass-modes.svg
+```{animation} ch04-two-mass-modes
 :label: fig:ch04-two-mass-modes
 :alt: Two panels each showing two masses between walls, connected by three springs. In the upper panel both masses move the same way; in the lower panel they move in opposite directions.
 
