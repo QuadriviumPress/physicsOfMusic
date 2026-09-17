@@ -167,7 +167,7 @@ The compact disc samples at $44.1$ kHz, giving a Nyquist frequency of $22.05$ kH
 
 The theorem's condition, no frequencies above Nyquist, is not optional, and violating it is not a gentle degradation.
 
-```{figure} ../images/ch15-aliasing.svg
+```{animation} ch15-aliasing
 :label: fig:ch15-aliasing
 :alt: Left, a 9 Hz sine and a 1 Hz sine both passing exactly through the same sample points. Right, a folding diagram showing input frequency against the frequency actually heard, rising to Nyquist and then folding back down repeatedly.
 

@@ -84,7 +84,7 @@ The cycle runs like this. Air pressure below the closed folds builds until it fo
 
 The essential feature is that the folds do not move as a single stiff object. They have a layered structure, and the mucous membrane travels over the deeper tissue as a surface wave, so the lower edge opens before the upper edge and closes before it too. That phase difference between the opening and the closing is what allows net energy to be extracted from a steady airflow, without it, the work done pushing the folds open would exactly cancel the work recovered as they close, and the oscillation would die.
 
-```{figure} ../images/ch13-glottal-cycle.svg
+```{animation} ch13-glottal-cycle
 :label: fig:ch13-glottal-cycle
 :alt: Top, the glottal area over two cycles, opening smoothly, closing rapidly and then staying shut for part of each cycle. Bottom, the rate of change of airflow, showing a sharp negative spike at each closure.
 

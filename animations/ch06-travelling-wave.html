@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Traveling wave on the basilar membrane</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Each wave grows gradually from the base, peaks at its own place, and dies away sharply toward the apex</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, fillBetween, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const xs = linspace( 0, 1, 400 );
+
+// Base (x=0) to apex (x=1). High frequencies peak near the base, low
+// frequencies near the apex, each rising slowly and falling steeply.
+const WAVES = [
+  { label: '4 kHz', place: 0.22, widthUp: 0.16, widthDown: 0.035, k: 55, speed: 1.6, color: COLORS.blue },
+  { label: '1 kHz', place: 0.52, widthUp: 0.22, widthDown: 0.05, k: 34, speed: 1.1, color: COLORS.green },
+  { label: '250 Hz', place: 0.82, widthUp: 0.28, widthDown: 0.07, k: 20, speed: 0.7, color: COLORS.red }
+];
+
+function envelope( x, wave ) {
+  const d = x - wave.place;
+  const width = d < 0 ? wave.widthUp : wave.widthDown;
+  return Math.exp( -( d * d ) / ( 2 * width * width ) );
+}
+
+function draw( ctx, t, width, height ) {
+  const mapper = makeMapper( { width, height, xMin: 0, xMax: 1, yMin: -1.15, yMax: 1.15, margin: 20 } );
+
+  WAVES.forEach( wave => {
+    const env = xs.map( x => envelope( x, wave ) );
+    fillBetween( ctx, mapper, xs, env, env.map( v => -v ), { color: wave.color, alpha: 0.08 } );
+    plotCurve( ctx, mapper, xs, env, { color: wave.color, lineWidth: 1, alpha: 0.35 } );
+    plotCurve( ctx, mapper, xs, env.map( v => -v ), { color: wave.color, lineWidth: 1, alpha: 0.35 } );
+
+    const ripple = xs.map( ( x, i ) => env[ i ] * Math.cos( wave.k * x - wave.speed * t ) );
+    plotCurve( ctx, mapper, xs, ripple, { color: wave.color, lineWidth: 2 } );
+
+    const labelX = mapper.x( wave.place );
+    ctx.save();
+    ctx.fillStyle = wave.color;
+    ctx.font = 'bold 11px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText( wave.label, labelX, mapper.y( 1.05 ) );
+    ctx.restore();
+  } );
+
+  ctx.save();
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText( 'base (oval window)', 6, height - 8 );
+  ctx.textAlign = 'right';
+  ctx.fillText( 'apex', width - 6, height - 8 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

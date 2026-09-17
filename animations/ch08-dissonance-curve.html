@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The dissonance curve</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">The upper tone glides up an octave; total dissonance dips at the simple ratios</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+// Sethares' roughness model for a pair of pure tones.
+function roughness( f1, f2, a1, a2 ) {
+  const fmin = Math.min( f1, f2 );
+  const s = 0.24 / ( 0.0207 * fmin + 18.96 );
+  const d = Math.abs( f2 - f1 );
+  return a1 * a2 * ( Math.exp( -3.5 * s * d ) - Math.exp( -5.75 * s * d ) );
+}
+
+const F0 = 220;
+const PARTIALS = 6;
+
+function totalDissonance( cents ) {
+  const ratio = Math.pow( 2, cents / 1200 );
+  let total = 0;
+  for ( let i = 1; i <= PARTIALS; i++ ) {
+    for ( let j = 1; j <= PARTIALS; j++ ) {
+      total += roughness( F0 * i, F0 * ratio * j, 1 / i, 1 / j );
+    }
+  }
+  return total;
+}
+
+// Precomputed once; the curve itself does not change, only the tracked point.
+const centsAxis = linspace( 0, 1200, 300 );
+const dissonance = centsAxis.map( totalDissonance );
+const maxDissonance = Math.max( ...dissonance );
+
+const SWEEP_PERIOD = 12; // seconds for a full glide up and back
+function sweepCents( t ) {
+  return 600 - 600 * Math.cos( 2 * Math.PI * t / SWEEP_PERIOD );
+}
+
+function draw( ctx, t, width, height ) {
+  const cents = sweepCents( t );
+  const ratio = Math.pow( 2, cents / 1200 );
+  const topHeight = height * 0.32;
+
+  // Top: the two tones, shown as low-frequency stand-ins so the eye can
+  // watch them converge and separate as the interval sweeps.
+  ctx.save();
+  const toneMapper = makeMapper( { width, height: topHeight, xMin: 0, xMax: 1.5, yMin: -2.2, yMax: 2.2, margin: 10 } );
+  drawZeroLine( ctx, toneMapper, 0, 1.5 );
+  const toneXs = linspace( 0, 1.5, 300 );
+  const baseFreq = 5;
+  plotCurve( ctx, toneMapper, toneXs, toneXs.map( x => Math.sin( 2 * Math.PI * baseFreq * x ) ), { color: COLORS.blue, lineWidth: 1.3 } );
+  plotCurve( ctx, toneMapper, toneXs, toneXs.map( x => Math.sin( 2 * Math.PI * baseFreq * ratio * x ) ), { color: COLORS.orange, lineWidth: 1.3 } );
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'two tones, interval sweeping', 6, 13 );
+  ctx.restore();
+
+  // Bottom: the dissonance curve with a marker tracking the current interval.
+  ctx.save();
+  ctx.translate( 0, topHeight );
+  const bottomHeight = height - topHeight;
+  const curveMapper = makeMapper( { width, height: bottomHeight, xMin: 0, xMax: 1200, yMin: 0, yMax: maxDissonance * 1.05, margin: 18 } );
+  plotCurve( ctx, curveMapper, centsAxis, dissonance, { color: COLORS.blue, lineWidth: 2 } );
+
+  ctx.save();
+  ctx.strokeStyle = COLORS.red;
+  ctx.setLineDash( [ 3, 3 ] );
+  ctx.beginPath();
+  ctx.moveTo( curveMapper.x( cents ), curveMapper.y( 0 ) );
+  ctx.lineTo( curveMapper.x( cents ), curveMapper.y( maxDissonance * 1.05 ) );
+  ctx.stroke();
+  ctx.restore();
+
+  const currentDissonance = totalDissonance( cents );
+  plotPoint( ctx, curveMapper, cents, currentDissonance, { color: COLORS.red, radius: 5 } );
+
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( `interval: ${ cents.toFixed( 0 ) } cents`, 6, 14 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

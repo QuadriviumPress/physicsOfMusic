@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The anatomy of a sinusoid</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Same amplitude, same frequency, different phase -- the same motion, started at a different moment</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const T = 2; // period, seconds (slowed for legibility)
+const A = 1;
+const PHASE_SHIFT = T / 6; // the dashed curve lags by a sixth of a cycle
+const xs = linspace( 0, 2 * T, 400 );
+
+function y1( x ) {
+  return A * Math.sin( 2 * Math.PI * x / T );
+}
+function y2( x ) {
+  return A * Math.sin( 2 * Math.PI * ( x - PHASE_SHIFT ) / T );
+}
+
+function drawDoubleArrow( ctx, x0, y0, x1, y1v, color ) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 1.4;
+  ctx.beginPath();
+  ctx.moveTo( x0, y0 );
+  ctx.lineTo( x1, y1v );
+  ctx.stroke();
+  const angle = Math.atan2( y1v - y0, x1 - x0 );
+  const headLen = 6;
+  [ [ x0, y0, angle + Math.PI ], [ x1, y1v, angle ] ].forEach( ( [ hx, hy, ha ] ) => {
+    ctx.beginPath();
+    ctx.moveTo( hx, hy );
+    ctx.lineTo( hx - headLen * Math.cos( ha - Math.PI / 6 ), hy - headLen * Math.sin( ha - Math.PI / 6 ) );
+    ctx.lineTo( hx - headLen * Math.cos( ha + Math.PI / 6 ), hy - headLen * Math.sin( ha + Math.PI / 6 ) );
+    ctx.closePath();
+    ctx.fill();
+  } );
+  ctx.restore();
+}
+
+function draw( ctx, t, width, height ) {
+  const mapper = makeMapper( { width, height, xMin: 0, xMax: 2 * T, yMin: -1.9, yMax: 1.9, margin: 22 } );
+  drawZeroLine( ctx, mapper, 0, 2 * T );
+
+  plotCurve( ctx, mapper, xs, xs.map( y1 ), { color: COLORS.blue, lineWidth: 2.2 } );
+  plotCurve( ctx, mapper, xs, xs.map( y2 ), { color: COLORS.red, lineWidth: 1.8, dash: [ 6, 4 ], alpha: 0.85 } );
+
+  // Amplitude: a vertical double arrow at the first peak of the solid curve.
+  const peakX = T / 4;
+  drawDoubleArrow( ctx, mapper.x( peakX ), mapper.y( 0 ), mapper.x( peakX ), mapper.y( A ), COLORS.gray );
+  ctx.save();
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'A', mapper.x( peakX ) + 6, mapper.y( A / 2 ) );
+  ctx.restore();
+
+  // Period: a horizontal double arrow between two points one full cycle apart.
+  const periodY = A + 0.55;
+  drawDoubleArrow( ctx, mapper.x( peakX ), mapper.y( periodY ), mapper.x( peakX + T ), mapper.y( periodY ), COLORS.gray );
+  ctx.save();
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText( 'T', mapper.x( peakX + T / 2 ), mapper.y( periodY ) - 6 );
+  ctx.restore();
+
+  // Two dots at the same instant on both curves make the phase gap visible
+  // and moving, rather than a fact you have to take from a static caption.
+  const phase = t % ( 2 * T );
+  plotPoint( ctx, mapper, phase, y1( phase ), { color: COLORS.blue, radius: 5 } );
+  plotPoint( ctx, mapper, phase, y2( phase ), { color: COLORS.red, radius: 5 } );
+
+  ctx.save();
+  ctx.fillStyle = COLORS.blue;
+  ctx.font = '11px sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText( 'reference', 6, 14 );
+  ctx.fillStyle = COLORS.red;
+  ctx.fillText( 'shifted in phase', 6, 28 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

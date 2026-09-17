@@ -67,7 +67,7 @@ Two features of this deserve emphasis.
 
 The theorem is easier to believe once you have watched it happen.
 
-```{figure} ../images/ch05-building-a-sawtooth.svg
+```{animation} ch05-building-a-sawtooth
 :label: fig:ch05-building-a-sawtooth
 :alt: Six panels showing a dashed sawtooth target with a solid approximation built from 1, 2, 3, 5, 10 and 40 sine waves, converging closely by 40 but with a persistent overshoot at each jump.
 
@@ -259,7 +259,7 @@ The rule has limits, and they are worth knowing. Phase matters when it changes t
 
 Everything so far has assumed a sound that goes on forever. Real notes start and stop, and the way they do it is described by the **envelope**, conventionally divided into four stages.
 
-```{figure} ../images/ch05-adsr.svg
+```{animation} ch05-adsr
 :label: fig:ch05-adsr
 :alt: Left, an idealized envelope with attack, decay, sustain and release segments labeled A, D, S, R. Right, three real instrument envelope shapes: a plucked string decaying from the start, a bowed string rising and holding, and a struck bell decaying slowly.
 

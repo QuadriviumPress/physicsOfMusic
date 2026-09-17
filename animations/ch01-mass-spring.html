@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mass on a spring</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Force always points back toward equilibrium; it is zero there and largest at the extremes</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+// Slowed well below any audible frequency so the eye can follow a full cycle.
+const PERIOD = 2.4; // seconds
+const AMP = 1; // data-space displacement amplitude, arbitrary units
+const WINDOW = 3.6; // seconds of trace shown at once
+const relTimes = linspace( 0, WINDOW, 400 );
+
+function displacement( t ) {
+  return AMP * Math.sin( 2 * Math.PI * t / PERIOD );
+}
+
+function drawArrow( ctx, x0, y0, x1, y1, color ) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 2.2;
+  ctx.beginPath();
+  ctx.moveTo( x0, y0 );
+  ctx.lineTo( x1, y1 );
+  ctx.stroke();
+  const angle = Math.atan2( y1 - y0, x1 - x0 );
+  const headLen = 7;
+  ctx.beginPath();
+  ctx.moveTo( x1, y1 );
+  ctx.lineTo( x1 - headLen * Math.cos( angle - Math.PI / 6 ), y1 - headLen * Math.sin( angle - Math.PI / 6 ) );
+  ctx.lineTo( x1 - headLen * Math.cos( angle + Math.PI / 6 ), y1 - headLen * Math.sin( angle + Math.PI / 6 ) );
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+
+function drawSpring( ctx, cx, yTop, yBottom, coils, halfWidth ) {
+  const span = yBottom - yTop;
+  const step = span / coils;
+  ctx.beginPath();
+  ctx.moveTo( cx, yTop );
+  for ( let i = 0; i < coils; i++ ) {
+    const y = yTop + step * ( i + 0.5 );
+    const x = cx + ( i % 2 === 0 ? halfWidth : -halfWidth );
+    ctx.lineTo( x, y );
+  }
+  ctx.lineTo( cx, yBottom );
+  ctx.stroke();
+}
+
+// Left panel: the schematic, drawn directly in pixel space -- there is no
+// data domain here, just a spring stretching and a mass sliding.
+function drawSchematic( ctx, t, width, height ) {
+  const midX = width / 2;
+  const ceilingY = 16;
+  const eqY = height * 0.52;
+  const ampPx = Math.min( height * 0.3, width * 0.55 );
+  const massHalfH = 15;
+  const massW = Math.min( 50, width * 0.5 );
+
+  const x = displacement( t ); // positive = displaced downward
+  const massY = eqY + ampPx * x;
+
+  // Ceiling.
+  ctx.save();
+  ctx.strokeStyle = COLORS.gray;
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo( midX - 30, ceilingY );
+  ctx.lineTo( midX + 30, ceilingY );
+  ctx.stroke();
+  ctx.lineWidth = 1;
+  for ( let i = -3; i <= 3; i++ ) {
+    ctx.beginPath();
+    ctx.moveTo( midX + i * 9, ceilingY );
+    ctx.lineTo( midX + i * 9 - 6, ceilingY + 8 );
+    ctx.stroke();
+  }
+  ctx.restore();
+
+  // Equilibrium reference line.
+  ctx.save();
+  ctx.strokeStyle = COLORS.light;
+  ctx.setLineDash( [ 4, 4 ] );
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo( 4, eqY );
+  ctx.lineTo( width - 4, eqY );
+  ctx.stroke();
+  ctx.restore();
+
+  // Spring.
+  ctx.save();
+  ctx.strokeStyle = COLORS.gray;
+  ctx.lineWidth = 1.6;
+  drawSpring( ctx, midX, ceilingY, massY - massHalfH, 7, 13 );
+  ctx.restore();
+
+  // Mass.
+  ctx.save();
+  ctx.fillStyle = COLORS.blue;
+  ctx.fillRect( midX - massW / 2, massY - massHalfH, massW, massHalfH * 2 );
+  ctx.restore();
+
+  // Restoring force arrow: opposes the displacement, zero at equilibrium.
+  const forceLenPx = Math.abs( x ) * ampPx * 0.8;
+  if ( forceLenPx > 3 ) {
+    const arrowX = midX + massW / 2 + 14;
+    const dir = x > 0 ? -1 : 1; // force points back toward equilibrium
+    drawArrow( ctx, arrowX, massY, arrowX, massY + dir * forceLenPx, COLORS.red );
+  }
+}
+
+// Right panel: the displacement trace, scrolling in step with the schematic.
+function drawTrace( ctx, t, width, height ) {
+  const mapper = makeMapper( { width, height, xMin: 0, xMax: WINDOW, yMin: -1.6, yMax: 1.6, margin: 18 } );
+  drawZeroLine( ctx, mapper, 0, WINDOW );
+
+  const times = relTimes.map( r => t - WINDOW + r );
+  const ys = times.map( displacement );
+  plotCurve( ctx, mapper, relTimes, ys, { color: COLORS.blue, lineWidth: 2 } );
+  plotPoint( ctx, mapper, WINDOW, displacement( t ), { color: COLORS.red, radius: 4 } );
+
+  ctx.save();
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'displacement x(t)', 6, 14 );
+  ctx.restore();
+}
+
+function draw( ctx, t, width, height ) {
+  const leftWidth = Math.min( width * 0.38, 190 );
+  const rightWidth = width - leftWidth;
+
+  ctx.save();
+  drawSchematic( ctx, t, leftWidth, height );
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate( leftWidth, 0 );
+  drawTrace( ctx, t, rightWidth, height );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

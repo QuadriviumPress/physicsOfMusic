@@ -168,7 +168,7 @@ $$
 
 This is the **Pythagorean comma**, and it is not going away. The reason is elementary number theory: $(3/2)^{12} = 3^{12}/2^{12}$, and no power of $3$ is ever a power of $2$, since $3$ and $2$ are distinct primes. The chain of fifths can *never* close, at twelve steps or at any other number.
 
-```{figure} ../images/ch09-comma-spiral.svg
+```{animation} ch09-comma-spiral
 :label: fig:ch09-comma-spiral
 :alt: Left, the pitch class of each successive fifth plotted against the number of fifths taken, showing that after twelve steps the chain lands 23.5 cents above where it started. Right, a bar chart comparing twelve pure fifths at 8423.5 cents with seven octaves at 8400 cents, with the 23.5 cent gap marked.
 

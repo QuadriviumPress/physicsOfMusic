@@ -58,7 +58,7 @@ A string is a one-dimensional system, and its modes are indexed by a single numb
 
 A membrane is two-dimensional, and a mode must satisfy a boundary condition around a whole *curve* rather than at two points. Its modes are indexed by two numbers, and the frequencies are set by the zeros of **Bessel functions** rather than by the zeros of a sine. Bessel zeros are irrational numbers with no arithmetic relationship to each other.
 
-```{figure} ../images/ch12-membrane-modes.svg
+```{animation} ch12-membrane-modes
 :label: fig:ch12-membrane-modes
 :alt: Six panels showing the first six modes of a circular membrane as red and blue regions with black nodal lines, labeled (0,1) at 1.00 f1, (1,1) at 1.59, (2,1) at 2.14, (0,2) at 2.30, (3,1) at 2.65 and (1,2) at 2.92.
 

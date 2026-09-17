@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The chain of fifths fails to close</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Twelve pure fifths overshoot seven octaves by the Pythagorean comma</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotPoint, COLORS } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const FIFTH = 1200 * Math.log2( 1.5 ); // 701.955... cents
+const STEPS = 12;
+const HOLD = 0.5; // seconds per fifth added
+const PAUSE = 2.2; // seconds holding the completed chain before it resets
+const PERIOD = ( STEPS + 1 ) * HOLD + PAUSE;
+
+function pitchClass( n ) {
+  return ( n * FIFTH ) % 1200;
+}
+
+function draw( ctx, t, width, height ) {
+  const tt = t % PERIOD;
+  const n = Math.min( STEPS, Math.floor( tt / HOLD ) );
+  const done = n === STEPS && tt >= STEPS * HOLD;
+
+  const leftWidth = width * 0.6;
+  const rightWidth = width - leftWidth;
+
+  // Left: pitch class of each successive fifth, against the number taken.
+  ctx.save();
+  const mapper = makeMapper( { width: leftWidth, height, xMin: -0.5, xMax: STEPS + 0.5, yMin: 0, yMax: 1200, margin: 26 } );
+
+  ctx.save();
+  ctx.strokeStyle = COLORS.light;
+  ctx.setLineDash( [ 3, 3 ] );
+  ctx.beginPath();
+  ctx.moveTo( mapper.x( -0.5 ), mapper.y( 0 ) );
+  ctx.lineTo( mapper.x( STEPS + 0.5 ), mapper.y( 0 ) );
+  ctx.stroke();
+  ctx.restore();
+
+  for ( let k = 0; k <= n; k++ ) {
+    plotPoint( ctx, mapper, k, pitchClass( k ), { color: k === STEPS ? COLORS.red : COLORS.blue, radius: k === 0 || k === STEPS ? 5 : 3.5 } );
+  }
+
+  if ( done ) {
+    ctx.save();
+    ctx.strokeStyle = COLORS.red;
+    ctx.lineWidth = 1.6;
+    ctx.setLineDash( [ 2, 3 ] );
+    ctx.beginPath();
+    ctx.moveTo( mapper.x( STEPS ), mapper.y( 0 ) );
+    ctx.lineTo( mapper.x( STEPS ), mapper.y( pitchClass( STEPS ) ) );
+    ctx.stroke();
+    ctx.restore();
+    ctx.fillStyle = COLORS.red;
+    ctx.font = 'bold 11px sans-serif';
+    ctx.fillText( `${ pitchClass( STEPS ).toFixed( 1 ) } cents short of closing`, mapper.x( 6 ), mapper.y( 1150 ) );
+  }
+
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'pitch class of fifth n', 6, 14 );
+  ctx.textAlign = 'right';
+  ctx.fillText( 'octave', mapper.x( STEPS + 0.5 ), mapper.y( 1160 ) );
+  ctx.textAlign = 'left';
+  ctx.restore();
+
+  // Right: twelve pure fifths vs. seven octaves, the same fact as arithmetic.
+  ctx.save();
+  ctx.translate( leftWidth, 0 );
+  const barMapper = makeMapper( { width: rightWidth, height, xMin: 0, xMax: 2, yMin: 0, yMax: 8500, margin: 22 } );
+  const barWidth = ( rightWidth - 2 * barMapper.margin ) * 0.32;
+
+  const fifthsTotal = STEPS * FIFTH;
+  const revealedFifths = Math.min( n, STEPS ) / STEPS * fifthsTotal;
+  const octavesTotal = 7 * 1200;
+
+  ctx.fillStyle = COLORS.blue;
+  ctx.fillRect( barMapper.x( 0.35 ) - barWidth / 2, barMapper.y( revealedFifths ), barWidth, barMapper.y( 0 ) - barMapper.y( revealedFifths ) );
+  ctx.fillStyle = COLORS.gray;
+  ctx.fillRect( barMapper.x( 1.35 ) - barWidth / 2, barMapper.y( octavesTotal ), barWidth, barMapper.y( 0 ) - barMapper.y( octavesTotal ) );
+
+  ctx.font = '10.5px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = COLORS.blue;
+  ctx.fillText( '12 fifths', barMapper.x( 0.35 ), height - 6 );
+  ctx.fillStyle = COLORS.gray;
+  ctx.fillText( '7 octaves', barMapper.x( 1.35 ), height - 6 );
+
+  if ( done ) {
+    ctx.strokeStyle = COLORS.red;
+    ctx.setLineDash( [ 2, 3 ] );
+    ctx.beginPath();
+    ctx.moveTo( barMapper.x( 0.35 ) - barWidth / 2 - 4, barMapper.y( octavesTotal ) );
+    ctx.lineTo( barMapper.x( 1.35 ) + barWidth / 2 + 4, barMapper.y( octavesTotal ) );
+    ctx.stroke();
+  }
+  ctx.textAlign = 'left';
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

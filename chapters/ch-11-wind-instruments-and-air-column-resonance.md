@@ -98,7 +98,7 @@ $$
 
 the same as an open cylinder, despite being closed at one end.
 
-```{figure} ../images/ch11-bore-shapes.svg
+```{animation} ch11-bore-shapes
 :label: fig:ch11-bore-shapes
 :alt: Three rows, each pairing a bore profile with its harmonic spectrum. An open cylinder gives harmonics 1 to 6 and overblows to an octave; a stopped cylinder gives only odd harmonics and overblows to a twelfth; a cone gives all harmonics and overblows to an octave.
 

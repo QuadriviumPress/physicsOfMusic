@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Damped vibration</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Three decay rates at the same frequency and starting amplitude; the dot retriggers each time the ring dies away</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+// Same oscillation frequency for all three rows -- damping this light barely
+// touches it -- only the decay time tau differs.
+const F = 2.4; // Hz, slowed for legibility
+const A0 = 1;
+const ROWS = [
+  { tau: 2.4, color: COLORS.blue, label: 'long ring, τ = 2.4 s' },
+  { tau: 1.0, color: COLORS.purple, label: 'medium, τ = 1.0 s' },
+  { tau: 0.4, color: COLORS.orange, label: 'short thud, τ = 0.4 s' }
+];
+// Each row loops long enough for its own envelope to be visually gone.
+ROWS.forEach( row => { row.loopLen = row.tau * 6; } );
+
+function envelope( row, x ) {
+  return A0 * Math.exp( -x / row.tau );
+}
+function sample( row, x ) {
+  return envelope( row, x ) * Math.sin( 2 * Math.PI * F * x );
+}
+
+function draw( ctx, t, width, height ) {
+  const rowHeight = height / ROWS.length;
+
+  ROWS.forEach( ( row, i ) => {
+    ctx.save();
+    ctx.translate( 0, i * rowHeight );
+    const mapper = makeMapper( { width, height: rowHeight, xMin: 0, xMax: row.loopLen, yMin: -1.15, yMax: 1.15, margin: 12 } );
+    drawZeroLine( ctx, mapper, 0, row.loopLen );
+
+    const xs = linspace( 0, row.loopLen, Math.round( row.loopLen * 120 ) );
+    plotCurve( ctx, mapper, xs, xs.map( x => envelope( row, x ) ), { color: row.color, dash: [ 3, 3 ], lineWidth: 1, alpha: 0.55 } );
+    plotCurve( ctx, mapper, xs, xs.map( x => -envelope( row, x ) ), { color: row.color, dash: [ 3, 3 ], lineWidth: 1, alpha: 0.55 } );
+    plotCurve( ctx, mapper, xs, xs.map( x => sample( row, x ) ), { color: row.color, lineWidth: 1.6 } );
+
+    const local = t % row.loopLen;
+    plotPoint( ctx, mapper, local, sample( row, local ), { color: row.color, radius: 4.5 } );
+
+    ctx.fillStyle = row.color;
+    ctx.font = '11px sans-serif';
+    ctx.fillText( row.label, 6, 13 );
+    ctx.restore();
+  } );
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

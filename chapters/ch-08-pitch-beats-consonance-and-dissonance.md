@@ -263,7 +263,7 @@ The upper tone's 2nd partial coincides *exactly* with the lower tone's 3rd. Its 
 
 Detune the fifth slightly and those coincidences become near-misses, pairs of partials a few hertz apart, which is exactly the recipe for beating and roughness.
 
-```{figure} ../images/ch08-dissonance-curve.svg
+```{animation} ch08-dissonance-curve
 :label: fig:ch08-dissonance-curve
 :alt: A curve of total dissonance against interval in cents from unison to the octave, computed for two six-partial tones, showing deep minima at the unison, minor third, major third, perfect fourth, perfect fifth, major sixth and octave.
 

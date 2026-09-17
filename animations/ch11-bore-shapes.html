@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bore shapes and their fundamental mode</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">The cone's apex is not really a constraint -- it behaves like the open cylinder</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, fillBetween, drawZeroLine, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const xs = linspace( 0, 1, 300 );
+const OMEGA = Math.PI / 2;
+
+function openShape( x ) {
+  return Math.cos( Math.PI * x );
+}
+
+function stoppedShape( x ) {
+  return Math.sin( Math.PI * x / 2 );
+}
+
+function coneShape( r ) {
+  if ( r < 1e-6 ) {
+    return 1;
+  }
+  return ( Math.sin( Math.PI * r ) / r ) / Math.PI;
+}
+
+const BORES = [
+  { label: 'Open cylinder', shapeFn: openShape, color: COLORS.blue, wall: 'open' },
+  { label: 'Stopped cylinder', shapeFn: stoppedShape, color: COLORS.red, wall: 'stopped' },
+  { label: 'Cone', shapeFn: coneShape, color: COLORS.purple, wall: 'cone' }
+];
+
+function drawWalls( ctx, mapper, wall ) {
+  ctx.save();
+  ctx.strokeStyle = '#333333';
+  ctx.lineWidth = 2.0;
+  if ( wall === 'cone' ) {
+    ctx.beginPath();
+    ctx.moveTo( mapper.x( 0 ), mapper.y( 0 ) );
+    ctx.lineTo( mapper.x( 1 ), mapper.y( 1.3 ) );
+    ctx.moveTo( mapper.x( 0 ), mapper.y( 0 ) );
+    ctx.lineTo( mapper.x( 1 ), mapper.y( -1.3 ) );
+    ctx.stroke();
+    return;
+  }
+  ctx.beginPath();
+  ctx.moveTo( mapper.x( 0 ), mapper.y( 1.3 ) );
+  ctx.lineTo( mapper.x( 1 ), mapper.y( 1.3 ) );
+  ctx.moveTo( mapper.x( 0 ), mapper.y( -1.3 ) );
+  ctx.lineTo( mapper.x( 1 ), mapper.y( -1.3 ) );
+  ctx.stroke();
+  if ( wall === 'stopped' ) {
+    ctx.lineWidth = 3.5;
+    ctx.beginPath();
+    ctx.moveTo( mapper.x( 0 ), mapper.y( -1.3 ) );
+    ctx.lineTo( mapper.x( 0 ), mapper.y( 1.3 ) );
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function drawColumn( ctx, bore, t, mapper ) {
+  const shape = xs.map( bore.shapeFn );
+  fillBetween( ctx, mapper, xs, shape, shape.map( v => -v ), { color: bore.color, alpha: 0.1 } );
+  plotCurve( ctx, mapper, xs, shape, { color: bore.color, lineWidth: 1.1, alpha: 0.3 } );
+  plotCurve( ctx, mapper, xs, shape.map( v => -v ), { color: bore.color, lineWidth: 1.1, alpha: 0.3 } );
+  drawZeroLine( ctx, mapper, 0, 1 );
+  const instant = shape.map( v => v * Math.cos( OMEGA * t ) );
+  plotCurve( ctx, mapper, xs, instant, { color: bore.color, lineWidth: 2.2 } );
+  drawWalls( ctx, mapper, bore.wall );
+  ctx.fillStyle = bore.color;
+  ctx.font = 'bold 11px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText( bore.label, mapper.x( 0.5 ), 14 );
+  ctx.textAlign = 'left';
+}
+
+function draw( ctx, t, width, height ) {
+  const colWidth = width / BORES.length;
+  BORES.forEach( ( bore, i ) => {
+    ctx.save();
+    ctx.translate( i * colWidth, 0 );
+    const mapper = makeMapper( { width: colWidth, height, xMin: -0.05, xMax: 1.1, yMin: -1.5, yMax: 1.5, margin: 20 } );
+    drawColumn( ctx, bore, t, mapper );
+    ctx.restore();
+  } );
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

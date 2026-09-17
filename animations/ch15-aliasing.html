@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aliasing</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Above Nyquist the true wave and its alias hit the same samples but disagree everywhere else</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+// Sample rate normalized to 1 sample/unit time, Nyquist = 0.5.
+const SWEEP_PERIOD = 14;
+function trueFreq( t ) {
+  return 0.75 + 0.7 * Math.sin( 2 * Math.PI * t / SWEEP_PERIOD );
+}
+
+// The apparent (aliased) frequency and the sign flip needed so the aliased
+// sinusoid agrees with the true one at every integer sample time.
+function aliasInfo( f ) {
+  const k = Math.floor( f );
+  const frac = f - k;
+  if ( frac <= 0.5 ) {
+    return { freq: frac, sign: 1 };
+  }
+  return { freq: 1 - frac, sign: -1 };
+}
+
+function foldedApparent( f ) {
+  return aliasInfo( f ).freq;
+}
+
+const xs = linspace( 0, 6, 400 );
+const sampleTimes = linspace( 0, 6, 7 );
+const foldAxis = linspace( 0, 1.5, 300 );
+const foldCurve = foldAxis.map( foldedApparent );
+
+function draw( ctx, t, width, height ) {
+  const f = trueFreq( t );
+  const alias = aliasInfo( f );
+  const topHeight = height * 0.55;
+
+  // Top: the continuous wave and its sample-exact alias.
+  ctx.save();
+  const waveMapper = makeMapper( { width, height: topHeight, xMin: 0, xMax: 6, yMin: -1.3, yMax: 1.3, margin: 14 } );
+  drawZeroLine( ctx, waveMapper, 0, 6 );
+  plotCurve( ctx, waveMapper, xs, xs.map( x => Math.sin( 2 * Math.PI * f * x ) ), { color: COLORS.blue, lineWidth: 1.6, alpha: 0.55 } );
+  plotCurve( ctx, waveMapper, xs, xs.map( x => alias.sign * Math.sin( 2 * Math.PI * alias.freq * x ) ), { color: COLORS.red, lineWidth: 2 } );
+  sampleTimes.forEach( x => {
+    plotPoint( ctx, waveMapper, x, Math.sin( 2 * Math.PI * f * x ), { color: COLORS.gray, radius: 3.5 } );
+  } );
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( `signal: ${ f.toFixed( 2 ) } × sample rate`, 6, 14 );
+  ctx.fillStyle = COLORS.red;
+  ctx.fillText( `heard as: ${ alias.freq.toFixed( 2 ) } × sample rate`, 6, 28 );
+  ctx.restore();
+
+  // Bottom: the folding diagram, with the current frequency tracked on it.
+  ctx.save();
+  ctx.translate( 0, topHeight );
+  const bottomHeight = height - topHeight;
+  const foldMapper = makeMapper( { width, height: bottomHeight, xMin: 0, xMax: 1.5, yMin: 0, yMax: 0.5, margin: 16 } );
+  plotCurve( ctx, foldMapper, foldAxis, foldCurve, { color: COLORS.purple, lineWidth: 2 } );
+
+  ctx.save();
+  ctx.strokeStyle = COLORS.gray;
+  ctx.setLineDash( [ 3, 3 ] );
+  ctx.beginPath();
+  ctx.moveTo( foldMapper.x( 0.5 ), foldMapper.y( 0 ) );
+  ctx.lineTo( foldMapper.x( 0.5 ), foldMapper.y( 0.5 ) );
+  ctx.stroke();
+  ctx.restore();
+
+  plotPoint( ctx, foldMapper, f, alias.freq, { color: COLORS.red, radius: 5 } );
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'input frequency → apparent frequency', 6, 13 );
+  ctx.fillText( 'Nyquist', foldMapper.x( 0.5 ) + 4, foldMapper.y( 0.48 ) );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

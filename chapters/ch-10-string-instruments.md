@@ -131,7 +131,7 @@ with $a$ the distance of the pluck from one end.
 
 Two factors, doing two different jobs. The $1/n^2$ makes high harmonics weak whatever you do, this is why a plucked string is not harsh. The $\sin(n\pi a/L)$ is the interesting one: it vanishes whenever $a = L/n$, so **plucking at $L/n$ removes the $n$th harmonic and all its multiples**, and it also tilts the whole spectrum according to where $a$ is.
 
-```{figure} ../images/ch10-pluck-position.svg
+```{animation} ch10-pluck-position
 :label: fig:ch10-pluck-position
 :alt: Three columns, each showing a triangular pluck shape above the resulting harmonic spectrum. Plucking at the middle removes all even harmonics; plucking at one fifth removes the fifth and tenth; plucking near the bridge leaves all harmonics strong and flat.
 

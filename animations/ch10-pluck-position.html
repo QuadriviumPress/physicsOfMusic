@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pluck position and harmonic content</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Plucking at L/n removes the nth harmonic and all its multiples</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const PERIOD = 6; // seconds for the pluck point to sweep across and back
+const N_HARMONICS = 10;
+
+function pluckPosition( t ) {
+  return 0.5 + 0.42 * Math.sin( 2 * Math.PI * t / PERIOD );
+}
+
+function stringShape( a ) {
+  const xs = [ 0, a, 1 ];
+  const ys = [ 0, 1, 0 ];
+  return { xs, ys };
+}
+
+function harmonicAmplitude( n, a ) {
+  return Math.abs( Math.sin( n * Math.PI * a ) ) / ( n * n );
+}
+
+function draw( ctx, t, width, height ) {
+  const a = pluckPosition( t );
+  const topHeight = height * 0.45;
+
+  // Top: the string shape, plucked at position a.
+  ctx.save();
+  const shapeMapper = makeMapper( { width, height: topHeight, xMin: 0, xMax: 1, yMin: -0.3, yMax: 1.25, margin: 14 } );
+  drawZeroLine( ctx, shapeMapper, 0, 1 );
+  const shape = stringShape( a );
+  plotCurve( ctx, shapeMapper, shape.xs, shape.ys, { color: COLORS.blue, lineWidth: 2.2 } );
+  plotPoint( ctx, shapeMapper, a, 1, { color: COLORS.red, radius: 4.5 } );
+  ctx.save();
+  ctx.strokeStyle = COLORS.light;
+  ctx.setLineDash( [ 3, 3 ] );
+  ctx.beginPath();
+  ctx.moveTo( shapeMapper.x( a ), shapeMapper.y( 0 ) );
+  ctx.lineTo( shapeMapper.x( a ), shapeMapper.y( 1 ) );
+  ctx.stroke();
+  ctx.restore();
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( `pluck at a/L = ${ a.toFixed( 2 ) }`, 6, 14 );
+  ctx.restore();
+
+  // Bottom: the resulting harmonic amplitude spectrum.
+  ctx.save();
+  ctx.translate( 0, topHeight );
+  const bottomHeight = height - topHeight;
+  const barMapper = makeMapper( { width, height: bottomHeight, xMin: 0.5, xMax: N_HARMONICS + 0.5, yMin: 0, yMax: 1, margin: 16 } );
+  const barWidth = ( width - 2 * barMapper.margin ) / N_HARMONICS * 0.6;
+
+  for ( let n = 1; n <= N_HARMONICS; n++ ) {
+    const amp = harmonicAmplitude( n, a );
+    const x = barMapper.x( n );
+    const yTop = barMapper.y( amp );
+    const yBase = barMapper.y( 0 );
+    ctx.fillStyle = n % 2 === 0 ? COLORS.orange : COLORS.blue;
+    ctx.fillRect( x - barWidth / 2, yTop, barWidth, yBase - yTop );
+  }
+
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.fillText( 'harmonic amplitude (n = 1..10)', 6, 13 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

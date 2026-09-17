@@ -201,7 +201,7 @@ $$
 
 This is **simple harmonic motion**, and the equation has exactly four numbers in it. Three describe the motion and the fourth describes when you started the clock.
 
-```{figure} ../images/ch01-sinusoid-anatomy.svg
+```{animation} ch01-sinusoid-anatomy
 :label: fig:ch01-sinusoid-anatomy
 :alt: A sine curve with the amplitude marked as the distance from the axis to the peak, the period marked from peak to peak, and a second dashed curve shifted sideways to illustrate phase.
 
@@ -233,7 +233,7 @@ $$
 f = \frac{1}{2\pi}\sqrt{\frac{k}{m}}.
 $$
 
-```{figure} ../images/ch01-mass-spring.svg
+```{animation} ch01-mass-spring
 :label: fig:ch01-mass-spring
 :alt: A mass on a spring drawn at three moments: displaced to one side with the force arrow pointing back toward equilibrium, at equilibrium with no force and maximum speed, and displaced to the other side with the force again pointing back.
 
@@ -317,7 +317,7 @@ $$
 
 The **decay time** $\tau$ is the time for the amplitude to fall to $1/e$, about $37\%$, of where it started. A large $\tau$ means a long ring; a small $\tau$ means a quick thud.
 
-```{figure} ../images/ch01-damping.svg
+```{animation} ch01-damping
 :label: fig:ch01-damping
 :alt: Three damped sinusoids drawn with their exponential envelopes, decaying at three different rates, from a long slow decay to a very fast one.
 

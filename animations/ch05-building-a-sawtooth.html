@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Building a sawtooth from harmonics</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">More harmonics narrow the overshoot at each jump -- it never disappears</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, plotPoint, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+// Sawtooth ramping from -1 to 1 over (-pi, pi), matching the static figure.
+const xs = linspace( -Math.PI, Math.PI - 0.002, 500 );
+const HARMONIC_COUNTS = [ 1, 2, 3, 5, 10, 40 ];
+const HOLD = 1.6; // seconds per harmonic count
+
+function target( x ) {
+  return x / Math.PI;
+}
+
+function partialSum( x, n ) {
+  let sum = 0;
+  for ( let k = 1; k <= n; k++ ) {
+    sum += ( ( k % 2 === 0 ) ? -1 : 1 ) / k * Math.sin( k * x );
+  }
+  return ( 2 / Math.PI ) * sum;
+}
+
+function draw( ctx, t, width, height ) {
+  const step = Math.floor( t / HOLD ) % HARMONIC_COUNTS.length;
+  const n = HARMONIC_COUNTS[ step ];
+
+  const mapper = makeMapper( { width, height, xMin: -Math.PI, xMax: Math.PI, yMin: -1.35, yMax: 1.35, margin: 22 } );
+  drawZeroLine( ctx, mapper, -Math.PI, Math.PI );
+
+  plotCurve( ctx, mapper, xs, xs.map( target ), { color: COLORS.light, lineWidth: 1.6, dash: [ 5, 4 ] } );
+
+  const ys = xs.map( x => partialSum( x, n ) );
+  plotCurve( ctx, mapper, xs, ys, { color: COLORS.blue, lineWidth: 2.2 } );
+
+  // The overshoot sits right after the jump at x = -pi; find the local peak there.
+  let peak = -Infinity;
+  let peakX = xs[ 0 ];
+  for ( let i = 0; i < ys.length; i++ ) {
+    if ( ys[ i ] > peak ) {
+      peak = ys[ i ];
+      peakX = xs[ i ];
+    }
+  }
+  plotPoint( ctx, mapper, peakX, peak, { color: COLORS.red, radius: 4 } );
+
+  ctx.save();
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = 'bold 12px sans-serif';
+  ctx.fillText( `${ n } harmonic${ n === 1 ? '' : 's' }`, 8, 16 );
+  ctx.font = '11px sans-serif';
+  ctx.fillStyle = COLORS.red;
+  ctx.fillText( `peak near the jump: ${ peak.toFixed( 2 ) } (target = 1.00)`, 8, 32 );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

@@ -156,7 +156,7 @@ Georg von Békésy won the 1961 Nobel Prize for working out what actually happen
 
 A sound entering at the oval window sets off a **traveling wave** that moves along the membrane from base toward apex. As it travels it grows, reaches a peak at the place matched to its frequency, and then dies away very rapidly.
 
-```{figure} ../images/ch06-travelling-wave.svg
+```{animation} ch06-travelling-wave
 :label: fig:ch06-traveling-wave
 :alt: Three envelope curves along the length of the basilar membrane, for 4 kHz, 1 kHz and 250 Hz, each rising gradually, peaking at a different place, and falling away steeply on the apex side of the peak.
 
