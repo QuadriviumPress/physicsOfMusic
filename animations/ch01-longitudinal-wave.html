@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Longitudinal wave and pressure</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">The particles oscillate; the compression and pressure pattern travels</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, plotPoint, drawZeroLine, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+
+const X_MAX = 8;
+const WAVELENGTH = 2;
+const K = 2 * Math.PI / WAVELENGTH;
+const OMEGA = Math.PI;
+const DISPLACEMENT = 0.16;
+const xs = linspace( 0, X_MAX, 500 );
+
+// A deterministic scatter gives the air some depth without changing between
+// frames. Only its horizontal coordinate oscillates.
+let seed = 7;
+function random() {
+  seed = ( seed * 16807 ) % 2147483647;
+  return ( seed - 1 ) / 2147483646;
+}
+const particles = Array.from( { length: 300 }, ( _, i ) => ( {
+  x: X_MAX * i / 299,
+  y: 0.14 + 0.72 * random()
+} ) );
+
+function phasePosition( phase, t, preferred ) {
+  const base = ( OMEGA * t + phase ) / K;
+  const turns = Math.round( ( preferred - base ) / WAVELENGTH );
+  return base + turns * WAVELENGTH;
+}
+
+function drawDoubleArrow( ctx, x0, x1, y, color ) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 1.2;
+  ctx.beginPath();
+  ctx.moveTo( x0, y );
+  ctx.lineTo( x1, y );
+  ctx.stroke();
+  for ( const [ x, direction ] of [ [ x0, 1 ], [ x1, -1 ] ] ) {
+    ctx.beginPath();
+    ctx.moveTo( x, y );
+    ctx.lineTo( x + direction * 7, y - 4 );
+    ctx.lineTo( x + direction * 7, y + 4 );
+    ctx.closePath();
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
+function draw( ctx, t, width, height ) {
+  const topHeight = height * 0.48;
+  const top = makeMapper( {
+    width,
+    height: topHeight,
+    xMin: 0,
+    xMax: X_MAX,
+    yMin: 0,
+    yMax: 1,
+    margin: 24
+  } );
+
+  const compressionX = phasePosition( Math.PI, t, 2.1 );
+  const rarefactionX = phasePosition( 0, t, 4.1 );
+
+  ctx.save();
+  for ( const particle of particles ) {
+    const displacedX = particle.x + DISPLACEMENT * Math.sin( K * particle.x - OMEGA * t );
+    plotPoint( ctx, top, displacedX, particle.y, { color: COLORS.blue, radius: 1.45 } );
+  }
+  ctx.font = '11px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = COLORS.red;
+  ctx.fillText( 'compression', top.x( compressionX ), 14 );
+  ctx.fillStyle = COLORS.blue;
+  ctx.fillText( 'rarefaction', top.x( rarefactionX ), 14 );
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate( 0, topHeight );
+  const bottomHeight = height - topHeight;
+  const bottom = makeMapper( {
+    width,
+    height: bottomHeight,
+    xMin: 0,
+    xMax: X_MAX,
+    yMin: -1.55,
+    yMax: 1.35,
+    margin: 24
+  } );
+  drawZeroLine( ctx, bottom, 0, X_MAX );
+  const pressure = xs.map( x => -Math.cos( K * x - OMEGA * t ) );
+  plotCurve( ctx, bottom, xs, pressure, { color: COLORS.red, lineWidth: 2.2 } );
+
+  ctx.save();
+  ctx.setLineDash( [ 3, 4 ] );
+  ctx.strokeStyle = COLORS.gray;
+  ctx.globalAlpha = 0.45;
+  for ( const x of [ compressionX, rarefactionX ] ) {
+    ctx.beginPath();
+    ctx.moveTo( bottom.x( x ), bottom.y( -1.1 ) );
+    ctx.lineTo( bottom.x( x ), bottom.y( 1.1 ) );
+    ctx.stroke();
+  }
+  ctx.restore();
+
+  const arrowX0 = bottom.x( 1 );
+  const arrowX1 = bottom.x( 1 + WAVELENGTH );
+  const arrowY = bottom.y( -1.28 );
+  drawDoubleArrow( ctx, arrowX0, arrowX1, arrowY, COLORS.gray );
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = '11px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText( 'one wavelength λ', ( arrowX0 + arrowX1 ) / 2, arrowY + 16 );
+  ctx.textAlign = 'left';
+  ctx.fillText( 'pressure relative to still air', bottom.x( 0.05 ), bottom.y( 1.22 ) );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

@@ -99,6 +99,15 @@ Its **peak** is at the natural frequency. Its **height** says how much amplifica
 A steady drive of constant strength, swept slowly from $120$ Hz to $900$ Hz past a resonance at $330$ Hz. The *drive* does not change in strength at any point. Everything you hear is the resonator's selectivity.
 ```
 
+```{openlyceum} Resonance
+:screens: 1
+:label: fig:ch04-resonance-sim
+:sim-name: Resonance — single oscillator
+:alt: A driven mass on a spring beside controls for mass, spring constant, damping, driving frequency, and driving amplitude.
+
+Set the damping low and sweep the driving frequency slowly through the natural frequency. The mass always moves at the *driving* frequency; it is the amplitude that changes, rising sharply at resonance. Increase the damping and repeat: the peak becomes lower and broader. Then change the mass or spring constant, predict which way the resonance will move, and test your prediction.
+```
+
 :::{note}
 The most famous demonstration of resonance, a singer shattering a wine glass, is real but demanding. It needs the singer to hit the glass's natural frequency within a few hertz, to hold it, and to be loud enough that a $Q$ of several hundred multiplies the amplitude past the glass's breaking strain. Amplification is usually involved. The physics is exactly the curve above; what makes it hard is the narrowness of the peak.
 :::

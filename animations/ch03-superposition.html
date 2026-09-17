@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Superposition of wave pulses</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">Dashed pulses pass through; the solid line is their sum</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, drawZeroLine, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+const X_MIN = -6;
+const X_MAX = 6;
+const DURATION = 7;
+const xs = linspace( X_MIN, X_MAX, 500 );
+
+function pulse( x, center ) {
+  return Math.exp( -( ( ( x - center ) / 0.58 ) ** 2 ) );
+}
+
+function drawPanel( ctx, t, width, height, sign, label, color ) {
+  const mapper = makeMapper( {
+    width,
+    height,
+    xMin: X_MIN,
+    xMax: X_MAX,
+    yMin: -1.45,
+    yMax: 2.2,
+    margin: 24
+  } );
+  drawZeroLine( ctx, mapper, X_MIN, X_MAX );
+
+  // The reset happens while both pulses are beyond the visible plot, so each
+  // pass reads as one uninterrupted encounter.
+  const progress = ( t % DURATION ) / DURATION;
+  const leftCenter = -7 + 14 * progress;
+  const rightCenter = 7 - 14 * progress;
+  const left = xs.map( x => pulse( x, leftCenter ) );
+  const right = xs.map( x => sign * pulse( x, rightCenter ) );
+  const sum = xs.map( ( _, i ) => left[ i ] + right[ i ] );
+
+  plotCurve( ctx, mapper, xs, left, {
+    color: COLORS.blue,
+    lineWidth: 1.4,
+    dash: [ 6, 4 ],
+    alpha: 0.8
+  } );
+  plotCurve( ctx, mapper, xs, right, {
+    color: COLORS.orange,
+    lineWidth: 1.4,
+    dash: [ 6, 4 ],
+    alpha: 0.8
+  } );
+  plotCurve( ctx, mapper, xs, sum, { color, lineWidth: 2.5 } );
+
+  ctx.fillStyle = color;
+  ctx.font = 'bold 11px sans-serif';
+  ctx.fillText( label, mapper.x( X_MIN + 0.15 ), 16 );
+}
+
+function draw( ctx, t, width, height ) {
+  const panelHeight = height / 2;
+  ctx.save();
+  drawPanel( ctx, t, width, panelHeight, 1, 'same sign: they reinforce', COLORS.green );
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate( 0, panelHeight );
+  drawPanel( ctx, t, width, panelHeight, -1, 'opposite sign: they cancel', COLORS.red );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>

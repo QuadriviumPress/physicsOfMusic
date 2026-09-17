@@ -61,7 +61,7 @@ $$
 
 That is all. The waves do not know about each other.
 
-```{figure} ../images/ch03-superposition.svg
+```{animation} ch03-superposition
 :label: fig:ch03-superposition
 :alt: Two rows of three panels. In the top row two pulses of the same sign approach, overlap into a single taller pulse, and separate again unchanged. In the bottom row a positive and a negative pulse approach, cancel momentarily to a flat line, and separate again unchanged.
 
@@ -183,7 +183,7 @@ If the end is **clamped**, it cannot move. But the arriving pulse is trying to m
 
 If the end is **free**, attached to a ring that can slide on a frictionless rod, say, nothing resists the motion. The end overshoots, and the pulse comes back **the same way up**.
 
-```{figure} ../images/ch03-reflection.svg
+```{animation} ch03-reflection
 :label: fig:ch03-reflection
 :alt: Two rows of three panels showing a pulse traveling toward a boundary. In the top row, against a thick wall, it returns inverted. In the bottom row, against a dotted free end marked with a ring, it returns upright.
 

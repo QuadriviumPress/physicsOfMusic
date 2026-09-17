@@ -212,11 +212,14 @@ A flat plate has modes indexed by two numbers, like a membrane, but stiffness-co
 
 The classic way to see them is **Chladni's** method, published in 1787: scatter sand on the plate and excite a mode, and the sand bounces away from the moving regions and collects along the nodal lines.
 
-```{figure} ../images/ch12-chladni.svg
+```{openlyceum} Resonance
+:screens: 4
+:placeholder: ../images/ch12-chladni.png
 :label: fig:ch12-chladni
-:alt: Four square panels showing black nodal-line patterns of increasing complexity, from a simple diagonal cross to an intricate lattice with a star at the center.
+:sim-name: Resonance — Chladni patterns
+:alt: Four square plates showing nodal-line patterns of increasing complexity, from a simple diagonal cross to an intricate lattice with a star at the center.
 
-Chladni figures on a square plate. Each pattern belongs to one mode, and the number of lines rises with the mode number. Violin makers still use the method to check the symmetry of a top or back plate before assembly, an asymmetric pattern means the plate is thicker on one side.
+Select different resonant frequencies and watch the particles collect along the lines that do not move. Each pattern belongs to one mode, and the number of lines generally rises with the mode number. Violin makers still use the method to check the symmetry of a top or back plate before assembly; an asymmetric pattern means the plate is thicker on one side.
 ```
 
 ### Cymbals, Gongs, and the Nonlinear Cascade

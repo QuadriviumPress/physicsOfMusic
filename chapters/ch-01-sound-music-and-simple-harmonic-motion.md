@@ -71,7 +71,7 @@ Waves on a string are the other kind. There, the string moves up and down while 
 
 Because the air bunches up in some places and thins out in others, sound can be described either as a **displacement** of the air or as a **pressure** variation. The two descriptions are equivalent but they are not the same picture, and confusing them is the most common early mistake in acoustics.
 
-```{figure} ../images/ch01-longitudinal-wave.svg
+```{animation} ch01-longitudinal-wave
 :label: fig:ch01-longitudinal-wave
 :alt: Dots representing air molecules, bunched into compressions and spread into rarefactions, above a graph of pressure against distance whose maxima line up with the compressions.
 

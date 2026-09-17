@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reflection at fixed and free ends</title>
+<link rel="stylesheet" href="lib/animlib.css">
+</head>
+<body>
+<div class="anim-page">
+  <canvas class="anim-canvas" id="canvas"></canvas>
+  <div class="anim-controls" id="controls">
+    <span class="anim-note">A fixed end inverts the returning pulse; a free end does not</span>
+  </div>
+</div>
+<script type="module">
+import { startLoop, makeMapper, plotCurve, plotPoint, drawZeroLine, COLORS, linspace } from './lib/animlib.js';
+
+const canvas = document.getElementById( 'canvas' );
+const controls = document.getElementById( 'controls' );
+const WALL = 10;
+const DURATION = 8;
+const xs = linspace( 0, WALL, 500 );
+
+function pulse( x, center ) {
+  return Math.exp( -( ( ( x - center ) / 0.62 ) ** 2 ) );
+}
+
+function drawBoundary( ctx, mapper, fixed, endpointY ) {
+  ctx.save();
+  ctx.strokeStyle = '#333333';
+  ctx.lineWidth = fixed ? 3 : 1.2;
+  ctx.setLineDash( fixed ? [] : [ 3, 3 ] );
+  ctx.beginPath();
+  ctx.moveTo( mapper.x( WALL ), mapper.y( -1.3 ) );
+  ctx.lineTo( mapper.x( WALL ), mapper.y( 1.3 ) );
+  ctx.stroke();
+  ctx.restore();
+  if ( !fixed ) {
+    plotPoint( ctx, mapper, WALL, endpointY, { color: '#333333', radius: 4.5 } );
+  }
+}
+
+function drawPanel( ctx, t, width, height, fixed ) {
+  const mapper = makeMapper( {
+    width,
+    height,
+    xMin: 0,
+    xMax: 10.6,
+    yMin: -1.55,
+    yMax: 1.55,
+    margin: 24
+  } );
+  drawZeroLine( ctx, mapper, 0, WALL );
+
+  // The image pulse beyond the wall enforces y=0 at a fixed end and zero
+  // slope at a free end. Moving the incident center through the wall then
+  // produces the reflected pulse automatically.
+  const progress = ( t % DURATION ) / DURATION;
+  const incidentCenter = -1.5 + 23 * progress;
+  const imageCenter = 2 * WALL - incidentCenter;
+  const reflectionSign = fixed ? -1 : 1;
+  const y = xs.map( x => pulse( x, incidentCenter ) + reflectionSign * pulse( x, imageCenter ) );
+
+  plotCurve( ctx, mapper, xs, y, {
+    color: fixed ? COLORS.red : COLORS.green,
+    lineWidth: 2.5
+  } );
+  drawBoundary( ctx, mapper, fixed, y[ y.length - 1 ] );
+
+  ctx.fillStyle = fixed ? COLORS.red : COLORS.green;
+  ctx.font = 'bold 11px sans-serif';
+  ctx.fillText(
+    fixed ? 'fixed end: returns inverted' : 'free end: returns upright',
+    mapper.x( 0.15 ),
+    16
+  );
+}
+
+function draw( ctx, t, width, height ) {
+  const panelHeight = height / 2;
+  ctx.save();
+  drawPanel( ctx, t, width, panelHeight, true );
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate( 0, panelHeight );
+  drawPanel( ctx, t, width, panelHeight, false );
+  ctx.restore();
+}
+
+startLoop( { canvas, draw, controls, speed: 1 } );
+</script>
+</body>
+</html>
