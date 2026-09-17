@@ -32,11 +32,11 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
-```{figure} ../images/open/ch08-violin.jpg
+```{figure} ../images/open/ch04-guitar-strings-vibrating.jpg
 :label: fig:ch04-open-guitar
-:alt: A guitar shown from above, with its body and sound hole visible.
+:alt: An extreme close-up of six guitar strings caught mid-vibration, each blurred into a wide band whose width traces the string's actual oscillation envelope.
 
-A guitar is a compact collection of resonators: strings, plates, an enclosed air cavity, and the room beyond them. Thiru R. P. Babu, CC0.
+A guitar is a compact collection of resonators: strings, plates, an enclosed air cavity, and the room beyond them. Here the strings themselves are doing it, each blurred band the shape of one string's vibration. Matt Stetzel, CC BY 4.0.
 ```
 
 [Chapter 3](#ch-superposition) established that a string fixed at both ends can only vibrate at certain frequencies. That is a statement about what the string will do if left alone. This chapter is about what happens when it is *not* left alone, when something drives it.

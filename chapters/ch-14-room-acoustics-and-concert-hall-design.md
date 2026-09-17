@@ -33,6 +33,13 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
+```{figure} ../images/open/ch14-copenhagen-concert-hall.jpg
+:label: fig:ch14-open-hall
+:alt: A wide interior view of a concert hall from a high balcony, looking down on an orchestra performing on a central stage surrounded on all sides by tiered seating full of listeners.
+
+The Copenhagen Concert Hall, its seating rising around the stage on every side rather than facing it from one end. §14.5 returns to why a "vineyard" plan like this one is one of three basic answers to the same design problem. Jacob Bøtter, CC BY 2.0.
+```
+
 Everything so far has treated the instrument as the source of the sound a listener hears. It is not. Between the instrument and the ear is a room, and in almost every case **most of what reaches the listener has bounced off something.**
 
 In a concert hall, a listener in the middle of the stalls receives perhaps a tenth of their sound energy directly from the stage. The rest arrives later, from every direction, having reflected once, twice, or a hundred times. The room is not a transparent medium through which music passes; it is part of the instrument.

@@ -12,8 +12,8 @@ is the authoritative record for the file and its license.
 | `ch03-chladni-historical.png` | [Bowing Chladni plate](https://commons.wikimedia.org/wiki/File:Bowing_chladni_plate.png) | Public domain | Unknown, from *Elementary Lessons on Sound* (1879) |
 | `ch03-chladni-figures.jpg` | [FigureChladni](https://commons.wikimedia.org/wiki/File:FigureChladni.jpg) | Public domain | Émile Desbeaux, from *La physique populaire* |
 | `ch06-ear-anatomy-illustration.png` | [Blausen 0328 EarAnatomy](https://commons.wikimedia.org/wiki/File:Blausen_0328_EarAnatomy.png) | CC BY 3.0 | BruceBlaus / Blausen Medical |
+| `ch04-guitar-strings-vibrating.jpg` | [Acoustic Dreams](https://commons.wikimedia.org/wiki/File:Acoustic_Dreams.jpg) | CC BY 4.0 | Matt Stetzel |
 | `ch07-concert-hall-interior.jpg` | [Chicago Symphony Orchestra 2005](https://commons.wikimedia.org/wiki/File:Chicago_Symphony_Orchestra_2005.jpg) | CC BY 2.0 | Jordan Fischer |
-| `ch08-violin.jpg` | [Violin musical instrument](https://commons.wikimedia.org/wiki/File:Violin_musical_instrument.jpg) | CC0 1.0 | Thiru R. P. Babu; the photographed instrument is a guitar |
 | `ch09-horn-violin.jpg` | [Horn-violin](https://commons.wikimedia.org/wiki/File:Horn-violin_(also_called_trumpet-violin).jpg) | Public domain | Unknown |
 | `ch10-violin-antonius.jpg` | ["The Antonius" Violin MET DP105130](https://commons.wikimedia.org/wiki/File:%22The_Antonius%22_Violin_MET_DP105130.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
 | `ch10-piano-cristofori.jpg` | [Grand Piano MET DP300941](https://commons.wikimedia.org/wiki/File:Grand_Piano_MET_DP300941.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
@@ -23,6 +23,7 @@ is the authoritative record for the file and its license.
 | `ch11-flute-met.jpg` | [Flute MET 53745](https://commons.wikimedia.org/wiki/File:Flute_MET_53745.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
 | `ch11-trumpet.png` | [Trumpet and slide-trumpet range](https://commons.wikimedia.org/wiki/File:Britannica_Trumpet_Slide_Trumpet_Range.png) | Public domain | Victor Charles Mahillon and Kathleen Schlesinger |
 | `ch12-timpani-kettle-drums.jpg` | [Kettle Drums MET DP229625](https://commons.wikimedia.org/wiki/File:Kettle_Drums_MET_DP229625.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
+| `ch14-copenhagen-concert-hall.jpg` | [Main Auditorium, Copenhagen Concert Hall](https://commons.wikimedia.org/wiki/File:Main_Auditorium,_Copenhagen_Concert_Hall.jpg) | CC BY 2.0 | Jacob Bøtter |
 | `ch15-microphone-studio.jpg` | [Close up view of a microphone set up in a recording studio](https://commons.wikimedia.org/wiki/File:Close_up_view_of_a_microphone_set_up_in_a_recording_studio.jpg) | CC BY 2.0 | Shixart1985 |
 
 The book's own captions identify the source page where attribution is useful;
