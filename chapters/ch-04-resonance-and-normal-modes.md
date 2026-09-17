@@ -81,9 +81,9 @@ After any initial transient dies away, the system settles into oscillating **at 
 
 ```{animation} ch04-response-curves
 :label: fig:ch04-response-curves
-:alt: Top, three amplitude-response curves on logarithmic axes against the ratio of driving to natural frequency, peaking sharply at a ratio of one, with taller narrower peaks for higher Q. Bottom, the corresponding phase lag rising from zero through ninety degrees at resonance to one hundred and eighty degrees.
+:alt: Left, a constant-strength oscillating force drives a mass on a spring; the mass moves much farther as the drive approaches resonance and its motion changes phase. Right, three amplitude-response curves peak at resonance above phase-lag curves that pass through ninety degrees there.
 
-The response of a driven oscillator, with a marker sweeping the drive frequency back and forth through resonance. **Top**: the amplitude, relative to what a very slow push would produce, for three amounts of damping. The peak is at the natural frequency in every case; what changes is how tall and how narrow it is. **Bottom**: the phase lag. At resonance the response lags the drive by exactly $90°$, whatever the damping, which is the precise statement of "pushing at the right moment".
+The response of a driven oscillator as the drive frequency sweeps back and forth through resonance. **Left**: a constant-strength force drives the $Q=5$ oscillator shown by the green curve. Its motion grows dramatically near $f=f_0$, and its timing shifts from following the force to opposing it. **Right, top**: the amplitude for three amounts of damping. **Right, bottom**: the corresponding phase lag. At resonance the response lags the drive by exactly $90°$, whatever the damping, which is the precise statement of "pushing at the right moment".
 ```
 
 ### The Response Curve

@@ -9,7 +9,7 @@
 <div class="anim-page">
   <canvas class="anim-canvas" id="canvas"></canvas>
   <div class="anim-controls" id="controls">
-    <span class="anim-note">Sweeping the drive frequency through resonance (Q = 5)</span>
+    <span class="anim-note">The drive keeps the same strength; the mass shows the amplitude and phase of the Q = 5 response</span>
   </div>
 </div>
 <script type="module">
@@ -33,15 +33,158 @@ const CURVES = [
   { q: 1.5, color: COLORS.red }
 ];
 const TRACKED_Q = 5;
-const SWEEP_PERIOD = 10; // seconds for a full sweep and back
+const SWEEP_PERIOD = 14; // seconds for a full sweep and back
+const SWEEP_MIDPOINT = 1.075;
+const SWEEP_RANGE = 0.825;
+const VISUAL_F0 = 0.85; // slowed so the eye can follow the oscillator
 
 function sweepRatio( t ) {
-  return 1.225 - 1.175 * Math.cos( 2 * Math.PI * t / SWEEP_PERIOD );
+  return SWEEP_MIDPOINT - SWEEP_RANGE * Math.cos( 2 * Math.PI * t / SWEEP_PERIOD );
 }
 
-function draw( ctx, t, width, height ) {
+// Integrating the changing frequency keeps the motion continuous when the
+// frequency sweep turns around.
+function drivePhase( t ) {
+  const sweepOmega = 2 * Math.PI / SWEEP_PERIOD;
+  const integratedRatio = SWEEP_MIDPOINT * t -
+    ( SWEEP_RANGE / sweepOmega ) * Math.sin( sweepOmega * t );
+  return 2 * Math.PI * VISUAL_F0 * integratedRatio;
+}
+
+function drawArrow( ctx, x0, y0, x1, y1, color ) {
+  const angle = Math.atan2( y1 - y0, x1 - x0 );
+  const head = 7;
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 2.2;
+  ctx.beginPath();
+  ctx.moveTo( x0, y0 );
+  ctx.lineTo( x1, y1 );
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo( x1, y1 );
+  ctx.lineTo( x1 - head * Math.cos( angle - Math.PI / 6 ), y1 - head * Math.sin( angle - Math.PI / 6 ) );
+  ctx.lineTo( x1 - head * Math.cos( angle + Math.PI / 6 ), y1 - head * Math.sin( angle + Math.PI / 6 ) );
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+
+function drawSpring( ctx, xStart, xEnd, y ) {
+  const lead = 8;
+  const coilStart = xStart + lead;
+  const coilEnd = xEnd - lead;
+  const steps = 14;
+  ctx.beginPath();
+  ctx.moveTo( xStart, y );
+  ctx.lineTo( coilStart, y );
+  for ( let i = 1; i < steps; i++ ) {
+    const x = coilStart + ( coilEnd - coilStart ) * i / steps;
+    ctx.lineTo( x, y + ( i % 2 === 0 ? -8 : 8 ) );
+  }
+  ctx.lineTo( coilEnd, y );
+  ctx.lineTo( xEnd, y );
+  ctx.stroke();
+}
+
+function drawOscillator( ctx, t, width, height, ratio ) {
+  const amplitude = response( ratio, TRACKED_Q );
+  const lag = phaseDegrees( ratio, TRACKED_Q );
+  const theta = drivePhase( t );
+  const relativeAmplitude = Math.min( 1, amplitude / TRACKED_Q );
+  const drive = Math.cos( theta );
+  const displacement = relativeAmplitude * Math.cos( theta - lag * Math.PI / 180 );
+
+  const wallX = 20;
+  const equilibriumX = width * 0.53;
+  const centerY = height * 0.45;
+  const travel = Math.min( 54, width * 0.23 );
+  const massX = equilibriumX + travel * displacement;
+  const massWidth = Math.min( 46, width * 0.2 );
+  const massHeight = 42;
+
+  ctx.save();
+  ctx.fillStyle = COLORS.gray;
+  ctx.font = 'bold 11px sans-serif';
+  ctx.fillText( 'driven oscillator (Q = 5)', 7, 14 );
+  ctx.font = '10.5px sans-serif';
+  ctx.fillText( `f/f₀ = ${ ratio.toFixed( 2 ) }`, 7, 31 );
+  ctx.fillStyle = Math.abs( ratio - 1 ) < 0.08 ? COLORS.orange : COLORS.gray;
+  ctx.fillText(
+    Math.abs( ratio - 1 ) < 0.08 ? 'near resonance' : ( ratio < 1 ? 'below resonance' : 'above resonance' ),
+    7,
+    47
+  );
+
+  // Wall, equilibrium reference, spring, and moving mass.
+  ctx.strokeStyle = COLORS.gray;
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo( wallX, centerY - 34 );
+  ctx.lineTo( wallX, centerY + 34 );
+  ctx.stroke();
+  ctx.lineWidth = 1;
+  for ( let y = centerY - 30; y <= centerY + 34; y += 9 ) {
+    ctx.beginPath();
+    ctx.moveTo( wallX, y );
+    ctx.lineTo( wallX - 7, y + 6 );
+    ctx.stroke();
+  }
+  ctx.strokeStyle = COLORS.light;
+  ctx.setLineDash( [ 4, 4 ] );
+  ctx.beginPath();
+  ctx.moveTo( equilibriumX, centerY - 40 );
+  ctx.lineTo( equilibriumX, centerY + 70 );
+  ctx.stroke();
+  ctx.setLineDash( [] );
+  ctx.strokeStyle = COLORS.gray;
+  ctx.lineWidth = 1.6;
+  drawSpring( ctx, wallX, massX - massWidth / 2, centerY );
+  ctx.fillStyle = COLORS.green;
+  ctx.fillRect( massX - massWidth / 2, centerY - massHeight / 2, massWidth, massHeight );
+
+  // The force direction oscillates, but its maximum length remains unchanged.
+  const forceY = centerY - 50;
+  const forceLength = 35 * drive;
+  ctx.strokeStyle = COLORS.red;
+  ctx.globalAlpha = 0.25;
+  ctx.beginPath();
+  ctx.moveTo( equilibriumX - 35, forceY );
+  ctx.lineTo( equilibriumX + 35, forceY );
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+  if ( Math.abs( forceLength ) > 2 ) {
+    drawArrow( ctx, massX, forceY, massX + forceLength, forceY, COLORS.red );
+  }
+  ctx.fillStyle = COLORS.red;
+  ctx.font = '10px sans-serif';
+  ctx.fillText( 'constant-strength drive F(t)', 7, centerY - 61 );
+
+  // Show the full displacement envelope even while the mass crosses zero.
+  const bracketY = centerY + 54;
+  const halfEnvelope = travel * relativeAmplitude;
+  ctx.strokeStyle = COLORS.green;
+  ctx.lineWidth = 1.4;
+  ctx.beginPath();
+  ctx.moveTo( equilibriumX - halfEnvelope, bracketY );
+  ctx.lineTo( equilibriumX + halfEnvelope, bracketY );
+  ctx.moveTo( equilibriumX - halfEnvelope, bracketY - 4 );
+  ctx.lineTo( equilibriumX - halfEnvelope, bracketY + 4 );
+  ctx.moveTo( equilibriumX + halfEnvelope, bracketY - 4 );
+  ctx.lineTo( equilibriumX + halfEnvelope, bracketY + 4 );
+  ctx.stroke();
+  ctx.textAlign = 'center';
+  ctx.fillStyle = COLORS.green;
+  ctx.font = '10.5px sans-serif';
+  ctx.fillText( `response amplitude = ${ amplitude.toFixed( 2 ) }×`, equilibriumX, bracketY + 17 );
+  ctx.fillStyle = COLORS.gray;
+  ctx.fillText( `lag = ${ lag.toFixed( 0 ) }°`, equilibriumX, bracketY + 33 );
+  ctx.restore();
+}
+
+function drawCurves( ctx, width, height, ratio ) {
   const topHeight = height * 0.6;
-  const ratio = sweepRatio( t );
 
   // Top: amplitude response, log scale, three dampings.
   ctx.save();
@@ -49,12 +192,12 @@ function draw( ctx, t, width, height ) {
   const logMax = Math.log10( 30 );
   const topMapper = makeMapper( { width, height: topHeight, xMin: 0, xMax: 2.4, yMin: logMin, yMax: logMax } );
   drawZeroLine( ctx, { x: topMapper.x, y: v => topMapper.y( Math.log10( 1 ) ) }, 0, 2.4 );
-  CURVES.forEach( curve => {
+  CURVES.forEach( ( curve, index ) => {
     const ys = ratios.map( r => Math.log10( response( r, curve.q ) ) );
     plotCurve( ctx, topMapper, ratios, ys, { color: curve.color, lineWidth: curve.q === TRACKED_Q ? 2.4 : 1.6, alpha: curve.q === TRACKED_Q ? 1 : 0.55 } );
     ctx.fillStyle = curve.color;
     ctx.font = '10.5px sans-serif';
-    ctx.fillText( `Q = ${ curve.q }`, topMapper.x( 2.4 ) - 52, topMapper.y( Math.log10( response( 2.35, curve.q ) ) ) );
+    ctx.fillText( `Q = ${ curve.q }`, width - topMapper.margin - 48, 14 + index * 14 );
   } );
   ctx.save();
   ctx.setLineDash( [ 4, 3 ] );
@@ -77,6 +220,17 @@ function draw( ctx, t, width, height ) {
   const bottomHeight = height - topHeight;
   const bottomMapper = makeMapper( { width, height: bottomHeight, xMin: 0, xMax: 2.4, yMin: 0, yMax: 180 } );
   drawZeroLine( ctx, bottomMapper, 0, 2.4 );
+  ctx.save();
+  ctx.strokeStyle = COLORS.gray;
+  ctx.globalAlpha = 0.5;
+  ctx.setLineDash( [ 4, 3 ] );
+  ctx.beginPath();
+  ctx.moveTo( bottomMapper.x( 1 ), bottomMapper.y( 0 ) );
+  ctx.lineTo( bottomMapper.x( 1 ), bottomMapper.y( 180 ) );
+  ctx.moveTo( bottomMapper.x( 0 ), bottomMapper.y( 90 ) );
+  ctx.lineTo( bottomMapper.x( 2.4 ), bottomMapper.y( 90 ) );
+  ctx.stroke();
+  ctx.restore();
   CURVES.forEach( curve => {
     const ys = ratios.map( r => phaseDegrees( r, curve.q ) );
     plotCurve( ctx, bottomMapper, ratios, ys, { color: curve.color, lineWidth: curve.q === TRACKED_Q ? 2.4 : 1.6, alpha: curve.q === TRACKED_Q ? 1 : 0.55 } );
@@ -86,6 +240,24 @@ function draw( ctx, t, width, height ) {
   ctx.fillStyle = COLORS.gray;
   ctx.font = '11px sans-serif';
   ctx.fillText( `phase lag (°)   f/f₀ = ${ ratio.toFixed( 2 ) }`, 6, 14 );
+  ctx.restore();
+}
+
+function draw( ctx, t, width, height ) {
+  const ratio = sweepRatio( t );
+  const oscillatorWidth = Math.min( 250, width * 0.33 );
+
+  drawOscillator( ctx, t, oscillatorWidth, height, ratio );
+
+  ctx.save();
+  ctx.strokeStyle = COLORS.light;
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo( oscillatorWidth + 0.5, 5 );
+  ctx.lineTo( oscillatorWidth + 0.5, height - 5 );
+  ctx.stroke();
+  ctx.translate( oscillatorWidth, 0 );
+  drawCurves( ctx, width - oscillatorWidth, height, ratio );
   ctx.restore();
 }
 
