@@ -33,9 +33,9 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
-```{figure} ../images/open/ch10-violin-met.jpg
+```{figure} ../images/open/ch10-violin-antonius.jpg
 :label: fig:ch10-open-violin
-:alt: A violin photographed against a neutral background.
+:alt: The front of a violin photographed against a neutral background, showing the body, f-holes, bridge, strings, and scroll.
 
 The string is only the beginning: the bridge and body are the machinery that turns a small string motion into radiated sound. The Metropolitan Museum of Art, CC0.
 ```
@@ -301,11 +301,11 @@ The **wolf note** is a defect rather than a feature. If a strongly radiating bod
 
 ## The Piano
 
-```{figure} ../images/open/ch10-violin-met2.jpg
-:label: fig:ch10-open-violin-met2
-:alt: A second historical violin photographed in a museum collection.
+```{figure} ../images/open/ch10-piano-cristofori.jpg
+:label: fig:ch10-open-piano-cristofori
+:alt: An early grand piano photographed in a museum collection, its lid raised to show the case and legs.
 
-Instrument design is a sequence of compromises between stiffness, mass, damping, and radiation. The Metropolitan Museum of Art, CC0.
+Instrument design is a sequence of compromises between stiffness, mass, damping, and radiation. This piano, built by Bartolomeo Cristofori around 1720, is the oldest surviving instrument of his invention. The Metropolitan Museum of Art, CC0.
 ```
 
 ### A String Under Great Tension

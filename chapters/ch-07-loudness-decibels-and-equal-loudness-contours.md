@@ -33,11 +33,11 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
-```{figure} ../images/open/ch14-hall.jpg
+```{figure} ../images/open/ch07-concert-hall-interior.jpg
 :label: fig:ch07-open-hall
-:alt: The exterior of Walt Disney Concert Hall, with its curved reflective metal surfaces.
+:alt: An orchestra performing on stage in a concert hall, seen from above, with the hall's balconies and a full audience surrounding it.
 
-Sound level is always measured somewhere. A concert hall makes that “somewhere” consequential: source, distance, reflections, and listener all enter the result. U.S. Geological Survey, public domain.
+Sound level is always measured somewhere. A concert hall makes that “somewhere” consequential: source, distance, reflections, and listener all enter the result. Jordan Fischer, CC BY 2.0.
 ```
 
 Turn the volume knob halfway down. Is the music half as loud?

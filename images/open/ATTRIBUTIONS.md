@@ -11,19 +11,19 @@ is the authoritative record for the file and its license.
 | `ch02-tuning-fork-history.jpg` | [Tuning fork and sound vibration](https://commons.wikimedia.org/wiki/File:PSM_V13_D055_Tuning_fork_and_sound_vibration.jpg) | Public domain | Unknown author, *Popular Science Monthly* (1878) |
 | `ch03-chladni-historical.png` | [Bowing Chladni plate](https://commons.wikimedia.org/wiki/File:Bowing_chladni_plate.png) | Public domain | Unknown, from *Elementary Lessons on Sound* (1879) |
 | `ch03-chladni-figures.jpg` | [FigureChladni](https://commons.wikimedia.org/wiki/File:FigureChladni.jpg) | Public domain | Émile Desbeaux, from *La physique populaire* |
-| `ch06-ear-historical.jpg` | [Anatomy of the ear, John Cunningham Saunders](https://commons.wikimedia.org/wiki/File:Anatomy_of_the_ear,_John_Cunningham_Saunders,_1806_Wellcome_L0035337.jpg) | CC BY 4.0 | Wellcome Collection |
+| `ch06-ear-anatomy-illustration.png` | [Blausen 0328 EarAnatomy](https://commons.wikimedia.org/wiki/File:Blausen_0328_EarAnatomy.png) | CC BY 3.0 | BruceBlaus / Blausen Medical |
+| `ch07-concert-hall-interior.jpg` | [Chicago Symphony Orchestra 2005](https://commons.wikimedia.org/wiki/File:Chicago_Symphony_Orchestra_2005.jpg) | CC BY 2.0 | Jordan Fischer |
 | `ch08-violin.jpg` | [Violin musical instrument](https://commons.wikimedia.org/wiki/File:Violin_musical_instrument.jpg) | CC0 1.0 | Thiru R. P. Babu; the photographed instrument is a guitar |
 | `ch09-horn-violin.jpg` | [Horn-violin](https://commons.wikimedia.org/wiki/File:Horn-violin_(also_called_trumpet-violin).jpg) | Public domain | Unknown |
-| `ch10-violin-met.jpg` | [Violin MET DP163306](https://commons.wikimedia.org/wiki/File:Violin_MET_DP163306.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
-| `ch10-violin-met2.jpg` | [Violin MET DP217178](https://commons.wikimedia.org/wiki/File:Violin_MET_DP217178.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
+| `ch10-violin-antonius.jpg` | ["The Antonius" Violin MET DP105130](https://commons.wikimedia.org/wiki/File:%22The_Antonius%22_Violin_MET_DP105130.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
+| `ch10-piano-cristofori.jpg` | [Grand Piano MET DP300941](https://commons.wikimedia.org/wiki/File:Grand_Piano_MET_DP300941.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
 | `ch10-violin-smithsonian.jpg` | [Ginger Smock's violin](https://commons.wikimedia.org/wiki/File:Ginger_Smock%27s_violin,_at_the_Smithsonian.jpg) | CC0 1.0 | Smithsonian Institution |
 | `ch11-clarinet.jpg` | [Parts of clarinet 2](https://commons.wikimedia.org/wiki/File:Parts_of_clarinet_2.jpg) | CC0 1.0 | Gisbert K |
-| `ch11-flutes.jpg` | [Eight flutes](https://commons.wikimedia.org/wiki/File:Eight_Flute1.JPG) | Public domain | Copperstream |
+| `ch11-recorders-set.jpg` | [Different Sizes of Recorders (horizontal)](https://commons.wikimedia.org/wiki/File:Different_Sizes_of_Recorders_(horizontal).JPG) | Public domain | Saskii, English Wikipedia |
 | `ch11-flute-met.jpg` | [Flute MET 53745](https://commons.wikimedia.org/wiki/File:Flute_MET_53745.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
 | `ch11-trumpet.png` | [Trumpet and slide-trumpet range](https://commons.wikimedia.org/wiki/File:Britannica_Trumpet_Slide_Trumpet_Range.png) | Public domain | Victor Charles Mahillon and Kathleen Schlesinger |
-| `ch12-timpani.jpg` | [Timpani descrizione](https://commons.wikimedia.org/wiki/File:Timpani_descrizione.jpg) | Public domain | Fabrizio Bastianini |
-| `ch14-hall.jpg` | [Walt Disney Concert Hall](https://commons.wikimedia.org/wiki/File:WD_Concert_Hall_USGS.jpg) | Public domain | U.S. Geological Survey |
-| `ch15-microphone.jpg` | [Microphone anaglyph](https://commons.wikimedia.org/wiki/File:Microphone_anaglyph.jpg) | CC BY 4.0 | Engelbert Niehaus |
+| `ch12-timpani-kettle-drums.jpg` | [Kettle Drums MET DP229625](https://commons.wikimedia.org/wiki/File:Kettle_Drums_MET_DP229625.jpg) | CC0 1.0 | The Metropolitan Museum of Art |
+| `ch15-microphone-studio.jpg` | [Close up view of a microphone set up in a recording studio](https://commons.wikimedia.org/wiki/File:Close_up_view_of_a_microphone_set_up_in_a_recording_studio.jpg) | CC BY 2.0 | Shixart1985 |
 
 The book's own captions identify the source page where attribution is useful;
 the complete records above are retained with the assets for print and export

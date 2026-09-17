@@ -162,11 +162,11 @@ This is not a refinement to be mentioned and forgotten. An organ builder cutting
 
 ## The Air Jet
 
-```{figure} ../images/open/ch11-flutes.jpg
+```{figure} ../images/open/ch11-recorders-set.jpg
 :label: fig:ch11-open-flutes
-:alt: A group of flutes arranged side by side.
+:alt: Five recorders of different sizes, from sopranino to bass, arranged in a row beside a ruler for scale.
 
-Different lengths and constructions expose the geometric choices behind the simple air-column model. Copperstream, public domain.
+Different lengths and constructions expose the geometric choices behind the simple air-column model. Saskii, English Wikipedia, public domain.
 ```
 
 ### Edge Tones

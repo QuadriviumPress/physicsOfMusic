@@ -33,11 +33,11 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
-```{figure} ../images/open/ch06-ear-historical.jpg
+```{figure} ../images/open/ch06-ear-anatomy-illustration.png
 :label: fig:ch06-open-ear
-:alt: A historical anatomical illustration showing the outer, middle, and inner ear.
+:alt: A labeled illustration of the outer, middle, and inner ear, showing the ear canal, eardrum, ossicles, and cochlea.
 
-The ear is both anatomy and an acoustic pathway. This historical plate gives the reader a physical object to keep in mind while the chapter develops its transduction model. Wellcome Collection, CC BY 4.0.
+The ear is both anatomy and an acoustic pathway. This illustration gives the reader a physical object to keep in mind while the chapter develops its transduction model. BruceBlaus / Blausen Medical, CC BY 3.0.
 ```
 
 The book now turns around. Chapters 1 to 5 followed sound from a vibrating object out into the room. The next three follow it from the room into a listener, and the story changes character completely.

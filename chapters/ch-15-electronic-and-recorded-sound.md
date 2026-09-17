@@ -35,11 +35,11 @@ By the end of this chapter, you should be able to:
 
 ### Introduction
 
-```{figure} ../images/open/ch15-microphone.jpg
+```{figure} ../images/open/ch15-microphone-studio.jpg
 :label: fig:ch15-open-microphone
-:alt: A close-up photograph of a microphone.
+:alt: A close-up photograph of a condenser microphone on a stand in a recording studio.
 
-Recording begins with a membrane converting pressure into motion and then voltage. Engelbert Niehaus, CC BY 4.0.
+Recording begins with a membrane converting pressure into motion and then voltage. Shixart1985, CC BY 2.0.
 ```
 
 Almost all the music anybody hears has been through a microphone, a wire, and a loudspeaker. Live acoustic performance is now the exception rather than the rule, and this chapter is about the chain that has replaced it.
