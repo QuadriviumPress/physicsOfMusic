@@ -74,6 +74,18 @@
   font-weight: 600;
 }
 
+/*
+ * Most plot SVGs were drawn for a light page and have transparent canvases.
+ * Keep them on a light "paper" surface in dark mode so their black labels,
+ * axes, and fine strokes retain their intended contrast. `color-scheme: light`
+ * also keeps an SVG's own prefers-color-scheme rules consistent with that
+ * surface instead of producing light marks on white.
+ */
+.dark figure img:is([src$=".svg"], [data-canonical-url$=".svg"]) {
+  color-scheme: light;
+  background-color: #fff;
+}
+
 /* ---------------------------------------------------------------- 3. Animations */
 
 /* The static fallback exists for PDF, DOCX, Markdown, and print. */
