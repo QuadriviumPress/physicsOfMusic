@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Which statements are true of twelve-tone equal temperament? Select all that apply.</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>Every semitone has the ratio 2^(1/12).</div>",

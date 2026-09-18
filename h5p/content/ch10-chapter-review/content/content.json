@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>With length and linear density fixed, by what factor must string tension change to raise the frequency by one octave?</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>Increase by a factor of 4.</div>",

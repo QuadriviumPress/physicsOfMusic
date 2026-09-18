@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Which statements describe a periodic musical waveform? Select all that apply.</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>Its sinusoidal components occur at whole-number multiples of the fundamental.</div>",

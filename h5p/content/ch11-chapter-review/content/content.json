@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Compared with an open cylindrical pipe of the same length, what does a stopped cylindrical pipe do?</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>Sounds an octave lower and supports odd harmonics.</div>",

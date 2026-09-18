@@ -413,9 +413,11 @@ ordinary link survives every format, so a reader can still open the video.
 
 # The H5P plugin
 
-An H5P activity a reader can use inline. The current chapters use short,
-auto-graded multiple-choice questions after each Summary, but the loader and
-build pipeline accept any H5P content type.
+An H5P activity a reader can use inline. Each chapter carries one five-question
+review carousel after its Summary, mixing multiple choice, true/false,
+drag-the-words, fill-in-the-blank, and mark-the-words, and some of them show a
+chapter figure alongside the question. The loader and build pipeline accept any
+H5P content type.
 
 The content type is [H5P](https://h5p.org), but nothing about it depends on
 h5p.com or on any other externally hosted service. Unpacked content and
@@ -427,15 +429,13 @@ for how to add an activity.
 ## Usage
 
 ````markdown
-:::{h5p} ch01-vacuum-medium
-:label: check:ch01-vacuum-medium
+:::{h5p} ch01-chapter-review
+:label: check:ch01-chapter-review
+:title: Chapter 1 interactive review
 
-A ringing alarm clock is sealed in a bell jar. As the air is pumped out, the sound fades to silence even though the hammer can still be seen striking the bell. What does this demonstrate?
-
-1. Sound requires a medium to travel through, unlike light.
-2. Light also requires a medium to travel through.
-3. The hammer has stopped vibrating.
-4. Sound travels faster through a vacuum than through air.
+1. **Multiple choice, from a figure.** The activity reproduces the anatomy-of-a-sinusoid figure from earlier in this chapter, which draws two sinusoids of equal amplitude and equal period. Which quantity distinguishes them: phase, amplitude, frequency, or period?
+2. **True or false.** Doubling the amplitude of a vibrating string doubles the energy stored in the vibration.
+3. **Fill in the blanks.** A steady tone at $250$ Hz has a period of ___ ms, because frequency and period are ___.
 :::
 ````
 

@@ -4,21 +4,42 @@
   "questions": [
     {
       "library": "H5P.MultiChoice 1.16",
-      "subContentId": "2bf7feda-41a2-4366-86ed-8a74ae1badf7",
+      "subContentId": "73631d5d-feec-4684-9b28-4848101deb4e",
       "metadata": {
-        "title": "Which choices reduce a musician’s risk from a loud rehearsal? Select all that apply.",
+        "title": "The solid and the dashed curve above have the same amplitude and the same period. Which quantity distinguishes them?",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Multiple Choice"
       },
       "params": {
-        "question": "<p>Which choices reduce a musician’s risk from a loud rehearsal? Select all that apply.</p>",
+        "question": "<p>The solid and the dashed curve above have the same amplitude and the same period. Which quantity distinguishes them?</p>",
         "media": {
+          "type": {
+            "library": "H5P.Image 1.1",
+            "subContentId": "83be483b-6a10-491a-9584-d1fe1ce41507",
+            "metadata": {
+              "title": "A sinusoid with its amplitude and period marked, drawn with a second sinusoid of the same size shifted along the time axis.",
+              "license": "CC BY-NC-SA",
+              "licenseVersion": "4.0",
+              "contentType": "Image"
+            },
+            "params": {
+              "contentName": "Image",
+              "alt": "A sinusoid with its amplitude and period marked, drawn with a second sinusoid of the same size shifted along the time axis.",
+              "decorative": false,
+              "file": {
+                "path": "images/ch01-sinusoid-anatomy.svg",
+                "mime": "image/svg+xml",
+                "width": 598,
+                "height": 224
+              }
+            }
+          },
           "disableImageZooming": false
         },
         "answers": [
           {
-            "text": "<div>Wear flat-response musician’s earplugs.</div>",
+            "text": "<div>Phase.</div>",
             "correct": true,
             "tipsAndFeedback": {
               "tip": "",
@@ -27,25 +48,25 @@
             }
           },
           {
-            "text": "<div>Take quiet breaks.</div>",
-            "correct": true,
+            "text": "<div>Amplitude.</div>",
+            "correct": false,
             "tipsAndFeedback": {
               "tip": "",
-              "chosenFeedback": "Yes—this is one of the correct choices.",
+              "chosenFeedback": "Not this one. Revisit the chapter summary and try again.",
               "notChosenFeedback": ""
             }
           },
           {
-            "text": "<div>Increase distance from loud sources.</div>",
-            "correct": true,
+            "text": "<div>Frequency.</div>",
+            "correct": false,
             "tipsAndFeedback": {
               "tip": "",
-              "chosenFeedback": "Yes—this is one of the correct choices.",
+              "chosenFeedback": "Not this one. Revisit the chapter summary and try again.",
               "notChosenFeedback": ""
             }
           },
           {
-            "text": "<div>Rely on pain as an early warning.</div>",
+            "text": "<div>Period.</div>",
             "correct": false,
             "tipsAndFeedback": {
               "tip": "",
@@ -58,7 +79,7 @@
           "enableRetry": true,
           "enableSolutionsButton": true,
           "enableCheckButton": true,
-          "singlePoint": false,
+          "singlePoint": true,
           "randomAnswers": true,
           "showSolutionsRequiresInput": true,
           "autoCheck": false,
@@ -95,15 +116,15 @@
     },
     {
       "library": "H5P.TrueFalse 1.8",
-      "subContentId": "b0d9f318-364a-41a1-b512-55fc0881c96d",
+      "subContentId": "d5d715c0-ca6c-4588-b54c-6882003d7a02",
       "metadata": {
-        "title": "Inner hair cells provide most of the cochlear amplification, while outer hair cells send most auditory information to the brain.",
+        "title": "Doubling the amplitude of a vibrating string doubles the energy stored in the vibration.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "True/False Question"
       },
       "params": {
-        "question": "<p>Inner hair cells provide most of the cochlear amplification, while outer hair cells send most auditory information to the brain.</p>",
+        "question": "<p>Doubling the amplitude of a vibrating string doubles the energy stored in the vibration.</p>",
         "correct": "false",
         "media": {
           "disableImageZooming": false
@@ -135,17 +156,17 @@
     },
     {
       "library": "H5P.DragText 1.10",
-      "subContentId": "5a633fb6-5f29-4b85-873b-28b67d7081f0",
+      "subContentId": "5f922a72-05f4-4785-8bbc-443f0ce4726f",
       "metadata": {
-        "title": "Place each cochlear role in the correct location or cell type.",
+        "title": "Complete the description of a sound wave written in terms of pressure.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Drag the Words"
       },
       "params": {
-        "taskDescription": "<p>Place each cochlear role in the correct location or cell type.</p>",
-        "textField": "The stiff, narrow *base* responds best to high frequencies; the floppy, wide *apex* responds best to low frequencies. *Inner hair cells* sense motion, while *outer hair cells* amplify and sharpen it.",
-        "distractors": "*pinna*\n*eardrum*",
+        "taskDescription": "<p>Complete the description of a sound wave written in terms of pressure.</p>",
+        "textField": "In a *compression* the air is bunched together and the pressure is *above* atmospheric; in a *rarefaction* the air is spread out and the pressure is *below* atmospheric. An eardrum and a microphone both respond to *pressure*.",
+        "distractors": "*displacement*\n*equal to*",
         "media": {
           "disableImageZooming": false
         },
@@ -187,17 +208,17 @@
     },
     {
       "library": "H5P.Blanks 1.14",
-      "subContentId": "4e6fbedb-71b1-4ace-bdc5-d53bb37b0971",
+      "subContentId": "3a683492-b857-4a33-a112-ae3d57d1944a",
       "metadata": {
-        "title": "Complete the exposure-time rule.",
+        "title": "Complete the relationship between frequency and period.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Fill in the Blanks"
       },
       "params": {
-        "text": "<p>Complete the exposure-time rule.</p>",
+        "text": "<p>Complete the relationship between frequency and period.</p>",
         "questions": [
-          "<p>For the same risk, every increase of *3/three* dB cuts the safe exposure time in *half/two*.</p>"
+          "<p>A steady tone at 250 Hz has a period of *4* ms, because frequency and period are *reciprocals/reciprocal/inverses/inverse*.</p>"
         ],
         "media": {
           "disableImageZooming": false
@@ -243,16 +264,16 @@
     },
     {
       "library": "H5P.MarkTheWords 1.11",
-      "subContentId": "f290822b-5026-4137-88f2-ebe3c61f2948",
+      "subContentId": "0b2ae41a-bf53-4b56-b272-b43fe9106822",
       "metadata": {
-        "title": "Mark the structures responsible for directional filtering, impedance matching, and frequency separation, in that order.",
+        "title": "Mark the three numbers that specify a simple harmonic motion completely.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Mark the Words"
       },
       "params": {
-        "taskDescription": "<p>Mark the structures responsible for directional filtering, impedance matching, and frequency separation, in that order.</p>",
-        "textField": "The *pinna* supplies direction-dependent filtering, the *middle ear* matches air to cochlear fluid, and the *basilar membrane* separates frequencies by place.",
+        "taskDescription": "<p>Mark the three numbers that specify a simple harmonic motion completely.</p>",
+        "textField": "A sinusoid is fixed by its *amplitude*, its *frequency*, and its *phase*; loudness, pitch, and timbre are the perceptions those give rise to.",
         "media": {
           "disableImageZooming": false
         },
@@ -290,7 +311,7 @@
   ],
   "introPage": {
     "showIntroPage": false,
-    "title": "The Ear and Hearing Review",
+    "title": "Sound, Music, and Simple Harmonic Motion Review",
     "introduction": "<p>Five short questions review the chapter.</p>",
     "startButtonText": "Start review"
   },

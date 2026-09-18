@@ -39,12 +39,14 @@ to a fixed set of content types: adding an activity automatically expands the
 generated library union. Each library is still emitted once and shared by every
 activity, rather than being duplicated inside every `content/<id>/`.
 
-The Chapter 4–15 review carousels are generated together so their five
+The fifteen chapter review carousels are generated together so their five
 question styles, interface text, and dependency metadata stay consistent. Edit
 their source in `scripts/generate-h5p-quizzes.mjs`, then run
-`npm run h5p:generate`. The generated `content/ch04-chapter-review/` through
-`content/ch15-chapter-review/` folders are committed authoring inputs, just like
-the hand-authored single questions for Chapters 1–3.
+`npm run h5p:generate`. The generated `content/ch01-chapter-review/` through
+`content/ch15-chapter-review/` folders are committed authoring inputs. A
+question may carry a chapter figure from `images/`: name it with the generator's
+`image()` helper and the writer copies the file into the activity and adds the
+`H5P.Image` dependency by itself.
 
 The browser also loads libraries on demand from each activity's metadata; it
 does not download the whole generated catalog. The `{h5p}` iframe is marked for

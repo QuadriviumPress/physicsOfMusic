@@ -4,21 +4,42 @@
   "questions": [
     {
       "library": "H5P.MultiChoice 1.16",
-      "subContentId": "2bf7feda-41a2-4366-86ed-8a74ae1badf7",
+      "subContentId": "fe849809-a88e-4e00-9608-c3242a8cc79e",
       "metadata": {
-        "title": "Which choices reduce a musician’s risk from a loud rehearsal? Select all that apply.",
+        "title": "The bottom panel above shows the 4th harmonic of a string fixed at both ends. How many nodes lie strictly between the two fixed ends?",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Multiple Choice"
       },
       "params": {
-        "question": "<p>Which choices reduce a musician’s risk from a loud rehearsal? Select all that apply.</p>",
+        "question": "<p>The bottom panel above shows the 4th harmonic of a string fixed at both ends. How many nodes lie strictly between the two fixed ends?</p>",
         "media": {
+          "type": {
+            "library": "H5P.Image 1.1",
+            "subContentId": "d3cf826a-ff78-44ff-9442-deb8dcfaff53",
+            "metadata": {
+              "title": "The first four modes of a string fixed at both ends, with the nodes marked and the wavelengths labelled 2L over n.",
+              "license": "CC BY-NC-SA",
+              "licenseVersion": "4.0",
+              "contentType": "Image"
+            },
+            "params": {
+              "contentName": "Image",
+              "alt": "The first four modes of a string fixed at both ends, with the nodes marked and the wavelengths labelled 2L over n.",
+              "decorative": false,
+              "file": {
+                "path": "images/ch03-string-modes.svg",
+                "mime": "image/svg+xml",
+                "width": 535,
+                "height": 358
+              }
+            }
+          },
           "disableImageZooming": false
         },
         "answers": [
           {
-            "text": "<div>Wear flat-response musician’s earplugs.</div>",
+            "text": "<div>Three.</div>",
             "correct": true,
             "tipsAndFeedback": {
               "tip": "",
@@ -27,25 +48,25 @@
             }
           },
           {
-            "text": "<div>Take quiet breaks.</div>",
-            "correct": true,
+            "text": "<div>Four.</div>",
+            "correct": false,
             "tipsAndFeedback": {
               "tip": "",
-              "chosenFeedback": "Yes—this is one of the correct choices.",
+              "chosenFeedback": "Not this one. Revisit the chapter summary and try again.",
               "notChosenFeedback": ""
             }
           },
           {
-            "text": "<div>Increase distance from loud sources.</div>",
-            "correct": true,
+            "text": "<div>Two.</div>",
+            "correct": false,
             "tipsAndFeedback": {
               "tip": "",
-              "chosenFeedback": "Yes—this is one of the correct choices.",
+              "chosenFeedback": "Not this one. Revisit the chapter summary and try again.",
               "notChosenFeedback": ""
             }
           },
           {
-            "text": "<div>Rely on pain as an early warning.</div>",
+            "text": "<div>Five.</div>",
             "correct": false,
             "tipsAndFeedback": {
               "tip": "",
@@ -58,7 +79,7 @@
           "enableRetry": true,
           "enableSolutionsButton": true,
           "enableCheckButton": true,
-          "singlePoint": false,
+          "singlePoint": true,
           "randomAnswers": true,
           "showSolutionsRequiresInput": true,
           "autoCheck": false,
@@ -95,16 +116,16 @@
     },
     {
       "library": "H5P.TrueFalse 1.8",
-      "subContentId": "b0d9f318-364a-41a1-b512-55fc0881c96d",
+      "subContentId": "1aca7f5e-d579-40c3-8849-6a3d132f2dd5",
       "metadata": {
-        "title": "Inner hair cells provide most of the cochlear amplification, while outer hair cells send most auditory information to the brain.",
+        "title": "Where two equal sources interfere constructively, the intensity is four times that of one source alone.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "True/False Question"
       },
       "params": {
-        "question": "<p>Inner hair cells provide most of the cochlear amplification, while outer hair cells send most auditory information to the brain.</p>",
-        "correct": "false",
+        "question": "<p>Where two equal sources interfere constructively, the intensity is four times that of one source alone.</p>",
+        "correct": "true",
         "media": {
           "disableImageZooming": false
         },
@@ -135,17 +156,17 @@
     },
     {
       "library": "H5P.DragText 1.10",
-      "subContentId": "5a633fb6-5f29-4b85-873b-28b67d7081f0",
+      "subContentId": "5ecd1d29-4545-4e64-92fd-18d63febcb4d",
       "metadata": {
-        "title": "Place each cochlear role in the correct location or cell type.",
+        "title": "Complete the rules for reflection and for two-source interference.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Drag the Words"
       },
       "params": {
-        "taskDescription": "<p>Place each cochlear role in the correct location or cell type.</p>",
-        "textField": "The stiff, narrow *base* responds best to high frequencies; the floppy, wide *apex* responds best to low frequencies. *Inner hair cells* sense motion, while *outer hair cells* amplify and sharpen it.",
-        "distractors": "*pinna*\n*eardrum*",
+        "taskDescription": "<p>Complete the rules for reflection and for two-source interference.</p>",
+        "textField": "A pulse returns *inverted* from a fixed end and *upright* from a free end. Two loudspeakers reinforce where the path difference is a *whole* number of wavelengths, and cancel where it includes one extra *half* wavelength.",
+        "distractors": "*doubled*\n*quarter*",
         "media": {
           "disableImageZooming": false
         },
@@ -187,17 +208,17 @@
     },
     {
       "library": "H5P.Blanks 1.14",
-      "subContentId": "4e6fbedb-71b1-4ace-bdc5-d53bb37b0971",
+      "subContentId": "4c4b4bb6-7cd1-49e7-ab8e-d98959c7e709",
       "metadata": {
-        "title": "Complete the exposure-time rule.",
+        "title": "Complete the description of a stopped pipe.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Fill in the Blanks"
       },
       "params": {
-        "text": "<p>Complete the exposure-time rule.</p>",
+        "text": "<p>Complete the description of a stopped pipe.</p>",
         "questions": [
-          "<p>For the same risk, every increase of *3/three* dB cuts the safe exposure time in *half/two*.</p>"
+          "<p>A pipe stopped at one end resonates at nv/*4*L, sounds *odd* harmonics only, and sits an *octave* below an open pipe of the same length.</p>"
         ],
         "media": {
           "disableImageZooming": false
@@ -243,16 +264,16 @@
     },
     {
       "library": "H5P.MarkTheWords 1.11",
-      "subContentId": "f290822b-5026-4137-88f2-ebe3c61f2948",
+      "subContentId": "b6b5a7f3-80d7-4a9c-9ad9-ba98ae726a99",
       "metadata": {
-        "title": "Mark the structures responsible for directional filtering, impedance matching, and frequency separation, in that order.",
+        "title": "Mark the two changes that raise the fundamental frequency of a string.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Mark the Words"
       },
       "params": {
-        "taskDescription": "<p>Mark the structures responsible for directional filtering, impedance matching, and frequency separation, in that order.</p>",
-        "textField": "The *pinna* supplies direction-dependent filtering, the *middle ear* matches air to cochlear fluid, and the *basilar membrane* separates frequencies by place.",
+        "taskDescription": "<p>Mark the two changes that raise the fundamental frequency of a string.</p>",
+        "textField": "*Shortening* the string and *tightening* it both raise the pitch, while loosening it or fitting a heavier string lowers it.",
         "media": {
           "disableImageZooming": false
         },
@@ -290,7 +311,7 @@
   ],
   "introPage": {
     "showIntroPage": false,
-    "title": "The Ear and Hearing Review",
+    "title": "Superposition, Interference, and Standing Waves Review",
     "introduction": "<p>Five short questions review the chapter.</p>",
     "startButtonText": "Start review"
   },

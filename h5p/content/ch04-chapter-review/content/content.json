@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Which changes lower the resonance frequency of a Helmholtz resonator? Select both.</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>Increase the cavity volume.</div>",

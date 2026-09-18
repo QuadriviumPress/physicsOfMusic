@@ -332,13 +332,15 @@ with the minus sign for a source approaching and the plus sign for one receding.
 Approaching:
 
 $$
-f' = (700\ \text{Hz})\frac{343}{343 - 25} = (700)(1.0786) = 755\ \text{Hz}.
+f' = (700\ \text{Hz})\frac{343\ \text{m/s}}{343\ \text{m/s} - 25\ \text{m/s}}
+  = (700\ \text{Hz})(1.0786) = 755\ \text{Hz}.
 $$
 
 Receding:
 
 $$
-f' = (700\ \text{Hz})\frac{343}{343 + 25} = (700)(0.9321) = 652\ \text{Hz}.
+f' = (700\ \text{Hz})\frac{343\ \text{m/s}}{343\ \text{m/s} + 25\ \text{m/s}}
+  = (700\ \text{Hz})(0.9321) = 652\ \text{Hz}.
 $$
 
 The drop across the pass is $755 \to 652$ Hz, a ratio of $1.158$, which is $1200\log_2(1.158) = 254$ cents, or about two and a half semitones. That is a musically large interval, which is why the effect is so obvious.
@@ -383,61 +385,17 @@ Two reasons. The vibrato's excursion is small, a few tens of cents rather than a
 
 ## Check Your Understanding
 
-Five short, auto-graded questions on the ideas above. They are ungraded self-checks, not part of the Problems below.
+Five short, auto-graded questions cycle within one compact activity. The set mixes multiple response, true/false, drag-the-words, fill-in-the-blank, and mark-the-words formats, and one question reads its answer off the speed-of-sound chart.
 
-:::{h5p} ch02-wavelength-frequency
-:label: check:ch02-wavelength-frequency
+:::{h5p} ch02-chapter-review
+:label: check:ch02-chapter-review
+:title: Chapter 2 interactive review
 
-A source in a fixed medium doubles its frequency. The wave speed in that medium does not change. What happens to the wavelength?
-
-1. It is halved.
-2. It doubles.
-3. It stays the same.
-4. It quadruples.
-:::
-
-:::{h5p} ch02-boundary-crossing
-:label: check:ch02-boundary-crossing
-
-A sound wave crosses from air into water. Its speed and wavelength both change. Which quantity stays the same?
-
-1. Frequency.
-2. Wavelength.
-3. Speed.
-4. Amplitude.
-:::
-
-:::{h5p} ch02-speed-temperature
-:label: check:ch02-speed-temperature
-
-The speed of sound in air depends strongly on one environmental factor, and hardly at all on another that changes the density of the air by a similar amount. Which factor does it depend on strongly?
-
-1. Temperature.
-2. Atmospheric pressure.
-3. The loudness of the sound.
-4. The frequency of the sound.
-:::
-
-:::{h5p} ch02-stiffness-density
-:label: check:ch02-stiffness-density
-
-Sound travels about seventeen times faster through steel than through air, even though steel is thousands of times denser. What explains this?
-
-1. Steel's stiffness is millions of times greater than air's, which outweighs its greater density.
-2. Density has no effect on the speed of sound.
-3. Steel has no inertia to resist being set in motion.
-4. A denser medium always carries sound faster.
-:::
-
-:::{h5p} ch02-acoustic-impedance
-:label: check:ch02-acoustic-impedance
-
-A vibrating guitar string produces very little sound on its own, until it is coupled to a soundboard. What is the physical reason a bare string is such a poor radiator of sound?
-
-1. An impedance mismatch between the string and the surrounding air reflects almost all the vibrational energy back into the string instead of into the air.
-2. The string vibrates too slowly to disturb the air at all.
-3. The string has no stiffness, so it cannot push on the air.
-4. Sound cannot travel through a solid string.
+1. **Multiple response.** A sound wave passes from air into water. Which of its properties change at the boundary? Select from: its speed; its wavelength; its frequency; its period.
+2. **Visual true or false.** The activity reproduces the speed-of-sound bar chart from earlier in this chapter, which shows sound traveling nearly three times faster in helium than in air. The reason is that helium is far stiffer than air.
+3. **Drag the words.** Complete: sound travels at about ___ m/s in air at $20$ °C, gaining roughly ___ m/s per degree Celsius; it does not depend on the ___ of the air, nor on the ___ of the note. (Terms: 343, 0.6, pressure, frequency, 965, amplitude.)
+4. **Fill in the blanks.** Doubling the distance from a small source in the open air lowers the level by ___ dB, because intensity falls as one over the distance ___.
+5. **Mark the words.** Identify the two properties of the medium that set a wave’s speed: “Wave speed is fixed by the medium’s stiffness and its density; the frequency, the amplitude, and the motion of the source all leave it unchanged.”
 :::
 
 ## Conceptual Questions
@@ -473,9 +431,9 @@ A vibrating guitar string produces very little sound on its own, until it is cou
 Using $\lambda = v/f$ throughout:
 
 $$
-\lambda_{100} = \frac{343}{100} = 3.43\ \text{m},\qquad
-\lambda_{1000} = \frac{343}{1000} = 0.343\ \text{m},\qquad
-\lambda_{10000} = \frac{343}{10000} = 0.0343\ \text{m}.
+\lambda_{100} = \frac{343\ \text{m/s}}{100\ \text{Hz}} = 3.43\ \text{m},\qquad
+\lambda_{1000} = \frac{343\ \text{m/s}}{1000\ \text{Hz}} = 0.343\ \text{m},\qquad
+\lambda_{10000} = \frac{343\ \text{m/s}}{10000\ \text{Hz}} = 0.0343\ \text{m}.
 $$
 
 Therefore, the wavelengths are $3.43$ m, $34.3$ cm, and $3.43$ cm. Each factor of ten in frequency is a factor of ten in wavelength, in the opposite direction.
@@ -544,7 +502,7 @@ v(18) = 342.2\ \text{m/s},\qquad v(6) = 331.3 + 3.64 = 334.9\ \text{m/s},
 $$
 
 $$
-f' = (440\ \text{Hz})\frac{334.9}{342.2} = 430.6\ \text{Hz}.
+f' = (440\ \text{Hz})\frac{334.9\ \text{m/s}}{342.2\ \text{m/s}} = 430.6\ \text{Hz}.
 $$
 
 (b) In cents:
@@ -625,7 +583,7 @@ $$
 (b) Four times the distance is sixteen times the area:
 
 $$
-I = \frac{4.0\times10^{-5}}{16} = 2.5\times10^{-6}\ \text{W/m}^2.
+I = \frac{4.0\times10^{-5}\ \text{W/m}^2}{16} = 2.5\times10^{-6}\ \text{W/m}^2.
 $$
 
 Therefore, the busker radiates about $4.5$ mW of sound, and the distant listener receives $2.5\ \mu$W/m². Note how small the power is: a few milliwatts is a perfectly audible musical performance, which says more about the sensitivity of the ear than about the efficiency of the busker.
@@ -644,13 +602,15 @@ Therefore, the busker radiates about $4.5$ mW of sound, and the distant listener
 (a) Approaching:
 
 $$
-f' = (520)\frac{343}{343 - 31} = (520)(1.0994) = 572\ \text{Hz}.
+f' = (520\ \text{Hz})\frac{343\ \text{m/s}}{343\ \text{m/s} - 31\ \text{m/s}}
+  = (520\ \text{Hz})(1.0994) = 572\ \text{Hz}.
 $$
 
 (b) Receding:
 
 $$
-f' = (520)\frac{343}{343 + 31} = (520)(0.9171) = 477\ \text{Hz}.
+f' = (520\ \text{Hz})\frac{343\ \text{m/s}}{343\ \text{m/s} + 31\ \text{m/s}}
+  = (520\ \text{Hz})(0.9171) = 477\ \text{Hz}.
 $$
 
 (c) In cents:
@@ -675,8 +635,8 @@ Therefore, the horn falls from $572$ Hz to $477$ Hz, a drop of $315$ cents: a li
 (a) Through the steel and through the air:
 
 $$
-t_{\text{steel}} = \frac{180}{5960} = 0.0302\ \text{s},\qquad
-t_{\text{air}} = \frac{180}{343} = 0.525\ \text{s}.
+t_{\text{steel}} = \frac{180\ \text{m}}{5960\ \text{m/s}} = 0.0302\ \text{s},\qquad
+t_{\text{air}} = \frac{180\ \text{m}}{343\ \text{m/s}} = 0.525\ \text{s}.
 $$
 
 The gap is $0.49$ s.
@@ -722,7 +682,7 @@ $$
 so
 
 $$
-f' = (440)\frac{336.8}{344.0} = 430.8\ \text{Hz}.
+f' = (440\ \text{Hz})\frac{336.8\ \text{m/s}}{344.0\ \text{m/s}} = 430.8\ \text{Hz}.
 $$
 
 (b) In cents:
@@ -799,8 +759,8 @@ $$
 (b) The extreme shifts occur when the horn moves directly toward and directly away from the listener:
 
 $$
-f'_{\text{near}} = (500)\frac{343}{343 - 7.05} = 510.5\ \text{Hz},\qquad
-f'_{\text{far}} = (500)\frac{343}{343 + 7.05} = 489.9\ \text{Hz}.
+f'_{\text{near}} = (500\ \text{Hz})\frac{343\ \text{m/s}}{343\ \text{m/s} - 7.05\ \text{m/s}} = 510.5\ \text{Hz},\qquad
+f'_{\text{far}} = (500\ \text{Hz})\frac{343\ \text{m/s}}{343\ \text{m/s} + 7.05\ \text{m/s}} = 489.9\ \text{Hz}.
 $$
 
 In cents, relative to $500$ Hz:

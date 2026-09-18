@@ -4,21 +4,21 @@
   "questions": [
     {
       "library": "H5P.MultiChoice 1.16",
-      "subContentId": "2bf7feda-41a2-4366-86ed-8a74ae1badf7",
+      "subContentId": "738e49ed-383a-451d-a21d-868d15dc91be",
       "metadata": {
-        "title": "Which choices reduce a musician’s risk from a loud rehearsal? Select all that apply.",
+        "title": "A sound wave passes from air into water. Which of its properties change at the boundary? Select all that apply.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Multiple Choice"
       },
       "params": {
-        "question": "<p>Which choices reduce a musician’s risk from a loud rehearsal? Select all that apply.</p>",
+        "question": "<p>A sound wave passes from air into water. Which of its properties change at the boundary? Select all that apply.</p>",
         "media": {
           "disableImageZooming": false
         },
         "answers": [
           {
-            "text": "<div>Wear flat-response musician’s earplugs.</div>",
+            "text": "<div>Its speed.</div>",
             "correct": true,
             "tipsAndFeedback": {
               "tip": "",
@@ -27,7 +27,7 @@
             }
           },
           {
-            "text": "<div>Take quiet breaks.</div>",
+            "text": "<div>Its wavelength.</div>",
             "correct": true,
             "tipsAndFeedback": {
               "tip": "",
@@ -36,16 +36,16 @@
             }
           },
           {
-            "text": "<div>Increase distance from loud sources.</div>",
-            "correct": true,
+            "text": "<div>Its frequency.</div>",
+            "correct": false,
             "tipsAndFeedback": {
               "tip": "",
-              "chosenFeedback": "Yes—this is one of the correct choices.",
+              "chosenFeedback": "Not this one. Revisit the chapter summary and try again.",
               "notChosenFeedback": ""
             }
           },
           {
-            "text": "<div>Rely on pain as an early warning.</div>",
+            "text": "<div>Its period.</div>",
             "correct": false,
             "tipsAndFeedback": {
               "tip": "",
@@ -95,17 +95,38 @@
     },
     {
       "library": "H5P.TrueFalse 1.8",
-      "subContentId": "b0d9f318-364a-41a1-b512-55fc0881c96d",
+      "subContentId": "f69ee09b-e89e-437c-8158-385349d02e0c",
       "metadata": {
-        "title": "Inner hair cells provide most of the cochlear amplification, while outer hair cells send most auditory information to the brain.",
+        "title": "The chart shows sound traveling nearly three times faster in helium than in air. The reason is that helium is far stiffer than air.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "True/False Question"
       },
       "params": {
-        "question": "<p>Inner hair cells provide most of the cochlear amplification, while outer hair cells send most auditory information to the brain.</p>",
+        "question": "<p>The chart shows sound traveling nearly three times faster in helium than in air. The reason is that helium is far stiffer than air.</p>",
         "correct": "false",
         "media": {
+          "type": {
+            "library": "H5P.Image 1.1",
+            "subContentId": "25cbee4f-85bd-4cc5-8a7b-e336276e64a3",
+            "metadata": {
+              "title": "A bar chart of the speed of sound in carbon dioxide, air, helium, water, spruce along the grain, and steel.",
+              "license": "CC BY-NC-SA",
+              "licenseVersion": "4.0",
+              "contentType": "Image"
+            },
+            "params": {
+              "contentName": "Image",
+              "alt": "A bar chart of the speed of sound in carbon dioxide, air, helium, water, spruce along the grain, and steel.",
+              "decorative": false,
+              "file": {
+                "path": "images/ch02-speed-in-media.svg",
+                "mime": "image/svg+xml",
+                "width": 592,
+                "height": 252
+              }
+            }
+          },
           "disableImageZooming": false
         },
         "behaviour": {
@@ -135,17 +156,17 @@
     },
     {
       "library": "H5P.DragText 1.10",
-      "subContentId": "5a633fb6-5f29-4b85-873b-28b67d7081f0",
+      "subContentId": "b7c5a8ff-cbfc-4644-901b-3e46c2c581b6",
       "metadata": {
-        "title": "Place each cochlear role in the correct location or cell type.",
+        "title": "Complete the rules for the speed of sound in air.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Drag the Words"
       },
       "params": {
-        "taskDescription": "<p>Place each cochlear role in the correct location or cell type.</p>",
-        "textField": "The stiff, narrow *base* responds best to high frequencies; the floppy, wide *apex* responds best to low frequencies. *Inner hair cells* sense motion, while *outer hair cells* amplify and sharpen it.",
-        "distractors": "*pinna*\n*eardrum*",
+        "taskDescription": "<p>Complete the rules for the speed of sound in air.</p>",
+        "textField": "Sound travels at about *343* m/s in air at 20 °C, gaining roughly *0.6* m/s for every degree Celsius. It does not depend on the *pressure* of the air, nor on the *frequency* of the note.",
+        "distractors": "*965*\n*amplitude*",
         "media": {
           "disableImageZooming": false
         },
@@ -187,17 +208,17 @@
     },
     {
       "library": "H5P.Blanks 1.14",
-      "subContentId": "4e6fbedb-71b1-4ace-bdc5-d53bb37b0971",
+      "subContentId": "214df1f3-d897-4fd8-a9f2-e3efea8cdcc0",
       "metadata": {
-        "title": "Complete the exposure-time rule.",
+        "title": "Complete the outdoor distance rule.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Fill in the Blanks"
       },
       "params": {
-        "text": "<p>Complete the exposure-time rule.</p>",
+        "text": "<p>Complete the outdoor distance rule.</p>",
         "questions": [
-          "<p>For the same risk, every increase of *3/three* dB cuts the safe exposure time in *half/two*.</p>"
+          "<p>Doubling the distance from a small source in the open air lowers the level by *6* dB, because intensity falls as one over the distance *squared/2*.</p>"
         ],
         "media": {
           "disableImageZooming": false
@@ -243,16 +264,16 @@
     },
     {
       "library": "H5P.MarkTheWords 1.11",
-      "subContentId": "f290822b-5026-4137-88f2-ebe3c61f2948",
+      "subContentId": "f66595db-6f7c-454e-a5c6-cd951a0f0227",
       "metadata": {
-        "title": "Mark the structures responsible for directional filtering, impedance matching, and frequency separation, in that order.",
+        "title": "Mark the two properties of the medium that set a wave’s speed.",
         "license": "CC BY-NC-SA",
         "licenseVersion": "4.0",
         "contentType": "Mark the Words"
       },
       "params": {
-        "taskDescription": "<p>Mark the structures responsible for directional filtering, impedance matching, and frequency separation, in that order.</p>",
-        "textField": "The *pinna* supplies direction-dependent filtering, the *middle ear* matches air to cochlear fluid, and the *basilar membrane* separates frequencies by place.",
+        "taskDescription": "<p>Mark the two properties of the medium that set a wave’s speed.</p>",
+        "textField": "Wave speed is fixed by the medium’s *stiffness* and its *density*; the frequency, the amplitude, and the motion of the source all leave it unchanged.",
         "media": {
           "disableImageZooming": false
         },
@@ -290,7 +311,7 @@
   ],
   "introPage": {
     "showIntroPage": false,
-    "title": "The Ear and Hearing Review",
+    "title": "Wave Motion and the Speed of Sound Review",
     "introduction": "<p>Five short questions review the chapter.</p>",
     "startButtonText": "Start review"
   },

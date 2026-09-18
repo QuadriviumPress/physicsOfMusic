@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Pure tones at 440 Hz and 446 Hz sound together. What beat rate is heard?</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>6 beats per second</div>",

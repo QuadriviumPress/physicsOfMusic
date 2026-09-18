@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Where must an anti-aliasing low-pass filter act?</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>Before sampling, while frequencies above Nyquist can still be removed.</div>",

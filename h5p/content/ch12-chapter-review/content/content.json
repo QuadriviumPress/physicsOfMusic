@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Where should a free-free bar be supported to preserve its fundamental vibration?</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>At the fundamental’s nodes, about 22% from each end.</div>",
@@ -105,9 +108,9 @@
         "media": {
           "type": {
             "library": "H5P.Image 1.1",
-            "subContentId": "83bb82e8-f5a1-440e-8d7a-e1340a9134b4",
+            "subContentId": "a09748e9-644f-4d8c-974f-5432efe4743d",
             "metadata": {
-              "title": "Chladni figures",
+              "title": "Four Chladni patterns formed by sand on vibrating square plates.",
               "license": "CC BY-NC-SA",
               "licenseVersion": "4.0",
               "contentType": "Image"
@@ -120,7 +123,7 @@
                 "path": "images/ch12-chladni.png",
                 "mime": "image/png",
                 "width": 1600,
-                "height": 512
+                "height": 480
               }
             }
           },

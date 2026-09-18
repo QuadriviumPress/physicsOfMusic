@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Why does the singer’s formant near 2.9 kHz improve projection? Select all that apply.</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>It falls in a relatively sparse region of the orchestra’s spectrum.</div>",

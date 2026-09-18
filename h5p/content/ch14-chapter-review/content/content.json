@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>A diffuse room has volume 1000 m³ and total absorption 100 m² sabins. What reverberation time does the Sabine equation predict?</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>About 1.6 s</div>",

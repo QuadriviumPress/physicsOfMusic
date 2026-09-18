@@ -389,61 +389,17 @@ A stopped organ pipe sounds middle C, $262$ Hz, at $20$ °C. Without a calculato
 
 ## Check Your Understanding
 
-Five short, auto-graded questions on the ideas above. They are ungraded self-checks, not part of the Problems below.
+Five short, auto-graded questions cycle within one compact activity. The set mixes multiple choice, true/false, drag-the-words, fill-in-the-blank, and mark-the-words formats, and opens by counting nodes on a figure.
 
-:::{h5p} ch03-superposition-principle
-:label: check:ch03-superposition-principle
+:::{h5p} ch03-chapter-review
+:label: check:ch03-chapter-review
+:title: Chapter 3 interactive review
 
-Two waves overlap at the same point in space. According to the superposition principle, what is the resulting displacement at that point?
-
-1. The sum of the two individual displacements.
-2. Whichever wave has the larger amplitude, acting alone.
-3. The average of the two displacements, but only if the waves have the same frequency.
-4. Zero, because the waves collide and scatter off each other.
-:::
-
-:::{h5p} ch03-destructive-interference-energy
-:label: check:ch03-destructive-interference-energy
-
-Two loudspeakers play the same steady tone. A listener stands at a spot where the sound cancels almost completely. What has happened to the energy that would otherwise have reached that spot?
-
-1. It has been redistributed into the loud spots elsewhere in the room.
-2. It has been destroyed at the quiet spot.
-3. It was never emitted by the speakers in the first place.
-4. It converted into heat inside the loudspeakers.
-:::
-
-:::{h5p} ch03-reflection-fixed-end
-:label: check:ch03-reflection-fixed-end
-
-A wave pulse travels along a string toward an end that is clamped so it cannot move. What happens to the pulse when it reflects?
-
-1. It comes back inverted.
-2. It comes back the same way up.
-3. It is absorbed completely and does not return.
-4. Its amplitude doubles.
-:::
-
-:::{h5p} ch03-string-length-frequency
-:label: check:ch03-string-length-frequency
-
-A string fixed at both ends is shortened to exactly half its original length, while its tension and mass per unit length stay the same. What happens to its fundamental frequency?
-
-1. It doubles.
-2. It is halved.
-3. It quadruples.
-4. It stays the same.
-:::
-
-:::{h5p} ch03-stopped-vs-open-pipe
-:label: check:ch03-stopped-vs-open-pipe
-
-A pipe stopped at one end is compared with an open pipe of the same length. Which statement correctly describes the stopped pipe?
-
-1. It sounds an octave lower than the open pipe and produces only odd harmonics.
-2. It sounds an octave higher than the open pipe and produces every harmonic.
-3. It sounds identical to the open pipe.
-4. It produces only even harmonics.
+1. **Multiple choice, from a figure.** The activity reproduces the string-mode figure from earlier in this chapter. Its bottom panel shows the 4th harmonic of a string fixed at both ends. How many nodes lie strictly between the two fixed ends: two, three, four, or five?
+2. **True or false.** Where two equal sources interfere constructively, the intensity is four times that of one source alone.
+3. **Drag the words.** Complete: a pulse returns ___ from a fixed end and ___ from a free end; two loudspeakers reinforce where the path difference is a ___ number of wavelengths, and cancel where it includes one extra ___ wavelength. (Terms: inverted, upright, whole, half, doubled, quarter.)
+4. **Fill in the blanks.** A pipe stopped at one end resonates at $nv$ divided by ___ times $L$, sounds ___ harmonics only, and sits an ___ below an open pipe of the same length.
+5. **Mark the words.** Identify the two changes that raise a string’s fundamental frequency: “Shortening the string and tightening it both raise the pitch, while loosening it or fitting a heavier string lowers it.”
 :::
 
 ## Conceptual Questions
@@ -476,7 +432,7 @@ A pipe stopped at one end is compared with an open pipe of the same length. Whic
 :label: sol-superposition-1
 :class: dropdown
 
-(a) $\lambda = v/f = 343/686 = 0.500$ m.
+(a) $\lambda = v/f = (343\ \text{m/s})/(686\ \text{Hz}) = 0.500$ m.
 
 (b) Destructive interference needs $\Delta r = (m + \frac12)\lambda$; the smallest is
 
@@ -579,7 +535,7 @@ Since $f \propto \sqrt{T}$, the tension ratio is the square of the frequency rat
 (a) For an open pipe, $f_1 = v/2L$:
 
 $$
-f_1 = \frac{343}{2(1.10)} = 156\ \text{Hz}.
+f_1 = \frac{343\ \text{m/s}}{2(1.10\ \text{m})} = 156\ \text{Hz}.
 $$
 
 (b) All harmonics are present: $f_2 = 312$ Hz, $f_3 = 468$ Hz.
@@ -587,7 +543,7 @@ $$
 (c) For a stopped pipe, $f_1 = v/4L$:
 
 $$
-f_1 = \frac{343}{4(1.10)} = 77.9\ \text{Hz}.
+f_1 = \frac{343\ \text{m/s}}{4(1.10\ \text{m})} = 77.9\ \text{Hz}.
 $$
 
 Therefore, stopping one end drops the pitch by exactly an octave, and the surviving modes become $77.9$, $234$, $390$ Hz: the odd harmonics only.
@@ -606,7 +562,7 @@ Therefore, stopping one end drops the pitch by exactly an octave, and the surviv
 (a) From $f_1 = v/4L$:
 
 $$
-L = \frac{v}{4f_1} = \frac{343}{4(131)} = 0.655\ \text{m}.
+L = \frac{v}{4f_1} = \frac{343\ \text{m/s}}{4(131\ \text{Hz})} = 0.655\ \text{m}.
 $$
 
 (b) A stopped pipe has one open end, so one correction of about $0.6r$:
@@ -709,7 +665,7 @@ $$
 r_2 = \sqrt{8.0^2 + (1.0 + 1.5)^2} = \sqrt{64.0 + 6.25} = 8.3815\ \text{m},
 $$
 
-so $\Delta r = 0.366$ m. The wavelength is $\lambda = 343/1720 = 0.1994$ m, so
+so $\Delta r = 0.366$ m. The wavelength is $\lambda = (343\ \text{m/s})/(1720\ \text{Hz}) = 0.1994$ m, so
 
 $$
 \frac{\Delta r}{\lambda} = \frac{0.366}{0.1994} = 1.84.
@@ -760,10 +716,10 @@ Therefore, nodes and antinodes alternate at intervals of a quarter wavelength, w
 (a) For a stopped pipe, $L = v/4f_1$:
 
 $$
-L = \frac{343}{4(147)} = 0.583\ \text{m}.
+L = \frac{343\ \text{m/s}}{4(147\ \text{Hz})} = 0.583\ \text{m}.
 $$
 
-(b) For an open pipe of the same length, $f_1 = v/2L = 343/(2\times0.583) = 294$ Hz, exactly an octave higher.
+(b) For an open pipe of the same length, $f_1 = v/2L = (343\ \text{m/s})/(2\times0.583\ \text{m}) = 294$ Hz, exactly an octave higher.
 
 (c) Because a stopped pipe sounds at $v/4L$ while an open one sounds at $v/2L$. The stopped pipe gets an octave lower out of the same physical length, since the shortest standing wave it can hold is a quarter wavelength rather than a half. A clarinet is therefore about half the length of a flute sounding the same low note: a real and substantial advantage, paid for by having only odd harmonics.
 :::
@@ -778,7 +734,7 @@ $$
 :label: sol-superposition-13
 :class: dropdown
 
-(a) Stopped: $L = v/4f_1 = 343/(4\times220) = 0.390$ m. Open: $L = v/2f_1 = 343/440 = 0.780$ m.
+(a) Stopped: $L = v/4f_1 = (343\ \text{m/s})/(4\times220\ \text{Hz}) = 0.390$ m. Open: $L = v/2f_1 = (343\ \text{m/s})/(440\ \text{Hz}) = 0.780$ m.
 
 (b) Stopped, odd harmonics only: $220$, $660$, $1100$, $1540$ Hz. Open, all harmonics: $220$, $440$, $660$, $880$ Hz.
 
@@ -800,15 +756,15 @@ Therefore, the listener hears a perfect fifth, and one which is *exactly* 3:2, s
 (a) Ignoring corrections:
 
 $$
-f_1 = \frac{v}{2L} = \frac{343}{2(0.280)} = 613\ \text{Hz}.
+f_1 = \frac{v}{2L} = \frac{343\ \text{m/s}}{2(0.280\ \text{m})} = 613\ \text{Hz}.
 $$
 
 (b) Two open ends, each adding about $0.6r = 0.018$ m:
 
 $$
-L_{\text{eff}} = 0.280 + 2(0.018) = 0.316\ \text{m},
+L_{\text{eff}} = 0.280\ \text{m} + 2(0.018\ \text{m}) = 0.316\ \text{m},
 \qquad
-f_1 = \frac{343}{2(0.316)} = 543\ \text{Hz}.
+f_1 = \frac{343\ \text{m/s}}{2(0.316\ \text{m})} = 543\ \text{Hz}.
 $$
 
 (c) In cents:

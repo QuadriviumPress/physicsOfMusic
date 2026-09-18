@@ -76,8 +76,8 @@ function humanize( id ) {
 /**
  * Resolves one directive argument to an H5P embed URL.
  *
- * A bare id names a folder in `h5p/content/` (e.g. `ch01-vacuum-medium`
- * resolves to `/h5p/embed.html?id=ch01-vacuum-medium`); anything that already
+ * A bare id names a folder in `h5p/content/` (e.g. `ch01-chapter-review`
+ * resolves to `/h5p/embed.html?id=ch01-chapter-review`); anything that already
  * looks like a path or a URL is passed through untouched, for an H5P instance
  * hosted somewhere else.
  *
@@ -193,8 +193,8 @@ const h5pDirective = {
   arg: {
     type: String,
     required: true,
-    doc: 'The H5P content id (e.g. `ch01-vacuum-medium`, resolving to ' +
-         '`h5p/content/ch01-vacuum-medium/`), or a path or URL to an H5P instance hosted elsewhere.'
+    doc: 'The H5P content id (e.g. `ch01-chapter-review`, resolving to ' +
+         '`h5p/content/ch01-chapter-review/`), or a path or URL to an H5P instance hosted elsewhere.'
   },
   options: {
     title: {
@@ -211,7 +211,7 @@ const h5pDirective = {
     },
     label: {
       type: String,
-      doc: 'Label the block so it can be cross-referenced, e.g. `check:ch01-vacuum-medium`.'
+      doc: 'Label the block so it can be cross-referenced, e.g. `check:ch01-chapter-review`.'
     },
     class: {
       type: String,

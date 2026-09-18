@@ -263,7 +263,9 @@ A mass of $0.20$ kg on a spring oscillates at $2.5$ Hz.
 Rearranging $f = (1/2\pi)\sqrt{k/m}$ gives $k = m(2\pi f)^2$, so
 
 $$
-k = (0.20\ \text{kg})\,[2\pi(2.5\ \text{Hz})]^2 = (0.20)(15.7)^2 = 49\ \text{N/m}.
+k = (0.20\ \text{kg})\,[2\pi(2.5\ \text{Hz})]^2
+  = (0.20\ \text{kg})(15.7\ \text{s}^{-1})^2
+  = 49\ \text{N/m}.
 $$
 
 *(b) What mass would oscillate at exactly half that frequency on the same spring?*
@@ -380,61 +382,17 @@ Simple harmonic motion is not an approximation the book will later outgrow. It i
 
 ## Check Your Understanding
 
-Five short, auto-graded questions on the ideas above. They are ungraded self-checks, not part of the Problems below.
+Five short, auto-graded questions cycle within one compact activity. The set mixes multiple choice, true/false, drag-the-words, fill-in-the-blank, and mark-the-words formats, and opens on the anatomy of a sinusoid.
 
-:::{h5p} ch01-vacuum-medium
-:label: check:ch01-vacuum-medium
+:::{h5p} ch01-chapter-review
+:label: check:ch01-chapter-review
+:title: Chapter 1 interactive review
 
-A ringing alarm clock is sealed in a bell jar. As the air is pumped out, the sound fades to silence even though the hammer can still be seen striking the bell. What does this demonstrate?
-
-1. Sound requires a medium to travel through, unlike light.
-2. Light also requires a medium to travel through.
-3. The hammer has stopped vibrating.
-4. Sound travels faster through a vacuum than through air.
-:::
-
-:::{h5p} ch01-pressure-compression
-:label: check:ch01-pressure-compression
-
-In a sound wave traveling through air, a compression is a region where the air molecules are bunched more tightly than usual. What is the pressure there?
-
-1. Above atmospheric pressure.
-2. Below atmospheric pressure.
-3. Exactly atmospheric pressure.
-4. Zero.
-:::
-
-:::{h5p} ch01-hookes-law-generality
-:label: check:ch01-hookes-law-generality
-
-A mass on a spring, a guitar string, and an air column all vibrate approximately sinusoidally for small displacements, even though they are physically very different systems. Why does the linear restoring force $F = -kx$ describe all of them?
-
-1. Any smooth potential energy curve looks approximately quadratic near a stable equilibrium, so the restoring force is approximately linear for small displacements.
-2. All of these systems are secretly made of springs.
-3. Linear forces are the only kind of force that exists in nature.
-4. Small displacements eliminate all friction in the system.
-:::
-
-:::{h5p} ch01-shm-amplitude-independence
-:label: check:ch01-shm-amplitude-independence
-
-A guitar string is plucked harder, increasing its vibration amplitude but not its tension or its mass per unit length. What happens to the pitch it sounds?
-
-1. The pitch stays the same, because the frequency of simple harmonic motion does not depend on amplitude.
-2. The pitch rises, because louder sounds have higher frequency.
-3. The pitch falls, because more energy slows the vibration.
-4. The sound becomes noise with no definite pitch.
-:::
-
-:::{h5p} ch01-energy-amplitude-squared
-:label: check:ch01-energy-amplitude-squared
-
-The amplitude of a vibrating string is doubled, with everything else unchanged. By what factor does the energy of its vibration increase?
-
-1. 4
-2. 2
-3. 8
-4. 16
+1. **Multiple choice, from a figure.** The activity reproduces the anatomy-of-a-sinusoid figure from earlier in this chapter, which draws two sinusoids of equal amplitude and equal period. Which quantity distinguishes them: phase, amplitude, frequency, or period?
+2. **True or false.** Doubling the amplitude of a vibrating string doubles the energy stored in the vibration.
+3. **Drag the words.** Complete: in a ___ the air is bunched and the pressure is ___ atmospheric; in a ___ the air is spread out and the pressure is ___ atmospheric; an eardrum and a microphone both respond to ___. (Terms: compression, above, rarefaction, below, pressure, displacement, equal to.)
+4. **Fill in the blanks.** A steady tone at $250$ Hz has a period of ___ ms, because frequency and period are ___.
+5. **Mark the words.** Identify the three numbers that specify a simple harmonic motion: “A sinusoid is fixed by its amplitude, its frequency, and its phase; loudness, pitch, and timbre are the perceptions those give rise to.”
 :::
 
 ## Conceptual Questions

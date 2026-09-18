@@ -13,6 +13,9 @@
       },
       "params": {
         "question": "<p>Eight identical, mutually incoherent sources play together. Approximately how much higher is their combined level than one source?</p>",
+        "media": {
+          "disableImageZooming": false
+        },
         "answers": [
           {
             "text": "<div>9 dB</div>",

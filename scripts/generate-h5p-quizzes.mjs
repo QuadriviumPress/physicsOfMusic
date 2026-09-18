@@ -40,7 +40,7 @@ function feedback( correct ) {
   };
 }
 
-function multiChoice( seed, question, choices ) {
+function multiChoice( seed, question, choices, media ) {
   const correctCount = choices.filter( choice => choice.correct ).length;
   return {
     library: 'H5P.MultiChoice 1.16',
@@ -48,6 +48,7 @@ function multiChoice( seed, question, choices ) {
     metadata: metadata( question, 'Multiple Choice' ),
     params: {
       question: `<p>${question}</p>`,
+      media: media ?? { disableImageZooming: false },
       answers: choices.map( choice => ( {
         text: `<div>${choice.text}</div>`,
         correct: choice.correct,
@@ -191,7 +192,7 @@ function blanks( seed, prompt, lines ) {
   };
 }
 
-function markWords( seed, taskDescription, textField ) {
+function markWords( seed, taskDescription, textField, media ) {
   return {
     library: 'H5P.MarkTheWords 1.11',
     subContentId: uuid( `${seed}:mark-words` ),
@@ -199,7 +200,7 @@ function markWords( seed, taskDescription, textField ) {
     params: {
       taskDescription: `<p>${taskDescription}</p>`,
       textField,
-      media: { disableImageZooming: false },
+      media: media ?? { disableImageZooming: false },
       behaviour: { ...COMMON_BEHAVIOUR, showScorePoints: true },
       overallFeedback: [ { from: 0, to: 100, feedback: 'You marked @score of @total terms correctly.' } ],
       checkAnswerButton: 'Check',
@@ -220,27 +221,106 @@ function markWords( seed, taskDescription, textField ) {
   };
 }
 
-const imageMedia = {
-  type: {
-    library: 'H5P.Image 1.1',
-    subContentId: uuid( 'ch12:chladni-image' ),
-    metadata: metadata( 'Chladni figures', 'Image' ),
-    params: {
-      contentName: 'Image',
-      alt: 'Four Chladni patterns formed by sand on vibrating square plates.',
-      decorative: false,
-      file: {
-        path: 'images/ch12-chladni.png',
-        mime: 'image/png',
-        width: 1600,
-        height: 512
+const IMAGE_MIME = { '.png': 'image/png', '.svg': 'image/svg+xml' };
+
+/**
+ * Intrinsic pixel size of a figure, read from the file rather than restated
+ * here, so a regenerated figure cannot silently disagree with its metadata.
+ */
+function imageSize( file ) {
+  const bytes = fs.readFileSync( file );
+  if ( path.extname( file ) === '.png' ) {
+    return { width: bytes.readUInt32BE( 16 ), height: bytes.readUInt32BE( 20 ) };
+  }
+  const viewBox = /viewBox="[\d.]+ +[\d.]+ +([\d.]+) +([\d.]+)"/.exec( bytes.toString( 'utf8', 0, 4096 ) );
+  if ( !viewBox ) throw new Error( `${file}: no viewBox to take the image size from` );
+  return { width: Math.round( Number( viewBox[ 1 ] ) ), height: Math.round( Number( viewBox[ 2 ] ) ) };
+}
+
+/**
+ * A figure from `images/`, as the media slot of a question. The writer below
+ * finds these by walking the finished questions, so naming one here is all it
+ * takes to have the file copied and the H5P.Image dependency declared.
+ */
+function image( seed, name, alt ) {
+  const mime = IMAGE_MIME[ path.extname( name ) ];
+  if ( !mime ) throw new Error( `${name}: only PNG and SVG figures are supported` );
+  return {
+    type: {
+      library: 'H5P.Image 1.1',
+      subContentId: uuid( `${seed}:image:${name}` ),
+      metadata: metadata( alt, 'Image' ),
+      params: {
+        contentName: 'Image',
+        alt,
+        decorative: false,
+        file: { path: `images/${name}`, mime, ...imageSize( path.join( ROOT, 'images', name ) ) }
       }
-    }
-  },
-  disableImageZooming: false
-};
+    },
+    disableImageZooming: false
+  };
+}
+
+/** The `images/...` paths a quiz's questions refer to, in first-use order. */
+function figures( quiz ) {
+  const paths = new Set();
+  for ( const question of quiz.questions ) {
+    const media = question.params.media?.type;
+    if ( media?.library.startsWith( 'H5P.Image' ) ) paths.add( media.params.file.path );
+  }
+  return [ ...paths ];
+}
 
 const quizzes = [
+  {
+    chapter: 1,
+    title: 'Sound, Music, and Simple Harmonic Motion Review',
+    questions: [
+      multiChoice( 'ch01', 'The solid and the dashed curve above have the same amplitude and the same period. Which quantity distinguishes them?', [
+        { text: 'Phase.', correct: true },
+        { text: 'Amplitude.', correct: false },
+        { text: 'Frequency.', correct: false },
+        { text: 'Period.', correct: false }
+      ], image( 'ch01', 'ch01-sinusoid-anatomy.svg', 'A sinusoid with its amplitude and period marked, drawn with a second sinusoid of the same size shifted along the time axis.' ) ),
+      trueFalse( 'ch01', 'Doubling the amplitude of a vibrating string doubles the energy stored in the vibration.', false ),
+      dragText( 'ch01', 'Complete the description of a sound wave written in terms of pressure.', 'In a *compression* the air is bunched together and the pressure is *above* atmospheric; in a *rarefaction* the air is spread out and the pressure is *below* atmospheric. An eardrum and a microphone both respond to *pressure*.', '*displacement*\n*equal to*' ),
+      blanks( 'ch01', 'Complete the relationship between frequency and period.', [ 'A steady tone at 250 Hz has a period of *4* ms, because frequency and period are *reciprocals/reciprocal/inverses/inverse*.' ] ),
+      markWords( 'ch01', 'Mark the three numbers that specify a simple harmonic motion completely.', 'A sinusoid is fixed by its *amplitude*, its *frequency*, and its *phase*; loudness, pitch, and timbre are the perceptions those give rise to.' )
+    ]
+  },
+  {
+    chapter: 2,
+    title: 'Wave Motion and the Speed of Sound Review',
+    questions: [
+      multiChoice( 'ch02', 'A sound wave passes from air into water. Which of its properties change at the boundary? Select all that apply.', [
+        { text: 'Its speed.', correct: true },
+        { text: 'Its wavelength.', correct: true },
+        { text: 'Its frequency.', correct: false },
+        { text: 'Its period.', correct: false }
+      ] ),
+      trueFalse( 'ch02', 'The chart shows sound traveling nearly three times faster in helium than in air. The reason is that helium is far stiffer than air.', false,
+        image( 'ch02', 'ch02-speed-in-media.svg', 'A bar chart of the speed of sound in carbon dioxide, air, helium, water, spruce along the grain, and steel.' ) ),
+      dragText( 'ch02', 'Complete the rules for the speed of sound in air.', 'Sound travels at about *343* m/s in air at 20 °C, gaining roughly *0.6* m/s for every degree Celsius. It does not depend on the *pressure* of the air, nor on the *frequency* of the note.', '*965*\n*amplitude*' ),
+      blanks( 'ch02', 'Complete the outdoor distance rule.', [ 'Doubling the distance from a small source in the open air lowers the level by *6* dB, because intensity falls as one over the distance *squared/2*.' ] ),
+      markWords( 'ch02', 'Mark the two properties of the medium that set a wave’s speed.', 'Wave speed is fixed by the medium’s *stiffness* and its *density*; the frequency, the amplitude, and the motion of the source all leave it unchanged.' )
+    ]
+  },
+  {
+    chapter: 3,
+    title: 'Superposition, Interference, and Standing Waves Review',
+    questions: [
+      multiChoice( 'ch03', 'The bottom panel above shows the 4th harmonic of a string fixed at both ends. How many nodes lie strictly between the two fixed ends?', [
+        { text: 'Three.', correct: true },
+        { text: 'Four.', correct: false },
+        { text: 'Two.', correct: false },
+        { text: 'Five.', correct: false }
+      ], image( 'ch03', 'ch03-string-modes.svg', 'The first four modes of a string fixed at both ends, with the nodes marked and the wavelengths labelled 2L over n.' ) ),
+      trueFalse( 'ch03', 'Where two equal sources interfere constructively, the intensity is four times that of one source alone.', true ),
+      dragText( 'ch03', 'Complete the rules for reflection and for two-source interference.', 'A pulse returns *inverted* from a fixed end and *upright* from a free end. Two loudspeakers reinforce where the path difference is a *whole* number of wavelengths, and cancel where it includes one extra *half* wavelength.', '*doubled*\n*quarter*' ),
+      blanks( 'ch03', 'Complete the description of a stopped pipe.', [ 'A pipe stopped at one end resonates at nv/*4*L, sounds *odd* harmonics only, and sits an *octave* below an open pipe of the same length.' ] ),
+      markWords( 'ch03', 'Mark the two changes that raise the fundamental frequency of a string.', '*Shortening* the string and *tightening* it both raise the pitch, while loosening it or fitting a heavier string lowers it.' )
+    ]
+  },
   {
     chapter: 4,
     title: 'Resonance and Normal Modes Review',
@@ -379,7 +459,8 @@ const quizzes = [
         { text: 'At both ends.', correct: false },
         { text: 'At any point; support position does not matter.', correct: false }
       ] ),
-      trueFalse( 'ch12', 'In the Chladni patterns shown, sand collects along antinodes where the plate moves most.', false, imageMedia ),
+      trueFalse( 'ch12', 'In the Chladni patterns shown, sand collects along antinodes where the plate moves most.', false,
+        image( 'ch12', 'ch12-chladni.png', 'Four Chladni patterns formed by sand on vibrating square plates.' ) ),
       dragText( 'ch12', 'Match each vibrator to the beginning of its modal-frequency pattern.', 'An ideal string begins *1 : 2*. A free-free bar begins *1 : 2.76*. A circular membrane begins *1 : 1.59*. A timpano’s air-loaded sequence begins about *1 : 1.5*.', '*1 : 1.25*\n*1 : 3*' ),
       blanks( 'ch12', 'Complete the timpani pitch explanation.', [ 'The perceived timpani pitch is a *missing* fundamental one *octave* below its lowest prominent partial.' ] ),
       markWords( 'ch12', 'Mark the five named partials deliberately tuned in a church bell.', 'The five named partials are *hum*, *prime*, *tierce*, *quint*, and *nominal*; the traditional tierce is a minor third.' )
@@ -512,7 +593,8 @@ for ( const quiz of quizzes ) {
   fs.mkdirSync( content, { recursive: true } );
 
   const preloadedDependencies = dependencies.map( dependency );
-  if ( quiz.chapter === 12 ) preloadedDependencies.push( dependency( [ 'H5P.Image', 1, 1 ] ) );
+  const quizFigures = figures( quiz );
+  if ( quizFigures.length > 0 ) preloadedDependencies.push( dependency( [ 'H5P.Image', 1, 1 ] ) );
 
   const manifest = {
     title: quiz.title,
@@ -527,10 +609,10 @@ for ( const quiz of quizzes ) {
   fs.writeFileSync( path.join( root, 'h5p.json' ), `${JSON.stringify( manifest, null, 2 )}\n` );
   fs.writeFileSync( path.join( content, 'content.json' ), `${JSON.stringify( questionSet( quiz ), null, 2 )}\n` );
 
-  if ( quiz.chapter === 12 ) {
-    const imageDirectory = path.join( content, 'images' );
-    fs.mkdirSync( imageDirectory, { recursive: true } );
-    fs.copyFileSync( path.join( ROOT, 'images', 'ch12-chladni.png' ), path.join( imageDirectory, 'ch12-chladni.png' ) );
+  for ( const figure of quizFigures ) {
+    const destination = path.join( content, figure );
+    fs.mkdirSync( path.dirname( destination ), { recursive: true } );
+    fs.copyFileSync( path.join( ROOT, figure ), destination );
   }
 }
 
