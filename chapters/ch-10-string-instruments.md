@@ -189,6 +189,14 @@ The same string, excited two ways. Note that two things differ, and they are ind
 Helmholtz motion only establishes itself within a certain range of bow force and bow position, mapped out by John Schelleng in 1973. Too little force and the string never sticks: the result is a whistling, unfocused sound called *surface sound*. Too much and the string sticks too long, producing a raucous crunch. The window narrows sharply as the bow moves toward the bridge, which is precisely why *sul ponticello* is difficult to control and why beginners sound scratchy.
 :::
 
+```{video} https://www.youtube.com/watch?v=6JeyiM0YNo4
+:video-title: Bowed Violin String in Slow Motion
+:label: fig:ch10-bowed-string-video
+:alt: High-speed footage shows the sharp Helmholtz corner traveling along a bowed violin string.
+
+High-speed footage reveals Helmholtz motion: a sharp corner travels back and forth along the bowed string as sticking alternates with slipping. The motion that produces the sawtooth-like waveform is difficult to see at normal speed.
+```
+
 ### Striking: The Hammer and the Contact Time
 
 A piano hammer is the third mechanism. It differs from a pluck in two ways that both matter.

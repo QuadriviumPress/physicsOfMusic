@@ -243,6 +243,14 @@ A brass player's lips are a reed made of flesh, and the feedback mechanism is th
 
 The difference is that lips are **adjustable**. A player changes their tension and aperture continuously, and by doing so chooses which of the bore's resonances to lock onto. A trumpeter plays a scale on a fixed tube by changing nothing but their lips.
 
+```{video} https://www.youtube.com/watch?v=tGdyrXz4Wg8
+:video-title: The Physics of Brass Instruments, Part 1: The Lips
+:label: fig:ch11-brass-lips-video
+:alt: A physicist demonstrates how a brass player's lips vibrate and couple to an instrument.
+
+A physicist explains the lips as an adjustable oscillating valve and the air column as the resonator that selects its pitch. The demonstration shows the feedback loop behind the compact description above.
+```
+
 ### Mouthpiece, Bore, and Bell
 
 Now a problem. A cylindrical tube closed at one end gives odd harmonics only, $1, 3, 5, \ldots$, which would make a brass instrument's playable notes an unmusical set. Yet a bugle plays a recognizable harmonic series.

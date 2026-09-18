@@ -91,6 +91,14 @@ The essential feature is that the folds do not move as a single stiff object. Th
 One glottal cycle. The opening is gradual and the closing is abrupt, and the folds stay shut for a substantial fraction of each cycle. **The sharp closure is what makes the sound**: it produces a rapid change in airflow, which is a broadband excitation of the tract, in the same way that a sharp-cornered waveform contains high harmonics ([Chapter 5](#ch-fourier-and-timbre)).
 ```
 
+```{video} https://www.youtube.com/watch?v=9kHdhbEnhoA
+:video-title: High-Speed Video of the Vocal Folds
+:label: fig:ch13-vocal-folds-video
+:alt: High-speed laryngeal imaging shows the vocal folds repeatedly opening and closing during phonation.
+
+High-speed laryngeal imaging slows the vocal folds' oscillation enough to reveal the opening and closing cycle. The footage shows the vibrator that supplies the source in the source--filter model.
+```
+
 ### What Sets the Fundamental
 
 The folds are a mass–spring system, so [Chapter 1](#ch-sound-and-shm) applies: frequency rises with tension and falls with mass.
@@ -150,6 +158,14 @@ A singer changes formants by changing the tract's shape, and the controls map on
 **$F_2$ tracks where the tongue is.** A tongue hump far forward raises $F_2$; a tongue pulled back lowers it.
 
 **$F_3$ and above** depend on finer details, including the space under the tongue and the position of the larynx, and §13.5 shows that $F_3$ is where trained singing does something distinctive.
+
+```{video} https://www.youtube.com/watch?v=J3TwTb-T044
+:video-title: Singing in the MRI: Making the Voice Visible
+:label: fig:ch13-singing-mri-video
+:alt: Real-time magnetic resonance images show a singer's tongue, jaw, lips, and vocal tract changing shape.
+
+Real-time MRI makes the filter half of the voice visible. As Tyley Ross changes vowels and pitch, the tongue, jaw, lips, and vocal tract reshape the resonant cavities that determine the formants.
+```
 
 ## Vowels, Registers, and Range
 

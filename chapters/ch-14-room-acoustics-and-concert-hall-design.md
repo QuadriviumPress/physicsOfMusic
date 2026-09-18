@@ -158,6 +158,14 @@ One phrase, four rooms. Listen to the *last* note in each: in the cathedral it i
 
 The conflict between speech and music is real and unresolvable. A hall optimized for an orchestra is poor for a lecture and vice versa, and a multi-purpose hall is a compromise that satisfies nobody completely. Section 14.5 therefore takes up variable acoustics.
 
+```{video} https://www.youtube.com/watch?v=6ssGj65U2F8
+:video-title: Saxophone in a Reverberation Room and an Anechoic Chamber
+:label: fig:ch14-saxophone-rooms-video
+:alt: A saxophonist plays first in a reverberant chamber and then in an anechoic chamber.
+
+The same saxophone is heard in two acoustic extremes: first surrounded by a long reverberant tail, then almost entirely stripped of reflected sound. The contrast isolates how strongly a room becomes part of an instrument's sound.
+```
+
 ## Reflection, Diffusion, and Modes
 
 ### Specular Reflection and Its Defects
@@ -271,6 +279,14 @@ Since no fixed acoustic suits everything, modern halls increasingly vary theirs.
 **Electronically**: a system of microphones, processors, and many distributed loudspeakers that adds reverberant energy. Modern systems are good enough that listeners cannot reliably detect them, and they can turn a dry drama theater into a plausible concert hall at the press of a button.
 
 Electronic enhancement remains controversial, and the argument is worth stating honestly. The objection is not that it does not work, it does, but that a hall's acoustic has been part of the compositional and performing tradition, and that a variable acoustic makes it a production decision rather than a fact about the building. That is an aesthetic disagreement rather than a physical one, and this book takes no side in it.
+
+```{video} https://www.youtube.com/watch?v=FpsoXqz-nI4
+:video-title: Glasgow Royal Concert Hall Acoustics
+:label: fig:ch14-glasgow-hall-video
+:alt: Acoustics students make measurements from the stage and seating of a concert hall.
+
+Students from the University of Edinburgh measure the Glasgow Royal Concert Hall. Their tests connect reverberation time and reflections to the practical work of characterizing a real performance space.
+```
 
 ## Summary
 

@@ -99,6 +99,14 @@ The graph of that pressure against time is the **waveform**, and it is the objec
 A loudspeaker driving air, with the compressions and rarefactions drawn directly. Switch between the particle view and the pressure view and check that a compression really does sit where the pressure graph peaks; then change the frequency and watch the spacing of the bands change while their speed does not.
 ```
 
+```{video} https://www.youtube.com/watch?v=YxUERaXBAU8
+:video-title: Why Sound Can't Travel in a Vacuum
+:label: fig:ch01-vacuum-bell-video
+:alt: A ringing electric bell sits beneath a glass vacuum chamber.
+
+The Royal Institution pumps the air from a bell jar while a bell continues to vibrate. The fading sound isolates the role of the material medium: motion at the source is not enough if there is no air to carry the pressure disturbance.
+```
+
 ## From Sound to Music: Four Attributes
 
 ```{figure} ../images/open/ch01-django-reinhardt.jpg
@@ -284,6 +292,14 @@ The approximation is good to better than $1\%$ out to about $14°$, and it fails
 :placeholder: /images/phet/masses-and-springs-600.png
 
 Hang masses on springs of different stiffness and time the oscillations. Two experiments are worth doing deliberately: change the amplitude while keeping the mass and spring fixed, and confirm that the period does not move; then quadruple the mass and confirm that the period exactly doubles.
+```
+
+```{video} https://www.youtube.com/watch?v=7_AiV12XBbI
+:video-title: Amazing Pendulum Wave Effect!
+:label: fig:ch01-pendulum-wave-video
+:alt: A row of pendulums with progressively changing lengths forms a wave-like pattern.
+
+Brusspup's pendulum array turns small differences in period into traveling patterns, beating, and repeated returns to alignment. Each bob is an independent oscillator; the apparent wave comes from their steadily changing relative phases.
 ```
 
 ## Energy, Amplitude, and Damping

@@ -212,6 +212,14 @@ A flat plate has modes indexed by two numbers, like a membrane, but stiffness-co
 
 The classic way to see them is **Chladni's** method, published in 1787: scatter sand on the plate and excite a mode, and the sand bounces away from the moving regions and collects along the nodal lines.
 
+```{video} https://www.youtube.com/watch?v=wYoxOJDrZzw
+:video-title: Singing Plates: Standing Waves on Chladni Plates
+:label: fig:ch12-singing-plates-video
+:alt: Sand on a metal plate forms distinct geometric patterns at successive resonant frequencies.
+
+Physics Girl excites successive resonances of a Chladni plate. Sand leaves the moving regions and gathers on nodal lines, making each two-dimensional mode visible as a different geometric pattern.
+```
+
 ```{openlyceum} Resonance
 :screens: 4
 :placeholder: ../images/ch12-chladni.png
@@ -220,6 +228,14 @@ The classic way to see them is **Chladni's** method, published in 1787: scatter 
 :alt: Four square plates showing nodal-line patterns of increasing complexity, from a simple diagonal cross to an intricate lattice with a star at the center.
 
 Select different resonant frequencies and watch the particles collect along the lines that do not move. Each pattern belongs to one mode, and the number of lines generally rises with the mode number. Violin makers still use the method to check the symmetry of a top or back plate before assembly; an asymmetric pattern means the plate is thicker on one side.
+```
+
+```{video} https://www.youtube.com/watch?v=-CZlrgq8syE
+:video-title: Seeing Sound With Sand
+:label: fig:ch12-seeing-sound-with-sand-video
+:alt: Sand rearranges into nodal patterns as a plate is driven at different frequencies.
+
+BBC Earth Science gives a slower explanatory view of the same method, showing why grains migrate away from vibrating regions and settle along the lines that do not move.
 ```
 
 ### Cymbals, Gongs, and the Nonlinear Cascade

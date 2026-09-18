@@ -54,6 +54,22 @@ It is a satisfying place to end, because very little in it is new. The chain tur
 
 There is one genuinely new idea, and it is a deep one: a continuous signal can be represented **exactly** by a finite list of numbers. The rest is engineering.
 
+```{video} https://www.youtube.com/watch?v=3DdUvoc7tJ4
+:video-title: How Do Vinyl Records Hold Stereo Sound?
+:label: fig:ch15-vinyl-stereo-video
+:alt: Diagrams and close views of a record groove show how its two walls encode stereo channels.
+
+Technology Connections explains the 45/45 groove geometry that stores two audio channels in one mechanical trace. The construction is a compact example of turning two electrical signals into motion and back again.
+```
+
+```{video} https://www.youtube.com/watch?v=GuCdsyCWmt8
+:video-title: Vinyl LP in an Electron Microscope
+:label: fig:ch15-vinyl-microscope-video
+:alt: Electron-microscope images reveal the modulated groove of a vinyl record.
+
+Ben Krasnow images a record groove directly with an electron microscope. The magnified walls make the physical waveform traced by a playback stylus visible rather than abstract.
+```
+
 ## Microphones and Loudspeakers
 
 ### Turning Pressure Into Voltage
@@ -92,6 +108,14 @@ It faces a problem [Chapter 2](#ch-wave-motion) identified. Directivity depends 
 The solution is multiple drivers, a **woofer**, sometimes a midrange, and a **tweeter**, with a **crossover** network dividing the signal between them. The crossover is itself a compromise, since the drivers must blend through the handover region without canceling, and crossover design is much of what distinguishes loudspeakers.
 
 The low-frequency problem is attacked separately. A cone radiates from both faces, in opposite phase, so at long wavelengths the front and rear outputs meet around the edge and cancel. An enclosure prevents that. A **sealed** box is simple and well-behaved; a **bass-reflex** box adds a tuned port, a Helmholtz resonator ([Chapter 4](#ch-resonance)), that reinforces the bottom octave at the cost of a steeper roll-off below it.
+
+```{video} https://www.youtube.com/watch?v=jhg90zsjqt4
+:video-title: How Do Speakers Work?
+:label: fig:ch15-speakers-video
+:alt: A cutaway animation shows a loudspeaker magnet, voice coil, suspension, and moving cone.
+
+Branch Education follows an electrical signal through the magnet and voice coil to the moving cone and the pressure wave radiated into the room. The cutaway view shows how the components described above fit together.
+```
 
 ### Electromagnetic Pickups: A Different Transducer
 

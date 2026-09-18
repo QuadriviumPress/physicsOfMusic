@@ -81,6 +81,14 @@ Shove the row of people once and a single **pulse** travels down it. Shove them 
 
 A handclap is a pulse. A sung note is a periodic wave. Musically the periodic case is the interesting one, but the pulse is the more fundamental: a periodic wave is what you get by sending pulses one after another, and its speed is the pulse speed. **The speed does not know or care about the frequency.** This is worth stating plainly because it is the single most useful fact in the chapter, and because the exceptions to it, media in which speed *does* depend on frequency, called dispersive media, are rare in air and consequential when they occur. A piano string is mildly dispersive, and [Chapter 10](#ch-string-instruments) shows that this small fact is why pianos are tuned the way they are.
 
+```{video} https://www.youtube.com/watch?v=VE520z_ugcU
+:video-title: Wave Machine Demonstration
+:label: fig:ch02-wave-machine-video
+:alt: Skewers attached to a strip of tape carry a transverse pulse along a tabletop wave machine.
+
+The National STEM Centre's tabletop wave machine makes propagation visible: each element moves locally while the disturbance and its energy travel along the machine. Reflections and changes of medium can be seen without following an individual piece of matter down the line.
+```
+
 ## Wavelength, Frequency, and Wave Speed
 
 ### The Relation $v = f\lambda$

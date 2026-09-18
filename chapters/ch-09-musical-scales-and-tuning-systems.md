@@ -392,6 +392,14 @@ A summary of the three main systems in one table:
 
 Read down the last column and the history explains itself.
 
+```{video} https://www.youtube.com/watch?v=gtkeDDcXu9M
+:video-title: Equal Temperament vs. Just Intonation
+:label: fig:ch09-equal-vs-just-video
+:alt: A musician compares the pitches and interval ratios of equal temperament and just intonation.
+
+Adam Neely compares equal temperament with just intonation from a working musician's perspective. The examples make audible both the pure intervals that just tuning gains and the freedom to change key that equal temperament buys.
+```
+
 ## Tuning in Practice
 
 ### Fixed-Pitch and Flexible-Pitch Instruments

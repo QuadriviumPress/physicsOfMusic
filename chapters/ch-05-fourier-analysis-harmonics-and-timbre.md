@@ -133,6 +133,14 @@ Synthesis, one harmonic at a time. Each step adds the next harmonic of $220$ Hz 
 The decomposer screen: hand it an arbitrary periodic wave and watch it resolve into a stack of harmonic amplitudes in real time. This is analysis running the other direction from the sawtooth built by hand above, spectrum from waveform rather than waveform from spectrum, and the two screens of this simulation are the theorem's two directions made concrete.
 ```
 
+```{video} https://www.youtube.com/watch?v=spUNpyF58BY
+:video-title: But What Is the Fourier Transform? A Visual Introduction
+:label: fig:ch05-fourier-transform-video
+:alt: Rotating vectors wind a waveform around a circle to reveal one of its frequency components.
+
+Grant Sanderson builds the Fourier transform visually by winding a waveform around a circle. The construction shows how a spectrum measures the amount of each frequency in a signal before the chapter turns to line spectra and timbre.
+```
+
 ## The Harmonic Series and the Spectrum
 
 ### Harmonics, Partials, and Overtones

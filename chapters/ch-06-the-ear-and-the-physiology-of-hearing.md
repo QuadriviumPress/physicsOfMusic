@@ -48,6 +48,14 @@ That machinery begins with a mechanical problem that is worth appreciating befor
 
 The middle ear exists to solve exactly that problem, and it recovers almost all of the $30$ dB. The rest of the chapter is about what the inner ear does with the sound once it has got it: how it separates frequencies, how it turns motion into nerve impulses, and what its limits are.
 
+```{video} https://www.youtube.com/watch?v=LkGOGzpbrCk
+:video-title: The Science of Hearing
+:label: fig:ch06-science-of-hearing-video
+:alt: A cutaway animation traces sound through the outer, middle, and inner ear.
+
+TED-Ed and Douglas L. Oliver give an anatomical overview of hearing, following a sound from the outer ear through the ossicles and cochlea. It provides a visual map for the structures examined separately below.
+```
+
 ## The Outer Ear
 
 ### The Pinna and Direction
@@ -171,6 +179,14 @@ The place-to-frequency correspondence is called **tonotopic organization**, and 
 
 This is the physiological basis of Ohm's acoustic law from [Chapter 5](#ch-fourier-and-timbre). The ear is, mechanically, something very like a Fourier analyzer. And because it encodes *place*, while the relative timing between distant places is not preserved, the phase relationships among widely separated harmonics are discarded, exactly as the listening experiment showed.
 
+```{video} https://www.youtube.com/watch?v=eQEaiZ2j9oc
+:video-title: Journey of Sound to the Brain
+:label: fig:ch06-sound-to-brain-video
+:alt: An anatomical animation follows vibrations from the eardrum into the cochlea and auditory nerve.
+
+The National Institutes of Health follows vibration through the eardrum and ossicles, into the cochlea and hair cells, and finally along the auditory nerve. The animation connects the traveling wave on the basilar membrane to the neural signal it produces.
+```
+
 ## From Motion to Nerve Impulse
 
 ### Hair Cells and the Organ of Corti
@@ -206,6 +222,14 @@ Auditory nerve fibers tend to fire at a particular phase of the basilar membrane
 Phase locking works up to about $4$–$5$ kHz and degrades above that, because the nerve cannot maintain timing precision at those rates.
 
 That number is suspicious. **The top note of a piano is $4186$ Hz.** Almost all melodic instruments have their fundamentals below about $4$ kHz: that is, within the range where timing information is available. Above it, pitch perception becomes markedly worse: listeners are poor at recognizing melodies made of pure tones above $5$ kHz, and poor at tuning them. The musical range appears to stop about where the temporal mechanism does, and [Chapter 8](#ch-pitch-and-consonance) takes up what that implies about how pitch is computed.
+
+```{video} https://www.youtube.com/watch?v=Sn07AMCfaAI
+:video-title: These Illusions Fool Almost Everyone
+:label: fig:ch06-auditory-illusions-video
+:alt: A presenter demonstrates auditory illusions involving pitch, direction, and expectation.
+
+Veritasium demonstrates illusions that depend on how the ear and brain localize and interpret sound. They are reminders that hearing is an inference made from neural evidence, not a literal copy of the pressure waveform.
+```
 
 ## Limits and Damage
 

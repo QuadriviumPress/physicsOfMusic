@@ -7,9 +7,11 @@
  *   1. {simulation} / {openlyceum} / {phet}   plugins/simulation.mjs
  *   2. {audio}                                plugins/audio.mjs
  *   3. {animation}                            plugins/animation.mjs
- *   4. book styles
+ *   4. {video}                                plugins/video.mjs
+ *   5. book styles
  *
- * Groups 1 and 3 are load-bearing. Those directives emit a website-only iframe
+ * Groups 1, 3, and 4 are load-bearing. Those directives emit a website-only
+ * iframe
  * *and* a static image as siblings of one figure, because no single node type
  * survives every MyST output format; on the website both would be visible, so
  * this file hides the static image and flips the pair back around for print.
@@ -106,6 +108,31 @@
   padding-bottom: 75% !important;
 }
 
+/* ---------------------------------------------------------------- 4. Videos */
+
+/* The poster exists for PDF, DOCX, Markdown, and print. */
+.video-placeholder {
+  display: none;
+}
+
+.video-aspect-16x9 > div {
+  padding-bottom: 56.25% !important;
+}
+
+.video-aspect-4x3 > div {
+  padding-bottom: 75% !important;
+}
+
+.video-link {
+  font-size: 0.9em;
+}
+
+.video-link a {
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- 5. Book */
+
 /* Open-license photographs are supporting illustrations, not full-page plates. */
 figure img[src*="/images/open/"] {
   max-width: 72%;
@@ -124,12 +151,14 @@ figure img[src*="/images/open/"] {
 @media print {
   .audio-player,
   .simulation-frame,
-  .animation-frame {
+  .animation-frame,
+  .video-frame {
     display: none;
   }
 
   .simulation-placeholder,
-  .animation-placeholder {
+  .animation-placeholder,
+  .video-placeholder {
     display: block;
     max-width: 100%;
     height: auto;

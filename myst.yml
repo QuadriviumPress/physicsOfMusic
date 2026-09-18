@@ -69,6 +69,9 @@ project:
     # falling back to the existing static SVG figure everywhere but the
     # website; see plugins/animation.mjs.
     - plugins/animation.mjs
+    # YouTube and Vimeo embeds, with a poster image and durable source link for
+    # PDF, Word, Markdown, and browser print; see plugins/video.mjs.
+    - plugins/video.mjs
     # Rewrites exercises, solutions, margin notes and dropdowns into nodes the
     # LaTeX/DOCX renderers understand. Inert unless MYST_PRINT is set, so the
     # website build is untouched; see plugins/export.mjs.
@@ -80,9 +83,10 @@ project:
     - audio
     - audio-player.html
     - animations
-  # The simulation and animation directives emit an iframe for the website
-  # beside a static image for print. plugins/export.mjs strips the iframe
-  # before the tex renderer sees it, but a stray one must not fail the build.
+  # The simulation, animation, and video directives emit an iframe for the
+  # website beside a static image for print. plugins/export.mjs strips the
+  # iframe before the tex renderer sees it, but a stray one must not fail the
+  # build.
   error_rules:
     - id: tex-renders
       severity: warn
@@ -180,8 +184,6 @@ project:
           level: 0
         - file: back/appendix-final-project.md
           level: 0
-        - file: back/appendix-further-viewing.md
-          level: 0
         - file: back/glossary.md
           level: 0
   # Website sidebar: a flat list (no Part I / Part II groupings). The right-hand
@@ -209,7 +211,6 @@ project:
     - file: back/appendix-teaching-guide.md
     - file: back/appendix-laboratory.md
     - file: back/appendix-final-project.md
-    - file: back/appendix-further-viewing.md
     - file: back/glossary.md
 site:
   template: book-theme

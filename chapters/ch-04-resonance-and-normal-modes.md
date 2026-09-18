@@ -86,6 +86,14 @@ After any initial transient dies away, the system settles into oscillating **at 
 The response of a driven oscillator as the drive frequency sweeps back and forth through resonance. **Left**: a constant-strength force drives the $Q=5$ oscillator shown by the green curve. Its motion grows dramatically near $f=f_0$, and its timing shifts from following the force to opposing it. **Right, top**: the amplitude for three amounts of damping. **Right, bottom**: the corresponding phase lag. At resonance the response lags the drive by exactly $90°$, whatever the damping, which is the precise statement of "pushing at the right moment".
 ```
 
+```{video} https://www.youtube.com/watch?v=PIUdZaoZmx8
+:video-title: Resonance: Breaking a Wine Glass
+:label: fig:ch04-wine-glass-resonance-video
+:alt: A wine glass vibrates beside a loudspeaker during a resonance demonstration.
+
+In this University of British Columbia outreach demonstration, a loudspeaker drives a wine glass at its natural frequency. High-speed footage shows the resonant motion growing until the glass fails: a vivid example of a small periodic force transferring energy efficiently when its frequency is correctly matched.
+```
+
 ### The Response Curve
 
 The curve in that figure is the object an experimenter measures; reading it is a skill of its own.
@@ -121,6 +129,14 @@ To feed energy into an oscillator you must push in the direction it is already m
 Off resonance, the drive and the motion drift in and out of step, so some pushes add energy and others take it away, and the amplitude never builds. At resonance the relationship is locked, and every push helps.
 
 This is also why a child on a swing must push at the right moment rather than merely often, and why pushing twice as often does not work at all.
+
+```{video} https://www.youtube.com/watch?v=aCocQa2Bcuc
+:video-title: Tuning Forks
+:label: fig:ch04-tuning-forks-video
+:alt: Two tuning forks mounted on resonant boxes demonstrate sympathetic vibration.
+
+MIT's Physics Instructional Resources Lab demonstrates natural frequency and sympathetic vibration with matched tuning forks. One resonator responds strongly because the other drives it at the frequency it already prefers.
+```
 
 ## Damping, Bandwidth, and the Quality Factor
 

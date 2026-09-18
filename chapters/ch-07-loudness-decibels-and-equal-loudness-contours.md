@@ -162,6 +162,14 @@ From those two, by adding:
 A sound is $23$ dB above another in intensity. Without a calculator, what is the intensity ratio? (Break $23$ into tens and threes.)
 :::
 
+```{video} https://www.youtube.com/watch?v=_p-WyPg1sbU
+:video-title: Decibel Scale
+:label: fig:ch07-decibel-scale-video
+:alt: Equations and diagrams explain how intensity ratios are converted to decibels.
+
+Khan Academy walks through the logarithmic decibel scale and the meaning of a 10 dB change. The presentation reinforces why multiplication of physical intensity becomes addition on a level scale.
+```
+
 ## Combining and Comparing Levels
 
 ### Adding Incoherent Sources

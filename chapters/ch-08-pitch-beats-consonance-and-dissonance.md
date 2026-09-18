@@ -171,6 +171,14 @@ $$
 Therefore, the tuner should hear about three beats every four seconds. That is a countable rate, which is exactly why the method works, and it is why a piano tuner works up the scale listening rather than reading a meter.
 ::::
 
+```{video} https://www.youtube.com/watch?v=mzoBH-HbKmw
+:video-title: Unison Tuning
+:label: fig:ch08-unison-tuning-video
+:alt: A piano technician adjusts the strings of one piano note while listening for beats.
+
+Piano technician Dan Levitan demonstrates the audible beats in an imperfect unison and the clean result as its strings converge on the same frequency. The changing beat rate turns the equation above into a practical tuning method.
+```
+
 ## The Pitch of a Complex Tone
 
 ### The Missing Fundamental
@@ -278,6 +286,14 @@ That figure is, to my mind, the most satisfying result in the book. The consonan
 :transcript: Two tones, the upper gliding slowly up an octave over sixteen seconds. The sound roughens and smooths repeatedly; the smooth points arrive at the familiar consonant intervals, and the roughest region is just above the unison.
 
 The same sweep, heard rather than computed. Follow it against the figure. The smooth points are not marked by anything in the sound generator, it simply glides, and yet they arrive on the fourth, the fifth, and the octave.
+```
+
+```{video} https://www.youtube.com/watch?v=cyW5z-M2yzw
+:video-title: Music and Measure Theory
+:label: fig:ch08-music-measure-theory-video
+:alt: Animated circles and number patterns connect rational ratios with musical intervals.
+
+3Blue1Brown approaches consonance through rational numbers and measure theory. It complements the chapter's physical account of beating and roughness by showing why simple frequency ratios occupy a mathematically special place.
 ```
 
 ### Dissonance Curves

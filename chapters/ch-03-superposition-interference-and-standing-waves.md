@@ -310,6 +310,14 @@ This is why the technique is called "playing harmonics", and it is a direct, aud
 Drive one end of a string and sweep the frequency slowly. Almost everywhere nothing much happens; at a handful of frequencies the string leaps into a clean pattern. Count the loops and check against $f_n = nf_1$, then change the tension and watch every resonance move by the same factor.
 ```
 
+```{video} https://www.youtube.com/watch?v=PVX4V5Adbzk
+:video-title: Standing Wave Harmonics
+:label: fig:ch03-standing-wave-harmonics-video
+:alt: A driven string displays successive standing-wave patterns with increasing numbers of loops.
+
+Successive resonances on a driven string make the nodes, antinodes, and first several harmonics directly visible. Each higher mode fits one additional half-wavelength between the fixed ends.
+```
+
 ## Standing Waves in an Air Column
 
 ### Open and Stopped Pipes
