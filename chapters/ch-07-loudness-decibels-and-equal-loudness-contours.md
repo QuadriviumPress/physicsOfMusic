@@ -398,7 +398,7 @@ The critical band is the ear's frequency-resolution limit, and it does a great d
 :::{exercise}
 :label: ex-loudness-1
 
-A sound has intensity $3.5\times10^{-6}$ W/m². (a) What is its sound intensity level in dB? (b) What pressure amplitude does it correspond to, taking $\rho v = 413$ kg m⁻² s⁻¹?
+*(Straightforward)* A sound has intensity $3.5\times10^{-6}$ W/m². (a) What is its sound intensity level in dB? (b) What pressure amplitude does it correspond to, taking $\rho v = 413$ kg m⁻² s⁻¹?
 :::
 
 :::{solution} ex-loudness-1
@@ -423,7 +423,7 @@ Therefore, the level is $65$ dB and the pressure amplitude about $38$ mPa, rough
 :::{exercise}
 :label: ex-loudness-2
 
-Without a calculator, find the level difference corresponding to an intensity ratio of (a) $100$, (b) $8$, (c) $40$, (d) $1/2$.
+*(Moderate)* Without a calculator, find the level difference corresponding to an intensity ratio of (a) $100$, (b) $8$, (c) $40$, (d) $1/2$.
 :::
 
 :::{solution} ex-loudness-2
@@ -446,7 +446,7 @@ Therefore: $20$, $9$, $16$, and $-3$ dB. (Exact values: $20.0$, $9.03$, $16.02$,
 :::{exercise}
 :label: ex-loudness-3
 
-One clarinet produces $72$ dB at a listener. (a) What level do four identical clarinets produce? (b) How many clarinets would be needed for $82$ dB? (c) Comment on the practicality.
+*(Moderate)* One clarinet produces $72$ dB at a listener. (a) What level do four identical clarinets produce? (b) How many clarinets would be needed for $82$ dB? (c) Comment on the practicality.
 :::
 
 :::{solution} ex-loudness-3
@@ -471,7 +471,7 @@ $$
 :::{exercise}
 :label: ex-loudness-4
 
-A singer produces $88$ dB at $1$ m. Outdoors, find the level at (a) $2$ m, (b) $8$ m, (c) $50$ m.
+*(Straightforward)* A singer produces $88$ dB at $1$ m. Outdoors, find the level at (a) $2$ m, (b) $8$ m, (c) $50$ m.
 :::
 
 :::{solution} ex-loudness-4
@@ -492,7 +492,7 @@ Therefore, $82$, $70$, and $54$ dB. At $50$ m outdoors the singer is at about th
 :::{exercise}
 :label: ex-loudness-5
 
-A tone at $100$ Hz must be played at $50$ dB SPL to sound as loud as a $1$ kHz tone at $30$ dB SPL. (a) What is the loudness level of each, in phons? (b) How much more intense is the $100$ Hz tone?
+*(Straightforward)* A tone at $100$ Hz must be played at $50$ dB SPL to sound as loud as a $1$ kHz tone at $30$ dB SPL. (a) What is the loudness level of each, in phons? (b) How much more intense is the $100$ Hz tone?
 :::
 
 :::{solution} ex-loudness-5
@@ -513,7 +513,7 @@ Therefore, the $100$ Hz tone must be a hundred times more intense to sound equal
 :::{exercise}
 :label: ex-loudness-6
 
-A sound has a loudness level of $70$ phons. (a) What is its loudness in sones? (b) What loudness level would sound twice as loud? (c) Four times?
+*(Moderate)* A sound has a loudness level of $70$ phons. (a) What is its loudness in sones? (b) What loudness level would sound twice as loud? (c) Four times?
 :::
 
 :::{solution} ex-loudness-6
@@ -536,7 +536,7 @@ Therefore, $8$ sones; doubling needs $+10$ phons and quadrupling $+20$. Note tha
 :::{exercise}
 :label: ex-loudness-7
 
-A rock concert measures $112$ dB. (a) How many times more intense is this than the $85$ dB eight-hour limit? (b) Using the $3$ dB exchange rate, what is the safe exposure time?
+*(Moderate)* A rock concert measures $112$ dB. (a) How many times more intense is this than the $85$ dB eight-hour limit? (b) Using the $3$ dB exchange rate, what is the safe exposure time?
 :::
 
 :::{solution} ex-loudness-7
@@ -561,7 +561,7 @@ Therefore, the sound is about $500$ times more intense than the limit, and the s
 :::{exercise}
 :label: ex-loudness-8
 
-Two sounds of $70$ dB and $76$ dB are played together. (a) What is the combined level? (b) What is it if the second is $60$ dB instead? (c) State the general rule your second answer illustrates.
+*(Moderate)* Two sounds of $70$ dB and $76$ dB are played together. (a) What is the combined level? (b) What is it if the second is $60$ dB instead? (c) State the general rule your second answer illustrates.
 :::
 
 :::{solution} ex-loudness-8
@@ -588,7 +588,7 @@ $$
 :::{exercise}
 :label: ex-loudness-9
 
-An orchestra plays a passage at $95$ dB SPL and a passage at $60$ dB SPL. Treating both as broadband so phons and dB SPL agree: (a) Find the loudness of each in sones. (b) Find the ratio. (c) Find the intensity ratio, and comment.
+*(Moderate)* An orchestra plays a passage at $95$ dB SPL and a passage at $60$ dB SPL. Treating both as broadband so phons and dB SPL agree: (a) Find the loudness of each in sones. (b) Find the ratio. (c) Find the intensity ratio, and comment.
 :::
 
 :::{solution} ex-loudness-9
@@ -607,7 +607,7 @@ Therefore, a sound over three thousand times more intense sounds about eleven ti
 :::{exercise}
 :label: ex-loudness-10
 
-The critical band is about a third of an octave above $500$ Hz. (a) How wide is the critical band at $1$ kHz, in hertz? (b) At $4$ kHz? (c) Express each in semitones.
+*(Moderate)* The critical band is about a third of an octave above $500$ Hz. (a) How wide is the critical band at $1$ kHz, in hertz? (b) At $4$ kHz? (c) Express each in semitones.
 :::
 
 :::{solution} ex-loudness-10
@@ -634,7 +634,7 @@ Therefore, the critical band is four times wider in hertz at $4$ kHz than at $1$
 :::{exercise}
 :label: ex-loudness-11
 
-Show that if $n$ incoherent sources each of intensity $I$ combine, the level rise is $10\log_{10}(n)$, and explain why the corresponding result for $n$ coherent sources is $20\log_{10}(n)$.
+*(Challenging)* Show that if $n$ incoherent sources each of intensity $I$ combine, the level rise is $10\log_{10}(n)$, and explain why the corresponding result for $n$ coherent sources is $20\log_{10}(n)$.
 :::
 
 :::{solution} ex-loudness-11
@@ -661,7 +661,7 @@ The coherent result cannot hold everywhere in space: constructive interference a
 :::{exercise}
 :label: ex-loudness-12
 
-A $60$ Hz tone and a $3$ kHz tone are both played at $70$ dB SPL. Using the equal-loudness contours, estimate the loudness level of each in phons, and then the loudness of each in sones. What is the ratio?
+*(Moderate)* A $60$ Hz tone and a $3$ kHz tone are both played at $70$ dB SPL. Using the equal-loudness contours, estimate the loudness level of each in phons, and then the loudness of each in sones. What is the ratio?
 :::
 
 :::{solution} ex-loudness-12
@@ -688,7 +688,7 @@ Therefore, two sounds of *identical physical level* differ by a factor of about 
 :::{exercise}
 :label: ex-loudness-13
 
-A mixing engineer boosts a vocal by $3$ dB. (a) By what factor has its intensity increased? (b) By what factor its pressure amplitude? (c) By roughly what factor its loudness? (d) Comment on which of these the engineer is thinking about.
+*(Moderate)* A mixing engineer boosts a vocal by $3$ dB. (a) By what factor has its intensity increased? (b) By what factor its pressure amplitude? (c) By roughly what factor its loudness? (d) Comment on which of these the engineer is thinking about.
 :::
 
 :::{solution} ex-loudness-13
@@ -713,7 +713,7 @@ about a $23\%$ increase.
 :::{exercise}
 :label: ex-loudness-14
 
-A hall has a background noise level of $30$ dB SPL. A solo flute produces $58$ dB at the back row. (a) What is the combined level? (b) What is the signal-to-noise ratio? (c) The audience arrives and the background rises to $42$ dB. Recompute both, and comment on what the audience has cost the flutist.
+*(Challenging)* A hall has a background noise level of $30$ dB SPL. A solo flute produces $58$ dB at the back row. (a) What is the combined level? (b) What is the signal-to-noise ratio? (c) The audience arrives and the background rises to $42$ dB. Recompute both, and comment on what the audience has cost the flutist.
 :::
 
 :::{solution} ex-loudness-14

@@ -382,7 +382,7 @@ The honest position is that the roughness model explains the *sensory* component
 :::{exercise}
 :label: ex-pitch-and-consonance-1
 
-Two tones of $440$ Hz and $444$ Hz sound together. (a) What is the beat frequency? (b) What is the frequency of the tone that is heard? (c) How long between successive maxima?
+*(Straightforward)* Two tones of $440$ Hz and $444$ Hz sound together. (a) What is the beat frequency? (b) What is the frequency of the tone that is heard? (c) How long between successive maxima?
 :::
 
 :::{solution} ex-pitch-and-consonance-1
@@ -405,7 +405,7 @@ Therefore, a $442$ Hz tone throbbing four times a second, with a quarter-second 
 :::{exercise}
 :label: ex-pitch-and-consonance-2
 
-A guitarist tunes the B string against the fretted G string. They hear $3$ beats per second and the fretted note is $246.9$ Hz. (a) What are the two possible frequencies of the B string? (b) The guitarist tightens it slightly and the beats speed up to $5$ per second. Which was it?
+*(Moderate)* A guitarist tunes the B string against the fretted G string. They hear $3$ beats per second and the fretted note is $246.9$ Hz. (a) What are the two possible frequencies of the B string? (b) The guitarist tightens it slightly and the beats speed up to $5$ per second. Which was it?
 :::
 
 :::{solution} ex-pitch-and-consonance-2
@@ -426,7 +426,7 @@ Therefore, the string was at $249.9$ Hz and must be loosened. This "tighten and 
 :::{exercise}
 :label: ex-pitch-and-consonance-3
 
-A complex tone contains partials at $440$, $660$, $880$, and $1100$ Hz. (a) What is the fundamental? (b) Which harmonics are these? (c) What pitch is heard?
+*(Straightforward)* A complex tone contains partials at $440$, $660$, $880$, and $1100$ Hz. (a) What is the fundamental? (b) Which harmonics are these? (c) What pitch is heard?
 :::
 
 :::{solution} ex-pitch-and-consonance-3
@@ -445,7 +445,7 @@ Therefore, the pitch heard is A3 at $220$ Hz, an octave below the lowest partial
 :::{exercise}
 :label: ex-pitch-and-consonance-4
 
-A tuner sets a tempered major third above C$_4$ = $261.6$ Hz. The equal-tempered third is $400$ cents; the just third is $5{:}4$. (a) Find both frequencies. (b) Find the beat rate between the 5th harmonic of the lower note and the 4th harmonic of the tempered upper note.
+*(Moderate)* A tuner sets a tempered major third above C$_4$ = $261.6$ Hz. The equal-tempered third is $400$ cents; the just third is $5{:}4$. (a) Find both frequencies. (b) Find the beat rate between the 5th harmonic of the lower note and the 4th harmonic of the tempered upper note.
 :::
 
 :::{solution} ex-pitch-and-consonance-4
@@ -481,7 +481,7 @@ Therefore, the tempered major third beats about ten times a second, fast enough 
 :::{exercise}
 :label: ex-pitch-and-consonance-5
 
-The just-noticeable difference near $440$ Hz is about $4$ cents. (a) What frequency difference is that in hertz? (b) How does it compare with the difference between the just and equal-tempered major thirds from [](#ex-pitch-and-consonance-4)?
+*(Straightforward)* The just-noticeable difference near $440$ Hz is about $4$ cents. (a) What frequency difference is that in hertz? (b) How does it compare with the difference between the just and equal-tempered major thirds from [](#ex-pitch-and-consonance-4)?
 :::
 
 :::{solution} ex-pitch-and-consonance-5
@@ -506,7 +506,7 @@ Therefore, the discrepancy between the two thirds is about three and a half time
 :::{exercise}
 :label: ex-pitch-and-consonance-6
 
-Two tones at $1000$ Hz and $1080$ Hz are played together. The critical bandwidth at $1000$ Hz is about $160$ Hz. (a) Do they fall in the same critical band? (b) Predict what is heard. (c) Repeat for tones at $1000$ and $1400$ Hz.
+*(Moderate)* Two tones at $1000$ Hz and $1080$ Hz are played together. The critical bandwidth at $1000$ Hz is about $160$ Hz. (a) Do they fall in the same critical band? (b) Predict what is heard. (c) Repeat for tones at $1000$ and $1400$ Hz.
 :::
 
 :::{solution} ex-pitch-and-consonance-6
@@ -525,7 +525,7 @@ Therefore, the same pair of pure tones can be rough or smooth depending only on 
 :::{exercise}
 :label: ex-pitch-and-consonance-7
 
-Two complex tones with harmonic partials sound a perfect fifth apart, the lower at $200$ Hz. (a) List the first six partials of each. (b) Identify every coincidence. (c) Explain what the coincidences have to do with consonance.
+*(Moderate)* Two complex tones with harmonic partials sound a perfect fifth apart, the lower at $200$ Hz. (a) List the first six partials of each. (b) Identify every coincidence. (c) Explain what the coincidences have to do with consonance.
 :::
 
 :::{solution} ex-pitch-and-consonance-7
@@ -546,7 +546,7 @@ Therefore, the fifth's consonance comes from its partials lining up, and the sha
 :::{exercise}
 :label: ex-pitch-and-consonance-8
 
-An organ has an $8$-foot stop sounding $65.4$ Hz and a $5\tfrac13$-foot stop sounding a fifth above. (a) What is the frequency of the second? (b) What difference tone results? (c) What pitch does the listener report, and what is the stop called?
+*(Moderate)* An organ has an $8$-foot stop sounding $65.4$ Hz and a $5\tfrac13$-foot stop sounding a fifth above. (a) What is the frequency of the second? (b) What difference tone results? (c) What pitch does the listener report, and what is the stop called?
 :::
 
 :::{solution} ex-pitch-and-consonance-8
@@ -573,7 +573,7 @@ Therefore, a builder can obtain a $16$-foot pitch without a $16$-foot pipe. The 
 :::{exercise}
 :label: ex-pitch-and-consonance-9
 
-Using the beat formula, show that two tones at $f$ and $f + \Delta$ produce an envelope at $\Delta/2$ but a beat rate of $\Delta$. Explain the factor of two.
+*(Challenging)* Using the beat formula, show that two tones at $f$ and $f + \Delta$ produce an envelope at $\Delta/2$ but a beat rate of $\Delta$. Explain the factor of two.
 :::
 
 :::{solution} ex-pitch-and-consonance-9
@@ -597,7 +597,7 @@ Therefore, the envelope oscillates at $\Delta/2$ and the audible beat rate is $\
 :::{exercise}
 :label: ex-pitch-and-consonance-10
 
-The critical bandwidth is roughly a third of an octave. Two complex tones are played a minor second apart ($100$ cents). (a) How does this compare with a critical band? (b) Predict the roughness. (c) Repeat for two tones a minor ninth apart ($1300$ cents).
+*(Moderate)* The critical bandwidth is roughly a third of an octave. Two complex tones are played a minor second apart ($100$ cents). (a) How does this compare with a critical band? (b) Predict the roughness. (c) Repeat for two tones a minor ninth apart ($1300$ cents).
 :::
 
 :::{solution} ex-pitch-and-consonance-10
@@ -616,7 +616,7 @@ Therefore, the minor ninth is smoother than the minor second but by no means smo
 :::{exercise}
 :label: ex-pitch-and-consonance-11
 
-A synthesizer produces tones whose partials lie at $n^{1.1}$ times the fundamental rather than $n$ times. (a) Find the first four partials of a $200$ Hz tone. (b) Two such tones are played a perfect fifth apart. Do any partials coincide? (c) Comment on the consonance.
+*(Moderate)* A synthesizer produces tones whose partials lie at $n^{1.1}$ times the fundamental rather than $n$ times. (a) Find the first four partials of a $200$ Hz tone. (b) Two such tones are played a perfect fifth apart. Do any partials coincide? (c) Comment on the consonance.
 :::
 
 :::{solution} ex-pitch-and-consonance-11
@@ -639,7 +639,7 @@ Therefore, a $3{:}2$ ratio is not consonant on this timbre. The consonant interv
 :::{exercise}
 :label: ex-pitch-and-consonance-12
 
-Two violinists play a double stop. The lower note is $392$ Hz and the upper is meant to be a just major sixth above. (a) What should the upper frequency be? (b) What difference tone results? (c) The upper player is $8$ cents sharp. Recompute the difference tone and comment on whether the error is easier to hear directly or through the difference tone.
+*(Challenging)* Two violinists play a double stop. The lower note is $392$ Hz and the upper is meant to be a just major sixth above. (a) What should the upper frequency be? (b) What difference tone results? (c) The upper player is $8$ cents sharp. Recompute the difference tone and comment on whether the error is easier to hear directly or through the difference tone.
 :::
 
 :::{solution} ex-pitch-and-consonance-12
@@ -677,7 +677,7 @@ Therefore, an $8$ cent error in the upper note produces a $20$ cent shift in the
 :::{exercise}
 :label: ex-pitch-and-consonance-13
 
-A listener is presented with the odd harmonics of $100$ Hz in the left ear and the even harmonics in the right. (a) What pitch do they report? (b) Explain why this result is difficult for any theory placing pitch extraction in the cochlea.
+*(Challenging)* A listener is presented with the odd harmonics of $100$ Hz in the left ear and the even harmonics in the right. (a) What pitch do they report? (b) Explain why this result is difficult for any theory placing pitch extraction in the cochlea.
 :::
 
 :::{solution} ex-pitch-and-consonance-13
@@ -696,7 +696,7 @@ Therefore, pitch extraction must occur centrally, at or above the first binaural
 :::{exercise}
 :label: ex-pitch-and-consonance-14
 
-A gamelan metallophone has partials at $1$, $2.76$, $5.40$, and $8.93$ times its fundamental. (a) Two such instruments play an interval of $1.5$ (a Western fifth). Find the partials of each and identify any near-coincidences. (b) Suggest, qualitatively, what kind of interval *would* produce coincidences for this timbre.
+*(Challenging)* A gamelan metallophone has partials at $1$, $2.76$, $5.40$, and $8.93$ times its fundamental. (a) Two such instruments play an interval of $1.5$ (a Western fifth). Find the partials of each and identify any near-coincidences. (b) Suggest, qualitatively, what kind of interval *would* produce coincidences for this timbre.
 :::
 
 :::{solution} ex-pitch-and-consonance-14

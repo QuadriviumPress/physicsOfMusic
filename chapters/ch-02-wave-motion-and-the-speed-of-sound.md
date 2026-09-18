@@ -463,7 +463,7 @@ A vibrating guitar string produces very little sound on its own, until it is cou
 :::{exercise}
 :label: ex-wave-motion-1
 
-The speed of sound in air at $20$ °C is $343$ m/s. Find the wavelength of (a) a $100$ Hz note, (b) a $1000$ Hz note, (c) a $10{,}000$ Hz note.
+*(Straightforward)* The speed of sound in air at $20$ °C is $343$ m/s. Find the wavelength of (a) a $100$ Hz note, (b) a $1000$ Hz note, (c) a $10{,}000$ Hz note.
 :::
 
 :::{solution} ex-wave-motion-1
@@ -484,7 +484,7 @@ Therefore, the wavelengths are $3.43$ m, $34.3$ cm, and $3.43$ cm. Each factor o
 :::{exercise}
 :label: ex-wave-motion-2
 
-Find the speed of sound in air at (a) $0$ °C, (b) $25$ °C, (c) $-15$ °C.
+*(Straightforward)* Find the speed of sound in air at (a) $0$ °C, (b) $25$ °C, (c) $-15$ °C.
 :::
 
 :::{solution} ex-wave-motion-2
@@ -505,7 +505,7 @@ Therefore, the speeds are $331$, $347$, and $322$ m/s: a spread of about $7\%$ o
 :::{exercise}
 :label: ex-wave-motion-3
 
-You see a lightning flash and hear the thunder $4.2$ s later. The air temperature is $18$ °C. How far away was the strike? (Light's travel time is negligible.)
+*(Straightforward)* You see a lightning flash and hear the thunder $4.2$ s later. The air temperature is $18$ °C. How far away was the strike? (Light's travel time is negligible.)
 :::
 
 :::{solution} ex-wave-motion-3
@@ -530,7 +530,7 @@ Therefore, the strike was about $1.4$ km away. The familiar rule of thumb, three
 :::{exercise}
 :label: ex-wave-motion-4
 
-An organ pipe is tuned to sound A440 in a church at $18$ °C. The heating fails and the church cools to $6$ °C. (a) What frequency does the pipe now sound? (b) Express the change in cents. (c) Would a listener notice?
+*(Moderate)* An organ pipe is tuned to sound A440 in a church at $18$ °C. The heating fails and the church cools to $6$ °C. (a) What frequency does the pipe now sound? (b) Express the change in cents. (c) Would a listener notice?
 :::
 
 :::{solution} ex-wave-motion-4
@@ -559,7 +559,7 @@ $$
 :::{exercise}
 :label: ex-wave-motion-5
 
-A guitar string of length $65$ cm has mass per unit length $\mu = 6.3\times10^{-3}$ kg/m and is under tension $T = 110$ N. (a) What is the wave speed along the string? (b) The lowest mode has a wavelength twice the string length. What frequency does the string sound?
+*(Straightforward)* A guitar string of length $65$ cm has mass per unit length $\mu = 6.3\times10^{-3}$ kg/m and is under tension $T = 110$ N. (a) What is the wave speed along the string? (b) The lowest mode has a wavelength twice the string length. What frequency does the string sound?
 :::
 
 :::{solution} ex-wave-motion-5
@@ -584,7 +584,7 @@ Therefore, waves travel at $132$ m/s along the string and it sounds about $102$ 
 :::{exercise}
 :label: ex-wave-motion-6
 
-A tone of $440$ Hz travels from air ($v = 343$ m/s) into water ($v = 1482$ m/s). Find its wavelength in each medium, and state its frequency in the water.
+*(Straightforward)* A tone of $440$ Hz travels from air ($v = 343$ m/s) into water ($v = 1482$ m/s). Find its wavelength in each medium, and state its frequency in the water.
 :::
 
 :::{solution} ex-wave-motion-6
@@ -609,7 +609,7 @@ Therefore, the wavelength grows by the ratio of the speeds, $1482/343 = 4.32$, w
 :::{exercise}
 :label: ex-wave-motion-7
 
-A busker plays outdoors. A listener $3.0$ m away measures a sound intensity of $4.0\times10^{-5}$ W/m². (a) What is the busker's acoustic power output, assuming uniform radiation? (b) What intensity would a listener $12$ m away measure?
+*(Moderate)* A busker plays outdoors. A listener $3.0$ m away measures a sound intensity of $4.0\times10^{-5}$ W/m². (a) What is the busker's acoustic power output, assuming uniform radiation? (b) What intensity would a listener $12$ m away measure?
 :::
 
 :::{solution} ex-wave-motion-7
@@ -634,7 +634,7 @@ Therefore, the busker radiates about $4.5$ mW of sound, and the distant listener
 :::{exercise}
 :label: ex-wave-motion-8
 
-A train sounds a $520$ Hz horn and approaches a station platform at $31$ m/s. Take $v = 343$ m/s. (a) What frequency does a waiting passenger hear as it approaches? (b) As it recedes? (c) Express the total change in cents.
+*(Moderate)* A train sounds a $520$ Hz horn and approaches a station platform at $31$ m/s. Take $v = 343$ m/s. (a) What frequency does a waiting passenger hear as it approaches? (b) As it recedes? (c) Express the total change in cents.
 :::
 
 :::{solution} ex-wave-motion-8
@@ -665,7 +665,7 @@ Therefore, the horn falls from $572$ Hz to $477$ Hz, a drop of $315$ cents: a li
 :::{exercise}
 :label: ex-wave-motion-9
 
-Sound travels at $5960$ m/s in steel and $343$ m/s in air. A steel pipe $180$ m long is struck at one end. (a) Find the two arrival times at the far end. (b) A listener claims to hear only one sound. Suggest the most likely reason.
+*(Moderate)* Sound travels at $5960$ m/s in steel and $343$ m/s in air. A steel pipe $180$ m long is struck at one end. (a) Find the two arrival times at the far end. (b) A listener claims to hear only one sound. Suggest the most likely reason.
 :::
 
 :::{solution} ex-wave-motion-9
@@ -687,7 +687,7 @@ The gap is $0.49$ s.
 :::{exercise}
 :label: ex-wave-motion-10
 
-A loudspeaker $20$ cm across is used to reproduce a range of frequencies. Estimate the frequency above which the speaker's diameter exceeds one wavelength, and comment on what happens to its radiation pattern above that frequency.
+*(Moderate)* A loudspeaker $20$ cm across is used to reproduce a range of frequencies. Estimate the frequency above which the speaker's diameter exceeds one wavelength, and comment on what happens to its radiation pattern above that frequency.
 :::
 
 :::{solution} ex-wave-motion-10
@@ -706,7 +706,7 @@ Therefore, above roughly $1.7$ kHz the driver is larger than a wavelength. Below
 :::{exercise}
 :label: ex-wave-motion-11
 
-A flute is tuned to A440 in a $21$ °C rehearsal room, then carried outdoors to play at $9$ °C. (a) What frequency does it sound outdoors, before the player compensates? (b) A flutist can compensate by rolling the instrument and adjusting the embouchure over a range of about $\pm 25$ cents. Is that enough?
+*(Moderate)* A flute is tuned to A440 in a $21$ °C rehearsal room, then carried outdoors to play at $9$ °C. (a) What frequency does it sound outdoors, before the player compensates? (b) A flutist can compensate by rolling the instrument and adjusting the embouchure over a range of about $\pm 25$ cents. Is that enough?
 :::
 
 :::{solution} ex-wave-motion-11
@@ -737,7 +737,7 @@ Therefore, the flute plays $37$ cents flat, which exceeds the $\pm25$ cent range
 :::{exercise}
 :label: ex-wave-motion-12
 
-Two microphones on a line are $4.00$ m apart. A hand clap made beyond one of them, on that line, arrives at the second microphone $11.9$ ms after the first. (a) What speed of sound does this imply? (b) What air temperature does that correspond to? (c) If the clap were actually made $1.0$ m off the line, would the inferred speed be too high or too low? Explain.
+*(Challenging)* Two microphones on a line are $4.00$ m apart. A hand clap made beyond one of them, on that line, arrives at the second microphone $11.9$ ms after the first. (a) What speed of sound does this imply? (b) What air temperature does that correspond to? (c) If the clap were actually made $1.0$ m off the line, would the inferred speed be too high or too low? Explain.
 :::
 
 :::{solution} ex-wave-motion-12
@@ -762,7 +762,7 @@ $$
 :::{exercise}
 :label: ex-wave-motion-13
 
-Helium's speed of sound is $965$ m/s, against $343$ m/s for air. A singer inhales helium and sings a sustained vowel. (a) By what factor do the resonances of their vocal tract shift? (b) Does the pitch of the note change? Explain carefully, and say what the listener actually hears differently.
+*(Challenging)* Helium's speed of sound is $965$ m/s, against $343$ m/s for air. A singer inhales helium and sings a sustained vowel. (a) By what factor do the resonances of their vocal tract shift? (b) Does the pitch of the note change? Explain carefully, and say what the listener actually hears differently.
 :::
 
 :::{solution} ex-wave-motion-13
@@ -783,7 +783,7 @@ Therefore, the listener hears the same note with its resonances moved up by near
 :::{exercise}
 :label: ex-wave-motion-14
 
-A Leslie speaker's horn rotates on a circle of radius $0.17$ m at $6.6$ revolutions per second. (a) What is the speed of the horn's mouth? (b) What is the maximum Doppler shift, in cents, for a $500$ Hz tone heard by a distant listener? (c) How many times per second does the listener hear the pitch rise and fall?
+*(Moderate)* A Leslie speaker's horn rotates on a circle of radius $0.17$ m at $6.6$ revolutions per second. (a) What is the speed of the horn's mouth? (b) What is the maximum Doppler shift, in cents, for a $500$ Hz tone heard by a distant listener? (c) How many times per second does the listener hear the pitch rise and fall?
 :::
 
 :::{solution} ex-wave-motion-14

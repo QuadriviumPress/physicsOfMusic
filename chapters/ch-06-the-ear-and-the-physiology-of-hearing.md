@@ -328,7 +328,7 @@ Everything outside $300$ Hz to $3.4$ kHz removed. Speech through this band stays
 :::{exercise}
 :label: ex-the-ear-1
 
-The ear canal is $2.5$ cm long and behaves as a stopped pipe. Take $v = 343$ m/s. (a) Find its fundamental resonance. (b) Find its next resonance. (c) Is the second resonance inside the range of hearing?
+*(Straightforward)* The ear canal is $2.5$ cm long and behaves as a stopped pipe. Take $v = 343$ m/s. (a) Find its fundamental resonance. (b) Find its next resonance. (c) Is the second resonance inside the range of hearing?
 :::
 
 :::{solution} ex-the-ear-1
@@ -355,7 +355,7 @@ Therefore, the canal contributes resonances at about $3.4$ kHz and $10$ kHz, and
 :::{exercise}
 :label: ex-the-ear-2
 
-The eardrum has area $55$ mm² and the oval window $3.2$ mm². The ossicular lever gives a force advantage of $1.3$. (a) Find the total pressure gain. (b) Express it in decibels. (c) What would the gain be if the lever were absent?
+*(Moderate)* The eardrum has area $55$ mm² and the oval window $3.2$ mm². The ossicular lever gives a force advantage of $1.3$. (a) Find the total pressure gain. (b) Express it in decibels. (c) What would the gain be if the lever were absent?
 :::
 
 :::{solution} ex-the-ear-2
@@ -382,7 +382,7 @@ Therefore, the lever contributes only $2.3$ dB of the $27$ dB total. The area ra
 :::{exercise}
 :label: ex-the-ear-3
 
-The threshold of hearing at $1$ kHz corresponds to an eardrum displacement of about $1\times10^{-11}$ m. (a) Compare this with the diameter of a hydrogen atom, about $1\times10^{-10}$ m. (b) At the threshold of pain, $120$ dB above threshold, what is the displacement?
+*(Moderate)* The threshold of hearing at $1$ kHz corresponds to an eardrum displacement of about $1\times10^{-11}$ m. (a) Compare this with the diameter of a hydrogen atom, about $1\times10^{-10}$ m. (b) At the threshold of pain, $120$ dB above threshold, what is the displacement?
 :::
 
 :::{solution} ex-the-ear-3
@@ -415,7 +415,7 @@ Therefore, the eardrum's working range runs from a tenth of an atomic diameter t
 :::{exercise}
 :label: ex-the-ear-4
 
-The basilar membrane is $35$ mm long and maps roughly logarithmically onto $20$ Hz to $20$ kHz. (a) How many octaves does it span? (b) How many millimeters does one octave occupy? (c) A semitone?
+*(Straightforward)* The basilar membrane is $35$ mm long and maps roughly logarithmically onto $20$ Hz to $20$ kHz. (a) How many octaves does it span? (b) How many millimeters does one octave occupy? (c) A semitone?
 :::
 
 :::{solution} ex-the-ear-4
@@ -446,7 +446,7 @@ Therefore, a semitone occupies about three tenths of a millimeter of membrane. G
 :::{exercise}
 :label: ex-the-ear-5
 
-A musician is exposed to $94$ dB for an eight-hour rehearsal day. (a) Using a $3$ dB exchange rate with a limit of $85$ dB for eight hours, what is the permitted daily exposure at $94$ dB? (b) By how many times has the musician exceeded it? (c) What attenuation of earplug would bring them inside the limit?
+*(Moderate)* A musician is exposed to $94$ dB for an eight-hour rehearsal day. (a) Using a $3$ dB exchange rate with a limit of $85$ dB for eight hours, what is the permitted daily exposure at $94$ dB? (b) By how many times has the musician exceeded it? (c) What attenuation of earplug would bring them inside the limit?
 :::
 
 :::{solution} ex-the-ear-5
@@ -469,7 +469,7 @@ Therefore, a $94$ dB rehearsal day is eight times the safe dose, and the standar
 :::{exercise}
 :label: ex-the-ear-6
 
-A violinist measures $103$ dB at their left ear and $91$ dB at their right. (a) Find the permitted daily exposure for each ear. (b) Explain why the asymmetry arises and what practical step would reduce it.
+*(Moderate)* A violinist measures $103$ dB at their left ear and $91$ dB at their right. (a) Find the permitted daily exposure for each ear. (b) Explain why the asymmetry arises and what practical step would reduce it.
 :::
 
 :::{solution} ex-the-ear-6
@@ -498,7 +498,7 @@ The practical step is an earplug in the left ear at minimum. Left-ear hearing lo
 :::{exercise}
 :label: ex-the-ear-7
 
-A sound at $250$ Hz produces its peak response about $26$ mm from the base of the cochlea, and a sound at $4$ kHz about $12$ mm from the base. (a) How far apart are the two peaks? (b) Using $3.5$ mm per octave, check this against the musical interval between the two frequencies.
+*(Straightforward)* A sound at $250$ Hz produces its peak response about $26$ mm from the base of the cochlea, and a sound at $4$ kHz about $12$ mm from the base. (a) How far apart are the two peaks? (b) Using $3.5$ mm per octave, check this against the musical interval between the two frequencies.
 :::
 
 :::{solution} ex-the-ear-7
@@ -525,7 +525,7 @@ Therefore, the two agree exactly, confirming that the map really is logarithmic:
 :::{exercise}
 :label: ex-the-ear-8
 
-The outer hair cells sharpen the cochlear response by raising its effective $Q$ from about $1$ to about $10$ at low levels. Using the definitions of [Chapter 4](#ch-resonance): (a) By what factor does the bandwidth at $1$ kHz narrow? (b) Express each bandwidth in semitones.
+*(Moderate)* The outer hair cells sharpen the cochlear response by raising its effective $Q$ from about $1$ to about $10$ at low levels. Using the definitions of [Chapter 4](#ch-resonance): (a) By what factor does the bandwidth at $1$ kHz narrow? (b) Express each bandwidth in semitones.
 :::
 
 :::{solution} ex-the-ear-8
@@ -554,7 +554,7 @@ Therefore, the active amplifier takes the ear's frequency resolution from about 
 :::{exercise}
 :label: ex-the-ear-9
 
-A person's hearing threshold at $4$ kHz has shifted by $35$ dB. (a) By what factor in intensity has their sensitivity fallen? (b) A cymbal produces $4$ kHz energy at $70$ dB SPL at their seat. Do they hear it?
+*(Straightforward)* A person's hearing threshold at $4$ kHz has shifted by $35$ dB. (a) By what factor in intensity has their sensitivity fallen? (b) A cymbal produces $4$ kHz energy at $70$ dB SPL at their seat. Do they hear it?
 :::
 
 :::{solution} ex-the-ear-9
@@ -577,7 +577,7 @@ Therefore, moderate high-frequency loss does not silence the cymbal; it dulls it
 :::{exercise}
 :label: ex-the-ear-10
 
-Estimate the cochlea's "channel count" by treating it as a bank of filters each one critical band wide. Take the critical band as roughly a third of an octave across most of the range, and the range as $10$ octaves. (a) How many filters is that? (b) Compare with the number of inner hair cells, about $3500$.
+*(Moderate)* Estimate the cochlea's "channel count" by treating it as a bank of filters each one critical band wide. Take the critical band as roughly a third of an octave across most of the range, and the range as $10$ octaves. (a) How many filters is that? (b) Compare with the number of inner hair cells, about $3500$.
 :::
 
 :::{solution} ex-the-ear-10
@@ -604,7 +604,7 @@ Therefore, the cochlea has of order thirty independent frequency channels but mo
 :::{exercise}
 :label: ex-the-ear-11
 
-Phase locking in the auditory nerve fails above about $4.5$ kHz. (a) What is the period of a $4.5$ kHz tone? (b) A nerve fiber's refractory period, the minimum time between firings, is about $1$ ms. How many cycles of a $4.5$ kHz tone pass during it? (c) Explain how the volley principle allows the population to encode a period no single fiber can follow.
+*(Moderate)* Phase locking in the auditory nerve fails above about $4.5$ kHz. (a) What is the period of a $4.5$ kHz tone? (b) A nerve fiber's refractory period, the minimum time between firings, is about $1$ ms. How many cycles of a $4.5$ kHz tone pass during it? (c) Explain how the volley principle allows the population to encode a period no single fiber can follow.
 :::
 
 :::{solution} ex-the-ear-11
@@ -623,7 +623,7 @@ Therefore, the population encodes a periodicity far faster than any of its membe
 :::{exercise}
 :label: ex-the-ear-12
 
-A musician can either (a) move from $2$ m to $4$ m from a loud source, or (b) wear a $9$ dB earplug. Which gives more protection, and by how much? Assume the source radiates freely.
+*(Moderate)* A musician can either (a) move from $2$ m to $4$ m from a loud source, or (b) wear a $9$ dB earplug. Which gives more protection, and by how much? Assume the source radiates freely.
 :::
 
 :::{solution} ex-the-ear-12
@@ -646,7 +646,7 @@ Therefore, the plug is better, and the two combine: moving *and* plugging gives 
 :::{exercise}
 :label: ex-the-ear-13
 
-Explain quantitatively why a foam earplug is a poor choice for a musician, given that it typically attenuates $10$ dB at $250$ Hz and $35$ dB at $4$ kHz, while a musician's plug attenuates about $15$ dB at both.
+*(Challenging)* Explain quantitatively why a foam earplug is a poor choice for a musician, given that it typically attenuates $10$ dB at $250$ Hz and $35$ dB at $4$ kHz, while a musician's plug attenuates about $15$ dB at both.
 :::
 
 :::{solution} ex-the-ear-13
@@ -677,7 +677,7 @@ Therefore, the foam plug offers more attenuation but destroys the information th
 :::{exercise}
 :label: ex-the-ear-14
 
-A tone at $200$ Hz and a tone at $3000$ Hz are played at the same level. (a) Using the traveling-wave picture, explain which is more effective at masking the other. (b) A recording engineer complains that a bass guitar is "burying" a hi-hat. Suggest, from this chapter's physics, why reducing the bass level helps more than raising the hi-hat.
+*(Challenging)* A tone at $200$ Hz and a tone at $3000$ Hz are played at the same level. (a) Using the traveling-wave picture, explain which is more effective at masking the other. (b) A recording engineer complains that a bass guitar is "burying" a hi-hat. Suggest, from this chapter's physics, why reducing the bass level helps more than raising the hi-hat.
 :::
 
 :::{solution} ex-the-ear-14

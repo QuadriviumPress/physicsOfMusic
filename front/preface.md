@@ -77,9 +77,12 @@ Every chapter opens with learning objectives and a short introduction, then
 proceeds through numbered reading sections (§*N*.1, §*N*.2, …) kept roughly
 equal in length so an assignment can be stated as a range of sections. Worked
 examples are embedded in the reading, not quarantined at the end. Each chapter
-closes with a summary, a set of conceptual questions, and a problem set.
-Solutions to every problem are included in the complete edition and omitted
-from the student edition.
+closes with a summary, a set of conceptual questions, and a problem set. Every
+problem opens with a tag, *Straightforward*, *Moderate*, or *Challenging*,
+marking how much it asks beyond a direct application of the chapter's
+formulas, useful when assigning a subset, or when deciding which one to try
+first. Solutions to every problem are included in the complete edition and
+omitted from the student edition.
 
 A handful of pedagogical asides appear where they earn their keep: notes for
 historical context, tips for problem-solving strategy, warnings for common

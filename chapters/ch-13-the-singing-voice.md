@@ -149,6 +149,24 @@ Formants are numbered upward: $F_1$, $F_2$, $F_3$. Each has a bandwidth of $50$�
 
 **Formants do not move when the pitch does.** Sing "ah" on a low note and then on a high one: the fundamental changes, every harmonic changes, and the formants stay exactly where they were, because the shape of your throat has not changed. That is why the vowel is still recognizable.
 
+::::{tip} Worked example: what leaves the mouth
+*A baritone sings $F_0 = 110$ Hz. His glottal source spectrum falls at $12$ dB per octave, that is, amplitude $\propto 1/n^2$. His first formant sits at $550$ Hz, exactly on the 5th harmonic, with a peak gain of $15$ dB over the surrounding response. Find the level of the 5th harmonic relative to the fundamental (a) in the source alone, (b) after the filter.*
+
+(a) The 5th harmonic's source amplitude, relative to the fundamental's, is $1/5^2 = 1/25$:
+
+$$
+20\log_{10}\!\left(\frac{1}{25}\right) = -28\ \text{dB}.
+$$
+
+(b) The formant sits exactly on this harmonic, adding its full $15$ dB of peak gain:
+
+$$
+-28 + 15 = -13\ \text{dB}.
+$$
+
+Therefore, on its way from the folds to the lips, the 5th harmonic starts $28$ dB below the fundamental and leaves only $13$ dB below it: the formant has clawed back more than half its disadvantage. This is the source–filter model doing exactly what its name promises, source and filter multiply, which in decibels means their contributions simply add, and it is why a formant's placement matters as much as a source's raw output.
+::::
+
 ### Shaping the Tube
 
 A singer changes formants by changing the tract's shape, and the controls map onto the first two formants in a usefully simple way.
@@ -313,7 +331,7 @@ Everything in this chapter is, in one way or another, a response to those constr
 :::{exercise}
 :label: ex-the-singing-voice-1
 
-Model the vocal tract as a stopped pipe of length $17.5$ cm, with $v = 350$ m/s in warm moist air. (a) Find the first three formant frequencies. (b) Compare with the measured neutral-vowel values of about $500$, $1500$, $2500$ Hz.
+*(Straightforward)* Model the vocal tract as a stopped pipe of length $17.5$ cm, with $v = 350$ m/s in warm moist air. (a) Find the first three formant frequencies. (b) Compare with the measured neutral-vowel values of about $500$, $1500$, $2500$ Hz.
 :::
 
 :::{solution} ex-the-singing-voice-1
@@ -336,7 +354,7 @@ Therefore a uniform tube of the right length predicts the neutral vowel's forman
 :::{exercise}
 :label: ex-the-singing-voice-2
 
-An adult male tract is $17.5$ cm and an adult female tract about $15$ cm. (a) Find the neutral formants for each. (b) Express the difference as a musical interval. (c) How do listeners cope?
+*(Moderate)* An adult male tract is $17.5$ cm and an adult female tract about $15$ cm. (a) Find the neutral formants for each. (b) Express the difference as a musical interval. (c) How do listeners cope?
 :::
 
 :::{solution} ex-the-singing-voice-2
@@ -365,7 +383,7 @@ between a whole tone and a minor third.
 :::{exercise}
 :label: ex-the-singing-voice-3
 
-A bass sings at $F_0 = 98$ Hz and a soprano at $F_0 = 880$ Hz, both with $F_1 = 700$ Hz. (a) Which harmonic is closest to $F_1$ in each case? (b) How far is it, in hertz? (c) Comment on vowel clarity.
+*(Moderate)* A bass sings at $F_0 = 98$ Hz and a soprano at $F_0 = 880$ Hz, both with $F_1 = 700$ Hz. (a) Which harmonic is closest to $F_1$ in each case? (b) How far is it, in hertz? (c) Comment on vowel clarity.
 :::
 
 :::{solution} ex-the-singing-voice-3
@@ -384,7 +402,7 @@ Therefore this is the formant-sampling problem of §13.4 in numbers, and it is w
 :::{exercise}
 :label: ex-the-singing-voice-4
 
-A soprano at $880$ Hz raises $F_1$ from $700$ Hz to $880$ Hz by opening her jaw. (a) What does this do to the output level of the fundamental? Assume the formant peak is $15$ dB above the surrounding response. (b) What does it do to the vowel?
+*(Moderate)* A soprano at $880$ Hz raises $F_1$ from $700$ Hz to $880$ Hz by opening her jaw. (a) What does this do to the output level of the fundamental? Assume the formant peak is $15$ dB above the surrounding response. (b) What does it do to the vowel?
 :::
 
 :::{solution} ex-the-singing-voice-4
@@ -407,7 +425,7 @@ Therefore the singer trades intelligibility for power, and above a certain pitch
 :::{exercise}
 :label: ex-the-singing-voice-5
 
-The singer's formant provides $20$ dB of extra output near $3$ kHz. (a) By what factor in intensity? (b) An orchestra produces $95$ dB in the hall and an untrained voice $72$ dB in the $3$ kHz band. What does the trained voice produce there? (c) Comment.
+*(Moderate)* The singer's formant provides $20$ dB of extra output near $3$ kHz. (a) By what factor in intensity? (b) An orchestra produces $95$ dB in the hall and an untrained voice $72$ dB in the $3$ kHz band. What does the trained voice produce there? (c) Comment.
 :::
 
 :::{solution} ex-the-singing-voice-5
@@ -426,7 +444,7 @@ Therefore the voice loses the broadband contest decisively and wins the $3$ kHz 
 :::{exercise}
 :label: ex-the-singing-voice-6
 
-Vocal folds are modeled as a mass on a spring. A singer raises the pitch from $220$ Hz to $440$ Hz. (a) If the effective mass is unchanged, by what factor does the tension rise? (b) In practice the folds also thin as they stretch. How does that affect the answer?
+*(Moderate)* Vocal folds are modeled as a mass on a spring. A singer raises the pitch from $220$ Hz to $440$ Hz. (a) If the effective mass is unchanged, by what factor does the tension rise? (b) In practice the folds also thin as they stretch. How does that affect the answer?
 :::
 
 :::{solution} ex-the-singing-voice-6
@@ -447,7 +465,7 @@ Therefore the naive answer of four times overestimates the tension required. Thi
 :::{exercise}
 :label: ex-the-singing-voice-7
 
-A singer's vibrato is $5.5$ Hz at a depth of $\pm 70$ cents on a $440$ Hz note. (a) What frequency range does the note sweep? (b) $F_1$ is at $700$ Hz. Which harmonic sweeps across it, and by how much?
+*(Moderate)* A singer's vibrato is $5.5$ Hz at a depth of $\pm 70$ cents on a $440$ Hz note. (a) What frequency range does the note sweep? (b) $F_1$ is at $700$ Hz. Which harmonic sweeps across it, and by how much?
 :::
 
 :::{solution} ex-the-singing-voice-7
@@ -470,7 +488,7 @@ Therefore vibrato causes the output amplitude of each harmonic to fluctuate as i
 :::{exercise}
 :label: ex-the-singing-voice-8
 
-Explain, using [Chapter 7](#ch-loudness)'s masking asymmetry, why an orchestra masks a voice's low harmonics more effectively than its high ones.
+*(Moderate)* Explain, using [Chapter 7](#ch-loudness)'s masking asymmetry, why an orchestra masks a voice's low harmonics more effectively than its high ones.
 :::
 
 :::{solution} ex-the-singing-voice-8
@@ -491,7 +509,7 @@ Therefore the region where the voice is least masked is the region where the sin
 :::{exercise}
 :label: ex-the-singing-voice-9
 
-A trained singer produces about $1$ mW of acoustic power. (a) What sound level does this give at $10$ m outdoors? (b) An orchestra produces about $1$ W. What level at the same distance? (c) Reconcile with the fact that soloists are heard.
+*(Challenging)* A trained singer produces about $1$ mW of acoustic power. (a) What sound level does this give at $10$ m outdoors? (b) An orchestra produces about $1$ W. What level at the same distance? (c) Reconcile with the fact that soloists are heard.
 :::
 
 :::{solution} ex-the-singing-voice-9
@@ -516,7 +534,7 @@ Therefore the solution is to lose the overall contest and win a local one, and t
 :::{exercise}
 :label: ex-the-singing-voice-10
 
-A tenor lowers his larynx, shortening the effective tract above the larynx from $17.5$ cm to $16.0$ cm while creating a separate cavity below. (a) What happens to the main formants? (b) The new cavity resonates near $2.9$ kHz. Estimate its dimensions, treating it as a stopped pipe.
+*(Moderate)* A tenor lowers his larynx, shortening the effective tract above the larynx from $17.5$ cm to $16.0$ cm while creating a separate cavity below. (a) What happens to the main formants? (b) The new cavity resonates near $2.9$ kHz. Estimate its dimensions, treating it as a stopped pipe.
 :::
 
 :::{solution} ex-the-singing-voice-10
@@ -543,7 +561,7 @@ Therefore the extra cavity is about $3$ cm long, which is roughly the dimension 
 :::{exercise}
 :label: ex-the-singing-voice-11
 
-Show that a uniform tube closed at one end has resonances at odd multiples of $v/4L$, and explain why the vocal tract's formants are not *exactly* at these values.
+*(Challenging)* Show that a uniform tube closed at one end has resonances at odd multiples of $v/4L$, and explain why the vocal tract's formants are not *exactly* at these values.
 :::
 
 :::{solution} ex-the-singing-voice-11
@@ -574,7 +592,7 @@ Therefore the stopped-pipe model gives the right ballpark and the right ordering
 :::{exercise}
 :label: ex-the-singing-voice-12
 
-A singer moves from chest voice to falsetto. (a) Describe the change in fold vibration. (b) Predict the effect on the spectrum. (c) Explain why the transition is audible if untrained.
+*(Straightforward)* A singer moves from chest voice to falsetto. (a) Describe the change in fold vibration. (b) Predict the effect on the spectrum. (c) Explain why the transition is audible if untrained.
 :::
 
 :::{solution} ex-the-singing-voice-12
@@ -595,7 +613,7 @@ Therefore training consists of learning to blend the two modes, mixing partial f
 :::{exercise}
 :label: ex-the-singing-voice-13
 
-Explain why the voice is acoustically more like a violin than like a clarinet, despite being a wind-driven instrument.
+*(Moderate)* Explain why the voice is acoustically more like a violin than like a clarinet, despite being a wind-driven instrument.
 :::
 
 :::{solution} ex-the-singing-voice-13
@@ -616,7 +634,7 @@ Therefore the voice belongs with the violin: source sets pitch, resonator shapes
 :::{exercise}
 :label: ex-the-singing-voice-14
 
-A speech synthesizer produces vowels with correct formants and a perfectly steady pitch, and listeners describe it as robotic. Name three additions that would improve it, drawing on this chapter and [Chapter 5](#ch-fourier-and-timbre).
+*(Moderate)* A speech synthesizer produces vowels with correct formants and a perfectly steady pitch, and listeners describe it as robotic. Name three additions that would improve it, drawing on this chapter and [Chapter 5](#ch-fourier-and-timbre).
 :::
 
 :::{solution} ex-the-singing-voice-14

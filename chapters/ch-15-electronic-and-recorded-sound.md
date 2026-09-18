@@ -200,6 +200,18 @@ The theorem's condition, no frequencies above Nyquist, is not optional, and viol
 
 The consequence is severe. Aliased components are not a distortion of the original; they are *new frequencies at unrelated pitches*, and once the samples are taken there is no way to remove them.
 
+::::{tip} Worked example: what frequency does an alias appear at?
+*A synthesizer runs at a sampling rate of $f_s = 8$ kHz with no anti-aliasing filter and sweeps a tone upward through $5.5$ kHz. What frequency is actually heard at that instant?*
+
+The Nyquist frequency is $f_s/2 = 4$ kHz. For an input between Nyquist and the sampling rate itself, the fold is a mirror image about Nyquist:
+
+$$
+f_{\text{heard}} = f_s - f_{\text{in}} = 8000 - 5500 = 2500\ \text{Hz}.
+$$
+
+Therefore, a generator climbing steadily through $5.5$ kHz is heard descending through $2.5$ kHz, exactly the reversal in the sweep of the audio example below. Once the samples are taken, a genuine $2.5$ kHz tone and this alias of a $5.5$ kHz tone are the same list of numbers; nothing in the data says which one produced it, which is why the filtering has to happen before the sampling and cannot be repaired afterward.
+::::
+
 ```{audio} ch15-aliasing-sweep
 :label: fig:ch15-aliasing-sweep
 :transcript: A rising tone that climbs for about half the clip, then turns round and descends, and then turns again, even though the generator is sweeping steadily upward the whole time.
@@ -410,7 +422,7 @@ And so the book's last idea is one of its first. [Chapter 3](#ch-superposition) 
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-1
 
-A system samples at $48$ kHz. (a) What is the Nyquist frequency? (b) What is the highest frequency it can represent? (c) A $30$ kHz component reaches the converter unfiltered. What frequency appears?
+*(Straightforward)* A system samples at $48$ kHz. (a) What is the Nyquist frequency? (b) What is the highest frequency it can represent? (c) A $30$ kHz component reaches the converter unfiltered. What frequency appears?
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-1
@@ -433,7 +445,7 @@ Therefore a $30$ kHz component, inaudible in itself, appears as an $18$ kHz comp
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-2
 
-A CD samples at $44.1$ kHz with $16$ bits per sample, in stereo. (a) What is the data rate? (b) How many megabytes is a 74-minute disc?
+*(Straightforward)* A CD samples at $44.1$ kHz with $16$ bits per sample, in stereo. (a) What is the data rate? (b) How many megabytes is a 74-minute disc?
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-2
@@ -458,7 +470,7 @@ Therefore about $780$ MB, which is the familiar capacity of an audio CD: the for
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-3
 
-Find the dynamic range of (a) an 8-bit system, (b) a 16-bit system, (c) a 24-bit system. (d) Which is adequate for a concert hall with a $25$ dB background and a $105$ dB peak?
+*(Moderate)* Find the dynamic range of (a) an 8-bit system, (b) a 16-bit system, (c) a 24-bit system. (d) Which is adequate for a concert hall with a $25$ dB background and a $105$ dB peak?
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-3
@@ -479,7 +491,7 @@ Using $6.02b + 1.76$ dB:
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-4
 
-An MP3 at $128$ kbit/s replaces a CD stream. (a) What is the compression ratio? (b) What fraction of the original data remains? (c) What justifies discarding the rest?
+*(Straightforward)* An MP3 at $128$ kbit/s replaces a CD stream. (a) What is the compression ratio? (b) What fraction of the original data remains? (c) What justifies discarding the rest?
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-4
@@ -498,7 +510,7 @@ Therefore the discarded $91\%$ is not "detail the listener might miss"; it is in
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-5
 
-An FM synthesizer has a carrier at $440$ Hz and a modulator at $440$ Hz with index $3$. (a) Where are the first four sideband pairs? (b) Is the result harmonic? (c) Repeat with a modulator at $311$ Hz.
+*(Moderate)* An FM synthesizer has a carrier at $440$ Hz and a modulator at $440$ Hz with index $3$. (a) Where are the first four sideband pairs? (b) Is the result harmonic? (c) Repeat with a modulator at $311$ Hz.
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-5
@@ -524,7 +536,7 @@ Therefore the ratio $f_c: f_m$ decides whether FM produces a pitched instrument 
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-6
 
-A stereo pair is fed a signal with the left channel $6$ dB louder. (a) Where does the phantom image appear? (b) What time difference would place it similarly? (c) Why do both work?
+*(Moderate)* A stereo pair is fed a signal with the left channel $6$ dB louder. (a) Where does the phantom image appear? (b) What time difference would place it similarly? (c) Why do both work?
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-6
@@ -543,7 +555,7 @@ Therefore intensity and time panning are interchangeable to a first approximatio
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-7
 
-A loudspeaker's woofer is $25$ cm across and its tweeter $25$ mm. (a) Above what frequency does each become larger than a wavelength? (b) Suggest a crossover frequency. (c) Explain the reasoning.
+*(Moderate)* A loudspeaker's woofer is $25$ cm across and its tweeter $25$ mm. (a) Above what frequency does each become larger than a wavelength? (b) Suggest a crossover frequency. (c) Explain the reasoning.
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-7
@@ -568,7 +580,7 @@ Therefore the choice is squeezed from both sides, and $2$ kHz is the usual compr
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-8
 
-Explain quantitatively why a $44.1$ kHz sampling rate is used rather than exactly $40$ kHz, given that hearing extends to $20$ kHz.
+*(Moderate)* Explain quantitatively why a $44.1$ kHz sampling rate is used rather than exactly $40$ kHz, given that hearing extends to $20$ kHz.
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-8
@@ -591,7 +603,7 @@ Therefore the extra $4.1$ kHz buys the filter room to work. The precise figure i
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-9
 
-A guitar amplifier is driven into distortion. Two notes at $220$ Hz and $330$ Hz are played. (a) Name four intermodulation products. (b) Are any of them musically related to the input? (c) Comment on why this is nonetheless a popular sound.
+*(Moderate)* A guitar amplifier is driven into distortion. Two notes at $220$ Hz and $330$ Hz are played. (a) Name four intermodulation products. (b) Are any of them musically related to the input? (c) Comment on why this is nonetheless a popular sound.
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-9
@@ -617,7 +629,7 @@ For a more complex chord, a major third, say, the products do *not* all fall on 
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-10
 
-A convolution reverb uses an impulse response $3.5$ s long, sampled at $48$ kHz. (a) How many samples? (b) A naive convolution of a $4$-minute track requires how many multiply operations? (c) Comment.
+*(Challenging)* A convolution reverb uses an impulse response $3.5$ s long, sampled at $48$ kHz. (a) How many samples? (b) A naive convolution of a $4$-minute track requires how many multiply operations? (c) Comment.
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-10
@@ -642,7 +654,7 @@ Therefore convolution reverb is possible because of Fourier's theorem, which is 
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-11
 
-Show that quantization gives approximately $6$ dB of dynamic range per bit.
+*(Challenging)* Show that quantization gives approximately $6$ dB of dynamic range per bit.
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-11
@@ -681,7 +693,7 @@ Therefore each additional bit doubles the number of levels, halves the step, and
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-12
 
-A recording is made with a cardioid microphone $30$ cm from a singer, in a room with a critical distance of $1.2$ m. (a) Is the recording dominated by direct or reverberant sound? (b) The engineer moves to $2.5$ m. What changes? (c) Which would be preferred, and why?
+*(Straightforward)* A recording is made with a cardioid microphone $30$ cm from a singer, in a room with a critical distance of $1.2$ m. (a) Is the recording dominated by direct or reverberant sound? (b) The engineer moves to $2.5$ m. What changes? (c) Which would be preferred, and why?
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-12
@@ -700,7 +712,7 @@ Two caveats. The close position will show **proximity effect**, boosting the bas
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-13
 
-Explain, using [Chapter 5](#ch-fourier-and-timbre)'s time–frequency trade-off, why perceptual codecs produce "pre-echo" on sharp transients.
+*(Moderate)* Explain, using [Chapter 5](#ch-fourier-and-timbre)'s time–frequency trade-off, why perceptual codecs produce "pre-echo" on sharp transients.
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-13
@@ -721,7 +733,7 @@ The result is a burst of noise audible in the silence preceding the transient: *
 :::{exercise}
 :label: ex-electronic-and-recorded-sound-14
 
-A sampler reproduces a piano by pitch-shifting one recorded note. (a) What goes wrong if a note recorded at C4 is shifted up an octave? (b) What goes wrong if only one dynamic level was recorded? (c) Relate both to [Chapter 10](#ch-string-instruments).
+*(Moderate)* A sampler reproduces a piano by pitch-shifting one recorded note. (a) What goes wrong if a note recorded at C4 is shifted up an octave? (b) What goes wrong if only one dynamic level was recorded? (c) Relate both to [Chapter 10](#ch-string-instruments).
 :::
 
 :::{solution} ex-electronic-and-recorded-sound-14

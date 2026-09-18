@@ -152,6 +152,10 @@ project:
           level: 0
         - file: chapters/ch-04-resonance-and-normal-modes.md
           level: 0
+        # Single-chapter part, by design, not an oversight: the preface calls
+        # Chapter 5 "the hinge of the book" (Fourier analysis is what the rest
+        # of the book builds on) and the teaching guide echoes that framing.
+        # Giving it its own divider is the point; do not fold it into Part I.
         - title: Spectrum and Timbre
           level: -1
         - file: chapters/ch-05-fourier-analysis-harmonics-and-timbre.md
@@ -164,6 +168,10 @@ project:
           level: 0
         - file: chapters/ch-08-pitch-beats-consonance-and-dissonance.md
           level: 0
+        # Also a deliberate single-chapter part: Chapter 9 is the direct
+        # continuation of Chapter 8 (see the teaching guide's Dependencies
+        # section) and stands as its own turn from perception to tuning
+        # arithmetic. Same rationale as Part II above.
         - title: Scales and Tuning
           level: -1
         - file: chapters/ch-09-musical-scales-and-tuning-systems.md

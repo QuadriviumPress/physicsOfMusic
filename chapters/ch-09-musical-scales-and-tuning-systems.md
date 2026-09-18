@@ -474,7 +474,7 @@ The general principle is the one §8.4 established. A scale and a timbre belong 
 :::{exercise}
 :label: ex-scales-and-tuning-1
 
-Convert to cents: (a) the pure fifth $3{:}2$, (b) the pure major third $5{:}4$, (c) the ratio $7{:}6$.
+*(Straightforward)* Convert to cents: (a) the pure fifth $3{:}2$, (b) the pure major third $5{:}4$, (c) the ratio $7{:}6$.
 :::
 
 :::{solution} ex-scales-and-tuning-1
@@ -495,7 +495,7 @@ Therefore $702.0$, $386.3$, and $266.9$ cents. The last lies between the equal-t
 :::{exercise}
 :label: ex-scales-and-tuning-2
 
-Convert to frequency ratios: (a) $700$ cents, (b) $400$ cents, (c) $1200$ cents.
+*(Straightforward)* Convert to frequency ratios: (a) $700$ cents, (b) $400$ cents, (c) $1200$ cents.
 :::
 
 :::{solution} ex-scales-and-tuning-2
@@ -516,7 +516,7 @@ Therefore $1.4983$, $1.2599$, and $2$. Comparing with the pure values $1.5$ and 
 :::{exercise}
 :label: ex-scales-and-tuning-3
 
-Calculate the Pythagorean comma from scratch. (a) Find $(3/2)^{12}$. (b) Find $2^7$. (c) Express the ratio in cents.
+*(Moderate)* Calculate the Pythagorean comma from scratch. (a) Find $(3/2)^{12}$. (b) Find $2^7$. (c) Express the ratio in cents.
 :::
 
 :::{solution} ex-scales-and-tuning-3
@@ -541,7 +541,7 @@ Therefore the comma is $23.5$ cents, very nearly a quarter of a semitone, about 
 :::{exercise}
 :label: ex-scales-and-tuning-4
 
-Calculate the syntonic comma. (a) Find the Pythagorean major third $(3/2)^4$ reduced to one octave. (b) Compare with the pure $5{:}4$. (c) Express the difference in cents.
+*(Moderate)* Calculate the syntonic comma. (a) Find the Pythagorean major third $(3/2)^4$ reduced to one octave. (b) Compare with the pure $5{:}4$. (c) Express the difference in cents.
 :::
 
 :::{solution} ex-scales-and-tuning-4
@@ -566,7 +566,7 @@ Therefore the syntonic comma is $21.5$ cents, the ratio $81{:}80$. It is the dif
 :::{exercise}
 :label: ex-scales-and-tuning-5
 
-Take C$_4$ = $261.63$ Hz. Find the frequency of E$_4$ (a) in equal temperament, (b) in just intonation, (c) in Pythagorean tuning. (d) Express the spread in cents.
+*(Moderate)* Take C$_4$ = $261.63$ Hz. Find the frequency of E$_4$ (a) in equal temperament, (b) in just intonation, (c) in Pythagorean tuning. (d) Express the spread in cents.
 :::
 
 :::{solution} ex-scales-and-tuning-5
@@ -591,7 +591,7 @@ Therefore the three Es span $327.0$ to $331.1$ Hz, a spread of $21.5$ cents: the
 :::{exercise}
 :label: ex-scales-and-tuning-6
 
-A quarter-comma meantone fifth is narrowed by a quarter of the syntonic comma. (a) By how many cents? (b) What is the meantone fifth, in cents and as a ratio? (c) Verify that four of them, less two octaves, give a pure major third.
+*(Moderate)* A quarter-comma meantone fifth is narrowed by a quarter of the syntonic comma. (a) By how many cents? (b) What is the meantone fifth, in cents and as a ratio? (c) Verify that four of them, less two octaves, give a pure major third.
 :::
 
 :::{solution} ex-scales-and-tuning-6
@@ -626,7 +626,7 @@ Therefore the construction works exactly, and that exactness is the whole point 
 :::{exercise}
 :label: ex-scales-and-tuning-7
 
-In just intonation on C, find the interval D–A. (a) Give the ratio and the cents. (b) How far is it from a pure fifth? (c) If A$_4$ = $440$ Hz in this tuning, what beat rate would a listener hear between the third harmonic of D and the second harmonic of A?
+*(Moderate)* In just intonation on C, find the interval D–A. (a) Give the ratio and the cents. (b) How far is it from a pure fifth? (c) If A$_4$ = $440$ Hz in this tuning, what beat rate would a listener hear between the third harmonic of D and the second harmonic of A?
 :::
 
 :::{solution} ex-scales-and-tuning-7
@@ -660,7 +660,7 @@ Therefore the wolf beats eleven times a second, far too fast to count and square
 :::{exercise}
 :label: ex-scales-and-tuning-8
 
-Show that in just intonation the whole tones C–D and D–E are different sizes, and find the difference. Explain why a keyboard cannot accommodate both.
+*(Challenging)* Show that in just intonation the whole tones C–D and D–E are different sizes, and find the difference. Explain why a keyboard cannot accommodate both.
 :::
 
 :::{solution} ex-scales-and-tuning-8
@@ -689,7 +689,7 @@ Therefore the instrument is short of keys, not short of cleverness. Some sevente
 :::{exercise}
 :label: ex-scales-and-tuning-9
 
-An equal-tempered perfect fifth is built on A$_3$ = $220$ Hz. (a) Find the upper frequency. (b) Find the beat rate between the third harmonic of the lower note and the second of the upper. (c) Repeat for the major third, using the fifth and fourth harmonics. (d) Comment.
+*(Moderate)* An equal-tempered perfect fifth is built on A$_3$ = $220$ Hz. (a) Find the upper frequency. (b) Find the beat rate between the third harmonic of the lower note and the second of the upper. (c) Repeat for the major third, using the fifth and fourth harmonics. (d) Comment.
 :::
 
 :::{solution} ex-scales-and-tuning-9
@@ -718,7 +718,7 @@ Therefore equal temperament's compromise is very uneven in its audible effect: t
 :::{exercise}
 :label: ex-scales-and-tuning-10
 
-Consider a system dividing the octave into $19$ equal steps. (a) How many cents is each step? (b) Which multiple of a step best approximates a pure fifth, and with what error? (c) The pure major third?
+*(Moderate)* Consider a system dividing the octave into $19$ equal steps. (a) How many cents is each step? (b) Which multiple of a step best approximates a pure fifth, and with what error? (c) The pure major third?
 :::
 
 :::{solution} ex-scales-and-tuning-10
@@ -749,7 +749,7 @@ Therefore 19-tone equal temperament has a fifth $7$ cents narrow (worse than $12
 :::{exercise}
 :label: ex-scales-and-tuning-11
 
-Show that no equal division of the octave can contain an exactly pure fifth.
+*(Challenging)* Show that no equal division of the octave can contain an exactly pure fifth.
 :::
 
 :::{solution} ex-scales-and-tuning-11
@@ -778,7 +778,7 @@ Therefore no equal temperament of any size contains a pure fifth, and the same a
 :::{exercise}
 :label: ex-scales-and-tuning-12
 
-A well temperament has fifths tempered by different amounts: C–G by $-6$ cents, G–D by $-6$, D–A by $-4$, A–E by $-4$, and the remaining eight fifths by whatever is needed. (a) How much of the comma has been absorbed so far? (b) How much remains to spread over the other eight? (c) Comment on the resulting key color.
+*(Moderate)* A well temperament has fifths tempered by different amounts: C–G by $-6$ cents, G–D by $-6$, D–A by $-4$, A–E by $-4$, and the remaining eight fifths by whatever is needed. (a) How much of the comma has been absorbed so far? (b) How much remains to spread over the other eight? (c) Comment on the resulting key color.
 :::
 
 :::{solution} ex-scales-and-tuning-12
@@ -803,7 +803,7 @@ Therefore every key is usable and no two sound alike: the common keys are sweet 
 :::{exercise}
 :label: ex-scales-and-tuning-13
 
-A piano's A$_2$ has an inharmonicity coefficient $B = 3.0\times10^{-4}$ and a nominal fundamental of $110$ Hz. (a) Find its second partial. (b) If A$_3$ is tuned so that its fundamental matches that partial, what is A$_3$'s frequency? (c) How many cents sharp of an exact octave is that?
+*(Moderate)* A piano's A$_2$ has an inharmonicity coefficient $B = 3.0\times10^{-4}$ and a nominal fundamental of $110$ Hz. (a) Find its second partial. (b) If A$_3$ is tuned so that its fundamental matches that partial, what is A$_3$'s frequency? (c) How many cents sharp of an exact octave is that?
 :::
 
 :::{solution} ex-scales-and-tuning-13
@@ -830,7 +830,7 @@ Therefore this octave is stretched by one cent. That is small, but it *accumulat
 :::{exercise}
 :label: ex-scales-and-tuning-14
 
-A composer writes for an ensemble of a string quartet and a piano. (a) Explain the tuning conflict. (b) The quartet plays a sustained A major triad alone, then the piano enters with the same chord. Describe what a listener hears. (c) Suggest what the quartet will actually do.
+*(Moderate)* A composer writes for an ensemble of a string quartet and a piano. (a) Explain the tuning conflict. (b) The quartet plays a sustained A major triad alone, then the piano enters with the same chord. Describe what a listener hears. (c) Suggest what the quartet will actually do.
 :::
 
 :::{solution} ex-scales-and-tuning-14

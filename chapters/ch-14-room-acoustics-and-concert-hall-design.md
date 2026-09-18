@@ -324,7 +324,7 @@ Students from the University of Edinburgh measure the Glasgow Royal Concert Hall
 :::{exercise}
 :label: ex-room-acoustics-1
 
-A hall has a volume of $18{,}000$ m³ and a total absorption of $1450$ m². (a) Find its reverberation time. (b) Is this suitable for orchestral music?
+*(Straightforward)* A hall has a volume of $18{,}000$ m³ and a total absorption of $1450$ m². (a) Find its reverberation time. (b) Is this suitable for orchestral music?
 :::
 
 :::{solution} ex-room-acoustics-1
@@ -343,7 +343,7 @@ $$
 :::{exercise}
 :label: ex-room-acoustics-2
 
-A rectangular hall is $40$ m by $22$ m by $16$ m. Its surfaces have an average absorption coefficient of $0.15$. (a) Find the volume. (b) Find the total surface area. (c) Find the reverberation time.
+*(Moderate)* A rectangular hall is $40$ m by $22$ m by $16$ m. Its surfaces have an average absorption coefficient of $0.15$. (a) Find the volume. (b) Find the total surface area. (c) Find the reverberation time.
 :::
 
 :::{solution} ex-room-acoustics-2
@@ -370,7 +370,7 @@ Therefore about $4$ s, far too long for orchestral music. The hall would need it
 :::{exercise}
 :label: ex-room-acoustics-3
 
-The hall of [](#ex-room-acoustics-2) is fitted with $1200$ seats, each with an absorption of $0.45$ m² when empty and $0.85$ m² when occupied. (a) Find $T_{60}$ empty. (b) Find $T_{60}$ full. (c) Comment on rehearsing there.
+*(Moderate)* The hall of [](#ex-room-acoustics-2) is fitted with $1200$ seats, each with an absorption of $0.45$ m² when empty and $0.85$ m² when occupied. (a) Find $T_{60}$ empty. (b) Find $T_{60}$ full. (c) Comment on rehearsing there.
 :::
 
 :::{solution} ex-room-acoustics-3
@@ -397,7 +397,7 @@ This is exactly why hall designers specify seats whose empty absorption is close
 :::{exercise}
 :label: ex-room-acoustics-4
 
-A hall has $V = 25{,}000$ m³ and $T_{60} = 2.2$ s. (a) Find the critical distance. (b) A listener moves from $8$ m to $32$ m from the stage. How much does the level drop, and how much would it drop outdoors?
+*(Moderate)* A hall has $V = 25{,}000$ m³ and $T_{60} = 2.2$ s. (a) Find the critical distance. (b) A listener moves from $8$ m to $32$ m from the stage. How much does the level drop, and how much would it drop outdoors?
 :::
 
 :::{solution} ex-room-acoustics-4
@@ -424,7 +424,7 @@ Therefore the room saves the distant listener about $10$ dB, which is most of th
 :::{exercise}
 :label: ex-room-acoustics-5
 
-A reflection travels a path $19$ m longer than the direct sound. (a) What is the delay? (b) Is it heard as an echo or fused with the direct sound? (c) What path difference would make it an echo?
+*(Moderate)* A reflection travels a path $19$ m longer than the direct sound. (a) What is the delay? (b) Is it heard as an echo or fused with the direct sound? (c) What path difference would make it an echo?
 :::
 
 :::{solution} ex-room-acoustics-5
@@ -447,7 +447,7 @@ of extra path. In a hall $40$ m long, a listener near the front and a hard rear 
 :::{exercise}
 :label: ex-room-acoustics-6
 
-A room is $6.0$ m by $4.5$ m by $2.8$ m. (a) Find the three lowest axial modes. (b) Find the Schroeder frequency if $T_{60} = 0.5$ s. (c) Comment on bass reproduction.
+*(Moderate)* A room is $6.0$ m by $4.5$ m by $2.8$ m. (a) Find the three lowest axial modes. (b) Find the Schroeder frequency if $T_{60} = 0.5$ s. (c) Comment on bass reproduction.
 :::
 
 :::{solution} ex-room-acoustics-6
@@ -476,7 +476,7 @@ Therefore bass in this room is position-dependent and uneven over the whole of t
 :::{exercise}
 :label: ex-room-acoustics-7
 
-A lecture room of $600$ m³ has $T_{60} = 1.8$ s and is unintelligible. (a) How much absorption does it currently have? (b) How much is needed for $T_{60} = 0.8$ s? (c) If acoustic panels have $\alpha = 0.85$, what area is needed?
+*(Moderate)* A lecture room of $600$ m³ has $T_{60} = 1.8$ s and is unintelligible. (a) How much absorption does it currently have? (b) How much is needed for $T_{60} = 0.8$ s? (c) If acoustic panels have $\alpha = 0.85$, what area is needed?
 :::
 
 :::{solution} ex-room-acoustics-7
@@ -507,7 +507,7 @@ Therefore about $84$ m² of paneling: a substantial fraction of the room's surfa
 :::{exercise}
 :label: ex-room-acoustics-8
 
-A hall has $T_{60} = 2.4$ s at $125$ Hz and $1.9$ s at $1$ kHz. (a) Find the bass ratio. (b) Is the hall warm or thin? (c) What would raise the bass ratio?
+*(Moderate)* A hall has $T_{60} = 2.4$ s at $125$ Hz and $1.9$ s at $1$ kHz. (a) Find the bass ratio. (b) Is the hall warm or thin? (c) What would raise the bass ratio?
 :::
 
 :::{solution} ex-room-acoustics-8
@@ -528,7 +528,7 @@ $$
 :::{exercise}
 :label: ex-room-acoustics-9
 
-Explain quantitatively why a listener $30$ m from an orchestra hears mostly reflected sound, in a hall with $V = 20{,}000$ m³ and $T_{60} = 2.0$ s.
+*(Challenging)* Explain quantitatively why a listener $30$ m from an orchestra hears mostly reflected sound, in a hall with $V = 20{,}000$ m³ and $T_{60} = 2.0$ s.
 :::
 
 :::{solution} ex-room-acoustics-9
@@ -557,7 +557,7 @@ This is the quantitative form of the chapter's opening claim, and it is why the 
 :::{exercise}
 :label: ex-room-acoustics-10
 
-A hall's impulse response has $2.4$ units of energy in the first $80$ ms and $3.1$ units afterwards. (a) Find $C_{80}$. (b) Is this hall better suited to symphonic music or to opera? (c) What change would raise $C_{80}$?
+*(Moderate)* A hall's impulse response has $2.4$ units of energy in the first $80$ ms and $3.1$ units afterwards. (a) Find $C_{80}$. (b) Is this hall better suited to symphonic music or to opera? (c) What change would raise $C_{80}$?
 :::
 
 :::{solution} ex-room-acoustics-10
@@ -578,7 +578,7 @@ $$
 :::{exercise}
 :label: ex-room-acoustics-11
 
-Derive the Sabine equation's form, given that sound energy in a room decays exponentially with the mean time between reflections and the fraction absorbed at each.
+*(Challenging)* Derive the Sabine equation's form, given that sound energy in a room decays exponentially with the mean time between reflections and the fraction absorbed at each.
 :::
 
 :::{solution} ex-room-acoustics-11
@@ -618,7 +618,7 @@ Therefore the constant $0.161$ is $55.3/343$, it contains the speed of sound, an
 :::{exercise}
 :label: ex-room-acoustics-12
 
-Two halls have identical $T_{60}$ of $2.0$ s. One is a $22$ m wide shoebox and the other a $42$ m wide fan. (a) Estimate the delay of the first side-wall reflection for a listener on the center line, $20$ m from the stage, in each. (b) Which sounds more spacious, and why?
+*(Challenging)* Two halls have identical $T_{60}$ of $2.0$ s. One is a $22$ m wide shoebox and the other a $42$ m wide fan. (a) Estimate the delay of the first side-wall reflection for a listener on the center line, $20$ m from the stage, in each. (b) Which sounds more spacious, and why?
 :::
 
 :::{solution} ex-room-acoustics-12
@@ -643,7 +643,7 @@ Therefore the same reverberation time can produce very different halls, which is
 :::{exercise}
 :label: ex-room-acoustics-13
 
-A recording engineer wants to place an instrument in a virtual hall using convolution reverb. (a) What must they measure in the real hall? (b) What operation do they perform? (c) What does this assume about the room?
+*(Moderate)* A recording engineer wants to place an instrument in a virtual hall using convolution reverb. (a) What must they measure in the real hall? (b) What operation do they perform? (c) What does this assume about the room?
 :::
 
 :::{solution} ex-room-acoustics-13
@@ -662,7 +662,7 @@ It also assumes the source and listener stay where they were when the response w
 :::{exercise}
 :label: ex-room-acoustics-14
 
-A multi-purpose hall must serve both speech ($T_{60} = 0.9$ s) and orchestral music ($T_{60} = 2.0$ s). Its volume is $12{,}000$ m³. (a) What absorption does each require? (b) How much absorption must be removable? (c) Suggest two mechanisms.
+*(Moderate)* A multi-purpose hall must serve both speech ($T_{60} = 0.9$ s) and orchestral music ($T_{60} = 2.0$ s). Its volume is $12{,}000$ m³. (a) What absorption does each require? (b) How much absorption must be removable? (c) Suggest two mechanisms.
 :::
 
 :::{solution} ex-room-acoustics-14

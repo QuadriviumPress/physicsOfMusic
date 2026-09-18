@@ -169,6 +169,34 @@ How $Q$ is measured. Find the peak, drop to $0.707$ of its height, which is half
 
 The third definition, $Q = \pi f_0\tau$, is the one that connects this chapter to the last. It says that **a narrow resonance and a long ring are the same fact**, measured two different ways. Something that takes a long time to stop is something that is fussy about what starts it.
 
+### The Shape of the Response Curve
+
+$Q$ summarizes the response curve with a single number, its ratio of peak frequency to width. The curve itself, amplitude against driving frequency, has a definite shape, and it is worth writing down, because it is what a real measurement produces and what the rest of the book quietly assumes.
+
+Write the driving frequency as a ratio to the natural frequency, $r = f/f_0$, so $r=1$ is exactly on resonance. The steady-state amplitude, relative to how far the same force would push the system if applied very slowly ($r \to 0$), is
+
+$$
+\frac{A}{A_{\text{static}}} = \frac{1}{\sqrt{(1-r^2)^2 + (r/Q)^2}}.
+$$
+
+Three checks confirm this is the curve already described in words. Far below resonance ($r \ll 1$), both terms under the root vanish and $A/A_{\text{static}} \to 1$: the mass simply follows the force, as §4.2 said. Exactly on resonance ($r=1$), the first term vanishes and only the damping term survives, leaving $A/A_{\text{static}} = Q$: the peak height is nothing but $Q$ itself, restated as a formula. Far above resonance ($r \gg 1$), the $(1-r^2)^2$ term dominates and the response falls as $1/r^2$: the mass cannot keep up, and doubling the driving frequency above resonance cuts the response to a quarter.
+
+:::{dropdown} Where the response formula comes from
+The equation of motion for a mass $m$ on a spring $k$ with damping constant $b$, driven by a force $F_0\cos(2\pi f t)$, is
+
+$$
+m\ddot{x} + b\dot{x} + kx = F_0\cos(2\pi f t).
+$$
+
+After the initial transient dies away, the system settles into oscillating at the driving frequency, $x(t) = A\cos(2\pi f t - \phi)$, for some amplitude $A$ and phase lag $\phi$. Substituting this trial solution and collecting the sine and cosine parts separately gives two equations, which combine to
+
+$$
+A = \frac{F_0}{\sqrt{(k - m\omega^2)^2 + (b\omega)^2}}, \qquad \omega = 2\pi f.
+$$
+
+The static response, at $\omega \to 0$, is just $A_{\text{static}} = F_0/k$. Dividing the general expression by this, and writing everything in terms of $r = f/f_0 = \omega/\omega_0$ and $Q = \sqrt{mk}/b$ (which is equivalent to the definitions already given), reduces the ratio to the compact form quoted above. None of the algebra changes the physics already argued from the shape of the curve; it only makes the peak height, the low- and high-frequency limits, and the $1/r^2$ falloff exact rather than qualitative.
+:::
+
 ```{audio} ch04-high-q, ch04-low-q
 :names: Q = 120, Q = 6
 :figure: ../images/ch04-q-comparison.svg
@@ -378,7 +406,7 @@ That view, a source with a spectrum, passed through a filter with a shape, is th
 :::{exercise}
 :label: ex-resonance-1
 
-A resonance is measured with a peak at $440$ Hz and half-power points at $426$ Hz and $454$ Hz. (a) What is the bandwidth? (b) What is $Q$? (c) How long would this resonance ring after being struck?
+*(Straightforward)* A resonance is measured with a peak at $440$ Hz and half-power points at $426$ Hz and $454$ Hz. (a) What is the bandwidth? (b) What is $Q$? (c) How long would this resonance ring after being struck?
 :::
 
 :::{solution} ex-resonance-1
@@ -401,7 +429,7 @@ Therefore, $Q \approx 16$ and the free decay time is about $11$ ms.
 :::{exercise}
 :label: ex-resonance-2
 
-A wine glass rings at $720$ Hz and takes $2.8$ s for its amplitude to fall to $1/e$ of its initial value. (a) Find its $Q$. (b) Find the bandwidth of its resonance. (c) Comment on how precisely a singer would have to match the pitch to excite it.
+*(Straightforward)* A wine glass rings at $720$ Hz and takes $2.8$ s for its amplitude to fall to $1/e$ of its initial value. (a) Find its $Q$. (b) Find the bandwidth of its resonance. (c) Comment on how precisely a singer would have to match the pitch to excite it.
 :::
 
 :::{solution} ex-resonance-2
@@ -426,7 +454,7 @@ $$
 :::{exercise}
 :label: ex-resonance-3
 
-A guitar's air resonance is at $98$ Hz with $Q = 6.0$. (a) Find the bandwidth. (b) Over what range of notes does the resonance provide at least half its peak power? (c) Express that range in semitones.
+*(Moderate)* A guitar's air resonance is at $98$ Hz with $Q = 6.0$. (a) Find the bandwidth. (b) Over what range of notes does the resonance provide at least half its peak power? (c) Express that range in semitones.
 :::
 
 :::{solution} ex-resonance-3
@@ -449,7 +477,7 @@ Therefore, the resonance usefully covers about three semitones. A low $Q$ is wha
 :::{exercise}
 :label: ex-resonance-4
 
-A bottle of internal volume $0.75$ L has a neck of cross-sectional area $3.8$ cm² and effective length $7.5$ cm. Take $v = 343$ m/s. (a) What note does it sound when blown across? (b) It is half filled with water. What note does it sound now?
+*(Straightforward)* A bottle of internal volume $0.75$ L has a neck of cross-sectional area $3.8$ cm² and effective length $7.5$ cm. Take $v = 343$ m/s. (a) What note does it sound when blown across? (b) It is half filled with water. What note does it sound now?
 :::
 
 :::{solution} ex-resonance-4
@@ -475,7 +503,7 @@ Therefore, the empty bottle sounds about $142$ Hz and the half-full one about $2
 :::{exercise}
 :label: ex-resonance-5
 
-A string is plucked at exactly one-quarter of its length. (a) Which harmonics are absent? (b) If the string sounds $220$ Hz, what are the frequencies of the three lowest absent harmonics? (c) Where should the player pluck to suppress the third harmonic instead?
+*(Straightforward)* A string is plucked at exactly one-quarter of its length. (a) Which harmonics are absent? (b) If the string sounds $220$ Hz, what are the frequencies of the three lowest absent harmonics? (c) Where should the player pluck to suppress the third harmonic instead?
 :::
 
 :::{solution} ex-resonance-5
@@ -494,7 +522,7 @@ Therefore, the pluck position acts as a comb filter on the harmonic series, remo
 :::{exercise}
 :label: ex-resonance-6
 
-A resonator has $f_0 = 250$ Hz. It is driven at (a) $250$ Hz, (b) $125$ Hz, (c) $500$ Hz, all with the same force amplitude. Using the response formula with $Q = 10$, find the amplitude in each case relative to the response to a very slow push.
+*(Challenging)* A resonator has $f_0 = 250$ Hz. It is driven at (a) $250$ Hz, (b) $125$ Hz, (c) $500$ Hz, all with the same force amplitude. Using the response formula with $Q = 10$, find the amplitude in each case relative to the response to a very slow push.
 :::
 
 :::{solution} ex-resonance-6
@@ -527,7 +555,7 @@ Therefore, the amplitude at resonance is $Q = 10$ times the static response, whi
 :::{exercise}
 :label: ex-resonance-7
 
-Two identical masses are joined by a spring of stiffness $k_c$ and each is joined to a wall by a spring of stiffness $k$. The in-phase mode has frequency $f_1 = (1/2\pi)\sqrt{k/m}$ and the out-of-phase mode $f_2 = (1/2\pi)\sqrt{(k + 2k_c)/m}$. (a) If $k_c = k$, what is the ratio $f_2/f_1$? (b) What happens to the ratio as the coupling spring becomes very weak?
+*(Moderate)* Two identical masses are joined by a spring of stiffness $k_c$ and each is joined to a wall by a spring of stiffness $k$. The in-phase mode has frequency $f_1 = (1/2\pi)\sqrt{k/m}$ and the out-of-phase mode $f_2 = (1/2\pi)\sqrt{(k + 2k_c)/m}$. (a) If $k_c = k$, what is the ratio $f_2/f_1$? (b) What happens to the ratio as the coupling spring becomes very weak?
 :::
 
 :::{solution} ex-resonance-7
@@ -552,7 +580,7 @@ Therefore, strong coupling splits the two mode frequencies widely apart, and wea
 :::{exercise}
 :label: ex-resonance-8
 
-A resonator stores $2.4$ mJ of energy and loses $0.15$ mJ per cycle. (a) Find its $Q$. (b) If its frequency is $180$ Hz, how long does it ring? (c) How many cycles is that?
+*(Straightforward)* A resonator stores $2.4$ mJ of energy and loses $0.15$ mJ per cycle. (a) Find its $Q$. (b) If its frequency is $180$ Hz, how long does it ring? (c) How many cycles is that?
 :::
 
 :::{solution} ex-resonance-8
@@ -579,7 +607,7 @@ Therefore, $Q \approx 100$, the amplitude falls to $1/e$ in about $0.18$ s, and 
 :::{exercise}
 :label: ex-resonance-9
 
-An engineer wants a loudspeaker enclosure with a bass-reflex port tuned to $45$ Hz. The cabinet's internal volume is $32$ L and the port is a tube of radius $2.5$ cm. Ignoring end corrections, what length of port is needed?
+*(Moderate)* An engineer wants a loudspeaker enclosure with a bass-reflex port tuned to $45$ Hz. The cabinet's internal volume is $32$ L and the port is a tube of radius $2.5$ cm. Ignoring end corrections, what length of port is needed?
 :::
 
 :::{solution} ex-resonance-9
@@ -607,7 +635,7 @@ Therefore, a port about $9.0$ cm long is needed. In practice the end correction 
 :::{exercise}
 :label: ex-resonance-10
 
-Show that a resonator rings for approximately $Q/\pi$ cycles, and use the result to estimate how many cycles a tuning fork of $Q = 4000$ rings for.
+*(Challenging)* Show that a resonator rings for approximately $Q/\pi$ cycles, and use the result to estimate how many cycles a tuning fork of $Q = 4000$ rings for.
 :::
 
 :::{solution} ex-resonance-10
@@ -636,7 +664,7 @@ Therefore, a fork of $Q = 4000$ rings for about $1300$ cycles before falling to 
 :::{exercise}
 :label: ex-resonance-11
 
-A drumhead has modes at $1.00$, $1.59$, $2.14$, $2.30$, and $2.65$ times its lowest frequency. A string has modes at $1$, $2$, $3$, $4$, $5$ times its lowest. (a) Express each set as intervals in cents above the lowest mode. (b) Explain, from the two lists, why the string has a definite pitch and the drumhead does not.
+*(Moderate)* A drumhead has modes at $1.00$, $1.59$, $2.14$, $2.30$, and $2.65$ times its lowest frequency. A string has modes at $1$, $2$, $3$, $4$, $5$ times its lowest. (a) Express each set as intervals in cents above the lowest mode. (b) Explain, from the two lists, why the string has a definite pitch and the drumhead does not.
 :::
 
 :::{solution} ex-resonance-11
@@ -661,7 +689,7 @@ Therefore, the drumhead gives the ear a collection of unrelated frequencies rath
 :::{exercise}
 :label: ex-resonance-12
 
-A violin body has its main resonances near $280$ Hz and $460$ Hz, each with $Q \approx 25$, and the instrument's range runs from $196$ Hz to about $3000$ Hz. (a) Find the bandwidth of each resonance. (b) What fraction of the instrument's range is covered by the two together? (c) What does your answer imply about how the rest of the range is radiated?
+*(Moderate)* A violin body has its main resonances near $280$ Hz and $460$ Hz, each with $Q \approx 25$, and the instrument's range runs from $196$ Hz to about $3000$ Hz. (a) Find the bandwidth of each resonance. (b) What fraction of the instrument's range is covered by the two together? (c) What does your answer imply about how the rest of the range is radiated?
 :::
 
 :::{solution} ex-resonance-12
@@ -678,7 +706,7 @@ A violin body has its main resonances near $280$ Hz and $460$ Hz, each with $Q \
 :::{exercise}
 :label: ex-resonance-13
 
-A string is plucked at its exact midpoint. (a) Which harmonics are absent? (b) Compare the brightness of this note with one plucked near the bridge, and explain the difference in terms of the mode amplitudes.
+*(Straightforward)* A string is plucked at its exact midpoint. (a) Which harmonics are absent? (b) Compare the brightness of this note with one plucked near the bridge, and explain the difference in terms of the mode amplitudes.
 :::
 
 :::{solution} ex-resonance-13
@@ -695,7 +723,7 @@ Therefore, the same string can be made mellow or brilliant by nothing more than 
 :::{exercise}
 :label: ex-resonance-14
 
-A maker is deciding how heavily to brace a guitar top. Heavier bracing raises the body's $Q$ from $5$ to $9$. (a) By what factor does the peak response change, at fixed damping-independent drive? (b) By what factor does the bandwidth change? (c) State in words what the player would notice.
+*(Moderate)* A maker is deciding how heavily to brace a guitar top. Heavier bracing raises the body's $Q$ from $5$ to $9$. (a) By what factor does the peak response change, at fixed damping-independent drive? (b) By what factor does the bandwidth change? (c) State in words what the player would notice.
 :::
 
 :::{solution} ex-resonance-14

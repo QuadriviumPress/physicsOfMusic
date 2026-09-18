@@ -336,6 +336,30 @@ Left: **formants**, resonances fixed by the instrument's body, which shape which
 
 The consequence is audible and important: **a piano's octaves must be stretched.** If the upper octave were tuned to exactly twice the lower fundamental, it would beat against the lower note's stretched second partial. Tuners tune the octave to the partial instead, which makes the top of a piano sharp and the bottom flat relative to equal temperament, by as much as $30$ cents at the extremes. [Chapter 10](#ch-string-instruments) works this through.
 
+::::{tip} Worked example: stretching an octave
+*A piano's C3 string sounds $f_1 = 131$ Hz and has an inharmonicity coefficient $B = 4.0\times10^{-4}$, typical of a wound bass string. C4 is tuned to exactly twice this frequency, $262$ Hz. Find the beat rate between C4's fundamental and C3's stretched 2nd partial, and how many cents sharp C4 would need to be tuned to eliminate it.*
+
+C3's actual 2nd partial, from $f_n = nf_1\sqrt{1+Bn^2}$ with $n=2$:
+
+$$
+f_2 = 2(131)\sqrt{1 + (4.0\times10^{-4})(4)} = 262\sqrt{1.0016} = 262.21\ \text{Hz}.
+$$
+
+Against C4's exact $262$ Hz, the two beat at
+
+$$
+262.21 - 262 = 0.21\ \text{Hz},
+$$
+
+about one beat every five seconds: slow enough to hear clearly, and slow enough for an impatient listener to mistake for no beat at all. Eliminating it means retuning C4 up to $262.21$ Hz, which in cents is
+
+$$
+1200\log_2\!\left(\frac{262.21}{262}\right) = 1.4\ \text{cents}.
+$$
+
+Therefore, a tuner stretches C4 by only about a cent and a half to silence this one beat, far below what anyone would notice as mistuning on its own. But every octave up the keyboard adds another such correction on top of the last, and they accumulate: by the top of the piano the total stretch reaches the tens of cents quoted above, all from the same small effect applied string after string.
+::::
+
 ### Formants: Fixed Resonances, Moving Fundamental
 
 The left panel of that figure shows the other way a spectrum acquires structure.
@@ -392,7 +416,7 @@ There is a continuum here rather than a boundary. A cymbal's partials are so num
 :::{exercise}
 :label: ex-fourier-and-timbre-1
 
-A periodic waveform repeats every $4.55$ ms. (a) What is its fundamental frequency? (b) What are the frequencies of its first five harmonics?
+*(Straightforward)* A periodic waveform repeats every $4.55$ ms. (a) What is its fundamental frequency? (b) What are the frequencies of its first five harmonics?
 :::
 
 :::{solution} ex-fourier-and-timbre-1
@@ -417,7 +441,7 @@ Therefore, the tone is A3 and its first five harmonics run up to $1100$ Hz, span
 :::{exercise}
 :label: ex-fourier-and-timbre-2
 
-A sawtooth wave has harmonic amplitudes proportional to $1/n$. (a) What is the amplitude of the 8th harmonic relative to the fundamental? (b) Express that ratio in decibels. (c) Repeat for a triangle wave, whose odd harmonics fall as $1/n^2$.
+*(Moderate)* A sawtooth wave has harmonic amplitudes proportional to $1/n$. (a) What is the amplitude of the 8th harmonic relative to the fundamental? (b) Express that ratio in decibels. (c) Repeat for a triangle wave, whose odd harmonics fall as $1/n^2$.
 :::
 
 :::{solution} ex-fourier-and-timbre-2
@@ -444,7 +468,7 @@ Therefore, the sawtooth's 8th harmonic is $18$ dB down and the triangle's 7th is
 :::{exercise}
 :label: ex-fourier-and-timbre-3
 
-A tone contains partials at $300$, $400$, $500$, $600$, and $700$ Hz. (a) What is the fundamental frequency? (b) Which harmonic numbers are these? (c) Is any energy present at the fundamental?
+*(Straightforward)* A tone contains partials at $300$, $400$, $500$, $600$, and $700$ Hz. (a) What is the fundamental frequency? (b) Which harmonic numbers are these? (c) Is any energy present at the fundamental?
 :::
 
 :::{solution} ex-fourier-and-timbre-3
@@ -463,7 +487,7 @@ Therefore, the waveform repeats $100$ times a second and a listener hears a pitc
 :::{exercise}
 :label: ex-fourier-and-timbre-4
 
-A piano string sounds $262$ Hz and has an inharmonicity coefficient $B = 1.3\times10^{-4}$. (a) Find the frequency of its 2nd partial. (b) Find its 8th. (c) Express each as cents sharp of a true harmonic.
+*(Moderate)* A piano string sounds $262$ Hz and has an inharmonicity coefficient $B = 1.3\times10^{-4}$. (a) Find the frequency of its 2nd partial. (b) Find its 8th. (c) Express each as cents sharp of a true harmonic.
 :::
 
 :::{solution} ex-fourier-and-timbre-4
@@ -502,7 +526,7 @@ Therefore, the 2nd partial is sharp by half a cent, inaudible alone, and the 8th
 :::{exercise}
 :label: ex-fourier-and-timbre-5
 
-A tone is built from harmonics of $200$ Hz with amplitudes $1.0$, $0.5$, $0.33$, $0.25$, $0.2$ for $n = 1$ to $5$. Calculate its spectral centroid.
+*(Moderate)* A tone is built from harmonics of $200$ Hz with amplitudes $1.0$, $0.5$, $0.33$, $0.25$, $0.2$ for $n = 1$ to $5$. Calculate its spectral centroid.
 :::
 
 :::{solution} ex-fourier-and-timbre-5
@@ -542,7 +566,7 @@ Therefore, the centroid is about $438$ Hz, roughly the 2nd harmonic. Note the pa
 :::{exercise}
 :label: ex-fourier-and-timbre-6
 
-A spectrogram is computed with a window of $46$ ms. (a) Approximately what frequency resolution does this give? (b) Could it separate the 1st and 2nd harmonics of a $100$ Hz tone? (c) Could it resolve two events $10$ ms apart in time?
+*(Moderate)* A spectrogram is computed with a window of $46$ ms. (a) Approximately what frequency resolution does this give? (b) Could it separate the 1st and 2nd harmonics of a $100$ Hz tone? (c) Could it resolve two events $10$ ms apart in time?
 :::
 
 :::{solution} ex-fourier-and-timbre-6
@@ -565,7 +589,7 @@ Therefore, this window is good for frequency and poor for time. Resolving the $1
 :::{exercise}
 :label: ex-fourier-and-timbre-7
 
-A clarinet's spectrum contains strong odd harmonics and weak even ones in its low register. Its lowest note sounds $147$ Hz. (a) List the frequencies of its first four strong partials. (b) A flute at the same pitch has all harmonics. List its first four. (c) Explain the timbral consequence.
+*(Straightforward)* A clarinet's spectrum contains strong odd harmonics and weak even ones in its low register. Its lowest note sounds $147$ Hz. (a) List the frequencies of its first four strong partials. (b) A flute at the same pitch has all harmonics. List its first four. (c) Explain the timbral consequence.
 :::
 
 :::{solution} ex-fourier-and-timbre-7
@@ -584,7 +608,7 @@ Therefore, the difference is not a matter of degree but of which partials exist 
 :::{exercise}
 :label: ex-fourier-and-timbre-8
 
-Two tones have identical harmonic amplitudes and different phases. (a) Do they have the same waveform? (b) Do they sound the same? (c) Do they carry the same energy? Justify each answer.
+*(Moderate)* Two tones have identical harmonic amplitudes and different phases. (a) Do they have the same waveform? (b) Do they sound the same? (c) Do they carry the same energy? Justify each answer.
 :::
 
 :::{solution} ex-fourier-and-timbre-8
@@ -603,7 +627,7 @@ Therefore, the two differ in waveform, agree in energy, and agree in sound, whic
 :::{exercise}
 :label: ex-fourier-and-timbre-9
 
-A guitar string is plucked $1/7$ of the way along its length. (a) Which harmonics are missing? (b) Explain, in terms of this chapter's vocabulary, why guitar makers often place the bridge so that the string is *not* plucked at a simple fraction.
+*(Straightforward)* A guitar string is plucked $1/7$ of the way along its length. (a) Which harmonics are missing? (b) Explain, in terms of this chapter's vocabulary, why guitar makers often place the bridge so that the string is *not* plucked at a simple fraction.
 :::
 
 :::{solution} ex-fourier-and-timbre-9
@@ -620,7 +644,7 @@ Therefore, the pluck point is a spectral design choice rather than an arbitrary 
 :::{exercise}
 :label: ex-fourier-and-timbre-10
 
-A sung vowel has formants at $700$ Hz and $1200$ Hz. It is sung first at $f_1 = 140$ Hz and then at $f_1 = 350$ Hz. (a) Which harmonic falls nearest each formant, at each pitch? (b) Comment on which pitch will render the vowel more clearly.
+*(Moderate)* A sung vowel has formants at $700$ Hz and $1200$ Hz. It is sung first at $f_1 = 140$ Hz and then at $f_1 = 350$ Hz. (a) Which harmonic falls nearest each formant, at each pitch? (b) Comment on which pitch will render the vowel more clearly.
 :::
 
 :::{solution} ex-fourier-and-timbre-10
@@ -639,7 +663,7 @@ Therefore, the vowel is clearer at the lower pitch: the reason a soprano's words
 :::{exercise}
 :label: ex-fourier-and-timbre-11
 
-Show that for a waveform built from harmonics with amplitudes $A_n$, the total energy is proportional to $\sum A_n^2$ and is independent of the phases.
+*(Challenging)* Show that for a waveform built from harmonics with amplitudes $A_n$, the total energy is proportional to $\sum A_n^2$ and is independent of the phases.
 :::
 
 :::{solution} ex-fourier-and-timbre-11
@@ -680,7 +704,7 @@ Therefore, the energy depends only on the amplitudes. This is Parseval's theorem
 :::{exercise}
 :label: ex-fourier-and-timbre-12
 
-A note's partials decay with time constants $\tau_n = \tau_1/n$: the $n$th partial decaying $n$ times as fast as the fundamental. Take $\tau_1 = 2.0$ s. (a) After $1.0$ s, what fraction of its initial amplitude does the 1st partial retain? The 6th? (b) Describe how the timbre changes over the note.
+*(Moderate)* A note's partials decay with time constants $\tau_n = \tau_1/n$: the $n$th partial decaying $n$ times as fast as the fundamental. Take $\tau_1 = 2.0$ s. (a) After $1.0$ s, what fraction of its initial amplitude does the 1st partial retain? The 6th? (b) Describe how the timbre changes over the note.
 :::
 
 :::{solution} ex-fourier-and-timbre-12
@@ -704,7 +728,7 @@ Therefore, the timbre of a plucked or struck note is not a fixed property but a 
 :::{exercise}
 :label: ex-fourier-and-timbre-13
 
-A synthesizer produces a tone with harmonics at exactly $1/n$ amplitude and no noise, no envelope variation, and no inharmonicity. Listeners describe it as "sterile". Name three specific additions that would make it more realistic, and say what each contributes.
+*(Moderate)* A synthesizer produces a tone with harmonics at exactly $1/n$ amplitude and no noise, no envelope variation, and no inharmonicity. Listeners describe it as "sterile". Name three specific additions that would make it more realistic, and say what each contributes.
 :::
 
 :::{solution} ex-fourier-and-timbre-13
@@ -727,7 +751,7 @@ Therefore, what is missing from the sterile tone is precisely everything Fourier
 :::{exercise}
 :label: ex-fourier-and-timbre-14
 
-A square wave at $150$ Hz is passed through a filter that removes everything above $1000$ Hz. (a) Which harmonics survive? (b) Sketch in words how the waveform changes. (c) How does the sound change?
+*(Moderate)* A square wave at $150$ Hz is passed through a filter that removes everything above $1000$ Hz. (a) Which harmonics survive? (b) Sketch in words how the waveform changes. (c) How does the sound change?
 :::
 
 :::{solution} ex-fourier-and-timbre-14

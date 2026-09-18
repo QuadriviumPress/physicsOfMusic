@@ -71,10 +71,21 @@ critical band
   and producing {term}`roughness`. Roughly a third of an octave over most of the
   audible range. See §7.5, §8.4.
 
+critical distance
+: The distance from a source, in an enclosed room, beyond which the
+  reverberant field is stronger than the direct sound and the inverse-square
+  law no longer describes how the level falls off. See §2.4, §14.1.
+
 decibel
 : Ten times the base-ten logarithm of a power ratio, or twenty times the
   logarithm of a pressure ratio. A ratio, not a level, until a reference is
   stated: **dB SPL** is referred to 20 μPa. See §7.2.
+
+end correction
+: The extra effective length, roughly $0.6r$ per open end, that must be added
+  to a pipe's physical length because the pressure antinode falls slightly
+  outside the opening rather than exactly at it. Matters most for pipes that
+  are short and wide. See §3.5, §11.2.
 
 envelope
 : The outline of a note's amplitude over time, conventionally divided into
@@ -184,6 +195,12 @@ Sabine equation
   $V$ and total absorption $A$. Valid for a diffuse field in a room that is not
   too absorbent. See §14.2.
 
+Schroeder frequency
+: The frequency above which a room's modes overlap densely enough for its
+  response to be treated statistically rather than as individually
+  resolvable peaks. Below it, bass response is sparse and depends strongly on
+  position in the room. See §14.3.
+
 simple harmonic motion
 : Motion under a restoring force proportional to displacement, producing a
   sinusoid whose frequency does not depend on amplitude. See §1.3.
@@ -203,6 +220,11 @@ source–filter model
   subsequently shaped by a resonator that is independent of it. The standard
   account of the voice, and the basis of subtractive synthesis. See §13.1,
   §15.5.
+
+spectral centroid
+: The amplitude-weighted average frequency of a sound's partials. Correlates
+  well with the perceived brightness of a tone, and is the single number most
+  often used when a machine has to judge what a sound is like. See §5.3.
 
 spectrogram
 : A display of spectrum against time, with intensity shown as brightness or

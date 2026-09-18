@@ -177,6 +177,22 @@ where $a$ is the radius, $T$ the tension per unit length, $\sigma$ the mass per 
 
 The ratios were listed in §12.1, and none of them is anything.
 
+::::{tip} Worked example: the fundamental of a drumhead
+*A snare drum's batter head has radius $a = 0.178$ m (a $14$-inch drum), areal mass density $\sigma = 0.20$ kg/m², and is tensioned to $T = 3200$ N/m. Using $\alpha_{01} = 2.405$, find its $(0,1)$ fundamental.*
+
+$$
+f_{01} = \frac{\alpha_{01}}{2\pi a}\sqrt{\frac{T}{\sigma}} = \frac{2.405}{2\pi(0.178)}\sqrt{\frac{3200}{0.20}} = (2.151)(126.5) = 272\ \text{Hz}.
+$$
+
+The next mode up, $(1,1)$, sits at $1.59$ times this, about $432$ Hz, an interval of
+
+$$
+1200\log_2(1.59) = 804\ \text{cents}.
+$$
+
+The nearest ratio of small whole numbers is $8{:}5$ ($813.7$ cents), itself an unremarkable interval, not a number that organizes a scale, and even that near-miss does not extend to the modes above it. A snare drum, unlike a timpano, has no enclosed kettle of air to pull this family of ratios toward consonance, so its head produces this pattern undisguised: a perfectly well-defined $f_{01}$, and no definite pitch at all.
+::::
+
 ### Nodal Diameters and Nodal Circles
 
 The index $m$ counts **nodal diameters**, straight lines across the head that do not move, and $n-1$ counts **nodal circles**.
@@ -353,7 +369,7 @@ So the steelpan turns one inharmonic plate into many nearly harmonic vibrators, 
 :::{exercise}
 :label: ex-percussion-1
 
-A circular membrane's lowest mode is at $180$ Hz. Using the ratios $1$, $1.59$, $2.14$, $2.30$, $2.65$: (a) Find the next four mode frequencies. (b) Is there any fundamental of which these are all harmonics?
+*(Straightforward)* A circular membrane's lowest mode is at $180$ Hz. Using the ratios $1$, $1.59$, $2.14$, $2.30$, $2.65$: (a) Find the next four mode frequencies. (b) Is there any fundamental of which these are all harmonics?
 :::
 
 :::{solution} ex-percussion-1
@@ -374,7 +390,7 @@ Therefore there is no fundamental, the ear's pattern matcher returns nothing, an
 :::{exercise}
 :label: ex-percussion-2
 
-A marimba bar's plain modes are at $262$, $722$, and $1416$ Hz. (a) Express the ratios. (b) After undercutting, the second mode is at $1048$ Hz. What ratio is that? (c) What musical interval?
+*(Moderate)* A marimba bar's plain modes are at $262$, $722$, and $1416$ Hz. (a) Express the ratios. (b) After undercutting, the second mode is at $1048$ Hz. What ratio is that? (c) What musical interval?
 :::
 
 :::{solution} ex-percussion-2
@@ -393,7 +409,7 @@ Therefore the undercutting has moved the second mode from $2.76$ to $4.00$, turn
 :::{exercise}
 :label: ex-percussion-3
 
-A timpano's measured modes are $146$, $219$, $292$, $356$, $423$ Hz. (a) Express them as ratios of the lowest. (b) Show that they are close to harmonics 2 to 6 of a missing fundamental. (c) What is that fundamental, and what note does the listener hear?
+*(Moderate)* A timpano's measured modes are $146$, $219$, $292$, $356$, $423$ Hz. (a) Express them as ratios of the lowest. (b) Show that they are close to harmonics 2 to 6 of a missing fundamental. (c) What is that fundamental, and what note does the listener hear?
 :::
 
 :::{solution} ex-percussion-3
@@ -412,7 +428,7 @@ Therefore the listener hears about $73$ Hz, D2, which is an octave below the low
 :::{exercise}
 :label: ex-percussion-4
 
-A membrane's fundamental is $f_{01} = (\alpha_{01}/2\pi a)\sqrt{T/\sigma}$ with $\alpha_{01} = 2.405$. A timpano head has radius $0.33$ m and mass per unit area $0.26$ kg/m². (a) What tension per unit length gives a fundamental of $146$ Hz? (b) By what factor must the tension change to raise the pitch a whole tone?
+*(Moderate)* A membrane's fundamental is $f_{01} = (\alpha_{01}/2\pi a)\sqrt{T/\sigma}$ with $\alpha_{01} = 2.405$. A timpano head has radius $0.33$ m and mass per unit area $0.26$ kg/m². (a) What tension per unit length gives a fundamental of $146$ Hz? (b) By what factor must the tension change to raise the pitch a whole tone?
 :::
 
 :::{solution} ex-percussion-4
@@ -444,7 +460,7 @@ Therefore about $4.1$ kN/m of tension, and a $26\%$ increase for a whole tone: a
 :::{exercise}
 :label: ex-percussion-5
 
-A xylophone bar's second mode is tuned to $3f_1$ and a marimba bar's to $4f_1$. If both have $f_1 = 440$ Hz: (a) Find each second mode. (b) Which sounds brighter, and why? (c) Which is a more consonant relationship?
+*(Moderate)* A xylophone bar's second mode is tuned to $3f_1$ and a marimba bar's to $4f_1$. If both have $f_1 = 440$ Hz: (a) Find each second mode. (b) Which sounds brighter, and why? (c) Which is a more consonant relationship?
 :::
 
 :::{solution} ex-percussion-5
@@ -461,7 +477,7 @@ A xylophone bar's second mode is tuned to $3f_1$ and a marimba bar's to $4f_1$. 
 :::{exercise}
 :label: ex-percussion-6
 
-A glockenspiel bar has $f_1 = 2093$ Hz and is not undercut. (a) Where is its second mode? (b) Why does the inharmonicity matter less than it would on a marimba? (c) Estimate how many cents the second mode is from the nearest harmonic.
+*(Moderate)* A glockenspiel bar has $f_1 = 2093$ Hz and is not undercut. (a) Where is its second mode? (b) Why does the inharmonicity matter less than it would on a marimba? (c) Estimate how many cents the second mode is from the nearest harmonic.
 :::
 
 :::{solution} ex-percussion-6
@@ -484,7 +500,7 @@ Therefore the second mode is nearly a semitone and a half from the nearest harmo
 :::{exercise}
 :label: ex-percussion-7
 
-A church bell's partials are at $131$, $262$, $314$, $393$, and $524$ Hz. (a) Identify each by name. (b) Express the tierce as an interval above the prime. (c) What would a major-third bell's tierce be?
+*(Straightforward)* A church bell's partials are at $131$, $262$, $314$, $393$, and $524$ Hz. (a) Identify each by name. (b) Express the tierce as an interval above the prime. (c) What would a major-third bell's tierce be?
 :::
 
 :::{solution} ex-percussion-7
@@ -513,7 +529,7 @@ Therefore this is a conventional minor-third bell, and a major-third bell would 
 :::{exercise}
 :label: ex-percussion-8
 
-A timpanist strikes a head at its exact center. (a) Which modes are excited? (b) Which are not? (c) Describe the resulting sound and explain why timpanists never do this.
+*(Straightforward)* A timpanist strikes a head at its exact center. (a) Which modes are excited? (b) Which are not? (c) Describe the resulting sound and explain why timpanists never do this.
 :::
 
 :::{solution} ex-percussion-8
@@ -532,7 +548,7 @@ Therefore a center strike produces a loud, dull, pitchless thud. Timpanists stri
 :::{exercise}
 :label: ex-percussion-9
 
-Show that supporting a free-free bar at $22.4\%$ of its length from each end places the supports at nodes of the fundamental, and explain what would happen if they were placed at the center instead.
+*(Challenging)* Show that supporting a free-free bar at $22.4\%$ of its length from each end places the supports at nodes of the fundamental, and explain what would happen if they were placed at the center instead.
 :::
 
 :::{solution} ex-percussion-9
@@ -551,7 +567,7 @@ Therefore a centrally supported bar would sound its second mode, weakly and brie
 :::{exercise}
 :label: ex-percussion-10
 
-A cymbal is struck softly and then hard. (a) Describe the difference in how the spectrum evolves. (b) Which assumption made throughout this book fails in the second case? (c) Name one other place in the book where the same assumption fails.
+*(Moderate)* A cymbal is struck softly and then hard. (a) Describe the difference in how the spectrum evolves. (b) Which assumption made throughout this book fails in the second case? (c) Name one other place in the book where the same assumption fails.
 :::
 
 :::{solution} ex-percussion-10
@@ -570,7 +586,7 @@ Therefore nonlinearity is rare in this book but not absent, and in both cases it
 :::{exercise}
 :label: ex-percussion-11
 
-A steelpan note region has a fundamental of $392$ Hz. Its tuner aims to place the second and third modes on the octave and the twelfth. (a) What frequencies are those? (b) Explain why this makes the note pitched. (c) Contrast the strategy with the timpani's.
+*(Moderate)* A steelpan note region has a fundamental of $392$ Hz. Its tuner aims to place the second and third modes on the octave and the twelfth. (a) What frequencies are those? (b) Explain why this makes the note pitched. (c) Contrast the strategy with the timpani's.
 :::
 
 :::{solution} ex-percussion-11
@@ -589,7 +605,7 @@ Therefore the two instruments solve the same problem by different strategies fro
 :::{exercise}
 :label: ex-percussion-12
 
-A bar's mode frequencies scale as $f \propto h/L^2$, where $h$ is thickness and $L$ length. A marimba bar sounds $262$ Hz. (a) What length would sound $131$ Hz at the same thickness? (b) Why is this a problem, and what do makers do instead?
+*(Moderate)* A bar's mode frequencies scale as $f \propto h/L^2$, where $h$ is thickness and $L$ length. A marimba bar sounds $262$ Hz. (a) What length would sound $131$ Hz at the same thickness? (b) Why is this a problem, and what do makers do instead?
 :::
 
 :::{solution} ex-percussion-12
@@ -612,7 +628,7 @@ Therefore the scaling law explains the shape of a marimba directly, and the reso
 :::{exercise}
 :label: ex-percussion-13
 
-Explain why a gamelan ensemble sounds in tune to a listener familiar with it and out of tune to one who is not, using this chapter and [Chapter 8](#ch-pitch-and-consonance) together.
+*(Challenging)* Explain why a gamelan ensemble sounds in tune to a listener familiar with it and out of tune to one who is not, using this chapter and [Chapter 8](#ch-pitch-and-consonance) together.
 :::
 
 :::{solution} ex-percussion-13
@@ -633,7 +649,7 @@ Therefore neither tradition is approximating the other. Each has chosen interval
 :::{exercise}
 :label: ex-percussion-14
 
-A tubular bell's strong partials are at $436$, $654$, and $872$ Hz. (a) Express them as ratios of the lowest. (b) Find the missing fundamental. (c) Does the tube have a mode at that frequency? (d) Comment on what this means for how the instrument is notated.
+*(Moderate)* A tubular bell's strong partials are at $436$, $654$, and $872$ Hz. (a) Express them as ratios of the lowest. (b) Find the missing fundamental. (c) Does the tube have a mode at that frequency? (d) Comment on what this means for how the instrument is notated.
 :::
 
 :::{solution} ex-percussion-14

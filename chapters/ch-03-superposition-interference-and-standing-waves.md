@@ -469,7 +469,7 @@ A pipe stopped at one end is compared with an open pipe of the same length. Whic
 :::{exercise}
 :label: ex-superposition-1
 
-Two loudspeakers, driven in step, play a $686$ Hz tone. Take $v = 343$ m/s. (a) What is the wavelength? (b) What is the smallest non-zero path difference that produces silence at a listener? (c) The smallest that produces maximum loudness?
+*(Straightforward)* Two loudspeakers, driven in step, play a $686$ Hz tone. Take $v = 343$ m/s. (a) What is the wavelength? (b) What is the smallest non-zero path difference that produces silence at a listener? (c) The smallest that produces maximum loudness?
 :::
 
 :::{solution} ex-superposition-1
@@ -492,7 +492,7 @@ Therefore, $25$ cm of extra path silences the tone and $50$ cm restores it.
 :::{exercise}
 :label: ex-superposition-2
 
-A string $0.62$ m long is fixed at both ends and waves travel along it at $240$ m/s. Find the frequencies of its first four modes.
+*(Straightforward)* A string $0.62$ m long is fixed at both ends and waves travel along it at $240$ m/s. Find the frequencies of its first four modes.
 :::
 
 :::{solution} ex-superposition-2
@@ -517,7 +517,7 @@ Therefore, the first four modes are $194$, $387$, $581$, and $774$ Hz: an exact 
 :::{exercise}
 :label: ex-superposition-3
 
-A guitar string of length $64.0$ cm sounds $196$ Hz when played open. (a) What is the wave speed along it? (b) Where must the player's finger go to sound $261.6$ Hz? (c) What is the wavelength of the $196$ Hz *sound* in air, and why is it so different from the wavelength on the string?
+*(Moderate)* A guitar string of length $64.0$ cm sounds $196$ Hz when played open. (a) What is the wave speed along it? (b) Where must the player's finger go to sound $261.6$ Hz? (c) What is the wavelength of the $196$ Hz *sound* in air, and why is it so different from the wavelength on the string?
 :::
 
 :::{solution} ex-superposition-3
@@ -550,7 +550,7 @@ against $2L = 1.28$ m on the string. They differ because the wave *speeds* diffe
 :::{exercise}
 :label: ex-superposition-4
 
-A string is tuned to $110$ Hz. By what factor must its tension change to tune it to (a) $165$ Hz, (b) $220$ Hz? (c) Comment on whether (b) is practical.
+*(Straightforward)* A string is tuned to $110$ Hz. By what factor must its tension change to tune it to (a) $165$ Hz, (b) $220$ Hz? (c) Comment on whether (b) is practical.
 :::
 
 :::{solution} ex-superposition-4
@@ -569,7 +569,7 @@ Since $f \propto \sqrt{T}$, the tension ratio is the square of the frequency rat
 :::{exercise}
 :label: ex-superposition-5
 
-An organ pipe open at both ends is $1.10$ m long. Take $v = 343$ m/s. (a) What is its fundamental frequency? (b) What are its next two modes? (c) If one end is stopped, what does the fundamental become?
+*(Straightforward)* An organ pipe open at both ends is $1.10$ m long. Take $v = 343$ m/s. (a) What is its fundamental frequency? (b) What are its next two modes? (c) If one end is stopped, what does the fundamental become?
 :::
 
 :::{solution} ex-superposition-5
@@ -596,7 +596,7 @@ Therefore, stopping one end drops the pitch by exactly an octave, and the surviv
 :::{exercise}
 :label: ex-superposition-6
 
-A stopped organ pipe is to sound $131$ Hz at $20$ °C. (a) What length of pipe is needed, ignoring the end correction? (b) If the pipe is $4.0$ cm in radius, what is the end correction, and what length should actually be cut?
+*(Moderate)* A stopped organ pipe is to sound $131$ Hz at $20$ °C. (a) What length of pipe is needed, ignoring the end correction? (b) If the pipe is $4.0$ cm in radius, what is the end correction, and what length should actually be cut?
 :::
 
 :::{solution} ex-superposition-6
@@ -627,7 +627,7 @@ Therefore, cutting the naive $65.5$ cm would give an effective length of $67.9$ 
 :::{exercise}
 :label: ex-superposition-7
 
-A violin string sounds $440$ Hz. A player touches it lightly one-third of the way along. (a) What frequency sounds? (b) Which harmonics survive? (c) Why does the note sound thinner than the open string?
+*(Moderate)* A violin string sounds $440$ Hz. A player touches it lightly one-third of the way along. (a) What frequency sounds? (b) Which harmonics survive? (c) Why does the note sound thinner than the open string?
 :::
 
 :::{solution} ex-superposition-7
@@ -648,7 +648,7 @@ $$
 :::{exercise}
 :label: ex-superposition-8
 
-Two identical waves, each of amplitude $A$, interfere. (a) What is the resulting amplitude when they are exactly in step? (b) When exactly opposed? (c) By what factor is the intensity of the in-step case greater than that of one wave alone, and where does the extra energy come from?
+*(Moderate)* Two identical waves, each of amplitude $A$, interfere. (a) What is the resulting amplitude when they are exactly in step? (b) When exactly opposed? (c) By what factor is the intensity of the in-step case greater than that of one wave alone, and where does the extra energy come from?
 :::
 
 :::{solution} ex-superposition-8
@@ -665,7 +665,7 @@ The extra energy comes from the places where the waves cancel. Averaged over all
 :::{exercise}
 :label: ex-superposition-9
 
-The A string of a bass is $1.06$ m long, of mass per unit length $\mu = 1.5\times10^{-2}$ kg/m, and sounds $55$ Hz. (a) What tension is it under? (b) The string is replaced by one of twice the mass per unit length, tuned to the same pitch. What tension is now needed?
+*(Straightforward)* The A string of a bass is $1.06$ m long, of mass per unit length $\mu = 1.5\times10^{-2}$ kg/m, and sounds $55$ Hz. (a) What tension is it under? (b) The string is replaced by one of twice the mass per unit length, tuned to the same pitch. What tension is now needed?
 :::
 
 :::{solution} ex-superposition-9
@@ -691,7 +691,7 @@ Therefore, the original tension is about $204$ N, roughly the weight of a 21 kg 
 :::{exercise}
 :label: ex-superposition-10
 
-Two speakers $3.0$ m apart face a listener standing $8.0$ m from the midpoint between them, on the perpendicular bisector. (a) What is the path difference? (b) The listener now walks $1.0$ m to one side. Find the new path difference, and state whether a $1720$ Hz tone is loud or quiet there. Take $v = 343$ m/s.
+*(Challenging)* Two speakers $3.0$ m apart face a listener standing $8.0$ m from the midpoint between them, on the perpendicular bisector. (a) What is the path difference? (b) The listener now walks $1.0$ m to one side. Find the new path difference, and state whether a $1720$ Hz tone is loud or quiet there. Take $v = 343$ m/s.
 :::
 
 :::{solution} ex-superposition-10
@@ -721,7 +721,7 @@ Therefore, the path difference is $1.84$ wavelengths, close to $1.5$ or $2.5$? I
 :::{exercise}
 :label: ex-superposition-11
 
-Show that the nodes of the standing wave $y = 2A\sin(kx)\cos(\omega t)$ are spaced half a wavelength apart, and that the antinodes lie exactly midway between them.
+*(Challenging)* Show that the nodes of the standing wave $y = 2A\sin(kx)\cos(\omega t)$ are spaced half a wavelength apart, and that the antinodes lie exactly midway between them.
 :::
 
 :::{solution} ex-superposition-11
@@ -750,7 +750,7 @@ Therefore, nodes and antinodes alternate at intervals of a quarter wavelength, w
 :::{exercise}
 :label: ex-superposition-12
 
-A clarinet behaves as a pipe stopped at the reed end. Its lowest note is written E$_3$, sounding about $147$ Hz. (a) Estimate its sounding length at $20$ °C. (b) A flute of the same length behaves as an open pipe; what is its lowest note? (c) Explain why the clarinet is the longer-sounding instrument for its physical size.
+*(Moderate)* A clarinet behaves as a pipe stopped at the reed end. Its lowest note is written E$_3$, sounding about $147$ Hz. (a) Estimate its sounding length at $20$ °C. (b) A flute of the same length behaves as an open pipe; what is its lowest note? (c) Explain why the clarinet is the longer-sounding instrument for its physical size.
 :::
 
 :::{solution} ex-superposition-12
@@ -771,7 +771,7 @@ $$
 :::{exercise}
 :label: ex-superposition-13
 
-A stopped pipe and an open pipe are both tuned to sound $220$ Hz. (a) Find the length of each. (b) List the first four modes of each. (c) A listener hears both play their second mode. What interval do they hear?
+*(Moderate)* A stopped pipe and an open pipe are both tuned to sound $220$ Hz. (a) Find the length of each. (b) List the first four modes of each. (c) A listener hears both play their second mode. What interval do they hear?
 :::
 
 :::{solution} ex-superposition-13
@@ -790,7 +790,7 @@ Therefore, the listener hears a perfect fifth, and one which is *exactly* 3:2, s
 :::{exercise}
 :label: ex-superposition-14
 
-A pipe open at both ends is $28.0$ cm long and $3.0$ cm in radius. (a) Find its fundamental ignoring end corrections. (b) Find it including them. (c) Express the difference in cents, and say whether it matters.
+*(Moderate)* A pipe open at both ends is $28.0$ cm long and $3.0$ cm in radius. (a) Find its fundamental ignoring end corrections. (b) Find it including them. (c) Express the difference in cents, and say whether it matters.
 :::
 
 :::{solution} ex-superposition-14

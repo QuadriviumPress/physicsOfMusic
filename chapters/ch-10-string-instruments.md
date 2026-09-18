@@ -388,7 +388,7 @@ A well-tuned concert grand is therefore about $30$ cents sharp at the top and $3
 :::{exercise}
 :label: ex-string-instruments-1
 
-A guitar string is $64.8$ cm long with $\mu = 4.3\times10^{-3}$ kg/m, tuned to $110$ Hz. (a) What is its tension? (b) What tension would tune it to $146.8$ Hz?
+*(Straightforward)* A guitar string is $64.8$ cm long with $\mu = 4.3\times10^{-3}$ kg/m, tuned to $110$ Hz. (a) What is its tension? (b) What tension would tune it to $146.8$ Hz?
 :::
 
 :::{solution} ex-string-instruments-1
@@ -413,7 +413,7 @@ Therefore about $87$ N and $156$ N. Note that a musical fourth, five semitones, 
 :::{exercise}
 :label: ex-string-instruments-2
 
-A string is plucked at $1/6$ of its length. (a) Which harmonics are absent? (b) If the fundamental is $147$ Hz, what are the frequencies of the two lowest absent harmonics? (c) Where would you pluck to remove the 4th harmonic?
+*(Straightforward)* A string is plucked at $1/6$ of its length. (a) Which harmonics are absent? (b) If the fundamental is $147$ Hz, what are the frequencies of the two lowest absent harmonics? (c) Where would you pluck to remove the 4th harmonic?
 :::
 
 :::{solution} ex-string-instruments-2
@@ -432,7 +432,7 @@ Therefore the pluck point acts as a comb, and the guitarist choosing a right-han
 :::{exercise}
 :label: ex-string-instruments-3
 
-A guitar's high E string is $0.23$ mm in diameter and sounds $330$ Hz. A plain steel string of the same length and tension is wanted at $82.4$ Hz. (a) By what factor must $\mu$ increase? (b) What diameter would that need? (c) Comment.
+*(Moderate)* A guitar's high E string is $0.23$ mm in diameter and sounds $330$ Hz. A plain steel string of the same length and tension is wanted at $82.4$ Hz. (a) By what factor must $\mu$ increase? (b) What diameter would that need? (c) Comment.
 :::
 
 :::{solution} ex-string-instruments-3
@@ -457,7 +457,7 @@ $$
 :::{exercise}
 :label: ex-string-instruments-4
 
-A violin's A string sounds $440$ Hz, is $32.5$ cm long, and is bowed. (a) How many times per second does the kink complete a round trip? (b) How long does one round trip take? (c) What is the wave speed on the string?
+*(Straightforward)* A violin's A string sounds $440$ Hz, is $32.5$ cm long, and is bowed. (a) How many times per second does the kink complete a round trip? (b) How long does one round trip take? (c) What is the wave speed on the string?
 :::
 
 :::{solution} ex-string-instruments-4
@@ -480,7 +480,7 @@ Therefore the kink makes $440$ round trips a second at $286$ m/s, which is, as i
 :::{exercise}
 :label: ex-string-instruments-5
 
-A piano hammer is in contact with a string for $1.3$ ms. (a) Which harmonics of a $262$ Hz note have half-periods shorter than the contact time? (b) What does this do to the spectrum? (c) How does a harder hammer change the answer?
+*(Moderate)* A piano hammer is in contact with a string for $1.3$ ms. (a) Which harmonics of a $262$ Hz note have half-periods shorter than the contact time? (b) What does this do to the spectrum? (c) How does a harder hammer change the answer?
 :::
 
 :::{solution} ex-string-instruments-5
@@ -505,7 +505,7 @@ So harmonics from the 2nd upward are affected, increasingly so as $n$ rises.
 :::{exercise}
 :label: ex-string-instruments-6
 
-A piano string sounds $110$ Hz with $B = 3.5\times10^{-4}$. (a) Find the frequency of its 2nd partial. (b) To what frequency must the octave above be tuned for a beatless octave? (c) How many cents wide of $2{:}1$ is that?
+*(Moderate)* A piano string sounds $110$ Hz with $B = 3.5\times10^{-4}$. (a) Find the frequency of its 2nd partial. (b) To what frequency must the octave above be tuned for a beatless octave? (c) How many cents wide of $2{:}1$ is that?
 :::
 
 :::{solution} ex-string-instruments-6
@@ -532,7 +532,7 @@ Therefore this octave must be stretched by about $1.2$ cents. A single octave's 
 :::{exercise}
 :label: ex-string-instruments-7
 
-A guitar body has a Helmholtz air resonance at $98$ Hz with $Q = 6$, and the guitar's lowest note is $82.4$ Hz. (a) Find the bandwidth. (b) Is the lowest note inside it? (c) Comment on the design choice.
+*(Moderate)* A guitar body has a Helmholtz air resonance at $98$ Hz with $Q = 6$, and the guitar's lowest note is $82.4$ Hz. (a) Find the bandwidth. (b) Is the lowest note inside it? (c) Comment on the design choice.
 :::
 
 :::{solution} ex-string-instruments-7
@@ -549,7 +549,7 @@ A guitar body has a Helmholtz air resonance at $98$ Hz with $Q = 6$, and the gui
 :::{exercise}
 :label: ex-string-instruments-8
 
-A cello has a wolf note at $174.6$ Hz (F$_3$). (a) Explain the mechanism. (b) A wolf eliminator of mass $8$ g is fitted to the string beyond the bridge. Explain qualitatively why adding a mass helps.
+*(Challenging)* A cello has a wolf note at $174.6$ Hz (F$_3$). (a) Explain the mechanism. (b) A wolf eliminator of mass $8$ g is fitted to the string beyond the bridge. Explain qualitatively why adding a mass helps.
 :::
 
 :::{solution} ex-string-instruments-8
@@ -566,7 +566,7 @@ Therefore the fix is not damping the string but splitting the body's resonance, 
 :::{exercise}
 :label: ex-string-instruments-9
 
-A piano note has three strings, each producing $70$ dB alone. (a) What level do all three give? (b) Why is this a poor argument for having three strings? (c) What is the real reason?
+*(Moderate)* A piano note has three strings, each producing $70$ dB alone. (a) What level do all three give? (b) Why is this a poor argument for having three strings? (c) What is the real reason?
 :::
 
 :::{solution} ex-string-instruments-9
@@ -587,7 +587,7 @@ $$
 :::{exercise}
 :label: ex-string-instruments-10
 
-Show that plucking a string at $a = L/2$ removes every even harmonic, and explain why the resulting tone is the mellowest available.
+*(Challenging)* Show that plucking a string at $a = L/2$ removes every even harmonic, and explain why the resulting tone is the mellowest available.
 :::
 
 :::{solution} ex-string-instruments-10
@@ -614,7 +614,7 @@ Therefore the midpoint pluck gives the fewest and weakest partials of any pluck 
 :::{exercise}
 :label: ex-string-instruments-11
 
-A violin string is bowed at $1/11$ of its length from the bridge. (a) Which harmonic does this most affect, and how? (b) Helmholtz motion still produces a full harmonic series. Reconcile these two statements.
+*(Challenging)* A violin string is bowed at $1/11$ of its length from the bridge. (a) Which harmonic does this most affect, and how? (b) Helmholtz motion still produces a full harmonic series. Reconcile these two statements.
 :::
 
 :::{solution} ex-string-instruments-11
@@ -631,7 +631,7 @@ Therefore the bow position affects the *balance* of the harmonics, and quite str
 :::{exercise}
 :label: ex-string-instruments-12
 
-A grand piano's strings carry a total tension of $200$ kN. (a) Express this as a mass under gravity. (b) The frame is cast iron with a tensile strength of about $200$ MPa. What cross-sectional area is needed for a safety factor of $4$?
+*(Moderate)* A grand piano's strings carry a total tension of $200$ kN. (a) Express this as a mass under gravity. (b) The frame is cast iron with a tensile strength of about $200$ MPa. What cross-sectional area is needed for a safety factor of $4$?
 :::
 
 :::{solution} ex-string-instruments-12
@@ -656,7 +656,7 @@ Therefore about $40$ cm² of iron in cross-section: a bar roughly $6$ cm square,
 :::{exercise}
 :label: ex-string-instruments-13
 
-Two guitars are identical except that one has a body $Q$ of $4$ and the other $Q$ of $9$ at its main air resonance. (a) Compare their peak responses and bandwidths. (b) Which will sound more even across the bass register? (c) Which will sustain longer?
+*(Moderate)* Two guitars are identical except that one has a body $Q$ of $4$ and the other $Q$ of $9$ at its main air resonance. (a) Compare their peak responses and bandwidths. (b) Which will sound more even across the bass register? (c) Which will sustain longer?
 :::
 
 :::{solution} ex-string-instruments-13
@@ -675,7 +675,7 @@ Therefore the choice is between a loud, even guitar and a quieter, more colored 
 :::{exercise}
 :label: ex-string-instruments-14
 
-A piano tuner stretches each octave by matching the lower note's 2nd partial. Take $B = 2.0\times10^{-4}$, constant. (a) How many cents is one octave stretched? (b) If four octaves are tuned upward in succession from the middle, what is the accumulated deviation at the top? (c) Compare with the $\pm30$ cents of a real Railsback curve, and say why the real answer is larger.
+*(Challenging)* A piano tuner stretches each octave by matching the lower note's 2nd partial. Take $B = 2.0\times10^{-4}$, constant. (a) How many cents is one octave stretched? (b) If four octaves are tuned upward in succession from the middle, what is the accumulated deviation at the top? (c) Compare with the $\pm30$ cents of a real Railsback curve, and say why the real answer is larger.
 :::
 
 :::{solution} ex-string-instruments-14

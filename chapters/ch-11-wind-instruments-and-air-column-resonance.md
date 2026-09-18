@@ -309,6 +309,26 @@ A woodwind changes its sounding length by opening holes. Opening a hole creates 
 
 The approximation is imperfect. A hole is not a complete opening: some of the standing wave leaks past it and continues down the remaining tube, so the effective end is a little beyond the hole and depends on the hole's size. Large holes approximate a true open end better, but large holes are hard to cover with fingers: a tension that runs through the whole history of woodwind design and that keywork exists to resolve.
 
+::::{tip} Worked example: what a tone hole does to the pitch
+*The flute of [](#ex-wind-instruments-1) has a sounding length of $65.5$ cm and a fundamental of $262$ Hz. A tone hole is opened $49.1$ cm from the embouchure hole, three-quarters of the way down the tube. Treating the open tone hole as a new open end, what note does the flute now sound, as an interval above the original?*
+
+The tube behaves as an open pipe of the new, shorter length:
+
+$$
+f_1' = \frac{v}{2L'} = \frac{343}{2(0.491)} = 349\ \text{Hz}.
+$$
+
+The interval above the original $262$ Hz is
+
+$$
+1200\log_2\!\left(\frac{349}{262}\right) = 1200\log_2\!\left(\frac{4}{3}\right) = 498\ \text{cents},
+$$
+
+a perfect fourth, because $65.5/49.1$ is very nearly $4/3$.
+
+Therefore a single tone hole, placed at three-quarters of the tube's length, raises the pitch a fourth: exactly the kind of arithmetic a woodwind maker uses when laying out a scale of holes along a bore. Real instruments depart from this idealization in the direction already noted above, some of the standing wave leaks past even an open hole, so the effective end sits a little beyond it, and the true pitch comes out slightly lower than this calculation predicts, more so for a small hole than a large one.
+::::
+
 A **register hole** is a small hole placed near a pressure node of the desired higher mode. It barely disturbs that mode while spoiling the fundamental, so the instrument jumps up. Its placement is a compromise, because one hole must serve many notes, and this is the origin of the weak, stuffy notes near a clarinet's register break.
 
 ### Keys and the Woodwind Compromise
@@ -365,7 +385,7 @@ Players and makers address this in three ways: alternate fingerings, a movable s
 :::{exercise}
 :label: ex-wind-instruments-1
 
-A flute behaves as an open cylinder. Its lowest note is $262$ Hz at $20$ °C. (a) What is its sounding length? (b) What are its next two resonances?
+*(Straightforward)* A flute behaves as an open cylinder. Its lowest note is $262$ Hz at $20$ °C. (a) What is its sounding length? (b) What are its next two resonances?
 :::
 
 :::{solution} ex-wind-instruments-1
@@ -386,7 +406,7 @@ Therefore about $65.5$ cm of sounding length, with resonances at $262$, $524$, $
 :::{exercise}
 :label: ex-wind-instruments-2
 
-A clarinet behaves as a stopped cylinder and its lowest note sounds $147$ Hz. (a) What is its sounding length? (b) What are its next two resonances? (c) What interval is the first overblow?
+*(Moderate)* A clarinet behaves as a stopped cylinder and its lowest note sounds $147$ Hz. (a) What is its sounding length? (b) What are its next two resonances? (c) What interval is the first overblow?
 :::
 
 :::{solution} ex-wind-instruments-2
@@ -415,7 +435,7 @@ Therefore a clarinet gets its low register from $58$ cm of tube where a flute wo
 :::{exercise}
 :label: ex-wind-instruments-3
 
-A pipe is $42.0$ cm long and $2.2$ cm in radius, open at both ends. (a) Find its fundamental ignoring end corrections. (b) Find it including them. (c) Express the difference in cents.
+*(Moderate)* A pipe is $42.0$ cm long and $2.2$ cm in radius, open at both ends. (a) Find its fundamental ignoring end corrections. (b) Find it including them. (c) Express the difference in cents.
 :::
 
 :::{solution} ex-wind-instruments-3
@@ -444,7 +464,7 @@ Therefore ignoring the correction would put the prediction more than a semitone 
 :::{exercise}
 :label: ex-wind-instruments-4
 
-A saxophone and a clarinet both sound $147$ Hz. (a) Compare their sounding lengths. (b) Compare the frequencies of their first four resonances. (c) Which is heavier to carry, and why is it worth it?
+*(Moderate)* A saxophone and a clarinet both sound $147$ Hz. (a) Compare their sounding lengths. (b) Compare the frequencies of their first four resonances. (c) Which is heavier to carry, and why is it worth it?
 :::
 
 :::{solution} ex-wind-instruments-4
@@ -463,7 +483,7 @@ Therefore the clarinet trades tone and fingering simplicity for compactness, and
 :::{exercise}
 :label: ex-wind-instruments-5
 
-A trumpet's tube is $1.48$ m long. (a) Treating it as an open pipe, find the first four resonances. (b) Which of these can a player sound with the lips? (c) What are the corresponding musical intervals?
+*(Moderate)* A trumpet's tube is $1.48$ m long. (a) Treating it as an open pipe, find the first four resonances. (b) Which of these can a player sound with the lips? (c) What are the corresponding musical intervals?
 :::
 
 :::{solution} ex-wind-instruments-5
@@ -482,7 +502,7 @@ Therefore the playable notes are the harmonic series from the second upward, and
 :::{exercise}
 :label: ex-wind-instruments-6
 
-A trumpet's second valve lowers the pitch by a semitone. (a) By what factor must the tube lengthen? (b) If the open tube is $1.48$ m, how much tube must the valve add? (c) Repeat for the first valve, which lowers by a whole tone.
+*(Moderate)* A trumpet's second valve lowers the pitch by a semitone. (a) By what factor must the tube lengthen? (b) If the open tube is $1.48$ m, how much tube must the valve add? (c) Repeat for the first valve, which lowers by a whole tone.
 :::
 
 :::{solution} ex-wind-instruments-6
@@ -513,7 +533,7 @@ Therefore about $8.8$ cm and $18.1$ cm of extra tubing. Note that the second is 
 :::{exercise}
 :label: ex-wind-instruments-7
 
-Using the trumpet of [](#ex-wind-instruments-6), a player presses valves 1 and 2 together, intending a minor third. (a) What total length results? (b) What length would a true minor third need? (c) How sharp is the note, in cents?
+*(Challenging)* Using the trumpet of [](#ex-wind-instruments-6), a player presses valves 1 and 2 together, intending a minor third. (a) What total length results? (b) What length would a true minor third need? (c) How sharp is the note, in cents?
 :::
 
 :::{solution} ex-wind-instruments-7
@@ -544,7 +564,7 @@ Therefore the combination is about $11$ cents sharp. The cause is exactly as §1
 :::{exercise}
 :label: ex-wind-instruments-8
 
-A brass instrument's bell has a cut-off frequency of $1.5$ kHz. (a) What happens to a $400$ Hz component reaching the bell? (b) A $4$ kHz component? (c) Explain why both behaviors are necessary.
+*(Straightforward)* A brass instrument's bell has a cut-off frequency of $1.5$ kHz. (a) What happens to a $400$ Hz component reaching the bell? (b) A $4$ kHz component? (c) Explain why both behaviors are necessary.
 :::
 
 :::{solution} ex-wind-instruments-8
@@ -563,7 +583,7 @@ Therefore the bell must do both, and the cut-off is where it changes its mind, w
 :::{exercise}
 :label: ex-wind-instruments-9
 
-An organ builder must make a stopped pipe sounding $65.4$ Hz at $15$ °C, with a bore radius of $5.0$ cm. (a) Find the speed of sound. (b) Find the required effective length. (c) Find the physical length to cut.
+*(Moderate)* An organ builder must make a stopped pipe sounding $65.4$ Hz at $15$ °C, with a bore radius of $5.0$ cm. (a) Find the speed of sound. (b) Find the required effective length. (c) Find the physical length to cut.
 :::
 
 :::{solution} ex-wind-instruments-9
@@ -590,7 +610,7 @@ Therefore cut $127.1$ cm. Cutting the uncorrected $130.1$ cm would give an effec
 :::{exercise}
 :label: ex-wind-instruments-10
 
-A clarinet's register key must be placed near a pressure node of the third harmonic. The instrument's sounding length is $58.3$ cm and it is stopped at the reed end. (a) Where along the tube is that node? (b) Explain why one hole cannot serve every note perfectly.
+*(Challenging)* A clarinet's register key must be placed near a pressure node of the third harmonic. The instrument's sounding length is $58.3$ cm and it is stopped at the reed end. (a) Where along the tube is that node? (b) Explain why one hole cannot serve every note perfectly.
 :::
 
 :::{solution} ex-wind-instruments-10
@@ -613,7 +633,7 @@ Therefore the register break is inherently a compromise, and the notes furthest 
 :::{exercise}
 :label: ex-wind-instruments-11
 
-Show that a cone closed at its apex has resonances at $f_n = nv/2L$, using the fact that pressure solutions in a cone have the form $p(r) \propto \sin(kr)/r$.
+*(Challenging)* Show that a cone closed at its apex has resonances at $f_n = nv/2L$, using the fact that pressure solutions in a cone have the form $p(r) \propto \sin(kr)/r$.
 :::
 
 :::{solution} ex-wind-instruments-11
@@ -646,7 +666,7 @@ Therefore the cone gives every integer $n$, a complete harmonic series: the same
 :::{exercise}
 :label: ex-wind-instruments-12
 
-A trumpeter plays a pedal tone. The instrument's resonances are at $232$, $348$, $464$, $580$ Hz. (a) What is the common fundamental of these? (b) Does the instrument have a strong resonance there? (c) Explain what the listener hears and why.
+*(Moderate)* A trumpeter plays a pedal tone. The instrument's resonances are at $232$, $348$, $464$, $580$ Hz. (a) What is the common fundamental of these? (b) Does the instrument have a strong resonance there? (c) Explain what the listener hears and why.
 :::
 
 :::{solution} ex-wind-instruments-12
@@ -665,7 +685,7 @@ Therefore the pedal tone is a missing fundamental, and a spectrum analyzer point
 :::{exercise}
 :label: ex-wind-instruments-13
 
-A flute is tuned at $21$ °C and played outdoors at $8$ °C. (a) How far flat does it go? (b) The player pushes the head joint in to shorten the instrument. If the sounding length was $65.5$ cm, by how much must they shorten it?
+*(Moderate)* A flute is tuned at $21$ °C and played outdoors at $8$ °C. (a) How far flat does it go? (b) The player pushes the head joint in to shorten the instrument. If the sounding length was $65.5$ cm, by how much must they shorten it?
 :::
 
 :::{solution} ex-wind-instruments-13
@@ -692,7 +712,7 @@ Therefore the flute goes $40$ cents flat and needs about $15$ mm of head-joint a
 :::{exercise}
 :label: ex-wind-instruments-14
 
-Compare a trombone and a valved trumpet as instruments for playing in just intonation with a string quartet. (a) Which is better suited, and why? (b) What must the trumpeter do instead? (c) Relate your answer to [Chapter 9](#ch-scales-and-tuning).
+*(Moderate)* Compare a trombone and a valved trumpet as instruments for playing in just intonation with a string quartet. (a) Which is better suited, and why? (b) What must the trumpeter do instead? (c) Relate your answer to [Chapter 9](#ch-scales-and-tuning).
 :::
 
 :::{solution} ex-wind-instruments-14

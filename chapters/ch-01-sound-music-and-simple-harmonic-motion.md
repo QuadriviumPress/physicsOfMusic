@@ -460,7 +460,7 @@ The amplitude of a vibrating string is doubled, with everything else unchanged. 
 :::{exercise}
 :label: ex-sound-and-shm-1
 
-A tuning fork vibrates at $512$ Hz. (a) What is its period? (b) How many complete cycles does it make in the $2.4$ s it takes to fade to inaudibility?
+*(Straightforward)* A tuning fork vibrates at $512$ Hz. (a) What is its period? (b) How many complete cycles does it make in the $2.4$ s it takes to fade to inaudibility?
 :::
 
 :::{solution} ex-sound-and-shm-1
@@ -485,7 +485,7 @@ Therefore, the period is $1.95$ ms and the fork completes about $1200$ cycles.
 :::{exercise}
 :label: ex-sound-and-shm-2
 
-The A above middle C is tuned to $440$ Hz. (a) What is the frequency of the A one octave above it, and one octave below? (b) What is the frequency four octaves above $440$ Hz, and is it audible?
+*(Straightforward)* The A above middle C is tuned to $440$ Hz. (a) What is the frequency of the A one octave above it, and one octave below? (b) What is the frequency four octaves above $440$ Hz, and is it audible?
 :::
 
 :::{solution} ex-sound-and-shm-2
@@ -506,7 +506,7 @@ Therefore, the note is $7040$ Hz, which is well inside the audible range of roug
 :::{exercise}
 :label: ex-sound-and-shm-3
 
-A mass of $0.35$ kg hangs from a spring of stiffness $k = 84$ N/m. (a) At what frequency does it oscillate? (b) What mass would be needed to halve that frequency?
+*(Straightforward)* A mass of $0.35$ kg hangs from a spring of stiffness $k = 84$ N/m. (a) At what frequency does it oscillate? (b) What mass would be needed to halve that frequency?
 :::
 
 :::{solution} ex-sound-and-shm-3
@@ -533,7 +533,7 @@ Therefore, the frequency is $2.47$ Hz, and $1.4$ kg would halve it.
 :::{exercise}
 :label: ex-sound-and-shm-4
 
-A simple harmonic oscillator has amplitude $A = 3.0$ mm and frequency $f = 250$ Hz. (a) Write its displacement as a function of time, taking $x = 0$ at $t = 0$ and moving in the positive direction. (b) What is its maximum speed?
+*(Straightforward)* A simple harmonic oscillator has amplitude $A = 3.0$ mm and frequency $f = 250$ Hz. (a) Write its displacement as a function of time, taking $x = 0$ at $t = 0$ and moving in the positive direction. (b) What is its maximum speed?
 :::
 
 :::{solution} ex-sound-and-shm-4
@@ -559,7 +559,7 @@ Therefore, the displacement is $x(t) = (3.0\ \text{mm})\sin[(1571\ \text{s}^{-1}
 :::{exercise}
 :label: ex-sound-and-shm-5
 
-The threshold of hearing corresponds to a pressure amplitude of about $2.0\times10^{-5}$ Pa, and the threshold of pain to about $20$ Pa. (a) What is the ratio of these pressures? (b) What is the ratio of the *energies* they carry?
+*(Straightforward)* The threshold of hearing corresponds to a pressure amplitude of about $2.0\times10^{-5}$ Pa, and the threshold of pain to about $20$ Pa. (a) What is the ratio of these pressures? (b) What is the ratio of the *energies* they carry?
 :::
 
 :::{solution} ex-sound-and-shm-5
@@ -584,7 +584,7 @@ Therefore, the ear handles a millionfold range of pressures, which is a million-
 :::{exercise}
 :label: ex-sound-and-shm-6
 
-A guitar string's vibration decays with $\tau = 1.8$ s. (a) What fraction of its initial amplitude remains after $3.0$ s? (b) After how long has the amplitude fallen to $10\%$ of its initial value? (c) What fraction of the initial *energy* remains at that moment?
+*(Moderate)* A guitar string's vibration decays with $\tau = 1.8$ s. (a) What fraction of its initial amplitude remains after $3.0$ s? (b) After how long has the amplitude fallen to $10\%$ of its initial value? (c) What fraction of the initial *energy* remains at that moment?
 :::
 
 :::{solution} ex-sound-and-shm-6
@@ -612,7 +612,7 @@ Therefore, about $19\%$ of the amplitude remains after $3.0$ s, $10\%$ remains a
 :::{exercise}
 :label: ex-sound-and-shm-7
 
-Two identical springs, each of stiffness $k$, support the same mass $m$, first one at a time, then both side by side in parallel. By what factor does the oscillation frequency change when the second spring is added?
+*(Moderate)* Two identical springs, each of stiffness $k$, support the same mass $m$, first one at a time, then both side by side in parallel. By what factor does the oscillation frequency change when the second spring is added?
 :::
 
 :::{solution} ex-sound-and-shm-7
@@ -633,7 +633,7 @@ Therefore, the frequency rises by a factor of $\sqrt2$, about $41\%$, which, as 
 :::{exercise}
 :label: ex-sound-and-shm-8
 
-A pendulum is to be built with a period of exactly $1.00$ s. (a) How long must it be? Take $g = 9.81$ m/s². (b) The same pendulum is taken to the Moon, where $g = 1.62$ m/s². What is its period there?
+*(Straightforward)* A pendulum is to be built with a period of exactly $1.00$ s. (a) How long must it be? Take $g = 9.81$ m/s². (b) The same pendulum is taken to the Moon, where $g = 1.62$ m/s². What is its period there?
 :::
 
 :::{solution} ex-sound-and-shm-8
@@ -659,7 +659,7 @@ Therefore, the pendulum is $24.8$ cm long and swings with a period of $2.46$ s o
 :::{exercise}
 :label: ex-sound-and-shm-9
 
-A loudspeaker cone moves in simple harmonic motion at $80$ Hz with an amplitude of $1.5$ mm. (a) What is the maximum speed of the cone? (b) What is its maximum acceleration, in units of $g$?
+*(Straightforward)* A loudspeaker cone moves in simple harmonic motion at $80$ Hz with an amplitude of $1.5$ mm. (a) What is the maximum speed of the cone? (b) What is its maximum acceleration, in units of $g$?
 :::
 
 :::{solution} ex-sound-and-shm-9
@@ -688,7 +688,7 @@ Therefore, the cone reaches $0.75$ m/s and $39g$. Accelerations of this order ar
 :::{exercise}
 :label: ex-sound-and-shm-10
 
-A note played on a violin has a waveform that repeats every $2.27$ ms. (a) What is its frequency? (b) Which note is it, given that A440 lies $440$ Hz and each semitone is a factor of $2^{1/12}$? (Count semitones from A440.)
+*(Moderate)* A note played on a violin has a waveform that repeats every $2.27$ ms. (a) What is its frequency? (b) Which note is it, given that A440 lies $440$ Hz and each semitone is a factor of $2^{1/12}$? (Count semitones from A440.)
 :::
 
 :::{solution} ex-sound-and-shm-10
@@ -713,7 +713,7 @@ Therefore, the note is A440, sharp by about four hundredths of a semitone, four 
 :::{exercise}
 :label: ex-sound-and-shm-11
 
-Show that for a simple harmonic oscillator the speed at displacement $x$ is
+*(Challenging)* Show that for a simple harmonic oscillator the speed at displacement $x$ is
 
 $$
 v = \omega\sqrt{A^2 - x^2},
@@ -754,7 +754,7 @@ Therefore, the energy is evenly split at about $71\%$ of the amplitude, not at h
 :::{exercise}
 :label: ex-sound-and-shm-12
 
-A piano string and a wine glass are both struck and left to ring. The string's amplitude falls to half in $0.9$ s; the glass's falls to half in $4.5$ s. (a) Find $\tau$ for each. (b) Which radiates sound more efficiently, and how do you know? (c) Estimate how long each remains audible if a note becomes inaudible once its amplitude has fallen by a factor of $10^{3}$.
+*(Moderate)* A piano string and a wine glass are both struck and left to ring. The string's amplitude falls to half in $0.9$ s; the glass's falls to half in $4.5$ s. (a) Find $\tau$ for each. (b) Which radiates sound more efficiently, and how do you know? (c) Estimate how long each remains audible if a note becomes inaudible once its amplitude has fallen by a factor of $10^{3}$.
 :::
 
 :::{solution} ex-sound-and-shm-12
@@ -785,7 +785,7 @@ Therefore, the string rings for about $9$ s and the glass for about $45$ s. The 
 :::{exercise}
 :label: ex-sound-and-shm-13
 
-A student claims that because sound is a pressure wave, a loudspeaker must push a "packet of air" from the cone to the listener's ear. (a) Estimate how long a packet of air would take to travel $5$ m if it moved at the maximum cone speed of $0.75$ m/s found in [](#ex-sound-and-shm-9). (b) Sound actually covers $5$ m in about $15$ ms. Use the comparison to explain what is wrong with the student's picture.
+*(Moderate)* A student claims that because sound is a pressure wave, a loudspeaker must push a "packet of air" from the cone to the listener's ear. (a) Estimate how long a packet of air would take to travel $5$ m if it moved at the maximum cone speed of $0.75$ m/s found in [](#ex-sound-and-shm-9). (b) Sound actually covers $5$ m in about $15$ ms. Use the comparison to explain what is wrong with the student's picture.
 :::
 
 :::{solution} ex-sound-and-shm-13
@@ -806,7 +806,7 @@ Therefore, the student's picture is wrong in both magnitude and kind. What trave
 :::{exercise}
 :label: ex-sound-and-shm-14
 
-A mass–spring system is set oscillating with amplitude $A$. A second, identical system is set oscillating with amplitude $3A$. (a) Compare their frequencies. (b) Compare their maximum speeds. (c) Compare their energies. (d) Which comparison explains why a piano stays in tune as the pianist plays louder?
+*(Moderate)* A mass–spring system is set oscillating with amplitude $A$. A second, identical system is set oscillating with amplitude $3A$. (a) Compare their frequencies. (b) Compare their maximum speeds. (c) Compare their energies. (d) Which comparison explains why a piano stays in tune as the pianist plays louder?
 :::
 
 :::{solution} ex-sound-and-shm-14
