@@ -7,6 +7,7 @@ on:
       - 'plugins/**'
       - 'templates/**'
       - 'scripts/build-exports.sh'
+      - 'scripts/run-myst.mjs'
       - 'scripts/tex-to-docx.py'
       - 'myst.yml'
       - 'package*.json'
@@ -63,4 +64,4 @@ jobs:
               fi
             done < <(git diff --name-only --diff-filter=ACMR -z "$BASE_SHA" HEAD -- 'chapters/*.md')
           fi
-          npx myst build --pdf "${chapters[@]}"
+          node scripts/run-myst.mjs build --pdf "${chapters[@]}"

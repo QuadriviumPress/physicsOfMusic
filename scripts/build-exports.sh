@@ -45,12 +45,12 @@ build_book() {
   # MYST_SITE_URL is emptied, not just left alone: CI exports it for the
   # offprint step, and inheriting it here would push the book's own
   # chapter cross-references out to the web instead of jumping within the PDF.
-  MYST_PRINT=full MYST_SITE_URL= npx myst build --tex
+  MYST_PRINT=full MYST_SITE_URL= node scripts/run-myst.mjs build --tex
 }
 
 build_student() {
   step "Student edition (exercises without solutions)"
-  MYST_PRINT=student MYST_SITE_URL= npx myst build --tex
+  MYST_PRINT=student MYST_SITE_URL= node scripts/run-myst.mjs build --tex
   mv "$BOOK" "$OUT/physics-of-music-student.pdf"
 }
 
@@ -60,7 +60,7 @@ build_chapters() {
   # holds one chapter, so its cross-chapter references have to leave the file.
   # Setting this while building the book would send the book's own internal
   # links out to the web as well.
-  MYST_PRINT=full MYST_SITE_URL="$SITE_URL" npx myst build --pdf chapters/*.md
+  MYST_PRINT=full MYST_SITE_URL="$SITE_URL" node scripts/run-myst.mjs build --pdf chapters/*.md
 }
 
 build_docx() {

@@ -47,7 +47,7 @@ project:
 """)
         for edition in ("student", "full"):
             env = {**os.environ, "MYST_PRINT": edition, "MYST_SITE_URL": ""}
-            subprocess.run([str(ROOT / "node_modules/.bin/myst"), "build", "--tex"], cwd=work, env=env, check=True)
+            subprocess.run(["node", str(ROOT / "scripts/run-myst.mjs"), "build", "--tex"], cwd=work, env=env, check=True)
             text = subprocess.check_output(["pdftotext", str(work / "exports/smoke.pdf"), "-"], text=True)
             assert "ExerciseSentinel" in text, "PDF lost the exercise"
             assert ("SolutionSentinel" in text) == (edition == "full"), f"Wrong solution visibility in {edition} PDF"

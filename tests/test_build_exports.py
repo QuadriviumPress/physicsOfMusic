@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -11,20 +10,21 @@ class BuildExportsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(prefix="physics-export-script-") as directory:
             root = Path(directory)
             (root / "scripts").mkdir()
-            (root / "bin").mkdir()
             script = root / "scripts/build-exports.sh"
             shutil.copy(Path(__file__).resolve().parents[1] / "scripts/build-exports.sh", script)
-            npx = root / "bin/npx"
-            npx.write_text("#!/bin/sh\nmkdir -p exports\nprintf 'PDF fixture' > exports/physics-of-music.pdf\n")
-            npx.chmod(0o755)
-            env = {**os.environ, "PATH": f"{root / 'bin'}:{os.environ['PATH']}"}
-            result = subprocess.run(["bash", str(script), "pdf"], env=env, capture_output=True, text=True)
+            launcher = root / "scripts/run-myst.mjs"
+            launcher.write_text(
+                "import fs from 'node:fs';\n"
+                "fs.mkdirSync('exports', { recursive: true });\n"
+                "fs.writeFileSync('exports/physics-of-music.pdf', 'PDF fixture');\n"
+            )
+            result = subprocess.run(["bash", str(script), "pdf"], capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
             self.assertEqual(
                 {file.name for file in (root / "exports").iterdir()},
                 {"physics-of-music.pdf", "physics-of-music-student.pdf"},
             )
             self.assertIn("physics-of-music-student.pdf", result.stdout)
-            npx.write_text("#!/bin/sh\nexit 17\n")
-            result = subprocess.run(["bash", str(script), "pdf"], env=env, capture_output=True, text=True)
+            launcher.write_text("process.exit(17);\n")
+            result = subprocess.run(["bash", str(script), "pdf"], capture_output=True, text=True)
             self.assertEqual(result.returncode, 17)
