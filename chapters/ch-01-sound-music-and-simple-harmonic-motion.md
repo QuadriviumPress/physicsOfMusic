@@ -113,7 +113,7 @@ The Royal Institution pumps the air from a bell jar while a bell continues to vi
 :label: fig:ch01-open-guitarist
 :alt: Django Reinhardt playing a guitar.
 
-Music begins with a physical performer and instrument, then becomes a signal at the ear. William P. Gottlieb, public domain.
+Music begins with a physical performer and instrument, then becomes a signal at the ear. The guitarist is Django Reinhardt, who lost the use of the third and fourth fingers of his left hand in a caravan fire at eighteen. He rebuilt his technique around the two fingers that still worked, fretting melodies with index and middle and reaching the damaged pair across only the top strings for chords. The constraint became a style: the fast single-note lines and compact voicings of gypsy jazz. Physics fixes what a vibrating string can do, but it leaves the player remarkable freedom in how to get there. William P. Gottlieb, public domain.
 ```
 
 ### Pitch, Loudness, Timbre, Duration
