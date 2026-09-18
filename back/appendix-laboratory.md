@@ -12,7 +12,11 @@ assertions and check them.
 They are written to be run with whatever is available. Where a laboratory has an
 oscilloscope and a function generator, use them: reading a waveform off a
 calibrated screen builds an intuition that a software display does not. Where it
-does not, every exercise here has a software path, and the software is free.
+does not, every exercise here has a software path, and that path is now a
+browser tab. The simulations named below open from a link, install nothing, ask
+for no account, and read the laptop's own microphone; the only downloads this
+appendix still asks for are for the two exercises that need to *edit* a
+recording.
 
 ## Equipment
 
@@ -21,17 +25,61 @@ exercises at reduced precision.
 
 | Item | Laboratory version | Substitute |
 |---|---|---|
-| Signal source | Function generator | A tone-generator app, or an online tone generator |
-| Waveform display | Oscilloscope | [Audacity](https://www.audacityteam.org/) or [Sonic Visualiser](https://www.sonicvisualiser.org/), recording from the microphone |
-| Spectrum analyzer | Dedicated analyzer, or a scope with `FFT` | Audacity's *Analyze > Plot Spectrum*; Sonic Visualiser's spectrogram |
-| Sound level meter | Calibrated Type 2 meter | A phone `SPL` app, **uncalibrated**, so use it for *differences*, never absolute levels |
-| Microphone | Measurement microphone | The laptop's built-in microphone |
-| Miscellaneous | Meter rule, thermometer, tuning fork, a length of string, a set of masses, a pulley, a long tube or a graduated cylinder |, |
+| Signal source | Function generator | The generator built into the [Oscilloscope](https://openlyceum.github.io/Oscilloscope/) simulation: sine, square, triangle, sawtooth, pulse, and noise, with amplitude, `DC` offset, and duty cycle. It *draws* its output rather than playing it, so for a tone you have to hear, use the Composer screen of [Wave Composer](https://openlyceum.github.io/WaveComposer/) |
+| Waveform display | Oscilloscope | The same [Oscilloscope](https://openlyceum.github.io/Oscilloscope/) simulation, driven by its own generator or by the microphone: two channels, `AC`/`DC`/`GND` coupling, triggering, `X-Y` and `FFT` modes, $\Delta t$ and $\Delta V$ cursors, live frequency, period, $V_\text{pp}$ and $V_\text{rms}$ readouts, and `CSV` export |
+| Spectrum analyzer | Dedicated analyzer, or a scope with `FFT` | The Oscilloscope's `FFT` mode for one spectrum at a time; the Analyzer screen of [Wave Composer](https://openlyceum.github.io/WaveComposer/) for a live spectrogram with the instantaneous spectrum and an `LPC` envelope beside it. [Audacity](https://www.audacityteam.org/)'s *Analyze > Plot Spectrum* or [Sonic Visualiser](https://www.sonicvisualiser.org/) if you would rather work from a saved file |
+| Sound level meter | Calibrated Type 2 meter | Nothing in a browser substitutes for this one. A phone `SPL` app, **uncalibrated**, so use it for *differences*, never absolute levels |
+| Microphone | Measurement microphone | The laptop's built-in microphone, which both simulations read directly once you grant the browser permission |
+| Miscellaneous | Meter rule, thermometer, tuning fork, a length of string, a set of masses, a pulley, a long tube or a graduated cylinder | A tape measure, an outdoor thermometer or the day's weather report, a tuning-fork app, fishing line, kitchen scales and any objects you can hang from them, a smooth rod or a pencil taped to a table edge for the pulley, and a cardboard tube or a tall bottle for the air column. Where the apparatus is missing outright, [](#lab-simulations) says which exercise a simulation can carry instead |
 
 **One warning about phone apps.** A phone microphone rolls off sharply below
 about 100 Hz and its automatic gain control fights you. Turn off any
 noise-suppression or "voice enhancement" setting before recording, and never
-trust a phone for an absolute sound level.
+trust a phone for an absolute sound level. The same warning applies to a laptop
+microphone feeding a simulation: what you are measuring is the *shape* of a
+spectrum and the *ratios* of frequencies, never an absolute level.
+
+(lab-simulations)=
+### What a Simulation Can and Cannot Replace
+
+Three of the book's simulations do most of the bench work. The
+[Oscilloscope](https://openlyceum.github.io/Oscilloscope/) is a function
+generator and a dual-channel scope in one window;
+[Wave Composer](https://openlyceum.github.io/WaveComposer/) synthesizes tones
+and analyzes live or recorded sound; and
+[Standing Waves](https://openlyceum.github.io/StandingWaves/) and
+[Resonance](https://openlyceum.github.io/Resonance/) supply the apparatus of two
+exercises whose hardware is the hardest to improvise.
+
+Where a simulation appears in the table below, it is genuinely the instrument,
+not a picture of one: you set the controls, read the numbers off the screen, and
+write them up the same way. Where the entry says *rehearsal*, the quantity the
+exercise asks for is an **input** to the model rather than an output of it, and
+running the simulation teaches you the procedure but cannot measure the world.
+
+| Exercise | Simulation | What it gives, and what it does not |
+|---|---|---|
+| [B.1](#lab-b1) | Oscilloscope | The whole exercise. The generator is silent, so step 4's *what changes in what you hear* needs a tone from Wave Composer or a real generator alongside |
+| [B.2](#lab-b2) | Standing Waves, *Standing Waves* screen | Rehearsal only. The speed of sound is what the model is given, not what it finds; the measurement needs a real tube and a real thermometer |
+| [B.3](#lab-b3) | [Wave on a String](https://phet.colorado.edu/en/simulations/wave-on-a-string) | The harmonic sweep of step 2 and the shape of every mode. Tension is a slider without units, so the $f_1$ against $\sqrt{T}$ plot and the value of $\mu$ need the real apparatus |
+| [B.4](#lab-b4) | Resonance, *Single Oscillator* screen | The whole exercise, and better than the bench version: you set the mass, stiffness, and damping, so the $Q$ you measure from the bandwidth can be checked against the $Q$ those numbers predict |
+| [B.5](#lab-b5) | Wave Composer, *Analyzer* screen | Spectra and spectrograms of anything you play into the microphone, which is the body of the exercise. The listening test needs an editor to cut the attacks off |
+| [B.6](#lab-b6) | — | None. Levels, distances, and rooms are physical |
+| [B.7](#lab-b7) | Wave Composer, *Composer* screen | Steps 1 and 2: it sums up to four sinusoids and beat pairs and plays them, so the beats are both visible and countable. Steps 3 and 4 measure *you*, and need a partner |
+| [B.8](#lab-b8) | Wave Composer, *Analyzer* screen | The frequency measurement, by pitch tracking over roughly 60 to 800 Hz, which covers the middle octave step 2 asks for. The instrument itself has to be real |
+| [B.9](#lab-b9) | Standing Waves, *Instruments* screen | The prediction, exactly: the 1 : 2 : 3 and 1 : 3 : 5 ratios and the stopped pipe's octave drop. It deliberately omits the end correction, which is the quantity this exercise measures, so the discrepancy between it and your tube *is* the result |
+| [B.10](#lab-b10) | — | None. Two real rooms, or nothing |
+
+```{openlyceum} Oscilloscope
+:label: fig:lab-oscilloscope-sim
+:alt: A phosphor-green oscilloscope graticule beside vertical, horizontal, and trigger controls, with a function generator patched to channel one.
+
+The bench of [B.1](#lab-b1), and of most of what follows. Its *Lab* menu holds
+four short drills, measuring $V_\text{pp}$, catching a normal trigger, finding
+the third harmonic in `FFT` mode, and matching a 90° Lissajous figure, which
+between them cover every control the exercises use. Work through those before
+touching a real instrument, and the real instrument stops being intimidating.
+```
 
 :::{warning}
 Several of these exercises involve sustained tones through headphones. Set the
@@ -57,9 +105,10 @@ and the third is the one most often skipped:
 
 
 
+(lab-b1)=
 ## B.1 The Oscilloscope and the Function Generator
 
-**Supports** Chapters 1–2. **Time** 60–90 minutes.
+**Supports** Chapters 1–2. **Time** 60–90 minutes. **Simulation** [Oscilloscope](https://openlyceum.github.io/Oscilloscope/).
 
 The point of the first exercise is not to discover anything. It is to learn to
 read the two instruments the rest of the exercises depend on, and to connect
@@ -94,9 +143,10 @@ what you see on a screen to what you hear.
 
 
 
+(lab-b2)=
 ## B.2 The Speed of Sound
 
-**Supports** Chapter 2. **Time** 60 minutes.
+**Supports** Chapter 2. **Time** 60 minutes. **Simulation** [Standing Waves](https://openlyceum.github.io/StandingWaves/), for rehearsal only.
 
 ### Method A, Resonance in a tube
 
@@ -133,7 +183,7 @@ exactly what you will measure in [B.9](#lab-b9).
 (lab-b3)=
 ## B.3 Standing Waves on a String
 
-**Supports** Chapter 3. **Time** 90 minutes.
+**Supports** Chapter 3. **Time** 90 minutes. **Simulation** [Wave on a String](https://phet.colorado.edu/en/simulations/wave-on-a-string), in part.
 
 ### Procedure
 
@@ -160,9 +210,10 @@ exactly what you will measure in [B.9](#lab-b9).
 
 
 
+(lab-b4)=
 ## B.4 Resonance and the Quality Factor
 
-**Supports** Chapter 4. **Time** 60 minutes.
+**Supports** Chapter 4. **Time** 60 minutes. **Simulation** [Resonance](https://openlyceum.github.io/Resonance/).
 
 ### Procedure
 
@@ -189,9 +240,10 @@ exactly what you will measure in [B.9](#lab-b9).
 
 
 
+(lab-b5)=
 ## B.5 The Spectra of Musical Instruments
 
-**Supports** Chapter 5. **Time** 90 minutes.
+**Supports** Chapter 5. **Time** 90 minutes. **Simulation** [Wave Composer](https://openlyceum.github.io/WaveComposer/).
 
 This is the central exercise of the course.
 
@@ -225,9 +277,10 @@ This is the central exercise of the course.
 
 
 
+(lab-b6)=
 ## B.6 Sound Level, Distance, and Addition
 
-**Supports** Chapter 7. **Time** 60 minutes.
+**Supports** Chapter 7. **Time** 60 minutes. **Simulation** none; this one is physical.
 
 Use a sound level meter if one is available. A phone app will do, provided every
 conclusion is drawn from *differences* between readings.
@@ -256,9 +309,10 @@ conclusion is drawn from *differences* between readings.
 
 
 
+(lab-b7)=
 ## B.7 Beats and the Just-Noticeable Difference
 
-**Supports** Chapter 8. **Time** 45 minutes.
+**Supports** Chapter 8. **Time** 45 minutes. **Simulation** [Wave Composer](https://openlyceum.github.io/WaveComposer/), for steps 1 and 2.
 
 ### Procedure
 
@@ -286,9 +340,10 @@ conclusion is drawn from *differences* between readings.
 
 
 
+(lab-b8)=
 ## B.8 Measuring a Tuning
 
-**Supports** Chapter 9. **Time** 90 minutes.
+**Supports** Chapter 9. **Time** 90 minutes. **Simulation** [Wave Composer](https://openlyceum.github.io/WaveComposer/), as the frequency meter.
 
 ### Procedure
 
@@ -314,7 +369,7 @@ conclusion is drawn from *differences* between readings.
 (lab-b9)=
 ## B.9 Air Columns and the End Correction
 
-**Supports** Chapter 11. **Time** 60 minutes.
+**Supports** Chapter 11. **Time** 60 minutes. **Simulation** [Standing Waves](https://openlyceum.github.io/StandingWaves/), for the prediction.
 
 ### Procedure
 
@@ -340,9 +395,10 @@ conclusion is drawn from *differences* between readings.
 
 
 
+(lab-b10)=
 ## B.10 Reverberation Time
 
-**Supports** Chapter 14. **Time** 60 minutes, plus access to two very different rooms.
+**Supports** Chapter 14. **Time** 60 minutes, plus access to two very different rooms. **Simulation** none; this one needs two real rooms.
 
 ### Procedure
 

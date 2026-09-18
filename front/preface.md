@@ -110,7 +110,8 @@ simulation.
 
 Two appendices exist because two of the course's aims cannot be met by reading.
 [Laboratory Exercises](#appendix-laboratory) is a set of measurements
-using an oscilloscope, a function generator, and audio-analysis software,
+using an oscilloscope, a function generator, and audio-analysis software, or the
+browser simulations that stand in for all three where the hardware is missing,
 enough to take the book's claims about spectra, air columns, and beats and check
 them. [The Final Project](#appendix-final-project) is guidance for
 measuring something of one's own and explaining it to somebody who does not
