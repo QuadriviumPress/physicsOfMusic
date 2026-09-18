@@ -3,6 +3,9 @@
 # so myst.yml `downloads:` entries resolve when the HTML site is built.
 set -euo pipefail
 
+# `gh` requires GH_TOKEN; Actions exposes GITHUB_TOKEN by default.
+export GH_TOKEN="${GH_TOKEN:-${GITHUB_TOKEN:-}}"
+
 mkdir -p exports
 
 run_id=$(gh run list \
