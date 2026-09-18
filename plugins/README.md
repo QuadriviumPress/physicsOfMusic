@@ -1,6 +1,6 @@
 # MyST plugins
 
-Five plugins, and the first four are about the same problem: the website can do
+Six plugins, and the first five are about the same problem: the website can do
 things paper cannot, and the book has to survive being printed anyway.
 
 - [`simulation.mjs`](simulation.mjs) — embeds a running browser simulation on
@@ -12,19 +12,16 @@ things paper cannot, and the book has to survive being printed anyway.
 - [`animation.mjs`](animation.mjs) — embeds one of the book's own short,
   looping animations on the website and falls back to the matching static SVG
   figure everywhere else. Provides `{animation}` (alias `{anim}`).
-<<<<<<< Updated upstream
 - [`video.mjs`](video.mjs) — embeds a YouTube or Vimeo video on the website and
   falls back to a poster image and a durable source link everywhere else.
   Provides `{video}`.
-=======
 - [`h5p.mjs`](h5p.mjs) — embeds one of the book's own self-hosted H5P
   "check your understanding" exercises and falls back to the question, written
   out ungraded, everywhere else. Provides `{h5p}`.
->>>>>>> Stashed changes
 - [`export.mjs`](export.mjs) — rewrites the node types no export renderer
   handles into ones every renderer handles. Inert unless `MYST_PRINT` is set.
 
-The four `.mjs` media plugins are registered in [`../myst.yml`](../myst.yml)
+The five `.mjs` media plugins are registered in [`../myst.yml`](../myst.yml)
 alongside `export.mjs`:
 
 ```yaml
@@ -33,35 +30,21 @@ project:
     - plugins/simulation.mjs
     - plugins/audio.mjs
     - plugins/animation.mjs
-<<<<<<< Updated upstream
     - plugins/video.mjs
-=======
     - plugins/h5p.mjs
->>>>>>> Stashed changes
     - plugins/export.mjs
 site:
   options:
     style: css/custom.css
 ```
 
-<<<<<<< Updated upstream
-The stylesheet the simulation, animation, and video plugins depend on lives in
+The stylesheet the simulation, animation, video, and H5P plugins depend on lives in
 [`../css/custom.css`](../css/custom.css), not beside the plugins: MyST's
 `site.options.style` takes exactly one file, and the book needs all media rules
-in that file.
-Sections 1, 3, and 4 of that file are load-bearing — without them every
-simulation, animation, or video has its static image sitting underneath it.
-That is graceful degradation rather than a break, but it is why the stylesheet
-is registered.
-=======
-The stylesheet the simulation, animation, and h5p plugins depend on lives in
-[`../css/custom.css`](../css/custom.css), not beside the plugins: MyST's
-`site.options.style` takes exactly one file, and the book needs rules for all
-three. Sections 1, 3, and 4 of that file are load-bearing — without them every
-simulation, animation, or H5P exercise has its static fallback sitting right
-underneath it. That is graceful degradation rather than a break, but it is why
-the stylesheet is registered.
->>>>>>> Stashed changes
+in that file. Sections 1, 3, 4, and 5 of that file are load-bearing — without
+them every simulation, animation, video, or H5P exercise has its static
+fallback sitting underneath it. That is graceful degradation rather than a
+break, but it is why the stylesheet is registered.
 
 Edits to a `.mjs` plugin do **not** hot-reload. Restart `myst start` after
 changing one.
@@ -365,7 +348,6 @@ relative id would break on any chapter page nested below the project root.
 `project.static_files` in `myst.yml` declares `animations` to keep those URLs
 stable and unhashed, the same way it declares `audio` and `audio-player.html`.
 
-<<<<<<< Updated upstream
 # The video plugin
 
 `{video}` embeds a YouTube or Vimeo player on the website while keeping the
@@ -404,7 +386,31 @@ embed URLs plus `youtu.be` links are accepted; normal Vimeo and Vimeo player
 URLs are accepted. The iframe uses `youtube-nocookie.com` for YouTube. The link
 in the caption always points to the URL written by the author, including a
 timestamp or Vimeo privacy hash when present.
-=======
+
+## Options
+
+| Option | Default | Notes |
+|---|---|---|
+| `poster` | YouTube thumbnail | Static fallback image. **Required for Vimeo.** Prefer a committed local JPEG or PNG so exports do not need the network. |
+| `video-title` | `YouTube video` / `Vimeo video` | Human-readable title used for the source link and default accessibility text. |
+| `alt` | derived | Alternative text for the poster. Describe what the poster shows, not merely that it is a video. |
+| `title` | `video-title` | Accessible title for the iframe. |
+| `link-text` | `video-title` | Text of the source link. |
+| `width` | `100%` | **Percentages only.** The theme mangles `px` values. |
+| `aspect` | `16:9` | Other ratios need a matching rule in `../css/custom.css`. |
+| `align` | `center` | `left`, `center`, `right`. |
+| `label` | — | Makes the figure cross-referenceable. |
+| `class` | — | Extra classes on the video frame. |
+| `enumerated` | — | Whether the figure is numbered. |
+
+## How the fallback works
+
+The directive uses the same structural fallback as `{simulation}` and
+`{animation}`: an `iframe` and a plain `image` are siblings in one figure.
+The website hides the image; browser print hides the iframe; PDF and Word keep
+the image after the export path drops the unsupported iframe. The caption's
+ordinary link survives every format, so a reader can still open the video.
+
 # The H5P plugin
 
 A short, auto-graded, multiple-choice question a reader can answer inline,
@@ -438,33 +444,11 @@ A bare id resolves to `/h5p/embed.html?id=<id>`, which loads
 `/h5p/content/<id>/` through the vendored player. The body is **required**: it
 is not a caption, it is the fallback question text itself, shown instead of the
 widget in every format that cannot run an iframe.
->>>>>>> Stashed changes
 
 ## Options
 
 | Option | Default | Notes |
 |---|---|---|
-<<<<<<< Updated upstream
-| `poster` | YouTube thumbnail | Static fallback image. **Required for Vimeo.** Prefer a committed local JPEG or PNG so exports do not need the network. |
-| `video-title` | `YouTube video` / `Vimeo video` | Human-readable title used for the source link and default accessibility text. |
-| `alt` | derived | Alternative text for the poster. Describe what the poster shows, not merely that it is a video. |
-| `title` | `video-title` | Accessible title for the iframe. |
-| `link-text` | `video-title` | Text of the source link. |
-| `width` | `100%` | **Percentages only.** The theme mangles `px` values. |
-| `aspect` | `16:9` | Other ratios need a matching rule in `../css/custom.css`. |
-| `align` | `center` | `left`, `center`, `right`. |
-| `label` | — | Makes the figure cross-referenceable. |
-| `class` | — | Extra classes on the video frame. |
-| `enumerated` | — | Whether the figure is numbered. |
-
-## How the fallback works
-
-The directive uses the same structural fallback as `{simulation}` and
-`{animation}`: an `iframe` and a plain `image` are siblings in one figure.
-The website hides the image; browser print hides the iframe; PDF and Word keep
-the image after the export path drops the unsupported iframe. The caption's
-ordinary link survives every format, so a reader can still open the video.
-=======
 | `title` | derived | Accessible title for the iframe. |
 | `width` | `100%` | **Percentages only.** The theme mangles `px` values. |
 | `align` | `center` | `left`, `center`, `right`. |
@@ -500,7 +484,6 @@ player URL is root-relative: MyST does not resolve a relative path written
 into an `iframe` node the way it resolves one in a `link` or `image` node.
 `project.static_files` in `myst.yml` declares `h5p` to keep that URL stable
 and unhashed, the same way it declares `audio` and `animations`.
->>>>>>> Stashed changes
 
 # The export plugin
 
@@ -514,11 +497,7 @@ types this book leans on are not in that set:
 | `solution` | `:::{solution}` | every worked solution vanishes |
 | `aside` | `:::{margin}` | every margin note vanishes |
 | `details` | `:::{dropdown}` | every optional derivation vanishes |
-<<<<<<< Updated upstream
-| `iframe` | simulation, animation, and video directives | intended — the sibling image carries it |
-=======
-| `iframe` | the simulation, animation, and h5p directives | intended — the sibling fallback carries it |
->>>>>>> Stashed changes
+| `iframe` | simulation, animation, video, and H5P directives | intended — the sibling fallback carries it |
 
 Since a plugin cannot supply a renderer, `export.mjs` rewrites those nodes into
 ones the renderer already understands, and only while an export is being built.

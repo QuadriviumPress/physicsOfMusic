@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import test from 'node:test';
+import { JSDOM } from 'jsdom';
 import plugin, { parseTime, resolveVideo } from '../plugins/video.mjs';
 
 const directive = plugin.directives.find(item => item.name === 'video');
@@ -106,4 +108,20 @@ test('timestamp parsing accepts seconds and h/m/s notation', () => {
   assert.equal(parseTime('1m15s'), 75);
   assert.equal(parseTime('2h3m4s'), 7384);
   assert.equal(parseTime('later'), null);
+});
+
+test('website CSS shows the player without also showing its poster', () => {
+  const css = fs.readFileSync(new URL('../css/custom.css', import.meta.url), 'utf8');
+  const dom = new JSDOM('<style></style>');
+  dom.window.document.querySelector('style').textContent = css;
+  const rules = [...dom.window.document.styleSheets[0].cssRules];
+
+  const posterRule = rules.find(rule => rule.selectorText === '.video-placeholder');
+  assert.equal(posterRule?.style.display, 'none');
+
+  const printRules = [...rules.find(rule => rule.media?.mediaText === 'print').cssRules];
+  const hiddenInPrint = printRules.find(rule => rule.selectorText?.includes('.video-frame'));
+  const shownInPrint = printRules.find(rule => rule.selectorText?.includes('.video-placeholder'));
+  assert.equal(hiddenInPrint?.style.display, 'none');
+  assert.equal(shownInPrint?.style.display, 'block');
 });
