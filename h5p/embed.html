@@ -23,12 +23,16 @@
     container.id = 'h5p-error';
     return;
   }
+  // Absolute asset roots keep H5P media working when the book is deployed
+  // below the web-server root. H5P core otherwise treats a relative content
+  // URL as root-relative when it resolves images and other media.
+  var embedRoot = new URL('.', window.location.href);
   new H5PStandalone.H5P(container, {
-    h5pJsonPath: 'content/' + id,
-    librariesPath: 'libraries',
-    frameJs: 'player/frame.bundle.js',
-    frameCss: 'player/styles/h5p.css',
-    customCss: 'overrides.css'
+    h5pJsonPath: new URL('content/' + encodeURIComponent(id), embedRoot).href,
+    librariesPath: new URL('libraries', embedRoot).href,
+    frameJs: new URL('player/frame.bundle.js', embedRoot).href,
+    frameCss: new URL('player/styles/h5p.css', embedRoot).href,
+    customCss: new URL('overrides.css', embedRoot).href
   });
 })();
 </script>

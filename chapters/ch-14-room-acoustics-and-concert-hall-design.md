@@ -301,6 +301,21 @@ Students from the University of Edinburgh measure the Glasgow Royal Concert Hall
 - **$T_{60}$ is not enough.** Early decay time, clarity $C_{80}$, warmth, and intimacy each correspond to something musicians can name.
 - **Lateral energy is the key discovery**: early reflections from the *sides* produce spaciousness because they reach the two ears differently, while ceiling reflections do not. Narrow shoebox halls outperform wide fan-shaped ones for that reason.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch14-chapter-review
+:label: check:ch14-chapter-review
+:title: Chapter 14 interactive review
+
+1. **Multiple choice.** A diffuse room has volume $1000\ \text{m}^3$ and total absorption $100\ \text{m}^2$ sabins. Does the Sabine equation predict about $0.16$, $1.6$, $6.2$, or $16$ s?
+2. **True or false.** Beyond the critical distance, level continues to fall by $6$ dB for every doubling of distance because direct sound dominates.
+3. **Drag the words.** Match direct sound, early reflections, the reverberant tail, and lateral energy to their perceptual roles.
+4. **Fill in the blanks.** Beyond the ___ distance, the ___ field dominates over direct sound.
+5. **Mark the words.** Identify three specular-reflection defects that diffusion helps cure: “Diffusion helps prevent distinct echo, repeated flutter, and curved-wall focusing by scattering reflections.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why a listener in the back row of a large hall hears a sound only a little quieter than one in row ten, but appreciably less clear.

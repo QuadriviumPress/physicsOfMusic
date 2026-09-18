@@ -393,6 +393,21 @@ There is a continuum here rather than a boundary. A cymbal's partials are so num
 - **Formants** are the fixed resonances of an instrument's body. They stay put as the pitch moves, so a vowel stays recognizable across a singer's range. Source-plus-filter is the model the rest of the book uses.
 - **Noise** has a continuous spectrum and is a genuine part of musical sound, not a defect.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch05-chapter-review
+:label: check:ch05-chapter-review
+:title: Chapter 5 interactive review
+
+1. **Multiple response.** Which statements describe a periodic musical waveform? Consider harmonic spacing, line spectra, phase, and odd versus even harmonics.
+2. **True or false.** For a steady complex tone, changing only the harmonic phases usually changes the perceived timbre dramatically.
+3. **Drag the words.** Match a waveform discontinuity and a kink to $1/n$ or $1/n^2$ spectral falloff, then match short and long analysis windows to time or frequency resolution.
+4. **Fill in the blanks.** Any periodic waveform can be written as a sum of ___ at whole-number multiples of one ___ frequency.
+5. **Mark the words.** Identify the four stages of an ADSR envelope: “Attack, decay, sustain, and release describe how a note changes through time; spectral centroid and formants describe its spectrum.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why the partials of a sustained musical tone must be exact whole-number multiples of the fundamental, without referring to any particular instrument.

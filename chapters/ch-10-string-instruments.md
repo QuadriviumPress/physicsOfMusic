@@ -365,6 +365,21 @@ A well-tuned concert grand is therefore about $30$ cents sharp at the top and $3
 - **Piano hammers strike at about $L/7$** to suppress the seventh harmonic, which is $31$ cents flat of any key. Multiple strings per note exist mainly for the two-stage decay they produce, not for loudness.
 - **Piano tuning is stretched** because string stiffness makes partials sharp: a beatless octave is wider than $2{:}1$, and the accumulated result is the Railsback curve, about $\pm30$ cents at the extremes.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch10-chapter-review
+:label: check:ch10-chapter-review
+:title: Chapter 10 interactive review
+
+1. **Multiple choice.** With length and linear density fixed, by what factor must tension change to raise a string by one octave: $\sqrt{2}$, $2$, or $4$?
+2. **True or false.** An unplugged solid-body electric guitar is quiet and sustains well because it lacks an efficient soundboard coupling the strings to air.
+3. **Drag the words.** Complete the effects of shorter length, greater tension, greater linear density, and winding on a string.
+4. **Fill in the blanks.** Plucking at one-fifth of a string’s length suppresses the ___ harmonic and its ___.
+5. **Mark the words.** Identify the two components that chiefly couple an acoustic string to air: “The string drives the bridge, which drives the soundboard; the large moving surface then radiates efficiently.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why instruments change pitch mainly by changing length rather than tension, using the exponents in $f = (1/2L)\sqrt{T/\mu}$.

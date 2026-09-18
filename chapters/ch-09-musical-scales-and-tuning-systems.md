@@ -451,6 +451,21 @@ The general principle is the one §8.4 established. A scale and a timbre belong 
 - **Pianos are tuned stretched**, because string stiffness makes their partials sharp, and an octave must match the partial rather than the arithmetic.
 - **Other traditions divide the octave differently**, and where their instruments have inharmonic partials those divisions are as well founded as ours.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch09-chapter-review
+:label: check:ch09-chapter-review
+:title: Chapter 9 interactive review
+
+1. **Multiple response.** Which statements are true of twelve-tone equal temperament? Consider its semitone ratio, equivalence of keys, fifth size, and major-third purity.
+2. **True or false.** A chain of twelve acoustically pure fifths closes exactly at seven octaves.
+3. **Drag the words.** Match Pythagorean tuning, just intonation, quarter-comma meantone, and equal temperament to their characteristic compromises.
+4. **Fill in the blanks.** An octave contains ___ cents, so an equal-tempered semitone contains ___ cents.
+5. **Mark the words.** Identify the performers who can continuously bend pitch toward just intonation: “A singer and a violinist can adjust each note continuously; a pianist and an organist are constrained by fixed pitches.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why intervals are ratios rather than differences, and connect the answer to the cochlea.

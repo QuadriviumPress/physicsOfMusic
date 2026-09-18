@@ -375,6 +375,21 @@ The critical band is the ear's frequency-resolution limit, and it does a great d
 - **Masking** renders an audible sound inaudible, spreading much further upward in frequency than downward. It is the basis of perceptual audio coding.
 - **The critical band** is the ear's resolution limit, roughly a third of an octave, hence roughly constant in musical terms. It underlies roughness, dissonance, and the way loudness sums across a spectrum.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch07-chapter-review
+:label: check:ch07-chapter-review
+:title: Chapter 7 interactive review
+
+1. **Multiple choice.** Eight identical, mutually incoherent sources play together. Approximately how much higher is their combined level than one source: $3$, $8$, $9$, or $18$ dB?
+2. **True or false.** Doubling sound-pressure amplitude increases sound-pressure level by about $6$ dB.
+3. **Drag the words.** Complete the rules connecting one sone to phons, a loudness doubling to phons, an outdoor distance doubling to dB, and a doubling of incoherent sources to dB.
+4. **Fill in the blanks.** Use ___ $\log_{10}$ for pressure or amplitude ratios, but ___ $\log_{10}$ for intensity or power ratios.
+5. **Mark the words.** Identify the two ideas explaining why quiet playback loses bass: “At low levels the ear is less sensitive to low frequencies, and equal-loudness contours flatten as the overall level rises.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why the decibel scale uses $10\log$ for intensity and $20\log$ for pressure, and why both give the same level for the same sound.

@@ -9,6 +9,7 @@
   "description": "MyST Markdown textbook on the Physics of Music",
   "scripts": {
     "check:toolchain": "node scripts/check-toolchain.mjs",
+    "h5p:generate": "node scripts/generate-h5p-quizzes.mjs",
     "h5p:prepare": "node scripts/prepare-h5p.mjs",
     "prestart": "npm run check:toolchain && npm run h5p:prepare",
     "start": "myst start",

@@ -359,6 +359,21 @@ The honest position is that the roughness model explains the *sensory* component
 - **Combination tones** at $f_2 - f_1$ and elsewhere arise from nonlinearity in the ear and are heard as separate pitches, not as beats.
 - **The model has limits.** It does not explain harmonic expectation, it does not equate roughness with unpleasantness, and it does not explain the special status of the octave.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch08-chapter-review
+:label: check:ch08-chapter-review
+:title: Chapter 8 interactive review
+
+1. **Multiple choice.** Pure tones at $440$ Hz and $446$ Hz sound together. Is the beat rate $3$, $6$, $443$, or $886$ beats per second?
+2. **True or false.** A missing-fundamental pitch can be heard only when there is physical energy at the fundamental frequency.
+3. **Drag the words.** Match beats, roughness, a combination tone, and a missing fundamental to their physical or perceptual origins.
+4. **Fill in the blank.** Partials at $300$, $400$, and $500$ Hz imply a missing fundamental of ___ Hz.
+5. **Mark the words.** Identify intervals where harmonic complex tones tend to produce strong roughness minima: “Strong minima occur near the unison, octave, fifth, and fourth because many partials coincide; a semitone usually remains rough.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why the just-noticeable difference in pitch is nearly constant in cents but grows steeply in hertz, and relate this to the cochlea.

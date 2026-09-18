@@ -346,6 +346,21 @@ So the steelpan turns one inharmonic plate into many nearly harmonic vibrators, 
 - **A tuned bell has five named partials**, hum, prime, tierce, quint, nominal, placed deliberately, with the tierce a *minor* third by tradition. The strike note is a construction of the ear rather than a measured mode.
 - **Tuned percussion uses three strategies**: move the modes, suppress the ones that do not fit, or exploit the missing fundamental. The steelpan adds a fourth by making many small resonators out of one plate.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity. One question uses the chapter’s Chladni-pattern figure as a visual prompt.
+
+:::{h5p} ch12-chapter-review
+:label: check:ch12-chapter-review
+:title: Chapter 12 interactive review
+
+1. **Multiple choice.** Where should a free-free bar be supported to preserve its fundamental vibration: the center antinode, both ends, or the nodes about $22\%$ from each end?
+2. **Visual true or false.** In a Chladni pattern, sand collects along antinodes where the plate moves most.
+3. **Drag the words.** Match the initial modal-frequency ratios $1:2$, $1:2.76$, $1:1.59$, and $1:1.5$ to an ideal string, free-free bar, circular membrane, and timpano.
+4. **Fill in the blanks.** The perceived timpani pitch is a ___ fundamental one ___ below its lowest prominent partial.
+5. **Mark the words.** Identify the five named bell partials: “The five named partials are hum, prime, tierce, quint, and nominal; the traditional tierce is a minor third.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why a one-dimensional string has harmonic modes and a two-dimensional membrane does not, without invoking Bessel functions by name.

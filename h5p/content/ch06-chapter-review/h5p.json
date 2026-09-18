@@ -1,0 +1,42 @@
+{
+  "title": "The Ear and Hearing Review",
+  "language": "en",
+  "mainLibrary": "H5P.QuestionSet",
+  "embedTypes": [
+    "iframe"
+  ],
+  "license": "CC BY-NC-SA",
+  "licenseVersion": "4.0",
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.QuestionSet",
+      "majorVersion": 1,
+      "minorVersion": 21
+    },
+    {
+      "machineName": "H5P.MultiChoice",
+      "majorVersion": 1,
+      "minorVersion": 16
+    },
+    {
+      "machineName": "H5P.TrueFalse",
+      "majorVersion": 1,
+      "minorVersion": 8
+    },
+    {
+      "machineName": "H5P.DragText",
+      "majorVersion": 1,
+      "minorVersion": 10
+    },
+    {
+      "machineName": "H5P.Blanks",
+      "majorVersion": 1,
+      "minorVersion": 14
+    },
+    {
+      "machineName": "H5P.MarkTheWords",
+      "majorVersion": 1,
+      "minorVersion": 11
+    }
+  ]
+}

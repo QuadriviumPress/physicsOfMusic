@@ -362,6 +362,21 @@ Players and makers address this in three ways: alternate fingerings, a movable s
 - **The pedal tone** is a missing fundamental: the lips buzz at a frequency the instrument barely radiates, and the ear supplies it from the harmonics.
 - **Valve combinations are systematically sharp**, because a fixed length added to an already-lengthened tube lowers the pitch by less than intended. Slides have no such problem.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch11-chapter-review
+:label: check:ch11-chapter-review
+:title: Chapter 11 interactive review
+
+1. **Multiple choice.** Compared with an open cylindrical pipe of the same length, what are the fundamental and harmonic series of a stopped cylindrical pipe?
+2. **True or false.** A cone closed at its apex has only odd harmonics, just like a stopped cylinder.
+3. **Drag the words.** Complete the pressure and displacement node/antinode conditions at open and closed pipe ends.
+4. **Fill in the blanks.** A clarinet’s stopped-cylinder bore overblows to the ___, while a conical saxophone overblows to the ___.
+5. **Mark the words.** Identify the two brass-instrument features that pull resonances toward a useful harmonic series: “The mouthpiece lowers upper resonances and the bell raises lower resonances.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why removing the bore from a clarinet stops it playing a musical note, and why removing the body from a violin does not.

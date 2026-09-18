@@ -39,6 +39,13 @@ to a fixed set of content types: adding an activity automatically expands the
 generated library union. Each library is still emitted once and shared by every
 activity, rather than being duplicated inside every `content/<id>/`.
 
+The Chapter 4–15 review carousels are generated together so their five
+question styles, interface text, and dependency metadata stay consistent. Edit
+their source in `scripts/generate-h5p-quizzes.mjs`, then run
+`npm run h5p:generate`. The generated `content/ch04-chapter-review/` through
+`content/ch15-chapter-review/` folders are committed authoring inputs, just like
+the hand-authored single questions for Chapters 1–3.
+
 The browser also loads libraries on demand from each activity's metadata; it
 does not download the whole generated catalog. The `{h5p}` iframe is marked for
 native lazy loading so activities below the viewport need not start at once.
@@ -140,6 +147,14 @@ small hand-authored questions and readable diffs:
 | Library | Version |
 |---|---|
 | H5P.MultiChoice | 1.16 |
+| H5P.QuestionSet | 1.21 |
+| H5P.TrueFalse | 1.8 |
+| H5P.DragText | 1.10 |
+| H5P.Blanks | 1.14 |
+| H5P.MarkTheWords | 1.11 |
+| H5P.Image | 1.1 |
+| H5P.Video | 1.6 |
+| H5P.TextUtilities | 1.3 |
 | H5P.Question | 1.5 |
 | H5P.JoubelUI | 1.3 |
 | H5P.Components | 1.0 |

@@ -303,6 +303,21 @@ Everything outside $300$ Hz to $3.4$ kHz removed. Speech through this band stays
 - **Noise-induced hearing loss is mechanical, cumulative, painless, and permanent**, since mammalian hair cells do not regenerate. Every $3$ dB halves the safe exposure time. Musician's earplugs, distance, and breaks all work.
 - **Tinnitus**, a phantom ringing or hissing, often accompanies hair-cell damage: the brain raises its gain at frequencies it no longer receives input from, and the spontaneous activity is heard as sound.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch06-chapter-review
+:label: check:ch06-chapter-review
+:title: Chapter 6 interactive review
+
+1. **Multiple response.** Which choices reduce risk during a loud rehearsal: flat-response musician’s earplugs, quiet breaks, greater distance from loud sources, or relying on pain as an early warning?
+2. **True or false.** Inner hair cells provide most cochlear amplification, while outer hair cells send most auditory information to the brain.
+3. **Drag the words.** Complete the roles of the cochlear base and apex and of inner and outer hair cells.
+4. **Fill in the blanks.** For the same risk, every increase of ___ dB cuts safe exposure time in ___.
+5. **Mark the words.** Identify the structures responsible for directional filtering, impedance matching, and frequency separation: “The pinna supplies direction-dependent filtering, the middle ear matches air to cochlear fluid, and the basilar membrane separates frequencies by place.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why an ear consisting only of a membrane over a fluid-filled cavity would be about $30$ dB less sensitive than a human ear, and what the middle ear does about it.

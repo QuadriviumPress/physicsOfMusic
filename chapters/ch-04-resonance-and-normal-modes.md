@@ -383,6 +383,21 @@ That view, a source with a spectrum, passed through a filter with a shape, is th
 - **A Helmholtz resonator** is a plug of air on a spring of air, with a single resonance at $f_0 = (v/2\pi)\sqrt{A/VL_{\text{eff}}}$. It is a bottle, a guitar's air mode, and a loudspeaker's bass port.
 - **A resonator is both an amplifier and a filter**: it speeds energy out into the air, and it reshapes the spectrum passing through it. Source-plus-filter is the model used for the rest of the book.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity. The set mixes multiple response, true/false, drag-the-words, fill-in-the-blank, and mark-the-words formats.
+
+:::{h5p} ch04-chapter-review
+:label: check:ch04-chapter-review
+:title: Chapter 4 interactive review
+
+1. **Multiple response.** Which changes lower the resonance frequency of a Helmholtz resonator? Select from: increase cavity volume; lengthen the effective neck; increase neck area; increase the speed of sound.
+2. **True or false.** After transients die away, a driven oscillator vibrates at its natural frequency rather than at the driving frequency.
+3. **Drag the words.** Complete: quality factor is resonance frequency divided by ___; a high-$Q$ resonance has a ___ response peak and a ___ decay time. (Terms: bandwidth, narrow, long, wide, short.)
+4. **Fill in the blank.** A system with two degrees of freedom has ___ normal modes.
+5. **Mark the words.** Identify the two functions of a resonator in this sentence: “A resonator transfers energy efficiently to the air and filters the source spectrum; it does not create energy.”
+:::
+
 ## Conceptual Questions
 
 1. A driven oscillator settles into oscillating at the driving frequency rather than its own. Explain what role its natural frequency then plays.

@@ -308,6 +308,21 @@ Everything in this chapter is, in one way or another, a response to those constr
 - **The singer's formant**, near $2.9$ kHz, is produced by clustering $F_3$ to $F_5$ via a lowered larynx. It exploits a gap in the orchestra's spectrum, the ear's sensitivity peak, and the asymmetry of masking, and it is worth $20$ dB where it matters.
 - **Vibrato** helps the ear separate the voice from a steady background, and sweeps the harmonics across the formants, restoring some of the information lost at high pitch.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch13-chapter-review
+:label: check:ch13-chapter-review
+:title: Chapter 13 interactive review
+
+1. **Multiple response.** Why does the singer’s formant near $2.9$ kHz improve projection? Consider the orchestral spectrum, ear sensitivity, masking, and the vocal fundamental.
+2. **True or false.** In the source–filter model, the vocal folds can change pitch while the vocal tract largely preserves the vowel filter.
+3. **Drag the words.** Match vocal folds, vocal tract, jaw opening, and tongue position to the harmonic source, formant filtering, $F_1$, and $F_2$.
+4. **Fill in the blanks.** A roughly ___ cm tract has formants near $500$, ___, and $2500$ Hz.
+5. **Mark the words.** Identify two vocal registers: “Chest voice uses more of the fold depth, while falsetto uses mainly the edges; the passaggio is the transition between them.”
+:::
+
 ## Conceptual Questions
 
 1. Explain what it means to say the voice is a source–filter system, and give one observation that shows the two stages are independent.

@@ -397,6 +397,21 @@ And so the book's last idea is one of its first. [Chapter 3](#ch-superposition) 
 - **Additive synthesis** specifies every partial; **subtractive** filters a rich source and is the source–filter model again; **FM** generates Bessel-weighted sidebands from two oscillators, giving inharmonic spectra cheaply.
 - **Stereo works by summing localization**, reproducing interaural time and level differences but not the pinna cues that distinguish front from back. **Convolution reverb** is superposition plus a measured impulse response.
 
+## Check Your Understanding
+
+Five short, auto-graded questions cycle within one compact activity, using five different response styles.
+
+:::{h5p} ch15-chapter-review
+:label: check:ch15-chapter-review
+:title: Chapter 15 interactive review
+
+1. **Multiple choice.** Where must an anti-aliasing low-pass filter act: before sampling, after sampling, or only during playback?
+2. **True or false.** Dither improves low-level digital sound by reducing the total error energy introduced during quantization.
+3. **Drag the words.** Match dynamic and condenser microphones and omnidirectional and figure-of-eight patterns to their operating principles.
+4. **Fill in the blank.** At roughly $6$ dB per bit, ideal $16$-bit audio provides about ___ dB of dynamic range.
+5. **Mark the words.** Identify the two processes that create new frequency components: “FM synthesis generates sidebands, and nonlinear distortion creates new frequencies; subtractive filtering only rebalances frequencies already present.”
+:::
+
 ## Conceptual Questions
 
 1. Explain why a condenser microphone tracks transients better than a dynamic one.
