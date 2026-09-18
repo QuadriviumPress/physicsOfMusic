@@ -1,21 +1,20 @@
 /**
  * @fileoverview MyST plugin for embedding the book's own self-hosted H5P
- * exercises: short, auto-graded, multiple-choice "check your understanding"
- * questions, one per concept, that a reader can answer on the website.
+ * activities. The current chapters use short, auto-graded "check your
+ * understanding" questions, but the loader accepts any packaged H5P content
+ * type and its dependency set.
  *
  * H5P content is not authored through h5p.com or any other external service;
- * it is a set of static files vendored into `h5p/` (library code fetched once
- * via the `h5p` CLI, content authored by hand as `content.json`) and played
- * client-side by the `h5p-standalone` runtime, also vendored there. There is
- * no server and no database, matching how `plugins/audio.mjs` and
- * `plugins/animation.mjs` self-host their own media. See `h5p/README.md` for
- * how to add a new question.
+ * authoring inputs live in `h5p/` as unpacked content or standard `.h5p`
+ * packages. `scripts/prepare-h5p.mjs` resolves their dependency union into a
+ * generated static tree, played client-side by the vendored `h5p-standalone`
+ * runtime. There is no server and no database. See `h5p/README.md` for how to
+ * add an activity.
  *
- * A multiple-choice widget has no static image worth showing in a PDF, DOCX,
- * or Markdown export, so the fallback is not a screenshot but the question
- * itself, written out as the directive's body and rendered as ordinary prose
- * and a lettered list -- exactly what a print reader needs to attempt the
- * question, without the auto-grading. The mechanism is the same
+ * An interactive widget cannot run in a PDF, DOCX, or Markdown export, so the
+ * directive body supplies its static equivalent. For a question this is the
+ * question and choices; richer activities need a concise description or
+ * equivalent static material. The mechanism is the same
  * iframe-plus-sibling one `plugins/simulation.mjs` and `plugins/animation.mjs`
  * use: MyST's `iframe` node is rendered by the site theme and nothing else, so
  * `css/custom.css` hides the fallback on the website and hides the iframe
@@ -27,7 +26,7 @@
 
 /**
  * Root the H5P content is served from. `project.static_files` in `myst.yml`
- * copies `h5p/` there verbatim, alongside `audio/` and `animations/`.
+ * publishes `.generated/h5p` there, alongside `audio/` and `animations/`.
  *
  * The leading slash matters: MyST resolves a `/`-prefixed image or iframe URL
  * against the project root rather than the directory of the source file, and
@@ -128,8 +127,8 @@ function runH5p( data, vfile ) {
 
   if ( !data.body || data.body.length === 0 ) {
     return directiveError(
-      'a body is required: write out the question and its choices, which doubles as ' +
-      'the fallback for print, PDF, DOCX, and Markdown, where the interactive widget cannot appear',
+      'a body is required: provide a static equivalent or description for print, PDF, DOCX, ' +
+      'and Markdown, where the interactive activity cannot appear',
       vfile
     );
   }
@@ -139,7 +138,7 @@ function runH5p( data, vfile ) {
   const name = humanize( id );
 
   const width = options.width || '100%';
-  const title = options.title || `Check your understanding — ${ name }`;
+  const title = options.title || `Interactive activity — ${ name }`;
   const align = options.align || 'center';
 
   const children = [
@@ -151,6 +150,9 @@ function runH5p( data, vfile ) {
       width,
       align,
       title,
+      // Retained in the AST for renderers that support the native attribute;
+      // setup-pwa.mjs also adds it to built HTML for the current MyST theme.
+      loading: 'lazy',
       class: [ 'h5p-frame', options.class ].filter( Boolean ).join( ' ' )
     },
     // The static fallback, for PDF, DOCX, Markdown, and print: the question
@@ -186,8 +188,8 @@ function runH5p( data, vfile ) {
 
 const h5pDirective = {
   name: 'h5p',
-  doc: 'Embed one of the book\'s own self-hosted H5P exercises from `h5p/content/`, with the ' +
-       'question written out as the directive body as the fallback for print, PDF, DOCX, and Markdown.',
+  doc: 'Embed one of the book\'s self-hosted H5P activities, with a static equivalent or ' +
+       'description in the directive body for print, PDF, DOCX, and Markdown.',
   arg: {
     type: String,
     required: true,
@@ -197,7 +199,7 @@ const h5pDirective = {
   options: {
     title: {
       type: String,
-      doc: 'Accessible title for the iframe. Defaults to "Check your understanding — <name>".'
+      doc: 'Accessible title for the iframe. Defaults to "Interactive activity — <name>".'
     },
     width: {
       type: String,
@@ -219,8 +221,8 @@ const h5pDirective = {
   body: {
     type: 'myst',
     required: true,
-    doc: 'The question and its choices, written out in Markdown. Required: this is what print, ' +
-         'PDF, DOCX, and Markdown readers see instead of the interactive widget.'
+    doc: 'A static equivalent or description written in Markdown. Required: this is what print, ' +
+         'PDF, DOCX, and Markdown readers see instead of the interactive activity.'
   },
   /**
    * @param {Object} data - Directive data supplied by MyST.
@@ -236,7 +238,7 @@ const h5pDirective = {
  * @type {{name: string, directives: Array<Object>}}
  */
 const plugin = {
-  name: 'H5P exercises',
+  name: 'H5P activities',
   directives: [ h5pDirective ]
 };
 

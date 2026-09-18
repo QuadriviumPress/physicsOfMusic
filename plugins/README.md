@@ -413,17 +413,16 @@ ordinary link survives every format, so a reader can still open the video.
 
 # The H5P plugin
 
-A short, auto-graded, multiple-choice question a reader can answer inline,
-right after a chapter's Summary — a "check your understanding" companion to
-the ungraded Conceptual Questions and the worked Problems that follow it.
+An H5P activity a reader can use inline. The current chapters use short,
+auto-graded multiple-choice questions after each Summary, but the loader and
+build pipeline accept any H5P content type.
 
 The content type is [H5P](https://h5p.org), but nothing about it depends on
-h5p.com or on any other externally hosted service. `h5p/` is a self-hosted,
-database-free static site of its own — library code and a JS player vendored
-once, question content authored by hand — copied verbatim into the built
-website, exactly the way `audio/` and `animations/` already are. See
-[`../h5p/README.md`](../h5p/README.md) for the full layout and for how to add
-a new question.
+h5p.com or on any other externally hosted service. Unpacked content and
+standard `.h5p` packages live under `h5p/`; `scripts/prepare-h5p.mjs` follows
+their dependency metadata and generates the shared runtime tree published by
+the website. See [`../h5p/README.md`](../h5p/README.md) for the full layout and
+for how to add an activity.
 
 ## Usage
 
@@ -455,20 +454,19 @@ widget in every format that cannot run an iframe.
 | `label` | — | Makes the block cross-referenceable. |
 | `class` | — | Extra classes on the exercise frame. |
 
-There is no `aspect` option, unlike `{animation}` and `{simulation}`: a
-multiple-choice widget's height does not scale with its width the way a video
-frame's does, so `css/custom.css` gives `.h5p-frame` one fixed height instead
-of a percentage-padding aspect ratio, the same way `.audio-player` overrides
-it for the audio plugin's compact player.
+There is no universal `aspect` option: H5P content types have very different
+layouts. `css/custom.css` gives `.h5p-frame` a generous default height instead
+of the theme's video-style aspect ratio. A content type needing more room can
+use `:class:` with a corresponding project CSS rule.
 
 ## How the fallback works
 
 The mechanism is the same as `{animation}`'s, with one difference: the
-fallback is not a matching static image, because a multiple-choice question
-has no meaningful screenshot. It is the directive's own body, the question
-written out ungraded. Each directive emits **both** an `iframe` node and the
-body's content as siblings inside one container, and each renderer keeps
-whichever it understands:
+fallback is the directive's own body rather than necessarily being an image.
+For a question, write out the question and choices ungraded; for another
+content type, provide a useful static equivalent or description. Each
+directive emits **both** an `iframe` node and the body as siblings inside one
+container, and each renderer keeps whichever it understands:
 
 | Output | `iframe` | fallback body | Result |
 |---|---|---|---|
@@ -482,8 +480,9 @@ A bare id resolves to a root-relative `/h5p/embed.html?...` URL rather than a
 path relative to the source `.md` file, for the same reason `{animation}`'s
 player URL is root-relative: MyST does not resolve a relative path written
 into an `iframe` node the way it resolves one in a `link` or `image` node.
-`project.static_files` in `myst.yml` declares `h5p` to keep that URL stable
-and unhashed, the same way it declares `audio` and `animations`.
+`project.static_files` in `myst.yml` declares the generated H5P tree to keep
+that URL stable and unhashed, the same way it declares `audio` and
+`animations`.
 
 # The export plugin
 

@@ -4,36 +4,62 @@ Static files only. No h5p.com account, no self-hosted H5P server (WordPress,
 Drupal, Moodle), no database. A question is a folder of JSON; the player is a
 vendored JavaScript library; `embed.html` glues the two together in an iframe.
 `plugins/h5p.mjs` documents the MyST-facing side of this; this file documents
-the content itself.
+the content itself. The contents of this directory are **authoring inputs**, not
+the directory shipped verbatim to readers.
 
 ```
 h5p/
   embed.html       generic loader: reads ?id=<content-id> from its own URL
   player/           vendored h5p-standalone runtime (the H5P core, as a client-side player)
-  libraries/        vendored H5P.MultiChoice and its dependencies (shared by every question)
+  libraries/        catalog of unpacked H5P content-type libraries
+  packages/         optional standard .h5p packages, named <content-id>.h5p
   content/
     <id>/
       h5p.json       content metadata: title, main library, dependency versions
       content/
         content.json  the question text and answer choices
+.generated/h5p/     generated runtime tree; ignored by Git
 ```
 
-`myst.yml`'s `project.static_files` copies this whole tree to the site root
-verbatim, so it is always reachable at `/h5p/...` regardless of where a chapter
-page that embeds it lives.
+`npm run h5p:prepare` reads every activity's dependency metadata, follows the
+dependencies recursively, and writes `.generated/h5p/`. It accepts both the
+unpacked activities under `content/` and standard packages under `packages/`.
+Only the union of libraries required by those activities is emitted, and
+documentation, tests, package-manager files, and other development material are
+left behind. `myst.yml` publishes that generated tree at `/h5p/...` regardless
+of where a chapter page that embeds it lives.
 
 ## Why this layout
 
 [`h5p-standalone`](https://github.com/tunapanda/h5p-standalone) plays H5P
 content without a server, but it still needs the actual content-type code
-(`H5P.MultiChoice`, `H5P.Question`, `H5P.JoubelUI`, …) — the same libraries a
-real H5P installation downloads from the H5P Hub when an author adds that
-content type. Vendoring one copy of them under `libraries/` and pointing every
-question at it with `librariesPath` (rather than duplicating them inside each
-`content/<id>/`) is what keeps 15 questions costing kilobytes each instead of
-several megabytes each.
+(`H5P.MultiChoice`, `H5P.TrueFalse`, `H5P.DragQuestion`, …) and their recursive
+dependencies. The build-time packager provides that without limiting the book
+to a fixed set of content types: adding an activity automatically expands the
+generated library union. Each library is still emitted once and shared by every
+activity, rather than being duplicated inside every `content/<id>/`.
 
-## Adding a question
+The browser also loads libraries on demand from each activity's metadata; it
+does not download the whole generated catalog. The `{h5p}` iframe is marked for
+native lazy loading so activities below the viewport need not start at once.
+
+## Adding an activity
+
+The simplest prototype workflow is to export a standard `.h5p` file from an
+H5P authoring tool and put it in `packages/`. Its filename (without `.h5p`) is
+the content id used by the directive:
+
+```
+h5p/packages/ch04-quality-factor.h5p
+```
+
+The package may use any H5P content type and may bundle its libraries. Run
+`npm run h5p:prepare`; the packager imports its content and makes any newly
+required libraries available to all activities. A missing dependency or a
+duplicate content id fails the build rather than producing a broken exercise.
+
+Activities may also be maintained as unpacked JSON, which is convenient for
+small hand-authored questions and readable diffs:
 
 1. Pick an id, e.g. `ch04-quality-factor`, matching the chapter it belongs to.
 2. Create `content/<id>/h5p.json`:
@@ -59,9 +85,9 @@ several megabytes each.
    }
    ```
 
-   This block of `preloadedDependencies` is the same for every question here —
-   it is the full, flattened set of libraries `H5P.MultiChoice` needs, and it
-   has to match what is actually present under `libraries/`.
+   Dependencies do not have to be flattened: the packager follows dependency
+   declarations in each selected library's `library.json`. They do have to be
+   available either in `libraries/` or inside one of the `.h5p` packages.
 
 3. Create `content/<id>/content/content.json`:
 
@@ -95,24 +121,21 @@ several megabytes each.
    same thing `content.json` does, even though nothing enforces that
    automatically.
 
-5. Run `myst start`, open the chapter, and check the question renders and the
-   "Check" button grades it correctly before committing.
+5. Run `npm run h5p:prepare` (or `npm start`, which runs it automatically),
+   open the chapter, and check that the activity renders and behaves correctly
+   before committing.
 
 ## Where the vendored code came from
 
 - `player/` is the `dist/` folder of `h5p-standalone@3.8.2`
   (`npm view h5p-standalone version` to check for a newer one; re-copy
   `node_modules/h5p-standalone/dist/` over `player/` to update it).
-- `libraries/` was fetched with the official
+- The libraries currently in `libraries/` were fetched with the official
   [`h5p-cli`](https://github.com/h5p/h5p-cli) toolkit, which clones each
   content type and its dependencies straight from the `h5p` GitHub
-  organization (`h5p core && h5p setup h5p-multi-choice`), then exported and
-  extracted to strip everything but the runtime files. Only the libraries
-  `H5P.MultiChoice` needs to *run* are kept — no editor-only libraries, and
-  none of the optional image/video/audio question-media libraries, since none
-  of these questions use media. Adding a content type that does (or a
-  different question type, e.g. `H5P.TrueFalse`) means repeating that fetch
-  for the new library and adding its dependency set to `h5p.json`.
+  organization (`h5p core && h5p setup h5p-multi-choice`). Standard `.h5p`
+  packages can contribute additional libraries, so experimenting with another
+  content type does not require changing the player or the MyST plugin.
 
 | Library | Version |
 |---|---|

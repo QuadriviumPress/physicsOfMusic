@@ -1,5 +1,6 @@
 node_modules/
 _build/
+.generated/
 tmp/
 work/
 # Built by scripts/build-exports.sh, and in CI by the Exports workflow, whose

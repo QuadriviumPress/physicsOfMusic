@@ -135,10 +135,9 @@
 /* ---------------------------------------------------------------- 5. H5P exercises */
 
 /*
- * A multiple-choice widget has no fixed aspect ratio worth preserving, and its
- * content height does not scale with width the way a video frame's does, so
- * this overrides the theme's percentage-padding trick with a plain fixed
- * height instead, the same way .audio-player does above.
+ * H5P activities do not share one useful aspect ratio. Use a generous default
+ * viewport rather than the theme's video-style percentage-padding trick; a
+ * content type that needs more room can opt into a taller custom class.
  */
 .h5p-frame > div {
   height: 30rem;
