@@ -2,72 +2,142 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.patches import Ellipse, FancyArrowPatch, Polygon, Wedge
+from matplotlib.path import Path
+from matplotlib.patches import Ellipse, FancyArrowPatch, PathPatch
 
 from figstyle import BLUE, GRAY, GREEN, LIGHT, ORANGE, PURPLE, RED, save, use_style
 
 
 def ear_anatomy():
-    """A schematic of the three sections, drawn for the argument rather than for anatomy."""
+    """Trace sound through the ear and across its two impedance boundaries."""
     use_style()
-    fig, ax = plt.subplots(figsize=(9.2, 3.8))
-    ax.set_xlim(0, 10.4)
-    ax.set_ylim(-1.9, 2.6)
+    fig, ax = plt.subplots(figsize=(9.4, 4.25))
+    ax.set_xlim(0, 12)
+    ax.set_ylim(-1.85, 3.05)
     ax.axis("off")
 
-    # Section bands.
-    for x0, x1, label, colour in ((0.2, 3.4, "OUTER EAR\nair", "#e8eef3"),
-                                  (3.4, 5.9, "MIDDLE EAR\nbone", "#eae4f0"),
-                                  (5.9, 10.2, "INNER EAR\nfluid", "#e4f0ea")):
-        ax.add_patch(plt.Rectangle((x0, -1.55), x1 - x0, 3.85,
-                                   facecolor=colour, edgecolor="none", zorder=0))
-        ax.text((x0 + x1) / 2, 2.05, label, ha="center", fontsize=10.5,
+    # The subtle bands organize the anatomy without pretending that the middle-ear
+    # cavity itself is made of bone.  The badges name the medium carrying the signal.
+    sections = ((0.15, 4.25, "OUTER EAR", "air pressure", BLUE, "#edf4f9"),
+                (4.25, 6.90, "MIDDLE EAR", "bone motion", PURPLE, "#f2eef6"),
+                (6.90, 11.85, "INNER EAR", "fluid pressure", GREEN, "#edf6f1"))
+    for x0, x1, region, medium, colour, fill in sections:
+        ax.add_patch(plt.Rectangle((x0, -1.45), x1 - x0, 3.95,
+                                   facecolor=fill, edgecolor="none", zorder=0))
+        xc = (x0 + x1) / 2
+        ax.text(xc, 2.25, region, ha="center", va="center", fontsize=10.5,
                 fontweight="bold", color="#41505c")
+        ax.text(xc, 1.88, medium, ha="center", va="center", fontsize=9.2,
+                fontweight="bold", color=colour,
+                bbox={"boxstyle": "round,pad=0.24", "facecolor": "white",
+                      "edgecolor": colour, "linewidth": 0.9})
 
-    # Pinna: a wedge standing in for the outer ear.
-    ax.add_patch(Wedge((0.9, 0.3), 1.0, -80, 80, width=0.34,
-                       facecolor=LIGHT, edgecolor="#333333", lw=1.2))
-    ax.text(0.85, -1.15, "pinna", ha="center", fontsize=10)
+    # Incoming pressure waves make the direction of the whole story unambiguous.
+    for x in (0.36, 0.58, 0.80):
+        ax.add_patch(FancyArrowPatch((x, 0.05), (x, 0.85),
+                                     connectionstyle="arc3,rad=-0.55",
+                                     arrowstyle="-", color=BLUE, lw=1.25))
+    ax.add_patch(FancyArrowPatch((0.45, 0.45), (1.28, 0.45), arrowstyle="-|>",
+                                 mutation_scale=12, color=BLUE, lw=1.8))
+    ax.text(0.62, -0.15, "sound in", ha="center", fontsize=9.2, color=BLUE)
 
-    # Ear canal.
-    ax.add_patch(plt.Rectangle((1.25, 0.02), 2.05, 0.56,
-                               facecolor="white", edgecolor="#333333", lw=1.2))
-    ax.text(2.3, 0.86, "ear canal\n(a stopped pipe, $\\approx2.5$ cm)",
-            ha="center", fontsize=10, color=BLUE)
+    # Pinna: a recognisable outline with a concha that funnels into the canal.
+    pinna_path = Path(
+        [(1.62, -0.83), (0.88, -0.78), (0.78, -0.12), (0.93, 0.63),
+         (1.05, 1.34), (1.55, 1.62), (2.04, 1.35),
+         (2.35, 1.17), (2.27, 0.79), (1.92, 0.54),
+         (1.76, 0.38), (1.82, 0.08), (2.02, -0.08),
+         (1.92, -0.48), (1.77, -0.73), (1.62, -0.83), (0.0, 0.0)],
+        [Path.MOVETO] + [Path.CURVE4] * 15 + [Path.CLOSEPOLY])
+    ax.add_patch(PathPatch(pinna_path, facecolor=LIGHT, edgecolor="#38434b", lw=1.35))
+    inner_path = Path([(1.42, 1.20), (1.10, 0.83), (1.19, 0.14), (1.73, 0.08),
+                       (1.48, 0.82), (1.66, 0.79), (1.88, 0.93), (1.99, 0.68)],
+                      [Path.MOVETO, Path.CURVE4, Path.CURVE4, Path.CURVE4,
+                       Path.MOVETO, Path.CURVE4, Path.CURVE4, Path.CURVE4])
+    ax.add_patch(PathPatch(inner_path, fill=False, edgecolor="#667681", lw=1.1))
+    ax.text(1.47, -1.12, "pinna", ha="center", fontsize=9.5)
 
-    # Eardrum.
-    ax.plot([3.34, 3.34], [-0.12, 0.72], color=RED, lw=3.4)
-    ax.text(3.34, -0.62, "eardrum", ha="center", fontsize=10, color=RED)
+    # Ear canal: gently curved and narrowing toward the membrane.
+    canal_path = Path(
+        [(1.70, 0.48), (2.40, 0.59), (3.28, 0.55), (4.12, 0.31),
+         (4.08, -0.11), (3.22, 0.09), (2.38, 0.08), (1.70, 0.15), (1.70, 0.48)],
+        [Path.MOVETO, Path.CURVE4, Path.CURVE4, Path.CURVE4,
+         Path.LINETO, Path.CURVE4, Path.CURVE4, Path.CURVE4, Path.CLOSEPOLY])
+    ax.add_patch(PathPatch(canal_path, facecolor="white", edgecolor="#38434b", lw=1.35))
+    ax.add_patch(FancyArrowPatch((2.32, 0.32), (3.54, 0.31), arrowstyle="-|>",
+                                 mutation_scale=11, color=BLUE, lw=1.6))
+    ax.text(2.95, 0.89, "ear canal · 2.5 cm", ha="center", fontsize=9.5, color=BLUE)
+    ax.text(2.95, 0.68, "quarter-wave resonator", ha="center", fontsize=8.4, color=GRAY)
 
-    # Ossicles: three linked bones, drawn as a lever.
-    ax.plot([3.4, 4.3, 5.0, 5.6], [0.35, 0.95, 0.55, 0.35], "-o",
-            color=PURPLE, lw=2.6, ms=9)
-    ax.text(4.5, 1.38, "hammer, anvil, stirrup\n(a lever)", ha="center",
-            fontsize=10, color=PURPLE)
+    # Eardrum and malleus.  Their physical attachment is visible instead of implied.
+    ax.plot([4.10, 4.30], [-0.17, 0.72], color=RED, lw=3.2,
+            solid_capstyle="round", zorder=5)
+    ax.plot([4.22, 4.72], [0.27, 0.70], color=PURPLE, lw=2.9,
+            solid_capstyle="round", zorder=6)
+    ax.add_patch(plt.Circle((4.78, 0.76), 0.14, facecolor="white",
+                            edgecolor=PURPLE, lw=2.2, zorder=7))
 
-    # Oval window.
-    ax.plot([5.72, 5.72], [0.14, 0.56], color=GREEN, lw=3.4)
-    ax.text(5.72, -0.62, "oval\nwindow", ha="center", fontsize=10, color=GREEN)
+    # Incus and stapes: simplified silhouettes, but with the three bones distinct.
+    ax.plot([4.88, 5.28, 5.55], [0.77, 0.69, 0.32], color=PURPLE, lw=3.0,
+            solid_capstyle="round", zorder=6)
+    ax.add_patch(plt.Circle((5.18, 0.72), 0.13, facecolor="white",
+                            edgecolor=PURPLE, lw=2.2, zorder=7))
+    ax.plot([5.55, 5.95], [0.32, 0.32], color=PURPLE, lw=2.5, zorder=6)
+    ax.plot([5.93, 6.23, 5.93], [0.32, 0.49, 0.65], color=PURPLE, lw=2.2, zorder=6)
+    ax.plot([5.93, 6.30], [0.49, 0.49], color=PURPLE, lw=2.2, zorder=6)
 
-    # Cochlea: a spiral.
-    theta = np.linspace(0, 4.6 * np.pi, 800)
-    radius = 0.90 * np.exp(-theta / 16)
-    ax.plot(7.6 + radius * np.cos(theta), 0.35 + radius * np.sin(theta),
-            color=BLUE, lw=2.6)
-    ax.plot([5.8, 7.6 + radius[0]], [0.35, 0.35], color=BLUE, lw=2.6)
-    ax.text(7.6, -1.15, "cochlea\n(coiled, fluid-filled)", ha="center", fontsize=10, color=BLUE)
+    ax.text(4.72, 1.16, "malleus", ha="center", fontsize=8.2, color=PURPLE)
+    ax.text(5.25, 1.02, "incus", ha="center", fontsize=8.2, color=PURPLE)
+    ax.text(6.08, 0.91, "stapes", ha="center", fontsize=8.2, color=PURPLE)
+    ax.text(5.25, -0.72, "ossicles · 1.3× lever", ha="center", fontsize=9.4,
+            fontweight="bold", color=PURPLE)
+    ax.add_patch(FancyArrowPatch((4.55, 0.51), (5.78, 0.39), arrowstyle="-|>",
+                                 mutation_scale=11, color=PURPLE, lw=1.5,
+                                 connectionstyle="arc3,rad=0.13"))
 
-    # The auditory nerve leaving.
-    ax.add_patch(FancyArrowPatch((8.6, 0.9), (9.9, 1.5), arrowstyle="-|>",
-                                 mutation_scale=15, color=ORANGE, lw=2.0))
-    ax.text(9.9, 1.72, "to the brain", ha="center", fontsize=10, color=ORANGE)
+    # The oval window is the second highlighted boundary; the small vestibule
+    # makes the connection into the cochlea legible.
+    ax.add_patch(Ellipse((6.54, 0.49), 0.18, 0.55, facecolor="white",
+                         edgecolor=GREEN, lw=2.7, zorder=6))
+    ax.plot([6.63, 7.16], [0.49, 0.49], color=GREEN, lw=2.7,
+            solid_capstyle="round")
 
-    ax.text(5.2, -1.82,
-            "Sound crosses two boundaries: air to bone at the eardrum, and bone to fluid "
-            "at the oval window.",
-            ha="center", fontsize=10, color=GRAY)
-    ax.set_title("The ear, as three stages of an impedance-matching problem",
-                 fontsize=12.5, fontweight="bold")
+    # Cochlea, starting at its base on the left and winding inward.
+    theta = np.linspace(np.pi, 5.55 * np.pi, 900)
+    radius = 1.15 * np.exp(-(theta - np.pi) / 16.5)
+    cochlea_x = 8.26 + radius * np.cos(theta)
+    cochlea_y = 0.47 + 0.78 * radius * np.sin(theta)
+    ax.plot(cochlea_x, cochlea_y, color=GREEN, lw=2.9, solid_capstyle="round")
+    ax.add_patch(FancyArrowPatch((7.29, 0.31), (7.82, -0.16), arrowstyle="-|>",
+                                 mutation_scale=11, color=GREEN, lw=1.5,
+                                 connectionstyle="arc3,rad=-0.28"))
+    ax.text(8.30, -0.93, "cochlea · fluid wave", ha="center", fontsize=9.5,
+            fontweight="bold", color=GREEN)
+
+    # Several fibres merge into the auditory nerve; orange marks the change from
+    # mechanical motion to neural signalling.
+    for y0, y1 in ((0.16, 0.55), (0.48, 0.68), (0.78, 0.82)):
+        ax.add_patch(FancyArrowPatch((9.10, y0), (9.78, y1), arrowstyle="-",
+                                     color=ORANGE, lw=1.2,
+                                     connectionstyle="arc3,rad=-0.10"))
+    ax.add_patch(FancyArrowPatch((9.74, 0.68), (11.17, 1.21), arrowstyle="-|>",
+                                 mutation_scale=14, color=ORANGE, lw=2.1))
+    ax.text(10.51, 1.46, "auditory nerve", ha="center", fontsize=9.5,
+            fontweight="bold", color=ORANGE)
+    ax.text(11.18, 1.05, "neural signal\nto the brain", ha="center", va="top",
+            fontsize=8.8, color=ORANGE)
+
+    # Boundary callouts state the physics directly and make the colour coding
+    # redundant for readers who cannot distinguish it.
+    ax.text(4.20, -1.12, "Eardrum", ha="center", fontsize=9.2,
+            fontweight="bold", color=RED)
+    ax.text(4.20, -1.36, "AIR → BONE", ha="center", fontsize=8.1, color=RED)
+    ax.text(6.55, -1.12, "Oval window", ha="center", fontsize=9.2,
+            fontweight="bold", color=GREEN)
+    ax.text(6.55, -1.36, "BONE → FLUID", ha="center", fontsize=8.1, color=GREEN)
+
+    ax.set_title("How the ear carries sound across two impedance boundaries",
+                 fontsize=13, fontweight="bold", pad=5)
     fig.tight_layout()
     save(fig, "ch06-ear-anatomy")
 

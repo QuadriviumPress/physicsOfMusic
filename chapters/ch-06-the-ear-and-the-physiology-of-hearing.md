@@ -68,9 +68,9 @@ This is the only cue available for distinguishing front from back, or up from do
 
 ```{figure} ../images/ch06-ear-anatomy.svg
 :label: fig:ch06-ear-anatomy
-:alt: A schematic of the ear in three colored bands. The outer ear shows a pinna and ear canal leading to the eardrum; the middle ear shows three linked bones drawn as a lever between eardrum and oval window; the inner ear shows a spiral cochlea with a nerve leaving toward the brain.
+:alt: A left-to-right schematic traces incoming sound through the pinna and curved ear canal, across the eardrum and the three named ossicles, through the oval window into the spiral cochlea, and out along the auditory nerve. The two impedance boundaries are labeled air to bone and bone to fluid.
 
-The ear, drawn for the argument rather than for anatomy. The three sections carry sound in three different media, air, bone, and fluid, and the two boundaries between them are where the interesting physics happens.
+The ear, drawn for the argument rather than as an anatomy plate. Arrows follow one continuous signal path through air, bone, fluid, and finally the auditory nerve. The two changes of medium, at the eardrum and oval window, are where the interesting physics happens.
 ```
 
 ### The Ear Canal as a Resonator
