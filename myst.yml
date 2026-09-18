@@ -69,16 +69,13 @@ project:
     # falling back to the existing static SVG figure everywhere but the
     # website; see plugins/animation.mjs.
     - plugins/animation.mjs
-<<<<<<< Updated upstream
     # YouTube and Vimeo embeds, with a poster image and durable source link for
     # PDF, Word, Markdown, and browser print; see plugins/video.mjs.
     - plugins/video.mjs
-=======
     # Self-hosted H5P "check your understanding" exercises: static files in
     # `h5p/`, played client-side by the vendored h5p-standalone runtime, no
     # server or database; see plugins/h5p.mjs and h5p/README.md.
     - plugins/h5p.mjs
->>>>>>> Stashed changes
     # Rewrites exercises, solutions, margin notes and dropdowns into nodes the
     # LaTeX/DOCX renderers understand. Inert unless MYST_PRINT is set, so the
     # website build is untouched; see plugins/export.mjs.
@@ -91,17 +88,11 @@ project:
     - audio
     - audio-player.html
     - animations
-<<<<<<< Updated upstream
-  # The simulation, animation, and video directives emit an iframe for the
-  # website beside a static image for print. plugins/export.mjs strips the
-  # iframe before the tex renderer sees it, but a stray one must not fail the
-  # build.
-=======
     - h5p
-  # The simulation and animation directives emit an iframe for the website
-  # beside a static image for print. plugins/export.mjs strips the iframe
-  # before the tex renderer sees it, but a stray one must not fail the build.
->>>>>>> Stashed changes
+  # The simulation, animation, video, and H5P directives emit an iframe for
+  # the website beside a static image for print. plugins/export.mjs strips
+  # the iframe before the tex renderer sees it, but a stray one must not fail
+  # the build.
   error_rules:
     - id: tex-renders
       severity: warn
