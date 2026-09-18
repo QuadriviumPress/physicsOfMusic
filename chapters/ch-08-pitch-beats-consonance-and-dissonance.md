@@ -151,21 +151,23 @@ The method extends to other intervals, and this is what makes [Chapter 9](#ch-sc
 The equal-tempered fifth is
 
 $$
-f = 220 \times 2^{700/1200} = 220 \times 1.49831 = 329.63\ \text{Hz}.
+f = (220\ \text{Hz}) \times 2^{700/1200}
+  = (220\ \text{Hz})(1.49831)
+  = 329.63\ \text{Hz}.
 $$
 
-A pure fifth would be $220 \times 1.5 = 330.00$ Hz.
+A pure fifth would be $(220\ \text{Hz}) \times 1.5 = 330.00$ Hz.
 
 The beat is heard between the **third harmonic of the lower note** and the **second harmonic of the upper**:
 
 $$
-3 \times 220 = 660.00\ \text{Hz},
+3 \times (220\ \text{Hz}) = 660.00\ \text{Hz},
 \qquad
-2 \times 329.63 = 659.26\ \text{Hz}.
+2 \times (329.63\ \text{Hz}) = 659.26\ \text{Hz}.
 $$
 
 $$
-f_{\text{beat}} = 660.00 - 659.26 = 0.74\ \text{Hz}.
+f_{\text{beat}} = 660.00\ \text{Hz} - 659.26\ \text{Hz} = 0.74\ \text{Hz}.
 $$
 
 Therefore, the tuner should hear about three beats every four seconds. That is a countable rate, which is exactly why the method works, and it is why a piano tuner works up the scale listening rather than reading a meter.

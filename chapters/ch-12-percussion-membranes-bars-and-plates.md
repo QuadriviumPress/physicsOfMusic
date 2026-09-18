@@ -181,7 +181,10 @@ The ratios were listed in §12.1, and none of them is anything.
 *A snare drum's batter head has radius $a = 0.178$ m (a $14$-inch drum), areal mass density $\sigma = 0.20$ kg/m², and is tensioned to $T = 3200$ N/m. Using $\alpha_{01} = 2.405$, find its $(0,1)$ fundamental.*
 
 $$
-f_{01} = \frac{\alpha_{01}}{2\pi a}\sqrt{\frac{T}{\sigma}} = \frac{2.405}{2\pi(0.178)}\sqrt{\frac{3200}{0.20}} = (2.151)(126.5) = 272\ \text{Hz}.
+f_{01} = \frac{\alpha_{01}}{2\pi a}\sqrt{\frac{T}{\sigma}}
+  = \frac{2.405}{2\pi(0.178\ \text{m})}\sqrt{\frac{3200\ \text{N/m}}{0.20\ \text{kg/m}^2}}
+  = (2.151\ \text{m}^{-1})(126.5\ \text{m/s})
+  = 272\ \text{Hz}.
 $$
 
 The next mode up, $(1,1)$, sits at $1.59$ times this, about $432$ Hz, an interval of
@@ -454,13 +457,13 @@ Therefore the listener hears about $73$ Hz, D2, which is an octave below the low
 
 $$
 T = \sigma\left(\frac{2\pi a f}{\alpha_{01}}\right)^2
-= 0.26\left(\frac{2\pi(0.33)(146)}{2.405}\right)^2.
+= (0.26\ \text{kg/m}^2)\left(\frac{2\pi(0.33\ \text{m})(146\ \text{Hz})}{2.405}\right)^2.
 $$
 
-The bracket is $302.7/2.405 = 125.9$, so
+The bracket is $302.7/2.405 = 125.9$ m/s, so
 
 $$
-T = 0.26(125.9)^2 = 4.12\times10^{3}\ \text{N/m}.
+T = (0.26\ \text{kg/m}^2)(125.9\ \text{m/s})^2 = 4.12\times10^{3}\ \text{N/m}.
 $$
 
 (b) Frequency goes as $\sqrt T$, and a whole tone is a factor $2^{2/12} = 1.1225$:

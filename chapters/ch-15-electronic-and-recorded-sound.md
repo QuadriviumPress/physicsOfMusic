@@ -206,7 +206,9 @@ The consequence is severe. Aliased components are not a distortion of the origin
 The Nyquist frequency is $f_s/2 = 4$ kHz. For an input between Nyquist and the sampling rate itself, the fold is a mirror image about Nyquist:
 
 $$
-f_{\text{heard}} = f_s - f_{\text{in}} = 8000 - 5500 = 2500\ \text{Hz}.
+f_{\text{heard}} = f_s - f_{\text{in}}
+  = 8000\ \text{Hz} - 5500\ \text{Hz}
+  = 2500\ \text{Hz}.
 $$
 
 Therefore, a generator climbing steadily through $5.5$ kHz is heard descending through $2.5$ kHz, exactly the reversal in the sweep of the audio example below. Once the samples are taken, a genuine $2.5$ kHz tone and this alias of a $5.5$ kHz tone are the same list of numbers; nothing in the data says which one produced it, which is why the filtering has to happen before the sampling and cannot be repaired afterward.
@@ -580,9 +582,9 @@ Therefore intensity and time panning are interchangeable to a first approximatio
 (a) Setting $\lambda = d$, so $f = v/d$:
 
 $$
-f_{\text{woofer}} = \frac{343}{0.25} = 1.37\ \text{kHz},
+f_{\text{woofer}} = \frac{343\ \text{m/s}}{0.25\ \text{m}} = 1.37\ \text{kHz},
 \qquad
-f_{\text{tweeter}} = \frac{343}{0.025} = 13.7\ \text{kHz}.
+f_{\text{tweeter}} = \frac{343\ \text{m/s}}{0.025\ \text{m}} = 13.7\ \text{kHz}.
 $$
 
 (b) Somewhere around $1.5$–$2.5$ kHz.

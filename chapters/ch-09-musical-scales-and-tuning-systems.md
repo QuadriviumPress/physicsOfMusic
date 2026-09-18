@@ -343,11 +343,15 @@ The mathematics is forced. Twelve equal multiplicative steps making a factor of 
 *Given A$_4$ = $440$ Hz, find the frequency of C$_5$ (three semitones up) and of A$_2$ (two octaves down).*
 
 $$
-f_{\mathrm{C}_5} = 440 \times 2^{3/12} = 440 \times 1.18921 = 523.25\ \text{Hz}.
+f_{\mathrm{C}_5} = (440\ \text{Hz}) \times 2^{3/12}
+  = (440\ \text{Hz})(1.18921)
+  = 523.25\ \text{Hz}.
 $$
 
 $$
-f_{\mathrm{A}_2} = 440 \times 2^{-24/12} = \frac{440}{4} = 110\ \text{Hz}.
+f_{\mathrm{A}_2} = (440\ \text{Hz}) \times 2^{-24/12}
+  = \frac{440\ \text{Hz}}{4}
+  = 110\ \text{Hz}.
 $$
 
 Every note on a modern keyboard follows from $f = 440 \times 2^{n/12}$, with $n$ the number of semitones from A$_4$. That single formula replaced two thousand years of argument about ratios.

@@ -342,7 +342,9 @@ The consequence is audible and important: **a piano's octaves must be stretched.
 C3's actual 2nd partial, from $f_n = nf_1\sqrt{1+Bn^2}$ with $n=2$:
 
 $$
-f_2 = 2(131)\sqrt{1 + (4.0\times10^{-4})(4)} = 262\sqrt{1.0016} = 262.21\ \text{Hz}.
+f_2 = 2(131\ \text{Hz})\sqrt{1 + (4.0\times10^{-4})(4)}
+  = (262\ \text{Hz})\sqrt{1.0016}
+  = 262.21\ \text{Hz}.
 $$
 
 Against C4's exact $262$ Hz, the two beat at

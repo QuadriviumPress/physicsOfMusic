@@ -353,7 +353,7 @@ Five short, auto-graded questions cycle within one compact activity, using five 
 (a) A stopped pipe has $f_n = nv/4L$ for odd $n$:
 
 $$
-f_1 = \frac{343}{4(0.025)} = 3430\ \text{Hz}.
+f_1 = \frac{343\ \text{m/s}}{4(0.025\ \text{m})} = 3430\ \text{Hz}.
 $$
 
 (b) The next mode is the third harmonic:
@@ -380,7 +380,7 @@ Therefore, the canal contributes resonances at about $3.4$ kHz and $10$ kHz, and
 (a) Pressure gain is the area ratio times the lever ratio:
 
 $$
-G = \frac{55}{3.2}\times1.3 = 17.2 \times 1.3 = 22.3.
+G = \frac{55\ \text{mm}^2}{3.2\ \text{mm}^2}\times1.3 = 17.2 \times 1.3 = 22.3.
 $$
 
 (b) For a pressure ratio, in decibels:

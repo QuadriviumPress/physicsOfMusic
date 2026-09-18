@@ -134,7 +134,7 @@ $$
 With $L = 0.17$ m and $v = 350$ m/s (warm, moist air):
 
 $$
-f_1 = \frac{350}{4(0.17)} = 515\ \text{Hz},
+f_1 = \frac{350\ \text{m/s}}{4(0.17\ \text{m})} = 515\ \text{Hz},
 \qquad f_3 = 1545\ \text{Hz},
 \qquad f_5 = 2575\ \text{Hz}.
 $$
@@ -356,7 +356,7 @@ Five short, auto-graded questions cycle within one compact activity, using five 
 (a) A stopped pipe gives odd harmonics of $v/4L$:
 
 $$
-f_1 = \frac{350}{4(0.175)} = 500\ \text{Hz},
+f_1 = \frac{350\ \text{m/s}}{4(0.175\ \text{m})} = 500\ \text{Hz},
 \quad f_3 = 1500\ \text{Hz},
 \quad f_5 = 2500\ \text{Hz}.
 $$
@@ -379,7 +379,7 @@ Therefore a uniform tube of the right length predicts the neutral vowel's forman
 (a) Male: $500$, $1500$, $2500$ Hz. Female, with $L = 0.15$ m:
 
 $$
-f_1 = \frac{350}{4(0.15)} = 583\ \text{Hz},
+f_1 = \frac{350\ \text{m/s}}{4(0.15\ \text{m})} = 583\ \text{Hz},
 \quad f_3 = 1750\ \text{Hz},
 \quad f_5 = 2917\ \text{Hz}.
 $$
@@ -531,7 +531,7 @@ Therefore the region where the voice is least masked is the region where the sin
 :label: sol-the-singing-voice-9
 :class: dropdown
 
-(a) $I = P/4\pi r^2 = 10^{-3}/(4\pi \times 100) = 7.96\times10^{-7}$ W/m²:
+(a) $I = P/4\pi r^2 = (10^{-3}\ \text{W})/(4\pi \times 100\ \text{m}^2) = 7.96\times10^{-7}$ W/m²:
 
 $$
 L = 10\log_{10}\!\left(\frac{7.96\times10^{-7}}{10^{-12}}\right) = 59\ \text{dB}.
@@ -567,7 +567,7 @@ so $F_1$ moves from $500$ to $547$ Hz and $F_2$ from $1500$ to $1641$ Hz, and so
 (b) Treating the pharyngeal cavity as a stopped pipe resonating at $2.9$ kHz:
 
 $$
-L = \frac{v}{4f} = \frac{350}{4(2900)} = 0.030\ \text{m} = 3.0\ \text{cm}.
+L = \frac{v}{4f} = \frac{350\ \text{m/s}}{4(2900\ \text{Hz})} = 0.030\ \text{m} = 3.0\ \text{cm}.
 $$
 
 Therefore the extra cavity is about $3$ cm long, which is roughly the dimension of the widened pharynx just above a lowered larynx, and the reason the technique works.

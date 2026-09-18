@@ -460,7 +460,7 @@ $$
 (b) From $Q = f_0/\Delta f$:
 
 $$
-\Delta f = \frac{f_0}{Q} = \frac{720}{6330} = 0.11\ \text{Hz}.
+\Delta f = \frac{f_0}{Q} = \frac{720\ \text{Hz}}{6330} = 0.11\ \text{Hz}.
 $$
 
 (c) The singer must land within roughly a tenth of a hertz of $720$ Hz, about a quarter of a cent, and hold it. That is far finer than any singer can aim deliberately, so the demonstration is usually done by sweeping slowly through the region until the glass responds, rather than by hitting the note directly.
@@ -476,7 +476,7 @@ $$
 :label: sol-resonance-3
 :class: dropdown
 
-(a) $\Delta f = f_0/Q = 98/6.0 = 16.3$ Hz.
+(a) $\Delta f = f_0/Q = (98\ \text{Hz})/6.0 = 16.3$ Hz.
 
 (b) Centered on $98$ Hz, the half-power range runs from about $98 - 8.2 = 89.8$ Hz to $98 + 8.2 = 106.2$ Hz.
 
@@ -502,8 +502,11 @@ Therefore, the resonance usefully covers about three semitones. A low $Q$ is wha
 (a) Converting to SI: $V = 7.5\times10^{-4}$ m³, $A = 3.8\times10^{-4}$ m², $L_{\text{eff}} = 0.075$ m.
 
 $$
-f_0 = \frac{343}{2\pi}\sqrt{\frac{3.8\times10^{-4}}{(7.5\times10^{-4})(0.075)}}
-= 54.6\sqrt{6.76} = 54.6(2.60) = 142\ \text{Hz}.
+f_0 = \frac{343\ \text{m/s}}{2\pi}
+  \sqrt{\frac{3.8\times10^{-4}\ \text{m}^2}{(7.5\times10^{-4}\ \text{m}^3)(0.075\ \text{m})}}
+  = (54.6\ \text{s}^{-1})\sqrt{6.76}
+  = (54.6\ \text{s}^{-1})(2.60)
+  = 142\ \text{Hz}.
 $$
 
 (b) Halving the air volume, with the neck unchanged:
@@ -611,10 +614,10 @@ $$
 (b) From $Q = \pi f_0 \tau$:
 
 $$
-\tau = \frac{101}{\pi(180)} = 0.178\ \text{s}.
+\tau = \frac{101}{\pi(180\ \text{Hz})} = 0.178\ \text{s}.
 $$
 
-(c) The number of cycles in $\tau$ is $f_0\tau = (180)(0.178) = 32$ cycles.
+(c) The number of cycles in $\tau$ is $f_0\tau = (180\ \text{Hz})(0.178\ \text{s}) = 32$ cycles.
 
 Therefore, $Q \approx 100$, the amplitude falls to $1/e$ in about $0.18$ s, and that is about $32$ cycles. Note the general rule visible here: a resonator rings for roughly $Q/\pi$ cycles, whatever its frequency.
 :::
@@ -640,8 +643,10 @@ $$
 With $A = \pi(0.025)^2 = 1.963\times10^{-3}$ m², $V = 0.032$ m³:
 
 $$
-L = \frac{1.963\times10^{-3}}{0.032}\left(\frac{343}{2\pi(45)}\right)^2
-= (0.0614)(1.213)^2 = 0.0903\ \text{m}.
+L = \frac{1.963\times10^{-3}\ \text{m}^2}{0.032\ \text{m}^3}
+  \left(\frac{343\ \text{m/s}}{2\pi(45\ \text{Hz})}\right)^2
+  = (0.0614\ \text{m}^{-1})(1.213\ \text{m})^2
+  = 0.0903\ \text{m}.
 $$
 
 Therefore, a port about $9.0$ cm long is needed. In practice the end correction would shorten this by several centimeters, which for a port this wide is a large fraction of the answer: the same warning as §3.5.

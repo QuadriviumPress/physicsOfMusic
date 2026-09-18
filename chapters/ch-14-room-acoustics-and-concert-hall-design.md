@@ -95,8 +95,12 @@ Inside $r_c$, moving closer makes a real difference. Beyond it, the reverberant 
 *A hall of $20{,}000$ m³ has $T_{60} = 2.0$ s. Find the critical distance, and comment.*
 
 $$
-r_c = 0.057\sqrt{\frac{20000}{2.0}} = 0.057\sqrt{10000} = 5.7\ \text{m}.
+r_c = 0.057\sqrt{\frac{20000\ \text{m}^3}{2.0\ \text{s}}}
+  = 0.057\sqrt{10000\ \text{m}^3/\text{s}}
+  = 5.7\ \text{m},
 $$
+
+with the empirical prefactor $0.057$ carrying the units that make $r_c$ come out in meters when $V$ is in m³ and $T_{60}$ in seconds.
 
 Only the first few rows are inside it. Everyone else is hearing a sound field dominated by reflections, at a level that barely changes from row ten to row forty.
 
@@ -349,7 +353,7 @@ Five short, auto-graded questions cycle within one compact activity, using five 
 (a) Using the Sabine equation:
 
 $$
-T_{60} = \frac{0.161 V}{A} = \frac{0.161(18000)}{1450} = 2.00\ \text{s}.
+T_{60} = \frac{0.161 V}{A} = \frac{0.161(18000\ \text{m}^3)}{1450\ \text{m}^2} = 2.00\ \text{s}.
 $$
 
 (b) Yes. Two seconds sits squarely in the $1.8$–$2.2$ s band that orchestral music wants, as {numref}`Figure %s <fig:ch14-reverberation-targets>` shows.
@@ -376,7 +380,7 @@ $$
 (c) $A = \alpha S = 0.15(3744) = 562$ m², so
 
 $$
-T_{60} = \frac{0.161(14080)}{562} = 4.03\ \text{s}.
+T_{60} = \frac{0.161(14080\ \text{m}^3)}{562\ \text{m}^2} = 4.03\ \text{s}.
 $$
 
 Therefore about $4$ s, far too long for orchestral music. The hall would need its absorption roughly doubled, which is what an audience and upholstered seating provide.
@@ -395,13 +399,13 @@ Therefore about $4$ s, far too long for orchestral music. The hall would need it
 (a) Empty: $A = 562 + 1200(0.45) = 562 + 540 = 1102$ m²:
 
 $$
-T_{60} = \frac{0.161(14080)}{1102} = 2.06\ \text{s}.
+T_{60} = \frac{0.161(14080\ \text{m}^3)}{1102\ \text{m}^2} = 2.06\ \text{s}.
 $$
 
 (b) Full: $A = 562 + 1200(0.85) = 562 + 1020 = 1582$ m²:
 
 $$
-T_{60} = \frac{0.161(14080)}{1582} = 1.43\ \text{s}.
+T_{60} = \frac{0.161(14080\ \text{m}^3)}{1582\ \text{m}^2} = 1.43\ \text{s}.
 $$
 
 (c) The hall is $0.6$ s longer empty: a difference every musician would notice. An orchestra rehearsing in the empty hall hears more reverberation than the audience will, so it will tend to play with less sustain and less blend than the concert requires, and balances set in rehearsal will be wrong.
@@ -422,7 +426,9 @@ This is exactly why hall designers specify seats whose empty absorption is close
 (a)
 
 $$
-r_c = 0.057\sqrt{\frac{25000}{2.2}} = 0.057\sqrt{11364} = 6.1\ \text{m}.
+r_c = 0.057\sqrt{\frac{25000\ \text{m}^3}{2.2\ \text{s}}}
+  = 0.057\sqrt{11364\ \text{m}^3/\text{s}}
+  = 6.1\ \text{m}.
 $$
 
 (b) Both positions are beyond the critical distance, so both are in the reverberant field, where the level is essentially uniform. The drop is small: a couple of decibels at most.
@@ -472,15 +478,15 @@ of extra path. In a hall $40$ m long, a listener near the front and a hard rear 
 (a) Axial modes are at $f = v/2L$ along each dimension:
 
 $$
-\frac{343}{2(6.0)} = 28.6\ \text{Hz},
-\quad \frac{343}{2(4.5)} = 38.1\ \text{Hz},
-\quad \frac{343}{2(2.8)} = 61.3\ \text{Hz}.
+\frac{343\ \text{m/s}}{2(6.0\ \text{m})} = 28.6\ \text{Hz},
+\quad \frac{343\ \text{m/s}}{2(4.5\ \text{m})} = 38.1\ \text{Hz},
+\quad \frac{343\ \text{m/s}}{2(2.8\ \text{m})} = 61.3\ \text{Hz}.
 $$
 
 (b) $V = 6.0 \times 4.5 \times 2.8 = 75.6$ m³:
 
 $$
-f_S = 2000\sqrt{\frac{0.5}{75.6}} = 2000(0.0813) = 163\ \text{Hz}.
+f_S = 2000\sqrt{\frac{0.5\ \text{s}}{75.6\ \text{m}^3}} = 2000(0.0813) = 163\ \text{Hz}.
 $$
 
 (c) Below $163$ Hz the modes are individually resolvable, and the three lowest are widely separated at $29$, $38$, and $61$ Hz. A bass note landing on a mode will boom; one landing between modes will nearly disappear; and both effects depend on where the listener sits.
@@ -501,13 +507,13 @@ Therefore bass in this room is position-dependent and uneven over the whole of t
 (a) From $A = 0.161V/T_{60}$:
 
 $$
-A = \frac{0.161(600)}{1.8} = 53.7\ \text{m}^2.
+A = \frac{0.161(600\ \text{m}^3)}{1.8\ \text{s}} = 53.7\ \text{m}^2.
 $$
 
 (b) For $0.8$ s:
 
 $$
-A = \frac{0.161(600)}{0.8} = 120.8\ \text{m}^2.
+A = \frac{0.161(600\ \text{m}^3)}{0.8\ \text{s}} = 120.8\ \text{m}^2.
 $$
 
 (c) The extra absorption needed is $120.8 - 53.7 = 67.1$ m². Panels of $\alpha = 0.85$ provide $0.85$ m² of absorption per square meter, but they also cover an existing surface. Taking the existing wall as roughly $\alpha = 0.05$, each square meter of panel adds a net $0.80$ m²:
@@ -553,7 +559,7 @@ $$
 The critical distance is
 
 $$
-r_c = 0.057\sqrt{\frac{20000}{2.0}} = 5.7\ \text{m}.
+r_c = 0.057\sqrt{\frac{20000\ \text{m}^3}{2.0\ \text{s}}} = 5.7\ \text{m}.
 $$
 
 By definition, at $r_c$ the direct and reverberant energies are equal. The reverberant energy is uniform throughout the room, while the direct energy falls as $1/r^2$. So at $30$ m the direct sound has fallen relative to its value at $r_c$ by
@@ -687,13 +693,13 @@ It also assumes the source and listener stay where they were when the response w
 (a) For speech:
 
 $$
-A = \frac{0.161(12000)}{0.9} = 2147\ \text{m}^2.
+A = \frac{0.161(12000\ \text{m}^3)}{0.9\ \text{s}} = 2147\ \text{m}^2.
 $$
 
 For music:
 
 $$
-A = \frac{0.161(12000)}{2.0} = 966\ \text{m}^2.
+A = \frac{0.161(12000\ \text{m}^3)}{2.0\ \text{s}} = 966\ \text{m}^2.
 $$
 
 (b) The difference is $2147 - 966 = 1181$ m² of absorption that must be introduced for speech and removed for music, more than the entire absorption required in the music configuration.

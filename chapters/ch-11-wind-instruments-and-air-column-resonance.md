@@ -315,7 +315,7 @@ The approximation is imperfect. A hole is not a complete opening: some of the st
 The tube behaves as an open pipe of the new, shorter length:
 
 $$
-f_1' = \frac{v}{2L'} = \frac{343}{2(0.491)} = 349\ \text{Hz}.
+f_1' = \frac{v}{2L'} = \frac{343\ \text{m/s}}{2(0.491\ \text{m})} = 349\ \text{Hz}.
 $$
 
 The interval above the original $262$ Hz is
@@ -410,7 +410,7 @@ Five short, auto-graded questions cycle within one compact activity, using five 
 (a) For an open pipe, $f_1 = v/2L$:
 
 $$
-L = \frac{v}{2f_1} = \frac{343}{2(262)} = 0.655\ \text{m}.
+L = \frac{v}{2f_1} = \frac{343\ \text{m/s}}{2(262\ \text{Hz})} = 0.655\ \text{m}.
 $$
 
 (b) All harmonics: $524$ Hz and $786$ Hz.
@@ -431,7 +431,7 @@ Therefore about $65.5$ cm of sounding length, with resonances at $262$, $524$, $
 (a) For a stopped pipe, $f_1 = v/4L$:
 
 $$
-L = \frac{343}{4(147)} = 0.583\ \text{m}.
+L = \frac{343\ \text{m/s}}{4(147\ \text{Hz})} = 0.583\ \text{m}.
 $$
 
 (b) Odd harmonics only: $3 \times 147 = 441$ Hz and $5 \times 147 = 735$ Hz.
@@ -457,14 +457,14 @@ Therefore a clarinet gets its low register from $58$ cm of tube where a flute wo
 :label: sol-wind-instruments-3
 :class: dropdown
 
-(a) $f_1 = 343/(2 \times 0.420) = 408$ Hz.
+(a) $f_1 = (343\ \text{m/s})/(2 \times 0.420\ \text{m}) = 408$ Hz.
 
 (b) Two open ends, each adding $0.6r = 0.0132$ m:
 
 $$
-L_{\text{eff}} = 0.420 + 2(0.0132) = 0.446\ \text{m},
+L_{\text{eff}} = 0.420\ \text{m} + 2(0.0132\ \text{m}) = 0.446\ \text{m},
 \qquad
-f_1 = \frac{343}{2(0.446)} = 384\ \text{Hz}.
+f_1 = \frac{343\ \text{m/s}}{2(0.446\ \text{m})} = 384\ \text{Hz}.
 $$
 
 (c)
@@ -505,7 +505,7 @@ Therefore the clarinet trades tone and fingering simplicity for compactness, and
 :label: sol-wind-instruments-5
 :class: dropdown
 
-(a) $f_1 = 343/(2 \times 1.48) = 116$ Hz, so the series is $116$, $232$, $348$, $464$ Hz.
+(a) $f_1 = (343\ \text{m/s})/(2 \times 1.48\ \text{m}) = 116$ Hz, so the series is $116$, $232$, $348$, $464$ Hz.
 
 (b) Resonances 2, 3, 4 and upward. The first is not properly supported by a real trumpet, for the reasons of §11.5, it lies below where the bell and mouthpiece pull the series into line.
 
