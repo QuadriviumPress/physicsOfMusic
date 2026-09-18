@@ -46,9 +46,11 @@ function drawRings( ctx, mapper, source, t, color ) {
     ctx.strokeStyle = color;
     ctx.globalAlpha = alpha * 0.55;
     ctx.lineWidth = 1.2;
-    const rx = mapper.x( source.x + radius ) - mapper.x( source.x );
-    const ry = mapper.y( source.y ) - mapper.y( source.y + radius );
-    ctx.ellipse( mapper.x( source.x ), mapper.y( source.y ), Math.abs( rx ), Math.abs( ry ), 0, 0, 2 * Math.PI );
+    // The panel's x and y axes use different display scales. A wavefront is
+    // circular in screen space, so use one pixel radius rather than allowing
+    // the coordinate mapper to stretch it into an ellipse.
+    const radiusPixels = Math.abs( mapper.x( source.x + radius ) - mapper.x( source.x ) );
+    ctx.arc( mapper.x( source.x ), mapper.y( source.y ), radiusPixels, 0, 2 * Math.PI );
     ctx.stroke();
   }
   ctx.globalAlpha = 1;
