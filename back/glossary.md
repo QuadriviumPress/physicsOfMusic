@@ -191,7 +191,7 @@ roughness
   slow beats. The principal physical correlate of dissonance. See §8.4.
 
 Sabine equation
-: $T_{60} = 0.161\,V/A$ in SI units, relating reverberation time to room volume
+: $T_{60} = 0.161\,V/A$ in SI units ($0.161$ in s/m), relating reverberation time to room volume
   $V$ and total absorption $A$. Valid for a diffuse field in a room that is not
   too absorbent. See §14.2.
 

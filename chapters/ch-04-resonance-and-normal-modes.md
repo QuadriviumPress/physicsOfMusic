@@ -504,15 +504,15 @@ Therefore, the resonance usefully covers about three semitones. A low $Q$ is wha
 $$
 f_0 = \frac{343\ \text{m/s}}{2\pi}
   \sqrt{\frac{3.8\times10^{-4}\ \text{m}^2}{(7.5\times10^{-4}\ \text{m}^3)(0.075\ \text{m})}}
-  = (54.6\ \text{s}^{-1})\sqrt{6.76}
-  = (54.6\ \text{s}^{-1})(2.60)
+  = (54.6\ \text{m/s})\sqrt{6.76\ \text{m}^{-2}}
+  = (54.6\ \text{m/s})(2.60\ \text{m}^{-1})
   = 142\ \text{Hz}.
 $$
 
 (b) Halving the air volume, with the neck unchanged:
 
 $$
-f_0' = f_0\sqrt{2} = 142\sqrt{2} = 201\ \text{Hz}.
+f_0' = f_0\sqrt{2} = (142\ \text{Hz})\sqrt{2} = 201\ \text{Hz}.
 $$
 
 Therefore, the empty bottle sounds about $142$ Hz and the half-full one about $201$ Hz: a rise of $1200\log_2\sqrt2 = 600$ cents, exactly a tritone. Halving the volume always raises the pitch by exactly this interval, whatever the bottle.
