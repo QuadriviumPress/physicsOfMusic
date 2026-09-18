@@ -1,0 +1,31 @@
+{
+  "question": "<p>Two waves overlap at the same point in space. According to the superposition principle, what is the resulting displacement at that point?</p>",
+  "answers": [
+    {
+      "text": "<div>The sum of the two individual displacements.</div>",
+      "correct": true
+    },
+    {
+      "text": "<div>Whichever wave has the larger amplitude, acting alone.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>The average of the two displacements, but only if the waves have the same frequency.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>Zero, because the waves collide and scatter off each other.</div>",
+      "correct": false
+    }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "singlePoint": true,
+    "randomAnswers": true,
+    "showSolutionsRequiresInput": true,
+    "autoCheck": false,
+    "passPercentage": 100,
+    "showScorePoints": true
+  }
+}

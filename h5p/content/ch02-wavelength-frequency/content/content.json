@@ -1,0 +1,31 @@
+{
+  "question": "<p>A source in a fixed medium doubles its frequency. The wave speed in that medium does not change. What happens to the wavelength?</p>",
+  "answers": [
+    {
+      "text": "<div>It is halved.</div>",
+      "correct": true
+    },
+    {
+      "text": "<div>It doubles.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>It stays the same.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>It quadruples.</div>",
+      "correct": false
+    }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "singlePoint": true,
+    "randomAnswers": true,
+    "showSolutionsRequiresInput": true,
+    "autoCheck": false,
+    "passPercentage": 100,
+    "showScorePoints": true
+  }
+}

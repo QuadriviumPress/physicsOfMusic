@@ -387,6 +387,65 @@ A stopped organ pipe sounds middle C, $262$ Hz, at $20$ °C. Without a calculato
 - **An open pipe gives $f_n = nv/2L$ with all harmonics; a stopped pipe gives $f_n = nv/4L$ with odd harmonics only.** A stopped pipe sounds an octave lower than an open pipe of the same length and sounds hollow, because every even partial is missing.
 - **The effective length of a pipe exceeds its physical length** by about $0.6r$ per open end, which matters for wide tubes.
 
+## Check Your Understanding
+
+Five short, auto-graded questions on the ideas above. They are ungraded self-checks, not part of the Problems below.
+
+:::{h5p} ch03-superposition-principle
+:label: check:ch03-superposition-principle
+
+Two waves overlap at the same point in space. According to the superposition principle, what is the resulting displacement at that point?
+
+1. The sum of the two individual displacements.
+2. Whichever wave has the larger amplitude, acting alone.
+3. The average of the two displacements, but only if the waves have the same frequency.
+4. Zero, because the waves collide and scatter off each other.
+:::
+
+:::{h5p} ch03-destructive-interference-energy
+:label: check:ch03-destructive-interference-energy
+
+Two loudspeakers play the same steady tone. A listener stands at a spot where the sound cancels almost completely. What has happened to the energy that would otherwise have reached that spot?
+
+1. It has been redistributed into the loud spots elsewhere in the room.
+2. It has been destroyed at the quiet spot.
+3. It was never emitted by the speakers in the first place.
+4. It converted into heat inside the loudspeakers.
+:::
+
+:::{h5p} ch03-reflection-fixed-end
+:label: check:ch03-reflection-fixed-end
+
+A wave pulse travels along a string toward an end that is clamped so it cannot move. What happens to the pulse when it reflects?
+
+1. It comes back inverted.
+2. It comes back the same way up.
+3. It is absorbed completely and does not return.
+4. Its amplitude doubles.
+:::
+
+:::{h5p} ch03-string-length-frequency
+:label: check:ch03-string-length-frequency
+
+A string fixed at both ends is shortened to exactly half its original length, while its tension and mass per unit length stay the same. What happens to its fundamental frequency?
+
+1. It doubles.
+2. It is halved.
+3. It quadruples.
+4. It stays the same.
+:::
+
+:::{h5p} ch03-stopped-vs-open-pipe
+:label: check:ch03-stopped-vs-open-pipe
+
+A pipe stopped at one end is compared with an open pipe of the same length. Which statement correctly describes the stopped pipe?
+
+1. It sounds an octave lower than the open pipe and produces only odd harmonics.
+2. It sounds an octave higher than the open pipe and produces every harmonic.
+3. It sounds identical to the open pipe.
+4. It produces only even harmonics.
+:::
+
 ## Conceptual Questions
 
 1. Two pulses of opposite sign meet on a string and momentarily cancel completely, leaving the string straight. Explain where the energy is at that instant.

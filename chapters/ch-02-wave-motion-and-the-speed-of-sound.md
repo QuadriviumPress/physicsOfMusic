@@ -381,6 +381,65 @@ Two reasons. The vibrato's excursion is small, a few tens of cents rather than a
 - **Acoustic impedance governs how much sound crosses a boundary.** The mismatch between solids and air is huge, so a bare string radiates almost nothing; soundboards, bells, and the middle ear all exist to bridge that gap.
 - **The Doppler effect** shifts the frequency of a moving source to $f' = f v/(v \mp v_s)$, by bunching or stretching the wavefronts. A moving listener gives a different formula, because the physics is different.
 
+## Check Your Understanding
+
+Five short, auto-graded questions on the ideas above. They are ungraded self-checks, not part of the Problems below.
+
+:::{h5p} ch02-wavelength-frequency
+:label: check:ch02-wavelength-frequency
+
+A source in a fixed medium doubles its frequency. The wave speed in that medium does not change. What happens to the wavelength?
+
+1. It is halved.
+2. It doubles.
+3. It stays the same.
+4. It quadruples.
+:::
+
+:::{h5p} ch02-boundary-crossing
+:label: check:ch02-boundary-crossing
+
+A sound wave crosses from air into water. Its speed and wavelength both change. Which quantity stays the same?
+
+1. Frequency.
+2. Wavelength.
+3. Speed.
+4. Amplitude.
+:::
+
+:::{h5p} ch02-speed-temperature
+:label: check:ch02-speed-temperature
+
+The speed of sound in air depends strongly on one environmental factor, and hardly at all on another that changes the density of the air by a similar amount. Which factor does it depend on strongly?
+
+1. Temperature.
+2. Atmospheric pressure.
+3. The loudness of the sound.
+4. The frequency of the sound.
+:::
+
+:::{h5p} ch02-stiffness-density
+:label: check:ch02-stiffness-density
+
+Sound travels about seventeen times faster through steel than through air, even though steel is thousands of times denser. What explains this?
+
+1. Steel's stiffness is millions of times greater than air's, which outweighs its greater density.
+2. Density has no effect on the speed of sound.
+3. Steel has no inertia to resist being set in motion.
+4. A denser medium always carries sound faster.
+:::
+
+:::{h5p} ch02-acoustic-impedance
+:label: check:ch02-acoustic-impedance
+
+A vibrating guitar string produces very little sound on its own, until it is coupled to a soundboard. What is the physical reason a bare string is such a poor radiator of sound?
+
+1. An impedance mismatch between the string and the surrounding air reflects almost all the vibrational energy back into the string instead of into the air.
+2. The string vibrates too slowly to disturb the air at all.
+3. The string has no stiffness, so it cannot push on the air.
+4. Sound cannot travel through a solid string.
+:::
+
 ## Conceptual Questions
 
 1. A trumpeter thirty meters away plays a note. Explain why you hear it a tenth of a second later even though no air travels from the trumpet to your ear.

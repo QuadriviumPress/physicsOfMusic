@@ -2,11 +2,12 @@
  * The book's stylesheet, registered as `site.options.style` in myst.yml.
  *
  * `style` takes one file, so the rules for both media plugins live here rather
- * than beside each plugin. Four groups, in order:
+ * than beside each plugin. Five groups, in order:
  *
  *   1. {simulation} / {openlyceum} / {phet}   plugins/simulation.mjs
  *   2. {audio}                                plugins/audio.mjs
  *   3. {animation}                            plugins/animation.mjs
+<<<<<<< Updated upstream
  *   4. {video}                                plugins/video.mjs
  *   5. book styles
  *
@@ -15,6 +16,16 @@
  * *and* a static image as siblings of one figure, because no single node type
  * survives every MyST output format; on the website both would be visible, so
  * this file hides the static image and flips the pair back around for print.
+=======
+ *   4. {h5p}                                  plugins/h5p.mjs
+ *   5. book styles
+ *
+ * Groups 1, 3, and 4 are load-bearing. Those directives emit a website-only
+ * iframe *and* a static fallback as siblings of one container, because no
+ * single node type survives every MyST output format; on the website both
+ * would be visible, so this file hides the static fallback and flips the pair
+ * back around for print.
+>>>>>>> Stashed changes
  */
 
 /* ---------------------------------------------------------------- 1. Simulations */
@@ -108,6 +119,7 @@
   padding-bottom: 75% !important;
 }
 
+<<<<<<< Updated upstream
 /* ---------------------------------------------------------------- 4. Videos */
 
 /* The poster exists for PDF, DOCX, Markdown, and print. */
@@ -133,6 +145,30 @@
 
 /* ---------------------------------------------------------------- 5. Book */
 
+=======
+/* ---------------------------------------------------------------- 4. H5P exercises */
+
+/*
+ * A multiple-choice widget has no fixed aspect ratio worth preserving, and its
+ * content height does not scale with width the way a video frame's does, so
+ * this overrides the theme's percentage-padding trick with a plain fixed
+ * height instead, the same way .audio-player does above.
+ */
+.h5p-frame > div {
+  height: 30rem;
+  padding-bottom: 0 !important;
+}
+
+.h5p-frame iframe {
+  height: 30rem;
+}
+
+/* The static fallback exists for PDF, DOCX, Markdown, and print. */
+.h5p-fallback {
+  display: none;
+}
+
+>>>>>>> Stashed changes
 /* Open-license photographs are supporting illustrations, not full-page plates. */
 figure img[src*="/images/open/"] {
   max-width: 72%;
@@ -152,7 +188,11 @@ figure img[src*="/images/open/"] {
   .audio-player,
   .simulation-frame,
   .animation-frame,
+<<<<<<< Updated upstream
   .video-frame {
+=======
+  .h5p-frame {
+>>>>>>> Stashed changes
     display: none;
   }
 
@@ -163,5 +203,9 @@ figure img[src*="/images/open/"] {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+  }
+
+  .h5p-fallback {
+    display: block;
   }
 }

@@ -378,6 +378,65 @@ Simple harmonic motion is not an approximation the book will later outgrow. It i
 - **Energy goes as the square of the amplitude**, $E = \frac12 kA^2$. The enormous dynamic range this produces is why loudness is measured logarithmically ([Chapter 7](#ch-loudness)).
 - **Damping makes amplitude decay exponentially**, $A(t) = A_0e^{-t/\tau}$. Radiating sound is a loss of energy from the vibration, so loudness and sustain trade against each other: a design decision every instrument maker has to make.
 
+## Check Your Understanding
+
+Five short, auto-graded questions on the ideas above. They are ungraded self-checks, not part of the Problems below.
+
+:::{h5p} ch01-vacuum-medium
+:label: check:ch01-vacuum-medium
+
+A ringing alarm clock is sealed in a bell jar. As the air is pumped out, the sound fades to silence even though the hammer can still be seen striking the bell. What does this demonstrate?
+
+1. Sound requires a medium to travel through, unlike light.
+2. Light also requires a medium to travel through.
+3. The hammer has stopped vibrating.
+4. Sound travels faster through a vacuum than through air.
+:::
+
+:::{h5p} ch01-pressure-compression
+:label: check:ch01-pressure-compression
+
+In a sound wave traveling through air, a compression is a region where the air molecules are bunched more tightly than usual. What is the pressure there?
+
+1. Above atmospheric pressure.
+2. Below atmospheric pressure.
+3. Exactly atmospheric pressure.
+4. Zero.
+:::
+
+:::{h5p} ch01-hookes-law-generality
+:label: check:ch01-hookes-law-generality
+
+A mass on a spring, a guitar string, and an air column all vibrate approximately sinusoidally for small displacements, even though they are physically very different systems. Why does the linear restoring force $F = -kx$ describe all of them?
+
+1. Any smooth potential energy curve looks approximately quadratic near a stable equilibrium, so the restoring force is approximately linear for small displacements.
+2. All of these systems are secretly made of springs.
+3. Linear forces are the only kind of force that exists in nature.
+4. Small displacements eliminate all friction in the system.
+:::
+
+:::{h5p} ch01-shm-amplitude-independence
+:label: check:ch01-shm-amplitude-independence
+
+A guitar string is plucked harder, increasing its vibration amplitude but not its tension or its mass per unit length. What happens to the pitch it sounds?
+
+1. The pitch stays the same, because the frequency of simple harmonic motion does not depend on amplitude.
+2. The pitch rises, because louder sounds have higher frequency.
+3. The pitch falls, because more energy slows the vibration.
+4. The sound becomes noise with no definite pitch.
+:::
+
+:::{h5p} ch01-energy-amplitude-squared
+:label: check:ch01-energy-amplitude-squared
+
+The amplitude of a vibrating string is doubled, with everything else unchanged. By what factor does the energy of its vibration increase?
+
+1. 4
+2. 2
+3. 8
+4. 16
+:::
+
 ## Conceptual Questions
 
 1. An alarm clock ringing inside a bell jar goes silent as the air is pumped out, but the hammer can still be seen striking the bell. Explain what has stopped and what has not.

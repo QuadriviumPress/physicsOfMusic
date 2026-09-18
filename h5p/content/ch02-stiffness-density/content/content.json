@@ -1,0 +1,31 @@
+{
+  "question": "<p>Sound travels about seventeen times faster through steel than through air, even though steel is thousands of times denser. What explains this?</p>",
+  "answers": [
+    {
+      "text": "<div>Steel's stiffness is millions of times greater than air's, which outweighs its greater density.</div>",
+      "correct": true
+    },
+    {
+      "text": "<div>Density has no effect on the speed of sound.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>Steel has no inertia to resist being set in motion.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>A denser medium always carries sound faster.</div>",
+      "correct": false
+    }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "singlePoint": true,
+    "randomAnswers": true,
+    "showSolutionsRequiresInput": true,
+    "autoCheck": false,
+    "passPercentage": 100,
+    "showScorePoints": true
+  }
+}

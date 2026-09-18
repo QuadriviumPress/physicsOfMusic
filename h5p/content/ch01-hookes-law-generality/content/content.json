@@ -1,0 +1,31 @@
+{
+  "question": "<p>A mass on a spring, a guitar string, and an air column all vibrate approximately sinusoidally for small displacements, even though they are physically very different systems. Why does the linear restoring force F = -kx describe all of them?</p>",
+  "answers": [
+    {
+      "text": "<div>Any smooth potential energy curve looks approximately quadratic near a stable equilibrium, so the restoring force is approximately linear for small displacements.</div>",
+      "correct": true
+    },
+    {
+      "text": "<div>All of these systems are secretly made of springs.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>Linear forces are the only kind of force that exists in nature.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>Small displacements eliminate all friction in the system.</div>",
+      "correct": false
+    }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "singlePoint": true,
+    "randomAnswers": true,
+    "showSolutionsRequiresInput": true,
+    "autoCheck": false,
+    "passPercentage": 100,
+    "showScorePoints": true
+  }
+}

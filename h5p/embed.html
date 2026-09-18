@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H5P exercise</title>
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { font-family: sans-serif; }
+  #h5p-container { max-width: 100%; }
+  #h5p-error { padding: 1rem; color: #a00; }
+</style>
+</head>
+<body>
+<div id="h5p-container"></div>
+<script src="player/main.bundle.js"></script>
+<script>
+(function () {
+  var id = new URLSearchParams(window.location.search).get('id');
+  var container = document.getElementById('h5p-container');
+  if (!id) {
+    container.textContent = 'Missing H5P content id: open this page as embed.html?id=<content-id>.';
+    container.id = 'h5p-error';
+    return;
+  }
+  new H5PStandalone.H5P(container, {
+    h5pJsonPath: 'content/' + id,
+    librariesPath: 'libraries',
+    frameJs: 'player/frame.bundle.js',
+    frameCss: 'player/styles/h5p.css'
+  });
+})();
+</script>
+</body>
+</html>

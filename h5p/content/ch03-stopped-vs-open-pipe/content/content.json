@@ -1,0 +1,31 @@
+{
+  "question": "<p>A pipe stopped at one end is compared with an open pipe of the same length. Which statement correctly describes the stopped pipe?</p>",
+  "answers": [
+    {
+      "text": "<div>It sounds an octave lower than the open pipe and produces only odd harmonics.</div>",
+      "correct": true
+    },
+    {
+      "text": "<div>It sounds an octave higher than the open pipe and produces every harmonic.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>It sounds identical to the open pipe.</div>",
+      "correct": false
+    },
+    {
+      "text": "<div>It produces only even harmonics.</div>",
+      "correct": false
+    }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "singlePoint": true,
+    "randomAnswers": true,
+    "showSolutionsRequiresInput": true,
+    "autoCheck": false,
+    "passPercentage": 100,
+    "showScorePoints": true
+  }
+}
