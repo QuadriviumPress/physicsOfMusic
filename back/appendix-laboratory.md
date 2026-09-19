@@ -164,8 +164,8 @@ exactly what you will measure in [B.9](#lab-b9).
 
 ### Method B, Time of flight
 
-1. Place two microphones a measured distance apart, several meters, as far as
-   your interface allows, both recording to the same file.
+1. Place two microphones several meters apart, as far apart as your interface
+   allows, and record both to the same file.
 2. Make a sharp impulsive sound (a hand clap, two blocks struck together) beyond
    one microphone, on the line joining them.
 3. Measure the delay between the two arrivals in the recording, and divide the
