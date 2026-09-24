@@ -111,7 +111,9 @@ test('generated URLs honor the deployment base path', async () => {
   try {
     const basedPlugin = await import(`../plugins/audio.mjs?base-path-test=${ Date.now() }`);
     const clip = basedPlugin.resolveClip('ch05-sine');
-    assert.equal(clip.url, '/physicsOfMusic/audio/ch05-sine.mp3');
+    // The caption link stays project-rooted so MyST can resolve the file.
+    // Only the iframe, which MyST does not rewrite, carries the base path.
+    assert.equal(clip.url, '/audio/ch05-sine.mp3');
     assert.equal(
       basedPlugin.playerUrl({ ...clip, name: 'Sine' }),
       '/physicsOfMusic/audio-player.html#src=%2FphysicsOfMusic%2Faudio%2Fch05-sine.mp3&name=Sine'

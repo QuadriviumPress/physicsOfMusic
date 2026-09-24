@@ -29,13 +29,20 @@
  * project root rather than the directory of the source file, and the directive
  * has no way to know which file it was written in.
  *
+ * This path is intentionally not prefixed with `BASE_URL`. A caption `link`
+ * to `/physicsOfMusic/audio/x.mp3` does not exist on disk, so
+ * `StaticFileTransformer` skips it and `--check-links` reports every clip as
+ * unresolved. MyST applies `BASE_URL` itself when it writes the hashed link
+ * into the site. The iframe player is different: MyST does not rewrite an
+ * iframe `src`, so that URL is prefixed in `playerUrl`.
+ *
  * @type {string}
  */
 const rawBaseUrl = process.env.BASE_URL || '/';
 const SITE_ROOT = rawBaseUrl === '/'
   ? ''
   : `/${ rawBaseUrl.replace( /^\/+|\/+$/g, '' ) }`;
-const AUDIO_ROOT = `${ SITE_ROOT }/audio`;
+const AUDIO_ROOT = '/audio';
 
 /**
  * Directory holding the static figure that stands in for a clip in print.
@@ -126,6 +133,27 @@ export function splitList( value ) {
 }
 
 /**
+ * Prefixes a root-relative URL with the deployment base path.
+ *
+ * Absolute and already-prefixed URLs are left alone. Caption links do not use
+ * this: MyST resolves those against the project and applies `BASE_URL` when
+ * it renders HTML. Iframe sources do, because MyST copies them through as
+ * written.
+ *
+ * @param {string} url - A clip or player URL.
+ * @returns {string} The URL the browser will request on the deployed site.
+ */
+function deployedUrl( url ) {
+  if ( !SITE_ROOT || !url.startsWith( '/' ) || url.startsWith( '//' ) ) {
+    return url;
+  }
+  if ( url === SITE_ROOT || url.startsWith( `${ SITE_ROOT }/` ) ) {
+    return url;
+  }
+  return `${ SITE_ROOT }${ url }`;
+}
+
+/**
  * Builds the URL for the small same-origin player page.
  *
  * Hash parameters keep the host page free of a query-string navigation and
@@ -135,7 +163,7 @@ export function splitList( value ) {
  * @returns {string} Player iframe URL.
  */
 export function playerUrl( clip ) {
-  return `${ PLAYER_URL }#src=${ encodeURIComponent( clip.url ) }&name=${ encodeURIComponent( clip.name ) }`;
+  return `${ PLAYER_URL }#src=${ encodeURIComponent( deployedUrl( clip.url ) ) }&name=${ encodeURIComponent( clip.name ) }`;
 }
 
 /**

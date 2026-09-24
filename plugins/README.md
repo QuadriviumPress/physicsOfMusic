@@ -235,7 +235,12 @@ survive. This was established by probing the actual build, not assumed:
 So the figure is built from nodes MyST renders natively, and the reader listens
 by following a link. That asset handling is the one thing to be glad of here: a
 `link` to `/audio/<id>.mp3` is exactly what makes MyST copy the clip into the
-site at all.
+site at all. That caption URL stays project-rooted even when `BASE_URL` is
+set: MyST resolves a leading-slash link against the project directory, so a
+`/physicsOfMusic/audio/…` link does not exist on disk and `--check-links`
+fails every clip. MyST applies `BASE_URL` when it writes the hashed caption
+link. The iframe `src` is the exception, because MyST does not rewrite it, so
+`playerUrl` prefixes that URL itself.
 
 What the plugin adds over a bare link is the part that carries the physics: the
 waveform-and-spectrum figure showing what is actually in the clip, a transcript,
