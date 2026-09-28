@@ -260,7 +260,7 @@ PDF, is deaf or hard of hearing, or is reading somewhere they cannot play sound
 
 They are **synthesized, not sampled**: `../scripts/audio/chNN_audio.py` writes
 each clip and its matching figure, so every example is reproducible, and the
-book carries no third-party recording and no licence question. Generated `.mp3`
+book carries no third-party recording and no license question. Generated `.mp3`
 and `.svg` are committed, because the Pages build runs `myst build --html` with
 no Python. Regenerate with `npm run audio:render`.
 

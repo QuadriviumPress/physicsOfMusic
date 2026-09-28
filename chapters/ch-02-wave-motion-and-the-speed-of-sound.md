@@ -86,7 +86,7 @@ A handclap is a pulse. A sung note is a periodic wave. Musically the periodic ca
 :label: fig:ch02-wave-machine-video
 :alt: Skewers attached to a strip of tape carry a transverse pulse along a tabletop wave machine.
 
-The National STEM Centre's tabletop wave machine makes propagation visible: each element moves locally while the disturbance and its energy travel along the machine. Reflections and changes of medium can be seen without following an individual piece of matter down the line.
+The National STEM Center's tabletop wave machine makes propagation visible: each element moves locally while the disturbance and its energy travel along the machine. Reflections and changes of medium can be seen without following an individual piece of matter down the line.
 ```
 
 ## Wavelength, Frequency, and Wave Speed

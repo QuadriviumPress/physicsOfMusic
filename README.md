@@ -190,7 +190,7 @@ website build, where the plugin is inert:
 ## Content sources
 
 See [`SOURCES.md`](SOURCES.md) for the per-chapter attribution ledger and the
-licence compatibility notes.
+license compatibility notes.
 
 ## License
 

@@ -322,7 +322,7 @@ Its weakness is not sound quality but **control**. A realistic instrument needs 
 
 This is exactly the **source–filter model** of [Chapter 13](#ch-the-singing-voice), and the analogy is not loose: the oscillator is the vocal folds and the filter is the vocal tract. A resonant low-pass filter with a swept cutoff is imitating a formant, and a synthesizer player sweeping a filter is doing what a singer does moving their tongue.
 
-It dominated analogue synthesis because it is efficient. Two or three controls, cutoff, resonance, and an envelope on the cutoff, produce an enormous range of usable timbres, where additive synthesis needs hundreds.
+It dominated analog synthesis because it is efficient. Two or three controls, cutoff, resonance, and an envelope on the cutoff, produce an enormous range of usable timbres, where additive synthesis needs hundreds.
 
 ```{audio} ch15-additive, ch15-subtractive, ch15-fm
 :names: Additive, Subtractive, FM

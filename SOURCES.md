@@ -1,18 +1,18 @@
 # Sources
 
-Overall book licence: **CC-BY-NC-SA-4.0**.
+Overall book license: **CC-BY-NC-SA-4.0**.
 
-## Licence compatibility — read this before adapting anything
+## License compatibility — read this before adapting anything
 
-Not every open licence can be redistributed under this book's terms, and the
+Not every open license can be redistributed under this book's terms, and the
 distinction matters:
 
-| Licence | Can it be adapted into this book? | Why |
+| License | Can it be adapted into this book? | Why |
 |---|---|---|
 | CC-BY 4.0 / 2.0 | **Yes** | Attribution only; downstream may add restrictions, including NonCommercial. |
 | CC-BY-NC-SA 4.0 | **Yes** | Identical terms. |
 | Public domain | **Yes** | No conditions. |
-| **CC-BY-SA 4.0** | **No** | ShareAlike requires the adaptation to be released under BY-SA 4.0 or a listed BY-SA-compatible licence. **BY-NC-SA is not one**: adding a NonCommercial restriction is exactly what ShareAlike forbids. |
+| **CC-BY-SA 4.0** | **No** | ShareAlike requires the adaptation to be released under BY-SA 4.0 or a listed BY-SA-compatible license. **BY-NC-SA is not one**: adding a NonCommercial restriction is exactly what ShareAlike forbids. |
 
 This rules out adapting prose from *Open Music Theory*
 (`QuadriviumPress/musicTheory`, CC-BY-SA-4.0), which this book therefore
@@ -20,17 +20,17 @@ This rules out adapting prose from *Open Music Theory*
 and nothing is lost: it is an analysis and harmony text with essentially no
 acoustics content.
 
-Note also that LibreTexts pages can carry different licences page by page within
-one bookshelf. Re-check the licence notice on the specific page being adapted,
+Note also that LibreTexts pages can carry different licenses page by page within
+one bookshelf. Re-check the license notice on the specific page being adapted,
 even for sources listed below.
 
 ## Openly licensed works covering the same ground
 
-These are listed for licence completeness and because a reader may want them.
+These are listed for license completeness and because a reader may want them.
 As stated below, **no prose was adapted from any of them**; had it been, these
 are the terms under which it could have been.
 
-| Source | Licence | URL |
+| Source | License | URL |
 |---|---|---|
 | OpenStax, *College Physics 2e*, chs. 16–17 | CC-BY 4.0 | https://openstax.org/details/books/college-physics-2e |
 | OpenStax, *University Physics Volume 1*, ch. 17 | CC-BY 4.0 | https://openstax.org/details/books/university-physics-volume-1 |
@@ -39,7 +39,7 @@ are the terms under which it could have been.
 
 ## Supplementary sources
 
-| Source | Licence | URL |
+| Source | License | URL |
 |---|---|---|
 | PhET Interactive Simulations (University of Colorado Boulder) | CC-BY 4.0 | https://phet.colorado.edu/ |
 | OpenLyceum simulations | AGPL-3.0 | https://github.com/OpenLyceum |
@@ -65,7 +65,7 @@ acoustics. The works in the tables above are listed because they cover the same
 ground and because the treatment here is consistent with them — not because
 sentences were taken from them.
 
-That distinction matters for the licence, and it is why the table below records
+That distinction matters for the license, and it is why the table below records
 *specific data* rather than *adapted passages*. Where a chapter states a number
 that came from somewhere, it is named here and in the figure caption.
 
@@ -101,7 +101,7 @@ exact upstream paths are preserved in `scripts/audio/sources/vsco/`.
 The generators are in `scripts/figures/`, `scripts/audio/`, and
 `notation/definitions/`, and their outputs are committed to `images/`,
 `images/notation/`, and `audio/`. Original project material is covered by the
-book's CC-BY-NC-SA-4.0 licence; the VSCO source recordings remain CC0.
+book's CC-BY-NC-SA-4.0 license; the VSCO source recordings remain CC0.
 
 Where a generated figure plots published data — the equal-loudness contours of
 Chapter 7 are the main case — the data source is named in the figure caption and

@@ -42,7 +42,7 @@ appear inside worked solutions.
   figure that appears inside a worked solution.
 - **Use the shared palette.** `BLUE` is the default, `RED` the contrast, and the
   rest of `CYCLE` for a third and fourth series. A figure that invents its own
-  colours will not sit beside the others.
+  colors will not sit beside the others.
 - **A spectrum is a line spectrum.** `spectrum()` draws stems, not a filled
   curve: the point of nearly every spectrum in this book is *which* partials are
   present, and a filled curve invites the reader to see energy between them

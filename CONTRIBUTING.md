@@ -42,8 +42,8 @@ Two failure modes are silent and are worth knowing about:
 
 `npm run check:project` catches the first. Nothing catches the second but you.
 
-Keep source attribution current in `SOURCES.md`. Record the source and licence
-when adding adapted prose, data, or figures — and read the licence-compatibility
+Keep source attribution current in `SOURCES.md`. Record the source and license
+when adding adapted prose, data, or figures — and read the license-compatibility
 note at the top of that file before adapting anything new.
 
 ## The mathematical level

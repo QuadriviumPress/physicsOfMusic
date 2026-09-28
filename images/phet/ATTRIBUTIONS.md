@@ -4,7 +4,7 @@ Static fallbacks for `{phet}` directives when a print or Word export cannot
 run the live iframe. Filenames match PhET's published
 `<sim>-600.png` assets.
 
-| File | Simulation | Licence | Source |
+| File | Simulation | License | Source |
 | --- | --- | --- | --- |
 | `sound-waves-600.png` | Sound Waves | CC-BY 4.0 | https://phet.colorado.edu/sims/html/sound-waves/latest/sound-waves-600.png |
 | `masses-and-springs-600.png` | Masses and Springs | CC-BY 4.0 | https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs-600.png |
