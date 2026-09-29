@@ -8,6 +8,7 @@ This book follows the [QuadriviumPress MyST baseline](https://github.com/Quadriv
 
 ```bash
 npm run check:toolchain
+npm run h5p:check
 npm run h5p:generate
 npm run h5p:prepare
 npm run prestart
@@ -36,8 +37,8 @@ npm run notation:render
 ## Intentional differences
 
 - `start`, `build`, and `check` invoke MyST through `scripts/run-myst.mjs`. That launcher works around the npm-version probe bundled with older MyST releases. It stays in place after the pin move to `mystmd@1.11.0`.
-- `check:toolchain`, `h5p:generate`, and `h5p:prepare` support H5P. There is no `h5p:check`.
-- `verify` runs H5P prepare, the project validator, and `npm test`.
+- `check:toolchain`, `h5p:check`, `h5p:generate`, and `h5p:prepare` support H5P. `verify` runs the H5P check before prepare.
+- `verify` also runs the project validator and `npm test`.
 - Notation and audio scripts: `notation:render`, `notation:check`, `audio:render`, `audio:check`.
 - Print exports: `build:exports`, `build:pdf`, `build:chapters`, `build:docx`, plus `test:exports` and `check:figures`.
 - `devDependencies` also includes `fflate`, `jsdom`, and `vexflow`.

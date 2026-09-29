@@ -585,12 +585,30 @@ function questionSet( quiz ) {
   };
 }
 
+const check = process.argv.includes( '--check' );
+if ( process.argv.length > 2 && ( process.argv.length !== 3 || !check ) ) {
+  throw new Error( 'Usage: node scripts/generate-h5p-quizzes.mjs [--check]' );
+}
+const stale = [];
+
+function outputFile( file, bytes ) {
+  const data = Buffer.isBuffer( bytes ) ? bytes : Buffer.from( bytes );
+  if ( check ) {
+    if ( !fs.existsSync( file ) || !fs.readFileSync( file ).equals( data ) ) {
+      stale.push( path.relative( ROOT, file ) );
+    }
+  }
+  else {
+    fs.mkdirSync( path.dirname( file ), { recursive: true } );
+    fs.writeFileSync( file, data );
+  }
+}
+
 for ( const quiz of quizzes ) {
   const chapter = String( quiz.chapter ).padStart( 2, '0' );
   const id = `ch${chapter}-chapter-review`;
   const root = path.join( CONTENT_ROOT, id );
   const content = path.join( root, 'content' );
-  fs.mkdirSync( content, { recursive: true } );
 
   const preloadedDependencies = dependencies.map( dependency );
   const quizFigures = figures( quiz );
@@ -606,14 +624,15 @@ for ( const quiz of quizzes ) {
     preloadedDependencies
   };
 
-  fs.writeFileSync( path.join( root, 'h5p.json' ), `${JSON.stringify( manifest, null, 2 )}\n` );
-  fs.writeFileSync( path.join( content, 'content.json' ), `${JSON.stringify( questionSet( quiz ), null, 2 )}\n` );
+  outputFile( path.join( root, 'h5p.json' ), `${JSON.stringify( manifest, null, 2 )}\n` );
+  outputFile( path.join( content, 'content.json' ), `${JSON.stringify( questionSet( quiz ), null, 2 )}\n` );
 
   for ( const figure of quizFigures ) {
-    const destination = path.join( content, figure );
-    fs.mkdirSync( path.dirname( destination ), { recursive: true } );
-    fs.copyFileSync( path.join( ROOT, figure ), destination );
+    outputFile( path.join( content, figure ), fs.readFileSync( path.join( ROOT, figure ) ) );
   }
 }
 
-console.log( `Generated ${quizzes.length} H5P chapter reviews (${quizzes.reduce( ( total, quiz ) => total + quiz.questions.length, 0 )} questions).` );
+if ( stale.length ) {
+  throw new Error( `Generated H5P reviews are out of date:\n${stale.map( file => `  ${file}` ).join( '\n' )}\nRun npm run h5p:generate.` );
+}
+console.log( `${check ? 'Checked' : 'Generated'} ${quizzes.length} H5P chapter reviews (${quizzes.reduce( ( total, quiz ) => total + quiz.questions.length, 0 )} questions).` );

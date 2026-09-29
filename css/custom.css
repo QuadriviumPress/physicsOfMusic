@@ -155,6 +155,12 @@
 
 /* ---------------------------------------------------------------- 6. Book */
 
+/* Keep long calculations readable on narrow screens. */
+.math-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 /* Open-license photographs are supporting illustrations, not full-page plates. */
 figure img[src*="/images/open/"] {
   max-width: 72%;
