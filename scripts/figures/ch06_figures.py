@@ -239,8 +239,8 @@ def cochlea_map():
     save(fig, "ch06-cochlea-map")
 
 
-def travelling_wave():
-    """Envelopes of the travelling wave for three frequencies."""
+def traveling_wave():
+    """Envelopes of the traveling wave for three frequencies."""
     use_style()
     fig, ax = plt.subplots(figsize=(8.6, 3.4))
     x = np.linspace(0, 35, 900)
@@ -256,13 +256,13 @@ def travelling_wave():
     ax.set_yticks([])
     ax.set_xlim(0, 35)
     ax.legend(fontsize=10.5, loc="upper left")
-    ax.set_title("A travelling wave builds gradually, peaks, and stops abruptly",
+    ax.set_title("A traveling wave builds gradually, peaks, and stops abruptly",
                  fontsize=12, fontweight="bold")
     ax.text(18.0, 0.18, "the sharp apex-side cut-off is why a loud low tone\n"
                         "masks a quiet high one far more than the reverse",
             fontsize=9.5, color=GRAY)
     fig.tight_layout()
-    save(fig, "ch06-travelling-wave")
+    save(fig, "ch06-traveling-wave")
 
 
 def hearing_loss():
@@ -314,7 +314,7 @@ def main():
     ear_anatomy()
     middle_ear_gain()
     cochlea_map()
-    travelling_wave()
+    traveling_wave()
     hearing_loss()
 
 
