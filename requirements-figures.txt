@@ -2,7 +2,7 @@
 matplotlib==3.11.1
 numpy==2.5.2
 scipy==1.18.1
-pillow==12.3.0
+pillow==13.0.0
 # fontTools reads the Bravura WOFF2 that scripts/notation_text_to_path.py
 # converts to paths; WOFF2 is brotli-compressed, and fontTools will not open
 # one without this.
