@@ -34,8 +34,9 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
-          python-version: '3.12'
+          python-version: '3.14'
           cache: pip
+          cache-dependency-path: requirements-figures.txt
       - run: python -m pip install -r requirements-figures.txt
       - run: scripts/check-figures.sh
 
@@ -47,8 +48,9 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
-          python-version: '3.12'
+          python-version: '3.14'
           cache: pip
+          cache-dependency-path: requirements-figures.txt
       - run: python -m pip install -r requirements-figures.txt
       - name: Install ffmpeg
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
@@ -66,8 +68,9 @@ jobs:
           cache: npm
       - uses: actions/setup-python@v7
         with:
-          python-version: '3.12'
+          python-version: '3.14'
           cache: pip
+          cache-dependency-path: requirements-figures.txt
       - run: python -m pip install -r requirements-figures.txt
       - run: npm ci
       - run: scripts/check-notation.sh
