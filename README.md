@@ -32,7 +32,7 @@ editions, and a Word edition all come from the same source.
 
 ## Getting started
 
-Node 22 and npm 10; the versions are declared in `.nvmrc`, `.node-version`, and
+Node 26 and npm 10; the versions are declared in `.nvmrc`, `.node-version`, and
 `package.json`.
 
 ```bash
@@ -173,7 +173,7 @@ npm run build:pdf         # the two book PDFs
 npm run build:chapters    # per-chapter offprints
 ```
 
-Requires Node 22, a TeX Live with XeLaTeX and latexmk, Inkscape (MyST converts
+Requires Node 26, a TeX Live with XeLaTeX and latexmk, Inkscape (MyST converts
 SVG to PDF with it and nothing else), pandoc, and poppler-utils.
 
 Two environment variables steer `plugins/export.mjs`; neither is set for the
