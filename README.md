@@ -32,7 +32,7 @@ editions, and a Word edition all come from the same source.
 
 ## Getting started
 
-Node 26 and npm 10; the versions are declared in `.nvmrc`, `.node-version`, and
+Node 26 and npm 11.20.0; the versions are declared in `.nvmrc`, `.node-version`, and
 `package.json`.
 
 ```bash

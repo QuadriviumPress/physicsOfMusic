@@ -36,7 +36,7 @@ npm run notation:render
 
 ## Intentional differences
 
-- `start`, `build`, and `check` invoke MyST through `scripts/run-myst.mjs`. That launcher works around the npm-version probe bundled with older MyST releases. It stays in place after the pin move to `mystmd@1.11.0`.
+- `start`, `build`, and `check` invoke MyST through `scripts/run-myst.mjs`. That launcher works around the npm-version probe bundled with older MyST releases. It stays in place after the pin move to `mystmd@1.12.0`.
 - `check:toolchain`, `h5p:check`, `h5p:generate`, and `h5p:prepare` support H5P. `verify` runs the H5P check before prepare.
 - `verify` also runs the project validator and `npm test`.
 - Notation and audio scripts: `notation:render`, `notation:check`, `audio:render`, `audio:check`.
